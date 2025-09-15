@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="c_groups" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group Theory</title>
+<xi:include href="s_groups.ptx" />
+<!-- <xi:include href="s_modular_arithmetic.ptx" /> -->
+
+</chapter>
