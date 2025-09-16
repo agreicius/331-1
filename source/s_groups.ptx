@@ -195,11 +195,13 @@
    Let <m>(G,\cdot)</m> be a group. 
    <ol>
     <li>
+        <title>Uniqueness of identity</title>
         <p>
             The identity element of <m>G</m> is unique: <ie/>, there is exactly one element <m>e\in G</m> satisfying <xref ref="eq_id"/>.     
         </p>
     </li>
     <li>
+        <title>Uniqueness of inverse</title>
         <p>
             Every <m>g\in G</m> has a unique inverse element: <ie/>, for each <m>g\in G</m> there is exactly one element <m>g^{-1}\in G</m> satisfying <xref ref="eq_inv"/>.
         </p>
@@ -210,251 +212,44 @@
         </p>
     </li>
     <li>
+        <title>Inverse of product</title>
         <p>
             <m>(g\, h)^{-1}=h^{-1}\, g^{-1}</m> for all <m>g,h\in G</m>. 
         </p>
     </li>
     <li>
-        <title>Generalized associativity</title>
+        <title>Cancellation laws</title>
         <p>
-            Given any <m>n</m>-tuple <m>(g_1,g_2,\dots, g_n)\in G^n</m>, the product 
-            <m>
-                g_1\, g_2\, \cdots g_n
-            </m>
-            is well-defined independent of any parenthetical grouping. For example, we have 
-            <me>
-                ((g_1\, g_2)\, g_3)\, g_4 = (g_1\, (g_2\, g_3))\, g_4 = g_1\, ((g_2\, g_3)\, g_4) = \cdots = g_1\, g_2\, (g_3\, g_4).
-            </me>.
+            Let <m>g,h,k\in G</m>. 
+            <ol>
+                <li>
+                    <p>
+                        <m>gh=gk</m> if and only if <m>h=k</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>hg=kg</m> if and only if <m>h=k</m>. 
+                    </p>
+                </li>
+            </ol>
         </p>
     </li>
-   </ol>
-    </p>
-    </statement>
-    <proof>
-    <p>
-    </p>
-    </proof>
-    </theorem>
-    
-    </subsection>
-    <worksheet xml:id="ws_groups">
-        <title>Groups</title>
-          <definition xml:id="d_group">
-    <title>Groups</title>
-    <statement>
-    <p>
-    A group is an ordered pair <m>(G,\cdot)</m> where <m>G</m> is a nonempty set and <m>\cdot</m> is a binary operation
-    <md>
-        <mrow>G\times G \amp \xrightarrow{\phantom{XX}\bullet\phantom{XX}} G</mrow>
-        <mrow>(g,h) \amp \longmapsto g\cdot h</mrow>
-    </md>,
-    satisfying the following axioms. 
-    <ol marker="(i)">
-        <li>
-            <title>Associativity</title>
-            <p>
-                For all <m>g_1,g_2,g_3\in G</m> we have 
-                <men xml:id="eq_assoc">
-                    (g_1\cdot g_2)\cdot g_3 = g_1\cdot (g_2\cdot g_3)
-                </men>.                
-            </p>
-        </li>
-        <li>
-            <title>Group identity</title>
-            <p>
-                There is an element <m>e\in G</m>, such that for all <m>g\in G</m>, we have 
-                <men xml:id="eq_id">
-                    g\cdot e = e\cdot g = g
-                </men>.
-                We call <m>e</m> the <term>group identity</term> of <m>G</m>.
-            </p>
-        </li>
-        <li>
-            <title>Group inverses</title>
-            <p>
-                For all <m>g\in G</m> there is an element <m>g^{-1}\in G</m> satisfying
-                <men xml:id="eq_inv">
-                    g\cdot g^{-1} = g^{-1}\cdot g = e
-                </men>.
-                We call <m>g^{-1}</m> the <term>group inverse</term> of <m>g</m>.
-            </p>
-        </li>
-    </ol>
-    </p>
-    </statement>
-    </definition>
-    <assumption xml:id="fiat_group_law">
-        <title>Group law notation</title>
-        
-        <statement>
-            <p>
-                You are free to denote the binary group law in any manner you like. Often, as in <xref first="spec_ring_additive_groups" last="spec_ring_mult_groups"/>, we will make a notational choice that reflects the specific nature of a given group.  
-            </p>
-            <p>
-                Furthermore, with the exception of the case where <m>+</m> is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.
-            </p>
-        </statement>
-    </assumption>
-    <activity xml:id="spec_ring_additive_groups">
-        <title>Ring additive groups</title>
-        <statement>
-            <p>
-                Let <m>R\in \{\Z,\Q, \R, \C\}</m>, and let <m>+</m> be the usual addition operation on <m>R</m>. The pair <m>(R,+)</m> is a group, called the <term>additive group</term> of <m>R</m>. 
-            </p>
-            <p>
-                The group identity of <m>R</m> is <m>0</m>, also known as the <em>additive identity</em> of <m>R</m>. 
-            </p>
-            <p>
-                Given any <m>r\in R</m>, its group inverse is its minus, <m>-r</m>, also known as the <em>additive inverse</em> <m>r</m>. 
-            </p>
-        </statement>
-    </activity>
-    <activity xml:id="spec_ring_mult_groups">
-        <title>Ring multiplicative groups</title>
-        <statement>
-            <p>
-                Let <m>R\in \{\Z,\Q, \R, \C\}</m>. An element <m>r\in R</m> is <term>multiplicatively invertible</term> if there is an element <m>r^{-1}\in R</m> satisfying <m>r\,r^{-1}=r^{-1}\, r=1</m>. In this case <m>r^{-1}\</m> is called the <term>multiplicative inverse</term> of <m>r</m>. Define <m>R^*</m> to be the set of multiplicatively invertible elements of <m>R</m>: <ie/>, 
-                <me>
-                    R^* = \{ r\in R \mid \text{there exists } r^{-1}\in R \text{ such that } r\, r^{-1}=r^{-1}\, r = 1 \}
-                </me>.
-                If <m>R\in \{\Q, \R, \C\}</m>, then <m>R^*=R-\{0\}</m>, since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have
-                <me>
-                    Z^*=\{1, -1\}
-                </me>,
-                since <m>1</m> and <m>-1</m> are the only integers that have an integer multiplicative inverse. 
-            </p>
-            <p>
-               The <m>(R^*,\cdot)</m>, where <m>\cdot</m> is the usual multiplciation operation on <m>R</m>, is a group called the <term>multiplicative group</term> of <m>R</m>. 
-            </p>
-            <p>
-                The group identity of <m>R^*</m> is <m>1</m>, also known as the <em>multiplicative identity</em> of <m>R</m>. 
-            </p>
-            <p>
-                Given any <m>r\in R^*</m>, its group inverse is the multiplicative inverse <m>r^{-1}</m> defined above. 
-            </p>
-        </statement>
-    </activity>
-    <definition xml:id="d_abelian_group">
-    <title>Abelian group</title>
-    <statement>
-    <p>
-        A group <m>(G,\cdot)</m> is <term>abelian</term> (or <term>commutative</term>) if 
-        <me>
-            g\, h=h\, g
-        </me>
-        for all <m>g,h\in G</m>. The group is <term>nonabelian</term> (or <term>noncommutative</term>), if it is not abelian. 
-    </p>
-    </statement>
-    </definition>
-    <activity xml:id="spec_gln">
-        <title>General linear group</title>
+    <li>
+        <title>Generalized associativity</title>
         <p>
-           Let <m>R\in \{\Q, \R, \C\}</m>. The set of all <m>n\times n</m> matrices with coefficients in <m>R</m> is denoted <m>\ML_n(R)</m>. We denote by <m>\GL_n(R)</m> the set of invertible <m>n\times n</m> matrices with coefficients in <m>R</m>: <ie/>, 
-            <md>
-                <mrow>\GL_n(R) \amp </mrow>
-            </md>
-           
-           is denoted <m>\GL_n(R)</m>: <ie/>, 
+           Any two parenthetical groupings of an <m>n</m>-tuple <m>(g_1,g_2,\dots, g_n)\in G^n</m> give rise to the same product in <m>G</m>, which we denote as 
+           <me>
+            g_1g_2\cdots g_n
+           </me>.
+           For example, we have  
            <md>
-            <mrow>\GL_n(R)  \amp = \{A\in M_n(R)\mid A \text{ is invertible} \} </mrow>
-            <mrow> \amp =\{A\in M_n(R)\mid \det A\ne 0\}</mrow>
-           </md>.
-           The pair <m>(\GL_n(R), \cdot)</m>, where <m>\cdot</m> is the usual matrix multiplication operation, is a group called the <term>general linear group</term> of degree <m>n</m> over <m>R</m>.
-        </p>
-        <p>
-            The group identity of <m>\GL_n(R)</m> is the <m>n\times n</m> identity matrix <m>I</m>.
-        </p>
-        <p>
-            Given any <m>A\in \GL_n(R)</m>, its group inverse is the matrix inverse <m>A^{-1}</m>.
-        </p>
-    </activity>
-    <example xml:id="eg_nonabelian_gln">
-    <title><m>\GL_n(R)</m> is nonabelian</title>
-    <statement>
-    <p>
-    Let <m>R\in \{\Q,\R, \C\}</m> and let <m>n\geq 2</m>. Prove that <m>\GL_n(R)</m> is a nonabelian group. 
-    </p>
-    </statement>
-    <solution>
-    <p>
-    Let 
-    <md>
-        <mrow>A \amp = \begin{bmatrix} 1 \amp 1 \\ 0 \amp 1 \end{bmatrix} \amp B\amp= \\begin{bmatrix} 1 \amp 0 \\ 1 \amp 1 \end{bmatrix}</mrow>
-    </md>.
-    We have <m>A, B\in \GL_2(R)</m> (easy determinant computation), and furthermore
-    <md>
-        <mrow>AB \amp  = \begin{bmatrix} 2 \amp 1 \\ 1 \amp 1 \end{bmatrix} </mrow>
-        <mrow>BA \amp  = \begin{bmatrix} 1 \amp 1 \\ 1 \amp 2 \end{bmatrix} </mrow>
-    </md>.
-    Since <m>AB\ne BA</m>, we conclude that <m>\GL_2(R)</m> is nonabelian. 
-    </p>
-    <p>
-        Next, given any <m>n\geq 3</m>, consider the block matrices 
-        <md>
-            <mrow>A' \amp = \begin{bmatrix}
-            A\amp 0 \\
-            0\amp I_{n-2}   
-            \end{bmatrix} \amp B'\amp=\begin{bmatrix}
-            B\amp 0 \\
-            0\amp I_{n-2}   
-            \end{bmatrix} </mrow>
-        </md>,
-        where <m>A</m> and <m>B</m> are the <m>2\times 2</m> matrices above. From properties of block matrix arithmetic it follows that <m>A'</m> and <m>B'</m> are invertible (in fact, <m>\det A'=\det B'=1</m>) and 
-        <md>
-            <mrow>A'B' \amp = \begin{bmatrix}
-            AB\amp 0 \\
-            0\amp I_{n-2}   
-            \end{bmatrix} \amp B'A'\amp=\begin{bmatrix}
-            BA\amp 0 \\
-            0\amp I_{n-2}   
-            \end{bmatrix} </mrow>
-        </md>.
-        Since <m>AB\ne BA</m>, we conclude that <m>\GL_n(R)</m> is nonabelian, as desired. 
-    </p>
-    </solution>
-    </example>
-    
-    
-    </subsection>
-    <subsection xml:id="ss_elem_group_proos">
-    <title>Elementary properties</title>
-    <theorem xml:id="th_group_props">
-    <title>Group properties</title>
-    <statement>
-    <p>
-   Let <m>(G,\cdot)</m> be a group. 
-   <ol>
-    <li>
-        <p>
-            The identity element of <m>G</m> is unique: <ie/>, there is exactly one element <m>e\in G</m> satisfying <xref ref="eq_id"/>.     
-        </p>
-    </li>
-    <li>
-        <p>
-            Every <m>g\in G</m> has a unique inverse element: <ie/>, for each <m>g\in G</m> there is exactly one element <m>g^{-1}\in G</m> satisfying <xref ref="eq_inv"/>.
-        </p>
-    </li>
-    <li>
-        <p>
-            <m>(g^{-1})^{-1}=g</m> for all <m>g\in G</m>.
-        </p>
-    </li>
-    <li>
-        <p>
-            <m>(g\, h)^{-1}=h^{-1}\, g^{-1}</m> for all <m>g,h\in G</m>. 
-        </p>
-    </li>
-    <li>
-        <title>Generalized associativity</title>
-        <p>
-            Given any <m>n</m>-tuple <m>(g_1,g_2,\dots, g_n)\in G^n</m>, the product 
-            <m>
-                g_1\, g_2\, \cdots g_n
-            </m>
-            is well-defined independent of any parenthetical grouping. For example, we have 
-            <me>
-                ((g_1\, g_2)\, g_3)\, g_4 = (g_1\, (g_2\, g_3))\, g_4 = g_1\, ((g_2\, g_3)\, g_4) = \cdots = g_1\, g_2\, (g_3\, g_4).
-            </me>.
+            <mrow> ((g_1\, g_2)\, g_3)\, g_4 \amp = (g_1\, (g_2\, g_3))\, g_4  </mrow>
+            <mrow> \amp = g_1\, ((g_2\, g_3)\, g_4)</mrow>
+            <mrow> \amp = g_1\, (g_2\, (g_3\, g_4))</mrow>
+            <mrow> \amp =(g_1\, g_2)(g_3\, g_4)</mrow>
+           </md>
+           for any <m>(g_1,g_2,g_3,g_4)\in G^4</m>, and we denote this common element <m>g_1\,g_2\,g_3\,g_4</m>.
         </p>
     </li>
    </ol>
@@ -465,6 +260,49 @@
     </p>
     </proof>
     </theorem>
-        
-    </worksheet>
+    <definition xml:id="d_group_exp">
+    <title>Group exponentiation</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group. Given <m>n\in \Z</m> and <m>g\in G</m>, the <term><m>n</m>-th power</term> of <m>g</m>, denoted <m>g^n</m> is defined via cases as follows.
+    <ul>
+        <li>
+            <p>
+               <m>g^0=e</m> 
+            </p>
+        </li>
+        <li>
+            <p>
+                Given positive integer <m>n</m>, we define 
+                <md>
+                    <mrow>g^n \amp =\underset{n \text{ times}}{\underbrace{g\, g\cdots g}}\amp g^{-n} \amp=\underset{n \text{ times}}{\underbrace{g^{-1}\, g^{-1}\cdots g^{-1}}}</mrow>
+                </md>.
+            </p>
+        </li>
+    </ul>
+    </p>
+    </statement>
+    </definition>
+    <definition xml:id="d_order_group_element">
+        <title>Group element order</title>
+        <statement>
+            <p>
+                Let <m>g</m> be an element of the group <m>G</m>. The <term>order</term> of <m>g</m>, denoted <m>\ord g</m> is defined as follows.
+                <ul>
+                    <li>
+                        <p>
+                           If there is a positive integer <m>k</m> such that <m>g^k=e</m>, then <m>\ord g</m> is defined as the smallest positive integer <m>n</m> satisfying <m>g^n=e</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If there is no such positive integer <m>k</m>, then we say <m>g</m> has <term>infinite order</term>, denoted <m>\ord g=\infty</m>. 
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </statement>
+    </definition>
+    </subsection>
+    
 </section>
