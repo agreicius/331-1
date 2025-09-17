@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="s_groups" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Groups</title>
-    <introduction>
-        <p>
-            The topic of this course is <em>group theory</em>. 
-        </p>
-    </introduction>
+
+        <worksheet margin="1in" bottom="1.25cm" xml:id="Activity-title">
+            <title>Groups</title>
+ 
     <subsection xml:id="ss_def_group">
     <title>Definition</title>
     <definition xml:id="d_group">
@@ -83,7 +80,7 @@
         <title>Ring multiplicative groups</title>
         <statement>
             <p>
-                Let <m>R\in \{\Z,\Q, \R, \C\}</m>. An element <m>r\in R</m> is <term>multiplicatively invertible</term> if there is an element <m>r^{-1}\in R</m> satisfying <m>r\,r^{-1}=r^{-1}\, r=1</m>. In this case <m>r^{-1}</m> is called the <term>multiplicative inverse</term> of <m>r</m>. Define <m>R^*</m> to be the set of multiplicatively invertible elements of <m>R</m>: <ie/>, 
+                Let <m>R\in \{\Z,\Q, \R, \C\}</m>. An element <m>r\in R</m> is <term>multiplicatively invertible</term> if there is an element <m>r^{-1}\in R</m> satisfying <m>r\,r^{-1}=r^{-1}\, r=1</m>. In this case <m>r^{-1}\</m> is called the <term>multiplicative inverse</term> of <m>r</m>. Define <m>R^*</m> to be the set of multiplicatively invertible elements of <m>R</m>: <ie/>, 
                 <me>
                     R^* = \{ r\in R \mid \text{there exists } r^{-1}\in R \text{ such that } r\, r^{-1}=r^{-1}\, r = 1 \}
                 </me>.
@@ -188,7 +185,7 @@
     </subsection>
     <subsection xml:id="ss_elem_group_proos">
     <title>Elementary properties</title>
-    <proposition xml:id="th_group_props">
+    <theorem xml:id="th_group_props">
     <title>Group properties</title>
     <statement>
     <p>
@@ -260,7 +257,7 @@
     <p>
     </p>
     </proof>
-    </proposition>
+    </theorem>
     <definition xml:id="d_group_exp">
     <title>Group exponentiation</title>
     <statement>
@@ -329,5 +326,4 @@
 
     
     </subsection>
-    
-</section>
+</worksheet>

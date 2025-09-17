@@ -6,6 +6,7 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
+    <target name="latex" format="latex" />
     <target name="print" format="pdf" />
     <target name="syllabus-web" source="syllabus.ptx" format="html"
             publication="publication-syllabus.ptx" deploy-dir="syllabus" />
@@ -16,7 +17,7 @@
             output-filename="syllabus.pdf" publication="publication-syllabus.ptx" />
 
     <target name="classwork-web" format="html" source="classwork.ptx"
-            publication="publication.ptx" deploy-dir="worksheets" />
+            publication="publication.ptx" deploy-dir="classwork" />
     <target name="classwork-print" format="pdf" source="classwork.ptx"
             output-filename="classwork.pdf" publication="publication.ptx" />
 
