@@ -6,7 +6,7 @@
 
   <book xml:id="my-great-book">
     <title>Group theory</title>
-    <subtitle>A course resource for Math 331-1</subtitle>
+    <subtitle>Kursobjekt for Math 331-1</subtitle>
 
     <xi:include href="./frontmatter.ptx" />
     <xi:include href="./c_foundations.ptx" />
