@@ -8,7 +8,7 @@
     <target name="web" format="html" />
     <target name="latex" format="latex" />
     <target name="print" format="pdf" />
-    <target name="syllabus-web" source="syllabus.ptx" format="html"
+    <!-- <target name="syllabus-web" source="syllabus.ptx" format="html"
             publication="publication-syllabus.ptx" deploy-dir="syllabus" />
     <target name="syllabus-canvas" source="syllabus.ptx" format="html"
             compression="scorm" publication="publication_scorm_syllabus.ptx"
@@ -24,7 +24,7 @@
     <target name="notes-web" format="html" source="notes.ptx"
             publication="publication.ptx" deploy-dir="notes" />
     <target name="notes-print" format="pdf" source="notes.ptx"
-            publication="publication.ptx" output-filename="notes.pdf"/>
+            publication="publication.ptx" output-filename="notes.pdf"/> -->
 
   <!-- The following targets are used to create stand-alone documents, -->
   <!-- either scorm archives or pdfs. Run with `pretext build scorm -i source/[filename.ptx]`-->
