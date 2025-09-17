@@ -4,7 +4,7 @@
     <title>Groups</title>
     <introduction>
         <p>
-            The topic of this course is <em>group theory</em>. 
+            This first quarter of Math 331 is devoted entirely to the study of groups. This a fitting place to begin both as groups represent a type of algebraic object with near minimal structure and are omnipresent in the world of mathematics and the empirical sciences more generally. More conceptually, groups are intimately connected with the notion of symmetry in mathematics. Put plainly, wherever you find mathematical discussion of symmetry, a group usually lurks in the background as the thing that defines that symmetry. We will see plenty of examples of this in the coming days. In the meantime, for an excellent elaboration of this theme, check out Keith Conrad's blurb <url href="https://kconrad.math.uconn.edu/blurbs/grouptheory/whygroups.pdf"><em>Why groups?</em></url>
         </p>
     </introduction>
     <subsection xml:id="ss_def_group">
