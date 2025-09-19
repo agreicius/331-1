@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_mod_rings" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Integers modulo <m>n</m></title>
+    <title>Modular arithmetic</title>
 <subsection xml:id="ss_cong">
 <title>Congruence</title>
 <definition xml:id="d_divis">
@@ -29,16 +29,19 @@ Given integers <m>a,b\in \Z</m> we say that <m>a</m> <term>divides</term> <m>b</
 </notation>
 <statement>
 <p>
-Let <m>n</m> be an integer. Integers <m>a</m> and <m>b</m> are <term>congruent modulo <m>n</m></term>, denoted <m>a\equiv b\pmod n</m>, if one of the two following equivalent conditions holds:
+Let <m>n</m> be a positive integer. Integers <m>a</m> and <m>b</m> are <term>congruent modulo <m>n</m></term>, denoted <m>a\equiv b\pmod n</m>, if one of the two following equivalent conditions holds:
 <mdn>
     <mrow xml:id="eq_cong_mid">n \amp \mid a-b</mrow>
     <mrow xml:id="eq_cong_plus_mult">b \amp =a+qn \text{ for some } q\in \Z</mrow>
 </mdn>.
 The <term>congruence class</term> (or <term>residue class</term>) of <m>a</m> modulo <m>n</m>, denoted <m>\overline{a}</m> (or <m>[a]_n</m>) is the set of all integers congruent to <m>a</m> modulo <m>n</m>: <ie/>, 
 <md>
-    <mrow>[a]_n \amp = \{b\in \Z\mid a\equiv b \pmod n\}</mrow>
+    <mrow>\overline{a}=[a]_n \amp = \{b\in \Z\mid a\equiv b \pmod n\}</mrow>
     <mrow> \amp = \{a+qn\mid q\in \Z\}</mrow>
 </md>.
+Elements of a congruence class <m>[a]_n</m> are called <term>representatives</term> (or <term>residues</term>) of that class. 
+</p>
+<p>
 The set of all congruence classes modulo <m>n</m> is denoted <m>\Z/n\Z</m>: <ie/>, 
 <me>
     \Z/n\Z=\{[a]_n\mid a\in \Z\}
@@ -47,6 +50,66 @@ The integer <m>n</m> in all the settings above is called a <term>modulus</term>.
 </p>
 </statement>
 </definition>
+<example xml:id="eg_cong_mod_3">
+<title>Congruence modulo <m>3</m></title>
+<statement>
+<p>
+Consider the modulus <m>n=3</m>. 
+<ol>
+    <li>
+        <p>
+            Compute <m>[5]_3</m> and <m>[-1]_3</m>.
+        </p>
+    </li>
+    <li>
+       Find a finite list of integers <m>a_1,a_2,\dots, a_r</m> such that
+       <me>
+        \Z/3\Z=\{[a_1]_3, [a_2]_3,\dots, [a_r]_3\}
+       </me>.
+    </li>
+    <li>
+        <p>
+            Compute <m>\abs{\Z/3\Z}</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<solution>
+<p>
+<ol>
+    <li>
+        <p>
+            We have 
+            <me>
+                [5]_3=[-1]_3=[2]_3=\{\dots, -3,-1,2,5,\dots \}
+            </me>.
+        </p>
+    </li>
+    <li>
+        <p>
+            It is not difficult to show that for any <m>a\in \Z</m> we have <m>[a]_3=[k]_3</m> for some <m>k\in \{0,1,2\}</m>. (See theory below more generally.) Thus 
+            <me>
+                \Z/3\Z=\{[0]_3,[1]_3,[2]_3\}
+            </me>.
+        </p>
+    </li>
+    <li>
+        <p>
+            The sets 
+            <md>
+                <mrow>[0]_3 \amp = \{\dots, -3,0,3,6,\dots\}</mrow>
+                <mrow>[1]_3 \amp = \{\dots,-2,1,4,7,\dots\}</mrow>
+                <mrow>[2]_3 \amp =\{\dots, -1,2,5,8,\dots\}</mrow>
+            </md>
+            are clearly all distinct from one another. Thus <m>\abs{\Z/3\Z}=3</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</solution>
+</example>
+
 <remark>
     <title>Congruence classes</title>
     <p>
@@ -225,21 +288,72 @@ We call the integers <m>q</m> and <m>r</m> satisfying these properties the <term
     </statement>
 </proposition>
 
-<definition xml:id="d_gcd">
-<title>Greatest common divisor</title>
-<notation>
-    <usage><m>\gcd(a,b)</m></usage>
-  <description>the greatest common divisor of <m>a</m> and <m>b</m></description>
-</notation>
+</subsection>
+<subsection xml:id="ss_cong_ring_structure">
+<title>Ring structure of <m>\Z/n\Z</m></title>
+<proposition xml:id="prop_cong_arith">
+<title>Modular arithmetic</title>
 <statement>
 <p>
-Let <m>a</m> and <m>b</m> be integers, one of which is nonzero. The <term>greatest common divisor</term> of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>, is the greatest positive integer dividing <m>a</m> and <m>b</m>: <ie/>, 
-<me>
-    \gcd(a,b)=\max \{n\in \Z_{&gt; 0}\mid n\mid a \text{ and } n\mid b\}
-</me>.
+Fix a modulus <m>n</m>. Assume integers <m>a,a',b,b'</m> satisfy
+<md>
+    <mrow>a \amp \equiv a' \pmod n \amp b\amp \equiv b'\pmod n</mrow>
+</md>.
+           We have 
+           <mdn>
+            <mrow>a+b \amp \equiv a'+b'\pmod n \amp </mrow>
+            <mrow>a b\amp \equiv a' b' \pmod n \amp </mrow>
+           </mdn>. 
+       It follows from this that 
+       <mdn>
+            <mrow>[a+b]_n \amp = [a'+b']_n \amp </mrow>
+            <mrow>[ab]_n\amp = [a'b']_n </mrow>
+           </mdn>.
 </p>
 </statement>
-</definition>
+</proposition>
+<corollary xml:id="cor_mod_ring_ops">
+    <title>Ring structure of <m>\Z/n\Z</m></title>
+    <statement>
+        <p>
+          Fix a modulus <m>n</m>. We have well-defined binary operations <m>+</m> and <m>\cdot</m> defined on <m>\Z/n\Z</m> as follows:
+          <md>
+            <mrow> \Z/n\Z\times \Z/n\Z \amp\xrightarrow{\phantom{X}+\phantom{X}} \Z/n\Z \amp 
+                 \Z/n\Z\times \Z/n\Z \amp\xrightarrow{\phantom{X}\bullet\phantom{X}} \Z/n\Z
+            </mrow>
+            <mrow>([a]_n,[b]_n) \amp \longmapsto [a+b]_n
+                \amp 
+                ([a]_n,[b]_n) \amp \longmapsto [ab]_n
+            </mrow>
+          </md>.
+        </p>
+    </statement>
+</corollary>
+<example xml:id="eg_mod_arith">
+<title>Modular arithmetic</title>
+<statement>
+<p>
+Compute the given congruence class expression moduluo the given modulus <m>n</m>. Your answer must be expressed in the form <m>\overline{r}</m>, where <m>0\leq r\leq n-1</m>.
+<ol>
+    <li>
+        <p>
+            <m>n=8</m>, \overline{43}(\overline{23}\, \overline{11}+\overline{17})
+        </p>
+    </li>
+    <li>
+        <p>
+            
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
 
 </subsection>
 </section>
