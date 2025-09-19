@@ -667,6 +667,195 @@ var ptx_lunr_docs = [
   "body": " Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.   "
 },
 {
+  "id": "s_mod_rings",
+  "level": "1",
+  "url": "s_mod_rings.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "Modular arithmetic",
+  "body": " Modular arithmetic   Congruence   Divisibilty    divides    Given integers we say that  divides  (or that is a multiple of ) if there is an integer satisfying . In this case, is called the quotient of by .     Congruence modulo    is congruent to modulo     the congruence class of modulo    Let be a positive integer. Integers and are congruent modulo , denoted , if one of the two following equivalent conditions holds: . The congruence class (or residue class ) of modulo , denoted (or ) is the set of all integers congruent to modulo : , . Elements of a congruence class are called representatives (or residues ) of that class.  The set of all congruence classes modulo is denoted : , . The integer in all the settings above is called a modulus .     Congruence modulo   Consider the modulus .   Compute and .   Find a finite list of integers such that .   Compute .          We have .    It is not difficult to show that for any we have for some . (See theory below more generally.) Thus .    The sets are clearly all distinct from one another. Thus .        Congruence classes  Fix an integer . The notation is ambiguous since it does not indicate the modulus in question. This is one reason for the alternative notation . Furthermore, the notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a set of integers .  We will use both notations interchangeably. Typically, we will favor when performing modular arithmetic (see below), and when asserting something about sets.    Congruence   Fix a modulus .   The congruence modulo relation is an equivalence relation: ,   Reflexivity   for all .    Reflexivity  If , then .    Transitivity  If and , then .       The following statements are equivalent.    .     .     .       The congruence classes modulo form a partition of : , we have , and if , then . Using logical notation: .    Assume is positive. For every , there is a unique such that . Equivalently, and for all . As a consequence, .       See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation: .     Least residue modulo   Fix a positive modulus . Given an integer the least residue of modulo , denoted is the unique satisfying .     Congruence relation and least residues  Do not confuse the two quite similar looking notations and . The first asserts that a certain relation holds, namely that is congruent to modulo . The second denotes the unique integer in that is congruent to modulo .  Said differently, the notion of the least residue defines a function .    Division algorithm   Given any integer with nonzero, there is a unique pair of integers satisfying the following properties:    ;     .   We call the integers and satisfying these properties the quotient and remainder upon dividing by .     Least residue   Let be a positive integer, and let . The following statements are equivalent.    .     and .     is the remainder upon division of by .         Ring structure of   Modular arithmetic   Fix a modulus . Assume integers satisfy . We have . It follows from this that .     Ring structure of   Fix a modulus . We have well-defined binary operations and defined on as follows: .     Modular arithmetic   Fix the modulus . Find a representative for the congruence class .         Least residue   Let and let . Compute .         Additive group   Fix a positive integer . The pair is a group, where is the addition operation defined in .  The group identity of is the congruence class .  Given , its group inverse is , denoted .     Multiplicative units in   Fix a modulus . An element is a unit (or (multiplicatively) invertible ) if there is an element satisfying . The element in this case is called the multiplicative inverse of , denoted . The set of all units of is denoted : , .     Units modulo   Fix a modulus . The pair is a group, where is the operation defined in .  The group identity of is .  Given , its group inverse is its multiplicative inverse .     Modulus   Compute group tables for both and . Naturally, for the latter you should first determine the units of .         Units modulo   Compute a group table for .         Greatest common divisor   Let and be integers, at least one of which is nonzero. The greatest common divisor of and , denoted , is the greatest positive integer dividing both and : , .     Units mod  As we will see later, it turns out that an element is a unit if and only if is relatively prime to : , if and only if . As a result of this very much non-obvious fact, we have .    "
+},
+{
+  "id": "d_divis",
+  "level": "2",
+  "url": "s_mod_rings.html#d_divis",
+  "type": "Definition",
+  "number": "1.10",
+  "title": "Divisibilty.",
+  "body": " Divisibilty    divides    Given integers we say that  divides  (or that is a multiple of ) if there is an integer satisfying . In this case, is called the quotient of by .   "
+},
+{
+  "id": "d_cong_mod_n",
+  "level": "2",
+  "url": "s_mod_rings.html#d_cong_mod_n",
+  "type": "Definition",
+  "number": "1.11",
+  "title": "Congruence modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Congruence modulo    is congruent to modulo     the congruence class of modulo    Let be a positive integer. Integers and are congruent modulo , denoted , if one of the two following equivalent conditions holds: . The congruence class (or residue class ) of modulo , denoted (or ) is the set of all integers congruent to modulo : , . Elements of a congruence class are called representatives (or residues ) of that class.  The set of all congruence classes modulo is denoted : , . The integer in all the settings above is called a modulus .   "
+},
+{
+  "id": "eg_cong_mod_3",
+  "level": "2",
+  "url": "s_mod_rings.html#eg_cong_mod_3",
+  "type": "Example",
+  "number": "1.12",
+  "title": "Congruence modulo <span class=\"process-math\">\\(3\\)<\/span>.",
+  "body": " Congruence modulo   Consider the modulus .   Compute and .   Find a finite list of integers such that .   Compute .          We have .    It is not difficult to show that for any we have for some . (See theory below more generally.) Thus .    The sets are clearly all distinct from one another. Thus .      "
+},
+{
+  "id": "ss_cong-5",
+  "level": "2",
+  "url": "s_mod_rings.html#ss_cong-5",
+  "type": "Remark",
+  "number": "1.13",
+  "title": "Congruence classes.",
+  "body": " Congruence classes  Fix an integer . The notation is ambiguous since it does not indicate the modulus in question. This is one reason for the alternative notation . Furthermore, the notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a set of integers .  We will use both notations interchangeably. Typically, we will favor when performing modular arithmetic (see below), and when asserting something about sets.  "
+},
+{
+  "id": "th_cong_class",
+  "level": "2",
+  "url": "s_mod_rings.html#th_cong_class",
+  "type": "Theorem",
+  "number": "1.14",
+  "title": "Congruence.",
+  "body": " Congruence   Fix a modulus .   The congruence modulo relation is an equivalence relation: ,   Reflexivity   for all .    Reflexivity  If , then .    Transitivity  If and , then .       The following statements are equivalent.    .     .     .       The congruence classes modulo form a partition of : , we have , and if , then . Using logical notation: .    Assume is positive. For every , there is a unique such that . Equivalently, and for all . As a consequence, .       See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation: .   "
+},
+{
+  "id": "d_least_residue",
+  "level": "2",
+  "url": "s_mod_rings.html#d_least_residue",
+  "type": "Definition",
+  "number": "1.15",
+  "title": "Least residue modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Least residue modulo   Fix a positive modulus . Given an integer the least residue of modulo , denoted is the unique satisfying .   "
+},
+{
+  "id": "ss_cong-8",
+  "level": "2",
+  "url": "s_mod_rings.html#ss_cong-8",
+  "type": "Warning",
+  "number": "1.16",
+  "title": "Congruence relation and least residues.",
+  "body": " Congruence relation and least residues  Do not confuse the two quite similar looking notations and . The first asserts that a certain relation holds, namely that is congruent to modulo . The second denotes the unique integer in that is congruent to modulo .  Said differently, the notion of the least residue defines a function .  "
+},
+{
+  "id": "th_div_alg",
+  "level": "2",
+  "url": "s_mod_rings.html#th_div_alg",
+  "type": "Theorem",
+  "number": "1.17",
+  "title": "Division algorithm.",
+  "body": " Division algorithm   Given any integer with nonzero, there is a unique pair of integers satisfying the following properties:    ;     .   We call the integers and satisfying these properties the quotient and remainder upon dividing by .   "
+},
+{
+  "id": "prop_least_residue",
+  "level": "2",
+  "url": "s_mod_rings.html#prop_least_residue",
+  "type": "Proposition",
+  "number": "1.18",
+  "title": "Least residue.",
+  "body": " Least residue   Let be a positive integer, and let . The following statements are equivalent.    .     and .     is the remainder upon division of by .      "
+},
+{
+  "id": "prop_cong_arith",
+  "level": "2",
+  "url": "s_mod_rings.html#prop_cong_arith",
+  "type": "Proposition",
+  "number": "1.19",
+  "title": "Modular arithmetic.",
+  "body": " Modular arithmetic   Fix a modulus . Assume integers satisfy . We have . It follows from this that .   "
+},
+{
+  "id": "cor_mod_ring_ops",
+  "level": "2",
+  "url": "s_mod_rings.html#cor_mod_ring_ops",
+  "type": "Corollary",
+  "number": "1.20",
+  "title": "Ring structure of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
+  "body": " Ring structure of   Fix a modulus . We have well-defined binary operations and defined on as follows: .   "
+},
+{
+  "id": "eg_mod_arith",
+  "level": "2",
+  "url": "s_mod_rings.html#eg_mod_arith",
+  "type": "Example",
+  "number": "1.21",
+  "title": "Modular arithmetic.",
+  "body": " Modular arithmetic   Fix the modulus . Find a representative for the congruence class .       "
+},
+{
+  "id": "eg_least_residue",
+  "level": "2",
+  "url": "s_mod_rings.html#eg_least_residue",
+  "type": "Example",
+  "number": "1.22",
+  "title": "Least residue.",
+  "body": " Least residue   Let and let . Compute .       "
+},
+{
+  "id": "spec_Z_mod_n",
+  "level": "2",
+  "url": "s_mod_rings.html#spec_Z_mod_n",
+  "type": "Specimen",
+  "number": "4",
+  "title": "Additive group <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
+  "body": " Additive group   Fix a positive integer . The pair is a group, where is the addition operation defined in .  The group identity of is the congruence class .  Given , its group inverse is , denoted .   "
+},
+{
+  "id": "d_mult_inv_elements",
+  "level": "2",
+  "url": "s_mod_rings.html#d_mult_inv_elements",
+  "type": "Definition",
+  "number": "1.23",
+  "title": "Multiplicative units in <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
+  "body": " Multiplicative units in   Fix a modulus . An element is a unit (or (multiplicatively) invertible ) if there is an element satisfying . The element in this case is called the multiplicative inverse of , denoted . The set of all units of is denoted : , .   "
+},
+{
+  "id": "spec_units_mod_n",
+  "level": "2",
+  "url": "s_mod_rings.html#spec_units_mod_n",
+  "type": "Specimen",
+  "number": "5",
+  "title": "Units modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Units modulo   Fix a modulus . The pair is a group, where is the operation defined in .  The group identity of is .  Given , its group inverse is its multiplicative inverse .   "
+},
+{
+  "id": "eg_mod_groups",
+  "level": "2",
+  "url": "s_mod_rings.html#eg_mod_groups",
+  "type": "Example",
+  "number": "1.24",
+  "title": "Modulus <span class=\"process-math\">\\(n=5\\)<\/span>.",
+  "body": " Modulus   Compute group tables for both and . Naturally, for the latter you should first determine the units of .       "
+},
+{
+  "id": "eg_mod_units",
+  "level": "2",
+  "url": "s_mod_rings.html#eg_mod_units",
+  "type": "Example",
+  "number": "1.25",
+  "title": "Units modulo <span class=\"process-math\">\\(9\\)<\/span>.",
+  "body": " Units modulo   Compute a group table for .       "
+},
+{
+  "id": "d_gcd",
+  "level": "2",
+  "url": "s_mod_rings.html#d_gcd",
+  "type": "Definition",
+  "number": "1.26",
+  "title": "Greatest common divisor.",
+  "body": " Greatest common divisor   Let and be integers, at least one of which is nonzero. The greatest common divisor of and , denoted , is the greatest positive integer dividing both and : , .   "
+},
+{
+  "id": "ss_cong_ring_structure-12",
+  "level": "2",
+  "url": "s_mod_rings.html#ss_cong_ring_structure-12",
+  "type": "Remark",
+  "number": "1.27",
+  "title": "Units mod <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Units mod  As we will see later, it turns out that an element is a unit if and only if is relatively prime to : , if and only if . As a result of this very much non-obvious fact, we have .  "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
