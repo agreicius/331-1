@@ -21,7 +21,7 @@ Given integers <m>a,b\in \Z</m> we say that <m>a</m> <term>divides</term> <m>b</
 <title>Congruence modulo <m>n</m></title>
 <notation>
     <usage><m>a\equiv b\pmod n</m></usage>
-  <description><m>a</m> is congruent to <m>b</m> modulu <m>n</m></description>
+  <description><m>a</m> is congruent to <m>b</m> modulo <m>n</m></description>
 </notation>
 <notation>
     <usage><m>\overline{a}, [a]_n</m></usage>
@@ -142,6 +142,9 @@ Fix a modulus <m>n</m>.
                     </p>
                 </li>
                 <li>
+                    <title>Transitivity</title>
+                    
+                    
                     <p>
                         If <m>a\equiv b\pmod n</m> and <m>b\equiv c\pmod n</m>, then <m>a\equiv c\pmod n</m>. 
                     </p>
@@ -333,19 +336,10 @@ Fix a modulus <m>n</m>. Assume integers <m>a,a',b,b'</m> satisfy
 <title>Modular arithmetic</title>
 <statement>
 <p>
-Compute the given congruence class expression moduluo the given modulus <m>n</m>. Your answer must be expressed in the form <m>\overline{r}</m>, where <m>0\leq r\leq n-1</m>.
-<ol>
-    <li>
-        <p>
-            <m>n=8</m>, \overline{43}(\overline{23}\, \overline{11}+\overline{17})
-        </p>
-    </li>
-    <li>
-        <p>
-            
-        </p>
-    </li>
-</ol>
+Fix the modulus <m>n=8</m>. Find a representative <m>r\in \{0,1,\dots, 7\}</m> for the congruence class 
+<me>
+  \overline{43}(\overline{23}\, \overline{11}+\overline{17})  
+</me>.
 </p>
 </statement>
 <solution>
@@ -354,6 +348,108 @@ Compute the given congruence class expression moduluo the given modulus <m>n</m>
 </p>
 </solution>
 </example>
+<example xml:id="eg_least_residue">
+<title>Least residue</title>
+<statement>
+<p>
+Let <m>n=50</m> and let <m>a=99^{1233}(7^8+ 1)</m>. Compute <m>a\bmod n</m>. 
+</p>
+</statement>
+<solution>
+<p>
 
+</p>
+</solution>
+</example>
+<activity xml:id="spec_Z_mod_n">
+    <title>Additive group <m>\Z/n\Z</m></title>
+    <statement>
+        <p>
+            Fix a positive integer <m>n</m>. The pair <m>(\Z/n\Z, +)</m> is a group, where <m>+</m> is the addition operation defined in <xref ref="cor_mod_ring_ops"/>.
+        </p>
+        <p>
+            The group identity of <m>\Z/n\Z</m> is the congruence class <m>\overline{0}=[0]_n</m>.
+        </p>
+        <p>
+            Given <m>\overline{a}\in \Z/n\Z</m>, its group inverse is <m>\overline{-a}</m>, denoted <m>-\overline{a}</m>.
+        </p>
+    </statement>
+</activity>
+<definition xml:id="d_mult_inv_elements">
+<title>Multiplicative units in <m>\Z/n\Z</m></title>
+<statement>
+<p>
+Fix a modulus <m>n</m>. An element <m>\overline{a}\in \Z/n\Z</m> is a <term>unit</term> (or <term>(multiplicatively) invertible</term>) if there is an element <m>\overline{b}\in \Z/n\Z</m> satisfying 
+<me>
+    \overline{a}\overline{b}=\overline{b}\overline{a}=\overline{1}
+</me>.
+The element <m>\overline{b}</m> in this case is called the <term>multiplicative inverse</term> of <m>\overline{a}</m>, denoted <m>\overline{a}^{-1}</m>. The set of all units of <m>\Z/n\Z</m> is denoted <m>(\Z/n\Z)^*</m>: <ie/>, 
+<men xml:id="eq_mult_units_mod_n">
+    (\Z/n\Z)^*=\{\overline{a}\in \Z/n\Z\mid \overline{a}\overline{b}=\overline{1} \text{ for some } \overline{b}\in \Z/n\Z\}</men>.
+</p>
+</statement>
+</definition>
+<activity xml:id="spec_units_mod_n">
+<title>Units modulo <m>n</m></title>
+<statement>
+<p>
+Fix a modulus <m>n</m>. The pair <m>((\Z/n\Z)^*, \cdot)</m> is a group, where <m>\cdot</m> is the operation defined in <xref ref="cor_mod_ring_ops"/>.
+</p>
+<p>
+    The group identity of <m>(\Z/n\Z)^*</m> is <m>\overline{1}</m>. 
+</p>
+<p>
+    Given <m>\overline{a}\in (\Z/n\Z)^* </m>, its group inverse is its multiplicative inverse <m>\overline{a}^{-1}</m>. 
+</p>
+</statement>
+</activity>
+<example xml:id="eg_mod_groups">
+<title>Modulus <m>n=5</m></title>
+<statement>
+<p>
+Compute group tables for both <m>\Z/5\Z</m> and <m>(\Z/5\Z)^*</m>. Naturally, for the latter you should first determine the units of <m>\Z/5\Z</m>. 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<example xml:id="eg_mod_units">
+<title>Units modulo <m>9</m></title>
+<statement>
+<p>
+Compute a group table for <m>(\Z/9\Z)^*</m>.
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<definition xml:id="d_gcd">
+<title>Greatest common divisor</title>
+<statement>
+<p>
+Let <m>a</m> and <m>b</m> be integers, at least one of which is nonzero. The <term>greatest common divisor</term> of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>, is the greatest positive integer dividing both <m>a</m> and <m>b</m>: <ie/>, 
+<men xml:id="eq_gcd_int">
+    \gcd(a,b)=\max\{q\in \Z_{&gt; 0}\mid q\mid a \text{ and } q\mid b\}
+</men>.
+</p>
+</statement>
+</definition>
+
+<remark>
+    <title>Units mod <m>n</m></title>
+    <p>
+        As we will see later, it turns out that an element <m>\overline{a}\in \Z/n\Z</m> is a unit if and only if <m>a</m> is <em>relatively prime</em> to <m>n</m>: <ie/>, if and only if <m>\gcd(a,b)=1</m>. As a result of this very much non-obvious fact, we have 
+        <me>
+            (\Z/n\Z)^*=\{\overline{a}\in \Z/n\Z\mid \gcd(a,n)=1\}
+        </me>.
+    </p>
+    
+</remark>
 </subsection>
 </section>
