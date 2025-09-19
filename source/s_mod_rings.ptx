@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_mod_rings" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Integers modulo <m>n</m></title>
+<subsection xml:id="ss_cong">
+<title>Congruence</title>
+<definition xml:id="d_divis">
+<title>Divisibilty</title>
+<notation>
+    <usage><m>a\mid b</m></usage>
+  <description><m>a</m> divides <m>b</m></description>
+</notation>
+<statement>
+<p>
+Given integers <m>a,b\in \Z</m> we say that <m>a</m> <term>divides</term> <m>b</m> (or that <m>b</m> is a <term>multiple</term> of <m>a</m>) if there is an integer <m>q\in \Z</m> satisfying <m>b=qa</m>. In this case, <m>q</m> is called the <term>quotient</term> of <m>b</m> by <m>a</m>.
+</p>
+</statement>
+</definition>
+
+<definition xml:id="d_cong_mod_n">
+<title>Congruence modulo <m>n</m></title>
+<notation>
+    <usage><m>a\equiv b\pmod n</m></usage>
+  <description><m>a</m> is congruent to <m>b</m> modulu <m>n</m></description>
+</notation>
+<notation>
+    <usage><m>\overline{a}, [a]_n</m></usage>
+  <description>the congruence class of <m>a</m> modulo <m>n</m></description>
+</notation>
+<statement>
+<p>
+Let <m>n</m> be an integer. Integers <m>a</m> and <m>b</m> are <term>congruent modulo <m>n</m></term>, denoted <m>a\equiv b\pmod n</m>, if one of the two following equivalent conditions holds:
+<mdn>
+    <mrow xml:id="eq_cong_mid">n \amp \mid a-b</mrow>
+    <mrow xml:id="eq_cong_plus_mult">b \amp =a+qn \text{ for some } q\in \Z</mrow>
+</mdn>.
+The <term>congruence class</term> (or <term>residue class</term>) of <m>a</m> modulo <m>n</m>, denoted <m>\overline{a}</m> (or <m>[a]_n</m>) is the set of all integers congruent to <m>a</m> modulo <m>n</m>: <ie/>, 
+<md>
+    <mrow>[a]_n \amp = \{b\in \Z\mid a\equiv b \pmod n\}</mrow>
+    <mrow> \amp = \{a+qn\mid q\in \Z\}</mrow>
+</md>.
+The set of all congruence classes modulo <m>n</m> is denoted <m>\Z/n\Z</m>: <ie/>, 
+<me>
+    \Z/n\Z=\{[a]_n\mid a\in \Z\}
+</me>.
+The integer <m>n</m> in all the settings above is called a <term>modulus</term>. 
+</p>
+</statement>
+</definition>
+<remark>
+    <title>Congruence classes</title>
+    <p>
+        Fix an integer <m>n</m>. The notation <m>\overline{a}</m> is ambiguous since it does not indicate the modulus <m>n</m> in question. This is one reason for the alternative notation <m>[a]_n</m>. Furthermore, the <m>[a]_n</m> notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a <em>set of integers</em>. 
+    </p>
+    <p>
+        We will use both notations interchangeably. Typically, we will favor <m>\overline{a}</m> when performing modular arithmetic (see below), and <m>[a]_n</m> when asserting something about sets. 
+    </p>
+</remark>
+<theorem xml:id="th_cong_class">
+<title>Congruence</title>
+<statement>
+<p>
+Fix a modulus <m>n</m>.
+<ol>
+    <li>
+        <p>
+            The congruence modulo <m>n</m> relation is an equivalence relation: <ie/>, 
+            <ol marker="(i)">
+                <li>
+                    <title>Reflexivity</title>
+                    <p>
+                        <m>a\equiv a\pmod n</m> for all <m>a\in \Z</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Reflexivity</title>
+                    <p>
+                    If <m>a\equiv b\pmod n</m>, then <m>b\equiv a\pmod n</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>a\equiv b\pmod n</m> and <m>b\equiv c\pmod n</m>, then <m>a\equiv c\pmod n</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </li>
+    <li>
+        <p>
+            The following statements are equivalent.
+            <ol>
+                <li>
+                    <p>
+                        <m>[a]_n=[b]_n</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>a\in [b]_n</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <m>a\equiv b\pmod n</m>.
+                    </p>
+                </li>  
+            </ol>
+        </p>
+    </li>
+    <li>
+        <p>
+            The congruence classes modulo <m>n</m> form a partition of <m>\Z</m>: <ie/>, we have 
+            <me>
+                \Z=\bigcup_{a\in \Z}[a]_n
+            </me>,
+            and if <m>[a]_n\ne [b]_n</m>, then <m>[a]_n\cap [b]_n=\emptyset</m>. Using logical notation:
+            <men xml:id="eq_cong_disjoint">
+                [a]_n\ne [b]_n\implies [a]_n\cap [b]_n=\emptyset
+            </men>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Assume <m>n</m> is positive. For every <m>a\in \Z</m>, there is a unique <m>k\in \{0,1,\dots, n-1\}</m> such that 
+            <me>
+                [a]_n=[k]_n
+            </me>.
+            Equivalently, 
+            <men xml:id="eq_integers_mod_n">
+                \Z/n\Z=[0]_n\cup [1]_n\cup \dots \cup [n-1]_n
+            </men>
+            and 
+            <me>
+                [j]_n=[k]_n \text{ if and only if} j=k
+            </me>
+            for all <m>0\leq j,k\leq n-1</m>. As a consequence, 
+            <men xml:id="eq_card_int_mod_n">
+                \abs{\Z/n\Z}=n
+            </men>.
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+    <p>
+        See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation: 
+        <me>
+           0&lt;  \abs{a-b} &lt; n \implies n\nmid a-b
+        </me>.
+    </p>
+</proof>
+</theorem>
+<definition xml:id="d_least_residue">
+<title>Least residue modulo <m>n</m></title>
+<statement>
+<p>
+Fix a positive modulus <m>n</m>. Given an integer <m>a</m> the <term>least residue</term> of <m>a</m> modulo <m>n</m>, denoted <m>a\bmod n</m> is the unique <m>r\in \{0,1,2,\dots, n-1\}</m> satisfying <m>a\equiv r\pmod n</m>. 
+</p>
+</statement>
+</definition>
+<warning>
+    <title>Congruence relation and least residues</title>
+    
+    <p>
+        Do not confuse the two quite similar looking notations <m>a\equiv b\pmod n</m> and <m>a\bmod n</m>.
+        The first asserts that a certain relation holds, namely that <m>a</m> is congruent to <m>b</m> modulo <m>n</m>. The second denotes the unique integer in <m>\{0,1,\dots, n-1\}</m> that is congruent to <m>a</m> modulo <m>n</m>. 
+    </p>
+    <p>
+        Said differently, the notion of the least residue defines a function 
+        <md>
+            <mrow>\underline{\phantom{aa}}\bmod n \colon \Z \amp\rightarrow \{0,1,\dots, n-1\} </mrow>
+            <mrow>a \amp \longmapsto a\bmod n</mrow>
+        </md>.
+    </p>
+</warning>
+
+
+<theorem xml:id="th_div_alg">
+<title>Division algorithm</title>
+<statement>
+<p>
+Given any integer <m>a, b\in \Z</m> with <m>b</m> nonzero, there is a unique pair of integers <m>(q,r)</m> satisfying the following properties:
+<ol marker="(i)">
+    <li>
+        <p>
+            <m>a=qb+r</m>;
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>0\leq r&lt; \abs{b}</m>.
+        </p>
+    </li>
+</ol>
+We call the integers <m>q</m> and <m>r</m> satisfying these properties the <term>quotient</term> and <term>remainder</term> upon dividing <m>a</m> by <m>b</m>. 
+</p>
+</statement>
+</theorem>
+
+<proposition xml:id="prop_least_residue">
+    <title>Least residue</title>
+    <statement>
+        <p>
+            Let <m>n</m> be a positive integer, and let <m>a,r\in \Z</m>. The following statements are equivalent. 
+            <ol>
+                <li>
+                    <p>
+                        <m>a\bmod n=r</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>[a]_n=[r]_n</m> and <m>r\in \{0,1,2\dots, n-1\}</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>r</m> is the remainder upon division of <m>a</m> by <m>n</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</proposition>
+
+<definition xml:id="d_gcd">
+<title>Greatest common divisor</title>
+<notation>
+    <usage><m>\gcd(a,b)</m></usage>
+  <description>the greatest common divisor of <m>a</m> and <m>b</m></description>
+</notation>
+<statement>
+<p>
+Let <m>a</m> and <m>b</m> be integers, one of which is nonzero. The <term>greatest common divisor</term> of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>, is the greatest positive integer dividing <m>a</m> and <m>b</m>: <ie/>, 
+<me>
+    \gcd(a,b)=\max \{n\in \Z_{&gt; 0}\mid n\mid a \text{ and } n\mid b\}
+</me>.
+</p>
+</statement>
+</definition>
+
+</subsection>
+</section>

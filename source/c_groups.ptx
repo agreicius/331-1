@@ -3,6 +3,6 @@
 <chapter xml:id="c_groups" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Group Theory</title>
 <xi:include href="s_groups.ptx" />
-<!-- <xi:include href="s_modular_arithmetic.ptx" /> -->
+<xi:include href="s_mod_rings.ptx" />
 
 </chapter>
