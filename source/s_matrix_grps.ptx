@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_matrix_grps" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Matrix groups and rigid motions</title>
+<definition xml:id="d_invertible_matrix">
+<title>Invertible matix</title>
+<statement>
+<p>
+Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for some <m>m\in \Z_{&gt; 0}</m>. Fix a positive integer <m>n</m>. The set of all <m>n\times n</m> matrices with coefficients in <m>R</m> is denoted <m>M_n(R)</m>. 
+</p>
+<p>
+    Given matrices <m>A=[a_{ij}], B=[b_{ij}]\in M_n(R)</m> we define their product <m>AB</m> to be the matrix <m>C=[c_{ij}]\in M_n(R)</m>, where 
+    <men xml:id="eq_matrix_mult">
+        c_{ij}=\sum_{k=1}^na_{ik}b_{kj}
+    </men>
+    for all <m>1\leq i,j\leq n</m>.
+</p>
+<p>
+    A matrix <m>A\in M_n(R)</m> is <term>invertible</term> if there is a matrix <m>B\in M_n(R)</m> such that 
+<me>
+    AB=BA=I
+</me>,
+where <m>I</m> is the <m>n\times n</m> identity matrix. 
+</p>
+
+<p>
+    We denote by <m>\GL_n(R)</m> the set of all invertible matrices with coefficients in <m>R</m>: <ie/>, 
+    <men xml:id="eq_inv_matrices_gen">
+        \GL_n(R)=\{A\in M_{n}(R)\mid A \text{ is invertible}\}
+    </men>.
+</p>
+</statement>
+</definition>
+
+<activity xml:id="spec_matrix_grps_gen">
+<title>General linear group (generalized)</title>
+<statement>
+<p>
+Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for some <m>m\in \Z_{&gt; 0}</m>. Given a positive integer <m>n</m>, the pair <m>(\GL_n(R),\cdot)</m> is a group,  where <m>\cdot</m> is matrix multiplication in <m>M_n(R)</m>. 
+</p>
+</statement>
+</activity>
+<remark>
+    <title>Invertible matrices and determinant</title>
+<p>
+    It turns out that matrix algebra in <m>M_n(R)</m> proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring <m>R</m> is. In particular, we can define a determinant function 
+    <md>
+        <mrow>\det \colon M_n(R) \amp \rightarrow R</mrow>
+        <mrow>A \amp \mapsto \det A</mrow>
+    </md>
+    using the usual formula, since <m>R</m> has notions of addition and multiplication. Furthermore, you can show that as usual <m>\det</m> satisfies 
+    <me>
+        \det AB=\det A\det B
+    </me>
+    for all <m>A,B\in M_n(R)</m>, and that for all <m>A\in M_n(R)</m> there is a special matrix <m>A^\dagger</m> called the <term>adjoint matrix</term> of <m>A</m> that satisfies 
+    <me>
+        A^\dagger A=AA^\dagger=(\det A)\, I
+    </me>.
+    From these observations it follows that 
+    <me>
+        \GL_n(R)=\{A\in M_{n}(R)\mid \det A\in R^*\}
+    </me>,
+    where <m>R^*</m> is the group of units of <m>R</m>, as defined in <xref ref="spec_ring_mult_groups"/> and <xref ref="spec_units_mod_n"/>. 
+</p>
+<p>
+    Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects <q>defined over</q> <m>\Z</m> and <m>\C</m> are sometimes inherited by the same types of objects <q>defined over</q> a more general <m>R</m>. 
+</p>  
+</remark>
+ <example xml:id="eg_GL_mod2">
+ <title><m>\GL_2(\Z/2\Z)</m></title>
+ <statement>
+ <p>
+ Consider the group <m>\GL_2(\Z/2\Z)</m>.
+ <ol>
+    <li>
+        <p>
+            Compute <m>\abs{\GL_2(\Z/2\Z)}</m> by explicitly enumerating all of its elements. You can use <m>0</m> and <m>1</m> to denote the congruence classes <m>[0]_2, [1]_2\in \Z/2\Z</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Compute <m>\ord A</m> for all <m>A\in \GL_2(\Z/2\Z)</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Find <m>A,B\in\GL_2(\Z/2\Z)</m> such that 
+            <men xml:id="eq_gl2_dihedral">
+                \GL_2(\Z/2\Z)=\{A^iB^j\mid 0\leq i\leq 2, 0\leq j\leq 1\}
+            </men>.
+        </p>
+    </li>
+    <li>
+        <p>
+            For your choice of <m>A, B</m> above, express <m>BA</m> as <m>A^iB^j</m> as in <xref ref="eq_gl2_dihedral"/>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Use the above to construct a full multiplication table of <m>\GL_2(\Z/2\Z)</m> in terms of <m>A</m> and <m>B</m>. 
+        </p>
+    </li>
+ </ol>
+ </p>
+ </statement>
+ <solution>
+ <p>
+ 
+ </p>
+ </solution>
+ </example>
+ <definition xml:id="d_isom">
+ <title>Isometry</title>
+ <statement>
+ <p>
+ Fix a positive integer <m>n</m>. Let <m>d</m> denote the standard Euclidean distance on <m>\R^n</m>: <ie/>, 
+ <men xml:id="eq_euc_dist">
+    d(\boldx, \boldy)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}
+ </men>,
+ for all <m>n</m>-tuples <m>\boldx=(x_1,x_2,\dots, x_n)</m> and <m>\boldy=(y_1,y_2,\dots, y_n)</m>. An <term>isometry</term> (or <term>rigid motion</term>) of <m>\R^n</m> with respect to <m>d</m> is a function <m>f\colon \R^n\rightarrow \R^n</m> satisfying 
+ <men xml:id="eqn_isom">
+    d(f(\boldx), f(\boldy))=d(\boldx, \boldy)
+ </men>
+ for all <m>\boldx,\boldy\in \R^n</m>. We denote by <m>\Isom(\R^n)</m> the set of all isometries of <m>\R^n</m>. 
+ </p>
+ </statement>
+ </definition>
+ <activity xml:id="spec_isom">
+ <title>Group of isometries</title>
+ <statement>
+ <p>
+ Fix a positive integer <m>n</m>. The pair <m>(\Isom(\R^n), \circ)</m> is a group, where <m>\circ</m> is function composition. 
+ </p>
+ </statement>
+ </activity>
+ <example xml:id="eg_isometries">
+ <title>Isometries</title>
+ <statement>
+ <p>
+ Fix a postive integer <m>n</m>. Investigate the claim that <m>\Isom(\R^n)</m> is a group with respect to composition. In more detail:  
+ <ul>
+    <li>
+        <p>
+          Explain why the group operation is well defined.  
+        </p>
+    </li>
+    <li>
+        <p>
+            What is the group identity of this group, and what are the group inverses? 
+        </p>
+    </li>
+    <li>
+        <p>
+            There is a nontrivial detail in the last part that requires proof. What is it? 
+        </p>
+    </li>
+ </ul>
+ </p>
+ </statement>
+ <solution>
+ <p>
+ 
+ </p>
+ </solution>
+ </example>
+
+ 
+ 
+ 
+    
+
+</section>

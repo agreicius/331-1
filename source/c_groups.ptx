@@ -4,5 +4,6 @@
     <title>Group Theory</title>
 <xi:include href="s_groups.ptx" />
 <xi:include href="s_mod_rings.ptx" />
+<xi:include href="s_matrix_grps.ptx" />
 
 </chapter>

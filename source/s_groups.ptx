@@ -83,7 +83,7 @@
         <title>Ring multiplicative groups</title>
         <statement>
             <p>
-                Let <m>R\in \{\Z,\Q, \R, \C\}</m>. An element <m>r\in R</m> is <term>multiplicatively invertible</term> if there is an element <m>r^{-1}\in R</m> satisfying <m>r\,r^{-1}=r^{-1}\, r=1</m>. In this case <m>r^{-1}</m> is called the <term>multiplicative inverse</term> of <m>r</m>. Define <m>R^*</m> to be the set of multiplicatively invertible elements of <m>R</m>: <ie/>, 
+                Let <m>R\in \{\Z,\Q, \R, \C\}</m>. An element <m>r\in R</m> is a <term>unit</term> (or <term>(multiplicatively) invertible</term> if there is an element <m>r^{-1}\in R</m> satisfying <m>r\,r^{-1}=r^{-1}\, r=1</m>. In this case <m>r^{-1}</m> is called the <term>multiplicative inverse</term> of <m>r</m>. Define <m>R^*</m> to be the set of all units of <m>R</m>: <ie/>, 
                 <me>
                     R^* = \{ r\in R \mid \text{there exists } r^{-1}\in R \text{ such that } r\, r^{-1}=r^{-1}\, r = 1 \}
                 </me>.
