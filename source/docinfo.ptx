@@ -101,6 +101,7 @@
     \DeclareMathOperator{\diver}{div}
     \DeclareMathOperator{\flux}{flux}
     \DeclareMathOperator{\Hom}{Hom}
+    \DeclareMathOperator{\Isom}{Isom}
     \DeclareMathOperator{\GL}{GL}
     \DeclareMathOperator{\ML}{M}
     \DeclareMathOperator{\Gal}{Gal}
