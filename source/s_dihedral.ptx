@@ -2,6 +2,80 @@
 
 <section xml:id="s_dihedral" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Dihedral groups</title>
+<subsection xml:id="ss_isometries">
+<title>Isometries of <m>\R^n</m></title>
+<definition xml:id="d_isom">
+    <notation>
+        <usage><m>\Isom(\R^n)</m></usage>
+      <description>isometries of <m>\R^n</m></description>
+    </notation>
+ <title>Isometry</title>
+ <statement>
+ <p>
+ Fix a positive integer <m>n</m>. Let <m>d</m> denote the standard Euclidean distance on <m>\R^n</m>: <ie/>, 
+ <men xml:id="eq_euc_dist">
+    d(\boldx, \boldy)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}
+ </men>,
+ for all <m>n</m>-tuples <m>\boldx=(x_1,x_2,\dots, x_n)</m> and <m>\boldy=(y_1,y_2,\dots, y_n)</m>. An <term>isometry</term> (or <term>rigid motion</term>) of <m>\R^n</m> with respect to <m>d</m> is a function <m>f\colon \R^n\rightarrow \R^n</m> satisfying 
+ <men xml:id="eqn_isom">
+    d(f(\boldx), f(\boldy))=d(\boldx, \boldy)
+ </men>
+ for all <m>\boldx,\boldy\in \R^n</m>. We denote by <m>\Isom(\R^n)</m> the set of all isometries of <m>\R^n</m>. 
+ </p>
+ </statement>
+ </definition>
+<activity xml:id="spec_isom">
+ <title>Group of isometries</title>
+ <statement>
+ <p>
+ Fix a positive integer <m>n</m>. The pair <m>(\Isom(\R^n), \circ)</m> is a group, where <m>\circ</m> is function composition. 
+ </p>
+ </statement>
+ </activity>
+ <example xml:id="eg_isometries">
+ <title>Isometries</title>
+ <statement>
+ <p>
+ Fix a positive integer <m>n</m>. Investigate the claim that <m>\Isom(\R^n)</m> is a group with respect to composition. In more detail:  
+ <ul>
+    <li>
+        <p>
+          Explain why the group operation is well defined.  
+        </p>
+    </li>
+    <li>
+        <p>
+            What is the group identity of this group, and what are the group inverses? 
+        </p>
+    </li>
+    <li>
+        <p>
+            There is a nontrivial detail in the last part that requires proof. What is it? 
+        </p>
+    </li>
+ </ul>
+ </p>
+ </statement>
+ <solution>
+ <p>
+ 
+ </p>
+ </solution>
+ </example>
+<remark>
+<title>Rigid motions of <m>\R^2</m></title>
+<p>
+Rotations about a point, reflections through a line, and translation by a fixed vector <m>\boldv_0</m> are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion <m>f\colon \R^2\rightarrow \R^2</m> that maps the origin <m>\boldzero=(0,0)</m> to itself is a linear transformation, that itself is either rotation about <m>\boldzero</m> or reflection through a line passing through <m>\boldzero</m>. It follows from this that any rigid motion <m>f\colon \R^2\rightarrow \R^2</m> has a formula of the form 
+<me>
+    f(\boldx)=A\boldx+\boldb
+</me>, 
+where <m>A</m> is a <m>2\times 2</m> rotation or reflection matrix, and <m>\boldb</m> is a fixed vector in <m>\R^2</m>. 
+</p>
+</remark>
+</subsection>
+<subsection xml:id="ss_dihedral">
+<title>Dihedral groups</title>
+
 
 <activity xml:id="spec_dihedral">
 <title>Dihedral groups</title>
@@ -13,7 +87,7 @@
 <p>
 Fix an integer <m>n\geq 3</m>. Let <m>P_n\subseteq \R^2</m> be the regular <m>n</m>-gon centered at the origin with one vertex at <m>(1,0)</m>. We define <m>D_n</m> to be the set of rigid motions of <m>\R^2</m> that map <m>P_n</m> onto itself: <ie/>,
 <me>
-    D_n=\{f\in \Isom(\R^2)\mid f(D_n)=D_n\}
+    D_n=\{f\in \Isom(\R^2)\mid f(P_n)=P_n\}
 </me>.
 Function composition defines a binary operation 
 <md>
@@ -58,7 +132,7 @@ Furthermore, define <m>r\colon \R^2\rightarrow \R^2</m> to be rotation by <m>2\p
         <p>
             The elements <m>r</m> and <m>s</m> satisfy 
             <men xml:id="eq_dihedral_relation">
-                sr=r^{n-1}s=r^{n-1}s
+                sr=r^{-1}s=r^{n-1}s
             </men>.
         </p>
     </li>
@@ -79,6 +153,112 @@ Furthermore, define <m>r\colon \R^2\rightarrow \R^2</m> to be rotation by <m>2\p
 </p>
 </proof>
 </theorem>
+<example xml:id="eg_D3">
+<title>Computing in <m>D_3</m></title>
+<statement>
+<p>
+Fix <m>n=3</m>. Visualize the elements of <m>D_3</m> as follows. 
+<ol>
+    <li>
+        <p>
+            Draw the equilateral triangle <m>P_3</m> as described in <xref ref="spec_dihedral"/>. 
+        </p>
+    </li>
+    <li>
+        <p>
+           For each element <m>r^is^j\in D_n</m>, where <m>r</m> and <m>s</m> are defined as in <xref ref="th_dihedral"/>, give an explicit geometric description of this rigid motion. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Compute a group table for <m>D_3</m>. 
+        </p>
+    </li>
+</ol> 
+</p>
+</statement>
+<solution>
+<p>
 
+</p>
+</solution>
+</example>
+<example xml:id="eg_dihedral_geom">
+<title>Dihedral geometry</title>
+<statement>
+<p>
+Fix an integer <m>n\geq 3</m>, and let <m>r,s\in D_n</m> be as defined in <xref ref="th_dihedral"/>. 
+<ol>
+    <li>
+        <p>
+            Give a precise geometric description of each rigid motion <m>r^is^j\in D_n</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>s'=r^is</m> for any <m>1\leq i\leq n-1</m>. Prove that 
+            <me>
+                D_n=\{r^i(s')^j\mid 0\leq i\leq n-1, 0\leq j\leq 1\}
+            </me>
+            and that <m>s'</m> satisfies 
+            <me>
+                s'r=r^{-1}s'=r^{n-1}s'
+            </me>.
+        In other words, in the description of <m>D_n</m> given in <xref ref="th_dihedral"/>, we can replace the reflection <m>s</m> with any of the reflections <m>s'=r^is</m>. 
+        </p>
+    </li>
+</ol> 
+</p>
+</statement>
+<solution>
+<p>
 
+</p>
+</solution>
+</example>
+
+</subsection>
+<subsection xml:id="ss_group_presentation">
+<title>Group presentations</title>
+<p>
+    As we saw above, the relations 
+    <md>
+        <mrow>r^n \amp =s^2=e \amp sr\amp= r^{-1}s=r^{n-1}s</mrow>
+    </md>
+    together with the fact that <m>D_n=\{r^is^j\mid 0\leq i\leq n-1, 0\leq j\leq 1\}</m> are essentially all we need to know to be able to do computations in the dihedral group <m>D_n</m>. <em>Group presentation</em> notation gives us a nice way of summarizing this defining properties. A group presentation of <m>D_n</m> is 
+    <me>
+        \angvec{r,s\mid r^n=s^2=e, sr=r^{-1}s}
+    </me>.
+    Although we introduce the notation here as a convenient way to summarize how an established group, namely <m>D_n</m>, is <q>generated</q> by the elements <m>r</m> and <m>s</m>, the notation can also be used to construct groups from scratch. Put another way, any presentation like the one above can be shown to be the presentation of an actual existing group. For example, the presentation 
+    <me>
+        \angvec{r,s\mid r^2=s^2=(rs)^2=e}
+    </me>
+    can be shown to be the define a certain group <m>G</m> of cardinality <m>4</m>. As it turns out, to make good sense of this construction, a significant amount of theory must be mobilized. As such, we will be careful to confine ourselves to using the presentation notation only to as a summary description of a group we know already to exist. The <em>quaternion group</em> below is a good example of this. 
+</p>
+<activity xml:id="spec_quaternion">
+<title>Quaternion group</title>
+<notation>
+    <usage><m>Q_8</m></usage>
+  <description>the quaternion group</description>
+</notation>
+<statement>
+<p>
+Let <m>Q_8=\{1,-1,i,-i,j,-j,k,-k\}</m>. The following rules define a binary operation <m>\cdot</m> on <m>Q_8</m>.
+<md>
+    <mrow>1\cdot a \amp =a\cdot 1=a \text{ for all } a\in Q_8</mrow>
+    <mrow>(-1)\cdot (-1) \amp =1 \amp (-1)\cdot a\amp=a\cdot (-1)=-a \text{ for all } a\in Q_8</mrow>
+    <mrow>i^2 \amp =j^2=k^2=-1</mrow>
+    <mrow>ij \amp =k \amp ji\amp =-k</mrow>
+    <mrow>jk \amp = i \amp kj\amp =-i</mrow>
+    <mrow>ki \amp = j \amp ik\amp =-j</mrow>
+</md>.
+ The pair <m>(Q_8,\cdot)</m> is a group called the <term>quaternion group</term>. We have the following presentation of <m>Q_8</m>: 
+ <me>
+    Q_8=\angvec{i,j\mid i^2=j^2=(ij)^2, ji=i^{-1}j}
+ </me>.
+</p>
+</statement>
+</activity>
+
+</subsection>
 </section>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_matrix_grps" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Matrix groups and rigid motions</title>
+    <title>Matrix groups</title>
 <definition xml:id="d_invertible_matrix">
 <title>Invertible matix</title>
 <statement>
@@ -182,70 +182,8 @@ Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for so
  </p>
  </solution>
  </example>
- <definition xml:id="d_isom">
- <title>Isometry</title>
- <statement>
- <p>
- Fix a positive integer <m>n</m>. Let <m>d</m> denote the standard Euclidean distance on <m>\R^n</m>: <ie/>, 
- <men xml:id="eq_euc_dist">
-    d(\boldx, \boldy)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}
- </men>,
- for all <m>n</m>-tuples <m>\boldx=(x_1,x_2,\dots, x_n)</m> and <m>\boldy=(y_1,y_2,\dots, y_n)</m>. An <term>isometry</term> (or <term>rigid motion</term>) of <m>\R^n</m> with respect to <m>d</m> is a function <m>f\colon \R^n\rightarrow \R^n</m> satisfying 
- <men xml:id="eqn_isom">
-    d(f(\boldx), f(\boldy))=d(\boldx, \boldy)
- </men>
- for all <m>\boldx,\boldy\in \R^n</m>. We denote by <m>\Isom(\R^n)</m> the set of all isometries of <m>\R^n</m>. 
- </p>
- </statement>
- </definition>
- <activity xml:id="spec_isom">
- <title>Group of isometries</title>
- <statement>
- <p>
- Fix a positive integer <m>n</m>. The pair <m>(\Isom(\R^n), \circ)</m> is a group, where <m>\circ</m> is function composition. 
- </p>
- </statement>
- </activity>
- <example xml:id="eg_isometries">
- <title>Isometries</title>
- <statement>
- <p>
- Fix a postive integer <m>n</m>. Investigate the claim that <m>\Isom(\R^n)</m> is a group with respect to composition. In more detail:  
- <ul>
-    <li>
-        <p>
-          Explain why the group operation is well defined.  
-        </p>
-    </li>
-    <li>
-        <p>
-            What is the group identity of this group, and what are the group inverses? 
-        </p>
-    </li>
-    <li>
-        <p>
-            There is a nontrivial detail in the last part that requires proof. What is it? 
-        </p>
-    </li>
- </ul>
- </p>
- </statement>
- <solution>
- <p>
  
- </p>
- </solution>
- </example>
-<remark>
-<title>Rigid motions of <m>\R^2</m></title>
-<p>
-Rotations about a point, reflections through a line, and translation by a fixed vector <m>\boldv_0</m> are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion <m>f\colon \R^2\rightarrow \R^2</m> that maps the origin <m>\boldzero=(0,0)</m> to itself is a linear transformation, that itself is either rotation about <m>\boldzero</m> or reflection through a line passing through <m>\boldzero</m>. It follows from this that any rigid motion <m>f\colon \R^2\rightarrow \R^2</m> has a formula of the form 
-<me>
-    f(\boldx)=A\boldx+\boldb
-</me>, 
-where <m>A</m> is a <m>2\times 2</m> rotation or reflection matrix, and <m>\boldb</m> is a fixed vector in <m>\R^2</m>. 
-</p>
-</remark>
+ 
 
  
  
