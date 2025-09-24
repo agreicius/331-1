@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_dihedral" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Dihedral groups</title>
+
+<activity xml:id="spec_dihedral">
+<title>Dihedral groups</title>
+<notation>
+    <usage><m>D_n</m></usage>
+  <description>the dihedral group of cardinality <m>2n</m></description>
+</notation>
+<statement>
+<p>
+Fix an integer <m>n\geq 3</m>. Let <m>P_n\subseteq \R^2</m> be the regular <m>n</m>-gon centered at the origin with one vertex at <m>(1,0)</m>. We define <m>D_n</m> to be the set of rigid motions of <m>\R^2</m> that map <m>P_n</m> onto itself: <ie/>,
+<me>
+    D_n=\{f\in \Isom(\R^2)\mid f(D_n)=D_n\}
+</me>.
+Function composition defines a binary operation 
+<md>
+    <mrow>\circ \colon D_{n}\times D_n \amp \rightarrow D_n</mrow>
+    <mrow>(f,g) \amp \mapsto f\circ g</mrow>
+</md>.
+The pair <m>(D_n, \circ)</m> is a group, called the <term>dihedral group of cardinality <m>2n</m></term>.
+</p>
+<p>
+    The group identity of <m>D_n</m> is the identity function <m>\id\colon \R^2\rightarrow \R^2</m>. Given an element <m>f\in D_n</m>, its group inverse is its function inverse <m>f^{-1}</m>. 
+</p>
+</statement>
+</activity>
+<warning>
+    <title><m>D_n</m> or <m>D_{2n}</m></title>
+    <p>
+        What we call <m>D_{n}</m> the book calls <m>D_{2n}</m>! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the <m>2n</m> subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the <m>n</m> subscript reminds us that the group is defined in terms of isometries that fix an <m>n</m>-gon. The latter is consistent with our notation for permutation groups <m>S_n</m> (to be introduced soon), which are defined as the group of permutations acting on a set of <m>n</m> elements. That fact, along with the fact that I was simply raised on <m>D_n</m> and not <m>D_{2n}</m> has persuaded me to part ways with the text in this case.   
+    </p>
+</warning>
+<theorem xml:id="th_dihedral">
+<title>Dihedral group</title>
+<statement>
+<p>
+Fix an integer <m>n\geq 3</m>, let <m>P_n</m> be the regular <m>n</m>-gon centered at the origin with one vertex at <m>(1,0)</m>, and let <m>D_n</m> be the corresponding dihedral group.  
+</p>
+ <p>
+Furthermore, define <m>r\colon \R^2\rightarrow \R^2</m> to be rotation by <m>2\pi/n</m> about the origin, and define <m>s\colon \R^2\rightarrow \R^2</m> to be reflection across the <m>x</m>-axis.
+<ol>
+    <li>
+        <p>
+            We have 
+           <men xml:id="eq_dihedral_gens">
+            D_n=\{r^is^j\mid 0\leq i\leq n-1, 0\leq j\leq 1\}
+           </men> 
+           and 
+           <men xml:id="eq_dihedral_card">
+            \abs{D_n}=2n
+           </men>.
+        </p>
+    </li>
+    <li>
+        <p>
+            The elements <m>r</m> and <m>s</m> satisfy 
+            <men xml:id="eq_dihedral_relation">
+                sr=r^{n-1}s=r^{n-1}s
+            </men>.
+        </p>
+    </li>
+    <li>
+        <p>
+            More generally, we have 
+            <men xml:id="eq_dihedral_mult">
+                (r^is^j)(r^ks^\ell)=r^{(i-k)\bmod n}s^{(j+\ell)\bmod n}
+            </men>.
+        </p>
+    </li>
+</ol>
+</p>
+
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+
+
+</section>

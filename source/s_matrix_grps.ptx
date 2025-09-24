@@ -105,6 +105,79 @@ Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for so
  </statement>
  <solution>
  <p>
+ Since <m>(\Z/2\Z)^*=\{1\}</m>, we see that <m>A\in M_2(\Z/2\Z)</m> to be invertible, we need <m>\det A=1</m>. This restriction allows us to easily enumerate the invertible matrices as 
+ <me>
+    \GL_2(\Z/2\Z)=\left\{ 
+        I, A=\begin{bmatrix}
+        0\amp 1\\
+        1\amp 1
+        \end{bmatrix}, 
+        B=\begin{bmatrix}
+        0\amp 1\\
+        1\amp 0
+        \end{bmatrix},
+        \begin{bmatrix}
+        1\amp 1\\
+        1\amp 0
+        \end{bmatrix},
+        \begin{bmatrix}
+        1\amp 0\\
+        1\amp 1
+        \end{bmatrix},
+        \begin{bmatrix}
+        1\amp 1\\
+        0\amp 1
+        \end{bmatrix}
+        \right\}
+ </me>.
+ The matrices named <m>A</m> and <m>B</m> above satisfy 
+ <md>
+    <mrow>A^3 \amp = B^2=I </mrow>
+    <mrow>A^2 \amp = \begin{bmatrix}
+        1\amp 1\\
+        1\amp 0
+        \end{bmatrix}</mrow>
+        <mrow>AB \amp =\begin{bmatrix}
+        1\amp 0\\
+        1\amp 1
+        \end{bmatrix}</mrow>
+        <mrow>A^2B \amp = \begin{bmatrix}
+        1\amp 1\\
+        0\amp 1
+        \end{bmatrix}</mrow>
+ </md>.
+ Thus 
+ <me>
+    \GL_2(\Z/2\Z)=\{A^iB^j\mid 0\leq i\leq 2, 0\leq j\leq 1\}
+ </me>.
+ Furthermore, we see that 
+ <me>
+    BA=\begin{bmatrix}
+    1\amp 1\\
+    0\amp 1
+    \end{bmatrix}
+    =A^2B=A^{-1}B
+ </me>.
+ The three relations 
+ <md>
+    <mrow>A^3 \amp =I</mrow>
+    <mrow>B^2 \amp = I</mrow>
+    <mrow>BA \amp =A^2B=A^{-1}B</mrow>
+ </md>
+ then easily allow us to compute with the group law: that is as long as we express elements of the group in the form <m>A^iB^j</m>. For example, we have 
+ <md>
+    <mrow>(A^2B)(AB) \amp = A^2BAB</mrow>
+    <mrow> \amp = A^2A^2B^2</mrow>
+    <mrow> \amp= A^4 </mrow>
+    <mrow> \amp = A \amp (A^3=I)</mrow>
+ </md>.
+ Computations like this allow us to easily compute orders of elements: 
+ <md>
+    <mrow>\ord I \amp = 1</mrow>
+    <mrow>\ord A =\ord A^2\amp =3</mrow>
+    <mrow>\ord B =\ord AB\amp=\ord A^2B=2</mrow>
+ </md>.
+ We leave it to you to compute the entire multiplication table of <m>\GL_2(\Z/2/Z)</m>. A good exercise! 
  
  </p>
  </solution>
