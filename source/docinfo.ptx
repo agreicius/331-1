@@ -96,6 +96,7 @@
     \DeclareMathOperator{\Frob}{Frob}
     \DeclareMathOperator{\adj}{adj}
     \DeclareMathOperator{\ord}{ord}
+    \DeclareMathOperator{\Isom}{Isom}
     \DeclareMathOperator{\curl}{curl}
     \DeclareMathOperator{\grad}{grad}
     \DeclareMathOperator{\diver}{div}

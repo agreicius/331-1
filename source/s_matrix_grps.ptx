@@ -163,6 +163,16 @@ Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for so
  </p>
  </solution>
  </example>
+<remark>
+<title>Rigid motions of <m>\R^2</m></title>
+<p>
+Rotations about a point, reflections through a line, and translation by a fixed vector <m>\boldv_0</m> are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion <m>f\colon \R^2\rightarrow \R^2</m> that maps the origin <m>\boldzero=(0,0)</m> to itself is a linear transformation, that itself is either rotation about <m>\boldzero</m> or reflection through a line passing through <m>\boldzero</m>. It follows from this that any rigid motion <m>f\colon \R^2\rightarrow \R^2</m> has a formula of the form 
+<me>
+    f(\boldx)=A\boldx+\boldb
+</me>, 
+where <m>A</m> is a <m>2\times 2</m> rotation or reflection matrix, and <m>\boldb</m> is a fixed vector in <m>\R^2</m>. 
+</p>
+</remark>
 
  
  
