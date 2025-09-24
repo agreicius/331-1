@@ -861,8 +861,8 @@ var ptx_lunr_docs = [
   "url": "s_matrix_grps.html",
   "type": "Section",
   "number": "1.3",
-  "title": "Matrix groups and rigid motions",
-  "body": " Matrix groups and rigid motions   Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .     General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .     Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .      Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of .     Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .     Group of isometries   Fix a positive integer . The pair is a group, where is function composition.     Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?           "
+  "title": "Matrix groups",
+  "body": " Matrix groups   Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .     General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .     Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .      Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!     Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .    "
 },
 {
   "id": "d_invertible_matrix",
@@ -898,7 +898,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.30",
   "title": "<span class=\"process-math\">\\(\\GL_2(\\Z\/2\\Z)\\)<\/span>.",
-  "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of .   "
+  "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!   "
 },
 {
   "id": "d_isom",
@@ -910,9 +910,18 @@ var ptx_lunr_docs = [
   "body": " Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
 },
 {
+  "id": "s_dihedral",
+  "level": "1",
+  "url": "s_dihedral.html",
+  "type": "Section",
+  "number": "1.4",
+  "title": "Dihedral groups",
+  "body": " Dihedral groups   Isometries of   Group of isometries   Fix a positive integer . The pair is a group, where is function composition.     Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?            Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .     Dihedral groups   Dihedral groups    the dihedral group of cardinality    Fix an integer . Let be the regular -gon centered at the origin with one vertex at . We define to be the set of rigid motions of that map onto itself: , . Function composition defines a binary operation . The pair is a group, called the dihedral group of cardinality .  The group identity of is the identity function . Given an element , its group inverse is its function inverse .     or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.    Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .    More generally, we have .            Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .            Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .             Group presentations  As we saw above, the relations together with the fact that are essentially all we need to know to be able to do computations in the dihedral group . Group presentation notation gives us a nice way of summarizing this defining properties. A group presentation of is . Although we introduce the notation here as a convenient way to summarize how an established group, namely , is generated by the elements and , the notation can also be used to construct groups from scratch. Put another way, any presentation like the one above can be shown to be the presentation of an actual existing group. For example, the presentation can be shown to be the define a certain group of cardinality . As it turns out, to make good sense of this construction, a significant amount of theory must be mobilized. As such, we will be careful to confine ourselves to using the presentation notation only to as a summary description of a group we know already to exist. The quaternion group below is a good example of this.   Quaternion group    the quaternion group    Let . The following rules define a binary operation on . . The pair is a group called the quaternion group . We have the following presentation of : .     "
+},
+{
   "id": "spec_isom",
   "level": "2",
-  "url": "s_matrix_grps.html#spec_isom",
+  "url": "s_dihedral.html#spec_isom",
   "type": "Specimen",
   "number": "7",
   "title": "Group of isometries.",
@@ -921,11 +930,74 @@ var ptx_lunr_docs = [
 {
   "id": "eg_isometries",
   "level": "2",
-  "url": "s_matrix_grps.html#eg_isometries",
+  "url": "s_dihedral.html#eg_isometries",
   "type": "Example",
   "number": "1.32",
   "title": "Isometries.",
   "body": " Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
+},
+{
+  "id": "ss_isometries-4",
+  "level": "2",
+  "url": "s_dihedral.html#ss_isometries-4",
+  "type": "Remark",
+  "number": "1.33",
+  "title": "Rigid motions of <span class=\"process-math\">\\(\\R^2\\)<\/span>.",
+  "body": " Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .  "
+},
+{
+  "id": "spec_dihedral",
+  "level": "2",
+  "url": "s_dihedral.html#spec_dihedral",
+  "type": "Specimen",
+  "number": "8",
+  "title": "Dihedral groups.",
+  "body": " Dihedral groups    the dihedral group of cardinality    Fix an integer . Let be the regular -gon centered at the origin with one vertex at . We define to be the set of rigid motions of that map onto itself: , . Function composition defines a binary operation . The pair is a group, called the dihedral group of cardinality .  The group identity of is the identity function . Given an element , its group inverse is its function inverse .   "
+},
+{
+  "id": "ss_dihedral-3",
+  "level": "2",
+  "url": "s_dihedral.html#ss_dihedral-3",
+  "type": "Warning",
+  "number": "1.34",
+  "title": "<span class=\"process-math\">\\(D_n\\)<\/span> or <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
+  "body": " or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.  "
+},
+{
+  "id": "th_dihedral",
+  "level": "2",
+  "url": "s_dihedral.html#th_dihedral",
+  "type": "Theorem",
+  "number": "1.35",
+  "title": "Dihedral group.",
+  "body": " Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .    More generally, we have .          "
+},
+{
+  "id": "eg_D3",
+  "level": "2",
+  "url": "s_dihedral.html#eg_D3",
+  "type": "Example",
+  "number": "1.36",
+  "title": "Computing in <span class=\"process-math\">\\(D_3\\)<\/span>.",
+  "body": " Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .          "
+},
+{
+  "id": "eg_dihedral_geom",
+  "level": "2",
+  "url": "s_dihedral.html#eg_dihedral_geom",
+  "type": "Example",
+  "number": "1.37",
+  "title": "Dihedral geometry.",
+  "body": " Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .          "
+},
+{
+  "id": "spec_quaternion",
+  "level": "2",
+  "url": "s_dihedral.html#spec_quaternion",
+  "type": "Specimen",
+  "number": "9",
+  "title": "Quaternion group.",
+  "body": " Quaternion group    the quaternion group    Let . The following rules define a binary operation on . . The pair is a group called the quaternion group . We have the following presentation of : .   "
 },
 {
   "id": "appendix-notation",
