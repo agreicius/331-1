@@ -556,7 +556,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Groups",
-  "body": " Groups   This first quarter of Math 331 is devoted entirely to the study of groups. This a fitting place to begin both as groups represent a type of algebraic object with near minimal structure and are omnipresent in the world of mathematics and the empirical sciences more generally. More conceptually, groups are intimately connected with the notion of symmetry in mathematics. Put plainly, wherever you find mathematical discussion of symmetry, a group usually lurks in the background as the thing that defines that symmetry. We will see plenty of examples of this in the coming days. In the meantime, for an excellent elaboration of this theme, check out Keith Conrad's blurb Why groups?     Definition   Groups   A group is an ordered pair where is a nonempty set and is a binary operation , satisfying the following axioms.   Associativity  For all we have .    Group identity  There is an element , such that for all , we have . We call the group identity of .    Group inverses  For all there is an element satisfying . We call the group inverse of .        Group law notation   You are free to denote the binary group law in any manner you like. Often, as in , we will make a notational choice that reflects the specific nature of a given group.  Furthermore, with the exception of the case where is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.     Ring additive groups   Let , and let be the usual addition operation on . The pair is a group, called the additive group of .  The group identity of is , also known as the additive identity of .  Given any , its group inverse is its minus, , also known as the additive inverse  .     Ring multiplicative groups   Let . An element is multiplicatively invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of multiplicatively invertible elements of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.     Abelian group   A group is abelian (or commutative ) if for all . The group is nonabelian (or noncommutative ), if it is not abelian.     General linear group  Let . The set of all matrices with coefficients in is denoted . We denote by the set of invertible matrices with coefficients in : , is denoted : , . The pair , where is the usual matrix multiplication operation, is a group called the general linear group of degree over .  The group identity of is the identity matrix .  Given any , its group inverse is the matrix inverse .    is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.      Elementary properties   Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .            Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .        Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .        Order of inverse   Let be an element of the group . Prove: .     Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.     "
+  "body": " Groups   This first quarter of Math 331 is devoted entirely to the study of groups. This a fitting place to begin both as groups represent a type of algebraic object with near minimal structure and are omnipresent in the world of mathematics and the empirical sciences more generally. More conceptually, groups are intimately connected with the notion of symmetry in mathematics. Put plainly, wherever you find mathematical discussion of symmetry, a group usually lurks in the background as the thing that defines that symmetry. We will see plenty of examples of this in the coming days. In the meantime, for an excellent elaboration of this theme, check out Keith Conrad's blurb Why groups?     Definition   Groups   A group is an ordered pair where is a nonempty set and is a binary operation , satisfying the following axioms.   Associativity  For all we have .    Group identity  There is an element , such that for all , we have . We call the group identity of .    Group inverses  For all there is an element satisfying . We call the group inverse of .        Group law notation   You are free to denote the binary group law in any manner you like. Often, as in , we will make a notational choice that reflects the specific nature of a given group.  Furthermore, with the exception of the case where is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.     Ring additive groups   Let , and let be the usual addition operation on . The pair is a group, called the additive group of .  The group identity of is , also known as the additive identity of .  Given any , its group inverse is its minus, , also known as the additive inverse  .     Ring multiplicative groups   Let . An element is a unit (or (multiplicatively) invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of all units of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.     Abelian group   A group is abelian (or commutative ) if for all . The group is nonabelian (or noncommutative ), if it is not abelian.     General linear group  Let . The set of all matrices with coefficients in is denoted . We denote by the set of invertible matrices with coefficients in : , is denoted : , . The pair , where is the usual matrix multiplication operation, is a group called the general linear group of degree over .  The group identity of is the identity matrix .  Given any , its group inverse is the matrix inverse .    is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.      Elementary properties   Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .            Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .        Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .        Order of inverse   Let be an element of the group . Prove: .     Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.     "
 },
 {
   "id": "d_group",
@@ -592,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Specimen",
   "number": "2",
   "title": "Ring multiplicative groups.",
-  "body": " Ring multiplicative groups   Let . An element is multiplicatively invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of multiplicatively invertible elements of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.   "
+  "body": " Ring multiplicative groups   Let . An element is a unit (or (multiplicatively) invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of all units of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.   "
 },
 {
   "id": "d_abelian_group",
@@ -854,6 +854,78 @@ var ptx_lunr_docs = [
   "number": "1.27",
   "title": "Units mod <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Units mod  As we will see later, it turns out that an element is a unit if and only if is relatively prime to : , if and only if . As a result of this very much non-obvious fact, we have .  "
+},
+{
+  "id": "s_matrix_grps",
+  "level": "1",
+  "url": "s_matrix_grps.html",
+  "type": "Section",
+  "number": "1.3",
+  "title": "Matrix groups and rigid motions",
+  "body": " Matrix groups and rigid motions   Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .     General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .     Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .      Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of .     Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .     Group of isometries   Fix a positive integer . The pair is a group, where is function composition.     Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?           "
+},
+{
+  "id": "d_invertible_matrix",
+  "level": "2",
+  "url": "s_matrix_grps.html#d_invertible_matrix",
+  "type": "Definition",
+  "number": "1.28",
+  "title": "Invertible matix.",
+  "body": " Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .   "
+},
+{
+  "id": "spec_matrix_grps_gen",
+  "level": "2",
+  "url": "s_matrix_grps.html#spec_matrix_grps_gen",
+  "type": "Specimen",
+  "number": "6",
+  "title": "General linear group (generalized).",
+  "body": " General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .   "
+},
+{
+  "id": "s_matrix_grps-4",
+  "level": "2",
+  "url": "s_matrix_grps.html#s_matrix_grps-4",
+  "type": "Remark",
+  "number": "1.29",
+  "title": "Invertible matrices and determinant.",
+  "body": " Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .  "
+},
+{
+  "id": "eg_GL_mod2",
+  "level": "2",
+  "url": "s_matrix_grps.html#eg_GL_mod2",
+  "type": "Example",
+  "number": "1.30",
+  "title": "<span class=\"process-math\">\\(\\GL_2(\\Z\/2\\Z)\\)<\/span>.",
+  "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of .   "
+},
+{
+  "id": "d_isom",
+  "level": "2",
+  "url": "s_matrix_grps.html#d_isom",
+  "type": "Definition",
+  "number": "1.31",
+  "title": "Isometry.",
+  "body": " Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
+},
+{
+  "id": "spec_isom",
+  "level": "2",
+  "url": "s_matrix_grps.html#spec_isom",
+  "type": "Specimen",
+  "number": "7",
+  "title": "Group of isometries.",
+  "body": " Group of isometries   Fix a positive integer . The pair is a group, where is function composition.   "
+},
+{
+  "id": "eg_isometries",
+  "level": "2",
+  "url": "s_matrix_grps.html#eg_isometries",
+  "type": "Example",
+  "number": "1.32",
+  "title": "Isometries.",
+  "body": " Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
 },
 {
   "id": "appendix-notation",

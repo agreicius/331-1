@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_matrix_grps.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Z}{{\mathbb Z}}
@@ -212,6 +212,7 @@ eBookConfig.enable_chatcodes =  false;
 \DeclareMathOperator{\diver}{div}
 \DeclareMathOperator{\flux}{flux}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Isom}{Isom}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\ML}{M}
 \DeclareMathOperator{\Gal}{Gal}
@@ -406,6 +407,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong_ring_structure" class="internal"><span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span></span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_matrix_grps.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Matrix groups and rigid motions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -557,18 +559,18 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.5}
 <div class="para">The congruence modulo <span class="process-math">\(n\)</span> relation is an equivalence relation: i.e.,</div>
 <ol class="lower-roman ol-marker-2" id="th_cong_class-2-1-2-1-1-3">
 <li id="th_cong_class-2-1-2-1-1-3-1">
-<span class="heading"><span class="title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-1-2">
 <span class="process-math">\(a\equiv a\pmod n\)</span> for all <span class="process-math">\(a\in \Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.i: Reflexivity"><a href="#th_cong_class-2-1-2-1-1-3-1" title="Copy heading and permalink for Item 1.i: Reflexivity" aria-label="Copy heading and permalink for Item 1.i: Reflexivity">🔗</a></div>
 </li>
 <li id="th_cong_class-2-1-2-1-1-3-2">
-<span class="heading"><span class="title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-2-2">If <span class="process-math">\(a\equiv b\pmod n\text{,}\)</span> then <span class="process-math">\(b\equiv a\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-2-2">If <span class="process-math">\(a\equiv b\pmod n\text{,}\)</span> then <span class="process-math">\(b\equiv a\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.ii: Reflexivity"><a href="#th_cong_class-2-1-2-1-1-3-2" title="Copy heading and permalink for Item 1.ii: Reflexivity" aria-label="Copy heading and permalink for Item 1.ii: Reflexivity">🔗</a></div>
 </li>
 <li id="th_cong_class-2-1-2-1-1-3-3">
-<span class="heading"><span class="title">Transitivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-3-2">If <span class="process-math">\(a\equiv b\pmod n\)</span> and <span class="process-math">\(b\equiv c\pmod n\text{,}\)</span> then <span class="process-math">\(a\equiv c\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Transitivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-3-2">If <span class="process-math">\(a\equiv b\pmod n\)</span> and <span class="process-math">\(b\equiv c\pmod n\text{,}\)</span> then <span class="process-math">\(a\equiv c\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.iii: Transitivity"><a href="#th_cong_class-2-1-2-1-1-3-3" title="Copy heading and permalink for Item 1.iii: Transitivity" aria-label="Copy heading and permalink for Item 1.iii: Transitivity">🔗</a></div>
 </li>
@@ -880,7 +882,7 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.10}
 </div>
 <div class="autopermalink" data-description="Remark 1.27: Units mod n"><a href="#ss_cong_ring_structure-12" title="Copy heading and permalink for Remark 1.27: Units mod n" aria-label="Copy heading and permalink for Remark 1.27: Units mod n">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Ring structure of \Z/n\Z"><a href="#ss_cong_ring_structure" title="Copy heading and permalink for Subsection: Ring structure of \Z/n\Z" aria-label="Copy heading and permalink for Subsection: Ring structure of \Z/n\Z">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Modular arithmetic"><a href="#s_mod_rings" title="Copy heading and permalink for Section 1.2: Modular arithmetic" aria-label="Copy heading and permalink for Section 1.2: Modular arithmetic">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_matrix_grps.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
