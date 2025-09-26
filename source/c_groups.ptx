@@ -6,5 +6,5 @@
 <xi:include href="s_mod_rings.ptx" />
 <xi:include href="s_matrix_grps.ptx" />
 <xi:include href="s_dihedral.ptx" />
-
+<xi:include href="s_permutations.ptx" />
 </chapter>

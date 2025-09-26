@@ -234,6 +234,8 @@
   <rename element="assumption">Fiat</rename> 
   <rename element="project">Sage example</rename> 
   <rename element="activity">Specimen</rename>
+    <rename element="convention">Notation</rename>
+
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
 

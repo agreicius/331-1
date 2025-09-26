@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_permutations" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Permutations</title>
+
+    <definition xml:id="d_permutation">
+    <title>Permutations</title>
+    <notation>
+        <usage><m>S_A</m></usage>
+      <description>permutations of the set <m>A</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>A</m> be a nonempty set. A <term>permutation</term> of <m>A</m> is a bijective function <m>\sigma\colon A\rightarrow A</m>. We denote by <m>S_A</m> the set of all permutations of <m>A</m>: <ie/>, 
+    <me>
+        S_A=\{\sigma\colon A\rightarrow A\mid \sigma \text{ bijective}\}
+    </me>.
+    If <m>A=\{1,2,\dots, n\}</m> for some positive integer, we will write <m>S_n</m> for <m>S_A</m>.
+    </p>
+    </statement>
+    </definition>
+    <activity xml:id="spec_permutation">
+    <title>Permutation group</title>
+    <statement>
+    <p>
+    Let <m>A</m> be a nonempty set. The pair <m>(S_A, \circ)</m>, where <m>\circ</m> is function composition, is a group called the <term>permutation group</term> of <m>A</m>.
+    </p>
+    <p>
+        The group identity of <m>S_A</m> is the identity function <m>\id\colon A\rightarrow A</m> defined as <m>\id(a)=a</m> for all <m>a\in A</m>. Given a permutation <m>\sigma\in S_A</m>, its group inverse is the inverse function <m>\sigma^{-1}</m>. 
+    </p>
+    <p>
+        If <m>A</m> is finite of cardinality <m>\abs{A}=n</m>, then a standard counting argument shows that <m>\abs{S_A}=n!</m>. 
+    </p>
+    </statement>
+    </activity>
+    <convention xml:base="not_table_convention">
+        <title>Table notation</title>
+        <p>
+            Let <m>A=\{a_1,a_2,\dots, a_n\}</m>, where the <m>a_i</m> are distinct. Given a permutation <m>\sigma\colon A\rightarrow A</m> satisfying 
+            <me>
+                \sigma(a_i)=b_i
+            </me>
+            for all <m>1\leq i\leq n</m>, we represent <m>\sigma</m> using <term>table notation</term> as 
+            <me>
+               \sigma=\left( 
+                \begin{array}{cccc}
+                a_1\amp a_2\amp \dots \amp a_n\\
+                b_1\amp b_2\amp \dots \amp b_n
+                \end{array}    
+                \right)
+            </me>
+        </p>
+    </convention>
+    <example xml:id="eg_S_3">
+    <title>Permutations: table notation</title>
+    <statement>
+    <p>
+    Write down all elements of <m>S_3</m> using table notation. 
+    </p>
+    </statement>
+    </example> 
+    <p>
+        Although table notation gives a clear and direct representation of a permutation, it is a bit cumbersome notationally, especially when we begin to compute compositions of multiple permutations. <em>Cycle notation</em>, described below, is a sleeker more computationally friendly manner of notating permutations. 
+    </p>
+    <definition xml:id="d_cycle">
+    <title>Cycles</title>
+    <statement>
+    <p>
+    Let <m>(a_1,a_2,\dots, a_k)</m> be <m>k</m>-tuple of distinct elements of the set <m>A</m>. The permutation <m>\sigma\in A</m> defined as 
+    <md>
+        <mrow>\sigma(a_i) \amp =a_{i+1}, 1\leq i\leq k-1</mrow>
+        <mrow>\sigma(a_k) \amp =a_1</mrow>
+        <mrow>\sigma(a) \amp =a \text{ for } a\notin\{a_1,a_2,\dots, a_k\}</mrow>
+    </md>
+    is called the <term>k-cycle</term> of <m>A</m> associated to the tuple <m>(a_1,a_2,\dots, a_k)</m>, and is denoted 
+    <me>
+        \sigma=(a_1\ a_2\,\dots a_k)
+    </me>.
+    Two cycles 
+    <md>
+        <mrow> \sigma\amp =(a_1\ a_2\,\dots a_k) \amp \tau=(b_1\ b_2\,\dots b_\ell) </mrow>
+    </md>
+    are <term>disjoint</term> if <m>\{a_1,a_2,\dots, a_k\}\cap \{b_1,b_2,\dots, b_\ell\}=\emptyset</m>.
+    </p>
+    </statement>
+    </definition>
+    <proposition xml:id="prop_cycle_arith">
+        <title>Cycle arithmetic</title>
+        <statement>
+            <p>
+                Let <m>\sigma=(a_1\ a_2\, \dots a_k)</m> and <m>\tau=(b_1\ b_2\,\dots b_\ell)</m> be cycles of the set <m>A</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            For all <m>1\leq i\leq k</m>, we have 
+                            <me>
+                                \sigma=(a_i\ a_{i+1}\dots\, a_k\ a_1\dots a_{i-1})
+                            </me>.
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\ord \sigma=k</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sigma^{-1}=(a_k\ a_{k-1}\,\dots a_1)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\sigma </m> and <m>\tau</m> are disjoint, then <m>\sigma\tau=\tau\sigma</m>: <ie/>, disjoint cycles commute.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\sigma=\sigma_1\sigma_2\cdots \sigma_r</m>, where the <m>\sigma_i</m> are pairwise disjoint cycles, then the order of <m>\sigma</m> is the least common multiple of the orders of the <m>\sigma_i</m>: <ie/>, 
+                            <men xml:id="eq_ord_prod_cycles">
+                                \ord \sigma=\lcm(\ord\sigma_1,\ord\sigma_2,\dots, \ord\sigma_r)
+                            </men>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+    <theorem xml:id="th_cycle_decomposition">
+    <title>Cycle decomposition</title>
+    <statement>
+    <p>
+    Let <m>A</m> be a finite set, and let <m>\sigma\in S_A</m>. 
+    <ol>
+        <li>
+            <p>
+                We can write 
+                <men xml:id="eq_cycle_decomp">
+                    \sigma=\sigma_1\sigma_2\cdots \sigma_r
+                </men>
+                where the <m>\sigma_i</m> are pairwise disjoint cycles. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The set <m>\{\sigma_1,\sigma_2,\dots, \sigma_r\}</m> of disjoint cycles appearing in the decomposition <xref ref="eq_cycle_decomp"/> is uniquely determined by <m>\sigma</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+
+    </p>
+    </proof>
+    </theorem>
+    <remark>
+        <title>Uniqueness of cycle decomposition</title>
+        <p>
+            Let's make a few important remarks about the uniqueness of cycle decomposition. 
+            <ol>
+                <li>
+                    <p>
+                        First off, to have any uniqueness property whatsoever, the cycle decomposition must be a <em>disjoint</em> one. Indeed, for all <m>2</m>-cycles <m>(a\ b)</m> we have 
+                        <me>
+                            \id=(a\ b)(a\ b)
+                        </me>,
+                        giving us many different ways of writing <m>\id</m> as a composition of 2-cycles.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Although the cycles <m>\sigma_i</m> appearing in a disjoint cycle decomposition
+                        <me>
+                            \sigma=\sigma_1\sigma_2\cdots \sigma_r
+                        </me>
+                        are unique, the order in which they appear in this expression is not unique. Indeed, since disjoint cycles commute, we can order the <m>\sigma_i</m> on the right side of the equation any way we like! 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Furthermore, remember that any given cycle 
+                        <me>
+                            \tau=(a_1\ a_2\, \dots a_k)
+                        </me>
+                        can itself be expressed in many (in fact <m>k</m>) different ways. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </remark>
+    <example xml:id="eg_cycle_decomp">
+    <title>Cycle decomposition</title>
+    <statement>
+    <p>
+    We work in the group <m>S_7</m>. Let 
+    <md>
+        <mrow>\sigma \amp = \begin{pmatrix}
+        1\amp 2\amp 3\amp 4\amp 5\amp 6\amp 7\\
+        3\amp 5\amp 1\amp 7\amp 2\amp 4\amp 6
+        \end{pmatrix}</mrow>
+        <mrow>\sigma_1 \amp =(1\ 4\ 5\ 6)</mrow>
+        <mrow>\sigma_2 \amp =(2\ 7\ 3)</mrow>
+        <mrow>\sigma_3 \amp =(2\ 4\ 6)</mrow>
+    </md>.
+    <ol>
+        <li>
+            <p>
+               Compute disjoint cycle decompositions of the following permutations. 
+    <ol cols="2">
+        <li>
+            <p>
+                <m>
+                    \sigma
+                </m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\sigma^{-1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\sigma_1\sigma_2\sigma_3</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\sigma_1\sigma_3\sigma_2</m>
+            </p>
+        </li>
+    </ol> 
+</p>
+</li>
+<li>
+    <p>
+        Compute <m>\ord \sigma</m>. 
+    </p>
+</li>
+<li>
+    <p>
+        True or false: <m>\sigma_1\sigma_2\sigma_3=\sigma_1\sigma_3\sigma_2</m>.
+    </p>
+</li>
+</ol>
+</p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    <algorithm xml:id="proc_cycle_decomp">
+        <statement>
+            <p>
+               Let <m>A</m> be a finite set, and let <m>\sigma\in S_A</m>. To compute a decomposition of <m>\sigma</m> into disjoint cycles, proceed as follows. 
+               <ol>
+                <li>
+                    <p>
+                        Initialize: set <m>\sigma:=\emptyset</m>, the empty product of cycles. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If all elements of <m>A</m> appear in the cycles appearing in <m>\sigma</m>, then stop.
+                    </p>
+                    <p>
+                        Otherwise, pick any <m>a\in A</m> that does not appear in <m>\sigma</m> and compute the cycle 
+                        <me>
+                            \tau=(a\ \sigma(a)\ \sigma^2(a)\, \dots \sigma^{n_1-1}(a_1))
+                        </me>
+                        it generates by evaluating at successive powers <m>\sigma^i(a)</m> until you get an output of <m>a</m>.
+                    </p>
+                    <p>
+                        Update: set <m>\sigma:=\sigma\tau</m> and repeat Step 2. 
+                    </p>
+                </li>
+               </ol> 
+            </p>
+        </statement>
+    </algorithm>
+    
+    
+    
+
+</section>
