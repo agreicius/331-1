@@ -15,7 +15,7 @@
     <me>
         S_A=\{\sigma\colon A\rightarrow A\mid \sigma \text{ bijective}\}
     </me>.
-    If <m>A=\{1,2,\dots, n\}</m> for some positive integer, we will write <m>S_n</m> for <m>S_A</m>.
+    If <m>A=\{1,2,\dots, n\}</m> for some positive integer <m>n</m>, we will write <m>S_n</m> for <m>S_A</m>.
     </p>
     </statement>
     </definition>
@@ -66,7 +66,7 @@
     <title>Cycles</title>
     <statement>
     <p>
-    Let <m>(a_1,a_2,\dots, a_k)</m> be <m>k</m>-tuple of distinct elements of the set <m>A</m>. The permutation <m>\sigma\in A</m> defined as 
+    Let <m>(a_1,a_2,\dots, a_k)</m> be a <m>k</m>-tuple of distinct elements of the set <m>A</m>. The permutation <m>\sigma\in A</m> defined as 
     <md>
         <mrow>\sigma(a_i) \amp =a_{i+1}, 1\leq i\leq k-1</mrow>
         <mrow>\sigma(a_k) \amp =a_1</mrow>
@@ -125,6 +125,11 @@
                 </ol>
             </p>
         </statement>
+        <proof>
+            <p>
+                Left as a homework exercise. 
+            </p>
+        </proof>
     </proposition>
     <theorem xml:id="th_cycle_decomposition">
     <title>Cycle decomposition</title>
@@ -143,7 +148,7 @@
         </li>
         <li>
             <p>
-                The set <m>\{\sigma_1,\sigma_2,\dots, \sigma_r\}</m> of disjoint cycles appearing in the decomposition <xref ref="eq_cycle_decomp"/> is uniquely determined by <m>\sigma</m>. 
+                If we assume that the union of the set of elements appearing in the cycles <m>\sigma_i</m> is all of <m>A</m>, then the set <m>\{\sigma_1,\sigma_2,\dots, \sigma_r\}</m> of disjoint cycles appearing in the decomposition <xref ref="eq_cycle_decomp"/> is uniquely determined by <m>\sigma</m>. 
             </p>
         </li>
     </ol>
@@ -151,8 +156,70 @@
     </statement>
     <proof>
     <p>
-
-    </p>
+        The following is an outline for proving this theorem. Fix <m>\sigma\in S_A</m>.
+        </p>
+        <case>
+        <title>Step 1</title>
+        <p>
+        Prove that the relation 
+        <me>
+            a\sim a'\iff a'=\sigma^n(a) \text{ for some } n\in \Z
+        </me>
+        is an equivalence relation on <m>A</m>
+        </p>
+        </case>
+        <case>
+        <title>Step 2</title>
+        <p>
+        Let <m>C_1, C_2,\dots, C_r</m> be the equivalence classes defined by the relation above. Prove that for each <m>1\leq i\leq r</m> and each <m>a\in C_i</m>, we have 
+        <me>
+            C_i=\{a, \sigma(a), \sigma^2(a), \dots, \sigma^{n_i-1}(a)\}
+        </me>,
+        where <m>n_i=\abs{C_i}</m> and <m>\sigma^n(a)=a</m>.
+        </p>
+        </case>
+        <case>
+        <title>Step 3</title>
+        <p>
+        For each <m>1\leq i\leq r</m>, pick <m>a_i\in C_i</m> such that 
+        <me>
+            C_i=\{a_i, \sigma(a_i), \dots, \sigma^{n_i-1}(a_i)\}
+        </me>,
+        and let <m>\sigma_i</m> be the cycle 
+        <me>
+            \sigma_i=\left(a_i\ \sigma(a_i)\ \dots \ \sigma^{n_i-1}(a_i)\right)
+        </me>.
+        Show that 
+        <me>
+            \sigma=\sigma_1\sigma_2\cdots \sigma_r
+        </me>.
+        </p>
+        </case>
+        <case>
+        <title>Step 4 (uniqueness)</title>
+        <p>
+        Assume <m>\sigma=\tau_1\tau_2\cdots \tau_s</m> be a decomposition of <m>\sigma</m> into disjoint cycles <m>\tau_i</m>, and that the union of elements appearing in the <m>\tau_i</m> is <m>A</m>. For each <m>1\leq i\leq s</m>, let <m>D_i</m> be the set of elements of <m>A</m> appearing in the cycle <m>\tau_i</m>. 
+        <ol>
+            <li>
+                <p>
+                    Prove that <m>\{D_1,D_2,\dots, D_s\}=\{C_1, C_2,\dots, C_r\}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Prove that <m>s=r</m> and that after a reordering, we have <m>D_i=C_i</m> for all <m>1\leq i\leq r</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Prove that <m>\tau_i=\sigma_i</m>. 
+                </p>
+            </li>
+        </ol>
+        </p>
+    </case>
+        
+    
     </proof>
     </theorem>
     <remark>

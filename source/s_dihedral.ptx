@@ -5,11 +5,12 @@
 <subsection xml:id="ss_isometries">
 <title>Isometries of <m>\R^n</m></title>
 <definition xml:id="d_isom">
-    <notation>
+    
+ <title>Isometry</title>
+ <notation>
         <usage><m>\Isom(\R^n)</m></usage>
       <description>isometries of <m>\R^n</m></description>
     </notation>
- <title>Isometry</title>
  <statement>
  <p>
  Fix a positive integer <m>n</m>. Let <m>d</m> denote the standard Euclidean distance on <m>\R^n</m>: <ie/>, 
@@ -245,16 +246,16 @@ Fix an integer <m>n\geq 3</m>, and let <m>r,s\in D_n</m> be as defined in <xref 
 <p>
 Let <m>Q_8=\{1,-1,i,-i,j,-j,k,-k\}</m>. The following rules define a binary operation <m>\cdot</m> on <m>Q_8</m>.
 <md>
-    <mrow>1\cdot a \amp =a\cdot 1=a \text{ for all } a\in Q_8</mrow>
+    <mrow> 1\cdot a  =a\cdot 1\amp =a \text{ for all } a\in Q_8</mrow>
     <mrow>(-1)\cdot (-1) \amp =1 \amp (-1)\cdot a\amp=a\cdot (-1)=-a \text{ for all } a\in Q_8</mrow>
-    <mrow>i^2 \amp =j^2=k^2=-1</mrow>
+    <mrow>i^2  =j^2=k^2 \amp=-1</mrow>
     <mrow>ij \amp =k \amp ji\amp =-k</mrow>
     <mrow>jk \amp = i \amp kj\amp =-i</mrow>
     <mrow>ki \amp = j \amp ik\amp =-j</mrow>
 </md>.
  The pair <m>(Q_8,\cdot)</m> is a group called the <term>quaternion group</term>. We have the following presentation of <m>Q_8</m>: 
  <me>
-    Q_8=\angvec{i,j\mid i^2=j^2=(ij)^2, ji=i^{-1}j}
+    Q_8=\angvec{i,j\mid i^2=j^2, ji=i^{-1}j}
  </me>.
 </p>
 </statement>
