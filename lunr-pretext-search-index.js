@@ -862,7 +862,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Matrix groups",
-  "body": " Matrix groups   Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .     General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .     Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .      Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!     Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .    "
+  "body": " Matrix groups   Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .     General linear group (generalized)   Assume either that or that for some . Given a positive integer , the pair is a group, where is matrix multiplication in .     Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .      Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!    "
 },
 {
   "id": "d_invertible_matrix",
@@ -901,22 +901,22 @@ var ptx_lunr_docs = [
   "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!   "
 },
 {
-  "id": "d_isom",
-  "level": "2",
-  "url": "s_matrix_grps.html#d_isom",
-  "type": "Definition",
-  "number": "1.31",
-  "title": "Isometry.",
-  "body": " Isometry   Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
-},
-{
   "id": "s_dihedral",
   "level": "1",
   "url": "s_dihedral.html",
   "type": "Section",
   "number": "1.4",
   "title": "Dihedral groups",
-  "body": " Dihedral groups   Isometries of   Group of isometries   Fix a positive integer . The pair is a group, where is function composition.     Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?            Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .     Dihedral groups   Dihedral groups    the dihedral group of cardinality    Fix an integer . Let be the regular -gon centered at the origin with one vertex at . We define to be the set of rigid motions of that map onto itself: , . Function composition defines a binary operation . The pair is a group, called the dihedral group of cardinality .  The group identity of is the identity function . Given an element , its group inverse is its function inverse .     or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.    Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .    More generally, we have .            Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .            Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .             Group presentations  As we saw above, the relations together with the fact that are essentially all we need to know to be able to do computations in the dihedral group . Group presentation notation gives us a nice way of summarizing this defining properties. A group presentation of is . Although we introduce the notation here as a convenient way to summarize how an established group, namely , is generated by the elements and , the notation can also be used to construct groups from scratch. Put another way, any presentation like the one above can be shown to be the presentation of an actual existing group. For example, the presentation can be shown to be the define a certain group of cardinality . As it turns out, to make good sense of this construction, a significant amount of theory must be mobilized. As such, we will be careful to confine ourselves to using the presentation notation only to as a summary description of a group we know already to exist. The quaternion group below is a good example of this.   Quaternion group    the quaternion group    Let . The following rules define a binary operation on . . The pair is a group called the quaternion group . We have the following presentation of : .     "
+  "body": " Dihedral groups   Isometries of   Isometry    isometries of    Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .     Group of isometries   Fix a positive integer . The pair is a group, where is function composition.     Isometries   Fix a positive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?            Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .     Dihedral groups   Dihedral groups    the dihedral group of cardinality    Fix an integer . Let be the regular -gon centered at the origin with one vertex at . We define to be the set of rigid motions of that map onto itself: , . Function composition defines a binary operation . The pair is a group, called the dihedral group of cardinality .  The group identity of is the identity function . Given an element , its group inverse is its function inverse .     or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.    Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .    More generally, we have .            Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .            Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .             Group presentations  As we saw above, the relations together with the fact that are essentially all we need to know to be able to do computations in the dihedral group . Group presentation notation gives us a nice way of summarizing this defining properties. A group presentation of is . Although we introduce the notation here as a convenient way to summarize how an established group, namely , is generated by the elements and , the notation can also be used to construct groups from scratch. Put another way, any presentation like the one above can be shown to be the presentation of an actual existing group. For example, the presentation can be shown to be the define a certain group of cardinality . As it turns out, to make good sense of this construction, a significant amount of theory must be mobilized. As such, we will be careful to confine ourselves to using the presentation notation only to as a summary description of a group we know already to exist. The quaternion group below is a good example of this.   Quaternion group    the quaternion group    Let . The following rules define a binary operation on . . The pair is a group called the quaternion group . We have the following presentation of : .     "
+},
+{
+  "id": "d_isom",
+  "level": "2",
+  "url": "s_dihedral.html#d_isom",
+  "type": "Definition",
+  "number": "1.31",
+  "title": "Isometry.",
+  "body": " Isometry    isometries of    Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
 },
 {
   "id": "spec_isom",
@@ -934,12 +934,12 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.32",
   "title": "Isometries.",
-  "body": " Isometries   Fix a postive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
+  "body": " Isometries   Fix a positive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
 },
 {
-  "id": "ss_isometries-4",
+  "id": "ss_isometries-5",
   "level": "2",
-  "url": "s_dihedral.html#ss_isometries-4",
+  "url": "s_dihedral.html#ss_isometries-5",
   "type": "Remark",
   "number": "1.33",
   "title": "Rigid motions of <span class=\"process-math\">\\(\\R^2\\)<\/span>.",
@@ -998,6 +998,105 @@ var ptx_lunr_docs = [
   "number": "9",
   "title": "Quaternion group.",
   "body": " Quaternion group    the quaternion group    Let . The following rules define a binary operation on . . The pair is a group called the quaternion group . We have the following presentation of : .   "
+},
+{
+  "id": "s_permutations",
+  "level": "1",
+  "url": "s_permutations.html",
+  "type": "Section",
+  "number": "1.5",
+  "title": "Permutations",
+  "body": " Permutations   Permutations    permutations of the set    Let be a nonempty set. A permutation of is a bijective function . We denote by the set of all permutations of : , . If for some positive integer , we will write for .     Permutation group   Let be a nonempty set. The pair , where is function composition, is a group called the permutation group of .  The group identity of is the identity function defined as for all . Given a permutation , its group inverse is the inverse function .  If is finite of cardinality , then a standard counting argument shows that .     Table notation  Let , where the are distinct. Given a permutation satisfying for all , we represent using table notation as     Permutations: table notation   Write down all elements of using table notation.    Although table notation gives a clear and direct representation of a permutation, it is a bit cumbersome notationally, especially when we begin to compute compositions of multiple permutations. Cycle notation , described below, is a sleeker more computationally friendly manner of notating permutations.   Cycles   Let be a -tuple of distinct elements of the set . The permutation defined as is called the k-cycle of associated to the tuple , and is denoted . Two cycles are disjoint if .     Cycle arithmetic   Let and be cycles of the set .   For all , we have .     .         If and are disjoint, then : , disjoint cycles commute.    If , where the are pairwise disjoint cycles, then the order of is the least common multiple of the orders of the : , .       Left as a homework exercise.     Cycle decomposition   Let be a finite set, and let .   We can write where the are pairwise disjoint cycles.    If we assume that the union of the set of elements appearing in the cycles is all of , then the set of disjoint cycles appearing in the decomposition is uniquely determined by .       The following is an outline for proving this theorem. Fix .  Step 1  Prove that the relation is an equivalence relation on     Step 2  Let be the equivalence classes defined by the relation above. Prove that for each and each , we have , where and .    Step 3  For each , pick such that , and let be the cycle . Show that .    Step 4 (uniqueness)  Assume be a decomposition of into disjoint cycles , and that the union of elements appearing in the is . For each , let be the set of elements of appearing in the cycle .   Prove that .    Prove that and that after a reordering, we have for all .    Prove that .          Uniqueness of cycle decomposition  Let's make a few important remarks about the uniqueness of cycle decomposition.   First off, to have any uniqueness property whatsoever, the cycle decomposition must be a disjoint one. Indeed, for all -cycles we have , giving us many different ways of writing as a composition of 2-cycles.    Although the cycles appearing in a disjoint cycle decomposition are unique, the order in which they appear in this expression is not unique. Indeed, since disjoint cycles commute, we can order the on the right side of the equation any way we like!    Furthermore, remember that any given cycle can itself be expressed in many (in fact ) different ways.       Cycle decomposition   We work in the group . Let .   Compute disjoint cycle decompositions of the following permutations.                          Compute .    True or false: .             Let be a finite set, and let . To compute a decomposition of into disjoint cycles, proceed as follows.   Initialize: set , the empty product of cycles.    If all elements of appear in the cycles appearing in , then stop.  Otherwise, pick any that does not appear in and compute the cycle it generates by evaluating at successive powers until you get an output of .  Update: set and repeat Step 2.       "
+},
+{
+  "id": "d_permutation",
+  "level": "2",
+  "url": "s_permutations.html#d_permutation",
+  "type": "Definition",
+  "number": "1.38",
+  "title": "Permutations.",
+  "body": " Permutations    permutations of the set    Let be a nonempty set. A permutation of is a bijective function . We denote by the set of all permutations of : , . If for some positive integer , we will write for .   "
+},
+{
+  "id": "spec_permutation",
+  "level": "2",
+  "url": "s_permutations.html#spec_permutation",
+  "type": "Specimen",
+  "number": "10",
+  "title": "Permutation group.",
+  "body": " Permutation group   Let be a nonempty set. The pair , where is function composition, is a group called the permutation group of .  The group identity of is the identity function defined as for all . Given a permutation , its group inverse is the inverse function .  If is finite of cardinality , then a standard counting argument shows that .   "
+},
+{
+  "id": "s_permutations-4",
+  "level": "2",
+  "url": "s_permutations.html#s_permutations-4",
+  "type": "Notation",
+  "number": "1.39",
+  "title": "Table notation.",
+  "body": " Table notation  Let , where the are distinct. Given a permutation satisfying for all , we represent using table notation as   "
+},
+{
+  "id": "eg_S_3",
+  "level": "2",
+  "url": "s_permutations.html#eg_S_3",
+  "type": "Example",
+  "number": "1.40",
+  "title": "Permutations: table notation.",
+  "body": " Permutations: table notation   Write down all elements of using table notation.   "
+},
+{
+  "id": "d_cycle",
+  "level": "2",
+  "url": "s_permutations.html#d_cycle",
+  "type": "Definition",
+  "number": "1.41",
+  "title": "Cycles.",
+  "body": " Cycles   Let be a -tuple of distinct elements of the set . The permutation defined as is called the k-cycle of associated to the tuple , and is denoted . Two cycles are disjoint if .   "
+},
+{
+  "id": "prop_cycle_arith",
+  "level": "2",
+  "url": "s_permutations.html#prop_cycle_arith",
+  "type": "Proposition",
+  "number": "1.42",
+  "title": "Cycle arithmetic.",
+  "body": " Cycle arithmetic   Let and be cycles of the set .   For all , we have .     .         If and are disjoint, then : , disjoint cycles commute.    If , where the are pairwise disjoint cycles, then the order of is the least common multiple of the orders of the : , .       Left as a homework exercise.   "
+},
+{
+  "id": "th_cycle_decomposition",
+  "level": "2",
+  "url": "s_permutations.html#th_cycle_decomposition",
+  "type": "Theorem",
+  "number": "1.43",
+  "title": "Cycle decomposition.",
+  "body": " Cycle decomposition   Let be a finite set, and let .   We can write where the are pairwise disjoint cycles.    If we assume that the union of the set of elements appearing in the cycles is all of , then the set of disjoint cycles appearing in the decomposition is uniquely determined by .       The following is an outline for proving this theorem. Fix .  Step 1  Prove that the relation is an equivalence relation on     Step 2  Let be the equivalence classes defined by the relation above. Prove that for each and each , we have , where and .    Step 3  For each , pick such that , and let be the cycle . Show that .    Step 4 (uniqueness)  Assume be a decomposition of into disjoint cycles , and that the union of elements appearing in the is . For each , let be the set of elements of appearing in the cycle .   Prove that .    Prove that and that after a reordering, we have for all .    Prove that .        "
+},
+{
+  "id": "s_permutations-10",
+  "level": "2",
+  "url": "s_permutations.html#s_permutations-10",
+  "type": "Remark",
+  "number": "1.44",
+  "title": "Uniqueness of cycle decomposition.",
+  "body": " Uniqueness of cycle decomposition  Let's make a few important remarks about the uniqueness of cycle decomposition.   First off, to have any uniqueness property whatsoever, the cycle decomposition must be a disjoint one. Indeed, for all -cycles we have , giving us many different ways of writing as a composition of 2-cycles.    Although the cycles appearing in a disjoint cycle decomposition are unique, the order in which they appear in this expression is not unique. Indeed, since disjoint cycles commute, we can order the on the right side of the equation any way we like!    Furthermore, remember that any given cycle can itself be expressed in many (in fact ) different ways.     "
+},
+{
+  "id": "eg_cycle_decomp",
+  "level": "2",
+  "url": "s_permutations.html#eg_cycle_decomp",
+  "type": "Example",
+  "number": "1.45",
+  "title": "Cycle decomposition.",
+  "body": " Cycle decomposition   We work in the group . Let .   Compute disjoint cycle decompositions of the following permutations.                          Compute .    True or false: .          "
+},
+{
+  "id": "proc_cycle_decomp",
+  "level": "2",
+  "url": "s_permutations.html#proc_cycle_decomp",
+  "type": "Procedure",
+  "number": "1.46",
+  "title": "",
+  "body": "  Let be a finite set, and let . To compute a decomposition of into disjoint cycles, proceed as follows.   Initialize: set , the empty product of cycles.    If all elements of appear in the cycles appearing in , then stop.  Otherwise, pick any that does not appear in and compute the cycle it generates by evaluating at successive powers until you get an output of .  Update: set and repeat Step 2.      "
 },
 {
   "id": "appendix-notation",
