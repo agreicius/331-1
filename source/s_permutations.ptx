@@ -320,7 +320,9 @@
     </p>
     </solution>
     </example>
-    
+    <p>
+        Although the previous examples should make clear how to decompose an arbitrary permutation into disjoint cycles, we record here a more official description of this procedure. 
+    </p>
     <algorithm xml:id="proc_cycle_decomp">
         <statement>
             <p>
@@ -338,7 +340,7 @@
                     <p>
                         Otherwise, pick any <m>a\in A</m> that does not appear in <m>\sigma</m> and compute the cycle 
                         <me>
-                            \tau=(a\ \sigma(a)\ \sigma^2(a)\, \dots \sigma^{n_1-1}(a_1))
+                            \tau=(a\ \sigma(a)\ \sigma^2(a)\, \dots \sigma^{n_1-1}(a))
                         </me>
                         it generates by evaluating at successive powers <m>\sigma^i(a)</m> until you get an output of <m>a</m>.
                     </p>
