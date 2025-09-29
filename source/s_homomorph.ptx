@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_homomorph" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Homomorphisms</title>
+
+    <definition xml:id="d_homomorphism">
+    <title>Homomorphism</title>
+    <statement>
+    <p>
+    Let <m>G</m> and <m>H</m> be groups. A <term>(group) homomorphism</term> is a map 
+    <m>\phi\colon G\rightarrow H</m> satisfying 
+    <men xml:id="eq_group_homomorph">
+        \phi(g_1g_2)=\phi(g_1)\phi(g_2)
+    </men>
+    for all <m>g_1,g_2\in G</m>. 
+    </p>
+    </statement>
+    </definition>
+    <remark>
+        <title>Homomorphism</title>
+        <p>
+            There is an important subtlety in the defining property <xref ref="eq_group_homomorph"/>: namely, there are two group operations at play. In more detail, the input <m>g_1g_2</m> of <m>\phi</m> on the left side is a product within the domain group <m>G</m>; the right side <m>\phi(g_1)\phi(g_2)</m> on the other hand is a product within the codomain group <m>H</m>. 
+        </p>
+        <p>
+            A useful way of thinking of a group homomorphism is as a function between groups that <em>respects the group structure</em>, in the sense articulated by <xref ref="eq_group_homomorph"/>. You might ask: shouldn't a group homomorphism also <q>respect</q> the group identities and group inverses? It turns out that the property <xref ref="eq_group_homomorph"/> is itself enough to guarantee this.  
+        </p>
+    </remark>
+    <proposition xml:id="prop_homo">
+        <title>Homomorphism properties</title>
+        <statement>
+            <p>
+                Let <m>\phi\colon G\rightarrow H</m> be a group homomorphism, and let <m>e_G</m> and <m>e_H</m> be the identity elements of <m>G</m> and <m>H</m>, respectively.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\phi(e_G)=\phi(e_H)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\phi(g^{-1})=\phi(g)^{-1}</m>
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Since <m>e_G=e_G\, e_G</m> and <m>\phi</m> is a homomorphism,  we have <m>\phi(e_G)=\phi(e_G)\phi(e_G)</m>. Now do some algebra in <m>H</m>:
+                            <md>
+                                <mrow>  \phi(e_G)\amp =\phi(e_G)\phi(e_G)\amp </mrow>
+                                <mrow>\phi(e_G)^{-1}\phi(e_G)\amp =\phi(e_G)^{-1}\phi(e_G)\phi(e_G) \amp </mrow>
+                                <mrow>e_H \amp = \phi(e_G)</mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Fix <m>g\in G</m>. We have 
+                            <md>
+                                <mrow>gg^{-1}=g^{-1}g=e_G \amp \implies \phi(gg^{-1})=\phi(g^{-1}g)=\phi(e_G) </mrow>
+                                <mrow> \amp \implies \phi(g)\phi(g^{-1})=\phi(g^{-1})\phi(g)=e_H </mrow>
+                                <mrow> \amp \implies \phi(g^{-1})=\phi(g)^{-1} </mrow>
+                            </md>,
+                            where the last implication follows from the fact that inverses in groups are unique.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    <example xml:id="eg_homos">
+    <title>Homormorphisms</title>
+    <statement>
+    <p>
+    Decide whether the given map is a group homormorphism. 
+    <ol>
+        <li>
+            <title>Trivial homomorphism</title>
+            <p>
+                Let <m>G</m> and <m>H</m> be groups. Define  
+                <m>\phi\colon G\rightarrow H</m> as  <m>\phi(g)=e_H</m> for all <m>g\in G</m>.
+            </p>
+        </li>
+        <li>
+            <title>Identity map</title>
+            <p>
+                Let <m>G</m> be a group, and let 
+                <m>\id\colon G\rightarrow G</m> be the identity map as usual. 
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                Fix <m>m\in \Z</m> and define <m>\phi\colon \Z\rightarrow \Z</m> as <m>\phi(n)=mn</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Define <m>\phi\colon \Z\rightarrow \Z</m> as <m>\phi(n)=n^2</m>.
+            </p>
+        </li>
+        <li>
+            <title>Determinant</title>
+            <p>
+                Assume <m>R\in \{\Z,\Q,\R,\C\}</m> or <m>R=\Z/m\Z</m> for some positive integer <m>m</m>. Fix a positive integer <m>n</m> and define <m>\phi\colon \GL_n(R)\rightarrow R^*</m> as <m>\phi(A)=\det A</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Exponential map</title>
+            <p>
+                Define <m>\phi\colon \R\rightarrow \R^*</m> as <m>\phi(x)=e^x</m>. 
+            </p>
+        </li>
+    </ol> 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+        The following proposition serves as a useful tool for constructing homomorphisms out of <m>D_n</m>. You will prove it in your homework. 
+    </p>
+    <proposition xml:id="prop_Dn_homo">
+        <title>Homomorphisms from <m>D_n</m></title>
+        <statement>
+            <p>
+                Fix an integer <m>n\geq 3</m>, and let <m>D=\angvec{r,s\mid r^n=s^2=e, sr=r^{-1}s}</m>. Given a group <m>G</m> and elements <m>a,b\in G</m> satisfying 
+                <md>
+                    <mrow>a^n \amp =b^2=e \amp ba\amp =a^{-1}b</mrow>
+                </md>,
+                the map <m>\phi\colon D_n\rightarrow G</m> defined as 
+                <me>
+                    \phi(r^is^j)=a^is^j, \ 0\leq i\leq n-1, 0\leq j\leq 1
+                </me>
+                is a homomorphism. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                The proof is left as a homework exercise.
+            </p>
+        </proof>
+    </proposition>
+    <definition xml:id="d_isomorphism">
+    <title>Isomorphism</title>
+    <statement>
+    <p>
+    An <term>isomorphism</term> is a bijective group homomorphism <m>\phi\colon G\rightarrow H</m>. Groups <m>G</m> and <m>H</m> are <term>isomorphic</term>, denoted <m>G\cong H</m>, if there is an isomorphism <m>\phi\colon G\rightarrow H</m>. 
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_Sn">
+    <title>Permutation groups</title>
+    <statement>
+    <p>
+    Let <m>A</m> and <m>B</m> be finite nonempty sets satisfying <m>\abs{A}=\abs{B}</m>. 
+
+    Prove: <m>S_A\cong S_B</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    <example xml:id="eg_isom">
+    <title>Isomorphisms</title>
+    <statement>
+    <p>
+    Prove: <m>D_3</m> is isomorphic to <m>S_3</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Recall the definition of <m>D_3</m> as the set of rigid motions of <m>\R^2</m> fixing the equilateral triangle <m>T</m> centered at the origin with one vertex at <m>(1,0)</m>. Let <m>V=\{P_1,P_2,P_3\}</m> be the set of vertices of <m>T</m> and define <m>\phi\colon D_3\rightarrow S_V</m> as 
+    <me>
+        \phi(f)=f\vert_V
+    </me>.
+    That is <m>\phi</m> associates to an element <m>f\in D_3</m> its restriction to the set of vertices <m>V</m>. Since <m>f</m> is a rigid motion mapping <m>T</m> to itself, it maps vertices to vertices. Since furthermore <m>f</m> is injective and <m>V</m> is finite, <m>f\vert_V\colon V\rightarrow V</m> is bijective. Thus <m>f\vert_V\in S_V</m>.  
+    
+    </p>
+    </solution>
+    </example>
+    
+    
+</section>

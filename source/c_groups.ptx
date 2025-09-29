@@ -7,4 +7,5 @@
 <xi:include href="s_matrix_grps.ptx" />
 <xi:include href="s_dihedral.ptx" />
 <xi:include href="s_permutations.ptx" />
+<xi:include href="s_homomorph.ptx" />
 </chapter>
