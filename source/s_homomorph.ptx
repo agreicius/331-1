@@ -167,29 +167,45 @@
     </statement>
     <solution>
     <p>
-    
+    By definition of cardinality, since <m>\abs{A}=\abs{B}</m>, there exists a bijective function <m>\alpha\colon A\rightarrow B</m>. Using <m>\alpha</m>, we define <m>\phi\colon S_A\rightarrow S_B</m> as 
+    <md>
+        <mrow>\phi(\sigma) \amp =\alpha\circ \sigma\circ \alpha^{-1}</mrow>
+    </md>.
+    Let's first see why this is a well-defined map from <m>S_A</m> to <m>S_B</m>. From 
+    <md>
+        <mrow>\alpha^{-1}\colon B \amp \rightarrow A</mrow>
+        <mrow>\sigma\colon A\amp \rightarrow A \amp </mrow>
+        <mrow>\alpha\colon A \amp \rightarrow B</mrow>
+    </md>,
+     we see that 
+     <me>
+        \alpha\circ\sigma\circ\alpha^{-1}\colon B\rightarrow B
+     </me>.
+     Next since <m>\alpha, \alpha^{-1},</m> and <m>\sigma</m> are bijective, so is their composition. Thus <m>\phi(\sigma)=\alpha\circ\sigma\circ\alpha^{-1}\in S_B</m>, as desired. 
+    </p>
+    <p>
+        Next, we show <m>\phi</m> is a homomorphism. We must show that <m>\phi(\sigma\tau)=\phi(\sigma)\phi(\tau)</m> for all <m>\sigma, \tau\in S_A</m>. By definition, we have (dropping the <m>\circ</m> symbols)
+        <md>
+            <mrow>\phi(\sigma)\phi(\tau) \amp =(\alpha\sigma\alpha^{-1})(\alpha\tau\alpha^{-1})</mrow>
+            <mrow> \amp = \alpha \sigma \id_A\tau \alpha^{-1}\amp (\alpha^{-1}\circ\alpha=\id_A)</mrow>
+            <mrow> \amp = \alpha \sigma \tau \alpha^{-1} \amp (\id_A\circ \tau=\tau) </mrow>
+            <mrow> \amp =\phi(\sigma\tau)</mrow>
+        </md>.
+        This proves <m>\phi</m> is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function <m>\phi^{-1}\colon S_B\rightarrow S_A</m>. To this end, given <m>\tau\in S_B</m>, define 
+        <me>
+            \phi^{-1}(\tau)=\alpha^{-1}\circ\tau \circ \alpha
+        </me>.
+        Reasoning exactly as above, we see that <m>\phi^{-1}</m> is well-defined: <ie/>, <m>\alpha^{-1}\circ\tau\circ\alpha</m> is indeed an element of <m>S_A</m>. Lastly, computations much like the one above show that  
+        <md>
+            <mrow>\phi^{-1}\circ\phi\, (\sigma) \amp = \sigma \text{ for all } \sigma\in S_A </mrow>
+            <mrow>\phi\circ\phi^{-1}\, (\tau) \amp = \tau \text{ for all } \tau\in S_B </mrow>
+        </md>
+        and thus that the two functions are inverses of one another.
     </p>
     </solution>
     </example>
     
-    <example xml:id="eg_isom">
-    <title>Isomorphisms</title>
-    <statement>
-    <p>
-    Prove: <m>D_3</m> is isomorphic to <m>S_3</m>. 
-    </p>
-    </statement>
-    <solution>
-    <p>
-    Recall the definition of <m>D_3</m> as the set of rigid motions of <m>\R^2</m> fixing the equilateral triangle <m>T</m> centered at the origin with one vertex at <m>(1,0)</m>. Let <m>V=\{P_1,P_2,P_3\}</m> be the set of vertices of <m>T</m> and define <m>\phi\colon D_3\rightarrow S_V</m> as 
-    <me>
-        \phi(f)=f\vert_V
-    </me>.
-    That is <m>\phi</m> associates to an element <m>f\in D_3</m> its restriction to the set of vertices <m>V</m>. Since <m>f</m> is a rigid motion mapping <m>T</m> to itself, it maps vertices to vertices. Since furthermore <m>f</m> is injective and <m>V</m> is finite, <m>f\vert_V\colon V\rightarrow V</m> is bijective. Thus <m>f\vert_V\in S_V</m>.  
     
-    </p>
-    </solution>
-    </example>
     
     
 </section>

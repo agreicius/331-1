@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_group_action" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group actions</title>
+
+    <definition xml:id="d_group_action">
+    <title>Group action</title>
+    <statement>
+    <p>
+    A <term>(left) group action</term> is a triple <m>(G,A,\cdot)</m>, where <m>G</m> is a group, <m>A</m> is a nonempty set, and <m>\cdot</m> is a binary operation 
+    <md>
+        <mrow>G\times A \amp \rightarrow A</mrow>
+        <mrow>(g,a) \amp \mapsto g\cdot a</mrow>
+    </md>
+    satisfying the following axioms. 
+    <ol marker="(i)">
+        <li>
+            <title>Associativity</title>
+            <p>
+                <m>g\cdot(h\cdot a)=(gh)\cdot a</m> for <m>g,h\in G</m> and <m>a\in A</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Identity action</title>
+            <p>
+                <m>e\cdot a=a</m> for all <m>a\in A</m>.
+            </p>
+        </li>
+        
+    </ol>
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_group_actions">
+    <title>Group actions</title>
+    <statement>
+    <p>
+    <ol>
+        <li>
+            <p>
+                The group <m>\Isom(\R^n)</m> acts on <m>\R^n</m> via evaluation: <ie/>, given <m>g\in \Isom(\R^n)</m> and <m>v\in \R^n</m>, we define <m>g\cdot v=g(v)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The group <m>D_n</m> acts on the regular polygon <m>P_n</m> via evaluation: <ie/>, given <m>g\in D_n</m> and <m>Q\in P_n</m>, we define <m>g\cdot Q=g(Q)</m>. 
+            </p>
+            <p>
+                Furthermore, <m>D_n</m> acts on the set of vertices <m>V</m> of <m>P_n</m> and the set <m>E</m> of its edges. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The group <m>S_n</m> acts on <m>\{1,2,\dots, n\}</m> via evaluation: <ie/>, given <m>\sigma\in S_n</m> and <m>k\in \{1,2,\dots, n\}</m>, we define <m>\sigma\cdot k=\sigma(k)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Any group <m>G</m> acts on itself (treated as a set) via multiplication on the left: 
+                <md>
+                    <mrow>G\times G \amp \rightarrow G</mrow>
+                    <mrow>(g,h) \amp \mapsto g\star h=gh</mrow>
+                </md>.
+                Note that multiplication on the right 
+                <md>
+                    <mrow>(g,h) \amp \mapsto g\star h=hg</mrow>
+                </md>
+                is <em>not</em> in a general a group action since by definition we have 
+                <md>
+                    <mrow>g\star (h\star k) \amp= (h\star k)g </mrow>
+                    <mrow> \amp = (kh)g</mrow>
+                    <mrow> \amp = k(hg)</mrow>
+                </md>
+                and 
+                <md>
+                    <mrow>(gh)\star k \amp = k(gh)</mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Any group <m>G</m> acts on itself (treated as a set) via <term>conjugation</term>: 
+                <md>
+                    <mrow>G\times G \amp \rightarrow G</mrow>
+                    <mrow>(g,h) \amp \mapsto g\star h=ghg^{-1}</mrow>
+                </md>
+            </p>
+        </li>
+        <li>
+            <p>
+                Given <m>R\in \{\Z, \Q, \R, \C\}</m> or <m>R=\Z/m\Z</m> the group of units <m>R^*</m> acts on <m>R</m> via multiplication: 
+                <me>
+                    (u,r)\mapsto ur
+                </me>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </example>
+    <theorem xml:id="th_group_actions">
+    <title>Group actions and homomorphisms</title>
+    <statement>
+    <p>
+    Assume <m>G</m> acts on the the nonempty set <m>A</m> via the binary operation 
+    <me>
+        (g,a)\mapsto g\cdot a
+    </me>.
+    <ol>
+        <li>
+            <p>
+                Given <m>g\in G</m>, the map <m>\sigma_g\colon A\rightarrow A</m> defined as
+                <me>
+                    \sigma_g(a)=g\cdot a
+                </me>.
+                is a permutation of <m>A</m>: <ie/>, <m>\sigma_g\in S_A</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The map <m>\phi\colon G\rightarrow S_A</m> defined as 
+                <me>
+                    \phi(g)=\sigma_g
+                </me>
+                is a group homomorphism.
+            </p>
+        </li>
+        <li>
+            <p>
+                There is a bijection between the set of all group actions 
+                <me>
+                    G\times A\xrightarrow{\star} A
+                </me>
+                and the set of all homomorphisms 
+                <me>
+                    \phi\colon G\rightarrow S_A
+                </me>
+                given by 
+                <md>
+                    <mrow>\{\text{group actions } G\times A\xrightarrow{\star} A\} \amp \longrightarrow \{\phi\colon G\rightarrow S_A\mid \phi \text{ a homomorphism}\} </mrow>
+                    <mrow>  \star\amp \longmapsto \phi_\star\colon G\rightarrow S_A </mrow>
+                </md>
+                where given <m>g\in G</m>, <m>\phi_\star(g)</m> is the permutation <m>\sigma_g\in S_A</m> defined as 
+                <me>
+                    \sigma_g(a)=g\star a
+                </me>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    By definition <m>g\cdot a\in A</m> for all <m>a\in A</m>, so the recipe for <m>\sigma_g</m> does indeed yield a well-defined function <m>\sigma_g\colon A\rightarrow A</m>. To prove that <m>\sigma_g</m> is a permutation, we will show that it has an inverse: in fact, we claim <m>\sigma_g^{-1}=\sigma_{g^{-1}}</m>. We must show that composition of these two functions, in any order, yields the identity map on <m>A</m>. This follows from the group action axioms: 
+                    <md>
+                        <mrow>\sigma_g(\sigma_{g^{-1}}(a)) \amp =g\cdot (g^{-1}\cdot a)</mrow>
+                        <mrow> \amp =(gg^{-1})\cdot a</mrow>
+                        <mrow> \amp =e\cdot a</mrow>
+                        <mrow> \amp =a</mrow>
+                        <mrow>\sigma_{g^-1}(\sigma_{g}(a)) \amp =g^{-1}\cdot (g\cdot a)</mrow>
+                        <mrow> \amp =(g^{-1}g)\cdot a</mrow>
+                        <mrow> \amp =e\cdot a</mrow>
+                        <mrow> \amp =a</mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    
+                </p>
+            </li>
+        </ol>
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_permutation_rep">
+    <title>Permutation representation</title>
+    <statement>
+    <p>
+    Given a group <m>G</m>, a homomorphism <m>\phi\colon G\rightarrow S_A</m> for some nonempty set <m>A</m> is called a <term>permutation representation</term>. 
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_isom">
+    <title>Isomorphisms</title>
+    <statement>
+    <p>
+    Prove: <m>D_3</m> is isomorphic to <m>S_3</m>. Use a group action to produce your homomorphism. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Recall the definition of <m>D_3</m> as the set of rigid motions of <m>\R^2</m> fixing the equilateral triangle <m>T</m> centered at the origin with one vertex at <m>(1,0)</m>. Let <m>V=\{Q_1,Q_2,Q_3\}</m> be the set of vertices of <m>T</m>. Since <m>D_3</m> acts on <m>V</m> (as described in <xref ref="eg_group_actions"/>), by <xref ref="th_group_actions"/> we get a group homomorphism <m>\phi \colon D_3\rightarrow S_V</m> that maps a function <m>f\in D_3</m> to the permutation it defines on <m>V</m> via evaluation. This means that <m>\phi(f)=f\vert_V</m>, the function restriction of <m>f</m> to the set <m>V</m> of vertices of <m>T</m>. We claim <m>\phi</m> is in fact an isomorphism. Since <m>\abs{D_3}=\abs{S_V}=6</m>, it suffices to show that <m>\phi</m> is injective. To this end, we note that given <m>f,g\in D_3</m>, we have 
+    <md>
+        <mrow>\phi(f)=\phi(g) \amp \implies f\vert_V=g\vert_V </mrow>
+        <mrow> \amp \implies f(Q_i)=g(Q_i) \text{ for all } Q_i\in V</mrow>
+        <mrow> \amp \implies f=g</mrow>
+    </md>,
+    where the last implication follows from the fact that two rigid motions of <m>\R^2</m> are uniquely determined by their values at three non-colinear points. 
+    </p>
+    <p>
+        We have shown that <m>\phi</m> is an isomorphism and thus that <m>D_3\cong S_V</m>. Lastly, by <xref ref="eg_Sn"/>, we have that <m>S_V\cong S_3</m> and thus that <m>D_3\cong S_3</m>. (The isomorphism relation between groups is easily seen to be an equivalence relation since compositions of isomorphisms are isomorphisms.)
+    </p>
+    </solution>
+    </example>
+    
+
+    
+
+</section>
