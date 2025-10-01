@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.53</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutation groups.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be finite nonempty sets satisfying <span class="process-math">\(\abs{A}=\abs{B}\text{.}\)</span> Prove: <span class="process-math">\(S_A\cong S_B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_Sn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">By definition of cardinality, since <span class="process-math">\(\abs{A}=\abs{B}\text{,}\)</span> there exists a bijective function <span class="process-math">\(\alpha\colon A\rightarrow B\text{.}\)</span> Using <span class="process-math">\(\alpha\text{,}\)</span> we define <span class="process-math">\(\phi\colon S_A\rightarrow S_B\)</span> as</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(\sigma) \amp =\alpha\circ \sigma\circ \alpha^{-1}\text{.}
+\end{align*}
+</div>
+<div class="para">Let’s first see why this is a well-defined map from <span class="process-math">\(S_A\)</span> to <span class="process-math">\(S_B\text{.}\)</span> From</div>
+<div class="displaymath process-math">
+\begin{align*}
+\alpha^{-1}\colon B \amp \rightarrow A\\
+\sigma\colon A\amp \rightarrow A \amp \\
+\alpha\colon A \amp \rightarrow B\text{,}
+\end{align*}
+</div>
+<div class="para">we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha\circ\sigma\circ\alpha^{-1}\colon B\rightarrow B\text{.}
+\end{equation*}
+</div>
+<div class="para">Next since <span class="process-math">\(\alpha, \alpha^{-1},\)</span> and <span class="process-math">\(\sigma\)</span> are bijective, so is their composition. Thus <span class="process-math">\(\phi(\sigma)=\alpha\circ\sigma\circ\alpha^{-1}\in S_B\text{,}\)</span> as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_Sn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Next, we show <span class="process-math">\(\phi\)</span> is a homomorphism. We must show that <span class="process-math">\(\phi(\sigma\tau)=\phi(\sigma)\phi(\tau)\)</span> for all <span class="process-math">\(\sigma, \tau\in S_A\text{.}\)</span> By definition, we have (dropping the <span class="process-math">\(\circ\)</span> symbols)</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(\sigma)\phi(\tau) \amp =(\alpha\sigma\alpha^{-1})(\alpha\tau\alpha^{-1})\\
+\amp = \alpha \sigma \id_A\tau \alpha^{-1}\amp (\alpha^{-1}\circ\alpha=\id_A)\\
+\amp = \alpha \sigma \tau \alpha^{-1} \amp (\id_A\circ \tau=\tau) \\
+\amp =\phi(\sigma\tau)\text{.}
+\end{align*}
+</div>
+<div class="para">This proves <span class="process-math">\(\phi\)</span> is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function <span class="process-math">\(\phi^{-1}\colon S_B\rightarrow S_A\text{.}\)</span> To this end, given <span class="process-math">\(\tau\in S_B\text{,}\)</span> define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi^{-1}(\tau)=\alpha^{-1}\circ\tau \circ \alpha\text{.}
+\end{equation*}
+</div>
+<div class="para">Reasoning exactly as above, we see that <span class="process-math">\(\phi^{-1}\)</span> is well-defined: i.e., <span class="process-math">\(\alpha^{-1}\circ\tau\circ\alpha\)</span> is indeed an element of <span class="process-math">\(S_A\text{.}\)</span> Lastly, computations much like the one above show that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi^{-1}\circ\phi\, (\sigma) \amp = \sigma \text{ for all } \sigma\in S_A \\
+\phi\circ\phi^{-1}\, (\tau) \amp = \tau \text{ for all } \tau\in S_B 
+\end{align*}
+</div>
+<div class="para">and thus that the two functions are inverses of one another.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_Sn-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.53.1"><a href="#eg_Sn-3" title="Copy heading and permalink for Solution 1.53.1" aria-label="Copy heading and permalink for Solution 1.53.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.53: Permutation groups"><a href="#eg_Sn" title="Copy heading and permalink for Example 1.53: Permutation groups" aria-label="Copy heading and permalink for Example 1.53: Permutation groups">🔗</a></div></article><span class="incontext"><a class="internal" href="s_homomorph.html#eg_Sn">in-context</a></span>
+</body>
+</html>
