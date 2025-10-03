@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_subgroups" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Subgroups</title>
+
+    <definition xml:id="d_subgroup">
+    <title>Subgroup</title>
+    <notation>
+        <usage><m>H\leq G</m></usage>
+      <description><m>H</m> is a subgroup of <m>G</m></description>
+    </notation>
+    <statement>
+    <p>
+    A <term>subgroup</term> of a group <m>G</m> is a subset <m>H\subseteq G</m> satisfying the following properties. 
+    <ol marker="(i)">
+        <li>
+            <title>Identity element</title>
+            <p>
+                <m>e\in H</m>.
+            </p>
+        </li>
+        <li>
+            <title>Closed under group law</title>
+            <p>
+                For all <m>g_1,g_2\in G</m>, if <m>g_1,g_2\in H</m>, then <m>g_1g_2\in H</m>. Using logical shorthand: 
+                <men xml:id="eq_subgrp_prod">
+                    g_1,g_2\in H\implies g_1g_2\in H
+                </men>.
+            </p>
+        </li>
+        <li>
+            <title>Closed under inverses</title>
+            <p>
+                For all <m>g\in G</m>, if <m>g\in H</m>, then <m>g^{-1}\in H</m>. Using logical shorthand:
+                <men xml:id="eq_subgrp_inverses">
+                    g\in H\implies g^{-1}\in H
+                </men>.
+            </p>
+        </li>
+    </ol>
+    We write <m>H\leq G</m> to denote that <m>H</m> is a subgroup of <m>G</m>. 
+    </p>
+    </statement>
+    </definition>
+    <remark>
+    <title>Subgroup</title>
+    <p>
+    There are common equivalent variations of <xref ref="d_subgroup"/>. For example we could define a subgroup of <m>G</m> to be a subset <m>H</m> satisfying the following conditions. 
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>H\ne \emptyset</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                For all <m>g_1,g_2\in G</m>, if <m>g_1,g_2\in H</m>, then <m>g_1^{-1}g_2\in H</m>. 
+            </p>
+        </li>
+    </ol>
+    Such equivalent versions have the advantage of brevity. I prefer <xref ref="d_subgroup"/> as it makes more evident the important result of <xref ref="prop_subgrp_is_grp"/>: namely, that subgroups are themselves examples of groups. 
+    </p>
+    </remark>
+    <proposition xml:id="prop_subgrp_is_grp">
+        <statement>
+            <p>
+                Let <m>(G, \cdot)</m> be a group and suppose <m>H</m> is a subgroup of <m>G</m>.
+                <ol>
+                    <li>
+                        <p>
+                            Restricting the group operation <m>\cdot</m> to <m>H</m> defines a binary operation 
+                            <md>
+                                <mrow>\boldsymbol{\cdot}_H\colon H\times H \amp \rightarrow H</mrow>
+                                <mrow>(h_1,h_2) \amp \mapsto h_1\boldsymbol{\cdot}_H h_2=h_1\cdot h_2</mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The pair <m>(H, \star)</m> is a group. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The only issue here is whether the output of the proposed operation <m>\star</m> actually land in <m>H</m>, and this is guaranteed by axiom (ii) of <xref ref="d_subgroup"/>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Since <m>\star</m> is just the restriction of <m>\cdot</m> to the subset <m>H\subseteq G</m>, it is easy to see that it inherits the group axiom properties of <m>\cdot</m>. 
+                        </p>
+                        <p>
+                            For example, since <m>g_1(g_2g_3)=(g_1g_2)g_3</m> for <em>all</em> elements <m>g_1,g_2,g_3\in G</m>, it is certainly true for all <m>g_1,g_2,g_3\in H</m>. Thus <m>\star</m> is associative.
+                        </p>
+                        <p>
+                            Similarly, since by definition <m>e\in H</m> and <m>e</m> is the identity with respect to <m>\cdot</m>, it is also is an identity element with respect to <m>\star</m>. The same argument shows that the inverse of an element of <m>H</m> with respect to <m>\cdot</m> is also an inverse with respect to <m>\star</m>; since by definition <m>H</m> is closed under the inverse operations, all elements of <m>H</m> have inverses with respect to <m>\star</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    
+
+</section>
