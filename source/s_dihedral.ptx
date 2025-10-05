@@ -141,7 +141,7 @@ Furthermore, define <m>r\colon \R^2\rightarrow \R^2</m> to be rotation by <m>2\p
         <p>
             More generally, we have 
             <men xml:id="eq_dihedral_mult">
-                (r^is^j)(r^ks^\ell)=r^{(i-k)\bmod n}s^{(j+\ell)\bmod n}
+                (r^is^j)(r^ks^\ell)=r^{(i-k)\bmod n}s^{(j+\ell)\bmod 2}
             </men>.
         </p>
     </li>
