@@ -10,4 +10,5 @@
 <xi:include href="s_homomorph.ptx" />
 <xi:include href="s_group_action.ptx" />
 <xi:include href="s_subgroups.ptx" />
+<xi:include href="s_cyclic.ptx" />
 </chapter>

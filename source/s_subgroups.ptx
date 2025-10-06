@@ -299,7 +299,7 @@
             <p>
                 The <term>centralizer</term> of <m>A</m> in <m>G</m>, denoted <m>C_G(A)</m>, is the set 
                 <men xml:id="eq_cenralizer">
-                    C_G(A)=\{g\in G\mid gag^{-1} \text{ for all } a\in A\}=\{g\in G\mid ga=ag \text{ for all } a\in A\}
+                    C_G(A)=\{g\in G\mid gag^{-1}=a \text{ for all } a\in A\}=\{g\in G\mid ga=ag \text{ for all } a\in A\}
                 </men>.
             </p>
         </li>
@@ -327,6 +327,66 @@
     </p>
     </statement>
     </definition>
+    <theorem xml:id="th_centralzer_norm_center">
+    <title>Centralizer, normalizer, center</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group, and let <m>A</m> be a subset of <m>G</m>. 
+    <ol>
+        <li>
+            <p>
+                <m>C_G(A)</m> is a subgroup of <m>G</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N_G(A)</m> is a subgroup of <m>G</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>Z(G)</m> is a subgroup of <m>G</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_centralzer_normalizer_center">
+    <title>Centralizer, normalizer, center</title>
+    <statement>
+    <p>
+    Let <m>G=S_4</m>. 
+    <ol>
+        <li>
+            <p>
+                Let <m>A=\{(1\ 2), (3\ 4)\}</m>. Compute <m>C_{G}(A)</m> and <m>N_{G}(A)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>B=\{(1\ 2), (1\ 3)\}</m>. Compute <m>C_G(B)</m> and <m>N_G(B)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Compute <m>Z(S_4)</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
     
 
 </section>

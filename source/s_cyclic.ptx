@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_cyclic" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Cyclic groups</title>
+   
+    <theorem xml:id="th_fact_gcd_lcm">
+<title>Prime factorization formulas</title>
+    <statement>
+    <p>
+    Let <m>m</m> and <m>n</m> be positive integers, and let 
+    <md>
+        <mrow>m= \amp \prod_{i=1}^rp_i^{m_i} \amp n\amp=\prod_{i=1}^rp_i^{n_i}</mrow>
+    </md>,
+    where <m>\{p_1,p_2,\dots, p_r\}</m> is a list of distinct prime integers, and <m>m_i, n_i\in \Z_{\geq 0}</m> for all <m>1\leq i\leq r</m>. 
+    <ol>
+        <li>
+            <p>
+                We have 
+                <mdn >
+                    <mrow xml:id="eq_prime_gcd_lcd" >\gcd(m,n) \amp =\prod_{i=1}^rp_i^{\min\{m_i,n_i\}} \amp \lcm(m,n)\amp=\prod_{i=1}^r p_i^{\max\{m_i, n_i\}}</mrow>
+                </mdn>.
+            </p>
+        </li>
+        <li>
+            <p>
+                We have 
+                <men xml:id="eq_prod_gcd_lcm">
+                    mn=\gcd(m,n)\lcm(m,n)
+                </men>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    <proposition xml:id="prop_finite_order">
+        <title>Order of group elements</title>
+        <statement>
+            <p>
+                Let <m>g</m> be an element of <m>G</m>.
+                <ol>
+                    <li>
+                        <p>
+                            If <m>\ord g=\infty</m>, then <m>g^i=g^j</m> if and only if <m>i=j</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\ord g=n</m> for <m>n\in \Z</m>, then <m>g^i=g^j</m> if and only if <m>i\equiv j \pmod n</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>g^i=g^j=e</m>, for integers <m>i,j\in \Z</m>, then <m>g^{\gcd(i,j)}=e</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\ord g=n</m>, then 
+                            <men xml:id="eq_org_power">
+                                \ord g^i=\lcm(i,n)=\frac{n}{\gcd(i,n)}
+                            </men>
+                            for all <m>i\in \Z</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+     <theorem xml:id="th_cyclic_isom">
+    <title>Isomorphic cyclic groups</title>
+    <statement>
+    <p>
+    Let <m>G=\angvec{g}</m> and <m>H=\angvec{h}</m> be cyclic groups. 
+    <ol>
+        <li>
+            <p>
+                <m>\abs{G}=\ord g</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>G\cong H</m> if and only if <m>\abs{G}=\abs{H}</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_cyclic_isom">
+        <title>Isomorphic cyclic groups</title>
+        <statement>
+            <p>
+                If <m>G</m> is cyclic, then <m>G\cong \Z</m> or <m>G\cong \Z/m\Z</m> for some positive integer <m>m</m>. 
+            </p>
+        </statement>
+    </corollary>
+    <theorem xml:id="th_cyclic_subgroups">
+    <title>Cyclic group equivalence</title>
+    <statement>
+    <p>
+    A group <m>G</m> is cyclic if and only if all subgroups of <m>G</m> are cyclic. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    <theorem xml:id="th_cyclic_subgroup_inf">
+    <title>Subgroups of infinite cyclic group</title>
+    <statement>
+    <p>
+    Let <m>G=\angvec{g}</m> and assume <m>\abs{G}=\infty</m>. 
+    <ol>
+        <li>
+            <p>
+                All subgroups of <m>G</m> are cyclic. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The correspondence 
+                <md>
+                    <mrow>\Z_{\geq 0} \amp \rightarrow \{H\subseteq G\mid H \text{ a subgroup}\}</mrow>
+                    <mrow>m \amp \longmapsto H_m=\angvec{g^m}</mrow>
+                </md>
+                is a bijection. In other words, every subgroup of <m>G</m> is equal to exactly one of the following list of subgroups:
+                <me>
+                    H_0=\angvec{e}, H_1=\angvec{g}, H_2=\angvec{g^2},\dots 
+                </me>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_cyclic_subgroup_fin">
+    <title>Subgroups of finite cyclic group</title>
+    <statement>
+    <p>
+    Let <m>G=\angvec{g}</m> and assume <m>\abs{G}=n&lt; \infty</m>. 
+    <ol>
+        <li>
+            <p>
+                All subgroups of <m>G</m> are cyclic. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The correspondence 
+                <md>
+                    <mrow>\{m\in \{1,2,\dots, n\}\mid m\mid n\} \amp \rightarrow \{H\subseteq G\mid H \text{ a subgroup}\} </mrow>
+                    <mrow>m \amp \mapsto H_m=\angvec{g^{n/m}}</mrow>
+                </md>
+                from the positive divisors of <m>n</m> and the subgroups of <m>G</m>. Furthermore, <m>\abs{H_m}=m</m>. As a result for each positive divisor of <m>n</m> there is a unique subgroup of that cardinality. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    
+
+</section>
