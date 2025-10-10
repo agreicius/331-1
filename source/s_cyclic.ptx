@@ -164,10 +164,10 @@
             <p>
                 The correspondence 
                 <md>
-                    <mrow>\{m\in \{1,2,\dots, n\}\mid m\mid n\} \amp \rightarrow \{H\subseteq G\mid H \text{ a subgroup}\} </mrow>
-                    <mrow>m \amp \mapsto H_m=\angvec{g^{n/m}}</mrow>
+                    <mrow>\{d\in \{1,2,\dots, n\}\mid d\mid n\} \amp \rightarrow \{H\subseteq G\mid H \text{ a subgroup}\} </mrow>
+                    <mrow>d \amp \mapsto H_d=\angvec{g^d}</mrow>
                 </md>
-                from the positive divisors of <m>n</m> and the subgroups of <m>G</m>. Furthermore, <m>\abs{H_m}=m</m>. As a result for each positive divisor of <m>n</m> there is a unique subgroup of that cardinality. 
+                from the positive divisors of <m>n</m> and the subgroups of <m>G</m>. Furthermore, <m>\abs{H_d}=n/d</m>. As a result for each positive divisor of <m>n</m> there is a unique subgroup of that cardinality. 
             </p>
         </li>
     </ol>
