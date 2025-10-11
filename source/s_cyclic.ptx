@@ -2,7 +2,9 @@
 
 <section xml:id="s_cyclic" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Cyclic groups</title>
-   
+   <p>
+    Our approach to studying cyclic groups will make heavy use of some elementary number theory concepts, most of which we haven't officially proved in this course yet. You can rest assured that we will eventually cover these results (specifically, when treading principal ideal domains in Math 331-2). We get ahead of ourselves by introducing them now mainly for the convenience of using these techniques in computational examples. For example, <xref ref="th_fact_gcd_lcm"/> provides an easy method for computing greatest common divisors and least common multiples from the <em>prime factorizations</em> of two given integers. 
+   </p>
     <theorem xml:id="th_fact_gcd_lcm">
 <title>Prime factorization formulas</title>
     <statement>
@@ -32,10 +34,7 @@
     </ol>
     </p>
     </statement>
-    <proof>
-    <p>
-    </p>
-    </proof>
+
     </theorem>
     
     <proposition xml:id="prop_finite_order">

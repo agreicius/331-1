@@ -186,6 +186,128 @@
     
     
     </subsection>
+    <subsection xml:id="ss_product_groups">
+    <title>Product groups</title>
+    <p>
+        The group product operation is an easy and important manner of constructing new groups from a collection of existing ones. 
+    </p>
+    <definition xml:id="d_product_group">
+    <title>Product group</title>
+    <notation>
+        <usage><m>G\times H</m></usage>
+      <description>product of groups <m>G</m> and <m>H</m></description>
+    </notation>
+    <notation>
+        <usage><m>\prod_{i\in I} G_i</m></usage>
+      <description>product of family of groups <m>(G_i)_{i\in I}</m></description>
+    </notation>
+    <statement>
+    <p>
+    Given groups <m>G</m> and <m>H</m>, the <term>product group</term> <m>G\times H</m> is the group with underlying set 
+    <me>
+        G\times H=\{(g,h)\mid g\in G, h\in H\}
+    </me>
+    and group operation 
+    <me>
+        (g,h)\cdot (g',h')=(gg', hh')
+    </me>.
+    More generally, given a family of groups <m>(G_i)_{i\in I}</m> indexed by a nonempty set <m>I</m>, their product is the group <m>\prod_{i\in I}G_i</m> with underling set 
+    <me>
+        \prod_{i\in I}G_i=\{(g_i)_{i\in I}\mid g_i\in G_i \text{ for all } i\in I\}
+    </me>
+    and group operation 
+    <me>
+        (g_i)_{i\in I}\cdot (h_i)_{i\in I}=(g_ih_i)_{i\in I}
+    </me>
+    for all <m>g=(g_i)_{i\in I}</m> and <m>h=(h_i)_{i\in I}</m> in <m>\prod_{i\in I}G_i</m>.
+    </p>
+    <p>
+        We write <m>G^n</m> for the <m>n</m>-fold group product 
+        <me>
+            \underset{n \text{ times}}{\underbrace{G\times G\times \cdots \times G}}
+        </me>
+        of a group <m>G</m> with itself.
+    </p>
+    </statement>
+    </definition>
+    <remark>
+    <title>Arbitrary products</title>
+    <p>
+    See <xref ref="ss_tuples_cart_prod" text="title"/> for more details about tuples and Cartesian products indexed by arbitrary sets <m>I</m>. 
+    </p>
+    </remark>
+    
+    <proposition xml:id="prop_product_group">
+        <title>Product group</title>
+        
+        <statement>
+            <p>
+                Given a family <m>(G_i)_{i\in I}</m> of groups indexed by a nonempty set <m>I</m>, the product <m>\prod_{i\in I} G_i</m> is a group with respect to the binary operation defined in <xref ref="d_product_group"/>. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                We verify each group axiom in turn. 
+                <ol marker="(i)">
+                    <li>
+                        <p>
+                            Given elements <m>g=(g_i)_{i\in I}</m>, <m>h=(h_i)_{i\in I}</m>, and <m>k=(k_i)_{i\in I}</m> of <m>\prod_{i\in I} G_i</m>, we have 
+                            <md>
+                                <mrow>g(hk) \amp = (g_i)_{i\in I} \cdot \left( (h_i)_{i\in I}\cdot (k_i)_{i\in I}\right)</mrow>
+                                <mrow> \amp = (g_i)_{i\in I} \cdot (h_i k_i)_{i\in I}</mrow>
+                                <mrow> \amp = (g_i (h_ik_i))_{i\in I}</mrow>
+                                <mrow> \amp = ((g_ih_i)k_i)_{i\in I} \amp (\text{assoc. of } G_i)</mrow>
+                                <mrow> \amp = (g_ih_i)_{i\in I}\cdot (k_i)_{i\in I}</mrow>
+                                <mrow> \amp = \left((g_i)_{i\in I}\cdot (h_i)_{i\in I}\right)\cdot (k_i)_{i\in I}</mrow>
+                                <mrow> \amp =(gh)k</mrow>
+                            </md>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Let <m>e_i</m> denote the identity element of <m>G_i</m> for each <m>i\in I</m>, and let <m>e=(e_i)_{i\in I}</m>. For any <m>g=(g_i)_{i\in I}</m>, we have 
+                            <md>
+                                <mrow>g\cdot e \amp = (g_i)_{i\in I} \cdot (e_i)_{i\in I}</mrow>
+                                <mrow> \amp = (g_ie_i)_{i\in I}</mrow>
+                                <mrow> \amp = (g_i)_{i\in I}</mrow>
+                                <mrow> \amp = g</mrow>
+                            </md>
+                            and 
+                            <md>
+                                <mrow>e\cdot g \amp = (e_i)_{i\in I} \cdot (g_i)_{i\in I}</mrow>
+                                <mrow> \amp = (e_ig_i)_{i\in I}</mrow>
+                                <mrow> \amp = (g_i)_{i\in I}</mrow>
+                                <mrow> \amp = g</mrow>
+                            </md>,
+                            showing that <m>e=(e_i)_{i\in I}</m> satisfies the group identity axiom. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Given <m>g=(g_i)_{i\in I}\in \prod_{i\in I}G_i</m>, let <m>g^{-1}=(g_i^{-1})_{i\in I}</m>. We have 
+                            <md>
+                                <mrow>g\cdot g^{-1} \amp = (g_i)_{i\in I} \cdot (g_i^{-1})_{i\in I}</mrow>
+                                <mrow> \amp = (g_ig_i^{-1})_{i\in I}</mrow>
+                                <mrow> \amp = (e_i)_{i\in I}</mrow>
+                                <mrow> \amp = e</mrow>
+                            </md>
+                            and 
+                            <md>
+                                <mrow>g^{-1}\cdot g \amp = (g_i^{-1})_{i\in I} \cdot (g_i)_{i\in I}</mrow>
+                                <mrow> \amp = (g_i^{-1}g_i)_{i\in I}</mrow>
+                                <mrow> \amp = (e_i)_{i\in I}</mrow>
+                                <mrow> \amp = e</mrow>
+                            </md>,
+                            showing that <m>g^{-1}</m> is a group inverse of <m>g</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+
+    
+    </subsection>
     <subsection xml:id="ss_elem_group_proos">
     <title>Elementary properties</title>
     <proposition xml:id="th_group_props">

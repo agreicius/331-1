@@ -184,11 +184,65 @@
                 Since <m>\Z=\angvec{1}</m>, <m>\Z</m> is cyclic. 
             </p>
         </li>
+        <li>
+            <p>
+                No <m>D_n</m> is cyclic, as a simple order computation shows. Namely, all rotations <m>r^i</m> in <m>D_n</m> have order at most <m>n</m>, and all reflections <m>r^is</m> have order <m>2</m>. It follows that <m>\abs{\angvec{g}}\leq n</m> for all <m>g\in D_n</m>. Since <m>\abs{D_n}=2n</m>, we see that there is no <m>g\in D_n</m> satisfying <m>D_n=\angvec{g}</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                We have <m>\Z/n\Z=\angvec{\overline{1}}</m>, showing that it is cylic. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The group <m>(\Z/n\Z)^*</m> is not always cyclic, the first counterexample being <m>n=8</m>. (Show for yourself that this group is cyclic for <m>n=2,3,4,5,6,7</m>.) To see why <m>(\Z/8\Z)^*</m> is not cyclic, we first compute 
+                <me>
+                    (\Z/8\Z)^*=\{\overline{1}, \overline{3}, \overline{5}, \overline{7}\}   
+                </me>,
+                and then note that each of these elements has order at most <m>2</m>. It follows that <m>(\Z/8\Z)^*</m> is not cyclic.
+            </p>
+        </li>
         
     </ol>
     </p>
     </solution>
     </example>
+    <p>
+        A cyclic group <m>G=\angvec{g}</m> is abelian: given <m>g_1=g^{n_1}</m> and <m>g_2=g^{n_2}</m>, we have 
+        <me>
+            g_1g_2=g_2g_1=g^{n_1+n_2}
+        </me>.
+        As you might have guessed, however, not all abelian groups are cyclic. There are many counterexamples to such a claim, but the <em>smallest</em> one is the group 
+        <me>
+            \Z/2\Z\times\Z/2\Z=\{(0,0),(0,1),(1,0),(1,1)\}
+        </me>.
+        It is easy to see, using the product group operation defined in <xref ref="d_product_group"/> <m>\ord g\leq 2</m> for all <m>g\in \Z/2\Z\times \Z/2\Z</m>, and thus that <m>\abs{\angvec{g}}\leq 2</m> for all <m>g\in \Z/2\Z\times \Z/2\Z</m>. Since <m>\abs{\Z/2\Z\times \Z/2\Z}=4</m>, we conclude that the group is not cyclic. 
+    </p>
+    <p>
+        This group is important enough to warrant its own name. We call it, and any group that is isomorphic to it, a <term>Klein 4-group</term>. It is easy to see that such a group has a presentation of the form 
+        <me>
+            \angvec{a,b\mid a^2=b^2=e, ab=ba}
+        </me>.
+        In <m>\Z/2\Z\times \Z/2\Z</m>, we can take <m>a=(1,0)</m> and <m>b=(0,1)</m>. We make use of this fact in our official definition of a Klein 4-group.
+    </p>
+    <activity xml:id="spec_klein_4">
+    <title>Klein 4-group</title>
+    <statement>
+    <p>
+    We call a group <m>G</m> a <term>Klein 4-group</term> if <m>G\cong Z/2\Z\times \Z/2\Z</m>. We will use the notation 
+    <me>
+        V_4=\angvec{a,b\mid a^2=b^2=e, ab=ba}
+    </me> to denote a Klein 4-group with generators <m>a</m> and <m>b</m>.   
+    </p>
+    </statement>
+    </activity>
+<remark>
+<title>Klein 4-group</title>
+<p>
+So what's with the <q>V</q> in our notation? This group is called the <foreign> Kleinsche Vierergruppe</foreign> in German, <foreign>vier</foreign> being German for <q>four</q>. 
+</p>
+</remark>
     <example xml:id="eg_D_n">
     <title>Subgroups of <m>D_n</m></title>
     <statement>
@@ -213,6 +267,10 @@
     </p>
     </solution>
     </example>
+    
+
+    
+
     <definition xml:id="d_kernel">
     <title>Kernel of homomorphism</title>
     <statement>
