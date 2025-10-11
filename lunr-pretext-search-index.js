@@ -556,7 +556,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Groups",
-  "body": " Groups   This first quarter of Math 331 is devoted entirely to the study of groups. This a fitting place to begin both as groups represent a type of algebraic object with near minimal structure and are omnipresent in the world of mathematics and the empirical sciences more generally. More conceptually, groups are intimately connected with the notion of symmetry in mathematics. Put plainly, wherever you find mathematical discussion of symmetry, a group usually lurks in the background as the thing that defines that symmetry. We will see plenty of examples of this in the coming days. In the meantime, for an excellent elaboration of this theme, check out Keith Conrad's blurb Why groups?     Definition   Groups   A group is an ordered pair where is a nonempty set and is a binary operation , satisfying the following axioms.   Associativity  For all we have .    Group identity  There is an element , such that for all , we have . We call the group identity of .    Group inverses  For all there is an element satisfying . We call the group inverse of .        Group law notation   You are free to denote the binary group law in any manner you like. Often, as in , we will make a notational choice that reflects the specific nature of a given group.  Furthermore, with the exception of the case where is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.     Ring additive groups   Let , and let be the usual addition operation on . The pair is a group, called the additive group of .  The group identity of is , also known as the additive identity of .  Given any , its group inverse is its minus, , also known as the additive inverse  .     Ring multiplicative groups   Let . An element is a unit (or (multiplicatively) invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of all units of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.     Abelian group   A group is abelian (or commutative ) if for all . The group is nonabelian (or noncommutative ), if it is not abelian.     General linear group  Let . The set of all matrices with coefficients in is denoted . We denote by the set of invertible matrices with coefficients in : , is denoted : , . The pair , where is the usual matrix multiplication operation, is a group called the general linear group of degree over .  The group identity of is the identity matrix .  Given any , its group inverse is the matrix inverse .    is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.      Elementary properties   Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .            Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .        Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .        Order of inverse   Let be an element of the group . Prove: .     Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.     "
+  "body": " Groups   This first quarter of Math 331 is devoted entirely to the study of groups. This a fitting place to begin both as groups represent a type of algebraic object with near minimal structure and are omnipresent in the world of mathematics and the empirical sciences more generally. More conceptually, groups are intimately connected with the notion of symmetry in mathematics. Put plainly, wherever you find mathematical discussion of symmetry, a group usually lurks in the background as the thing that defines that symmetry. We will see plenty of examples of this in the coming days. In the meantime, for an excellent elaboration of this theme, check out Keith Conrad's blurb Why groups?     Definition   Groups   A group is an ordered pair where is a nonempty set and is a binary operation , satisfying the following axioms.   Associativity  For all we have .    Group identity  There is an element , such that for all , we have . We call the group identity of .    Group inverses  For all there is an element satisfying . We call the group inverse of .        Group law notation   You are free to denote the binary group law in any manner you like. Often, as in , we will make a notational choice that reflects the specific nature of a given group.  Furthermore, with the exception of the case where is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.     Ring additive groups   Let , and let be the usual addition operation on . The pair is a group, called the additive group of .  The group identity of is , also known as the additive identity of .  Given any , its group inverse is its minus, , also known as the additive inverse  .     Ring multiplicative groups   Let . An element is a unit (or (multiplicatively) invertible if there is an element satisfying . In this case is called the multiplicative inverse of . Define to be the set of all units of : , . If , then , since in these number systems all nonzero elements have a multiplicative inverse. By contrast, we have , since and are the only integers that have an integer multiplicative inverse.  The , where is the usual multiplciation operation on , is a group called the multiplicative group of .  The group identity of is , also known as the multiplicative identity of .  Given any , its group inverse is the multiplicative inverse defined above.     Abelian group   A group is abelian (or commutative ) if for all . The group is nonabelian (or noncommutative ), if it is not abelian.     General linear group  Let . The set of all matrices with coefficients in is denoted . We denote by the set of invertible matrices with coefficients in : , is denoted : , . The pair , where is the usual matrix multiplication operation, is a group called the general linear group of degree over .  The group identity of is the identity matrix .  Given any , its group inverse is the matrix inverse .    is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.      Product groups  The group product operation is an easy and important manner of constructing new groups from a collection of existing ones.   Product group    product of groups and     product of family of groups    Given groups and , the product group  is the group with underlying set and group operation . More generally, given a family of groups indexed by a nonempty set , their product is the group with underling set and group operation for all and in .  We write for the -fold group product of a group with itself.     Arbitrary products  See for more details about tuples and Cartesian products indexed by arbitrary sets .    Product group   Given a family of groups indexed by a nonempty set , the product is a group with respect to the binary operation defined in .    We verify each group axiom in turn.   Given elements , , and of , we have .    Let denote the identity element of for each , and let . For any , we have and , showing that satisfies the group identity axiom.    Given , let . We have and , showing that is a group inverse of .         Elementary properties   Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .            Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .        Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .        Order of inverse   Let be an element of the group . Prove: .     Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.     "
 },
 {
   "id": "d_group",
@@ -622,11 +622,38 @@ var ptx_lunr_docs = [
   "body": " is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.   "
 },
 {
+  "id": "d_product_group",
+  "level": "2",
+  "url": "s_groups.html#d_product_group",
+  "type": "Definition",
+  "number": "1.5",
+  "title": "Product group.",
+  "body": " Product group    product of groups and     product of family of groups    Given groups and , the product group  is the group with underlying set and group operation . More generally, given a family of groups indexed by a nonempty set , their product is the group with underling set and group operation for all and in .  We write for the -fold group product of a group with itself.   "
+},
+{
+  "id": "ss_product_groups-4",
+  "level": "2",
+  "url": "s_groups.html#ss_product_groups-4",
+  "type": "Remark",
+  "number": "1.6",
+  "title": "Arbitrary products.",
+  "body": " Arbitrary products  See for more details about tuples and Cartesian products indexed by arbitrary sets .  "
+},
+{
+  "id": "prop_product_group",
+  "level": "2",
+  "url": "s_groups.html#prop_product_group",
+  "type": "Proposition",
+  "number": "1.7",
+  "title": "Product group.",
+  "body": " Product group   Given a family of groups indexed by a nonempty set , the product is a group with respect to the binary operation defined in .    We verify each group axiom in turn.   Given elements , , and of , we have .    Let denote the identity element of for each , and let . For any , we have and , showing that satisfies the group identity axiom.    Given , let . We have and , showing that is a group inverse of .      "
+},
+{
   "id": "th_group_props",
   "level": "2",
   "url": "s_groups.html#th_group_props",
   "type": "Proposition",
-  "number": "1.5",
+  "number": "1.8",
   "title": "Group properties.",
   "body": " Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .          "
 },
@@ -635,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_group_exp",
   "type": "Definition",
-  "number": "1.6",
+  "number": "1.9",
   "title": "Group exponentiation.",
   "body": " Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .      "
 },
@@ -644,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_order_group_element",
   "type": "Definition",
-  "number": "1.7",
+  "number": "1.10",
   "title": "Group element order.",
   "body": " Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .      "
 },
@@ -653,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#eg_order_inverse",
   "type": "Example",
-  "number": "1.8",
+  "number": "1.11",
   "title": "Order of inverse.",
   "body": " Order of inverse   Let be an element of the group . Prove: .   "
 },
@@ -662,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#eg_infinite_order",
   "type": "Example",
-  "number": "1.9",
+  "number": "1.12",
   "title": "Element of infinite order.",
   "body": " Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.   "
 },
@@ -680,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_divis",
   "type": "Definition",
-  "number": "1.10",
+  "number": "1.13",
   "title": "Divisibilty.",
   "body": " Divisibilty    divides    Given integers we say that  divides  (or that is a multiple of ) if there is an integer satisfying . In this case, is called the quotient of by .   "
 },
@@ -689,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_cong_mod_n",
   "type": "Definition",
-  "number": "1.11",
+  "number": "1.14",
   "title": "Congruence modulo <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Congruence modulo    is congruent to modulo     the congruence class of modulo    Let be a positive integer. Integers and are congruent modulo , denoted , if one of the two following equivalent conditions holds: . The congruence class (or residue class ) of modulo , denoted (or ) is the set of all integers congruent to modulo : , . Elements of a congruence class are called representatives (or residues ) of that class.  The set of all congruence classes modulo is denoted : , . The integer in all the settings above is called a modulus .   "
 },
@@ -698,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_cong_mod_3",
   "type": "Example",
-  "number": "1.12",
+  "number": "1.15",
   "title": "Congruence modulo <span class=\"process-math\">\\(3\\)<\/span>.",
   "body": " Congruence modulo   Consider the modulus .   Compute and .   Find a finite list of integers such that .   Compute .          We have .    It is not difficult to show that for any we have for some . (See theory below more generally.) Thus .    The sets are clearly all distinct from one another. Thus .      "
 },
@@ -707,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong-5",
   "type": "Remark",
-  "number": "1.13",
+  "number": "1.16",
   "title": "Congruence classes.",
   "body": " Congruence classes  Fix an integer . The notation is ambiguous since it does not indicate the modulus in question. This is one reason for the alternative notation . Furthermore, the notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a set of integers .  We will use both notations interchangeably. Typically, we will favor when performing modular arithmetic (see below), and when asserting something about sets.  "
 },
@@ -716,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#th_cong_class",
   "type": "Theorem",
-  "number": "1.14",
+  "number": "1.17",
   "title": "Congruence.",
   "body": " Congruence   Fix a modulus .   The congruence modulo relation is an equivalence relation: ,   Reflexivity   for all .    Reflexivity  If , then .    Transitivity  If and , then .       The following statements are equivalent.    .     .     .       The congruence classes modulo form a partition of : , we have , and if , then . Using logical notation: .    Assume is positive. For every , there is a unique such that . Equivalently, and for all . As a consequence, .       See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation: .   "
 },
@@ -725,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_least_residue",
   "type": "Definition",
-  "number": "1.15",
+  "number": "1.18",
   "title": "Least residue modulo <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Least residue modulo   Fix a positive modulus . Given an integer the least residue of modulo , denoted is the unique satisfying .   "
 },
@@ -734,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong-8",
   "type": "Warning",
-  "number": "1.16",
+  "number": "1.19",
   "title": "Congruence relation and least residues.",
   "body": " Congruence relation and least residues  Do not confuse the two quite similar looking notations and . The first asserts that a certain relation holds, namely that is congruent to modulo . The second denotes the unique integer in that is congruent to modulo .  Said differently, the notion of the least residue defines a function .  "
 },
@@ -743,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#th_div_alg",
   "type": "Theorem",
-  "number": "1.17",
+  "number": "1.20",
   "title": "Division algorithm.",
   "body": " Division algorithm   Given any integer with nonzero, there is a unique pair of integers satisfying the following properties:    ;     .   We call the integers and satisfying these properties the quotient and remainder upon dividing by .   "
 },
@@ -752,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#prop_least_residue",
   "type": "Proposition",
-  "number": "1.18",
+  "number": "1.21",
   "title": "Least residue.",
   "body": " Least residue   Let be a positive integer, and let . The following statements are equivalent.    .     and .     is the remainder upon division of by .      "
 },
@@ -761,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#prop_cong_arith",
   "type": "Proposition",
-  "number": "1.19",
+  "number": "1.22",
   "title": "Modular arithmetic.",
   "body": " Modular arithmetic   Fix a modulus . Assume integers satisfy . We have . It follows from this that .   "
 },
@@ -770,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#cor_mod_ring_ops",
   "type": "Corollary",
-  "number": "1.20",
+  "number": "1.23",
   "title": "Ring structure of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Ring structure of   Fix a modulus . We have well-defined binary operations and defined on as follows: .   "
 },
@@ -779,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_arith",
   "type": "Example",
-  "number": "1.21",
+  "number": "1.24",
   "title": "Modular arithmetic.",
   "body": " Modular arithmetic   Fix the modulus . Find a representative for the congruence class .       "
 },
@@ -788,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_least_residue",
   "type": "Example",
-  "number": "1.22",
+  "number": "1.25",
   "title": "Least residue.",
   "body": " Least residue   Let and let . Compute .       "
 },
@@ -806,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_mult_inv_elements",
   "type": "Definition",
-  "number": "1.23",
+  "number": "1.26",
   "title": "Multiplicative units in <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Multiplicative units in   Fix a modulus . An element is a unit (or (multiplicatively) invertible ) if there is an element satisfying . The element in this case is called the multiplicative inverse of , denoted . The set of all units of is denoted : , .   "
 },
@@ -824,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_groups",
   "type": "Example",
-  "number": "1.24",
+  "number": "1.27",
   "title": "Modulus <span class=\"process-math\">\\(n=5\\)<\/span>.",
   "body": " Modulus   Compute group tables for both and . Naturally, for the latter you should first determine the units of .       "
 },
@@ -833,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_units",
   "type": "Example",
-  "number": "1.25",
+  "number": "1.28",
   "title": "Units modulo <span class=\"process-math\">\\(9\\)<\/span>.",
   "body": " Units modulo   Compute a group table for .       "
 },
@@ -842,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_gcd",
   "type": "Definition",
-  "number": "1.26",
+  "number": "1.29",
   "title": "Greatest common divisor.",
   "body": " Greatest common divisor   Let and be integers, at least one of which is nonzero. The greatest common divisor of and , denoted , is the greatest positive integer dividing both and : , .   "
 },
@@ -851,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong_ring_structure-12",
   "type": "Remark",
-  "number": "1.27",
+  "number": "1.30",
   "title": "Units mod <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Units mod  As we will see later, it turns out that an element is a unit if and only if is relatively prime to : , if and only if . As a result of this very much non-obvious fact, we have .  "
 },
@@ -869,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#d_invertible_matrix",
   "type": "Definition",
-  "number": "1.28",
+  "number": "1.31",
   "title": "Invertible matix.",
   "body": " Invertible matix   Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .   "
 },
@@ -887,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#s_matrix_grps-4",
   "type": "Remark",
-  "number": "1.29",
+  "number": "1.32",
   "title": "Invertible matrices and determinant.",
   "body": " Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .  "
 },
@@ -896,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#eg_GL_mod2",
   "type": "Example",
-  "number": "1.30",
+  "number": "1.33",
   "title": "<span class=\"process-math\">\\(\\GL_2(\\Z\/2\\Z)\\)<\/span>.",
   "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!   "
 },
@@ -914,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#d_isom",
   "type": "Definition",
-  "number": "1.31",
+  "number": "1.34",
   "title": "Isometry.",
   "body": " Isometry    isometries of    Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
 },
@@ -932,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_isometries",
   "type": "Example",
-  "number": "1.32",
+  "number": "1.35",
   "title": "Isometries.",
   "body": " Isometries   Fix a positive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
 },
@@ -941,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#ss_isometries-5",
   "type": "Remark",
-  "number": "1.33",
+  "number": "1.36",
   "title": "Rigid motions of <span class=\"process-math\">\\(\\R^2\\)<\/span>.",
   "body": " Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .  "
 },
@@ -959,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#ss_dihedral-3",
   "type": "Warning",
-  "number": "1.34",
+  "number": "1.37",
   "title": "<span class=\"process-math\">\\(D_n\\)<\/span> or <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": " or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.  "
 },
@@ -968,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#th_dihedral",
   "type": "Theorem",
-  "number": "1.35",
+  "number": "1.38",
   "title": "Dihedral group.",
   "body": " Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .    More generally, we have .          "
 },
@@ -977,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_D3",
   "type": "Example",
-  "number": "1.36",
+  "number": "1.39",
   "title": "Computing in <span class=\"process-math\">\\(D_3\\)<\/span>.",
   "body": " Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .          "
 },
@@ -986,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_dihedral_geom",
   "type": "Example",
-  "number": "1.37",
+  "number": "1.40",
   "title": "Dihedral geometry.",
   "body": " Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .          "
 },
@@ -1013,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#d_permutation",
   "type": "Definition",
-  "number": "1.38",
+  "number": "1.41",
   "title": "Permutations.",
   "body": " Permutations    permutations of the set    Let be a nonempty set. A permutation of is a bijective function . We denote by the set of all permutations of : , . If for some positive integer , we will write for .   "
 },
@@ -1031,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#s_permutations-4",
   "type": "Notation",
-  "number": "1.39",
+  "number": "1.42",
   "title": "Table notation.",
   "body": " Table notation  Let , where the are distinct. Given a permutation satisfying for all , we represent using table notation as   "
 },
@@ -1040,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#eg_S_3",
   "type": "Example",
-  "number": "1.40",
+  "number": "1.43",
   "title": "Permutations: table notation.",
   "body": " Permutations: table notation   Write down all elements of using table notation.   "
 },
@@ -1049,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#d_cycle",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.44",
   "title": "Cycles.",
   "body": " Cycles   Let be a -tuple of distinct elements of the set . The permutation defined as is called the k-cycle of associated to the tuple , and is denoted . Two cycles are disjoint if .   "
 },
@@ -1058,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#prop_cycle_arith",
   "type": "Proposition",
-  "number": "1.42",
+  "number": "1.45",
   "title": "Cycle arithmetic.",
   "body": " Cycle arithmetic   Let and be cycles of the set .   For all , we have .     .         If and are disjoint, then : , disjoint cycles commute.    If , where the are pairwise disjoint cycles, then the order of is the least common multiple of the orders of the : , .       Left as a homework exercise.   "
 },
@@ -1067,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#th_cycle_decomposition",
   "type": "Theorem",
-  "number": "1.43",
+  "number": "1.46",
   "title": "Cycle decomposition.",
   "body": " Cycle decomposition   Let be a finite set, and let .   We can write where the are pairwise disjoint cycles.    If we assume that the union of the set of elements appearing in the cycles is all of , then the set of disjoint cycles appearing in the decomposition is uniquely determined by .       The following is an outline for proving this theorem. Fix .   Step 1  Prove that the relation is an equivalence relation on     Step 2  Let be the equivalence classes defined by the relation above. Prove that for each and each , we have , where and .    Step 3  For each , pick such that , and let be the cycle . Show that .    Step 4 (uniqueness)  Assume be a decomposition of into disjoint cycles , and that the union of elements appearing in the is . For each , let be the set of elements of appearing in the cycle .   Prove that .    Prove that and that after a reordering, we have for all .    Prove that .       "
 },
@@ -1076,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#s_permutations-10",
   "type": "Remark",
-  "number": "1.44",
+  "number": "1.47",
   "title": "Uniqueness of cycle decomposition.",
   "body": " Uniqueness of cycle decomposition  Let's make a few important remarks about the uniqueness of cycle decomposition.   First off, to have any uniqueness property whatsoever, the cycle decomposition must be a disjoint one. Indeed, for all -cycles we have , giving us many different ways of writing as a composition of 2-cycles.    Although the cycles appearing in a disjoint cycle decomposition are unique, the order in which they appear in this expression is not unique. Indeed, since disjoint cycles commute, we can order the on the right side of the equation any way we like!    Furthermore, remember that any given cycle can itself be expressed in many (in fact ) different ways.     "
 },
@@ -1085,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#eg_cycle_decomp",
   "type": "Example",
-  "number": "1.45",
+  "number": "1.48",
   "title": "Cycle decomposition.",
   "body": " Cycle decomposition   We work in the group . Let .   Compute disjoint cycle decompositions of the following permutations.                          Compute .    True or false: .          "
 },
@@ -1094,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#proc_cycle_decomp",
   "type": "Procedure",
-  "number": "1.46",
+  "number": "1.49",
   "title": "",
   "body": "  Let be a finite set, and let . To compute a decomposition of into disjoint cycles, proceed as follows.   Initialize: set , the empty product of cycles.    If all elements of appear in the cycles appearing in , then stop.  Otherwise, pick any that does not appear in and compute the cycle it generates by evaluating at successive powers until you get an output of .  Update: set and repeat Step 2.      "
 },
@@ -1112,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#d_homomorphism",
   "type": "Definition",
-  "number": "1.47",
+  "number": "1.50",
   "title": "Homomorphism.",
   "body": " Homomorphism   Let and be groups. A (group) homomorphism is a map satisfying for all .   "
 },
@@ -1121,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#s_homomorph-3",
   "type": "Remark",
-  "number": "1.48",
+  "number": "1.51",
   "title": "Homomorphism.",
   "body": " Homomorphism  There is an important subtlety in the defining property : namely, there are two group operations at play. In more detail, the input of on the left side is a product within the domain group ; the right side on the other hand is a product within the codomain group .  A useful way of thinking of a group homomorphism is as a function between groups that respects the group structure , in the sense articulated by . You might ask: shouldn't a group homomorphism also respect the group identities and group inverses? It turns out that the property is itself enough to guarantee this.  "
 },
@@ -1130,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#prop_homo",
   "type": "Proposition",
-  "number": "1.49",
+  "number": "1.52",
   "title": "Homomorphism properties.",
   "body": " Homomorphism properties   Let be a group homomorphism, and let and be the identity elements of and , respectively.                   Since and is a homomorphism, we have . Now do some algebra in : .    Fix . We have , where the last implication follows from the fact that inverses in groups are unique.      "
 },
@@ -1139,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#eg_homos",
   "type": "Example",
-  "number": "1.50",
+  "number": "1.53",
   "title": "Homormorphisms.",
   "body": " Homormorphisms   Decide whether the given map is a group homormorphism.   Trivial homomorphism  Let and be groups. Define as for all .    Identity map  Let be a group, and let be the identity map as usual.    Fix and define as .    Define as .    Determinant  Assume or for some positive integer . Fix a positive integer and define as .    Exponential map  Define as .          "
 },
@@ -1148,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#prop_Dn_homo",
   "type": "Proposition",
-  "number": "1.51",
+  "number": "1.54",
   "title": "Homomorphisms from <span class=\"process-math\">\\(D_n\\)<\/span>.",
   "body": " Homomorphisms from   Fix an integer , and let . Given a group and elements satisfying , the map defined as is a homomorphism.    The proof is left as a homework exercise.   "
 },
@@ -1157,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#d_isomorphism",
   "type": "Definition",
-  "number": "1.52",
+  "number": "1.55",
   "title": "Isomorphism.",
   "body": " Isomorphism   An isomorphism is a bijective group homomorphism . Groups and are isomorphic , denoted , if there is an isomorphism .   "
 },
@@ -1166,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#eg_Sn",
   "type": "Example",
-  "number": "1.53",
+  "number": "1.56",
   "title": "Permutation groups.",
   "body": " Permutation groups   Let and be finite nonempty sets satisfying . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.   "
 },
@@ -1184,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#d_group_action",
   "type": "Definition",
-  "number": "1.54",
+  "number": "1.57",
   "title": "Group action.",
   "body": " Group action   A (left) group action is a triple , where is a group, is a nonempty set, and is a binary operation satisfying the following axioms.   Associativity   for and .    Identity action   for all .      "
 },
@@ -1193,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#eg_group_actions",
   "type": "Example",
-  "number": "1.55",
+  "number": "1.58",
   "title": "Group actions.",
   "body": " Group actions      The group acts on via evaluation: , given and , we define .    The group acts on the regular polygon via evaluation: , given and , we define .  Furthermore, acts on the set of vertices of and the set of its edges.    The group acts on via evaluation: , given and , we define .    Any group acts on itself (treated as a set) via multiplication on the left: . Note that multiplication on the right is not in a general a group action since by definition we have and .    Any group acts on itself (treated as a set) via conjugation :     Given or the group of units acts on via multiplication: .      "
 },
@@ -1202,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#th_group_actions",
   "type": "Theorem",
-  "number": "1.56",
+  "number": "1.59",
   "title": "Group actions and homomorphisms.",
   "body": " Group actions and homomorphisms   Assume acts on the the nonempty set via the binary operation .   Given , the map defined as . is a permutation of : , .    The map defined as is a group homomorphism.    There is a bijection between the set of all group actions and the set of all homomorphisms given by where given , is the permutation defined as .          By definition for all , so the recipe for does indeed yield a well-defined function . To prove that is a permutation, we will show that it has an inverse: in fact, we claim . We must show that composition of these two functions, in any order, yields the identity map on . This follows from the group action axioms: .          "
 },
@@ -1211,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#d_permutation_rep",
   "type": "Definition",
-  "number": "1.57",
+  "number": "1.60",
   "title": "Permutation representation.",
   "body": " Permutation representation   Given a group , a homomorphism for some nonempty set is called a permutation representation .   "
 },
@@ -1220,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#eg_isom",
   "type": "Example",
-  "number": "1.58",
+  "number": "1.61",
   "title": "Isomorphisms.",
   "body": " Isomorphisms   Prove: is isomorphic to . Use a group action to produce your homomorphism.    Recall the definition of as the set of rigid motions of fixing the equilateral triangle centered at the origin with one vertex at . Let be the set of vertices of . Since acts on (as described in ), by we get a group homomorphism that maps a function to the permutation it defines on via evaluation. This means that , the function restriction of to the set of vertices of . We claim is in fact an isomorphism. Since , it suffices to show that is injective. To this end, we note that given , we have , where the last implication follows from the fact that two rigid motions of are uniquely determined by their values at three non-colinear points.  We have shown that is an isomorphism and thus that . Lastly, by , we have that and thus that . (The isomorphism relation between groups is easily seen to be an equivalence relation since compositions of isomorphisms are isomorphisms.)   "
 },
@@ -1231,14 +1258,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.8",
   "title": "Subgroups",
-  "body": " Subgroups   Subgroup    is a subgroup of    A subgroup of a group is a subset satisfying the following properties.   Identity element   .    Closed under group law  For all , if , then . Using logical shorthand: .    Closed under inverses  For all , if , then . Using logical shorthand: .   We write to denote that is a subgroup of .     Subgroup  There are common equivalent variations of . For example we could define a subgroup of to be a subset satisfying the following conditions.    .    For all , if , then .   Such equivalent versions have the advantage of brevity. I prefer as it makes more evident the important result of : namely, that subgroups are themselves examples of groups.     Let be a group and suppose is a subgroup of .   Restricting the group operation to defines a binary operation .    The pair is a group.          The only issue here is whether the output of the proposed operation actually land in , and this is guaranteed by axiom (ii) of .    Since is just the restriction of to the subset , it is easy to see that it inherits the group axiom properties of .  For example, since for all elements , it is certainly true for all . Thus is associative.  Similarly, since by definition and is the identity with respect to , it is also is an identity element with respect to . The same argument shows that the inverse of an element of with respect to is also an inverse with respect to ; since by definition is closed under the inverse operations, all elements of have inverses with respect to .        Examples      Given a group the subsets and itself are both easily seen to be subgroups.    For all , the set is a subgroup of .    For all , the set is not a subgroup.    For any group and element , the subset is a subgroup of .        Cyclic groups   Given a group and element , the subgroup is the cyclic group generated by , denoted .  A group is cyclic if for some .     Cyclic groups   Decide which of the following groups are cyclic. If the example is a family of groups, decide whether all elements of the family are cyclic or not.                             Since , is cyclic.        Subgroups of      Find all subgroups of .    Find all cyclic subgroups of . Produce a noncyclic subgroup of .            Kernel of homomorphism   Let be a group homomorphism. The kernel of , denoted , is the set .     Kernel and image   Let be a group homomorphism.    is a subgroup of .     is a subgroup of .            Kernel and image   Compute and for the given group homomorphism .   Fix and define .     ,     Let be the set of three ``diameters\" in the regular hexagon . Let be the homomorphism associated to the group action of on .            Centralizer, normalizer, center    centralizer of in     normalizer of in    Let be a subset of the group .   The centralizer of in , denoted , is the set .    The normalizer of in , denoted , is the set .    The center of , denoted , is the set .         Centralizer, normalizer, center   Let be a group, and let be a subset of .    is a subgroup of .     is a subgroup of .     is a subgroup of .            Centralizer, normalizer, center   Let .   Let . Compute and .    Let . Compute and .    Compute .           "
+  "body": " Subgroups   Subgroup    is a subgroup of    A subgroup of a group is a subset satisfying the following properties.   Identity element   .    Closed under group law  For all , if , then . Using logical shorthand: .    Closed under inverses  For all , if , then . Using logical shorthand: .   We write to denote that is a subgroup of .     Subgroup  There are common equivalent variations of . For example we could define a subgroup of to be a subset satisfying the following conditions.    .    For all , if , then .   Such equivalent versions have the advantage of brevity. I prefer as it makes more evident the important result of : namely, that subgroups are themselves examples of groups.     Let be a group and suppose is a subgroup of .   Restricting the group operation to defines a binary operation .    The pair is a group.          The only issue here is whether the output of the proposed operation actually land in , and this is guaranteed by axiom (ii) of .    Since is just the restriction of to the subset , it is easy to see that it inherits the group axiom properties of .  For example, since for all elements , it is certainly true for all . Thus is associative.  Similarly, since by definition and is the identity with respect to , it is also is an identity element with respect to . The same argument shows that the inverse of an element of with respect to is also an inverse with respect to ; since by definition is closed under the inverse operations, all elements of have inverses with respect to .        Examples      Given a group the subsets and itself are both easily seen to be subgroups.    For all , the set is a subgroup of .    For all , the set is not a subgroup.    For any group and element , the subset is a subgroup of .        Cyclic groups   Given a group and element , the subgroup is the cyclic group generated by , denoted .  A group is cyclic if for some .     Cyclic groups   Decide which of the following groups are cyclic. If the example is a family of groups, decide whether all elements of the family are cyclic or not.                             Since , is cyclic.       A cyclic group is abelian: given and , we have . As you might have guessed, however, not all abelian groups are cyclic. There are many counterexamples to such a claim, but the smallest one is the group . It is easy to see, using the product group operation defined in  for all , and thus that for all . Since , we conclude that the group is not cyclic.  This group is important enough to warrant its own name. We call it, and any group that is isomorphic to it, a Klein 4-group . It is easy to see that such a group has a presentation of the form . In , we can take and . We make use of this fact in our official definition of a Klein 4-group.   Klein 4-group   We call a group a Klein 4-group if . We will use the notation to denote a Klein 4-group with generators and .     Klein 4-group  So what's with the V in our notation? This group is called the Kleinsche Vierergruppe in German, vier being German for four .    Subgroups of      Find all subgroups of .    Find all cyclic subgroups of . Produce a noncyclic subgroup of .            Kernel of homomorphism   Let be a group homomorphism. The kernel of , denoted , is the set .     Kernel and image   Let be a group homomorphism.    is a subgroup of .     is a subgroup of .            Kernel and image   Compute and for the given group homomorphism .   Fix and define .     ,     Let be the set of three ``diameters\" in the regular hexagon . Let be the homomorphism associated to the group action of on .            Centralizer, normalizer, center    centralizer of in     normalizer of in    Let be a subset of the group .   The centralizer of in , denoted , is the set .    The normalizer of in , denoted , is the set .    The center of , denoted , is the set .         Centralizer, normalizer, center   Let be a group, and let be a subset of .    is a subgroup of .     is a subgroup of .     is a subgroup of .            Centralizer, normalizer, center   Let .   Let . Compute and .    Let . Compute and .    Compute .           "
 },
 {
   "id": "d_subgroup",
   "level": "2",
   "url": "s_subgroups.html#d_subgroup",
   "type": "Definition",
-  "number": "1.59",
+  "number": "1.62",
   "title": "Subgroup.",
   "body": " Subgroup    is a subgroup of    A subgroup of a group is a subset satisfying the following properties.   Identity element   .    Closed under group law  For all , if , then . Using logical shorthand: .    Closed under inverses  For all , if , then . Using logical shorthand: .   We write to denote that is a subgroup of .   "
 },
@@ -1247,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#s_subgroups-3",
   "type": "Remark",
-  "number": "1.60",
+  "number": "1.63",
   "title": "Subgroup.",
   "body": " Subgroup  There are common equivalent variations of . For example we could define a subgroup of to be a subset satisfying the following conditions.    .    For all , if , then .   Such equivalent versions have the advantage of brevity. I prefer as it makes more evident the important result of : namely, that subgroups are themselves examples of groups.  "
 },
@@ -1256,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#prop_subgrp_is_grp",
   "type": "Proposition",
-  "number": "1.61",
+  "number": "1.64",
   "title": "",
   "body": "  Let be a group and suppose is a subgroup of .   Restricting the group operation to defines a binary operation .    The pair is a group.          The only issue here is whether the output of the proposed operation actually land in , and this is guaranteed by axiom (ii) of .    Since is just the restriction of to the subset , it is easy to see that it inherits the group axiom properties of .  For example, since for all elements , it is certainly true for all . Thus is associative.  Similarly, since by definition and is the identity with respect to , it is also is an identity element with respect to . The same argument shows that the inverse of an element of with respect to is also an inverse with respect to ; since by definition is closed under the inverse operations, all elements of have inverses with respect to .      "
 },
@@ -1265,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_",
   "type": "Example",
-  "number": "1.62",
+  "number": "1.65",
   "title": "Examples.",
   "body": " Examples      Given a group the subsets and itself are both easily seen to be subgroups.    For all , the set is a subgroup of .    For all , the set is not a subgroup.    For any group and element , the subset is a subgroup of .      "
 },
@@ -1274,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_cyclic_groups",
   "type": "Definition",
-  "number": "1.63",
+  "number": "1.66",
   "title": "Cyclic groups.",
   "body": " Cyclic groups   Given a group and element , the subgroup is the cyclic group generated by , denoted .  A group is cyclic if for some .   "
 },
@@ -1283,16 +1310,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_cyclic_groups",
   "type": "Example",
-  "number": "1.64",
+  "number": "1.67",
   "title": "Cyclic groups.",
   "body": " Cyclic groups   Decide which of the following groups are cyclic. If the example is a family of groups, decide whether all elements of the family are cyclic or not.                             Since , is cyclic.      "
+},
+{
+  "id": "s_subgroups-9",
+  "level": "2",
+  "url": "s_subgroups.html#s_subgroups-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Klein 4-group "
+},
+{
+  "id": "spec_klein_4",
+  "level": "2",
+  "url": "s_subgroups.html#spec_klein_4",
+  "type": "Specimen",
+  "number": "11",
+  "title": "Klein 4-group.",
+  "body": " Klein 4-group   We call a group a Klein 4-group if . We will use the notation to denote a Klein 4-group with generators and .   "
+},
+{
+  "id": "s_subgroups-11",
+  "level": "2",
+  "url": "s_subgroups.html#s_subgroups-11",
+  "type": "Remark",
+  "number": "1.68",
+  "title": "Klein 4-group.",
+  "body": " Klein 4-group  So what's with the V in our notation? This group is called the Kleinsche Vierergruppe in German, vier being German for four .  "
 },
 {
   "id": "eg_D_n",
   "level": "2",
   "url": "s_subgroups.html#eg_D_n",
   "type": "Example",
-  "number": "1.65",
+  "number": "1.69",
   "title": "Subgroups of <span class=\"process-math\">\\(D_n\\)<\/span>.",
   "body": " Subgroups of      Find all subgroups of .    Find all cyclic subgroups of . Produce a noncyclic subgroup of .          "
 },
@@ -1301,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_kernel",
   "type": "Definition",
-  "number": "1.66",
+  "number": "1.70",
   "title": "Kernel of homomorphism.",
   "body": " Kernel of homomorphism   Let be a group homomorphism. The kernel of , denoted , is the set .   "
 },
@@ -1310,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#th_kernel_image_subgroup",
   "type": "Theorem",
-  "number": "1.67",
+  "number": "1.71",
   "title": "Kernel and image.",
   "body": " Kernel and image   Let be a group homomorphism.    is a subgroup of .     is a subgroup of .          "
 },
@@ -1319,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_ker_im",
   "type": "Example",
-  "number": "1.68",
+  "number": "1.72",
   "title": "Kernel and image.",
   "body": " Kernel and image   Compute and for the given group homomorphism .   Fix and define .     ,     Let be the set of three ``diameters\" in the regular hexagon . Let be the homomorphism associated to the group action of on .          "
 },
@@ -1328,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_centralizer",
   "type": "Definition",
-  "number": "1.69",
+  "number": "1.73",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center    centralizer of in     normalizer of in    Let be a subset of the group .   The centralizer of in , denoted , is the set .    The normalizer of in , denoted , is the set .    The center of , denoted , is the set .       "
 },
@@ -1337,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#th_centralzer_norm_center",
   "type": "Theorem",
-  "number": "1.70",
+  "number": "1.74",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center   Let be a group, and let be a subset of .    is a subgroup of .     is a subgroup of .     is a subgroup of .          "
 },
@@ -1346,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_centralzer_normalizer_center",
   "type": "Example",
-  "number": "1.71",
+  "number": "1.75",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center   Let .   Let . Compute and .    Let . Compute and .    Compute .          "
 },
@@ -1357,23 +1411,23 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.9",
   "title": "Cyclic groups",
-  "body": " Cyclic groups   Prime factorization formulas   Let and be positive integers, and let , where is a list of distinct prime integers, and for all .   We have .    We have .            Order of group elements   Let be an element of .   If , then if and only if .    If for , then if and only if .    If , for integers , then .    If , then for all .        Isomorphic cyclic groups   Let and be cyclic groups.    .     if and only if .            Isomorphic cyclic groups   If is cyclic, then or for some positive integer .     Cyclic group equivalence   A group is cyclic if and only if all subgroups of are cyclic.         Subgroups of infinite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence is a bijection. In other words, every subgroup of is equal to exactly one of the following list of subgroups: .            Subgroups of finite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence from the positive divisors of and the subgroups of . Furthermore, . As a result for each positive divisor of there is a unique subgroup of that cardinality.           "
+  "body": " Cyclic groups  Our approach to studying cyclic groups will make heavy use of some elementary number theory concepts, most of which we haven't officially proved in this course yet. You can rest assured that we will eventually cover these results (specifically, when treading principal ideal domains in Math 331-2). We get ahead of ourselves by introducing them now mainly for the convenience of using these techniques in computational examples. For example, provides an easy method for computing greatest common divisors and least common multiples from the prime factorizations of two given integers.   Prime factorization formulas   Let and be positive integers, and let , where is a list of distinct prime integers, and for all .   We have .    We have .        Order of group elements   Let be an element of .   If , then if and only if .    If for , then if and only if .    If , for integers , then .    If , then for all .        Isomorphic cyclic groups   Let and be cyclic groups.    .     if and only if .            Isomorphic cyclic groups   If is cyclic, then or for some positive integer .     Cyclic group equivalence   A group is cyclic if and only if all subgroups of are cyclic.         Subgroups of infinite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence is a bijection. In other words, every subgroup of is equal to exactly one of the following list of subgroups: .            Subgroups of finite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence from the positive divisors of and the subgroups of . Furthermore, . As a result for each positive divisor of there is a unique subgroup of that cardinality.           "
 },
 {
   "id": "th_fact_gcd_lcm",
   "level": "2",
   "url": "s_cyclic.html#th_fact_gcd_lcm",
   "type": "Theorem",
-  "number": "1.72",
+  "number": "1.76",
   "title": "Prime factorization formulas.",
-  "body": " Prime factorization formulas   Let and be positive integers, and let , where is a list of distinct prime integers, and for all .   We have .    We have .          "
+  "body": " Prime factorization formulas   Let and be positive integers, and let , where is a list of distinct prime integers, and for all .   We have .    We have .      "
 },
 {
   "id": "prop_finite_order",
   "level": "2",
   "url": "s_cyclic.html#prop_finite_order",
   "type": "Proposition",
-  "number": "1.73",
+  "number": "1.77",
   "title": "Order of group elements.",
   "body": " Order of group elements   Let be an element of .   If , then if and only if .    If for , then if and only if .    If , for integers , then .    If , then for all .      "
 },
@@ -1382,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_isom",
   "type": "Theorem",
-  "number": "1.74",
+  "number": "1.78",
   "title": "Isomorphic cyclic groups.",
   "body": " Isomorphic cyclic groups   Let and be cyclic groups.    .     if and only if .          "
 },
@@ -1391,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#cor_cyclic_isom",
   "type": "Corollary",
-  "number": "1.75",
+  "number": "1.79",
   "title": "Isomorphic cyclic groups.",
   "body": " Isomorphic cyclic groups   If is cyclic, then or for some positive integer .   "
 },
@@ -1400,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroups",
   "type": "Theorem",
-  "number": "1.76",
+  "number": "1.80",
   "title": "Cyclic group equivalence.",
   "body": " Cyclic group equivalence   A group is cyclic if and only if all subgroups of are cyclic.       "
 },
@@ -1409,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroup_inf",
   "type": "Theorem",
-  "number": "1.77",
+  "number": "1.81",
   "title": "Subgroups of infinite cyclic group.",
   "body": " Subgroups of infinite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence is a bijection. In other words, every subgroup of is equal to exactly one of the following list of subgroups: .          "
 },
@@ -1418,45 +1472,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroup_fin",
   "type": "Theorem",
-  "number": "1.78",
+  "number": "1.82",
   "title": "Subgroups of finite cyclic group.",
   "body": " Subgroups of finite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence from the positive divisors of and the subgroups of . Furthermore, . As a result for each positive divisor of there is a unique subgroup of that cardinality.          "
-},
-{
-  "id": "s_subgrp_lattice",
-  "level": "1",
-  "url": "s_subgrp_lattice.html",
-  "type": "Section",
-  "number": "1.10",
-  "title": "Subgroup lattice",
-  "body": " Subgroup lattice  A deep understanding of a group will include an understanding of its subgroup structure. In more detail we want to know (a) what the set of all subgroups of is, and (b) for all , we want to know whether , , or neither.  Using slightly fancier language, the pair of all subsgroups of partially ordered by the set inclusion relation (which recall is just for subgroups) is what is called a partially ordered set , or lattice . We wish to understand the precise structure of this lattice.   Intersection of subgroups   Let be a group, and let be a family of subgroups indexed by the nonempty set . The intersection is a subgroup of . In plain English, the intersection of a family of subgroups is again a subgroup.    Note that the indexing set is arbitrary here: it need not be finite, or even countable. This does not complicate our proof in anyway: in the end, this is an exercise in dealinging with the quantifier for all that defines the intersection. Let's show that the three axioms of are satisfied.   Since for all , by definition , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .        Subgroup generated by a set    subgroup generated by set    Let be a subset of the group . The subgroup generated by , denoted , is defined as the intersection of all subgroups of containing : , .     Subgroup generated by a set   Let be a subset of .    is the smallest subgroup (with respect to the ordering) of containing : , if and , then . Using logical shorthand: .     is the set of all finite products of elements of and their inverses: . We declare, by convention, that a product of elements (the empty product ) is equal to .       "
-},
-{
-  "id": "prop_intersection_subgroups",
-  "level": "2",
-  "url": "s_subgrp_lattice.html#prop_intersection_subgroups",
-  "type": "Proposition",
-  "number": "1.79",
-  "title": "Intersection of subgroups.",
-  "body": " Intersection of subgroups   Let be a group, and let be a family of subgroups indexed by the nonempty set . The intersection is a subgroup of . In plain English, the intersection of a family of subgroups is again a subgroup.    Note that the indexing set is arbitrary here: it need not be finite, or even countable. This does not complicate our proof in anyway: in the end, this is an exercise in dealinging with the quantifier for all that defines the intersection. Let's show that the three axioms of are satisfied.   Since for all , by definition , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .      "
-},
-{
-  "id": "d_subgroup_generated",
-  "level": "2",
-  "url": "s_subgrp_lattice.html#d_subgroup_generated",
-  "type": "Definition",
-  "number": "1.80",
-  "title": "Subgroup generated by a set.",
-  "body": " Subgroup generated by a set    subgroup generated by set    Let be a subset of the group . The subgroup generated by , denoted , is defined as the intersection of all subgroups of containing : , .   "
-},
-{
-  "id": "prop_subgroup_generated",
-  "level": "2",
-  "url": "s_subgrp_lattice.html#prop_subgroup_generated",
-  "type": "Proposition",
-  "number": "1.81",
-  "title": "Subgroup generated by a set.",
-  "body": " Subgroup generated by a set   Let be a subset of .    is the smallest subgroup (with respect to the ordering) of containing : , if and , then . Using logical shorthand: .     is the set of all finite products of elements of and their inverses: . We declare, by convention, that a product of elements (the empty product ) is equal to .      "
 },
 {
   "id": "appendix-notation",

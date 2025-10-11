@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.12';
+eBookConfig.runestone_version = '7.9.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a85e2f1fefeea635.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a707b621c77f7e48.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -398,6 +398,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="toc-title-box"><a href="s_groups.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_def_group" class="internal"><span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_product_groups" class="internal"><span class="title">Product groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_elem_group_proos" class="internal"><span class="title">Elementary properties</span></a></div></li>
 </ul>
 </li>
@@ -422,7 +423,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_action.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Group actions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgroups.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Subgroups</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cyclic.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Cyclic groups</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgrp_lattice.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Subgroup lattice</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter contains-active">
@@ -575,30 +575,42 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <td><a href="s_sets_functions.html#d_cardinality" class="xref" data-knowl="./knowl/notation/d_cardinality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.34: Cardinality">Definition 0.34</a></td>
 </tr>
 <tr>
+<td><span class="process-math">\(G\times H\)</span></td>
+<td>product of groups <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span>
+</td>
+<td><a href="s_groups.html#d_product_group" class="xref" data-knowl="./knowl/notation/d_product_group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5: Product group">Definition 1.5</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\prod_{i\in I} G_i\)</span></td>
+<td>product of family of groups <span class="process-math">\((G_i)_{i\in I}\)</span>
+</td>
+<td><a href="s_groups.html#d_product_group" class="xref" data-knowl="./knowl/notation/d_product_group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5: Product group">Definition 1.5</a></td>
+</tr>
+<tr>
 <td><span class="process-math">\(a\mid b\)</span></td>
 <td>
 <span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span>
 </td>
-<td><a href="s_mod_rings.html#d_divis" class="xref" data-knowl="./knowl/notation/d_divis.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.10: Divisibilty">Definition 1.10</a></td>
+<td><a href="s_mod_rings.html#d_divis" class="xref" data-knowl="./knowl/notation/d_divis.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.13: Divisibilty">Definition 1.13</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(a\equiv b\pmod n\)</span></td>
 <td>
 <span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(n\)</span>
 </td>
-<td><a href="s_mod_rings.html#d_cong_mod_n" class="xref" data-knowl="./knowl/notation/d_cong_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11: Congruence modulo n">Definition 1.11</a></td>
+<td><a href="s_mod_rings.html#d_cong_mod_n" class="xref" data-knowl="./knowl/notation/d_cong_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.14: Congruence modulo n">Definition 1.14</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\overline{a}, [a]_n\)</span></td>
 <td>the congruence class of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\)</span>
 </td>
-<td><a href="s_mod_rings.html#d_cong_mod_n" class="xref" data-knowl="./knowl/notation/d_cong_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11: Congruence modulo n">Definition 1.11</a></td>
+<td><a href="s_mod_rings.html#d_cong_mod_n" class="xref" data-knowl="./knowl/notation/d_cong_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.14: Congruence modulo n">Definition 1.14</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\Isom(\R^n)\)</span></td>
 <td>isometries of <span class="process-math">\(\R^n\)</span>
 </td>
-<td><a href="s_dihedral.html#d_isom" class="xref" data-knowl="./knowl/notation/d_isom.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.31: Isometry">Definition 1.31</a></td>
+<td><a href="s_dihedral.html#d_isom" class="xref" data-knowl="./knowl/notation/d_isom.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.34: Isometry">Definition 1.34</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(D_n\)</span></td>
@@ -615,32 +627,26 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <td><span class="process-math">\(S_A\)</span></td>
 <td>permutations of the set <span class="process-math">\(A\)</span>
 </td>
-<td><a href="s_permutations.html#d_permutation" class="xref" data-knowl="./knowl/notation/d_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.38: Permutations">Definition 1.38</a></td>
+<td><a href="s_permutations.html#d_permutation" class="xref" data-knowl="./knowl/notation/d_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.41: Permutations">Definition 1.41</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(H\leq G\)</span></td>
 <td>
 <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span>
 </td>
-<td><a href="s_subgroups.html#d_subgroup" class="xref" data-knowl="./knowl/notation/d_subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.59: Subgroup">Definition 1.59</a></td>
+<td><a href="s_subgroups.html#d_subgroup" class="xref" data-knowl="./knowl/notation/d_subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.62: Subgroup">Definition 1.62</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(C_G(A)\)</span></td>
 <td>centralizer of <span class="process-math">\(A\)</span> in <span class="process-math">\(G\)</span>
 </td>
-<td><a href="s_subgroups.html#d_centralizer" class="xref" data-knowl="./knowl/notation/d_centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.69: Centralizer, normalizer, center">Definition 1.69</a></td>
+<td><a href="s_subgroups.html#d_centralizer" class="xref" data-knowl="./knowl/notation/d_centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.73: Centralizer, normalizer, center">Definition 1.73</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(N_G(A)\)</span></td>
 <td>normalizer of <span class="process-math">\(A\)</span> in <span class="process-math">\(G\)</span>
 </td>
-<td><a href="s_subgroups.html#d_centralizer" class="xref" data-knowl="./knowl/notation/d_centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.69: Centralizer, normalizer, center">Definition 1.69</a></td>
-</tr>
-<tr>
-<td><span class="process-math">\(\angvec{A}\)</span></td>
-<td>subgroup generated by set <span class="process-math">\(A\)</span>
-</td>
-<td><a href="s_subgrp_lattice.html#d_subgroup_generated" class="xref" data-knowl="./knowl/notation/d_subgroup_generated.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.80: Subgroup generated by a set">Definition 1.80</a></td>
+<td><a href="s_subgroups.html#d_centralizer" class="xref" data-knowl="./knowl/notation/d_centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.73: Centralizer, normalizer, center">Definition 1.73</a></td>
 </tr>
 </table>
 <div class="autopermalink" data-description="Appendix A: Notation"><a href="#appendix-notation" title="Copy heading and permalink for Appendix A: Notation" aria-label="Copy heading and permalink for Appendix A: Notation">🔗</a></div></section></div>

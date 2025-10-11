@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.12';
+eBookConfig.runestone_version = '7.9.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a85e2f1fefeea635.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a707b621c77f7e48.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -398,6 +398,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="toc-title-box"><a href="s_groups.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_def_group" class="internal"><span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_product_groups" class="internal"><span class="title">Product groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_elem_group_proos" class="internal"><span class="title">Elementary properties</span></a></div></li>
 </ul>
 </li>
@@ -422,7 +423,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_action.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Group actions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgroups.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Subgroups</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cyclic.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Cyclic groups</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgrp_lattice.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Subgroup lattice</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter contains-active">
@@ -479,76 +479,76 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div>
 <a href="s_groups.html#eg_nonabelian_gln" class="xref" data-knowl="./knowl/list-of/eg_nonabelian_gln.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.4: \GL_n(R) is nonabelian">Example 1.4</a> <span class="process-math">\(\GL_n(R)\)</span> is nonabelian</div>
 <div>
-<a href="s_groups.html#eg_order_inverse" class="xref" data-knowl="./knowl/list-of/eg_order_inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.8: Order of inverse">Example 1.8</a> Order of inverse</div>
+<a href="s_groups.html#eg_order_inverse" class="xref" data-knowl="./knowl/list-of/eg_order_inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.11: Order of inverse">Example 1.11</a> Order of inverse</div>
 <div>
-<a href="s_groups.html#eg_infinite_order" class="xref" data-knowl="./knowl/list-of/eg_infinite_order.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.9: Element of infinite order">Example 1.9</a> Element of infinite order</div>
+<a href="s_groups.html#eg_infinite_order" class="xref" data-knowl="./knowl/list-of/eg_infinite_order.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.12: Element of infinite order">Example 1.12</a> Element of infinite order</div>
 <h4 class="heading hide-type" title="Section 1.2: Modular arithmetic">
 <span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular arithmetic</span>
 </h4>
 <div>
-<a href="s_mod_rings.html#eg_cong_mod_3" class="xref" data-knowl="./knowl/list-of/eg_cong_mod_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.12: Congruence modulo 3">Example 1.12</a> Congruence modulo <span class="process-math">\(3\)</span>
+<a href="s_mod_rings.html#eg_cong_mod_3" class="xref" data-knowl="./knowl/list-of/eg_cong_mod_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.15: Congruence modulo 3">Example 1.15</a> Congruence modulo <span class="process-math">\(3\)</span>
 </div>
 <div>
-<a href="s_mod_rings.html#eg_mod_arith" class="xref" data-knowl="./knowl/list-of/eg_mod_arith.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.21: Modular arithmetic">Example 1.21</a> Modular arithmetic</div>
+<a href="s_mod_rings.html#eg_mod_arith" class="xref" data-knowl="./knowl/list-of/eg_mod_arith.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.24: Modular arithmetic">Example 1.24</a> Modular arithmetic</div>
 <div>
-<a href="s_mod_rings.html#eg_least_residue" class="xref" data-knowl="./knowl/list-of/eg_least_residue.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.22: Least residue">Example 1.22</a> Least residue</div>
+<a href="s_mod_rings.html#eg_least_residue" class="xref" data-knowl="./knowl/list-of/eg_least_residue.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.25: Least residue">Example 1.25</a> Least residue</div>
 <div>
-<a href="s_mod_rings.html#eg_mod_groups" class="xref" data-knowl="./knowl/list-of/eg_mod_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.24: Modulus n=5">Example 1.24</a> Modulus <span class="process-math">\(n=5\)</span>
+<a href="s_mod_rings.html#eg_mod_groups" class="xref" data-knowl="./knowl/list-of/eg_mod_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.27: Modulus n=5">Example 1.27</a> Modulus <span class="process-math">\(n=5\)</span>
 </div>
 <div>
-<a href="s_mod_rings.html#eg_mod_units" class="xref" data-knowl="./knowl/list-of/eg_mod_units.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.25: Units modulo 9">Example 1.25</a> Units modulo <span class="process-math">\(9\)</span>
+<a href="s_mod_rings.html#eg_mod_units" class="xref" data-knowl="./knowl/list-of/eg_mod_units.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.28: Units modulo 9">Example 1.28</a> Units modulo <span class="process-math">\(9\)</span>
 </div>
 <h4 class="heading hide-type" title="Section 1.3: Matrix groups">
 <span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix groups</span>
 </h4>
 <div>
-<a href="s_matrix_grps.html#eg_GL_mod2" class="xref" data-knowl="./knowl/list-of/eg_GL_mod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.30: \GL_2(\Z/2\Z)">Example 1.30</a> <span class="process-math">\(\GL_2(\Z/2\Z)\)</span>
+<a href="s_matrix_grps.html#eg_GL_mod2" class="xref" data-knowl="./knowl/list-of/eg_GL_mod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.33: \GL_2(\Z/2\Z)">Example 1.33</a> <span class="process-math">\(\GL_2(\Z/2\Z)\)</span>
 </div>
 <h4 class="heading hide-type" title="Section 1.4: Dihedral groups">
 <span class="codenumber">1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dihedral groups</span>
 </h4>
 <div>
-<a href="s_dihedral.html#eg_isometries" class="xref" data-knowl="./knowl/list-of/eg_isometries.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.32: Isometries">Example 1.32</a> Isometries</div>
+<a href="s_dihedral.html#eg_isometries" class="xref" data-knowl="./knowl/list-of/eg_isometries.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.35: Isometries">Example 1.35</a> Isometries</div>
 <div>
-<a href="s_dihedral.html#eg_D3" class="xref" data-knowl="./knowl/list-of/eg_D3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.36: Computing in D_3">Example 1.36</a> Computing in <span class="process-math">\(D_3\)</span>
+<a href="s_dihedral.html#eg_D3" class="xref" data-knowl="./knowl/list-of/eg_D3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.39: Computing in D_3">Example 1.39</a> Computing in <span class="process-math">\(D_3\)</span>
 </div>
 <div>
-<a href="s_dihedral.html#eg_dihedral_geom" class="xref" data-knowl="./knowl/list-of/eg_dihedral_geom.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.37: Dihedral geometry">Example 1.37</a> Dihedral geometry</div>
+<a href="s_dihedral.html#eg_dihedral_geom" class="xref" data-knowl="./knowl/list-of/eg_dihedral_geom.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.40: Dihedral geometry">Example 1.40</a> Dihedral geometry</div>
 <h4 class="heading hide-type" title="Section 1.5: Permutations">
 <span class="codenumber">1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutations</span>
 </h4>
 <div>
-<a href="s_permutations.html#eg_S_3" class="xref" data-knowl="./knowl/list-of/eg_S_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.40: Permutations: table notation">Example 1.40</a> Permutations: table notation</div>
+<a href="s_permutations.html#eg_S_3" class="xref" data-knowl="./knowl/list-of/eg_S_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.43: Permutations: table notation">Example 1.43</a> Permutations: table notation</div>
 <div>
-<a href="s_permutations.html#eg_cycle_decomp" class="xref" data-knowl="./knowl/list-of/eg_cycle_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.45: Cycle decomposition">Example 1.45</a> Cycle decomposition</div>
+<a href="s_permutations.html#eg_cycle_decomp" class="xref" data-knowl="./knowl/list-of/eg_cycle_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.48: Cycle decomposition">Example 1.48</a> Cycle decomposition</div>
 <h4 class="heading hide-type" title="Section 1.6: Homomorphisms">
 <span class="codenumber">1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms</span>
 </h4>
 <div>
-<a href="s_homomorph.html#eg_homos" class="xref" data-knowl="./knowl/list-of/eg_homos.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.50: Homormorphisms">Example 1.50</a> Homormorphisms</div>
+<a href="s_homomorph.html#eg_homos" class="xref" data-knowl="./knowl/list-of/eg_homos.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.53: Homormorphisms">Example 1.53</a> Homormorphisms</div>
 <div>
-<a href="s_homomorph.html#eg_Sn" class="xref" data-knowl="./knowl/list-of/eg_Sn.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.53: Permutation groups">Example 1.53</a> Permutation groups</div>
+<a href="s_homomorph.html#eg_Sn" class="xref" data-knowl="./knowl/list-of/eg_Sn.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.56: Permutation groups">Example 1.56</a> Permutation groups</div>
 <h4 class="heading hide-type" title="Section 1.7: Group actions">
 <span class="codenumber">1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions</span>
 </h4>
 <div>
-<a href="s_group_action.html#eg_group_actions" class="xref" data-knowl="./knowl/list-of/eg_group_actions.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.55: Group actions">Example 1.55</a> Group actions</div>
+<a href="s_group_action.html#eg_group_actions" class="xref" data-knowl="./knowl/list-of/eg_group_actions.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.58: Group actions">Example 1.58</a> Group actions</div>
 <div>
-<a href="s_group_action.html#eg_isom" class="xref" data-knowl="./knowl/list-of/eg_isom.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.58: Isomorphisms">Example 1.58</a> Isomorphisms</div>
+<a href="s_group_action.html#eg_isom" class="xref" data-knowl="./knowl/list-of/eg_isom.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.61: Isomorphisms">Example 1.61</a> Isomorphisms</div>
 <h4 class="heading hide-type" title="Section 1.8: Subgroups">
 <span class="codenumber">1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subgroups</span>
 </h4>
 <div>
-<a href="s_subgroups.html#eg_" class="xref" data-knowl="./knowl/list-of/eg_.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.62: Examples">Example 1.62</a> Examples</div>
+<a href="s_subgroups.html#eg_" class="xref" data-knowl="./knowl/list-of/eg_.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.65: Examples">Example 1.65</a> Examples</div>
 <div>
-<a href="s_subgroups.html#eg_cyclic_groups" class="xref" data-knowl="./knowl/list-of/eg_cyclic_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.64: Cyclic groups">Example 1.64</a> Cyclic groups</div>
+<a href="s_subgroups.html#eg_cyclic_groups" class="xref" data-knowl="./knowl/list-of/eg_cyclic_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.67: Cyclic groups">Example 1.67</a> Cyclic groups</div>
 <div>
-<a href="s_subgroups.html#eg_D_n" class="xref" data-knowl="./knowl/list-of/eg_D_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.65: Subgroups of D_n">Example 1.65</a> Subgroups of <span class="process-math">\(D_n\)</span>
+<a href="s_subgroups.html#eg_D_n" class="xref" data-knowl="./knowl/list-of/eg_D_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.69: Subgroups of D_n">Example 1.69</a> Subgroups of <span class="process-math">\(D_n\)</span>
 </div>
 <div>
-<a href="s_subgroups.html#eg_ker_im" class="xref" data-knowl="./knowl/list-of/eg_ker_im.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.68: Kernel and image">Example 1.68</a> Kernel and image</div>
+<a href="s_subgroups.html#eg_ker_im" class="xref" data-knowl="./knowl/list-of/eg_ker_im.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.72: Kernel and image">Example 1.72</a> Kernel and image</div>
 <div>
-<a href="s_subgroups.html#eg_centralzer_normalizer_center" class="xref" data-knowl="./knowl/list-of/eg_centralzer_normalizer_center.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.71: Centralizer, normalizer, center">Example 1.71</a> Centralizer, normalizer, center</div>
+<a href="s_subgroups.html#eg_centralzer_normalizer_center" class="xref" data-knowl="./knowl/list-of/eg_centralzer_normalizer_center.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.75: Centralizer, normalizer, center">Example 1.75</a> Centralizer, normalizer, center</div>
 <div class="autopermalink" data-description="Appendix D: Examples"><a href="#appendix-egs" title="Copy heading and permalink for Appendix D: Examples" aria-label="Copy heading and permalink for Appendix D: Examples">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="appendix-thms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-specs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
