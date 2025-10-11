@@ -11,4 +11,5 @@
 <xi:include href="s_group_action.ptx" />
 <xi:include href="s_subgroups.ptx" />
 <xi:include href="s_cyclic.ptx" />
+<xi:include href="s_subgrp_lattice.ptx" />
 </chapter>
