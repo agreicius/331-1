@@ -12,4 +12,5 @@
 <xi:include href="s_subgroups.ptx" />
 <xi:include href="s_cyclic.ptx" />
 <xi:include href="s_subgrp_lattice.ptx" />
+<xi:include href="s_cosets_quot.ptx" />
 </chapter>

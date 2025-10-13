@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_cosets_quot" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Cosets and quotients</title>
+
+    <definition xml:id="d_set_actions">
+        <title>Group operations on subsets</title>
+        <statement>
+            <p>
+                Let <m>A</m> be a subset of the group <m>G</m>. Given <m>g\in G</m>, the sets <m>gA</m>, <m>Ag</m>, <m>gAg^{-1}</m> are defined as follows:
+                <mdn>
+                    <mrow>A^{-1} \amp =\{a^{-1}\mid a\in G\}</mrow>
+                    <mrow>gA \amp =\{ga\mid a\in A\}</mrow>
+                    <mrow>Ag \amp =\{ag\mid a\in A\}</mrow>
+                    <mrow>gAg^{-1} \amp =\{gag^{-1}\mid a\in \}</mrow>
+                </mdn>.
+            </p>
+        </statement>
+    </definition>
+
+
+    <definition xml:id="d_cosets">
+    <title>Coset and coset space</title>
+    <statement>
+    <p>
+    Let <m>H</m> be a subgroup of the group <m>G</m>. Given <m>g\in G</m> the set <m>gH</m> defined 
+    as 
+    <men xml:id="eq_left_coset">
+        gH =\{gh\mid h\in H\}
+    </men>
+    is called the <term>left <m>H</m>-coset</term> in <m>G</m> corresponding to <m>g</m>, and the set <m>Hg</m> defined as 
+    <men xml:id="eq_right_coset">
+        Hg=\{hg\mid h\in H\}
+    </men>
+    is called the <term>right <m>H</m>-coset</term> in <m>G</m> corresponding to <m>g</m>. Elements of a coset are called <term>representatives</term> of that coset. 
+    </p>
+    <p>
+        The set of all left (resp. right) <m>H</m>-cosets is called the <term>left (resp. right) coset space</term> of <m>H</m>, and is denoted <m>G/H</m> (resp. <m>H\backslash G</m>).
+    </p>
+    </statement>
+    </definition>
+    <convention>
+        <title>Cosets are left cosets by default</title>
+        
+        <p>
+            Unless stated otherwise, a coset in this course will be assumed to be a left coset. 
+        </p>
+    </convention>
+    <example xml:id="eg_cosets_Z">
+    <title>Cosets in <m>\Z</m></title>
+    <statement>
+    <p>
+    Recall that any subgroup <m>H</m> of <m>\Z</m> can be described as <m>H=(n)</m> for a unique <m>n\in \Z_{\geq 0}</m>. Show that the cosets of <m>H=(n)</m> are precisely the congruence classes modulo <m>n</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Fix <m>H=(n)</m>.  Given <m>a\in \Z</m> the coset <m>a+H</m> is by definition 
+    <md>
+        <mrow>a+(n) \amp =\{a+qn\mid q\in \Z\}</mrow>
+        <mrow> \amp = [a]_n</mrow>
+    </md>.
+    This computation shows cosets are congruence classes and vice versa. 
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_cosets_Zn">
+    <title>Cosets in <m>Z/12/Z</m></title>
+    <statement>
+    <p>
+    Let <m>G=\Z/12\Z</m> and let <m>H=\angvec{\overline{4}}\leq G</m>. Compute <m>G/H</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have <m>H=\angvec{\overline{4}}=\{0,4,8\}</m>. A simple computation shows 
+    <md>
+        <mrow>\overline{0}+H \amp = H</mrow>
+        <mrow>\overline{1}+H \amp =\{\overline{1},\overline{5},\overline{9}\}</mrow>
+        <mrow>\overline{2}+H \amp =\{\overline{2},\overline{6},\overline{10}\}</mrow>
+        <mrow>\overline{3}+H \amp = \{\overline{3},\overline{7},\overline{11}\}</mrow>
+        <mrow>\overline{4}+H \amp =\{\overline{4},\overline{8},0\}=\{\overline{0},\overline{4},\overline{8}\}=H</mrow>
+    </md>.
+    This suggests that <m>G/H=\{\overline{0}+H,\overline{1}+H,\overline{2}+H,\overline{3}+H\}</m>. This can be shown by proving that <m>\overline{a}+H=\overline{b}+H</m> if and only if <m>a\equiv b\pmod 4</m>. <xref ref="th_cosets"/> below takes care of this for us. 
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_cosets_Dn">
+    <title>Cosets in <m>D_4</m></title>
+    <statement>
+    <p>
+    Let <m>G=D_4</m> and let <m>H=\angvec{rs}</m>. Compute <m>G/H</m> and <m>H\backslash G</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have <m>H=\angvec{rs}=\{1, rs\}</m>. We compute
+    <md>
+        <mrow>1H \amp =H</mrow>
+        <mrow>rH= \amp \{r,r^2s\}</mrow>
+        <mrow>r^2H \amp =\{r^2, r^3s\}</mrow>
+        <mrow>r^3H \amp =\{r^3,s\}</mrow>
+        <mrow>sH \amp = \{s,r^3\}=r^3H </mrow>
+        <mrow>(rs)H \amp =\{rs, e\}=H</mrow>
+        <mrow>(r^2s)H \amp =\{r^2s, r\}=rH</mrow>
+        <mrow>(r^3s)H \amp =\{r^3s, r^2\}=r^2H</mrow>
+    </md>
+    We conclude that <m>G/H=\{H,rH,r^2H,r^3H\}</m>. Let's look at the right cosets: 
+    <md>
+        <mrow>H1 \amp =H</mrow>
+        <mrow>Hr \amp =\{r,s\}</mrow>
+        <mrow>Hr^2 \amp =\{r^2,r^3s\}</mrow>
+        <mrow>Hr^3 \amp = \{r^3, r^2s\}</mrow>
+        <mrow>Hs \amp =\{s,r\}=Hr</mrow>
+        <mrow>H(rs) \amp =\{rs, e\}=H</mrow>
+        <mrow>H(r^2s) \amp =\{r^2s,r^3\}=Hr^3</mrow>
+        <mrow>H(r^3s) \amp =\{r^3s, r^2\}=r^2H</mrow>
+    </md>.
+    We conclude that <m>H\backslash G=\{H, Hr, Hr^2, Hr^3\}</m>.
+    </p>
+    </solution>
+    </example>
+    <theorem xml:id="th_cosets">
+    <title>Cosets and coset space</title>
+    <statement>
+    <p>
+    Let <m>H</m> be a subgroup of the group <m>G</m>. 
+    <ol>
+        <li>
+            <p>
+                The relation <m>g\sim g'</m> if and only if <m>g'=gh</m> for some <m>h\in H</m> is an equivalence relation and the cosets <m>gH</m> are the corresponding equivalence classes.
+            </p>
+
+        </li>
+        <li>
+            <p>
+                Given <m>g,g'\in G</m>, the following statements are equivalent. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>gH=g'H</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>g'\in gH</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>g^{-1}g'\in H</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>gH\cap g'H\ne\emptyset</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </li>
+        <li>
+            <p>
+                The cosets of <m>H</m> form a partition of <m>G</m>. That is, we have 
+                <md>
+                    <mrow>G \amp =\bigcup_{g\in G} gH</mrow>
+                </md>
+                and
+                <me>
+                    gH\ne g'H\iff gH\cap g'H=\emptyset
+                </me>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    <definition xml:id="d_normal_subgroup">
+    <title>Normal subgroup</title>
+    <statement>
+    <p>
+    A subgroup <m>N</m> of the group <m>G</m> is called <term>normal</term> if 
+    <md>
+        <mrow>gNg^{-1} \amp = N </mrow>
+    </md>
+    for all <m>g\in G</m>. We write <m>N\normalin G</m> to indicate that <m>N</m> is a normal subgroup of <m>G</m>.
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_normal">
+    <title>Normal subgroups</title>
+    <statement>
+    <p>
+    
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    
+    
+
+</section>
