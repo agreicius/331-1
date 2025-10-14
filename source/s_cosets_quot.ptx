@@ -179,6 +179,27 @@
     </p>
     </proof>
     </theorem>
+    <p>
+        Given a subgroup <m>H</m> of <m>G</m> we would like to put a group structure on the coset space <m>G/H</m>: indeed, what could be more natural than to define our binary operation as 
+        <men xml:id="eq_coset_law_prop">
+            gH\cdot g'H=(gg')H
+        </men>?
+    It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if <m>gH=g'H</m> and <m>kH=k'H</m> for elements <m>g,g',k,k'\in G</m>, it is not necessarily the case that <m>(gk)H=(g'h')H</m>.
+    </p>
+    <p>
+        Indeed, continuing with <xref ref="eg_cosets_Dn"/>, where <m>G=D_4</m> and <m>H=\angvec{rs}</m>, we have 
+        <md>
+            <mrow>rH \amp =(r^2s)H\amp  </mrow>
+            <mrow> r^3H \amp =sH</mrow>
+        </md>
+        and yet 
+        <md>
+            <mrow>(rr^3)H \amp =H \amp 
+            </mrow>
+            <mrow>((r^2s)s)H\amp =r^2H\ne H</mrow>
+        </md>.
+    It turns out that magic property a subgroup <m>H</m> needs to satisfy in order for the operation <xref ref="eq_coset_law_prop"/> to be well defined is that <m>H</m> be a <em>normal subgroup</em>.  
+    </p>
     
     <definition xml:id="d_normal_subgroup">
     <title>Normal subgroup</title>
@@ -196,11 +217,58 @@
     <title>Normal subgroups</title>
     <statement>
     <p>
-    
+    Let <m>N</m> be a subgroup of the group <m>G</m>. The following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>N\normalin G</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N_G(N)=G</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>gN=Ng</m> for all <m>g\in G</m>.
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                The operation 
+                <md>
+                    <mrow>G/N \times G/N\amp \rightarrow G/N</mrow>
+                    <mrow>(gN, hN) \amp \longmapsto (gh)N</mrow>
+                </md>
+                is well defined. 
+            </p>
+        </li>
+    </ol>
     </p>
     </statement>
     <proof>
     <p>
+        The equivalence <m>(1)\iff (2)</m> follows directly from the definition of normality and <m>N_G(N)</m>. 
+    </p>
+    <p>
+        The equivalence <m>(1)\iff (3)</m> is left as an exercise. 
+    </p>
+    <p>
+        We prove <m>(3)\implies (4)</m>. Assume <m>gN=Ng</m>. Assume <m>gN=g'N</m> and <m>hN=h'N</m>. We will show that 
+        <me>
+            (gh)N=(g'h')N
+        </me>.
+         Since <m>gN=g'N</m> and <m>hN=h'N</m>, we have <m>g=g'n</m> and <m>h=h'n'</m> for some elements <m>n,n'\in N</m>, and thus 
+        <me>
+            gh=g'nh'n'
+        </me>.
+        Next since <m>hN=Nh</m> (assuming (3)), we have <m>nh'=h'n''</m> for some <m>n''\in N</m>, yielding 
+        <me>
+            gh=g'h'n'' n'\in (g'h')N
+        </me>.
+        It follows from <xref ref="th_cosets"/> that <m>(gh)N=(g'h')N</m>, as desired.
     </p>
     </proof>
     </theorem>
