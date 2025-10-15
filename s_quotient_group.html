@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Matrix groups</title>
+<title>Quotient groups</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_mod_rings.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_dihedral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_cosets_lagrange.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Z}{{\mathbb Z}}
@@ -409,7 +409,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong_ring_structure" class="internal"><span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span></span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_matrix_grps.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Matrix groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_matrix_grps.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Matrix groups</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="s_dihedral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Dihedral groups</span></a></div>
 <ul class="structural toc-item-list">
@@ -425,7 +425,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cyclic.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Cyclic groups</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgrp_lattice.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Subgroup lattice</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cosets_lagrange.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Cosets and Lagrange’s theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quotient_group.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Quotient groups</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_quotient_group.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Quotient groups</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -440,218 +440,233 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_matrix_grps"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix groups</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_quotient_group"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotient groups</span>
 </h2>
-<article class="definition definition-like" id="d_invertible_matrix"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertible matix.</span>
-</h3>
-<div class="para" id="d_invertible_matrix-2-1">Assume either that <span class="process-math">\(R\in \{\Z, \Q, \R, \C\}\)</span> or that <span class="process-math">\(R=\Z/m\Z\)</span> for some <span class="process-math">\(m\in \Z_{&gt; 0}\text{.}\)</span> Fix a positive integer <span class="process-math">\(n\text{.}\)</span> The set of all <span class="process-math">\(n\times n\)</span> matrices with coefficients in <span class="process-math">\(R\)</span> is denoted <span class="process-math">\(M_n(R)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_invertible_matrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="d_invertible_matrix-2-2">
-<div class="para">Given matrices <span class="process-math">\(A=[a_{ij}], B=[b_{ij}]\in M_n(R)\)</span> we define their product <span class="process-math">\(AB\)</span> to be the matrix <span class="process-math">\(C=[c_{ij}]\in M_n(R)\text{,}\)</span> where</div>
-<div class="displaymath process-math" id="eq_matrix_mult">
+<div class="para logical" id="s_quotient_group-2">
+<div class="para">Given a subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\)</span> we would like to put a group structure on the coset space <span class="process-math">\(G/H\text{:}\)</span> indeed, what could be more natural than to define our binary operation as</div>
+<div class="displaymath process-math" id="eq_coset_law_prop">
 \begin{equation}
-c_{ij}=\sum_{k=1}^na_{ik}b_{kj}\tag{1.15}
+gH\cdot g'H=(gg')H\text{?}\tag{1.49}
 \end{equation}
 </div>
-<div class="para">for all <span class="process-math">\(1\leq i,j\leq n\text{.}\)</span>
+<div class="para">It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if <span class="process-math">\(gH=g'H\)</span> and <span class="process-math">\(kH=k'H\)</span> for elements <span class="process-math">\(g,g',k,k'\in G\text{,}\)</span> it is not necessarily the case that <span class="process-math">\((gk)H=(g'h')H\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#d_invertible_matrix-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="d_invertible_matrix-2-3">
-<div class="para">A matrix <span class="process-math">\(A\in M_n(R)\)</span> is <dfn class="terminology">invertible</dfn> if there is a matrix <span class="process-math">\(B\in M_n(R)\)</span> such that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-AB=BA=I\text{,}
-\end{equation*}
+<div class="autopermalink" data-description="Paragraph"><a href="#s_quotient_group-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">where <span class="process-math">\(I\)</span> is the <span class="process-math">\(n\times n\)</span> identity matrix.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#d_invertible_matrix-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="d_invertible_matrix-2-4">
-<div class="para">We denote by <span class="process-math">\(\GL_n(R)\)</span> the set of all invertible matrices with coefficients in <span class="process-math">\(R\text{:}\)</span> i.e.,</div>
-<div class="displaymath process-math" id="eq_inv_matrices_gen">
-\begin{equation}
-\GL_n(R)=\{A\in M_{n}(R)\mid A \text{ is invertible}\}\text{.}\tag{1.16}
-\end{equation}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#d_invertible_matrix-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Definition 1.31: Invertible matix"><a href="#d_invertible_matrix" title="Copy heading and permalink for Definition 1.31: Invertible matix" aria-label="Copy heading and permalink for Definition 1.31: Invertible matix">🔗</a></div></article><article class="activity project-like" id="spec_matrix_grps_gen"><h3 class="heading">
-<span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">General linear group (generalized).</span>
-</h3>
-<div class="para" id="spec_matrix_grps_gen-2-1">Assume either that <span class="process-math">\(R\in \{\Z, \Q, \R, \C\}\)</span> or that <span class="process-math">\(R=\Z/m\Z\)</span> for some <span class="process-math">\(m\in \Z_{&gt; 0}\text{.}\)</span> Given a positive integer <span class="process-math">\(n\text{,}\)</span> the pair <span class="process-math">\((\GL_n(R),\cdot)\)</span> is a group,  where <span class="process-math">\(\cdot\)</span> is matrix multiplication in <span class="process-math">\(M_n(R)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_matrix_grps_gen-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Specimen 6: General linear group (generalized)"><a href="#spec_matrix_grps_gen" title="Copy heading and permalink for Specimen 6: General linear group (generalized)" aria-label="Copy heading and permalink for Specimen 6: General linear group (generalized)">🔗</a></div></article><article class="remark remark-like" id="s_matrix_grps-4"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertible matrices and determinant.</span>
-</h3>
-<div class="para logical" id="s_matrix_grps-4-2">
-<div class="para">It turns out that matrix algebra in <span class="process-math">\(M_n(R)\)</span> proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring <span class="process-math">\(R\)</span> is. In particular, we can define a determinant function</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spec_ring_mult_groups.html ./knowl/xref/spec_units_mod_n.html" id="s_matrix_grps-4-2-3">
+<div class="para logical" id="s_quotient_group-3">
+<div class="para">Indeed, continuing with <a href="s_cosets_lagrange.html#eg_cosets_Dn" class="xref" data-knowl="./knowl/xref/eg_cosets_Dn.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.91: Cosets in D_4">Example 1.91</a>, where <span class="process-math">\(G=D_4\)</span> and <span class="process-math">\(H=\angvec{rs}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_cosets_Dn.html ./knowl/xref/eq_coset_law_prop.html" id="s_quotient_group-3-4">
 \begin{align*}
-\det \colon M_n(R) \amp \rightarrow R\\
-A \amp \mapsto \det A
+rH \amp =(r^2s)H\amp  \\
+r^3H \amp =sH
 \end{align*}
 </div>
-<div class="para">using the usual formula, since <span class="process-math">\(R\)</span> has notions of addition and multiplication. Furthermore, you can show that as usual <span class="process-math">\(\det\)</span> satisfies</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spec_ring_mult_groups.html ./knowl/xref/spec_units_mod_n.html">
-\begin{equation*}
-\det AB=\det A\det B
-\end{equation*}
+<div class="para">and yet</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_cosets_Dn.html ./knowl/xref/eq_coset_law_prop.html" id="s_quotient_group-3-5">
+\begin{align*}
+(rr^3)H \amp =H \amp \\
+((r^2s)s)H\amp =r^2H\ne H\text{.}
+\end{align*}
 </div>
-<div class="para">for all <span class="process-math">\(A,B\in M_n(R)\text{,}\)</span> and that for all <span class="process-math">\(A\in M_n(R)\)</span> there is a special matrix <span class="process-math">\(A^\dagger\)</span> called the <dfn class="terminology">adjoint matrix</dfn> of <span class="process-math">\(A\)</span> that satisfies</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spec_ring_mult_groups.html ./knowl/xref/spec_units_mod_n.html">
-\begin{equation*}
-A^\dagger A=AA^\dagger=(\det A)\, I\text{.}
-\end{equation*}
+<div class="para">It turns out that magic property a subgroup <span class="process-math">\(H\)</span> needs to satisfy in order for the operation <a href="s_quotient_group.html#eq_coset_law_prop" class="xref" data-knowl="./knowl/xref/eq_coset_law_prop.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.49">(1.49)</a> to be well defined is that <span class="process-math">\(H\)</span> be a <em class="emphasis">normal subgroup</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_quotient_group-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">From these observations it follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/spec_ring_mult_groups.html ./knowl/xref/spec_units_mod_n.html">
-\begin{equation*}
-\GL_n(R)=\{A\in M_{n}(R)\mid \det A\in R^*\}\text{,}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(R^*\)</span> is the group of units of <span class="process-math">\(R\text{,}\)</span> as defined in <a href="s_groups.html#spec_ring_mult_groups" class="xref" data-knowl="./knowl/xref/spec_ring_mult_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Specimen 2: Ring multiplicative groups">Specimen 2</a> and <a href="s_mod_rings.html#spec_units_mod_n" class="xref" data-knowl="./knowl/xref/spec_units_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Specimen 5: Units modulo n">Specimen 5</a>.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#s_matrix_grps-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="s_matrix_grps-4-3">Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects “defined over” <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\C\)</span> are sometimes inherited by the same types of objects “defined over” a more general <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_matrix_grps-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 1.32: Invertible matrices and determinant"><a href="#s_matrix_grps-4" title="Copy heading and permalink for Remark 1.32: Invertible matrices and determinant" aria-label="Copy heading and permalink for Remark 1.32: Invertible matrices and determinant">🔗</a></div></article><article class="example example-like" id="eg_GL_mod2"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\GL_2(\Z/2\Z)\)</span>.</span>
+<article class="definition definition-like" id="d_normal_subgroup"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.98</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normal subgroup.</span>
 </h3>
-<div class="para logical" id="eg_GL_mod2-2-1">
-<div class="para">Consider the group <span class="process-math">\(\GL_2(\Z/2\Z)\text{.}\)</span>
+<div class="para logical" id="d_normal_subgroup-2-1">
+<div class="para">A subgroup <span class="process-math">\(N\)</span> of the group <span class="process-math">\(G\)</span> is called <dfn class="terminology">normal</dfn> if</div>
+<div class="displaymath process-math" id="d_normal_subgroup-2-1-4">
+\begin{align*}
+gNg^{-1} \amp = N 
+\end{align*}
 </div>
-<ol class="decimal" id="eg_GL_mod2-2-1-2">
-<li id="eg_GL_mod2-2-1-2-1">
-<div class="para" id="eg_GL_mod2-2-1-2-1-1">Compute <span class="process-math">\(\abs{\GL_2(\Z/2\Z)}\)</span> by explicitly enumerating all of its elements. You can use <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> to denote the congruence classes <span class="process-math">\([0]_2, [1]_2\in \Z/2\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">for all <span class="process-math">\(g\in G\text{.}\)</span> We write <span class="process-math">\(N\normalin G\)</span> to indicate that <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_GL_mod2-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_normal_subgroup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.98: Normal subgroup"><a href="#d_normal_subgroup" title="Copy heading and permalink for Definition 1.98: Normal subgroup" aria-label="Copy heading and permalink for Definition 1.98: Normal subgroup">🔗</a></div></article><article class="theorem theorem-like" id="th_normal"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.99</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normal subgroups.</span>
+</h3>
+<div class="para logical" id="th_normal-2-1">
+<div class="para">Let <span class="process-math">\(N\)</span> be a subgroup of the group <span class="process-math">\(G\text{.}\)</span> The following statements are equivalent.</div>
+<ol class="decimal" id="th_normal-2-1-3">
+<li id="th_normal-2-1-3-1">
+<div class="para" id="th_normal-2-1-3-1-1">
+<span class="process-math">\(N\normalin G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_normal-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="eg_GL_mod2-2-1-2-2">
-<div class="para" id="eg_GL_mod2-2-1-2-2-1">Compute <span class="process-math">\(\ord A\)</span> for all <span class="process-math">\(A\in \GL_2(\Z/2\Z)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="th_normal-2-1-3-2">
+<div class="para" id="th_normal-2-1-3-2-1">
+<span class="process-math">\(\displaystyle N_G(N)=G\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_GL_mod2-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_normal-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="eg_GL_mod2-2-1-2-3">
-<div class="para logical" id="eg_GL_mod2-2-1-2-3-1">
-<div class="para">Find <span class="process-math">\(A,B\in\GL_2(\Z/2\Z)\)</span> such that</div>
-<div class="displaymath process-math" id="eq_gl2_dihedral">
-\begin{equation}
-\GL_2(\Z/2\Z)=\{A^iB^j\mid 0\leq i\leq 2, 0\leq j\leq 1\}\text{.}\tag{1.17}
-\end{equation}
+<li id="th_normal-2-1-3-3">
+<div class="para" id="th_normal-2-1-3-3-1">
+<span class="process-math">\(gN=Ng\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#eg_GL_mod2-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_normal-2-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="eg_GL_mod2-2-1-2-4">
-<div class="para" id="eg_GL_mod2-2-1-2-4-1">For your choice of <span class="process-math">\(A, B\)</span> above, express <span class="process-math">\(BA\)</span> as <span class="process-math">\(A^iB^j\)</span> as in <a href="s_matrix_grps.html#eq_gl2_dihedral" class="xref" data-knowl="./knowl/xref/eq_gl2_dihedral.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.17">(1.17)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="th_normal-2-1-3-4">
+<div class="para logical" id="th_normal-2-1-3-4-1">
+<div class="para">The operation</div>
+<div class="displaymath process-math" id="th_normal-2-1-3-4-1-1">
+\begin{align*}
+G/N \times G/N\amp \rightarrow G/N\\
+(gN, hN) \amp \longmapsto (gh)N
+\end{align*}
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#eg_GL_mod2-2-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-<li id="eg_GL_mod2-2-1-2-5">
-<div class="para" id="eg_GL_mod2-2-1-2-5-1">Use the above to construct a full multiplication table of <span class="process-math">\(\GL_2(\Z/2\Z)\)</span> in terms of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">is well defined.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 5"><a href="#eg_GL_mod2-2-1-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+<div class="autopermalink" data-description="Item 4"><a href="#th_normal-2-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_GL_mod2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_GL_mod2-3-1">
-<div class="para">Since <span class="process-math">\((\Z/2\Z)^*=\{1\}\text{,}\)</span> we see that <span class="process-math">\(A\in M_2(\Z/2\Z)\)</span> to be invertible, we need <span class="process-math">\(\det A=1\text{.}\)</span> This restriction allows us to easily enumerate the invertible matrices as</div>
-<div class="displaymath process-math">
+<div class="autopermalink" data-description="Theorem 1.99: Normal subgroups"><a href="#th_normal" title="Copy heading and permalink for Theorem 1.99: Normal subgroups" aria-label="Copy heading and permalink for Theorem 1.99: Normal subgroups">🔗</a></div></article><details id="th_normal-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_normal-3-1">The equivalence <span class="process-math">\((1)\iff (2)\)</span> follows directly from the definition of normality and <span class="process-math">\(N_G(N)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="th_normal-3-2">The equivalence <span class="process-math">\((1)\iff (3)\)</span> is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="th_normal-3-3">
+<div class="para">We prove <span class="process-math">\((3)\implies (4)\text{.}\)</span> Assume <span class="process-math">\(gN=Ng\text{.}\)</span> Assume <span class="process-math">\(gN=g'N\)</span> and <span class="process-math">\(hN=h'N\text{.}\)</span> We will show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cosets.html">
 \begin{equation*}
-\GL_2(\Z/2\Z)=\left\{ 
-I, A=\begin{bmatrix}
-0\amp 1\\
-1\amp 1
-\end{bmatrix}, 
-B=\begin{bmatrix}
-0\amp 1\\
-1\amp 0
-\end{bmatrix},
-\begin{bmatrix}
-1\amp 1\\
-1\amp 0
-\end{bmatrix},
-\begin{bmatrix}
-1\amp 0\\
-1\amp 1
-\end{bmatrix},
-\begin{bmatrix}
-1\amp 1\\
-0\amp 1
-\end{bmatrix}
-\right\}\text{.}
+(gh)N=(g'h')N\text{.}
 \end{equation*}
 </div>
-<div class="para">The matrices named <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> above satisfy</div>
-<div class="displaymath process-math" id="eg_GL_mod2-3-1-7">
-\begin{align*}
-A^3 \amp = B^2=I \\
-A^2 \amp = \begin{bmatrix}
-1\amp 1\\
-1\amp 0
-\end{bmatrix}\\
-AB \amp =\begin{bmatrix}
-1\amp 0\\
-1\amp 1
-\end{bmatrix}\\
-A^2B \amp = \begin{bmatrix}
-1\amp 1\\
-0\amp 1
-\end{bmatrix}\text{.}
-\end{align*}
-</div>
-<div class="para">Thus</div>
-<div class="displaymath process-math">
+<div class="para">Since <span class="process-math">\(gN=g'N\)</span> and <span class="process-math">\(hN=h'N\text{,}\)</span> we have <span class="process-math">\(g=g'n\)</span> and <span class="process-math">\(h=h'n'\)</span> for some elements <span class="process-math">\(n,n'\in N\text{,}\)</span> and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cosets.html">
 \begin{equation*}
-\GL_2(\Z/2\Z)=\{A^iB^j\mid 0\leq i\leq 2, 0\leq j\leq 1\}\text{.}
+gh=g'nh'n'\text{.}
 \end{equation*}
 </div>
-<div class="para">Furthermore, we see that</div>
-<div class="displaymath process-math">
+<div class="para">Next since <span class="process-math">\(hN=Nh\)</span> (assuming (3)), we have <span class="process-math">\(nh'=h'n''\)</span> for some <span class="process-math">\(n''\in N\text{,}\)</span> yielding</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cosets.html">
 \begin{equation*}
-BA=\begin{bmatrix}
-1\amp 1\\
-0\amp 1
-\end{bmatrix}
-=A^2B=A^{-1}B\text{.}
+gh=g'h'n'' n'\in (g'h')N\text{.}
 \end{equation*}
 </div>
-<div class="para">The three relations</div>
-<div class="displaymath process-math" id="eg_GL_mod2-3-1-10">
+<div class="para">It follows from <a href="s_cosets_lagrange.html#th_cosets" class="xref" data-knowl="./knowl/xref/th_cosets.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.92: Cosets and coset space">Theorem 1.92</a> that <span class="process-math">\((gh)N=(g'h')N\text{,}\)</span> as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="th_normal-3-4">The implication <span class="process-math">\((4)\implies (3)\)</span> is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.99.1"><a href="#th_normal-3" title="Copy heading and permalink for Proof 1.99.1" aria-label="Copy heading and permalink for Proof 1.99.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_quot_group"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.100</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotient groups.</span>
+</h3>
+<div class="para logical" id="th_quot_group-2-1">
+<div class="para">Let <span class="process-math">\(N\)</span> be a normal subgroup of the group <span class="process-math">\(G\text{.}\)</span>
+</div>
+<ol class="decimal" id="th_quot_group-2-1-3">
+<li id="th_quot_group-2-1-3-1">
+<div class="para logical" id="th_quot_group-2-1-3-1-1">
+<div class="para">The pair <span class="process-math">\((G/N, \cdot)\text{,}\)</span> where <span class="process-math">\(\cdot\)</span> is the operation</div>
+<div class="displaymath process-math" id="th_quot_group-2-1-3-1-1-3">
 \begin{align*}
-A^3 \amp =I\\
-B^2 \amp = I\\
-BA \amp =A^2B=A^{-1}B
+G/N\times G/N \amp \rightarrow G/N\\
+(gN, g'N) \amp \rightarrow gN\cdot g'N=(gg')N \text{,}
 \end{align*}
 </div>
-<div class="para">then easily allow us to compute with the group law: that is as long as we express elements of the group in the form <span class="process-math">\(A^iB^j\text{.}\)</span> For example, we have</div>
-<div class="displaymath process-math" id="eg_GL_mod2-3-1-12">
-\begin{align*}
-(A^2B)(AB) \amp = A^2BAB\\
-\amp = A^2A^2B^2\\
-\amp= A^4 \\
-\amp = A \amp (A^3=I)\text{.}
-\end{align*}
+<div class="para">is a group.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Computations like this allow us to easily compute orders of elements:</div>
-<div class="displaymath process-math" id="eg_GL_mod2-3-1-13">
-\begin{align*}
-\ord I \amp = 1\\
-\ord A =\ord A^2\amp =3\\
-\ord B =\ord AB\amp=\ord A^2B=2\text{.}
-\end{align*}
+<div class="para" id="th_quot_group-2-1-3-1-2">The group identity of <span class="process-math">\(G/N\)</span> is the coset <span class="process-math">\(N\text{.}\)</span> Given coset <span class="process-math">\(gN\in G/N\)</span> its group inverse is the coset <span class="process-math">\(g^{-1}N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">We leave it to you to compute the entire multiplication table of <span class="process-math">\(\GL_2(\Z/2/Z)\text{.}\)</span> A good exercise!</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_GL_mod2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_quot_group-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_quot_group-2-1-3-2">
+<div class="para" id="th_quot_group-2-1-3-2-1">The map <span class="process-math">\(\pi\colon G\rightarrow G/N\)</span> defined as <span class="process-math">\(\pi(g)=gN\)</span> is a surjective group homormorphism satisfying <span class="process-math">\(\ker\pi=N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 1.33.1"><a href="#eg_GL_mod2-3" title="Copy heading and permalink for Solution 1.33.1" aria-label="Copy heading and permalink for Solution 1.33.1">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_quot_group-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.100: Quotient groups"><a href="#th_quot_group" title="Copy heading and permalink for Theorem 1.100: Quotient groups" aria-label="Copy heading and permalink for Theorem 1.100: Quotient groups">🔗</a></div></article><details id="th_quot_group-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_quot_group-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.100.1"><a href="#th_quot_group-3" title="Copy heading and permalink for Proof 1.100.1" aria-label="Copy heading and permalink for Proof 1.100.1">🔗</a></div></article></details><article class="example example-like" id="eg_normality_D4"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.101</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality in <span class="process-math">\(D_4\)</span>.</span>
+</h3>
+<div class="para logical" id="eg_normality_D4-2-1">
+<div class="para">Decide whether the given subgroup of <span class="process-math">\(D_4\)</span> is normal. Verify your answer by checking multiple conditions of the equivalence in <a href="s_quotient_group.html#th_normal" class="xref" data-knowl="./knowl/xref/th_normal.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.99: Normal subgroups">Theorem 1.99</a>.</div>
+<ol class="decimal" id="eg_normality_D4-2-1-3">
+<li id="eg_normality_D4-2-1-3-1">
+<div class="para" id="eg_normality_D4-2-1-3-1-1">
+<span class="process-math">\(\displaystyle H=\angvec{rs}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_normality_D4-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_normality_D4-2-1-3-2">
+<div class="para" id="eg_normality_D4-2-1-3-2-1">
+<span class="process-math">\(\displaystyle H=\angvec{r}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_normality_D4-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_normality_D4-2-1-3-3">
+<div class="para" id="eg_normality_D4-2-1-3-3-1">
+<span class="process-math">\(\displaystyle H=\angvec{r^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_normality_D4-2-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_normality_D4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_normality_D4-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 1.101.1"><a href="#eg_normality_D4-3" title="Copy heading and permalink for Solution 1.101.1" aria-label="Copy heading and permalink for Solution 1.101.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 1.33: \GL_2(\Z/2\Z)"><a href="#eg_GL_mod2" title="Copy heading and permalink for Example 1.33: \GL_2(\Z/2\Z)" aria-label="Copy heading and permalink for Example 1.33: \GL_2(\Z/2\Z)">🔗</a></div></article><div class="autopermalink" data-description="Section 1.3: Matrix groups"><a href="#s_matrix_grps" title="Copy heading and permalink for Section 1.3: Matrix groups" aria-label="Copy heading and permalink for Section 1.3: Matrix groups">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 1.101: Normality in D_4"><a href="#eg_normality_D4" title="Copy heading and permalink for Example 1.101: Normality in D_4" aria-label="Copy heading and permalink for Example 1.101: Normality in D_4">🔗</a></div></article><article class="corollary theorem-like" id="cor_normal_ker"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.102</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality and kernels.</span>
+</h3>
+<div class="para logical" id="cor_normal_ker-2-1">
+<div class="para">Let <span class="process-math">\(N\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> The following statements are equivalent.</div>
+<ol class="decimal" id="cor_normal_ker-2-1-3">
+<li id="cor_normal_ker-2-1-3-1">
+<div class="para" id="cor_normal_ker-2-1-3-1-1">
+<span class="process-math">\(N\)</span> is normal.<div class="autopermalink" data-description="Paragraph"><a href="#cor_normal_ker-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#cor_normal_ker-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="cor_normal_ker-2-1-3-2">
+<div class="para" id="cor_normal_ker-2-1-3-2-1">
+<span class="process-math">\(N=\ker\phi\)</span> for some group homomorphism   <span class="process-math">\(\phi\colon G\rightarrow H\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_normal_ker-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#cor_normal_ker-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_normal_ker-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.102: Normality and kernels"><a href="#cor_normal_ker" title="Copy heading and permalink for Corollary 1.102: Normality and kernels" aria-label="Copy heading and permalink for Corollary 1.102: Normality and kernels">🔗</a></div></article><article class="example example-like" id="eg_normality_S4"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.103</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality in <span class="process-math">\(S_4\)</span>.</span>
+</h3>
+<div class="para logical" id="eg_normality_S4-2-1">
+<div class="para">Determine whether the given subgroup is normal in <span class="process-math">\(S_4\text{.}\)</span> If it is, identify the corresponding quotient group with a familiar group.</div>
+<ol class="decimal" id="eg_normality_S4-2-1-2">
+<li id="eg_normality_S4-2-1-2-1">
+<div class="para" id="eg_normality_S4-2-1-2-1-1">
+<span class="process-math">\(\displaystyle H=\angvec{(1234)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_normality_S4-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_normality_S4-2-1-2-2">
+<div class="para" id="eg_normality_S4-2-1-2-2-1">
+<span class="process-math">\(\displaystyle H=\angvec{(12)(34),(13)(24)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_normality_S4-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_normality_S4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_normality_S4-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 1.103.1"><a href="#eg_normality_S4-3" title="Copy heading and permalink for Solution 1.103.1" aria-label="Copy heading and permalink for Solution 1.103.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.103: Normality in S_4"><a href="#eg_normality_S4" title="Copy heading and permalink for Example 1.103: Normality in S_4" aria-label="Copy heading and permalink for Example 1.103: Normality in S_4">🔗</a></div></article><div class="autopermalink" data-description="Section 1.12: Quotient groups"><a href="#s_quotient_group" title="Copy heading and permalink for Section 1.12: Quotient groups" aria-label="Copy heading and permalink for Section 1.12: Quotient groups">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_mod_rings.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_dihedral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_cosets_lagrange.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
