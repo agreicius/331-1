@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_quotient_group" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Quotient groups</title>
+
+    <p>
+        Given a subgroup <m>H</m> of <m>G</m> we would like to put a group structure on the coset space <m>G/H</m>: indeed, what could be more natural than to define our binary operation as 
+        <men xml:id="eq_coset_law_prop">
+            gH\cdot g'H=(gg')H
+        </men>?
+    It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if <m>gH=g'H</m> and <m>kH=k'H</m> for elements <m>g,g',k,k'\in G</m>, it is not necessarily the case that <m>(gk)H=(g'h')H</m>.
+    </p>
+    <p>
+        Indeed, continuing with <xref ref="eg_cosets_Dn"/>, where <m>G=D_4</m> and <m>H=\angvec{rs}</m>, we have 
+        <md>
+            <mrow>rH \amp =(r^2s)H\amp  </mrow>
+            <mrow> r^3H \amp =sH</mrow>
+        </md>
+        and yet 
+        <md>
+            <mrow>(rr^3)H \amp =H \amp 
+            </mrow>
+            <mrow>((r^2s)s)H\amp =r^2H\ne H</mrow>
+        </md>.
+    It turns out that magic property a subgroup <m>H</m> needs to satisfy in order for the operation <xref ref="eq_coset_law_prop"/> to be well defined is that <m>H</m> be a <em>normal subgroup</em>.  
+    </p>
+    
+    <definition xml:id="d_normal_subgroup">
+    <title>Normal subgroup</title>
+    <statement>
+    <p>
+    A subgroup <m>N</m> of the group <m>G</m> is called <term>normal</term> if 
+    <md>
+        <mrow>gNg^{-1} \amp = N </mrow>
+    </md>
+    for all <m>g\in G</m>. We write <m>N\normalin G</m> to indicate that <m>N</m> is a normal subgroup of <m>G</m>.
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_normal">
+    <title>Normal subgroups</title>
+    <statement>
+    <p>
+    Let <m>N</m> be a subgroup of the group <m>G</m>. The following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>N\normalin G</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N_G(N)=G</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>gN=Ng</m> for all <m>g\in G</m>.
+            </p>
+        </li>
+        
+        <li>
+            <p>
+                The operation 
+                <md>
+                    <mrow>G/N \times G/N\amp \rightarrow G/N</mrow>
+                    <mrow>(gN, hN) \amp \longmapsto (gh)N</mrow>
+                </md>
+                is well defined. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        The equivalence <m>(1)\iff (2)</m> follows directly from the definition of normality and <m>N_G(N)</m>. 
+    </p>
+    <p>
+        The equivalence <m>(1)\iff (3)</m> is left as an exercise. 
+    </p>
+    <p>
+        We prove <m>(3)\implies (4)</m>. Assume <m>gN=Ng</m>. Assume <m>gN=g'N</m> and <m>hN=h'N</m>. We will show that 
+        <me>
+            (gh)N=(g'h')N
+        </me>.
+         Since <m>gN=g'N</m> and <m>hN=h'N</m>, we have <m>g=g'n</m> and <m>h=h'n'</m> for some elements <m>n,n'\in N</m>, and thus 
+        <me>
+            gh=g'nh'n'
+        </me>.
+        Next since <m>hN=Nh</m> (assuming (3)), we have <m>nh'=h'n''</m> for some <m>n''\in N</m>, yielding 
+        <me>
+            gh=g'h'n'' n'\in (g'h')N
+        </me>.
+        It follows from <xref ref="th_cosets"/> that <m>(gh)N=(g'h')N</m>, as desired.
+    </p>
+    <p>
+        The implication <m>(4)\implies (3)</m> is left as an exercise. 
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_quot_group">
+    <title>Quotient groups</title>
+    <statement>
+    <p>
+    Let <m>N</m> be a normal subgroup of the group <m>G</m>. 
+    <ol>
+        <li>
+            <p>
+            The pair <m>(G/N, \cdot)</m>, where <m>\cdot</m> is the operation
+    <md>
+        <mrow>G/N\times G/N \amp \rightarrow G/N</mrow>
+        <mrow>(gN, g'N) \amp \rightarrow gN\cdot g'N=(gg')N </mrow>
+    </md>,
+    is a group.
+    </p>
+    <p>
+        The group identity of <m>G/N</m> is the coset <m>N</m>. Given coset <m>gN\in G/N</m> its group inverse is the coset <m>g^{-1}N</m>.
+    </p>
+        </li>
+        <li>
+            <p>
+                The map <m>\pi\colon G\rightarrow G/N</m> defined as <m>\pi(g)=gN</m> is a surjective group homormorphism satisfying <m>\ker\pi=N</m>.
+            </p>
+        </li>
+    </ol>
+</p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_normality_D4">
+    <title>Normality in <m>D_4</m></title>
+    <statement>
+    <p>
+    Decide whether the given subgroup of <m>D_4</m> is normal. Verify your answer by checking multiple conditions of the equivalence in <xref ref="th_normal"/>.
+    <ol>
+        <li>
+            <p>
+                <m>H=\angvec{rs}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>H=\angvec{r}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>H=\angvec{r^2}</m>
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    <corollary xml:id="cor_normal_ker">
+        <title>Normality and kernels</title>
+        <statement>
+            <p>
+                Let <m>N</m> be a subgroup of <m>G</m>. The following statements are equivalent. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>N</m> is normal. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>N=\ker\phi</m> for some group homomorphism   <m>\phi\colon G\rightarrow H</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </corollary>
+    <example xml:id="eg_normality_S4">
+    <title>Normality in <m>S_4</m></title>
+    <statement>
+    <p>
+    Determine whether the given subgroup is normal in <m>S_4</m>. If it is, identify the corresponding quotient group with a familiar group. 
+    <ol>
+        <li>
+            <p>
+                <m>H=\angvec{(1234)}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>H=\angvec{(12)(34),(13)(24)}</m>
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+
+</section>

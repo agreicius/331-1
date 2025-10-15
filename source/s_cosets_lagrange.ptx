@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="s_cosets_quot" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Cosets and quotients</title>
+<section xml:id="s_cosets_lagrange" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Cosets and Lagrange's theorem</title>
 
     <definition xml:id="d_set_actions">
         <title>Group operations on subsets</title>
@@ -12,7 +12,7 @@
                     <mrow>A^{-1} \amp =\{a^{-1}\mid a\in G\}</mrow>
                     <mrow>gA \amp =\{ga\mid a\in A\}</mrow>
                     <mrow>Ag \amp =\{ag\mid a\in A\}</mrow>
-                    <mrow>gAg^{-1} \amp =\{gag^{-1}\mid a\in \}</mrow>
+                    <mrow>gAg^{-1} \amp =\{gag^{-1}\mid a\in A \}</mrow>
                 </mdn>.
             </p>
         </statement>
@@ -65,7 +65,7 @@
     </solution>
     </example>
     <example xml:id="eg_cosets_Zn">
-    <title>Cosets in <m>Z/12/Z</m></title>
+    <title>Cosets in <m>\Z/12\Z</m></title>
     <statement>
     <p>
     Let <m>G=\Z/12\Z</m> and let <m>H=\angvec{\overline{4}}\leq G</m>. Compute <m>G/H</m>. 
@@ -176,73 +176,51 @@
     </statement>
     <proof>
     <p>
+        This is another example of a theorem where we get a lot of mileage out of defining an equivalence relation. The relation <m>g\sim g'</m> if and only if <m>g'\in gH</m> is easily seen to be an equivalence relation:
+        <md>
+            <mrow>g=ge \amp \implies g\in gH</mrow>
+            <mrow> \amp \implies g\sim g</mrow>
+            <mrow>g \sim g' \amp \implies g'\in gH </mrow>
+            <mrow> \amp \implies g'=gh</mrow>
+            <mrow> \amp \implies g=g'h^{-1}\in g'H</mrow>
+            <mrow> \amp \implies g'\sim g</mrow>
+            <mrow>g\sim g' \text{ and } g'\sim g''\amp \implies g'=gh \text{ and } g''=g'h' </mrow>
+            <mrow> \amp \implies g''=g'h'=g(hh')\in gH</mrow>
+            <mrow> \amp \implies g\sim g''</mrow>
+        </md>.
+        Since the equivalence classes of <m>\sim</m> are precisely the cosets <m>gH</m> by definition, statement (3) and most of the equivalent statements in (2) follow immediately. The exception is the statement that <m>gH=g'H</m> if and only if <m>g^{-1}g'\in H</m>, which follows using equivalent formulation (b), since 
+        <md>
+            <mrow>gH=gH' \amp \iff g'\in gH</mrow>
+            <mrow> \amp \iff g'=gh \text{ for some } h\in H</mrow>
+            <mrow> \amp \iff g^{-1}g'=h \text{ for some } h\in H</mrow>
+            <mrow> \amp \iff g^{-1}g'\in H</mrow>
+        </md>.
     </p>
     </proof>
     </theorem>
-    <p>
-        Given a subgroup <m>H</m> of <m>G</m> we would like to put a group structure on the coset space <m>G/H</m>: indeed, what could be more natural than to define our binary operation as 
-        <men xml:id="eq_coset_law_prop">
-            gH\cdot g'H=(gg')H
-        </men>?
-    It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if <m>gH=g'H</m> and <m>kH=k'H</m> for elements <m>g,g',k,k'\in G</m>, it is not necessarily the case that <m>(gk)H=(g'h')H</m>.
-    </p>
-    <p>
-        Indeed, continuing with <xref ref="eg_cosets_Dn"/>, where <m>G=D_4</m> and <m>H=\angvec{rs}</m>, we have 
-        <md>
-            <mrow>rH \amp =(r^2s)H\amp  </mrow>
-            <mrow> r^3H \amp =sH</mrow>
-        </md>
-        and yet 
-        <md>
-            <mrow>(rr^3)H \amp =H \amp 
-            </mrow>
-            <mrow>((r^2s)s)H\amp =r^2H\ne H</mrow>
-        </md>.
-    It turns out that magic property a subgroup <m>H</m> needs to satisfy in order for the operation <xref ref="eq_coset_law_prop"/> to be well defined is that <m>H</m> be a <em>normal subgroup</em>.  
-    </p>
     
-    <definition xml:id="d_normal_subgroup">
-    <title>Normal subgroup</title>
+    
+    <theorem xml:id="th_lagrange">
+    <title>Lagrange's theorem</title>
     <statement>
     <p>
-    A subgroup <m>N</m> of the group <m>G</m> is called <term>normal</term> if 
-    <md>
-        <mrow>gNg^{-1} \amp = N </mrow>
-    </md>
-    for all <m>g\in G</m>. We write <m>N\normalin G</m> to indicate that <m>N</m> is a normal subgroup of <m>G</m>.
-    </p>
-    </statement>
-    </definition>
-    <theorem xml:id="th_normal">
-    <title>Normal subgroups</title>
-    <statement>
-    <p>
-    Let <m>N</m> be a subgroup of the group <m>G</m>. The following statements are equivalent. 
+    Let <m>H</m> be a subgroup of the group <m>G</m>. 
     <ol>
         <li>
             <p>
-                <m>N\normalin G</m>.
+                We have 
+                <mdn>
+                    <mrow>\abs{G} \amp = \abs{G}\abs{G/H}</mrow>
+                </mdn>.
+                When <m>G</m> is infinite, this can be interpreted as saying <m>H</m> is infinite or <m>G/H</m> is infinite. 
             </p>
         </li>
         <li>
             <p>
-                <m>N_G(N)=G</m>
-            </p>
-        </li>
-        <li>
-            <p>
-                <m>gN=Ng</m> for all <m>g\in G</m>.
-            </p>
-        </li>
-        
-        <li>
-            <p>
-                The operation 
-                <md>
-                    <mrow>G/N \times G/N\amp \rightarrow G/N</mrow>
-                    <mrow>(gN, hN) \amp \longmapsto (gh)N</mrow>
-                </md>
-                is well defined. 
+                If <m>\abs{G}&lt; \infty</m>, then we have 
+                <mdn>
+                    <mrow xml:id="eq_lagrange"> \abs{G/H}\amp = \frac{\abs{G}}{\abs{H}} </mrow>
+                </mdn>.
             </p>
         </li>
     </ol>
@@ -250,28 +228,97 @@
     </statement>
     <proof>
     <p>
-        The equivalence <m>(1)\iff (2)</m> follows directly from the definition of normality and <m>N_G(N)</m>. 
-    </p>
-    <p>
-        The equivalence <m>(1)\iff (3)</m> is left as an exercise. 
-    </p>
-    <p>
-        We prove <m>(3)\implies (4)</m>. Assume <m>gN=Ng</m>. Assume <m>gN=g'N</m> and <m>hN=h'N</m>. We will show that 
-        <me>
-            (gh)N=(g'h')N
-        </me>.
-         Since <m>gN=g'N</m> and <m>hN=h'N</m>, we have <m>g=g'n</m> and <m>h=h'n'</m> for some elements <m>n,n'\in N</m>, and thus 
-        <me>
-            gh=g'nh'n'
-        </me>.
-        Next since <m>hN=Nh</m> (assuming (3)), we have <m>nh'=h'n''</m> for some <m>n''\in N</m>, yielding 
-        <me>
-            gh=g'h'n'' n'\in (g'h')N
-        </me>.
-        It follows from <xref ref="th_cosets"/> that <m>(gh)N=(g'h')N</m>, as desired.
+        Statement (2) follows directly from (1). Statement (1) follows from <xref ref="th_cosets"/> and a counting argument. First observe that for all <m>g\in G</m> we have <m>\abs{H}=\abs{gH}</m> as witnessed by the map
+        <md>
+            <mrow>H \amp \rightarrow gH</mrow>
+            <mrow>h \amp \longmapsto gh</mrow>
+        </md>, which has inverse map 
+        <md>
+            <mrow>gH \amp \mapsto H</mrow>
+            <mrow>g' \amp \longmapsto g^{-1}g' </mrow>
+        </md>.
+         Next, let <m>(g_{\alpha}H)_{\alpha\in I}</m> be the family of <em>distinct</em> cosets, so that we have 
+        <md>
+            <mrow>\abs{G/H} \amp =\abs{I}</mrow>
+            <mrow>G\amp=\bigcup_{\alpha\in I} g_{\alpha}H</mrow>
+        </md>
+        and <m>g_\alpha H\cap g_\beta H=\emptyset</m> for all <m>\alpha\ne \beta</m>. If <m>I</m> and <m>\abs{H}</m> are both finite, then the sum rule for disjoint sets yields
+        <md>
+            <mrow>\abs{G} \amp =\sum_{\alpha\in I}\abs{g_{\alpha}H}</mrow>
+            <mrow> \amp = \abs{I}\cdot \abs{H} (\abs{g_{\alpha}H}=\abs{H})</mrow>
+            <mrow> \amp =\abs{G/H}\abs{H}</mrow>
+        </md>. 
+        This both proves the result in the case where <m>G</m> is finite, and shows that if <m>G</m> is infinite, than either <m>H</m> or <m>G/H</m> is infinite. 
     </p>
     </proof>
     </theorem>
+    <definition xml:id="d_index">
+    <title>Index of subgroup</title>
+    <notation>
+        <usage><m>G\colon H</m></usage>
+      <description>index of <m>H</m> in <m>G</m></description>
+    </notation>
+    <statement>
+    <p>
+        Given a subgroup <m>H</m> of the group <m>G</m>, its index <m>\abs{G\colon H}</m> is defined as 
+        <me>
+            \abs{G\colon H}=\abs{G/H}
+        </me>.
+        In other words, <m>G\colon H</m> is the cardinality of the coset space <m>G/H</m>.
+    </p>
+    </statement>
+    </definition>
+    <remark>
+        <title>Lagrange's theorem</title>
+        
+        <p>
+            Using the index notation, we can re-write Lagrange's theorem as 
+            <me>
+                \abs{G}=\abs{H}\abs{G\colon H}
+            </me>.
+        </p>
+    </remark>
+    <corollary xml:id="cor_subgroup_card">
+        <title>Cardinality of subgroups</title>
+        <statement>
+            <p>
+                Assume <m>G</m> is a finite group. 
+                <ol>
+                    <li>
+                        <p>
+                           For any subgroup <m>H\leq G</m>, we have 
+                <men xml:id="eq_subgroup_card">
+                    \abs{H}\mid \abs{G}
+                </men>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For any <m>g\in G</m> we have 
+                            <men xml:id="eq_ord_g_divis">
+                                \ord g\mid \abs{G}
+                            </men>.
+                        </p>
+                    </li>
+                </ol>
+                
+                
+            </p>
+        </statement>
+    </corollary>
+    <corollary xml:id="cor_groups_prime_card">
+        <title>Groups of prime cardinality</title>
+        <statement>
+            <p>
+                If <m>\abs{G}=p</m> for a prime integer <m>p</m>, then <m>G</m> is cyclic. It follows that 
+                <me>
+                    G\cong \Z/p\Z
+                </me>.
+            </p>
+        </statement>
+    </corollary>
+    
+    
     
     
     
