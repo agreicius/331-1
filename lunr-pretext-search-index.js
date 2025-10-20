@@ -1636,7 +1636,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.12",
   "title": "Quotient groups",
-  "body": " Quotient groups  Given a subgroup of we would like to put a group structure on the coset space : indeed, what could be more natural than to define our binary operation as ? It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if and for elements , it is not necessarily the case that .  Indeed, continuing with , where and , we have and yet . It turns out that magic property a subgroup needs to satisfy in order for the operation to be well defined is that be a normal subgroup .   Normal subgroup   A subgroup of the group is called normal if for all . We write to indicate that is a normal subgroup of .     Normal subgroups   Let be a subgroup of the group . The following statements are equivalent.    .          for all .    The operation is well defined.       The equivalence follows directly from the definition of normality and .  The equivalence is left as an exercise.  We prove . Assume . Assume and . We will show that . Since and , we have and for some elements , and thus . Next since (assuming (3)), we have for some , yielding . It follows from that , as desired.  The implication is left as an exercise.     Quotient groups   Let be a normal subgroup of the group .   The pair , where is the operation , is a group.  The group identity of is the coset . Given coset its group inverse is the coset .    The map defined as is a surjective group homormorphism satisfying .            Normality in   Decide whether the given subgroup of is normal. Verify your answer by checking multiple conditions of the equivalence in .                          Normality and kernels   Let be a subgroup of . The following statements are equivalent.    is normal.     for some group homomorphism .        Normality in   Determine whether the given subgroup is normal in . If it is, identify the corresponding quotient group with a familiar group.                    "
+  "body": " Quotient groups  Given a subgroup of we would like to put a group structure on the coset space : indeed, what could be more natural than to define our binary operation as ? It would seem the relevant group operations would follow readily from this definition. The issue is that the proposed operation is not always well defined! That is, if and for elements , it is not necessarily the case that .  Indeed, continuing with , where and , we have and yet . It turns out that magic property a subgroup needs to satisfy in order for the operation to be well defined is that be a normal subgroup .   Normal subgroup   A subgroup of the group is called normal if for all . We write to indicate that is a normal subgroup of .     Normal subgroups   Let be a subgroup of the group . The following statements are equivalent.    .          for all .    The operation is well defined.       The equivalence follows directly from the definition of normality and .  The equivalence is left as an exercise.  We prove . Assume . Assume and . We will show that . Since and , we have and for some elements , and thus . Next since (assuming (3)), we have for some , yielding . It follows from that , as desired.  The implication is left as an exercise.     Quotient groups   Let be a normal subgroup of the group .   The pair , where is the operation , is a group.  The group identity of is the coset . Given coset its group inverse is the coset .    The map defined as is a surjective group homormorphism satisfying .            Normality in   Decide whether the given subgroup of is normal. Verify your answer by checking multiple conditions of the equivalence in .                          Abelian groups   Show that an abelian group every subgroup is normal.    Let be abelian. Given a subgroup , for any and we have . It follows that for all and hence that is normal.    Kernels of group homomorphisms are normal subgroups. In fact, as we show below, a subgroup is normal if and only if it is the kernel of a group homomorphism.   Normality and kernels   Let be a subgroup of . The following statements are equivalent.    is normal.     for some group homomorphism .        Normality in   Determine whether the given subgroup is normal in . If it is, identify the corresponding quotient group with a familiar group.                    "
 },
 {
   "id": "d_normal_subgroup",
@@ -1675,11 +1675,20 @@ var ptx_lunr_docs = [
   "body": " Normality in   Decide whether the given subgroup of is normal. Verify your answer by checking multiple conditions of the equivalence in .                        "
 },
 {
+  "id": "eg_normal_abelian",
+  "level": "2",
+  "url": "s_quotient_group.html#eg_normal_abelian",
+  "type": "Example",
+  "number": "1.102",
+  "title": "Abelian groups.",
+  "body": " Abelian groups   Show that an abelian group every subgroup is normal.    Let be abelian. Given a subgroup , for any and we have . It follows that for all and hence that is normal.   "
+},
+{
   "id": "cor_normal_ker",
   "level": "2",
   "url": "s_quotient_group.html#cor_normal_ker",
   "type": "Corollary",
-  "number": "1.102",
+  "number": "1.103",
   "title": "Normality and kernels.",
   "body": " Normality and kernels   Let be a subgroup of . The following statements are equivalent.    is normal.     for some group homomorphism .      "
 },
@@ -1688,9 +1697,144 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#eg_normality_S4",
   "type": "Example",
-  "number": "1.103",
+  "number": "1.104",
   "title": "Normality in <span class=\"process-math\">\\(S_4\\)<\/span>.",
   "body": " Normality in   Determine whether the given subgroup is normal in . If it is, identify the corresponding quotient group with a familiar group.                   "
+},
+{
+  "id": "s_isom_thms_A",
+  "level": "1",
+  "url": "s_isom_thms_A.html",
+  "type": "Section",
+  "number": "1.13",
+  "title": "First isomorphism theorem",
+  "body": " First isomorphism theorem   Quotient map: universal property   Let be a normal subgroup of , and let be the corresponding quotient map. Given any group homomorphism satisfying , there exists a unique group homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       First consider the uniqueness claim. If satisfies , then since for all , we must have . Thus there is at most one such homomorphism , in fact we must define .  We now show that this formula gives rise to a well-defined map . We must show that if , then . We have . Having shown is well defined, it is easy to how that it is a group homomorphism. We have . Lastly, satisfies essentially by definition, since for all .     First isomorphism theorem   Let be a group homomorphism, and let be the quotient map.    .    In more detail, letting , the map defined as for all is an isomorphism, and is the unique homomorphism satisfying .       Assume is a group homomorphism. Setting , implies that the map is a homomorphism. Furthermore, it is easy to see that and hence that is surjective. We claim that is injective and hence that the map above is an isomorphism, showing .  According to , it suffices to show that . By definition, we have , as desired.     Kernel and injectivity   Let be a group homomorphism.  Given we have .    is injective if and only if .          We have . Thus .    If is injective, then if and only if , showing that . Inversely, if is not injective, then we can find such that . But then . Since it follows that and hence .        First isomorphism theorem   Let , a normal subgroup of . Use the first isomorphism theorem to identify with a familiar group.    We convinced ourselves earlier that was isomorphic to , which is isomorphic to . That argument involved finding appropriate generators of the quotient group that gave us the relations. Let's see how the first isomorphism theorem can clean things up a bit.  Consider the set where . In other words, is the set of all partitions of into two disjoint sets of cardinality 2. It is easy to see that $S_4$ acts on as . As such we get a homomorphism that associates to each its corresponding permutation of the elements of . The first isomorphism theorem tells us that . We will show that and , from whence it follows that , where the last isomorphism follows from the fact that .  Let's see why . Note that by definition for an element to lie in , we need . An argument similar to the ones we used to compute normalizers and centralizers in shows that given , we have . It follows that for all if and only if . Thus .  Having proved that , the first isomorphism tells us that , and in particular . Since , we conclude that , and hence that , as claimed.     First isomorphism theorem:   Let be one of our familiar rings: , or for some positive integer . Fix a positive integer and define . Show that is normal in and identify the quotient with a familiar group.    The determinant map is a group homomorphism, and it is easy to see that it is surjective: given the diagonal matrix with in the first diagonal entry and 1's elsewhere satisfies .  By definition we have . It follows that and we have by the first isomorphism theorem.     First isomorphism theorem:   Let , and let    Prove that is a subgroup of and that is a subgroup of .    Prove that .    Prove that .       This example relies on the following notions from complex arithmetic.   Given , with , we define its modulus as . Geometrically, this is just the length of the vector .   Given , if the point has polar coordinates , then we have . Defining , we have . If we specify that , then we have .   Given and , we have . In other words, geomtrically speaking, two multiply two complex numbers, we (a) multiply their moduli, and (b) add their angles.   Using these properties, we see that the map defined as is a group homomorphism with kernel . We leave the details to discussion section.     Circle group and roots of unity   The sets are subgroups of called the circle group and roots of unity of , respectively.    "
+},
+{
+  "id": "th_quot_map",
+  "level": "2",
+  "url": "s_isom_thms_A.html#th_quot_map",
+  "type": "Theorem",
+  "number": "1.105",
+  "title": "Quotient map: universal property.",
+  "body": " Quotient map: universal property   Let be a normal subgroup of , and let be the corresponding quotient map. Given any group homomorphism satisfying , there exists a unique group homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       First consider the uniqueness claim. If satisfies , then since for all , we must have . Thus there is at most one such homomorphism , in fact we must define .  We now show that this formula gives rise to a well-defined map . We must show that if , then . We have . Having shown is well defined, it is easy to how that it is a group homomorphism. We have . Lastly, satisfies essentially by definition, since for all .   "
+},
+{
+  "id": "th_isom_thm_1",
+  "level": "2",
+  "url": "s_isom_thms_A.html#th_isom_thm_1",
+  "type": "Theorem",
+  "number": "1.107",
+  "title": "First isomorphism theorem.",
+  "body": " First isomorphism theorem   Let be a group homomorphism, and let be the quotient map.    .    In more detail, letting , the map defined as for all is an isomorphism, and is the unique homomorphism satisfying .       Assume is a group homomorphism. Setting , implies that the map is a homomorphism. Furthermore, it is easy to see that and hence that is surjective. We claim that is injective and hence that the map above is an isomorphism, showing .  According to , it suffices to show that . By definition, we have , as desired.   "
+},
+{
+  "id": "lemma_ker_inj",
+  "level": "2",
+  "url": "s_isom_thms_A.html#lemma_ker_inj",
+  "type": "Lemma",
+  "number": "1.108",
+  "title": "Kernel and injectivity.",
+  "body": " Kernel and injectivity   Let be a group homomorphism.  Given we have .    is injective if and only if .          We have . Thus .    If is injective, then if and only if , showing that . Inversely, if is not injective, then we can find such that . But then . Since it follows that and hence .      "
+},
+{
+  "id": "eg_first_isom",
+  "level": "2",
+  "url": "s_isom_thms_A.html#eg_first_isom",
+  "type": "Example",
+  "number": "1.109",
+  "title": "First isomorphism theorem.",
+  "body": " First isomorphism theorem   Let , a normal subgroup of . Use the first isomorphism theorem to identify with a familiar group.    We convinced ourselves earlier that was isomorphic to , which is isomorphic to . That argument involved finding appropriate generators of the quotient group that gave us the relations. Let's see how the first isomorphism theorem can clean things up a bit.  Consider the set where . In other words, is the set of all partitions of into two disjoint sets of cardinality 2. It is easy to see that $S_4$ acts on as . As such we get a homomorphism that associates to each its corresponding permutation of the elements of . The first isomorphism theorem tells us that . We will show that and , from whence it follows that , where the last isomorphism follows from the fact that .  Let's see why . Note that by definition for an element to lie in , we need . An argument similar to the ones we used to compute normalizers and centralizers in shows that given , we have . It follows that for all if and only if . Thus .  Having proved that , the first isomorphism tells us that , and in particular . Since , we conclude that , and hence that , as claimed.   "
+},
+{
+  "id": "eg_first_isom_matrices",
+  "level": "2",
+  "url": "s_isom_thms_A.html#eg_first_isom_matrices",
+  "type": "Example",
+  "number": "1.110",
+  "title": "First isomorphism theorem: <span class=\"process-math\">\\(\\SL_n(R)\\)<\/span>.",
+  "body": " First isomorphism theorem:   Let be one of our familiar rings: , or for some positive integer . Fix a positive integer and define . Show that is normal in and identify the quotient with a familiar group.    The determinant map is a group homomorphism, and it is easy to see that it is surjective: given the diagonal matrix with in the first diagonal entry and 1's elsewhere satisfies .  By definition we have . It follows that and we have by the first isomorphism theorem.   "
+},
+{
+  "id": "eg_first_isom_RmodZ",
+  "level": "2",
+  "url": "s_isom_thms_A.html#eg_first_isom_RmodZ",
+  "type": "Example",
+  "number": "1.111",
+  "title": "First isomorphism theorem: <span class=\"process-math\">\\(\\R\/\\Z\\)<\/span>.",
+  "body": " First isomorphism theorem:   Let , and let    Prove that is a subgroup of and that is a subgroup of .    Prove that .    Prove that .       This example relies on the following notions from complex arithmetic.   Given , with , we define its modulus as . Geometrically, this is just the length of the vector .   Given , if the point has polar coordinates , then we have . Defining , we have . If we specify that , then we have .   Given and , we have . In other words, geomtrically speaking, two multiply two complex numbers, we (a) multiply their moduli, and (b) add their angles.   Using these properties, we see that the map defined as is a group homomorphism with kernel . We leave the details to discussion section.   "
+},
+{
+  "id": "spec_circle_group",
+  "level": "2",
+  "url": "s_isom_thms_A.html#spec_circle_group",
+  "type": "Specimen",
+  "number": "12",
+  "title": "Circle group and roots of unity.",
+  "body": " Circle group and roots of unity   The sets are subgroups of called the circle group and roots of unity of , respectively.   "
+},
+{
+  "id": "s_isom_thms_B",
+  "level": "1",
+  "url": "s_isom_thms_B.html",
+  "type": "Section",
+  "number": "1.14",
+  "title": "Isomorphism theorems: second and third",
+  "body": " Isomorphism theorems: second and third   Product of subgroups   Let and be subgroups of . We define .   We have . In particular, if and are finite, then we have .     is a subgroup of if and only if .    If , then is a subgroup. In particular, if , then is a subgroup of .          Consider the map of sets defined by . This map is surjective by definition of . Given any , we have . Let , and notice that . It follows easily that for all , we have . Furthermore, the map can be shown to be a bijection.  Now, if and are finite, then and are finite, and we have , as desired.  Moreover, if either or is infinite, then so is , in which case the equality still holds.    Left as an exercise.    Left as an exercise.        Second isomorphism theorem   Let and be subgroups of the group and assume .         .       First we prove . Given and , we have .  To prove the stated isomorphism, we start with the quotient map and let , its restriction to the subgroup . We have . By the first isomorphism theorem, we have . It remains to show that . Given any , we have for some and , in which case . It follows that . This proves is surjective, and hence that .     Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem . sibd  Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .    Third isomorphism theorem   Let be a surjective homomorphism, and suppose is a normal subgroup of containing .    .     .            Images under quotients  Let be a normal subgroup of . Given any subset , we denote by its image under the quotient map .    Quotients of quotients   Let and be normal subgroups of and assume . We have .    "
+},
+{
+  "id": "prop_subgroup_prod",
+  "level": "2",
+  "url": "s_isom_thms_B.html#prop_subgroup_prod",
+  "type": "Proposition",
+  "number": "1.112",
+  "title": "Product of subgroups.",
+  "body": " Product of subgroups   Let and be subgroups of . We define .   We have . In particular, if and are finite, then we have .     is a subgroup of if and only if .    If , then is a subgroup. In particular, if , then is a subgroup of .          Consider the map of sets defined by . This map is surjective by definition of . Given any , we have . Let , and notice that . It follows easily that for all , we have . Furthermore, the map can be shown to be a bijection.  Now, if and are finite, then and are finite, and we have , as desired.  Moreover, if either or is infinite, then so is , in which case the equality still holds.    Left as an exercise.    Left as an exercise.      "
+},
+{
+  "id": "th_isom_thm_2",
+  "level": "2",
+  "url": "s_isom_thms_B.html#th_isom_thm_2",
+  "type": "Theorem",
+  "number": "1.113",
+  "title": "Second isomorphism theorem.",
+  "body": " Second isomorphism theorem   Let and be subgroups of the group and assume .         .       First we prove . Given and , we have .  To prove the stated isomorphism, we start with the quotient map and let , its restriction to the subgroup . We have . By the first isomorphism theorem, we have . It remains to show that . Given any , we have for some and , in which case . It follows that . This proves is surjective, and hence that .   "
+},
+{
+  "id": "s_isom_thms_B-4",
+  "level": "2",
+  "url": "s_isom_thms_B.html#s_isom_thms_B-4",
+  "type": "Remark",
+  "number": "1.114",
+  "title": "Second isomorphism theorem.",
+  "body": " Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem . sibd  Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .  "
+},
+{
+  "id": "th_third_isom",
+  "level": "2",
+  "url": "s_isom_thms_B.html#th_third_isom",
+  "type": "Theorem",
+  "number": "1.116",
+  "title": "Third isomorphism theorem.",
+  "body": " Third isomorphism theorem   Let be a surjective homomorphism, and suppose is a normal subgroup of containing .    .     .          "
+},
+{
+  "id": "s_isom_thms_B-6",
+  "level": "2",
+  "url": "s_isom_thms_B.html#s_isom_thms_B-6",
+  "type": "Notation",
+  "number": "1.117",
+  "title": "Images under quotients.",
+  "body": " Images under quotients  Let be a normal subgroup of . Given any subset , we denote by its image under the quotient map .  "
+},
+{
+  "id": "cor_second_isom_theorem",
+  "level": "2",
+  "url": "s_isom_thms_B.html#cor_second_isom_theorem",
+  "type": "Corollary",
+  "number": "1.118",
+  "title": "Quotients of quotients.",
+  "body": " Quotients of quotients   Let and be normal subgroups of and assume . We have .   "
 },
 {
   "id": "appendix-notation",
