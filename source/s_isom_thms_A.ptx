@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_isom_thms_A" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>First isomorphism theorem</title>
+    
+    <theorem xml:id="th_quot_map">
+    <title>Quotient map: universal property</title>
+    <statement>
+    <p>
+    Let <m>N</m> be a normal subgroup of <m>G</m>, and let <m>\pi\colon G\rightarrow G/N</m> be the corresponding quotient map. Given any group homomorphism <m>\phi\colon G\rightarrow H</m> satisfying <m>N\leq \ker \phi</m>, there exists a unique group homomorphism <m>\overline{\phi}\colon G/N\rightarrow H</m> satisfying 
+    <men xml:id="eq_quot_universal_commute">
+        \overline{\phi}\circ \pi=\phi
+    </men>.
+     Moreover, <m>\overline{\phi}</m> is defined as
+        <men xml:id="eq_quot_map_universal">
+            \overline{\phi}(gN)=\phi(g)
+        </men>.
+        for all <m>gN\in G/N</m>. 
+    </p>
+    <p>
+        In short, there is a unique homomorphism <m>\overline{\phi}</m> making the diagram below commutative. 
+    </p>
+    <figure xml:id="fig_quot_univ_prop">
+        <caption>Universal property of quotient map</caption>
+    
+    <image width="40%">
+        <shortdescription>Universal property of quotient map</shortdescription>
+        <latex-image>
+        \begin{tikzcd}
+        G \arrow[rr,"\phi"] \arrow[dr,"\pi"'] \amp \amp H\\
+        \amp G/N \arrow[ru, "\exists\, ! \,\overline{\phi}"', dotted]
+        \end{tikzcd}
+        </latex-image>
+    </image>
+    </figure>
+    </statement>
+    <proof>
+    <p>
+        First consider the uniqueness claim. If <m>\overline{\phi}</m> satisfies 
+        <me>
+            \overline{\phi}\circ\pi=\phi
+        </me>,
+        then since <m>gN=\pi(g)</m> for all <m>g\in G</m>, we must have 
+        <me>
+            \overline{\phi}(gN)=\overline{\phi}\circ \pi (g)=\phi(g)
+        </me>.
+        Thus there is at most one such homomorphism <m>\overline{\phi}</m>, in fact we must define <m>\overline{\phi}(gN)=\phi(g)</m>.
+    </p>
+    <p>
+        We now show that this formula gives rise to a well-defined map <m>\overline{\phi}\colon G/N\rightarrow H</m>. We must show that if <m>gN=g'N</m>, then <m>\phi(g)=\phi(g')</m>. We have 
+        <md>
+            <mrow>gN=g'N \amp \implies g'=gn \text{ for some } n\in N </mrow>
+            <mrow> \amp \implies \phi(g')=\phi(gn) </mrow>
+            <mrow> \amp \implies \phi(g')=\phi(g)\phi(n)</mrow>
+            <mrow> \amp \implies \phi(g')=\phi(g) \amp (N\leq \ker\phi\implies \phi(n)=e)</mrow>
+        </md>.
+        Having shown <m>\overline{\phi}</m> is well defined, it is easy to how that it is a group homomorphism. We have 
+        <md>
+            <mrow>\overline{\phi}(gN\, g'N) \amp =\overline{\phi}(gg'N)</mrow>
+            <mrow> \amp =\phi(gg') \amp</mrow>
+            <mrow> \amp =\phi(g)\phi(g')</mrow>
+            <mrow> \amp =\overline{\phi}(gN)\overline{\phi}(g'N)</mrow>
+        </md>.
+        Lastly, <m>\overline{\phi}</m> satisfies <xref ref="eq_quot_universal_commute"/> essentially by definition, since 
+        <me>
+            \overline{\phi}(\pi(g))=\overline{\phi}(gN)=\phi(g)
+        </me>
+        for all <m>g\in G</m>.
+    </p>
+    </proof>
+    </theorem>
+    
+
+    <theorem xml:id="th_isom_thm_1">
+    <title>First isomorphism theorem</title>
+    <statement>
+    <p>
+    Let <m>\phi\colon G\rightarrow H</m> be a group homomorphism, and let <m>\pi\colon G \rightarrow G/\ker\phi</m> be the quotient map. 
+    <ol>
+        <li>
+            <p>
+                <m>G/\ker\phi\cong \im\phi</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                In more detail, letting <m>N=\ker\phi   </m>, the map <m>\overline{\phi}\colon G/N\rightarrow \im\phi</m> defined as 
+                <men xml:id="eq_isom_thm_1">
+                    \overline{\phi}(gN)=\phi(g)
+                </men>
+                for all <m>gN\in G/\ker\phi</m>
+                is an isomorphism, and is the unique homomorphism satisfying
+                <me>
+                   \overline{\phi}\circ\pi=\phi
+                </me>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        Assume <m>\phi\colon G\rightarrow H</m> is a group homomorphism. Setting <m>N=\ker\phi</m>, <xref ref="th_quot_map"/> implies that the map <m>\overline{\phi}\colon G/N\rightarrow H</m> is a homomorphism. Furthermore, it is easy to see that <m>\im\overline{\phi}=\im\phi</m> and hence that 
+        <me>
+            \overline{\phi}\colon G/N\rightarrow \im\phi
+        </me>
+        is surjective. We claim that <m>\overline{\phi}</m> is injective and hence that the map above is an isomorphism, showing <m>G/N\cong \im \phi</m>. 
+    </p>
+    <p>
+        According to <xref ref="lemma_ker_inj"/>, it suffices to show that <m>\ker\overline{\phi}=\{e_{G/N}\}</m>. By definition, we have 
+        <md>
+            <mrow>gN\in \ker\overline{\phi} \amp \iff \overline{\phi}(gN)=e_H</mrow>
+            <mrow> \amp \iff \phi(g)=e_H</mrow>
+            <mrow> \amp \iff g\in \ker\phi=N</mrow>
+            <mrow> \amp \iff gN=N</mrow>
+            <mrow> \amp \iff gN=e_{G/N}</mrow>
+        </md>,
+        as desired. 
+    </p>
+    </proof>
+    </theorem>
+
+    <lemma xml:id="lemma_ker_inj">
+        <title>Kernel and injectivity</title>
+        <statement>
+            <p>
+            Let <m>\phi\colon G\rightarrow H</m> be a group homomorphism. 
+            <ol>
+                <li>
+                    Given <m>h=\phi(g)</m> we have <m>\phi^{-1}(h)=g\ker\phi</m>.
+                </li>
+                <li>
+                    <p>
+                        <m>\phi</m> is injective if and only if <m>\ker\phi=\{e\}</m>.
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            We have
+                            <md>
+                                <mrow>\phi(g')=h=\phi(g) \amp \iff \phi(g)=\phi(g')</mrow>
+                                <mrow> \amp \iff (\phi(g))^{-1}\phi(g')=e_H</mrow>
+                                <mrow> \amp \iff \phi(g^{-1}g')=e_H</mrow>
+                                <mrow> \amp \iff g^{-1}g'\in \ker\phi</mrow>
+                                <mrow> \amp \iff g'\in g\,\ker\phi</mrow>
+                            </md>.
+                            Thus <m>\phi^{-1}(h)=g\, \ker\phi</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\phi</m> is injective, then <m>\phi(g)=e_H</m> if and only if <m>g=e_G</m>, showing that <m>\ker\phi=\{e_G\}</m>. Inversely, if <m>\phi</m> is not injective, then we can find <m>g\ne g'</m> such that <m>\phi(g)=\phi(g')=h</m>. But then <m>\abs{h^{-1}(h)}=\abs{g\ker\phi}&gt; 1</m>. Since <m>\abs{g\ker\phi}=\abs{\ker\phi}</m> it follows that <m>\abs{\ker\phi}&gt; 1</m> and hence <m>\ker\phi\ne \{e_G\}</m>.  
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </lemma>
+    <example xml:id="eg_first_isom">
+    <title>First isomorphism theorem</title>
+    <statement>
+    <p>
+    Let <m>N=\{e,(12)(34),(13)(24),(14)(23)\}</m>, a normal subgroup of <m>S_4</m>. Use the first isomorphism theorem to identify <m>S_4/N</m> with a familiar group.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We convinced ourselves earlier that <m>S_4/N</m> was isomorphic to <m>D_3</m>, which is isomorphic to <m>S_3</m>. That argument involved finding appropriate generators of the quotient group that gave us the <m>D_3</m> relations. Let's see how the first isomorphism theorem can clean things up a bit. 
+    </p>
+    <p>
+        Consider the set <m>D=\{D_1,D_2,D_3\}</m> where
+        <md>
+            <mrow>D_1 \amp =\{\{1,2\},\{3,4\}\}</mrow>
+            <mrow>D_2 \amp =\{\{1,3\},\{2,4\}\}</mrow>
+            <mrow>D_3 \amp =\{\{1,4\},\{2,3\}\}</mrow>
+        </md>.
+        In other words, <m>D</m> is the set of all partitions of <m>\{1,2,3,4\}</m> into two disjoint sets of cardinality 2. It is easy to see that $S_4$ acts on <m>D</m> as 
+        <me>
+            \sigma\cdot \{\{a,b\},\{c,d\}\}=\{\{\sigma(a),\sigma(b)\},\{\sigma(c),\sigma(d)\}\}
+        </me>.
+        As such we get a homomorphism <m>\phi\colon S_4\rightarrow S_3</m> that associates to each <m>\sigma\in S_4</m> its corresponding permutation of the elements of <m>D</m>. The first isomorphism theorem tells us that <m>S_4/\ker\phi\cong \im \phi</m>. We will show that <m>\ker\phi=N</m> and <m>\im\phi=S_A</m>, from whence it follows that 
+        <me>
+            S_4/N\cong S_D\cong S_3
+        </me>,
+        where the last isomorphism follows from the fact that <m>\abs{D}=3</m>. 
+    </p>
+    <p>
+        Let's see why <m>\ker\phi=N</m>. Note that by definition for an element <m>\sigma</m> to lie in <m>\ker\phi</m>, we need 
+        <md>
+            <mrow>\sigma\cdot D_1 \amp =D_1 \amp \sigma\cdot D_2\amp=D_2 \amp \sigma\cdot D_3\amp= D_3</mrow>
+        </md>. 
+        An argument similar to the ones we used to compute normalizers and centralizers in <m>S_4</m> shows that given <m>d=\{\{a,b\},\{c,d\}\}\in D</m>, we have 
+        <me>
+            \sigma\cdot d=d \iff \sigma\in \angvec{(a\ c\ b\ d),(a\ b)}=\{e, (ab),(cd),(ac)(bd),(ad)(bc),(acbd),(ab)(cd),(adbc)}
+        </me>.
+        It follows that <m>\sigma\cdot D_i=D_i</m> for all <m>1\leq i\leq 3</m> if and only if <m>\sigma\in N</m>. Thus <m>\ker\phi=N</m>. 
+    </p>
+
+    <p>
+        Having proved that <m>N=\ker\phi</m>, the first isomorphism tells us that <m>S_4/N\cong \im\phi</m>, and in particular
+        <me>
+            \abs{\im\phi}=\abs{S_4/N}=\frac{24}{4}=6
+        </me>.
+        Since <m>\abs{S_A}=6</m>, we conclude that <m>\im\phi=S_A</m>, and hence that <m>S_4/N\cong S_A</m>, as claimed.
+    </p>
+    </solution>
+    </example>
+    
+    <example xml:id="eg_first_isom_matrices">
+    <title>First isomorphism theorem: <m>\SL_n(R)</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be one of our familiar rings: <ie/>, <m>R=\Z,\Q,\R,\C</m> or <m>R=\Z/m\Z</m> for some positive integer <m>m</m>. Fix a positive integer <m>n</m> and define 
+    <me>
+        \SL_n(R)=\{A\in \GL_n(R)\mid \det A=1\}
+    </me>.
+    Show that <m>\SL_n(R)</m> is normal in <m>\GL_n(R)</m> and identify the quotient <m>\GL_n(R)/\SL_n(R)</m> with a familiar group.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    The determinant map <m>\det \GL_n(R)\rightarrow R^*</m> is a group homomorphism, and it is easy to see that it is surjective: given <m>r\in R^*</m> the diagonal matrix <m>A</m> with <m>r</m> in the first diagonal entry and 1's elsewhere satisfies <m>\det A=r</m>. 
+    </p>
+    <p>
+        By definition we have <m>\SL_n(R)=\ker \det</m>. It follows that <m>\SL_n(R)\normalin \GL_n(R)</m> and we have 
+        <me>
+            \GL_n(R)/\SL_n(R)\cong \im \det =R^*
+        </me>
+        by the first isomorphism theorem. 
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_first_isom_RmodZ">
+    <title>First isomorphism theorem: <m>\R/\Z</m></title>
+    <statement>
+    <p>
+    Let <m>S_1=\{z\in \C\mid \abs{z}=1\}</m>, and let <m>U=\{z\in \C\mid z^n=1 \text{ for some } n\in \Z_{&gt; 0}\}</m>
+    <ol>
+        <li>
+            <p>
+                Prove that <m>S^1</m> is a subgroup of <m>\C^*</m> and that <m>U</m> is a subgroup of <m>S_1</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Prove that <m>\R/\Z\cong S^1</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Prove that <m>\Q/\Z\cong U</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    This example relies on the following notions from complex arithmetic. 
+    <ul>
+        <li>
+            <p>
+                Given <m>z=a+bi\in \C</m>, with <m>a,b\in \R</m>, we define its <term>modulus</term> as <m>\abs{z}=\sqrt{a^2+b^2}</m>. Geometrically, this is just the length of the vector <m>v=(a,b)\in \R^2</m>. 
+            </p>
+        </li>
+        <li>
+           Given <m>z=a+bi</m>, if the point <m>(a,b)</m> has polar coordinates <m>(r,\theta)</m>, then we have <m>z=r\cos\theta+r\sin\theta\, i=r(\cos\theta+\sin\theta\, i)</m>. Defining 
+           <me>
+            e^{i\theta}=\cos\theta+i\sin\theta
+           </me>,
+           we have <m>z=re^{i\theta}</m>. If we specify that <m>r\geq 0</m>, then we have 
+           <me>
+            r=\sqrt{a^2+b^2}=\abs{z}
+           </me>.
+        </li>
+        <li>
+            <p>
+                Given <m>z=re^{i\theta}</m> and <m>w=se^{i\psi}</m>, we have 
+                <me>
+                    zw=(rs)e^{i(\theta+\psi)}
+                </me>.
+                In other words, geomtrically speaking, two multiply two complex numbers, we (a) multiply their moduli, and (b) add their angles. 
+                
+            </p>
+        </li>
+    </ul>
+    Using these properties, we see that the map <m>\phi\colon \R\rightarrow S^1</m> defined as <m>\phi(t)=e^{2\pi i\ t}</m> is a group homomorphism with kernel <m>\Z</m>. We leave the details to discussion section. 
+    </p>
+    </solution>
+    </example>
+    <activity xml:id="spec_circle_group">
+    <title>Circle group and roots of unity</title>
+    <statement>
+    <p>
+    The sets 
+    <md>
+        <mrow>S^1\amp =\{z\in \C\mid \abs{z}=1\}  \amp U=\{z\in \C\mid z^n=1 \text{ for some } n\in \Z_{&gt; 0} \} </mrow>
+    </md>
+    are subgroups of <m>\C^*</m> called the <term>circle group</term> and <term>roots of unity</term> of <m>\C</m>, respectively. 
+    </p>
+    </statement>
+    </activity>
+    
+    
+        
+   
+
+</section>

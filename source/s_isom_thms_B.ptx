@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_isom_thms_B" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Isomorphism theorems: second and third</title>
+
+    <proposition xml:id="prop_subgroup_prod">
+        <title>Product of subgroups</title>
+        <statement>
+            <p>
+                Let <m>H</m> and <m>K</m> be subgroups of <m>G</m>. We define 
+                <me>
+                    HK=\{hk\mid h\in H, k\in K\}
+                </me>.
+                <ol>
+                    <li>
+                        <p>
+                            We have 
+                            <men>
+                              \abs{HK}\abs{H\cap K}=\abs{H}\abs{K}
+                            </men>.
+                            In particular, if <m>H</m> and <m>K</m> are finite, then we have 
+                            <men xml:id="eq_prod_sub_index">
+                            \abs{HK}=\frac{{H}{K}}{H\cap K}
+                            </men>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>HK</m> is a subgroup of <m>G</m> if and only if <m>HK=KH</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>H\leq N_G(K)</m>, then <m>HK</m> is a subgroup. In particular, if <m>K\normalin G</m>, then <m>HK</m> is a subgroup of <m>G</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Consider the map of sets
+                            <me>
+                                f\colon H\times K\rightarrow HK
+                            </me>
+                            defined by <m>\phi(h,k)=hk</m>. This map is surjective by definition of <m>HK</m>. Given any <m>g=hk\in HK</m>, we have 
+                            <md>
+                                <mrow>f\left((h',k')\right)=hk \amp \iff h'k'=hk </mrow>
+                                <mrow> \amp \iff h^{-1}h'=k(k')^{-1}</mrow>
+                            </md>.
+                            Let <m>t=h^{-1}h'=k(k')^{-1}</m>, and notice that <m>t\in H\cap K</m>. It follows easily that for all <m>g=hk\in HK</m>, we have 
+                            <me>
+                                f^{-1}(g)=\{(ht,t^{-1}k)\mid t\in H\cap K\}
+                            </me>.
+                            Furthermore, the map 
+                            <md>
+                                <mrow>H\cap K \amp \rightarrow f^{-1}(hk)</mrow>
+                                <mrow>t \amp\longmapsto (ht,t^{-1}k) </mrow>
+                            </md>
+                            can be shown to be a bijection. 
+                        </p>
+                        <p>Now, if <m>H</m> and <m>K</m> are finite, then <m>HK</m> and <m>H\cap K</m> are finite, and we have 
+                            <md>
+                                <mrow>\abs{H}\times \abs{K} \amp =\abs{H\times K}</mrow>
+                                <mrow> \amp =\abs{\bigcup_{g\in HK}f^{-1}(g)}</mrow>
+                                <mrow> \amp =\sum_{g\in HK}\abs{f^{-1}(g)}</mrow>
+                                <mrow> \amp = \sum_{g\in HK}\abs{H\cap K}</mrow>
+                                <mrow> \amp =\abs{HK}\cdot \abs{H\cap K}</mrow>
+                            </md>,
+                            as desired. 
+                        </p>
+                        <p>
+                            Moreover, if either <m>H</m> or <m>K</m> is infinite, then so is <m>HK</m>, in which case the equality <m>\abs{HK}\abs{H\cap K}=\abs{H}\abs{K}</m> still holds. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Left as an exercise. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Left as an exercise. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+
+    <theorem xml:id="th_isom_thm_2">
+        <title>Second isomorphism theorem</title>
+        <statement>
+            <p>
+                Let <m>H</m> and <m>K</m> be subgroups of the group <m>G</m> and assume <m>H\subseteq N_G(K)</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>K\normalin HK</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>HK/K\cong H/H\cap K</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                First we prove <m>K\normalin HK</m>. Given <m>k\in K</m> and <m>g=hk'\in HK</m>, we have 
+                <md>
+                    <mrow>gkg^{-1} \amp = hk'k(k')^{-1}h^{-1}</mrow>
+                    <mrow> \amp =hk''h^{-1} \text{ for some } k''\in K \amp (K \text{ subgroup}) </mrow>
+                    <mrow> \amp =k''' \text{ for some } k'''\in K \amp \amp (H\subseteq N_G(K)) </mrow>
+                </md>.
+            </p>
+            <p>
+                To prove the stated isomorphism, we start with the quotient map 
+                <me>
+                    \pi\colon HK\rightarrow HK/K
+                </me>
+                and let <m>\psi=\pi\vert_H</m>, its restriction to the subgroup <m>H\leq HK</m>. We have 
+                <md>
+                    <mrow>\ker \psi \amp = H\cap \ker\pi \amp (\psi=\pi\vert_H)</mrow>
+                    <mrow> \amp =H\cap K \amp (\ker\pi=K)</mrow>
+                </md>.
+                By the first isomorphism theorem, we have <m>H/H\cap K\cong \im\psi</m>. It remains to show that <m>\im\psi=\im\pi=HK/K</m>. Given any <m>gK\in HK/K</m>, we have <m>g=hk</m> for some <m>h\in H</m> and <m>k\in K</m>, in which case 
+                <me>
+                    gK=hkK=hK
+                </me>.
+                It follows that
+                <me>
+                    gK=\pi(h)=\psi(h)
+                </me>.
+                This proves <m>\psi</m> is surjective, and hence that <m>\im\psi=HK/K</m>. 
+            </p>
+        </proof>
+    </theorem>
+    <remark>
+        <title>Second isomorphism theorem</title>
+        
+        <p>
+            The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the <em>diamond isomorphism theorem</em>. 
+        </p>
+        sibd
+       <figure xml:id="fig_2nd_isom_thm">
+        <caption>Lattice diagram of second isomorhphism theorem</caption>
+        <image width="40%">
+            <shortdescription>Lattice diagram of second isomorhphism theorem</shortdescription>
+            <latex-image>
+            \begin{tikzcd}
+            \amp HK \arrow[rd,dash, "\text{norm.}"] \arrow[ld,dash] \\
+            H \arrow[rd,dash,"\text{norm.}"'] \amp  \amp K \arrow[ld,dash] \\
+            \amp H\cap K \\
+            \end{tikzcd}
+            </latex-image>
+        </image>
+       </figure>
+       <p>
+        <xref ref="th_isom_thm_2"/> further tells us that <m>H/H\cap K\cong HK/K</m>. 
+       </p>
+    </remark>
+    <theorem xml:id="th_third_isom">
+    <title>Third isomorphism theorem</title>
+    <statement>
+    <p>
+    Let <m>\phi\colon G\rightarrow G'</m> be a surjective homomorphism, and suppose <m>N</m> is a normal subgroup of <m>G</m> containing <m>\ker\phi</m>. 
+    <ol>
+        <li>
+            <p>
+                <m>\phi(N)\normalin  G'</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>G/N \cong G'/\phi(N)</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <convention>
+        <title>Images under quotients</title>
+        
+        <p>
+            Let <m>N</m> be a normal subgroup of <m>G</m>. Given any subset <m>A\subseteq G</m>, we denote by <m>A/N</m> its image under the quotient map <m>\pi\colon G\rightarrow G/N</m>.
+        </p>
+    </convention>
+    <corollary xml:id="cor_second_isom_theorem">
+        <title>Quotients of quotients</title>
+        <statement>
+            <p>
+                Let <m>N_1</m> and <m>N_2</m> be normal subgroups of <m>G</m> and assume <m>N_1\leq N_2</m>. We have 
+                <me>
+                    (G/N_1)/(N_2/N_1)\cong G/N_2
+                </me>.
+                
+            </p>
+        </statement>
+    </corollary>
+
+</section>
