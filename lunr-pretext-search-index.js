@@ -1780,7 +1780,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.14",
   "title": "Isomorphism theorems: second and third",
-  "body": " Isomorphism theorems: second and third   Product of subgroups   Let and be subgroups of . We define .   We have . In particular, if and are finite, then we have .     is a subgroup of if and only if .    If , then is a subgroup. In particular, if , then is a subgroup of .          Consider the map of sets defined by . This map is surjective by definition of . Given any , we have . Let , and notice that . It follows easily that for all , we have . Furthermore, the map can be shown to be a bijection.  Now, if and are finite, then and are finite, and we have , as desired.  Moreover, if either or is infinite, then so is , in which case the equality still holds.    Left as an exercise.    Left as an exercise.        Second isomorphism theorem   Let and be subgroups of the group and assume .         .       First we prove . Given and , we have .  To prove the stated isomorphism, we start with the quotient map and let , its restriction to the subgroup . We have . By the first isomorphism theorem, we have . It remains to show that . Given any , we have for some and , in which case . It follows that . This proves is surjective, and hence that .     Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem . sibd  Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .    Third isomorphism theorem   Let be a surjective homomorphism, and suppose is a normal subgroup of containing .    .     .            Images under quotients  Let be a normal subgroup of . Given any subset , we denote by its image under the quotient map .    Quotients of quotients   Let and be normal subgroups of and assume . We have .    "
+  "body": " Isomorphism theorems: second and third   Product of subgroups   Let and be subgroups of . We define .   We have . In particular, if and are finite, then we have .     is a subgroup of if and only if .    If , then is a subgroup. In particular, if , then is a subgroup of .          Consider the map of sets defined by . This map is surjective by definition of . Given any , we have . Let , and notice that . It follows easily that for all , we have . Furthermore, the map can be shown to be a bijection.  Now, if and are finite, then and are finite, and we have , as desired.  Moreover, if either or is infinite, then so is , in which case the equality still holds.    Left as an exercise.    Left as an exercise.        Second isomorphism theorem   Let and be subgroups of the group and assume .         .       First we prove . Given and , we have .  To prove the stated isomorphism, we start with the quotient map and let , its restriction to the subgroup . We have . By the first isomorphism theorem, we have . It remains to show that . Given any , we have for some and , in which case . It follows that . This proves is surjective, and hence that .     Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem .   Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .    Third isomorphism theorem   Let be a surjective homomorphism, and suppose is a normal subgroup of containing .    .     .            Images under quotients  Let be a normal subgroup of . Given any subset , we denote by its image under the quotient map .    Quotients of quotients   Let and be normal subgroups of and assume . We have .    "
 },
 {
   "id": "prop_subgroup_prod",
@@ -1807,7 +1807,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.114",
   "title": "Second isomorphism theorem.",
-  "body": " Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem . sibd  Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .  "
+  "body": " Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem .   Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .  "
 },
 {
   "id": "th_third_isom",
@@ -1835,6 +1835,33 @@ var ptx_lunr_docs = [
   "number": "1.118",
   "title": "Quotients of quotients.",
   "body": " Quotients of quotients   Let and be normal subgroups of and assume . We have .   "
+},
+{
+  "id": "s_isom_thms_C",
+  "level": "1",
+  "url": "s_isom_thms_C.html",
+  "type": "Section",
+  "number": "1.15",
+  "title": "Fourth isomorphism theorem",
+  "body": " Fourth isomorphism theorem   Fourth isomorphism theorem   Let be a surjective homomorphism, and let . Define . In other words, is the set of all subgroups of containing , and is the set of all subgroups of .   There is a bijective correspondence between and given as follows:   Fourth isomorphism theorem bijection      For , we have             Fourth isomorphism theorem: quotients   Let be a normal subgroup of . The subgroups of are in bijective correspondence with the subgroups of containing . Furthermore, this correspondence preserves normality, inclusion, intersection, generated subgroups, .    "
+},
+{
+  "id": "th_isom_thms_4",
+  "level": "2",
+  "url": "s_isom_thms_C.html#th_isom_thms_4",
+  "type": "Theorem",
+  "number": "1.119",
+  "title": "Fourth isomorphism theorem.",
+  "body": " Fourth isomorphism theorem   Let be a surjective homomorphism, and let . Define . In other words, is the set of all subgroups of containing , and is the set of all subgroups of .   There is a bijective correspondence between and given as follows:   Fourth isomorphism theorem bijection      For , we have           "
+},
+{
+  "id": "cor_4th_isom_thm",
+  "level": "2",
+  "url": "s_isom_thms_C.html#cor_4th_isom_thm",
+  "type": "Corollary",
+  "number": "1.120",
+  "title": "Fourth isomorphism theorem: quotients.",
+  "body": " Fourth isomorphism theorem: quotients   Let be a normal subgroup of . The subgroups of are in bijective correspondence with the subgroups of containing . Furthermore, this correspondence preserves normality, inclusion, intersection, generated subgroups, .   "
 },
 {
   "id": "appendix-notation",
