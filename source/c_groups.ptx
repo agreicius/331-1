@@ -16,4 +16,5 @@
 <xi:include href="s_quotient_group.ptx" />
 <xi:include href="s_isom_thms_A.ptx" />
 <xi:include href="s_isom_thms_B.ptx" />
+<xi:include href="s_isom_thms_C.ptx" />
 </chapter>
