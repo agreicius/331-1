@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_isom_thms_C" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Fourth isomorphism theorem</title>
+
+    <theorem xml:id="th_isom_thms_4">
+    <title>Fourth isomorphism theorem</title>
+    <statement>
+    <p>
+    Let <m>\phi\colon G\rightarrow H</m> be a surjective homomorphism, and let <m>N=\ker\phi</m>. Define 
+    <md>
+        <mrow>\mathcal{S}_{G,N} \amp =\{K\subseteq G \colon N\leq K\leq G\}</mrow>
+        <mrow>\mathcal{S}_H \amp =\{K\subseteq H\mid K\leq H\}</mrow>
+    </md>.
+    In other words, <m>\mathcal{S}_{G,N}</m> is the set of all subgroups of <m>G</m> containing <m>N</m>, and <m>\mathcal{S}_H</m> is the set of all subgroups of <m>H</m>.
+    <ol>
+        <li>
+            <p>
+                There is a bijective correspondence between <m>\mathcal{S}_{G,N}</m> and <m>\mathcal{S}_H</m> given as follows:
+            </p>
+            <image xml:id="im_4th_isom" width="50%">
+                <shortdescription>Fourth isomorphism theorem bijection</shortdescription>
+                <latex-image>
+                \begin{tikzcd}
+                \mathcal{S}_{G,N} \arrow[r,leftrightarrow] \amp H \\
+                K\arrow[r,mapsto] \amp \phi(K) \\
+                \phi^{-1}(K) \amp K \arrow[l,mapsto]
+                \end{tikzcd}
+                </latex-image>
+            </image>
+        </li>
+        <li>
+            <p>
+                For <m>K,K'\in \mathcal{S}_{G,N}</m>, we have 
+                <mdn>
+                    <mrow>K \text{ normal } \amp \iff \phi(K) \text{ normal} </mrow>
+                    <mrow>K\subseteq K' \amp \iff \phi(K)\subseteq \phi(K')</mrow>
+                    <mrow>\phi(K\cap K') \amp = \phi(K)\cap \phi(K')</mrow>
+                    <mrow>\phi(\angvec{K,K'}) \amp =\angvec{\phi(K),\phi(K')}</mrow>
+
+                </mdn>
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_4th_isom_thm">
+        <title>Fourth isomorphism theorem: quotients</title>
+        <statement>
+            <p>
+                Let <m>N</m> be a normal subgroup of <m>G</m>. The subgroups of <m>G/N</m> are in bijective correspondence with the subgroups of <m>G</m> containing <m>N</m>. Furthermore, this correspondence preserves normality, inclusion, intersection, generated subgroups, <etc/>.
+            </p>
+        </statement>
+    </corollary>
+
+</section>

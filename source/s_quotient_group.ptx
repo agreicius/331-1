@@ -161,6 +161,28 @@
     </p>
     </solution>
     </example>
+    <example xml:id="eg_normal_abelian">
+    <title>Abelian groups</title>
+    <statement>
+    <p>
+    Show that an abelian group <m>G</m> every subgroup is normal. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Let <m>G</m> be abelian. Given a subgroup <m>H\leq G</m>, for any <m>h\in H</m> and <m>g\in G</m> we have 
+    <md>
+        <mrow>ghg^{-1} \amp =gg^{-1}h \amp (G \text{ abelian})</mrow>
+        <mrow> \amp =h\in H</mrow>
+    </md>.
+    It follows that <m>gHg^{-1}H</m> for all <m>g\in G</m> and hence that <m>H</m> is normal. 
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+        Kernels of group homomorphisms are normal subgroups. In fact, as we show below, a subgroup is normal if and <em>only if</em> it is the kernel of a group homomorphism. 
+    </p>
     
     <corollary xml:id="cor_normal_ker">
         <title>Normality and kernels</title>
