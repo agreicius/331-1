@@ -1132,7 +1132,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Homomorphisms",
-  "body": " Homomorphisms   Homomorphism   Let and be groups. A (group) homomorphism is a map satisfying for all .     Homomorphism  There is an important subtlety in the defining property : namely, there are two group operations at play. In more detail, the input of on the left side is a product within the domain group ; the right side on the other hand is a product within the codomain group .  A useful way of thinking of a group homomorphism is as a function between groups that respects the group structure , in the sense articulated by . You might ask: shouldn't a group homomorphism also respect the group identities and group inverses? It turns out that the property is itself enough to guarantee this.    Homomorphism properties   Let be a group homomorphism, and let and be the identity elements of and , respectively.                   Since and is a homomorphism, we have . Now do some algebra in : .    Fix . We have , where the last implication follows from the fact that inverses in groups are unique.        Homormorphisms   Decide whether the given map is a group homormorphism.   Trivial homomorphism  Let and be groups. Define as for all .    Identity map  Let be a group, and let be the identity map as usual.    Fix and define as .    Define as .    Determinant  Assume or for some positive integer . Fix a positive integer and define as .    Exponential map  Define as .           The following proposition serves as a useful tool for constructing homomorphisms out of . You will prove it in your homework.   Homomorphisms from   Fix an integer , and let . Given a group and elements satisfying , the map defined as is a homomorphism.    The proof is left as a homework exercise.     Isomorphism   An isomorphism is a bijective group homomorphism . Groups and are isomorphic , denoted , if there is an isomorphism .     Permutation groups   Let and be finite nonempty sets satisfying . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.    "
+  "body": " Homomorphisms   Homomorphism   Let and be groups. A (group) homomorphism is a map satisfying for all .     Homomorphism  There is an important subtlety in the defining property : namely, there are two group operations at play. In more detail, the input of on the left side is a product within the domain group ; the right side on the other hand is a product within the codomain group .  A useful way of thinking of a group homomorphism is as a function between groups that respects the group structure , in the sense articulated by . You might ask: shouldn't a group homomorphism also respect the group identities and group inverses? It turns out that the property is itself enough to guarantee this.    Homomorphism properties   Let be a group homomorphism, and let and be the identity elements of and , respectively.                   Since and is a homomorphism, we have . Now do some algebra in : .    Fix . We have , where the last implication follows from the fact that inverses in groups are unique.        Homormorphisms   Decide whether the given map is a group homormorphism.   Trivial homomorphism  Let and be groups. Define as for all .    Identity map  Let be a group, and let be the identity map as usual.    Fix and define as .    Define as .    Determinant  Assume or for some positive integer . Fix a positive integer and define as .    Exponential map  Define as .           The following proposition serves as a useful tool for constructing homomorphisms out of . You will prove it in your homework.   Homomorphisms from   Fix an integer , and let . Given a group and elements satisfying , the map defined as is a homomorphism.    The proof is left as a homework exercise.     Isomorphism   An isomorphism is a bijective group homomorphism . Groups and are isomorphic , denoted , if there is an isomorphism .     Permutation groups   Let and be nonempty sets of the same cardinality: , . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.    "
 },
 {
   "id": "d_homomorphism",
@@ -1195,7 +1195,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.56",
   "title": "Permutation groups.",
-  "body": " Permutation groups   Let and be finite nonempty sets satisfying . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.   "
+  "body": " Permutation groups   Let and be nonempty sets of the same cardinality: , . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.   "
 },
 {
   "id": "s_group_action",
@@ -1862,6 +1862,123 @@ var ptx_lunr_docs = [
   "number": "1.120",
   "title": "Fourth isomorphism theorem: quotients.",
   "body": " Fourth isomorphism theorem: quotients   Let be a normal subgroup of . The subgroups of are in bijective correspondence with the subgroups of containing . Furthermore, this correspondence preserves normality, inclusion, intersection, generated subgroups, .   "
+},
+{
+  "id": "s_alt_group",
+  "level": "1",
+  "url": "s_alt_group.html",
+  "type": "Section",
+  "number": "1.16",
+  "title": "Alternating subgroup",
+  "body": " Alternating subgroup   Transposition   Let be a finite set of cardinality at least 2. A -cycle is called a transposition of .     Transpositions generate   Let be a finite set of cardinality at least 2.   Given -cycle , we have .    Let be the set of transpositions of . We have : , is generated by its transpositions.          This is a straightforward proof by induction, the base case being trivial. For the induction step, assume any -cycle can be written as in . Given any -cycle , we have , as desired.    From (1) we see that contains all cycles. Since any permutation can be written as a product of (disjoint) cycles, it follows that .       The {\\em alternating subgroup} of is defined as the set of all {\\em even permutations}, which are defined as the permutations that can be written as a product of an even number of transpositions. We hasten to acknowledge that this definition is highly suspect, since it is not in the least obvious that if a permutation can be written as an even number of transpositions, then it cannot be written as an odd number of transpositions! We will justify the definition at the end of the section after looking at some concrete examples.   Even and odd permutations    the sign map    Let be a finite set of cardinality at least 2. A permutation is called even if it can be written as a product of an even number of transpositions, and odd if it can be written as an odd product of transpositions. Two permutations have the same parity if they are both even or both odd.  We define the sign map as Equivalently, if can be written as a product of transpositions, then .     Sign of permutations   From , we see that any -cycle can be written as a product of transpositions. It follows that a -cycle is even if and only if is odd.  What about the identity permutation ? Since for any -cycle, we see that is even.     Sign map   Let be a set of cardinality at least 2. The sign map is a surjective homomorphism.    The proof is straightforward, assuming of course that our definition of even\/odd is well defined! Indeed, if can be written as a product of traspositions, and can be written as a product of transpositions, then can be written as a product of transpositions, and thus . Surjectivity is clear since and for any transposition .     Alternating subgroup   Let be a finite set of cardinality at least 2. The alternating subgroup of , denoted , is defined as the kernel of : , . Since is a surjective homomorphism, it follows from the first isomorphism theorem that and .       Compute the full lattice of subgroups of and identify any normal subgroups.    Let's first describe all elements of . Below we look at all cycle types of elements in , determine their parity, and count the number of elements of that cycle type. . If is a subgroup of , then since , we have . There are cardinality-2 subgroups generated by the elements of the form . There are exactly cyclic subgroups of cardinality : one for each pair . Furthermore, as we have seen before, we have , a cardinality-4 subgroup isomorphic to the Klein 4-group. Since conjugation preserves cycle type, and since this subgroup contains all elements of type , it is easy to see that it is normal. This gives rise to the the lattice of subgroups in . We claim that this is the complete lattice of subgroups. It suffices to argue that any subgroup of containing an element of the form and an element of the form must be all of . It is not difficult to show this just by computing some products of elements of order 2 and 3. Below you find a slightly slicker argument.  Suppose we had a subgroup containing $H=\\angvec{(12)(34)}$ and . It would follow that . Since and , we have and thus . But then we must have , in which case is normal in since . Since all elements of type are conjugate in (as one can easily verify), we'd have . This is a contradiction, since . Thus there is no such .     Lattice of subgroups of   Lattice of subgroups of A4     We now set about proving that our definition of the parity of a permutation is well defined. There are many ways of doing this. The text uses an argument based on the discriminant polynomial and the observation that given any , we have . We will pursue a completely different line of thought, thereby supplementing the book's nice proof, with another one. Our approach has the added advantage of making uses of an interesting group homomorphism . Moreover, our argument gives us the opportunity of introducing another important subgroug of the general linear group, called the orthogonal group.   Orthogonal group   Let be a positive integer. The orthogonal subgroup of ,denoted , is defined as the set of satisfying : , . We leave as an exercise the fact that is a subgroup of , and hence a group in its own right.     Permutation group representation   Let be an integer. For all , let be the -tuple whose -th coordinate is , and whose other coordinates are . Given , we define to be the unique matrix in satisfying for all .   The map defines a group homomorphism .    The composition defines a surjective group homomorphism .    We have if and only if can be written as a product of an even number of transpositions. As a result, is well defined.       The proof is left as an exercise.     Parity  At last, thanks to , we see that our definition of parity is well defined. But wait, you might object, applies only to , not a general permutatio group . Of course, the easy way to get around this is to choose an isomorphism from to that sends transpositions to transpositions (the isomorphism in does this), and compose this with .  There is another way of seeing this, however. Namely, tells us that has a normal subgroup of index 2, and hence so does and , where . In fact, it is possible to show that has exactly one such subgroup, and it is made up precisely of the elements of that can be written as a product of an even number of transpositions. We leave this fact as an exercise.   "
+},
+{
+  "id": "d_transposition",
+  "level": "2",
+  "url": "s_alt_group.html#d_transposition",
+  "type": "Definition",
+  "number": "1.121",
+  "title": "Transposition.",
+  "body": " Transposition   Let be a finite set of cardinality at least 2. A -cycle is called a transposition of .   "
+},
+{
+  "id": "th_transp_generate",
+  "level": "2",
+  "url": "s_alt_group.html#th_transp_generate",
+  "type": "Theorem",
+  "number": "1.122",
+  "title": "Transpositions generate <span class=\"process-math\">\\(S_n\\)<\/span>.",
+  "body": " Transpositions generate   Let be a finite set of cardinality at least 2.   Given -cycle , we have .    Let be the set of transpositions of . We have : , is generated by its transpositions.          This is a straightforward proof by induction, the base case being trivial. For the induction step, assume any -cycle can be written as in . Given any -cycle , we have , as desired.    From (1) we see that contains all cycles. Since any permutation can be written as a product of (disjoint) cycles, it follows that .      "
+},
+{
+  "id": "d_even_odd",
+  "level": "2",
+  "url": "s_alt_group.html#d_even_odd",
+  "type": "Definition",
+  "number": "1.123",
+  "title": "Even and odd permutations.",
+  "body": " Even and odd permutations    the sign map    Let be a finite set of cardinality at least 2. A permutation is called even if it can be written as a product of an even number of transpositions, and odd if it can be written as an odd product of transpositions. Two permutations have the same parity if they are both even or both odd.  We define the sign map as Equivalently, if can be written as a product of transpositions, then .   "
+},
+{
+  "id": "eg_sign",
+  "level": "2",
+  "url": "s_alt_group.html#eg_sign",
+  "type": "Example",
+  "number": "1.124",
+  "title": "Sign of permutations.",
+  "body": " Sign of permutations   From , we see that any -cycle can be written as a product of transpositions. It follows that a -cycle is even if and only if is odd.  What about the identity permutation ? Since for any -cycle, we see that is even.   "
+},
+{
+  "id": "prop_sign",
+  "level": "2",
+  "url": "s_alt_group.html#prop_sign",
+  "type": "Proposition",
+  "number": "1.125",
+  "title": "Sign map.",
+  "body": " Sign map   Let be a set of cardinality at least 2. The sign map is a surjective homomorphism.    The proof is straightforward, assuming of course that our definition of even\/odd is well defined! Indeed, if can be written as a product of traspositions, and can be written as a product of transpositions, then can be written as a product of transpositions, and thus . Surjectivity is clear since and for any transposition .   "
+},
+{
+  "id": "spec_alternating",
+  "level": "2",
+  "url": "s_alt_group.html#spec_alternating",
+  "type": "Specimen",
+  "number": "13",
+  "title": "Alternating subgroup.",
+  "body": " Alternating subgroup   Let be a finite set of cardinality at least 2. The alternating subgroup of , denoted , is defined as the kernel of : , . Since is a surjective homomorphism, it follows from the first isomorphism theorem that and .   "
+},
+{
+  "id": "eg_A4",
+  "level": "2",
+  "url": "s_alt_group.html#eg_A4",
+  "type": "Example",
+  "number": "1.126",
+  "title": "<span class=\"process-math\">\\(A_4\\)<\/span>.",
+  "body": "   Compute the full lattice of subgroups of and identify any normal subgroups.    Let's first describe all elements of . Below we look at all cycle types of elements in , determine their parity, and count the number of elements of that cycle type. . If is a subgroup of , then since , we have . There are cardinality-2 subgroups generated by the elements of the form . There are exactly cyclic subgroups of cardinality : one for each pair . Furthermore, as we have seen before, we have , a cardinality-4 subgroup isomorphic to the Klein 4-group. Since conjugation preserves cycle type, and since this subgroup contains all elements of type , it is easy to see that it is normal. This gives rise to the the lattice of subgroups in . We claim that this is the complete lattice of subgroups. It suffices to argue that any subgroup of containing an element of the form and an element of the form must be all of . It is not difficult to show this just by computing some products of elements of order 2 and 3. Below you find a slightly slicker argument.  Suppose we had a subgroup containing $H=\\angvec{(12)(34)}$ and . It would follow that . Since and , we have and thus . But then we must have , in which case is normal in since . Since all elements of type are conjugate in (as one can easily verify), we'd have . This is a contradiction, since . Thus there is no such .   "
+},
+{
+  "id": "fig_A4",
+  "level": "2",
+  "url": "s_alt_group.html#fig_A4",
+  "type": "Figure",
+  "number": "1.127",
+  "title": "",
+  "body": " Lattice of subgroups of   Lattice of subgroups of A4    "
+},
+{
+  "id": "s_alt_group-11",
+  "level": "2",
+  "url": "s_alt_group.html#s_alt_group-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "orthogonal "
+},
+{
+  "id": "spec_ortho_group",
+  "level": "2",
+  "url": "s_alt_group.html#spec_ortho_group",
+  "type": "Specimen",
+  "number": "14",
+  "title": "Orthogonal group.",
+  "body": " Orthogonal group   Let be a positive integer. The orthogonal subgroup of ,denoted , is defined as the set of satisfying : , . We leave as an exercise the fact that is a subgroup of , and hence a group in its own right.   "
+},
+{
+  "id": "th_permutation_rep",
+  "level": "2",
+  "url": "s_alt_group.html#th_permutation_rep",
+  "type": "Theorem",
+  "number": "1.128",
+  "title": "Permutation group representation.",
+  "body": " Permutation group representation   Let be an integer. For all , let be the -tuple whose -th coordinate is , and whose other coordinates are . Given , we define to be the unique matrix in satisfying for all .   The map defines a group homomorphism .    The composition defines a surjective group homomorphism .    We have if and only if can be written as a product of an even number of transpositions. As a result, is well defined.       The proof is left as an exercise.   "
+},
+{
+  "id": "s_alt_group-14",
+  "level": "2",
+  "url": "s_alt_group.html#s_alt_group-14",
+  "type": "Remark",
+  "number": "1.129",
+  "title": "Parity.",
+  "body": " Parity  At last, thanks to , we see that our definition of parity is well defined. But wait, you might object, applies only to , not a general permutatio group . Of course, the easy way to get around this is to choose an isomorphism from to that sends transpositions to transpositions (the isomorphism in does this), and compose this with .  There is another way of seeing this, however. Namely, tells us that has a normal subgroup of index 2, and hence so does and , where . In fact, it is possible to show that has exactly one such subgroup, and it is made up precisely of the elements of that can be written as a product of an even number of transpositions. We leave this fact as an exercise.  "
 },
 {
   "id": "appendix-notation",
