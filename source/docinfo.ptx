@@ -107,6 +107,7 @@
     \DeclareMathOperator{\ML}{M}
     \DeclareMathOperator{\Gal}{Gal}
     \DeclareMathOperator{\ab}{ab}
+    \DeclareMathOperator{\sgn}{sgn}
     \DeclareMathOperator{\len}{len}
     \DeclareMathOperator{\proj}{proj}
     \newcommand{\surjects}{\twoheadrightarrow}

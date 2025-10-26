@@ -17,4 +17,5 @@
 <xi:include href="s_isom_thms_A.ptx" />
 <xi:include href="s_isom_thms_B.ptx" />
 <xi:include href="s_isom_thms_C.ptx" />
+<xi:include href="s_alt_group.ptx" />
 </chapter>

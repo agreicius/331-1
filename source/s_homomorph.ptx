@@ -160,7 +160,7 @@
     <title>Permutation groups</title>
     <statement>
     <p>
-    Let <m>A</m> and <m>B</m> be finite nonempty sets satisfying <m>\abs{A}=\abs{B}</m>. 
+    Let <m>A</m> and <m>B</m> be nonempty sets of the same cardinality: <ie/>, <m>\abs{A}=\abs{B}</m>. 
 
     Prove: <m>S_A\cong S_B</m>. 
     </p>
