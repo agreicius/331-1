@@ -210,7 +210,7 @@
             <p>
                 We have 
                 <mdn>
-                    <mrow>\abs{G} \amp = \abs{G}\abs{G/H}</mrow>
+                    <mrow>\abs{G} \amp = \abs{H}\abs{G/H}</mrow>
                 </mdn>.
                 When <m>G</m> is infinite, this can be interpreted as saying <m>H</m> is infinite or <m>G/H</m> is infinite. 
             </p>

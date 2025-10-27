@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_group_actions_orbits" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group actions: orbits</title>
+
+    <definition xml:id="d_orbits">
+<title>Orbits</title>
+<statement>
+<p>
+Let <m>G\times A\rightarrow A</m> be a group action. Given <m>a\in A</m>, we define its <term>orbit</term> <m>O_a</m> as 
+<men xml:id="eq_orbit">
+    O_a=\{a'\mid a'=g\cdot a \text{ for some } g\in G\}=\{g\cdot a\mid g\in G\}
+</men>.
+</p>
+</statement>
+</definition>
+<definition xml:id="d_transitive">
+<title>Transitive group action</title>
+<statement>
+<p>
+A group action <m>G\times A\rightarrow A</m> is transitive if for all <m>a,a'\in A</m> there is a <m>g\in G</m> satisfying <m>a'=g\cdot a</m>. 
+</p>
+</statement>
+</definition>
+<theorem xml:id="th_index_p">
+<title>Subgroups of prime index</title>
+<statement>
+<p>
+Let <m>G</m> be a finite group and let <m>p</m> be the smallest prime divisor of <m>\abs{G}</m>. If <m>H</m> is a subgroup of <m>G</m> of index <m>p</m>, then <m>H</m> is normal. 
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+
+
+<theorem xml:id="th_transitive_action">
+<title>Orbit-stabilizer</title>
+<statement>
+<p>
+Let <m>G\times A\rightarrow A</m> be a group action.
+<ol>
+    <li>
+        <p>
+            For all <m>a\in A</m>, the function 
+            <md>
+                <mrow>f\colon G/G_a \amp \rightarrow O_a</mrow>
+                <mrow>gG_a \amp \mapsto g\cdot a</mrow>
+            </md>
+            is an isomorphism of <m>G</m>-sets, where <m>G</m> acts on <m>G/G_a</m> by left multiplication, and the action of <m>G</m> on <m>O_a</m> is given by restriction. 
+        </p>
+    </li>
+    <li>
+        <p>
+            For all <m>a\in A</m> we have 
+            <men xml:id="eq_orbit-stabilizer">
+                \abs{O_a}=[G\colon G_a]
+            </men>.
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+<theorem xml:id="th_orbit_decomp">
+<title>Orbit decomposition theorem</title>
+<statement>
+<p>
+Let <m>G\times A\rightarrow A</m> be a group action. 
+<ol>
+    <li>
+        <p>
+            The relation <m>a\sim a'</m> if and only if <m>a'\in O_a</m> is an equivalence relation whose equivalence classes are the distinct orbits <m>O_a</m> of the group action. As a result, we have a partition 
+            <me>
+                A=\bigcup_{a\in A}O_a
+            </me>
+            of <m>A</m> into disjoint orbits, and <m>O_a=O_{a'}</m> if and only if <m>a'\in O_a</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            As a <m>G</m>-set,  <m>A</m> decomposes into a disjoint union of transitive <m>G</m>-sets, each of which is isomorphic as a <m>G</m>-set to <m>G/H</m> for some subgroup <m>H\leq G</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+
+</section>

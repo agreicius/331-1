@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_group_actions_stabilizers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group actions: stabilizer</title>
+    <definition xml:id="d_Gsets">
+    <title>G-sets</title>
+    <statement>
+    <p>
+        Let <m>G</m> be a group. A <term>G-set</term> is a nonempty set <m>A</m> together with a group action <m>G\times A\rightarrow A</m>. 
+    </p>
+    <p>
+        Given <m>G</m>-sets <m>A</m> and <m>B</m>, a <term><m>G</m>-set morphism</term> is a function <m>f\colon A\rightarrow B</m> satisfying 
+        <men xml:id="eq_Gset_morphism">
+            f(g\cdot a)=g\cdot f(a)
+        </men>
+    for all <m>g\in G</m> and <m>a\in A</m>. A <term><m>G</m>-set isomorphism</term> is a bijective <m>G</m>-set morphism.
+    </p>
+    </statement>
+    </definition>
+    
+    <definition xml:id="d_">
+    <title>Stabilizers and kernels of actions</title>
+    <notation>
+        <usage><m>G_X</m></usage>
+      <description>group action stabilizer of <m>X</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>G</m> be a group, and let <m>A</m> be a <m>G</m>-set.
+        Given a <m>G</m>-set <m>A</m> and nonempty subset <m>X\subseteq A</m>, the <term>stabilizer</term> of <m>X</m> is the set <m>G_X</m> of all elements of <m>G</m> that fix every element of <m>X</m>: <ie/>, 
+        <men xml:id="eq_stabilizer">
+            G_X=\{g\in G\mid g\cdot x=x \text{ for all } x\in X\}
+        </men>.
+        In the case of a singleton <m>\{a\}</m>, we write <m>G_a</m> instead of <m>G_{\{a\}}</m>.
+    </p>
+    <p>
+        The <term>kernel</term> of a a group action <m>G\times A\rightarrow A</m> is 
+        <me>
+            G_A=\{g\in G\mid g\cdot a=a \text{ for all } a\in A\}
+        </me>.
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_stab">
+    <title>Stabilizers</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group, and let <m>A</m> be a <m>G</m>-set. 
+    <ol>
+        <li>
+            <p>
+                Given any nonempty subset <m>X\subseteq A</m>, the stabilizer <m>G_X</m> is a subgroup of <m>G</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                For all <m>a\in A</m> and <m>g\in G</m>, letting <m>a'=g\cdot a</m>, we have 
+                <me>
+                    G_{a'}=gG_ag^{-1}
+                </me> 
+            </p>
+        </li>
+        <li>
+            <p>
+                The kernel of the action <m>G_A</m> is a normal subgroup of <m>G</m>, and we have 
+                <men xml:id="eq_kernel">
+                    G_A=\bigcap_{g\in G}gG_ag^{-1}
+                </men>.
+                Furthermore, letting <m>\phi\colon G\rightarrow S_A</m> be the homomorphism associated to the group action <m>G\times A\rightarrow A</m>, we have 
+                <men xml:id="eq_kernel_cum_kernel">
+                    G_A=\ker\phi
+                </men>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_faithful_transitive">
+    <title>Permutation representation and faithfulness</title>
+    <statement>
+    <p>
+        Given a group action <m>G\times A\rightarrow A</m>, the corresponding homomorphism 
+        <md>
+            <mrow>\phi\colon G \amp \rightarrow S_A</mrow>
+            <mrow>g \amp \mapsto \phi_g</mrow>
+        </md>,
+        where <m>\phi_g(a)=g\cdot a</m> for all <m>a\in A</m>, is called the <term>permutation representation</term> associated to the group action. The homomorphism 
+        <me>
+            \phi\colon G\rightarrow S_G
+        </me>
+        associated to the the action of <m>G</m> on itself by left multiplication is called the <term>regular permutation representation</term>. 
+    </p>
+    <p>
+        A group action <m>G\times A\rightarrow A</m> is <term>faithful</term> if <m>G_A=\{e\}</m>: equivalently, if its associated permutation representation is injective. 
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_cayley">
+    <title>Cayley's theorem</title>
+    <statement>
+    <p>
+    Every group <m>G</m> is isomorphic to a subgroup of <m>S_G</m>. If <m>\abs{G}=n&lt; \infty</m>, then <m>G</m> is isomorphic to a subgroup of <m>S_n</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+
+</section>
