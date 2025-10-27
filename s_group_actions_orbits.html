@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Isomorphism theorems: second and third</title>
+<title>Group actions: orbits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_isom_thms_A.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_isom_thms_C.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_group_actions_stabilizers.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Z}{{\mathbb Z}}
@@ -428,11 +428,11 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cosets_lagrange.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Cosets and Lagrange’s theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quotient_group.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Quotient groups</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_A.html" class="internal"><span class="codenumber">1.13</span> <span class="title">First isomorphism theorem</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_isom_thms_B.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Isomorphism theorems: second and third</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_B.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Isomorphism theorems: second and third</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_C.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Fourth isomorphism theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_alt_group.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Alternating subgroup</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_stabilizers.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Group actions: stabilizer</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_orbits.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Group actions: orbits</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_group_actions_orbits.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Group actions: orbits</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -447,231 +447,100 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_isom_thms_B"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isomorphism theorems: second and third</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_group_actions_orbits"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions: orbits</span>
 </h2>
-<article class="proposition theorem-like" id="prop_subgroup_prod"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.112</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Product of subgroups.</span>
+<article class="definition definition-like" id="d_orbits"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.135</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orbits.</span>
 </h3>
-<div class="para logical" id="prop_subgroup_prod-2-1">
-<div class="para">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> be subgroups of <span class="process-math">\(G\text{.}\)</span> We define</div>
-<div class="displaymath process-math">
-\begin{equation*}
-HK=\{hk\mid h\in H, k\in K\}\text{.}
-\end{equation*}
-</div>
-<ol class="decimal" id="prop_subgroup_prod-2-1-5">
-<li id="prop_subgroup_prod-2-1-5-1">
-<div class="para logical" id="prop_subgroup_prod-2-1-5-1-1">
-<div class="para">We have</div>
-<div class="displaymath process-math" id="prop_subgroup_prod-2-1-5-1-1-1">
+<div class="para logical" id="d_orbits-2-1">
+<div class="para">Let <span class="process-math">\(G\times A\rightarrow A\)</span> be a group action. Given <span class="process-math">\(a\in A\text{,}\)</span> we define its <dfn class="terminology">orbit</dfn> <span class="process-math">\(O_a\)</span> as</div>
+<div class="displaymath process-math" id="eq_orbit">
 \begin{equation}
-\abs{HK}\abs{H\cap K}=\abs{H}\abs{K}\text{.}\tag{1.53}
+O_a=\{a'\mid a'=g\cdot a \text{ for some } g\in G\}=\{g\cdot a\mid g\in G\}\text{.}\tag{1.66}
 \end{equation}
 </div>
-<div class="para">In particular, if <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are finite, then we have</div>
-<div class="displaymath process-math" id="eq_prod_sub_index">
+<div class="autopermalink" data-description="Paragraph"><a href="#d_orbits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.135: Orbits"><a href="#d_orbits" title="Copy heading and permalink for Definition 1.135: Orbits" aria-label="Copy heading and permalink for Definition 1.135: Orbits">🔗</a></div></article><article class="definition definition-like" id="d_transitive"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.136</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Transitive group action.</span>
+</h3>
+<div class="para" id="d_transitive-2-1">A group action <span class="process-math">\(G\times A\rightarrow A\)</span> is transitive if for all <span class="process-math">\(a,a'\in A\)</span> there is a <span class="process-math">\(g\in G\)</span> satisfying <span class="process-math">\(a'=g\cdot a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_transitive-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.136: Transitive group action"><a href="#d_transitive" title="Copy heading and permalink for Definition 1.136: Transitive group action" aria-label="Copy heading and permalink for Definition 1.136: Transitive group action">🔗</a></div></article><article class="theorem theorem-like" id="th_index_p"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.137</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subgroups of prime index.</span>
+</h3>
+<div class="para" id="th_index_p-2-1">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(p\)</span> be the smallest prime divisor of <span class="process-math">\(\abs{G}\text{.}\)</span> If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> of index <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(H\)</span> is normal.<div class="autopermalink" data-description="Paragraph"><a href="#th_index_p-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.137: Subgroups of prime index"><a href="#th_index_p" title="Copy heading and permalink for Theorem 1.137: Subgroups of prime index" aria-label="Copy heading and permalink for Theorem 1.137: Subgroups of prime index">🔗</a></div></article><details id="th_index_p-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_index_p-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_index_p-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.137.1"><a href="#th_index_p-3" title="Copy heading and permalink for Proof 1.137.1" aria-label="Copy heading and permalink for Proof 1.137.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_transitive_action"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.138</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orbit-stabilizer.</span>
+</h3>
+<div class="para logical" id="th_transitive_action-2-1">
+<div class="para">Let <span class="process-math">\(G\times A\rightarrow A\)</span> be a group action.</div>
+<ol class="decimal" id="th_transitive_action-2-1-2">
+<li id="th_transitive_action-2-1-2-1">
+<div class="para logical" id="th_transitive_action-2-1-2-1-1">
+<div class="para">For all <span class="process-math">\(a\in A\text{,}\)</span> the function</div>
+<div class="displaymath process-math" id="th_transitive_action-2-1-2-1-1-2">
+\begin{align*}
+f\colon G/G_a \amp \rightarrow O_a\\
+gG_a \amp \mapsto g\cdot a
+\end{align*}
+</div>
+<div class="para">is an isomorphism of <span class="process-math">\(G\)</span>-sets, where <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G/G_a\)</span> by left multiplication, and the action of <span class="process-math">\(G\)</span> on <span class="process-math">\(O_a\)</span> is given by restriction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_transitive_action-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_transitive_action-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_transitive_action-2-1-2-2">
+<div class="para logical" id="th_transitive_action-2-1-2-2-1">
+<div class="para">For all <span class="process-math">\(a\in A\)</span> we have</div>
+<div class="displaymath process-math" id="eq_orbit-stabilizer">
 \begin{equation}
-\abs{HK}=\frac{{H}{K}}{H\cap K}\text{.}\tag{1.54}
+\abs{O_a}=[G\colon G_a]\text{.}\tag{1.67}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_transitive_action-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#prop_subgroup_prod-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="prop_subgroup_prod-2-1-5-2">
-<div class="para" id="prop_subgroup_prod-2-1-5-2-1">
-<span class="process-math">\(HK\)</span> is a subgroup of <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(HK=KH\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#prop_subgroup_prod-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="prop_subgroup_prod-2-1-5-3">
-<div class="para" id="prop_subgroup_prod-2-1-5-3-1">If <span class="process-math">\(H\leq N_G(K)\text{,}\)</span> then <span class="process-math">\(HK\)</span> is a subgroup. In particular, if <span class="process-math">\(K\normalin G\text{,}\)</span> then <span class="process-math">\(HK\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#prop_subgroup_prod-2-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_transitive_action-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_transitive_action-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 1.112: Product of subgroups"><a href="#prop_subgroup_prod" title="Copy heading and permalink for Proposition 1.112: Product of subgroups" aria-label="Copy heading and permalink for Proposition 1.112: Product of subgroups">🔗</a></div></article><details id="prop_subgroup_prod-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_subgroup_prod-3-1">
-<ol class="decimal" id="prop_subgroup_prod-3-1-1">
-<li id="prop_subgroup_prod-3-1-1-1">
-<div class="para logical" id="prop_subgroup_prod-3-1-1-1-1">
-<div class="para">Consider the map of sets</div>
+<div class="autopermalink" data-description="Theorem 1.138: Orbit-stabilizer"><a href="#th_transitive_action" title="Copy heading and permalink for Theorem 1.138: Orbit-stabilizer" aria-label="Copy heading and permalink for Theorem 1.138: Orbit-stabilizer">🔗</a></div></article><details id="th_transitive_action-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_transitive_action-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_transitive_action-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.138.1"><a href="#th_transitive_action-3" title="Copy heading and permalink for Proof 1.138.1" aria-label="Copy heading and permalink for Proof 1.138.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_orbit_decomp"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.139</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orbit decomposition theorem.</span>
+</h3>
+<div class="para logical" id="th_orbit_decomp-2-1">
+<div class="para">Let <span class="process-math">\(G\times A\rightarrow A\)</span> be a group action.</div>
+<ol class="decimal" id="th_orbit_decomp-2-1-2">
+<li id="th_orbit_decomp-2-1-2-1">
+<div class="para logical" id="th_orbit_decomp-2-1-2-1-1">
+<div class="para">The relation <span class="process-math">\(a\sim a'\)</span> if and only if <span class="process-math">\(a'\in O_a\)</span> is an equivalence relation whose equivalence classes are the distinct orbits <span class="process-math">\(O_a\)</span> of the group action. As a result, we have a partition</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f\colon H\times K\rightarrow HK
+A=\bigcup_{a\in A}O_a
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(\phi(h,k)=hk\text{.}\)</span> This map is surjective by definition of <span class="process-math">\(HK\text{.}\)</span> Given any <span class="process-math">\(g=hk\in HK\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="prop_subgroup_prod-3-1-1-1-1-5">
-\begin{align*}
-f\left((h',k')\right)=hk \amp \iff h'k'=hk \\
-\amp \iff h^{-1}h'=k(k')^{-1}\text{.}
-\end{align*}
+<div class="para">of <span class="process-math">\(A\)</span> into disjoint orbits, and <span class="process-math">\(O_a=O_{a'}\)</span> if and only if <span class="process-math">\(a'\in O_a\text{.}\)</span>
 </div>
-<div class="para">Let <span class="process-math">\(t=h^{-1}h'=k(k')^{-1}\text{,}\)</span> and notice that <span class="process-math">\(t\in H\cap K\text{.}\)</span> It follows easily that for all <span class="process-math">\(g=hk\in HK\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f^{-1}(g)=\{(ht,t^{-1}k)\mid t\in H\cap K\}\text{.}
-\end{equation*}
+<div class="autopermalink" data-description="Paragraph"><a href="#th_orbit_decomp-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Furthermore, the map</div>
-<div class="displaymath process-math" id="prop_subgroup_prod-3-1-1-1-1-10">
-\begin{align*}
-H\cap K \amp \rightarrow f^{-1}(hk)\\
-t \amp\longmapsto (ht,t^{-1}k) 
-\end{align*}
-</div>
-<div class="para">can be shown to be a bijection.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="prop_subgroup_prod-3-1-1-1-2">
-<div class="para">Now, if <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are finite, then <span class="process-math">\(HK\)</span> and <span class="process-math">\(H\cap K\)</span> are finite, and we have</div>
-<div class="displaymath process-math" id="prop_subgroup_prod-3-1-1-1-2-5">
-\begin{align*}
-\abs{H}\times \abs{K} \amp =\abs{H\times K}\\
-\amp =\abs{\bigcup_{g\in HK}f^{-1}(g)}\\
-\amp =\sum_{g\in HK}\abs{f^{-1}(g)}\\
-\amp = \sum_{g\in HK}\abs{H\cap K}\\
-\amp =\abs{HK}\cdot \abs{H\cap K}\text{,}
-\end{align*}
-</div>
-<div class="para">as desired.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="prop_subgroup_prod-3-1-1-1-3">Moreover, if either <span class="process-math">\(H\)</span> or <span class="process-math">\(K\)</span> is infinite, then so is <span class="process-math">\(HK\text{,}\)</span> in which case the equality <span class="process-math">\(\abs{HK}\abs{H\cap K}=\abs{H}\abs{K}\)</span> still holds.<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#prop_subgroup_prod-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_orbit_decomp-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="prop_subgroup_prod-3-1-1-2">
-<div class="para" id="prop_subgroup_prod-3-1-1-2-1">Left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="th_orbit_decomp-2-1-2-2">
+<div class="para" id="th_orbit_decomp-2-1-2-2-1">As a <span class="process-math">\(G\)</span>-set,  <span class="process-math">\(A\)</span> decomposes into a disjoint union of transitive <span class="process-math">\(G\)</span>-sets, each of which is isomorphic as a <span class="process-math">\(G\)</span>-set to <span class="process-math">\(G/H\)</span> for some subgroup <span class="process-math">\(H\leq G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_orbit_decomp-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#prop_subgroup_prod-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="prop_subgroup_prod-3-1-1-3">
-<div class="para" id="prop_subgroup_prod-3-1-1-3-1">Left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#prop_subgroup_prod-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_orbit_decomp-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_orbit_decomp-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.112.1"><a href="#prop_subgroup_prod-3" title="Copy heading and permalink for Proof 1.112.1" aria-label="Copy heading and permalink for Proof 1.112.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_isom_thm_2"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.113</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second isomorphism theorem.</span>
-</h3>
-<div class="para logical" id="th_isom_thm_2-2-1">
-<div class="para">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> be subgroups of the group <span class="process-math">\(G\)</span> and assume <span class="process-math">\(H\subseteq N_G(K)\text{.}\)</span>
-</div>
-<ol class="decimal" id="th_isom_thm_2-2-1-5">
-<li id="th_isom_thm_2-2-1-5-1">
-<div class="para" id="th_isom_thm_2-2-1-5-1-1">
-<span class="process-math">\(\displaystyle K\normalin HK\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#th_isom_thm_2-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="th_isom_thm_2-2-1-5-2">
-<div class="para" id="th_isom_thm_2-2-1-5-2-1">
-<span class="process-math">\(HK/K\cong H/H\cap K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#th_isom_thm_2-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 1.113: Second isomorphism theorem"><a href="#th_isom_thm_2" title="Copy heading and permalink for Theorem 1.113: Second isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.113: Second isomorphism theorem">🔗</a></div></article><details id="th_isom_thm_2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_isom_thm_2-3-1">
-<div class="para">First we prove <span class="process-math">\(K\normalin HK\text{.}\)</span> Given <span class="process-math">\(k\in K\)</span> and <span class="process-math">\(g=hk'\in HK\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="th_isom_thm_2-3-1-4">
-\begin{align*}
-gkg^{-1} \amp = hk'k(k')^{-1}h^{-1}\\
-\amp =hk''h^{-1} \text{ for some } k''\in K \amp (K \text{ subgroup}) \\
-\amp =k''' \text{ for some } k'''\in K \amp \amp (H\subseteq N_G(K)) \text{.}
-\end{align*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="th_isom_thm_2-3-2">
-<div class="para">To prove the stated isomorphism, we start with the quotient map</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\pi\colon HK\rightarrow HK/K
-\end{equation*}
-</div>
-<div class="para">and let <span class="process-math">\(\psi=\pi\vert_H\text{,}\)</span> its restriction to the subgroup <span class="process-math">\(H\leq HK\text{.}\)</span> We have</div>
-<div class="displaymath process-math" id="th_isom_thm_2-3-2-4">
-\begin{align*}
-\ker \psi \amp = H\cap \ker\pi \amp (\psi=\pi\vert_H)\\
-\amp =H\cap K \amp (\ker\pi=K)\text{.}
-\end{align*}
-</div>
-<div class="para">By the first isomorphism theorem, we have <span class="process-math">\(H/H\cap K\cong \im\psi\text{.}\)</span> It remains to show that <span class="process-math">\(\im\psi=\im\pi=HK/K\text{.}\)</span> Given any <span class="process-math">\(gK\in HK/K\text{,}\)</span> we have <span class="process-math">\(g=hk\)</span> for some <span class="process-math">\(h\in H\)</span> and <span class="process-math">\(k\in K\text{,}\)</span> in which case</div>
-<div class="displaymath process-math">
-\begin{equation*}
-gK=hkK=hK\text{.}
-\end{equation*}
-</div>
-<div class="para">It follows that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-gK=\pi(h)=\psi(h)\text{.}
-\end{equation*}
-</div>
-<div class="para">This proves <span class="process-math">\(\psi\)</span> is surjective, and hence that <span class="process-math">\(\im\psi=HK/K\text{.}\)</span>
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Proof 1.113.1"><a href="#th_isom_thm_2-3" title="Copy heading and permalink for Proof 1.113.1" aria-label="Copy heading and permalink for Proof 1.113.1">🔗</a></div></article></details><article class="remark remark-like" id="s_isom_thms_B-4"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.114</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second isomorphism theorem.</span>
-</h3>
-<div class="para" id="s_isom_thms_B-4-2">The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the <em class="emphasis">diamond isomorphism theorem</em>.<div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<figure class="figure figure-like" id="fig_2nd_isom_thm"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig_2nd_isom_thm-2.svg" role="img" class="contained" alt="Lattice diagram of second isomorhphism theorem"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.115<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Lattice diagram of second isomorhphism theorem<div class="autopermalink" data-description="Figure 1.115"><a href="#fig_2nd_isom_thm" title="Copy heading and permalink for Figure 1.115" aria-label="Copy heading and permalink for Figure 1.115">🔗</a></div></figcaption></figure><div class="para" id="s_isom_thms_B-4-4">
-<a href="s_isom_thms_B.html#th_isom_thm_2" class="xref" data-knowl="./knowl/xref/th_isom_thm_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.113: Second isomorphism theorem">Theorem 1.113</a> further tells us that <span class="process-math">\(H/H\cap K\cong HK/K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 1.114: Second isomorphism theorem"><a href="#s_isom_thms_B-4" title="Copy heading and permalink for Remark 1.114: Second isomorphism theorem" aria-label="Copy heading and permalink for Remark 1.114: Second isomorphism theorem">🔗</a></div></article><article class="theorem theorem-like" id="th_third_isom"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.116</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Third isomorphism theorem.</span>
-</h3>
-<div class="para logical" id="th_third_isom-2-1">
-<div class="para">Let <span class="process-math">\(\phi\colon G\rightarrow G'\)</span> be a surjective homomorphism, and suppose <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\)</span> containing <span class="process-math">\(\ker\phi\text{.}\)</span>
-</div>
-<ol class="decimal" id="th_third_isom-2-1-5">
-<li id="th_third_isom-2-1-5-1">
-<div class="para" id="th_third_isom-2-1-5-1-1">
-<span class="process-math">\(\phi(N)\normalin  G'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#th_third_isom-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="th_third_isom-2-1-5-2">
-<div class="para" id="th_third_isom-2-1-5-2-1">
-<span class="process-math">\(G/N \cong G'/\phi(N)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#th_third_isom-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 1.116: Third isomorphism theorem"><a href="#th_third_isom" title="Copy heading and permalink for Theorem 1.116: Third isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.116: Third isomorphism theorem">🔗</a></div></article><details id="th_third_isom-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_third_isom-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.116.1"><a href="#th_third_isom-3" title="Copy heading and permalink for Proof 1.116.1" aria-label="Copy heading and permalink for Proof 1.116.1">🔗</a></div></article></details><article class="convention remark-like" id="s_isom_thms_B-6"><h3 class="heading">
-<span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.117</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Images under quotients.</span>
-</h3>
-<div class="para" id="s_isom_thms_B-6-2">Let <span class="process-math">\(N\)</span> be a normal subgroup of <span class="process-math">\(G\text{.}\)</span> Given any subset <span class="process-math">\(A\subseteq G\text{,}\)</span> we denote by <span class="process-math">\(A/N\)</span> its image under the quotient map <span class="process-math">\(\pi\colon G\rightarrow G/N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Notation 1.117: Images under quotients"><a href="#s_isom_thms_B-6" title="Copy heading and permalink for Notation 1.117: Images under quotients" aria-label="Copy heading and permalink for Notation 1.117: Images under quotients">🔗</a></div></article><article class="corollary theorem-like" id="cor_second_isom_theorem"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.118</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients of quotients.</span>
-</h3>
-<div class="para logical" id="cor_second_isom_theorem-2-1">
-<div class="para">Let <span class="process-math">\(N_1\)</span> and <span class="process-math">\(N_2\)</span> be normal subgroups of <span class="process-math">\(G\)</span> and assume <span class="process-math">\(N_1\leq N_2\text{.}\)</span> We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(G/N_1)/(N_2/N_1)\cong G/N_2\text{.}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#cor_second_isom_theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Corollary 1.118: Quotients of quotients"><a href="#cor_second_isom_theorem" title="Copy heading and permalink for Corollary 1.118: Quotients of quotients" aria-label="Copy heading and permalink for Corollary 1.118: Quotients of quotients">🔗</a></div></article><div class="autopermalink" data-description="Section 1.14: Isomorphism theorems: second and third"><a href="#s_isom_thms_B" title="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third" aria-label="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem 1.139: Orbit decomposition theorem"><a href="#th_orbit_decomp" title="Copy heading and permalink for Theorem 1.139: Orbit decomposition theorem" aria-label="Copy heading and permalink for Theorem 1.139: Orbit decomposition theorem">🔗</a></div></article><details id="th_orbit_decomp-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_orbit_decomp-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_orbit_decomp-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.139.1"><a href="#th_orbit_decomp-3" title="Copy heading and permalink for Proof 1.139.1" aria-label="Copy heading and permalink for Proof 1.139.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.18: Group actions: orbits"><a href="#s_group_actions_orbits" title="Copy heading and permalink for Section 1.18: Group actions: orbits" aria-label="Copy heading and permalink for Section 1.18: Group actions: orbits">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_isom_thms_A.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_isom_thms_C.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_group_actions_stabilizers.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
