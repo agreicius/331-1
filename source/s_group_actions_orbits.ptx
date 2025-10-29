@@ -22,18 +22,7 @@ A group action <m>G\times A\rightarrow A</m> is transitive if for all <m>a,a'\in
 </p>
 </statement>
 </definition>
-<theorem xml:id="th_index_p">
-<title>Subgroups of prime index</title>
-<statement>
-<p>
-Let <m>G</m> be a finite group and let <m>p</m> be the smallest prime divisor of <m>\abs{G}</m>. If <m>H</m> is a subgroup of <m>G</m> of index <m>p</m>, then <m>H</m> is normal. 
-</p>
-</statement>
-<proof>
-<p>
-</p>
-</proof>
-</theorem>
+
 
 
 <theorem xml:id="th_transitive_action">
@@ -68,6 +57,33 @@ Let <m>G\times A\rightarrow A</m> be a group action.
 </p>
 </proof>
 </theorem>
+<example xml:id="eg_tetrahedron">
+<title>Rotational symmetries of a tetrahedron</title>
+<statement>
+<p>
+Let <m>T</m> be a regular tetrahedron in <m>\R^3</m> and let <m>G</m> be the group of rotations in <m>\R^3</m> that map <m>T</m> to itself. Establish an isomorphism between <m>G</m> and one of our familiar groups. 
+</p>
+</statement>
+<solution>
+<p>
+Left as an exercise.
+</p>
+</solution>
+</example>
+<example xml:id="eg_cube">
+<title>Rotational symmetries of a tetrahedron</title>
+<statement>
+<p>
+Let <m>C</m> be a cube in <m>\R^3</m> and let <m>G</m> be the group of rotational symmetries of <m>C</m>. Establish an isomorphism between <m>G</m> and one of our familiar groups. 
+</p>
+</statement>
+<solution>
+<p>
+Left as an exercise.
+</p>
+</solution>
+</example>
+
 <theorem xml:id="th_orbit_decomp">
 <title>Orbit decomposition theorem</title>
 <statement>
@@ -85,10 +101,46 @@ Let <m>G\times A\rightarrow A</m> be a group action.
     </li>
     <li>
         <p>
-            As a <m>G</m>-set,  <m>A</m> decomposes into a disjoint union of transitive <m>G</m>-sets, each of which is isomorphic as a <m>G</m>-set to <m>G/H</m> for some subgroup <m>H\leq G</m>. 
+            As a <m>G</m>-set,  <m>A</m> decomposes into a disjoint union of orbits, each of which is isomorphic as a <m>G</m>-set to <m>G/H</m> for some subgroup <m>H\leq G</m>. 
         </p>
     </li>
 </ol>
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+<p>
+    We end this section with a fantastic result commonly known as <em>Burnside's lemma</em> even though it was first proved (using modern group-theoretic language) by Frobenius. Consequently, some mathematical wags refer to the result as the <em>lemma that is not Burnside's</em>. We confuse things even further by giving it the designation of a theorem! The result allows us to count the distinct orbits of a group action in terms of so-called fix sets, which we now define. 
+</p>
+<definition xml:id="d_fix_sets">
+<title>Fix sets</title>
+<statement>
+<p>
+Let <m>G\times A\rightarrow A</m> be a group action. Given an element <m>g\in G</m>, the <term>fix set</term> of <m>g</m> under this action, denoted <m>\Fix(g)</m>, is defined as 
+<men xml:id="eq_fix_set">
+    \Fix(g)=\{a\in A\mid g\cdot a=a\}
+</men>.
+More generally, given a subset <m>X\subseteq G</m>, we define its fix set <m>\Fix(X)</m> as 
+<men xml:id="eq_fix_set_subset">
+    \Fix(X)=\{a\in A\mid g\cdot a=a \text{ for all } g\in X\}=\bigcap_{g\in X}\Fix(g)
+</men>.
+</p>
+</statement>
+</definition>
+
+<theorem xml:id="th_burnside">
+<title>Burnside's lemma</title>
+<creator>Frobenius</creator>
+<statement>
+<p>
+Let <m>G</m> be a finite group acting on a finite nonempty set <m>A</m>, and let <m>O</m> be the set of orbits of the group action. We have 
+<men xml:id="eq_Burnside">
+    \abs{O}=\frac{1}{\abs{G}}\sum_{g\in G}\Fix(g)
+</men>.
+
 </p>
 </statement>
 <proof>

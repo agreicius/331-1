@@ -62,14 +62,11 @@
         </li>
         <li>
             <p>
-                The kernel of the action <m>G_A</m> is a normal subgroup of <m>G</m>, and we have 
-                <men xml:id="eq_kernel">
-                    G_A=\bigcap_{g\in G}gG_ag^{-1}
-                </men>.
-                Furthermore, letting <m>\phi\colon G\rightarrow S_A</m> be the homomorphism associated to the group action <m>G\times A\rightarrow A</m>, we have 
+                The kernel of the action <m>G_A</m> is a normal subgroup of <m>G</m>. In fact, letting <m>\phi\colon G\rightarrow S_A</m> be the homomorphism associated to the group action <m>G\times A\rightarrow A</m>, we have 
                 <men xml:id="eq_kernel_cum_kernel">
                     G_A=\ker\phi
-                </men>. 
+                </men>.
+
             </p>
         </li>
     </ol>
@@ -77,9 +74,34 @@
     </statement>
     <proof>
     <p>
+        <ol>
+            <li>
+                <p>
+                    Left as an exercise. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>a'=g\cdot a</m>. We have 
+                    <md>
+                        <mrow>g'\in G_{a'} \amp \iff g'\cdot (g\cdot a)=g\cdot a </mrow>
+                        <mrow> \amp \iff (g^{-1}g'g)\cdot a=a</mrow>
+                        <mrow> \amp \iff g^{-1}g'g\in G_a</mrow>
+                        <mrow> \amp \iff g'\in gG_ag^{-1}</mrow>
+                    </md>.
+                    This proves <m>G_{a'}=gG_ag^{-1}</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The fact that <m>G_A=\ker\phi</m> follows essentially from the definition of <m>G_A</m> and <m>\phi</m>: <m>g\in G_A</m> if and only if <m>g\cdot a=a</m> for all <m>a\in A</m>, if and only if its associated  permutation <m>\phi_g\in S_A</m>, defined as <m>\phi_g(a)=g\cdot a</m> for all <m>a\in A</m>, is the identity map. 
+                </p>
+            </li>
+        </ol>
     </p>
     </proof>
     </theorem>
+    
     <definition xml:id="d_faithful_transitive">
     <title>Permutation representation and faithfulness</title>
     <statement>
@@ -100,6 +122,65 @@
     </p>
     </statement>
     </definition>
+    <corollary xml:id="cor_coset_space_action">
+        <title>Action on coset space</title>
+        <statement>
+            <p>
+                Let <m>H</m> be a subgroup of the group <m>G</m>, and consider the group action of <m>G</m> on <m>G/H</m> given by left multiplication
+                <me>
+                    g\cdot g'H=(gg')H
+                </me>.
+                <ol>
+                    <li>
+                        <p>
+                            This action is transitive. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Let <m>A=G/H</m>. We have 
+                            <men xml:id="eq_kernel_coset_action">
+                                G_A=\bigcap_{g\in G}gHg^{-1}
+                            </men>.
+                            As a result, <m>G_A</m> is the largest normal subgroup contained in <m>H</m>.
+                        </p>
+                    </li>
+                </ol>
+
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Given any elements <m>gH, g'H\in G/H</m>, we have 
+                            <me>
+                                g'H=(g'g^{-1})\cdot gH
+                            </me>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We have 
+                            <md>
+                                <mrow>G_A \amp =\bigcap_{g\in G}G_{gH}</mrow>
+                                <mrow> \amp = \bigcap_{g\in G}gG_Hg^{-1}</mrow>
+                                <mrow> \amp = \bigcap_{g\in G}gHg^{-1}</mrow>
+                            </md>,
+                            where the last line follows from the fact that <m>g'\cdot H=H</m> if and only if <m>g'\in H</m>. 
+                        </p>
+                        <p>
+                            Lastly, if <m>N</m> is a normal subgroup of <m>H</m>, then by definition we must have <m>N=gNg^{-1}\leq gHg^{-1}</m> for all <m>g\in G</m>. It follows that 
+                            <me>
+                                N\leq \bigcap_{g\in G}gHg^{-1}=G_A
+                            </me>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </corollary>
     <theorem xml:id="th_cayley">
     <title>Cayley's theorem</title>
     <statement>
@@ -109,8 +190,44 @@
     </statement>
     <proof>
     <p>
-    </p>
+    Consider the action of <m>G</m> on itself by left multiplication, and corresponding regular permutation representation 
+    <me>
+        \phi\colon G\rightarrow S_G
+    </me>.
+    Since this action is faithful, <m>\ker\phi=\{e\}</m> and <m>\phi</m> is injective. We conclude that <m>\phi</m> is an isomorphism between <m>G</m> and the subgroup <m>\phi(G)\leq S_G</m>. 
+</p>
+<p>
+    In the case where <m>\abs{G}=n&lt; \infty</m>, composing <m>\phi</m> with an isomorphism <m>\alpha\colon S_G\rightarrow S_n</m> yields an isomorphism between <m>G</m> and a subgroup of <m>S_n</m>. 
+</p>
     </proof>
     </theorem>
 
+    <theorem xml:id="th_index_p">
+<title>Subgroups of prime index</title>
+<statement>
+<p>
+Let <m>G</m> be a finite group and let <m>p</m> be the smallest prime divisor of <m>\abs{G}</m>. If <m>H</m> is a subgroup of <m>G</m> of index <m>p</m>, then <m>H</m> is normal. 
+</p>
+</statement>
+<proof>
+<p>
+    Consider the left multiplication action of <m>G</m> on the coset space <m>A=G/H</m> and the corresponding permutation representation 
+    <me>
+        \phi\colon G\rightarrow S_A
+    </me>.
+    By the first isomorphism theorem, we have 
+    <me>
+        G/\ker\phi\cong \phi(G)
+    </me>,
+    where <m>\phi(G)</m> is a subgroup of <m>S_A</m>. Note that since <m>A=G/H</m>, we have <m>\abs{A}=[G\colon H]=p</m>, and thus <m>\abs{S_A}=p!</m>.
+</p>
+<p>
+    We claim <m>\ker\phi=H</m>, whence the result follows. From <xref ref="th_stab"/> we know that <m>\ker\phi\leq H</m>. It follows that 
+    <me>
+        \abs{\phi(G)}=[G\colon \ker\phi]=[G\colon H][H\colon \ker \phi=pq
+    </me>.
+    Next, since <m>pq=\abs{\phi(G)}\mid p!</m>, <m>q\mid (p-1)!</m>. Since furthermore <m>q\mid \abs{G}</m>, we see that <m>q</m> is a common divisor of <m>(p-1)!</m> and <m>\abs{G}</m>. But since all prime divisors of <m>(p-1)!</m> are less than <m>p</m>, we see that <m>(p-1)!</m> and <m>\abs{G}</m> are relatively prime! Thus <m>q=1</m> and <m>K=\im\phi</m>, as claimed. 
+</p>
+</proof>
+</theorem>
 </section>
