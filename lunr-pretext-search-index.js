@@ -1987,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.17",
   "title": "Group actions: stabilizer",
-  "body": " Group actions: stabilizer   G-sets   Let be a group. A G-set is a nonempty set together with a group action .  Given -sets and , a -set morphism is a function satisfying for all and . A -set isomorphism is a bijective -set morphism.     Stabilizers and kernels of actions    group action stabilizer of    Let be a group, and let be a -set. Given a -set and nonempty subset , the stabilizer of is the set of all elements of that fix every element of : , . In the case of a singleton , we write instead of .  The kernel of a a group action is .     Stabilizers   Let be a group, and let be a -set.   Given any nonempty subset , the stabilizer is a subgroup of .    For all and , letting , we have     The kernel of the action is a normal subgroup of , and we have . Furthermore, letting be the homomorphism associated to the group action , we have .            Permutation representation and faithfulness   Given a group action , the corresponding homomorphism , where for all , is called the permutation representation associated to the group action. The homomorphism associated to the the action of on itself by left multiplication is called the regular permutation representation .  A group action is faithful if : equivalently, if its associated permutation representation is injective.     Cayley's theorem   Every group is isomorphic to a subgroup of . If , then is isomorphic to a subgroup of .        "
+  "body": " Group actions: stabilizer   G-sets   Let be a group. A G-set is a nonempty set together with a group action .  Given -sets and , a -set morphism is a function satisfying for all and . A -set isomorphism is a bijective -set morphism.     Stabilizers and kernels of actions    group action stabilizer of    Let be a group, and let be a -set. Given a -set and nonempty subset , the stabilizer of is the set of all elements of that fix every element of : , . In the case of a singleton , we write instead of .  The kernel of a a group action is .     Stabilizers   Let be a group, and let be a -set.   Given any nonempty subset , the stabilizer is a subgroup of .    For all and , letting , we have     The kernel of the action is a normal subgroup of . In fact, letting be the homomorphism associated to the group action , we have .          Left as an exercise.    Let . We have . This proves .    The fact that follows essentially from the definition of and : if and only if for all , if and only if its associated permutation , defined as for all , is the identity map.        Permutation representation and faithfulness   Given a group action , the corresponding homomorphism , where for all , is called the permutation representation associated to the group action. The homomorphism associated to the the action of on itself by left multiplication is called the regular permutation representation .  A group action is faithful if : equivalently, if its associated permutation representation is injective.     Action on coset space   Let be a subgroup of the group , and consider the group action of on given by left multiplication .   This action is transitive.    Let . We have . As a result, is the largest normal subgroup contained in .          Given any elements , we have .    We have , where the last line follows from the fact that if and only if .  Lastly, if is a normal subgroup of , then by definition we must have for all . It follows that .        Cayley's theorem   Every group is isomorphic to a subgroup of . If , then is isomorphic to a subgroup of .    Consider the action of on itself by left multiplication, and corresponding regular permutation representation . Since this action is faithful, and is injective. We conclude that is an isomorphism between and the subgroup .  In the case where , composing with an isomorphism yields an isomorphism between and a subgroup of .     Subgroups of prime index   Let be a finite group and let be the smallest prime divisor of . If is a subgroup of of index , then is normal.    Consider the left multiplication action of on the coset space and the corresponding permutation representation . By the first isomorphism theorem, we have , where is a subgroup of . Note that since , we have , and thus .  We claim , whence the result follows. From we know that . It follows that . Next, since , . Since furthermore , we see that is a common divisor of and . But since all prime divisors of are less than , we see that and are relatively prime! Thus and , as claimed.    "
 },
 {
   "id": "d_Gsets",
@@ -2014,7 +2014,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.132",
   "title": "Stabilizers.",
-  "body": " Stabilizers   Let be a group, and let be a -set.   Given any nonempty subset , the stabilizer is a subgroup of .    For all and , letting , we have     The kernel of the action is a normal subgroup of , and we have . Furthermore, letting be the homomorphism associated to the group action , we have .          "
+  "body": " Stabilizers   Let be a group, and let be a -set.   Given any nonempty subset , the stabilizer is a subgroup of .    For all and , letting , we have     The kernel of the action is a normal subgroup of . In fact, letting be the homomorphism associated to the group action , we have .          Left as an exercise.    Let . We have . This proves .    The fact that follows essentially from the definition of and : if and only if for all , if and only if its associated permutation , defined as for all , is the identity map.      "
 },
 {
   "id": "d_faithful_transitive",
@@ -2026,13 +2026,31 @@ var ptx_lunr_docs = [
   "body": " Permutation representation and faithfulness   Given a group action , the corresponding homomorphism , where for all , is called the permutation representation associated to the group action. The homomorphism associated to the the action of on itself by left multiplication is called the regular permutation representation .  A group action is faithful if : equivalently, if its associated permutation representation is injective.   "
 },
 {
+  "id": "cor_coset_space_action",
+  "level": "2",
+  "url": "s_group_actions_stabilizers.html#cor_coset_space_action",
+  "type": "Corollary",
+  "number": "1.134",
+  "title": "Action on coset space.",
+  "body": " Action on coset space   Let be a subgroup of the group , and consider the group action of on given by left multiplication .   This action is transitive.    Let . We have . As a result, is the largest normal subgroup contained in .          Given any elements , we have .    We have , where the last line follows from the fact that if and only if .  Lastly, if is a normal subgroup of , then by definition we must have for all . It follows that .      "
+},
+{
   "id": "th_cayley",
   "level": "2",
   "url": "s_group_actions_stabilizers.html#th_cayley",
   "type": "Theorem",
-  "number": "1.134",
+  "number": "1.135",
   "title": "Cayley’s theorem.",
-  "body": " Cayley's theorem   Every group is isomorphic to a subgroup of . If , then is isomorphic to a subgroup of .       "
+  "body": " Cayley's theorem   Every group is isomorphic to a subgroup of . If , then is isomorphic to a subgroup of .    Consider the action of on itself by left multiplication, and corresponding regular permutation representation . Since this action is faithful, and is injective. We conclude that is an isomorphism between and the subgroup .  In the case where , composing with an isomorphism yields an isomorphism between and a subgroup of .   "
+},
+{
+  "id": "th_index_p",
+  "level": "2",
+  "url": "s_group_actions_stabilizers.html#th_index_p",
+  "type": "Theorem",
+  "number": "1.136",
+  "title": "Subgroups of prime index.",
+  "body": " Subgroups of prime index   Let be a finite group and let be the smallest prime divisor of . If is a subgroup of of index , then is normal.    Consider the left multiplication action of on the coset space and the corresponding permutation representation . By the first isomorphism theorem, we have , where is a subgroup of . Note that since , we have , and thus .  We claim , whence the result follows. From we know that . It follows that . Next, since , . Since furthermore , we see that is a common divisor of and . But since all prime divisors of are less than , we see that and are relatively prime! Thus and , as claimed.   "
 },
 {
   "id": "s_group_actions_orbits",
@@ -2041,14 +2059,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.18",
   "title": "Group actions: orbits",
-  "body": " Group actions: orbits   Orbits   Let be a group action. Given , we define its orbit  as .     Transitive group action   A group action is transitive if for all there is a satisfying .     Subgroups of prime index   Let be a finite group and let be the smallest prime divisor of . If is a subgroup of of index , then is normal.         Orbit-stabilizer   Let be a group action.   For all , the function is an isomorphism of -sets, where acts on by left multiplication, and the action of on is given by restriction.    For all we have .            Orbit decomposition theorem   Let be a group action.   The relation if and only if is an equivalence relation whose equivalence classes are the distinct orbits of the group action. As a result, we have a partition of into disjoint orbits, and if and only if .    As a -set, decomposes into a disjoint union of transitive -sets, each of which is isomorphic as a -set to for some subgroup .           "
+  "body": " Group actions: orbits   Orbits   Let be a group action. Given , we define its orbit  as .     Transitive group action   A group action is transitive if for all there is a satisfying .     Orbit-stabilizer   Let be a group action.   For all , the function is an isomorphism of -sets, where acts on by left multiplication, and the action of on is given by restriction.    For all we have .            Rotational symmetries of a tetrahedron   Let be a regular tetrahedron in and let be the group of rotations in that map to itself. Establish an isomorphism between and one of our familiar groups.    Left as an exercise.     Rotational symmetries of a tetrahedron   Let be a cube in and let be the group of rotational symmetries of . Establish an isomorphism between and one of our familiar groups.    Left as an exercise.     Orbit decomposition theorem   Let be a group action.   The relation if and only if is an equivalence relation whose equivalence classes are the distinct orbits of the group action. As a result, we have a partition of into disjoint orbits, and if and only if .    As a -set, decomposes into a disjoint union of orbits, each of which is isomorphic as a -set to for some subgroup .           We end this section with a fantastic result commonly known as Burnside's lemma even though it was first proved (using modern group-theoretic language) by Frobenius. Consequently, some mathematical wags refer to the result as the lemma that is not Burnside's . We confuse things even further by giving it the designation of a theorem! The result allows us to count the distinct orbits of a group action in terms of so-called fix sets, which we now define.   Fix sets   Let be a group action. Given an element , the fix set of under this action, denoted , is defined as . More generally, given a subset , we define its fix set as .     Burnside's lemma  Frobenius   Let be a finite group acting on a finite nonempty set , and let be the set of orbits of the group action. We have .        "
 },
 {
   "id": "d_orbits",
   "level": "2",
   "url": "s_group_actions_orbits.html#d_orbits",
   "type": "Definition",
-  "number": "1.135",
+  "number": "1.137",
   "title": "Orbits.",
   "body": " Orbits   Let be a group action. Given , we define its orbit  as .   "
 },
@@ -2057,36 +2075,63 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#d_transitive",
   "type": "Definition",
-  "number": "1.136",
+  "number": "1.138",
   "title": "Transitive group action.",
   "body": " Transitive group action   A group action is transitive if for all there is a satisfying .   "
-},
-{
-  "id": "th_index_p",
-  "level": "2",
-  "url": "s_group_actions_orbits.html#th_index_p",
-  "type": "Theorem",
-  "number": "1.137",
-  "title": "Subgroups of prime index.",
-  "body": " Subgroups of prime index   Let be a finite group and let be the smallest prime divisor of . If is a subgroup of of index , then is normal.       "
 },
 {
   "id": "th_transitive_action",
   "level": "2",
   "url": "s_group_actions_orbits.html#th_transitive_action",
   "type": "Theorem",
-  "number": "1.138",
+  "number": "1.139",
   "title": "Orbit-stabilizer.",
   "body": " Orbit-stabilizer   Let be a group action.   For all , the function is an isomorphism of -sets, where acts on by left multiplication, and the action of on is given by restriction.    For all we have .          "
+},
+{
+  "id": "eg_tetrahedron",
+  "level": "2",
+  "url": "s_group_actions_orbits.html#eg_tetrahedron",
+  "type": "Example",
+  "number": "1.140",
+  "title": "Rotational symmetries of a tetrahedron.",
+  "body": " Rotational symmetries of a tetrahedron   Let be a regular tetrahedron in and let be the group of rotations in that map to itself. Establish an isomorphism between and one of our familiar groups.    Left as an exercise.   "
+},
+{
+  "id": "eg_cube",
+  "level": "2",
+  "url": "s_group_actions_orbits.html#eg_cube",
+  "type": "Example",
+  "number": "1.141",
+  "title": "Rotational symmetries of a tetrahedron.",
+  "body": " Rotational symmetries of a tetrahedron   Let be a cube in and let be the group of rotational symmetries of . Establish an isomorphism between and one of our familiar groups.    Left as an exercise.   "
 },
 {
   "id": "th_orbit_decomp",
   "level": "2",
   "url": "s_group_actions_orbits.html#th_orbit_decomp",
   "type": "Theorem",
-  "number": "1.139",
+  "number": "1.142",
   "title": "Orbit decomposition theorem.",
-  "body": " Orbit decomposition theorem   Let be a group action.   The relation if and only if is an equivalence relation whose equivalence classes are the distinct orbits of the group action. As a result, we have a partition of into disjoint orbits, and if and only if .    As a -set, decomposes into a disjoint union of transitive -sets, each of which is isomorphic as a -set to for some subgroup .          "
+  "body": " Orbit decomposition theorem   Let be a group action.   The relation if and only if is an equivalence relation whose equivalence classes are the distinct orbits of the group action. As a result, we have a partition of into disjoint orbits, and if and only if .    As a -set, decomposes into a disjoint union of orbits, each of which is isomorphic as a -set to for some subgroup .          "
+},
+{
+  "id": "d_fix_sets",
+  "level": "2",
+  "url": "s_group_actions_orbits.html#d_fix_sets",
+  "type": "Definition",
+  "number": "1.143",
+  "title": "Fix sets.",
+  "body": " Fix sets   Let be a group action. Given an element , the fix set of under this action, denoted , is defined as . More generally, given a subset , we define its fix set as .   "
+},
+{
+  "id": "th_burnside",
+  "level": "2",
+  "url": "s_group_actions_orbits.html#th_burnside",
+  "type": "Theorem",
+  "number": "1.144",
+  "title": "Burnside’s lemma.",
+  "body": " Burnside's lemma  Frobenius   Let be a finite group acting on a finite nonempty set , and let be the set of orbits of the group action. We have .       "
 },
 {
   "id": "appendix-notation",
