@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.14';
+eBookConfig.runestone_version = '7.9.16';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.6cd7be576fba2b5d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -457,10 +457,10 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="para">Let <span class="process-math">\(A\)</span> be a subset of the group <span class="process-math">\(G\text{.}\)</span> Given <span class="process-math">\(g\in G\text{,}\)</span> the sets <span class="process-math">\(gA\text{,}\)</span> <span class="process-math">\(Ag\text{,}\)</span> <span class="process-math">\(gAg^{-1}\)</span> are defined as follows:</div>
 <div class="displaymath process-math" id="d_set_actions-2-1-7">
 \begin{align}
-A^{-1} \amp =\{a^{-1}\mid a\in G\}\tag{1.39}\\
-gA \amp =\{ga\mid a\in A\}\tag{1.40}\\
-Ag \amp =\{ag\mid a\in A\}\tag{1.41}\\
-gAg^{-1} \amp =\{gag^{-1}\mid a\in A \}\text{.}\tag{1.42}
+A^{-1} \amp =\{a^{-1}\mid a\in G\}\tag{1.38}\\
+gA \amp =\{ga\mid a\in A\}\tag{1.39}\\
+Ag \amp =\{ag\mid a\in A\}\tag{1.40}\\
+gAg^{-1} \amp =\{gag^{-1}\mid a\in A \}\text{.}\tag{1.41}
 \end{align}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_set_actions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -472,13 +472,13 @@ gAg^{-1} \amp =\{gag^{-1}\mid a\in A \}\text{.}\tag{1.42}
 <div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of the group <span class="process-math">\(G\text{.}\)</span> Given <span class="process-math">\(g\in G\)</span> the set <span class="process-math">\(gH\)</span> defined as</div>
 <div class="displaymath process-math" id="eq_left_coset">
 \begin{equation}
-gH =\{gh\mid h\in H\}\tag{1.43}
+gH =\{gh\mid h\in H\}\tag{1.42}
 \end{equation}
 </div>
 <div class="para">is called the <dfn class="terminology">left <span class="process-math">\(H\)</span>-coset</dfn> in <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(g\text{,}\)</span> and the set <span class="process-math">\(Hg\)</span> defined as</div>
 <div class="displaymath process-math" id="eq_right_coset">
 \begin{equation}
-Hg=\{hg\mid h\in H\}\tag{1.44}
+Hg=\{hg\mid h\in H\}\tag{1.43}
 \end{equation}
 </div>
 <div class="para">is called the <dfn class="terminology">right <span class="process-math">\(H\)</span>-coset</dfn> in <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(g\text{.}\)</span> Elements of a coset are called <dfn class="terminology">representatives</dfn> of that coset.</div>
@@ -674,7 +674,7 @@ gH=gH' \amp \iff g'\in gH\\
 <div class="para">We have</div>
 <div class="displaymath process-math" id="th_lagrange-2-1-3-1-1-1">
 \begin{align}
-\abs{G} \amp = \abs{H}\abs{G/H}\text{.}\tag{1.45}
+\abs{G} \amp = \abs{H}\abs{G/H}\text{.}\tag{1.44}
 \end{align}
 </div>
 <div class="para">When <span class="process-math">\(G\)</span> is infinite, this can be interpreted as saying <span class="process-math">\(H\)</span> is infinite or <span class="process-math">\(G/H\)</span> is infinite.</div>
@@ -687,7 +687,7 @@ gH=gH' \amp \iff g'\in gH\\
 <div class="para">If <span class="process-math">\(\abs{G}&lt; \infty\text{,}\)</span> then we have</div>
 <div class="displaymath process-math" id="th_lagrange-2-1-3-2-1-2">
 \begin{align}
-\abs{G/H}\amp = \frac{\abs{G}}{\abs{H}} \text{.}\tag{1.46}
+\abs{G/H}\amp = \frac{\abs{G}}{\abs{H}} \text{.}\tag{1.45}
 \end{align}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_lagrange-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -767,7 +767,7 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 <div class="para">For any subgroup <span class="process-math">\(H\leq G\text{,}\)</span> we have</div>
 <div class="displaymath process-math" id="eq_subgroup_card">
 \begin{equation}
-\abs{H}\mid \abs{G}\text{.}\tag{1.47}
+\abs{H}\mid \abs{G}\text{.}\tag{1.46}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_subgroup_card-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -779,7 +779,7 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 <div class="para">For any <span class="process-math">\(g\in G\)</span> we have</div>
 <div class="displaymath process-math" id="eq_ord_g_divis">
 \begin{equation}
-\ord g\mid \abs{G}\text{.}\tag{1.48}
+\ord g\mid \abs{G}\text{.}\tag{1.47}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_subgroup_card-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

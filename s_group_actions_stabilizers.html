@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.14';
+eBookConfig.runestone_version = '7.9.16';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.6cd7be576fba2b5d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -458,7 +458,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="para">Given <span class="process-math">\(G\)</span>-sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> a <dfn class="terminology"><span class="process-math">\(G\)</span>-set morphism</dfn> is a function <span class="process-math">\(f\colon A\rightarrow B\)</span> satisfying</div>
 <div class="displaymath process-math" id="eq_Gset_morphism">
 \begin{equation}
-f(g\cdot a)=g\cdot f(a)\tag{1.62}
+f(g\cdot a)=g\cdot f(a)\tag{1.61}
 \end{equation}
 </div>
 <div class="para">for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span> A <dfn class="terminology"><span class="process-math">\(G\)</span>-set isomorphism</dfn> is a bijective <span class="process-math">\(G\)</span>-set morphism.</div>
@@ -471,7 +471,7 @@ f(g\cdot a)=g\cdot f(a)\tag{1.62}
 <div class="para">Let <span class="process-math">\(G\)</span> be a group, and let <span class="process-math">\(A\)</span> be a <span class="process-math">\(G\)</span>-set. Given a <span class="process-math">\(G\)</span>-set <span class="process-math">\(A\)</span> and nonempty subset <span class="process-math">\(X\subseteq A\text{,}\)</span> the <dfn class="terminology">stabilizer</dfn> of <span class="process-math">\(X\)</span> is the set <span class="process-math">\(G_X\)</span> of all elements of <span class="process-math">\(G\)</span> that fix every element of <span class="process-math">\(X\text{:}\)</span> i.e.,</div>
 <div class="displaymath process-math" id="eq_stabilizer">
 \begin{equation}
-G_X=\{g\in G\mid g\cdot x=x \text{ for all } x\in X\}\text{.}\tag{1.63}
+G_X=\{g\in G\mid g\cdot x=x \text{ for all } x\in X\}\text{.}\tag{1.62}
 \end{equation}
 </div>
 <div class="para">In the case of a singleton <span class="process-math">\(\{a\}\text{,}\)</span> we write <span class="process-math">\(G_a\)</span> instead of <span class="process-math">\(G_{\{a\}}\text{.}\)</span>
@@ -514,7 +514,7 @@ G_{a'}=gG_ag^{-1}
 <div class="para">The kernel of the action <span class="process-math">\(G_A\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span> In fact, letting <span class="process-math">\(\phi\colon G\rightarrow S_A\)</span> be the homomorphism associated to the group action <span class="process-math">\(G\times A\rightarrow A\text{,}\)</span> we have</div>
 <div class="displaymath process-math" id="eq_kernel_cum_kernel">
 \begin{equation}
-G_A=\ker\phi\text{.}\tag{1.64}
+G_A=\ker\phi\text{.}\tag{1.63}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_stab-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -598,7 +598,7 @@ g\cdot g'H=(gg')H\text{.}
 <div class="para">Let <span class="process-math">\(A=G/H\text{.}\)</span> We have</div>
 <div class="displaymath process-math" id="eq_kernel_coset_action">
 \begin{equation}
-G_A=\bigcap_{g\in G}gHg^{-1}\text{.}\tag{1.65}
+G_A=\bigcap_{g\in G}gHg^{-1}\text{.}\tag{1.64}
 \end{equation}
 </div>
 <div class="para">As a result, <span class="process-math">\(G_A\)</span> is the largest normal subgroup contained in <span class="process-math">\(H\text{.}\)</span>

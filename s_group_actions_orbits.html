@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.14';
+eBookConfig.runestone_version = '7.9.16';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.6cd7be576fba2b5d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -457,7 +457,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="para">Let <span class="process-math">\(G\times A\rightarrow A\)</span> be a group action. Given <span class="process-math">\(a\in A\text{,}\)</span> we define its <dfn class="terminology">orbit</dfn> <span class="process-math">\(O_a\)</span> as</div>
 <div class="displaymath process-math" id="eq_orbit">
 \begin{equation}
-O_a=\{a'\mid a'=g\cdot a \text{ for some } g\in G\}=\{g\cdot a\mid g\in G\}\text{.}\tag{1.66}
+O_a=\{a'\mid a'=g\cdot a \text{ for some } g\in G\}=\{g\cdot a\mid g\in G\}\text{.}\tag{1.65}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_orbits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -492,7 +492,7 @@ gG_a \amp \mapsto g\cdot a
 <div class="para">For all <span class="process-math">\(a\in A\)</span> we have</div>
 <div class="displaymath process-math" id="eq_orbit-stabilizer">
 \begin{equation}
-\abs{O_a}=[G\colon G_a]\text{.}\tag{1.67}
+\abs{O_a}=[G\colon G_a]\text{.}\tag{1.66}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_transitive_action-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -561,13 +561,13 @@ A=\bigcup_{a\in A}O_a
 <div class="para">Let <span class="process-math">\(G\times A\rightarrow A\)</span> be a group action. Given an element <span class="process-math">\(g\in G\text{,}\)</span> the <dfn class="terminology">fix set</dfn> of <span class="process-math">\(g\)</span> under this action, denoted <span class="process-math">\(\Fix(g)\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math" id="eq_fix_set">
 \begin{equation}
-\Fix(g)=\{a\in A\mid g\cdot a=a\}\text{.}\tag{1.68}
+\Fix(g)=\{a\in A\mid g\cdot a=a\}\text{.}\tag{1.67}
 \end{equation}
 </div>
 <div class="para">More generally, given a subset <span class="process-math">\(X\subseteq G\text{,}\)</span> we define its fix set <span class="process-math">\(\Fix(X)\)</span> as</div>
 <div class="displaymath process-math" id="eq_fix_set_subset">
 \begin{equation}
-\Fix(X)=\{a\in A\mid g\cdot a=a \text{ for all } g\in X\}=\bigcap_{g\in X}\Fix(g)\text{.}\tag{1.69}
+\Fix(X)=\{a\in A\mid g\cdot a=a \text{ for all } g\in X\}=\bigcap_{g\in X}\Fix(g)\text{.}\tag{1.68}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_fix_sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -579,7 +579,7 @@ A=\bigcup_{a\in A}O_a
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group acting on a finite nonempty set <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(O\)</span> be the set of orbits of the group action. We have</div>
 <div class="displaymath process-math" id="eq_Burnside">
 \begin{equation}
-\abs{O}=\frac{1}{\abs{G}}\sum_{g\in G}\Fix(g)\text{.}\tag{1.70}
+\abs{O}=\frac{1}{\abs{G}}\sum_{g\in G}\Fix(g)\text{.}\tag{1.69}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_burnside-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
