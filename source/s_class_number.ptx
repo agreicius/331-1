@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_class_number" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Class equation</title>
+
+    <p>
+        This section will essentially be a long format example of computing stabilizers and orbits for one particular type of group action: namely, the action of a group on itself by conjugation. The <em>class equation</em> of a group is a one-line summary of the number and sizes of the orbits of <m>G</m> under the action of conjugation. 
+    </p>
+    <definition xml:id="d_conjugacy_class">
+    <title>Conjugacy class</title>
+    <statement>
+    <p>
+    The <term>conjugacy class</term> of an element <m>h</m> of the group <m>G</m>, denoted <m>C_h</m> is the set of all conjugates of <m>h</m> in: <ie/>, 
+    <men xml:id="eq_conj_class">
+        C_h=\{ghg^{-1}\mid g\in G\}
+    </men>.
+    Equivalently, the conjugacy class of <m>h</m> is the orbit <m>O_h</m> of <m>h</m> under the action of conjugation. 
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_class_equation">
+    <title>Conjugacy and the class equation</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a finite group and consider the action of <m>G</m> on itself by conjugation. 
+    <ol>
+        <li>
+            <p>
+                For all <m>h\in G</m>, we have
+                <md>
+                    <mrow>O_h \amp =C_h </mrow>
+                    <mrow>G_h \amp =C_G(h) </mrow>
+                </md>.
+                It follows from the orbit-stabilizer theorem that 
+                <men xml:id="eq_card_conj_class">
+                    \abs{C_h}=[G\colon C_G(h)]
+                </men>.
+            </p>
+        </li>
+        <li>
+            <p>
+               We have 
+                <men xml:id="eq_center_singleton_conj_class">Z(G)=\{g\in G\mid C_g=\{g\}\}</men>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>C_i=C_{g_i}</m>, <m>1\leq i\leq s</m> be the distinct conjugacy classes of <m>G</m>, and assume further that <m>\{C_i\mid 1\leq i\leq r\}</m>, <m>r\leq s</m>, is the set of conjugacy classes consisting of a single element. We have a partition 
+                <men xml:id="eq_partition_conj_class">
+                    G=\bigcup_{i=1}^{s}C_i
+                </men>,
+                from which it follows that 
+                <men xml:id="eq_class_equation">
+                    \abs{G}=\sum_{i=1}^r1+\sum_{i=r+1}^s\abs{C_i}=\abs{Z(G)}+\sum_{i=r+1}^s[G\colon C_G(g_i)]
+                </men>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_class_equation">
+    <title>Class equation</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a finite group, and let <m>C_1,C_2,\dots, C_s</m> be the distinct conjugacy classes of <m>G</m>. The class equation of <m>G</m> is the equation
+    <me>
+        \abs{G}=\sum_{i=1}^s\abs{C_i}
+    </me>.
+    </p>
+    </statement>
+    </definition>
+    <p>
+        <xref ref="th_class_equation"/> is useful both for extracting information about a group from its class equation, as well as taking some shortcuts for computing the class equation of a group. 
+    </p>
+    <example xml:id="eg_class_eq_abelian">
+    <title>Class equation: abelian groups</title>
+    <statement>
+    <p>
+    Prove: a finite group <m>\abs{G}</m> is abelian if and only if its class equation is of the form 
+    <me>
+        \abs{G}=1+1+\cdots +1
+    </me>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_class_eqn_D8">
+    <title>Class equation: <m>D_8</m></title>
+    <statement>
+    <p>
+    Compute the class equation of $D_8$. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <definition xml:id="d_partitions_of_n">
+<title>Partition of <m>n</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. A <term>partition of <m>n</m></term> is an <m>r</m>-tuple <m>(n_1,n_2,\dots, n_r)</m> for some <m>1\leq r\leq n</m> satisfying 
+    <md>
+        <mrow>n_1 \amp \leq n_2\leq \dots \leq n_R</mrow>
+        <mrow>n \amp =n_1+n_2+\cdots +n_r</mrow>
+    </md>.
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_class_eq_Sn">
+    <title>Class equation of <m>S_n</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer, and let <m>\mathcal{P}</m> be the set of all partitions of <m>n</m>. The class equation of <m>S_n</m> is 
+    <men xml:id="eq_class_eq_Sn">
+        n!=\sum_{(n_1,n_2,\dots, n_r)\in \mathcal{P}}\dfrac{n!}{n_1!n_2
+        !\cdots n_r!1^{n_1}2^{n_2}\cdots r^{n_r}}
+    </men>.
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_center_pgroup">
+    <title>Center of a <m>p</m>-group</title>
+    <statement>
+    <p>
+    Assume <m>G</m> is a group of cardinality <m>p^n</m>, where <m>p</m> is a prime integer. The center of <m>G</m> is nontrivial: <ie/>, <m>Z(G)\ne \{e\}</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_psquared">
+        <title>Groups of cardinality <m>p^2</m></title>
+        <statement>
+            <p>
+                If <m>G</m> is a group of cardinality <m>p^2</m>, where <m>p</m> is a prime integer, then <m>G</m> is abelian. 
+            </p>
+        </statement>
+    </corollary>
+    <theorem xml:id="th_simple_An">
+    <title>Simplicity of <m>A_n</m></title>
+    <statement>
+    <p>
+      For all <m>n\geq 5</m> the alternating group <m>A_n</m> is simple. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    
+    
+
+</section>

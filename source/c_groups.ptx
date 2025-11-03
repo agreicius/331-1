@@ -20,4 +20,5 @@
 <xi:include href="s_alt_group.ptx" />
 <xi:include href="s_group_actions_stabilizers.ptx" />
 <xi:include href="s_group_actions_orbits.ptx" />
+<xi:include href="s_class_number.ptx" />
 </chapter>
