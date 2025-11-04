@@ -2134,6 +2134,105 @@ var ptx_lunr_docs = [
   "body": " Burnside's lemma  Frobenius   Let be a finite group acting on a finite nonempty set , and let be the set of orbits of the group action. We have .       "
 },
 {
+  "id": "s_class_number",
+  "level": "1",
+  "url": "s_class_number.html",
+  "type": "Section",
+  "number": "1.19",
+  "title": "Class equation",
+  "body": " Class equation  This section will essentially be a long format example of computing stabilizers and orbits for one particular type of group action: namely, the action of a group on itself by conjugation. The class equation of a group is a one-line summary of the number and sizes of the orbits of under the action of conjugation.   Conjugacy class   The conjugacy class of an element of the group , denoted is the set of all conjugates of in: , . Equivalently, the conjugacy class of is the orbit of under the action of conjugation.     Conjugacy and the class equation   Let be a finite group and consider the action of on itself by conjugation.   For all , we have . It follows from the orbit-stabilizer theorem that .    We have .    Let , be the distinct conjugacy classes of , and assume further that , , is the set of conjugacy classes consisting of a single element. We have a partition , from which it follows that .            Class equation   Let be a finite group, and let be the distinct conjugacy classes of . The class equation of is the equation .     is useful both for extracting information about a group from its class equation, as well as taking some shortcuts for computing the class equation of a group.   Class equation: abelian groups   Prove: a finite group is abelian if and only if its class equation is of the form .         Class equation:   Compute the class equation of $D_8$.         Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying .     Class equation of   Let be a positive integer, and let be the set of all partitions of . The class equation of is .         Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .         Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.     Simplicity of   For all the alternating group is simple.        "
+},
+{
+  "id": "d_conjugacy_class",
+  "level": "2",
+  "url": "s_class_number.html#d_conjugacy_class",
+  "type": "Definition",
+  "number": "1.145",
+  "title": "Conjugacy class.",
+  "body": " Conjugacy class   The conjugacy class of an element of the group , denoted is the set of all conjugates of in: , . Equivalently, the conjugacy class of is the orbit of under the action of conjugation.   "
+},
+{
+  "id": "th_class_equation",
+  "level": "2",
+  "url": "s_class_number.html#th_class_equation",
+  "type": "Theorem",
+  "number": "1.146",
+  "title": "Conjugacy and the class equation.",
+  "body": " Conjugacy and the class equation   Let be a finite group and consider the action of on itself by conjugation.   For all , we have . It follows from the orbit-stabilizer theorem that .    We have .    Let , be the distinct conjugacy classes of , and assume further that , , is the set of conjugacy classes consisting of a single element. We have a partition , from which it follows that .          "
+},
+{
+  "id": "d_class_equation",
+  "level": "2",
+  "url": "s_class_number.html#d_class_equation",
+  "type": "Definition",
+  "number": "1.147",
+  "title": "Class equation.",
+  "body": " Class equation   Let be a finite group, and let be the distinct conjugacy classes of . The class equation of is the equation .   "
+},
+{
+  "id": "eg_class_eq_abelian",
+  "level": "2",
+  "url": "s_class_number.html#eg_class_eq_abelian",
+  "type": "Example",
+  "number": "1.148",
+  "title": "Class equation: abelian groups.",
+  "body": " Class equation: abelian groups   Prove: a finite group is abelian if and only if its class equation is of the form .       "
+},
+{
+  "id": "eg_class_eqn_D8",
+  "level": "2",
+  "url": "s_class_number.html#eg_class_eqn_D8",
+  "type": "Example",
+  "number": "1.149",
+  "title": "Class equation: <span class=\"process-math\">\\(D_8\\)<\/span>.",
+  "body": " Class equation:   Compute the class equation of $D_8$.       "
+},
+{
+  "id": "d_partitions_of_n",
+  "level": "2",
+  "url": "s_class_number.html#d_partitions_of_n",
+  "type": "Definition",
+  "number": "1.150",
+  "title": "Partition of <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying .   "
+},
+{
+  "id": "th_class_eq_Sn",
+  "level": "2",
+  "url": "s_class_number.html#th_class_eq_Sn",
+  "type": "Theorem",
+  "number": "1.151",
+  "title": "Class equation of <span class=\"process-math\">\\(S_n\\)<\/span>.",
+  "body": " Class equation of   Let be a positive integer, and let be the set of all partitions of . The class equation of is .       "
+},
+{
+  "id": "th_center_pgroup",
+  "level": "2",
+  "url": "s_class_number.html#th_center_pgroup",
+  "type": "Theorem",
+  "number": "1.152",
+  "title": "Center of a <span class=\"process-math\">\\(p\\)<\/span>-group.",
+  "body": " Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .       "
+},
+{
+  "id": "cor_psquared",
+  "level": "2",
+  "url": "s_class_number.html#cor_psquared",
+  "type": "Corollary",
+  "number": "1.153",
+  "title": "Groups of cardinality <span class=\"process-math\">\\(p^2\\)<\/span>.",
+  "body": " Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.   "
+},
+{
+  "id": "th_simple_An",
+  "level": "2",
+  "url": "s_class_number.html#th_simple_An",
+  "type": "Theorem",
+  "number": "1.154",
+  "title": "Simplicity of <span class=\"process-math\">\\(A_n\\)<\/span>.",
+  "body": " Simplicity of   For all the alternating group is simple.       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
