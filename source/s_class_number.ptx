@@ -97,7 +97,7 @@
     <title>Class equation: <m>D_8</m></title>
     <statement>
     <p>
-    Compute the class equation of $D_8$. 
+    Compute the class equation of <m>D_8</m>.
     </p>
     </statement>
     <solution>
@@ -106,34 +106,6 @@
     </p>
     </solution>
     </example>
-    <definition xml:id="d_partitions_of_n">
-<title>Partition of <m>n</m></title>
-    <statement>
-    <p>
-    Let <m>n</m> be a positive integer. A <term>partition of <m>n</m></term> is an <m>r</m>-tuple <m>(n_1,n_2,\dots, n_r)</m> for some <m>1\leq r\leq n</m> satisfying 
-    <md>
-        <mrow>n_1 \amp \leq n_2\leq \dots \leq n_R</mrow>
-        <mrow>n \amp =n_1+n_2+\cdots +n_r</mrow>
-    </md>.
-    </p>
-    </statement>
-    </definition>
-    <theorem xml:id="th_class_eq_Sn">
-    <title>Class equation of <m>S_n</m></title>
-    <statement>
-    <p>
-    Let <m>n</m> be a positive integer, and let <m>\mathcal{P}</m> be the set of all partitions of <m>n</m>. The class equation of <m>S_n</m> is 
-    <men xml:id="eq_class_eq_Sn">
-        n!=\sum_{(n_1,n_2,\dots, n_r)\in \mathcal{P}}\dfrac{n!}{n_1!n_2
-        !\cdots n_r!1^{n_1}2^{n_2}\cdots r^{n_r}}
-    </men>.
-    </p>
-    </statement>
-    <proof>
-    <p>
-    </p>
-    </proof>
-    </theorem>
     <theorem xml:id="th_center_pgroup">
     <title>Center of a <m>p</m>-group</title>
     <statement>
@@ -154,6 +126,75 @@
             </p>
         </statement>
     </corollary>
+    <definition xml:id="d_partitions_of_n">
+<title>Partition of <m>n</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. A <term>partition of <m>n</m></term> is an <m>r</m>-tuple <m>(n_1,n_2,\dots, n_r)</m> for some <m>1\leq r\leq n</m> satisfying 
+    <md>
+        <mrow>n_1 \amp \leq n_2\leq \dots \leq n_r</mrow>
+        <mrow>n \amp =n_1+n_2+\cdots +n_r</mrow>
+    </md>.
+    Given a partiion <m>p=(n_1,n_2,\dots, n_r)</m> we define its <term>type</term> <m>T(p)</m> to be the <m>n</m>-tuple <m>(m_1,m_2,\dots, m_n)</m>, where <m>m_i</m> is the number of entries of <m>p</m> equal to <m>i</m> for all <m>1\leq i\leq n</m>. 
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_class_eq_Sn">
+    <title>Class equation of <m>S_n</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer, let <m>\mathcal{P}</m> be the set of all partitions of <m>n</m>, and let <m>T(\mathcal{P})</m> be the set of all types of these partitions.  The class equation of <m>S_n</m> is 
+    <men xml:id="eq_class_eq_Sn">
+        n!=\sum_{(m_1,m_2,\dots, m_n)\in T(\mathcal{P})}\dfrac{n!}{m_1!m_2
+        !\cdots m_n!1^{m_1}2^{m_2}\cdots n^{m_n}}
+    </men>.
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_stab_cycle">
+        <title>Stabilizers of cycles</title>
+        <statement>
+            <p>
+                Let <m>\sigma=(a_1\ a_2\ \dots a_k)</m> be a <m>k</m>-cycle in <m>S_n</m>. Let <m>H=\angvec{\sigma}</m> and let 
+                <me>
+                    K=\{\tau\in S_n\mid \tau(a_i)=a_i \text{ for all } 1\leq i\leq k\}
+                </me>.
+                We have 
+                <md>
+                    <mrow>C_{S_n}(\sigma) \amp =HK \amp \abs{C_{S_{n}}(\sigma)}=k(n-k)!</mrow>
+                </md>.
+            </p>
+        </statement>
+    </corollary>
+    <example xml:id="eg_class_eq_A5">
+    <title>Class equation: <m>A_5</m></title>
+    <statement>
+    <p>
+    Determine the class equation of <m>A_5</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    First we describe the different cycle types of elements of <m>A_5</m>.
+        <me>
+            \begin{array}{c|c}
+            \text{Type} \amp \text{Number of elements}\\
+            \hline
+            (a\ b\ c\ d\ e) \amp 24 \\
+            (a\ b\ c) \amp 20 \\
+            (a\ b)(c\ d) \amp 15\\
+            \id \amp 1
+            \end{array}
+        </me>.
+        Given <m>\sigma\in A_n</m> of one of these types, we know that its conjugacy class in <m>S_5</m> consists of <em>all</em> elements of that same type. However, we are computing conjugacy classes in <m>A_5</m>! Since we are conjugating <m>\sigma</m> by fewer elements, its conjugacy class in <m>A_5</m> will be a subset of its conjugacy class in <m>S_5</m>. It follows that each conjugacy class in <m>S_5</m> breaks ups into a disjoint union of conjugacy classes in <m>A_5</m>. As you will show in your homework, some of these conjugacy classes remain intact, while the others split into exactly two conjugacy classes. 
+    </p>
+    </solution>
+    </example>
+    
     <theorem xml:id="th_simple_An">
     <title>Simplicity of <m>A_n</m></title>
     <statement>
