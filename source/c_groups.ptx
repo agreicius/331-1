@@ -21,4 +21,5 @@
 <xi:include href="s_group_actions_stabilizers.ptx" />
 <xi:include href="s_group_actions_orbits.ptx" />
 <xi:include href="s_class_number.ptx" />
+<xi:include href="s_Sylow_A.ptx" />
 </chapter>

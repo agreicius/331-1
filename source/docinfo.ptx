@@ -105,6 +105,7 @@
     \DeclareMathOperator{\GL}{GL}
     \DeclareMathOperator{\SL}{SL}
     \DeclareMathOperator{\ML}{M}
+    \DeclareMathOperator{\Syl}{Syl}
     \DeclareMathOperator{\Gal}{Gal}
     \DeclareMathOperator{\ab}{ab}
     \DeclareMathOperator{\sgn}{sgn}
