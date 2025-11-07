@@ -111,8 +111,17 @@
     </statement>
     </example>
     <p>
-        We now state the three Sylow theorems. 
+        Before stating the three Sylow subgroups, we make official the notion of a <m>p</m>-group.
     </p>
+    <definition xml:id="d_pgroup">
+    <title><m>p</m>-group</title>
+    <statement>
+    <p>
+    Let <m>p</m> be a prime integer. A <term><m>p</m>-group</term> is a group of cardinality <m>p^k</m> for some positive integer <m>k</m>. Given a group <m>G</m>, a <m>p</m>-subgroup of <m>G</m> is a subgroup <m>H\leq G</m> that is a <m>p</m>-group. 
+    </p>
+    </statement>
+    </definition>
+    
     <theorem xml:id="th_Sylow_1">
     <title>Sylow 1</title>
     <statement>
