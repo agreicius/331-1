@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_group_actions_orbits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_group_actions_orbits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_Sylow_A.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Z}{{\mathbb Z}}
@@ -216,6 +216,7 @@ eBookConfig.enable_chatcodes =  false;
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\SL}{SL}
 \DeclareMathOperator{\ML}{M}
+\DeclareMathOperator{\Syl}{Syl}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\ab}{ab}
 \DeclareMathOperator{\sgn}{sgn}
@@ -434,6 +435,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_stabilizers.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Group actions: stabilizer</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_orbits.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Group actions: orbits</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_class_number.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Class equation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Sylow_A.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Sylow theorems: intro</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -559,59 +561,105 @@ G=\bigcup_{i=1}^{s}C_i\text{,}\tag{1.73}
 <div class="autopermalink" data-description="Example 1.148: Class equation: abelian groups"><a href="#eg_class_eq_abelian" title="Copy heading and permalink for Example 1.148: Class equation: abelian groups" aria-label="Copy heading and permalink for Example 1.148: Class equation: abelian groups">🔗</a></div></article><article class="example example-like" id="eg_class_eqn_D8"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.149</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Class equation: <span class="process-math">\(D_8\)</span>.</span>
 </h3>
-<div class="para" id="eg_class_eqn_D8-2-1">Compute the class equation of $D_8$.<div class="autopermalink" data-description="Paragraph"><a href="#eg_class_eqn_D8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_class_eqn_D8-2-1">Compute the class equation of <span class="process-math">\(D_8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_class_eqn_D8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="eg_class_eqn_D8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="eg_class_eqn_D8-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_class_eqn_D8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.149.1"><a href="#eg_class_eqn_D8-3" title="Copy heading and permalink for Solution 1.149.1" aria-label="Copy heading and permalink for Solution 1.149.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 1.149: Class equation: D_8"><a href="#eg_class_eqn_D8" title="Copy heading and permalink for Example 1.149: Class equation: D_8" aria-label="Copy heading and permalink for Example 1.149: Class equation: D_8">🔗</a></div></article><article class="definition definition-like" id="d_partitions_of_n"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.150</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partition of <span class="process-math">\(n\)</span>.</span>
+<div class="autopermalink" data-description="Example 1.149: Class equation: D_8"><a href="#eg_class_eqn_D8" title="Copy heading and permalink for Example 1.149: Class equation: D_8" aria-label="Copy heading and permalink for Example 1.149: Class equation: D_8">🔗</a></div></article><article class="theorem theorem-like" id="th_center_pgroup"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.150</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Center of a <span class="process-math">\(p\)</span>-group.</span>
+</h3>
+<div class="para" id="th_center_pgroup-2-1">Assume <span class="process-math">\(G\)</span> is a group of cardinality <span class="process-math">\(p^n\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer. The center of <span class="process-math">\(G\)</span> is nontrivial: i.e., <span class="process-math">\(Z(G)\ne \{e\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_center_pgroup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.150: Center of a p-group"><a href="#th_center_pgroup" title="Copy heading and permalink for Theorem 1.150: Center of a p-group" aria-label="Copy heading and permalink for Theorem 1.150: Center of a p-group">🔗</a></div></article><details id="th_center_pgroup-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_center_pgroup-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_center_pgroup-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.150.1"><a href="#th_center_pgroup-3" title="Copy heading and permalink for Proof 1.150.1" aria-label="Copy heading and permalink for Proof 1.150.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_psquared"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.151</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups of cardinality <span class="process-math">\(p^2\)</span>.</span>
+</h3>
+<div class="para" id="cor_psquared-2-1">If <span class="process-math">\(G\)</span> is a group of cardinality <span class="process-math">\(p^2\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer, then <span class="process-math">\(G\)</span> is abelian.<div class="autopermalink" data-description="Paragraph"><a href="#cor_psquared-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.151: Groups of cardinality p^2"><a href="#cor_psquared" title="Copy heading and permalink for Corollary 1.151: Groups of cardinality p^2" aria-label="Copy heading and permalink for Corollary 1.151: Groups of cardinality p^2">🔗</a></div></article><article class="definition definition-like" id="d_partitions_of_n"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.152</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partition of <span class="process-math">\(n\)</span>.</span>
 </h3>
 <div class="para logical" id="d_partitions_of_n-2-1">
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer. A <dfn class="terminology">partition of <span class="process-math">\(n\)</span></dfn> is an <span class="process-math">\(r\)</span>-tuple <span class="process-math">\((n_1,n_2,\dots, n_r)\)</span> for some <span class="process-math">\(1\leq r\leq n\)</span> satisfying</div>
 <div class="displaymath process-math" id="d_partitions_of_n-2-1-6">
 \begin{align*}
-n_1 \amp \leq n_2\leq \dots \leq n_R\\
+n_1 \amp \leq n_2\leq \dots \leq n_r\\
 n \amp =n_1+n_2+\cdots +n_r\text{.}
 \end{align*}
 </div>
+<div class="para">Given a partiion <span class="process-math">\(p=(n_1,n_2,\dots, n_r)\)</span> we define its <dfn class="terminology">type</dfn> <span class="process-math">\(T(p)\)</span> to be the <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((m_1,m_2,\dots, m_n)\text{,}\)</span> where <span class="process-math">\(m_i\)</span> is the number of entries of <span class="process-math">\(p\)</span> equal to <span class="process-math">\(i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span>
+</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_partitions_of_n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.150: Partition of n"><a href="#d_partitions_of_n" title="Copy heading and permalink for Definition 1.150: Partition of n" aria-label="Copy heading and permalink for Definition 1.150: Partition of n">🔗</a></div></article><article class="theorem theorem-like" id="th_class_eq_Sn"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.151</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Class equation of <span class="process-math">\(S_n\)</span>.</span>
+<div class="autopermalink" data-description="Definition 1.152: Partition of n"><a href="#d_partitions_of_n" title="Copy heading and permalink for Definition 1.152: Partition of n" aria-label="Copy heading and permalink for Definition 1.152: Partition of n">🔗</a></div></article><article class="theorem theorem-like" id="th_class_eq_Sn"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.153</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Class equation of <span class="process-math">\(S_n\)</span>.</span>
 </h3>
 <div class="para logical" id="th_class_eq_Sn-2-1">
-<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer, and let <span class="process-math">\(\mathcal{P}\)</span> be the set of all partitions of <span class="process-math">\(n\text{.}\)</span> The class equation of <span class="process-math">\(S_n\)</span> is</div>
+<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer, let <span class="process-math">\(\mathcal{P}\)</span> be the set of all partitions of <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(T(\mathcal{P})\)</span> be the set of all types of these partitions.  The class equation of <span class="process-math">\(S_n\)</span> is</div>
 <div class="displaymath process-math" id="eq_class_eq_Sn">
 \begin{equation}
-n!=\sum_{(n_1,n_2,\dots, n_r)\in \mathcal{P}}\dfrac{n!}{n_1!n_2
-!\cdots n_r!1^{n_1}2^{n_2}\cdots r^{n_r}}\text{.}\tag{1.75}
+n!=\sum_{(m_1,m_2,\dots, m_n)\in T(\mathcal{P})}\dfrac{n!}{m_1!m_2
+!\cdots m_n!1^{m_1}2^{m_2}\cdots n^{m_n}}\text{.}\tag{1.75}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_class_eq_Sn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.151: Class equation of S_n"><a href="#th_class_eq_Sn" title="Copy heading and permalink for Theorem 1.151: Class equation of S_n" aria-label="Copy heading and permalink for Theorem 1.151: Class equation of S_n">🔗</a></div></article><details id="th_class_eq_Sn-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_class_eq_Sn-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_class_eq_Sn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.151.1"><a href="#th_class_eq_Sn-3" title="Copy heading and permalink for Proof 1.151.1" aria-label="Copy heading and permalink for Proof 1.151.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_center_pgroup"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.152</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Center of a <span class="process-math">\(p\)</span>-group.</span>
+<div class="autopermalink" data-description="Theorem 1.153: Class equation of S_n"><a href="#th_class_eq_Sn" title="Copy heading and permalink for Theorem 1.153: Class equation of S_n" aria-label="Copy heading and permalink for Theorem 1.153: Class equation of S_n">🔗</a></div></article><details id="th_class_eq_Sn-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_class_eq_Sn-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_class_eq_Sn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.153.1"><a href="#th_class_eq_Sn-3" title="Copy heading and permalink for Proof 1.153.1" aria-label="Copy heading and permalink for Proof 1.153.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_stab_cycle"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.154</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stabilizers of cycles.</span>
 </h3>
-<div class="para" id="th_center_pgroup-2-1">Assume <span class="process-math">\(G\)</span> is a group of cardinality <span class="process-math">\(p^n\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer. The center of <span class="process-math">\(G\)</span> is nontrivial: i.e., <span class="process-math">\(Z(G)\ne \{e\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_center_pgroup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="cor_stab_cycle-2-1">
+<div class="para">Let <span class="process-math">\(\sigma=(a_1\ a_2\ \dots a_k)\)</span> be a <span class="process-math">\(k\)</span>-cycle in <span class="process-math">\(S_n\text{.}\)</span> Let <span class="process-math">\(H=\angvec{\sigma}\)</span> and let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K=\{\tau\in S_n\mid \tau(a_i)=a_i \text{ for all } 1\leq i\leq k\}\text{.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 1.152: Center of a p-group"><a href="#th_center_pgroup" title="Copy heading and permalink for Theorem 1.152: Center of a p-group" aria-label="Copy heading and permalink for Theorem 1.152: Center of a p-group">🔗</a></div></article><details id="th_center_pgroup-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_center_pgroup-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_center_pgroup-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.152.1"><a href="#th_center_pgroup-3" title="Copy heading and permalink for Proof 1.152.1" aria-label="Copy heading and permalink for Proof 1.152.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_psquared"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.153</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups of cardinality <span class="process-math">\(p^2\)</span>.</span>
+<div class="para">We have</div>
+<div class="displaymath process-math" id="cor_stab_cycle-2-1-6">
+\begin{align*}
+C_{S_n}(\sigma) \amp =HK \amp \abs{C_{S_{n}}(\sigma)}=k(n-k)!\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_stab_cycle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.154: Stabilizers of cycles"><a href="#cor_stab_cycle" title="Copy heading and permalink for Corollary 1.154: Stabilizers of cycles" aria-label="Copy heading and permalink for Corollary 1.154: Stabilizers of cycles">🔗</a></div></article><article class="example example-like" id="eg_class_eq_A5"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.155</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Class equation: <span class="process-math">\(A_5\)</span>.</span>
 </h3>
-<div class="para" id="cor_psquared-2-1">If <span class="process-math">\(G\)</span> is a group of cardinality <span class="process-math">\(p^2\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer, then <span class="process-math">\(G\)</span> is abelian.<div class="autopermalink" data-description="Paragraph"><a href="#cor_psquared-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_class_eq_A5-2-1">Determine the class equation of <span class="process-math">\(A_5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_class_eq_A5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.153: Groups of cardinality p^2"><a href="#cor_psquared" title="Copy heading and permalink for Corollary 1.153: Groups of cardinality p^2" aria-label="Copy heading and permalink for Corollary 1.153: Groups of cardinality p^2">🔗</a></div></article><article class="theorem theorem-like" id="th_simple_An"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.154</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simplicity of <span class="process-math">\(A_n\)</span>.</span>
+<div class="solutions"><details id="eg_class_eq_A5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_class_eq_A5-3-1">
+<div class="para">First we describe the different cycle types of elements of <span class="process-math">\(A_5\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|c}
+\text{Type} \amp \text{Number of elements}\\
+\hline
+(a\ b\ c\ d\ e) \amp 24 \\
+(a\ b\ c) \amp 20 \\
+(a\ b)(c\ d) \amp 15\\
+\id \amp 1
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">Given <span class="process-math">\(\sigma\in A_n\)</span> of one of these types, we know that its conjugacy class in <span class="process-math">\(S_5\)</span> consists of <em class="emphasis">all</em> elements of that same type. However, we are computing conjugacy classes in <span class="process-math">\(A_5\text{!}\)</span> Since we are conjugating <span class="process-math">\(\sigma\)</span> by fewer elements, its conjugacy class in <span class="process-math">\(A_5\)</span> will be a subset of its conjugacy class in <span class="process-math">\(S_5\text{.}\)</span> It follows that each conjugacy class in <span class="process-math">\(S_5\)</span> breaks ups into a disjoint union of conjugacy classes in <span class="process-math">\(A_5\text{.}\)</span> As you will show in your homework, some of these conjugacy classes remain intact, while the others split into exactly two conjugacy classes.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_class_eq_A5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.155.1"><a href="#eg_class_eq_A5-3" title="Copy heading and permalink for Solution 1.155.1" aria-label="Copy heading and permalink for Solution 1.155.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.155: Class equation: A_5"><a href="#eg_class_eq_A5" title="Copy heading and permalink for Example 1.155: Class equation: A_5" aria-label="Copy heading and permalink for Example 1.155: Class equation: A_5">🔗</a></div></article><article class="theorem theorem-like" id="th_simple_An"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.156</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simplicity of <span class="process-math">\(A_n\)</span>.</span>
 </h3>
 <div class="para" id="th_simple_An-2-1">For all <span class="process-math">\(n\geq 5\)</span> the alternating group <span class="process-math">\(A_n\)</span> is simple.<div class="autopermalink" data-description="Paragraph"><a href="#th_simple_An-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.154: Simplicity of A_n"><a href="#th_simple_An" title="Copy heading and permalink for Theorem 1.154: Simplicity of A_n" aria-label="Copy heading and permalink for Theorem 1.154: Simplicity of A_n">🔗</a></div></article><details id="th_simple_An-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_simple_An-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_simple_An-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.154.1"><a href="#th_simple_An-3" title="Copy heading and permalink for Proof 1.154.1" aria-label="Copy heading and permalink for Proof 1.154.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.19: Class equation"><a href="#s_class_number" title="Copy heading and permalink for Section 1.19: Class equation" aria-label="Copy heading and permalink for Section 1.19: Class equation">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem 1.156: Simplicity of A_n"><a href="#th_simple_An" title="Copy heading and permalink for Theorem 1.156: Simplicity of A_n" aria-label="Copy heading and permalink for Theorem 1.156: Simplicity of A_n">🔗</a></div></article><details id="th_simple_An-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_simple_An-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_simple_An-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.156.1"><a href="#th_simple_An-3" title="Copy heading and permalink for Proof 1.156.1" aria-label="Copy heading and permalink for Proof 1.156.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.19: Class equation"><a href="#s_class_number" title="Copy heading and permalink for Section 1.19: Class equation" aria-label="Copy heading and permalink for Section 1.19: Class equation">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_group_actions_orbits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_group_actions_orbits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_Sylow_A.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

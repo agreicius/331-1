@@ -2140,7 +2140,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.19",
   "title": "Class equation",
-  "body": " Class equation  This section will essentially be a long format example of computing stabilizers and orbits for one particular type of group action: namely, the action of a group on itself by conjugation. The class equation of a group is a one-line summary of the number and sizes of the orbits of under the action of conjugation.   Conjugacy class   The conjugacy class of an element of the group , denoted is the set of all conjugates of in: , . Equivalently, the conjugacy class of is the orbit of under the action of conjugation.     Conjugacy and the class equation   Let be a finite group and consider the action of on itself by conjugation.   For all , we have . It follows from the orbit-stabilizer theorem that .    We have .    Let , be the distinct conjugacy classes of , and assume further that , , is the set of conjugacy classes consisting of a single element. We have a partition , from which it follows that .            Class equation   Let be a finite group, and let be the distinct conjugacy classes of . The class equation of is the equation .     is useful both for extracting information about a group from its class equation, as well as taking some shortcuts for computing the class equation of a group.   Class equation: abelian groups   Prove: a finite group is abelian if and only if its class equation is of the form .         Class equation:   Compute the class equation of $D_8$.         Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying .     Class equation of   Let be a positive integer, and let be the set of all partitions of . The class equation of is .         Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .         Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.     Simplicity of   For all the alternating group is simple.        "
+  "body": " Class equation  This section will essentially be a long format example of computing stabilizers and orbits for one particular type of group action: namely, the action of a group on itself by conjugation. The class equation of a group is a one-line summary of the number and sizes of the orbits of under the action of conjugation.   Conjugacy class   The conjugacy class of an element of the group , denoted is the set of all conjugates of in: , . Equivalently, the conjugacy class of is the orbit of under the action of conjugation.     Conjugacy and the class equation   Let be a finite group and consider the action of on itself by conjugation.   For all , we have . It follows from the orbit-stabilizer theorem that .    We have .    Let , be the distinct conjugacy classes of , and assume further that , , is the set of conjugacy classes consisting of a single element. We have a partition , from which it follows that .            Class equation   Let be a finite group, and let be the distinct conjugacy classes of . The class equation of is the equation .     is useful both for extracting information about a group from its class equation, as well as taking some shortcuts for computing the class equation of a group.   Class equation: abelian groups   Prove: a finite group is abelian if and only if its class equation is of the form .         Class equation:   Compute the class equation of .         Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .         Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.     Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying . Given a partiion we define its type  to be the -tuple , where is the number of entries of equal to for all .     Class equation of   Let be a positive integer, let be the set of all partitions of , and let be the set of all types of these partitions. The class equation of is .         Stabilizers of cycles   Let be a -cycle in . Let and let . We have .     Class equation:   Determine the class equation of .    First we describe the different cycle types of elements of . . Given of one of these types, we know that its conjugacy class in consists of all elements of that same type. However, we are computing conjugacy classes in ! Since we are conjugating by fewer elements, its conjugacy class in will be a subset of its conjugacy class in . It follows that each conjugacy class in breaks ups into a disjoint union of conjugacy classes in . As you will show in your homework, some of these conjugacy classes remain intact, while the others split into exactly two conjugacy classes.     Simplicity of   For all the alternating group is simple.        "
 },
 {
   "id": "d_conjugacy_class",
@@ -2185,32 +2185,14 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.149",
   "title": "Class equation: <span class=\"process-math\">\\(D_8\\)<\/span>.",
-  "body": " Class equation:   Compute the class equation of $D_8$.       "
-},
-{
-  "id": "d_partitions_of_n",
-  "level": "2",
-  "url": "s_class_number.html#d_partitions_of_n",
-  "type": "Definition",
-  "number": "1.150",
-  "title": "Partition of <span class=\"process-math\">\\(n\\)<\/span>.",
-  "body": " Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying .   "
-},
-{
-  "id": "th_class_eq_Sn",
-  "level": "2",
-  "url": "s_class_number.html#th_class_eq_Sn",
-  "type": "Theorem",
-  "number": "1.151",
-  "title": "Class equation of <span class=\"process-math\">\\(S_n\\)<\/span>.",
-  "body": " Class equation of   Let be a positive integer, and let be the set of all partitions of . The class equation of is .       "
+  "body": " Class equation:   Compute the class equation of .       "
 },
 {
   "id": "th_center_pgroup",
   "level": "2",
   "url": "s_class_number.html#th_center_pgroup",
   "type": "Theorem",
-  "number": "1.152",
+  "number": "1.150",
   "title": "Center of a <span class=\"process-math\">\\(p\\)<\/span>-group.",
   "body": " Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .       "
 },
@@ -2219,18 +2201,153 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#cor_psquared",
   "type": "Corollary",
-  "number": "1.153",
+  "number": "1.151",
   "title": "Groups of cardinality <span class=\"process-math\">\\(p^2\\)<\/span>.",
   "body": " Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.   "
+},
+{
+  "id": "d_partitions_of_n",
+  "level": "2",
+  "url": "s_class_number.html#d_partitions_of_n",
+  "type": "Definition",
+  "number": "1.152",
+  "title": "Partition of <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying . Given a partiion we define its type  to be the -tuple , where is the number of entries of equal to for all .   "
+},
+{
+  "id": "th_class_eq_Sn",
+  "level": "2",
+  "url": "s_class_number.html#th_class_eq_Sn",
+  "type": "Theorem",
+  "number": "1.153",
+  "title": "Class equation of <span class=\"process-math\">\\(S_n\\)<\/span>.",
+  "body": " Class equation of   Let be a positive integer, let be the set of all partitions of , and let be the set of all types of these partitions. The class equation of is .       "
+},
+{
+  "id": "cor_stab_cycle",
+  "level": "2",
+  "url": "s_class_number.html#cor_stab_cycle",
+  "type": "Corollary",
+  "number": "1.154",
+  "title": "Stabilizers of cycles.",
+  "body": " Stabilizers of cycles   Let be a -cycle in . Let and let . We have .   "
+},
+{
+  "id": "eg_class_eq_A5",
+  "level": "2",
+  "url": "s_class_number.html#eg_class_eq_A5",
+  "type": "Example",
+  "number": "1.155",
+  "title": "Class equation: <span class=\"process-math\">\\(A_5\\)<\/span>.",
+  "body": " Class equation:   Determine the class equation of .    First we describe the different cycle types of elements of . . Given of one of these types, we know that its conjugacy class in consists of all elements of that same type. However, we are computing conjugacy classes in ! Since we are conjugating by fewer elements, its conjugacy class in will be a subset of its conjugacy class in . It follows that each conjugacy class in breaks ups into a disjoint union of conjugacy classes in . As you will show in your homework, some of these conjugacy classes remain intact, while the others split into exactly two conjugacy classes.   "
 },
 {
   "id": "th_simple_An",
   "level": "2",
   "url": "s_class_number.html#th_simple_An",
   "type": "Theorem",
-  "number": "1.154",
+  "number": "1.156",
   "title": "Simplicity of <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": " Simplicity of   For all the alternating group is simple.       "
+},
+{
+  "id": "s_Sylow_A",
+  "level": "1",
+  "url": "s_Sylow_A.html",
+  "type": "Section",
+  "number": "1.20",
+  "title": "Sylow theorems: intro",
+  "body": " Sylow theorems: intro   Order at    -adic valuation of    Let be nonzero integer, and let be a prime integer. The -adic valuation of , denoted , is the largest integer such that .     -adic valuation  It follows from the fundamental theorem of arithmetic that the -adic valuation of an integer can be read directly from the prime factorization of . For example, from $12=2^2\\cdot 3$ we conclude .    Sylow subgroups   Let be a finite group of cardinality . Let be a prime divisor of , and let . A -Sylow subgroup of is a subgroup of of cardinality . We denote the set of all -Sylow subgroups : , . Lastly we let be the number of -Sylow subgroups of : .    Let's illustrate the definitions above with some groups whose lattices of subgroups we know a great deal about already.   Sylow subgroups of   We have . From the lattice of subgroups of , we see immediately that and thus      Sylow subgroups of cyclic groups   Let be a finite cyclic group of cardinality . Fix a prime divisor of , and let , so that , where . From , we know there is exactly one subgroup of of cardinality : namely, . Thus and .     Sylow subgroups of   We have . Having computed the complete lattice of subgroups of (see ) we see that and thus .     Sylow subgroups of   We have . We have not computed the full lattice of subgroups of yet, so we are not quite in a position to say immediately what the various Sylow subgroups of are.  However, since a 3-Sylow subgroup is just a group of cardinality 3 in this case, it must be a cyclic subgroup generated by a 3-cycle. Thus, we have , just as in .  What about the -Sylow subgroups? Recall that you showed in a homework exercise that there are exactly three subgroups of that are isomorphic to : call them . (In fact, each can be described as .) Thus we have . It turns out that this inclusion is in fact an equality, as we will be able to show using Sylow 2.    We now state the three Sylow theorems.   Sylow 1   Let be a group of finite cardinality , and let be a prime divisor of . We have . In other words, has a -Sylow subgroup.     Sylow 2   Let be a group of finite cardinality and let be a prime divisor of . Given any -subgroup and -Sylow subgroup , we have for some . As a result, any two -Sylow subgroups of are conjugate.     Sylow 3   Let be a group of finite cardinality , let be a prime divisor of , and let , so that , where . We have .    "
+},
+{
+  "id": "d_order_p",
+  "level": "2",
+  "url": "s_Sylow_A.html#d_order_p",
+  "type": "Definition",
+  "number": "1.157",
+  "title": "Order at <span class=\"process-math\">\\(p\\)<\/span>.",
+  "body": " Order at    -adic valuation of    Let be nonzero integer, and let be a prime integer. The -adic valuation of , denoted , is the largest integer such that .   "
+},
+{
+  "id": "s_Sylow_A-3",
+  "level": "2",
+  "url": "s_Sylow_A.html#s_Sylow_A-3",
+  "type": "Remark",
+  "number": "1.158",
+  "title": "<span class=\"process-math\">\\(p\\)<\/span>-adic valuation.",
+  "body": " -adic valuation  It follows from the fundamental theorem of arithmetic that the -adic valuation of an integer can be read directly from the prime factorization of . For example, from $12=2^2\\cdot 3$ we conclude .  "
+},
+{
+  "id": "d_Sylow_subgroups",
+  "level": "2",
+  "url": "s_Sylow_A.html#d_Sylow_subgroups",
+  "type": "Definition",
+  "number": "1.159",
+  "title": "Sylow subgroups.",
+  "body": " Sylow subgroups   Let be a finite group of cardinality . Let be a prime divisor of , and let . A -Sylow subgroup of is a subgroup of of cardinality . We denote the set of all -Sylow subgroups : , . Lastly we let be the number of -Sylow subgroups of : .   "
+},
+{
+  "id": "eg_Sylow_S3",
+  "level": "2",
+  "url": "s_Sylow_A.html#eg_Sylow_S3",
+  "type": "Example",
+  "number": "1.160",
+  "title": "Sylow subgroups of <span class=\"process-math\">\\(S_3\\)<\/span>.",
+  "body": " Sylow subgroups of   We have . From the lattice of subgroups of , we see immediately that and thus    "
+},
+{
+  "id": "eg_Sylow_cyclic",
+  "level": "2",
+  "url": "s_Sylow_A.html#eg_Sylow_cyclic",
+  "type": "Example",
+  "number": "1.161",
+  "title": "Sylow subgroups of cyclic groups.",
+  "body": " Sylow subgroups of cyclic groups   Let be a finite cyclic group of cardinality . Fix a prime divisor of , and let , so that , where . From , we know there is exactly one subgroup of of cardinality : namely, . Thus and .   "
+},
+{
+  "id": "eg_Sylow_A4",
+  "level": "2",
+  "url": "s_Sylow_A.html#eg_Sylow_A4",
+  "type": "Example",
+  "number": "1.162",
+  "title": "Sylow subgroups of <span class=\"process-math\">\\(A_4\\)<\/span>.",
+  "body": " Sylow subgroups of   We have . Having computed the complete lattice of subgroups of (see ) we see that and thus .   "
+},
+{
+  "id": "eg_Sylow_S4",
+  "level": "2",
+  "url": "s_Sylow_A.html#eg_Sylow_S4",
+  "type": "Example",
+  "number": "1.163",
+  "title": "Sylow subgroups of <span class=\"process-math\">\\(S_4\\)<\/span>.",
+  "body": " Sylow subgroups of   We have . We have not computed the full lattice of subgroups of yet, so we are not quite in a position to say immediately what the various Sylow subgroups of are.  However, since a 3-Sylow subgroup is just a group of cardinality 3 in this case, it must be a cyclic subgroup generated by a 3-cycle. Thus, we have , just as in .  What about the -Sylow subgroups? Recall that you showed in a homework exercise that there are exactly three subgroups of that are isomorphic to : call them . (In fact, each can be described as .) Thus we have . It turns out that this inclusion is in fact an equality, as we will be able to show using Sylow 2.   "
+},
+{
+  "id": "th_Sylow_1",
+  "level": "2",
+  "url": "s_Sylow_A.html#th_Sylow_1",
+  "type": "Theorem",
+  "number": "1.164",
+  "title": "Sylow 1.",
+  "body": " Sylow 1   Let be a group of finite cardinality , and let be a prime divisor of . We have . In other words, has a -Sylow subgroup.   "
+},
+{
+  "id": "th_Syl_2",
+  "level": "2",
+  "url": "s_Sylow_A.html#th_Syl_2",
+  "type": "Theorem",
+  "number": "1.165",
+  "title": "Sylow 2.",
+  "body": " Sylow 2   Let be a group of finite cardinality and let be a prime divisor of . Given any -subgroup and -Sylow subgroup , we have for some . As a result, any two -Sylow subgroups of are conjugate.   "
+},
+{
+  "id": "th_Sylow_3",
+  "level": "2",
+  "url": "s_Sylow_A.html#th_Sylow_3",
+  "type": "Theorem",
+  "number": "1.166",
+  "title": "Sylow 3.",
+  "body": " Sylow 3   Let be a group of finite cardinality , let be a prime divisor of , and let , so that , where . We have .   "
 },
 {
   "id": "appendix-notation",
