@@ -125,7 +125,7 @@
     </p>
     </statement>
     </theorem>
-    <theorem xml:id="th_Syl_2">
+    <theorem xml:id="th_Sylow_2">
     <title>Sylow 2</title>
     <statement>
     <p>
@@ -149,6 +149,133 @@
     </p>
     </statement>
     </theorem>
+    <p>
+        The statements of <xref ref="th_Sylow_1" text="title"/> and <xref ref="th_Sylow_3" text="title"/> are easily verified in examples <xref first="eg_Sylow_S3" last="eg_Sylow_A4" text="global"/>. Using <xref ref="th_Sylow_2" text="title"/>, we can now verify that our description of the <m>2</m>-Sylow subgroups of <m>S_4</m> in <xref ref="eg_Sylow_S4"/> is complete. Why? We know that <m>S_4</m> has exactly three subgroups isomorphic to <m>D_4</m>. Since their cardinality is <m>8</m>, these are <m>2</m>-Sylow subgroups. Are there any others? No! By <xref ref="th_Sylow_2" text="title"/> all <m>2</m>-Sylow subgroups of <m>S_4</m> are conjugate. Since conjugation defines an isomorphism, it follows that all <m>2</m>-Sylow subgroups of <m>S_4</m> are isomorphic to <m>D_4</m>. Thus the three we provided are the only ones. 
+    </p>
+    <p>
+        In a similar vein, <xref ref="th_Sylow_2" text="title"/> tells us that all of the <m>3</m>-Sylow subgroups of <m>A_4</m> are conjugate. This is not immediately obvious, especially since the 3-cycles of <m>A_4</m> break up into two distinct conjugacy classes: 
+        <md>
+            <mrow>C_{(123)} \amp =\{(123),(134),(243),(142)\}</mrow>
+            <mrow>C_{(132)} \amp =\{(132),(143),(234), (124)\}</mrow>
+        </md>.
+    </p>
+    <p>
+        Our proof of the Sylow theorems proceeds as a sequence of well-chosen group actions, each of whose decomposition into orbits yields useful information. 
+    </p>
+    <proposition xml:id="prop_G_acts_psets">
+        <title>Action of <m>G</m> on <m>p^k</m>-subsets</title>
+        <statement>
+            <p>
+                Let <m>G</m> be a finite group of cardinality <m>n</m>, let <m>p</m> be a prime divisor of <m>n</m>, and let <m>v_p(n)=k</m>, so that <m>n=p^km</m>, where <m>p\nmid m</m>.
+            </p>
+            <p>
+                Let <m>A</m> be the set of all subsets of <m>G</m> of cardinality <m>p^k</m>:
+                <ie/>, 
+                <me>
+                    A=\{X\subseteq G\mid \abs{X}=p^k\}
+                </me>.
+                Let <m>G</m> act on <m>A</m> by left multiplication: <ie/>, given <m>X=\{g_1,g_2,\dots, g_{p^k}\}</m> and <m>g\in G</m>, we define 
+                            <me>
+                                g\cdot X=\{gg_1,gg_2,\dots, gg_{p^k}\}
+                            </me>.
+            <ol>
+                <li>
+                    <p>
+                        There are elements <m>X_i\in A</m> such that <m>A</m> decomposes into disjoint orbits <m>O_{X_1}, O_{X_2},\dots, O_{X_r}</m>, and   <m>e\in X_i</m> for all <m>1\leq i\leq r</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For all <m>1\leq i\leq r</m> we have  <m>\abs{O_{X_i}}=p^{n_i}m</m> for some <m>0\leq n_i\leq k</m>.   
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\abs{O_{X_i}}=m</m> if and only if <m>X_i=H_i</m> is a <m>p</m>-Sylow subgroup of <m>G</m>. In this case <m>O_{X_i}=G/H_i</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>n_p(G)\equiv 1 \pmod p</m>.
+                    </p>
+                </li>
+            </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+               <ol>
+                <li>
+                    <p>
+                        It suffices to prove that any orbit <m>O_X\subseteq A</m> contains a subset <m>X'</m> that contains <m>e</m>. This is easy, 
+                        if <m>X=\{g_1,g_2,\dots, g_{p^k}\}</m>, then 
+                        <me>
+                            g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X
+                        </me>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        With <m>X_i</m> as above, we have <m>G_{X_i}\subseteq X_i</m>. This is because if <m>g\in G_{X_i}</m>, then since <m>e\in X_i</m> and <m>g\cdot X_i=X_i</m>, we must have <m>g=ge\in X_i</m>. As a result, we have
+                        <me>
+                            \abs{G_{X_i}}\leq \abs{X_i}=p^k
+                        </me>.
+                        It follows that 
+                        <me>
+                            \abs{O_{X_i}}=\abs{G}/\abs{G_{X_i}}\geq n/p_k=m.
+                        </me>.
+                        Since <m>\abs{O_{X_i}}\mid n=p^km</m> and <m>\abs{O_{X_i}}\geq m</m>, it follows that <m>\abs{O_{X_i}}=p^{n_i}m</m> for some <m>0\leq n_i\leq k</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        We have <m>\abs{O_{X_i}}=m</m> if and only if <m>\abs{G_{X_i}}=p^k</m> if and only if <m>G_{X_i}=X_i</m>, since <m>G_{X_i}\subseteq X_i</m> and <m>\abs{G_{X_i}}=\abs{X_i}=p^k</m>. In this case <m>X_i=G_{X_i}=H_i</m> is a <m>p</m>-Sylow subgroup of <m>G</m>, and by definition of the group action, the orbit <m>O_{H_i}</m> is literally the coset space <m>G/H_i</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        We claim that the <m>p</m>-Sylow subgroups of <m>G</m> are in 1-1 correspondence with the orbits of <m>A</m> of cardinality <m>m</m>. Indeed, since each such orbit is of the form <m>G/H_i</m> for some <m>H_i\in \Syl_p(G)</m>, and since <m>H_i</m> is the only subgroup of the coset space <m>G/H_i</m>, we see that each such orbit contains exactly one <m>p</m>-Sylow subgroup. Furthermore, for any <m>p</m>-Sylow subgroup <m>H</m> its orbit <m>G_H</m> must have cardinality <m>n/p^k=m</m>. 
+                    </p>
+                    <p>
+                        Let <m>O_{X_1}, O_{X_2},\dots, O_{X_s}</m> be the distinct orbits of <m>A</m> of cardinality <m>m</m>. We have 
+                        <md>
+                            <mrow>{n\choose p^k} \amp =\sum_{i=1}^r\abs{O_{X_i}}</mrow>
+                            <mrow> \amp =\sum_{i=1}^s\abs{O_{X_i}}+\sum_{i=s+1}^r\abs{O_{X_i}}</mrow>
+                            <mrow> \amp =m\cdot n_p(G)+\sum_{i=s+1}^rp^{n_i}m</mrow>
+                        </md>,
+                        where <m>n_i\geq 1</m> for all <m>s+1\leq i\leq r</m>. The last line follows since there are exactly <m>n_p(G)</m> orbits of cardinality <m>m</m>, and since all other orbits have cardinality <m>p^jm</m> for some <m>j\geq 1</m>. As a result, we have 
+                        <md>
+                            <mrow>{n\choose p^k} \amp \equiv m\cdot n_p(G)</mrow>
+                        </md>.
+                        Now for a wonderful trick. Since the equivalence above holds for <em>any</em> group of cardinality <m>n</m>, in particular it holds for a cyclic group. But in this special case we have <m>n_p(G)=1</m>. It follows that 
+                        <me>
+                            {n\choose p^k}\equiv m \pmod p
+                        </me>. 
+                        Lastly, since <m>\gcd(m,p)=1</m>, it is invertible modulo <m>p</m>, allowing us to conclude that 
+                        <me>
+                            1\equiv n_p(G) \pmod p
+                        </me>,
+                        as desired. 
+                    </p>
+                </li>
+               </ol> 
+            </p>
+        </proof>
+    </proposition>
+    <p>
+        We extract from the previous proof, a wonderful gem of a combinatorial fact. 
+    </p>
+    <corollary xml:id="cor_n_choose_pk">
+        <statement>
+            <p>
+                Let <m>n</m> be a positive integer, and let <m>v_p(n)=k</m> for the prime integer <m>p</m>. We have 
+                <me>
+                    {n\choose p^k}\equiv \frac{n}{p^k} \pmod p
+                </me>.
+            </p>
+        </statement>
+    </corollary>
+    
     
     
     
