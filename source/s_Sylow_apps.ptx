@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_Sylow_apps" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Sylow theorems: applications</title>
+    <p>
+        Much of the rest of this course will be devoted to classifying finite groups up to isomorphism, and the Sylow theorems will be an important tool in this regard. We illustrate this with some first results here.
+    </p>
+    <theorem xml:id="th_Cauchys">
+    <title>Cauchy's theorem</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a finite group, and let <m>p</m> be a prime divisor of <m>\abs{G}</m>. There is an element of <m>G</m> of order <m>p</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        Let <m>H\in Syl_p(G)</m> and take any nontrivial element <m>g\in H</m>. Since <m>\abs{g}</m> is cyclic of cardinality <m>p^i</m> for some <m>1\leq i</m>, there is an element <m>\abs{g}</m> of order <m>p</m>. 
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_card_pq">
+    <title>Groups of cardinality <m>pq</m></title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>pq</m> where <m>p</m> and <m>q</m> are distinct primes and <m>p&lt; q</m>. 
+    <ol>
+        <li>
+            <p>
+                <m>G</m> has a normal subgroup of cardinality <m>q</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                If <m>q\not\equiv 1 \pmod p</m>, then <m>G</m> is cyclic. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_card_12">
+    <title>Groups of cardinality <m>12</m></title>
+    <statement>
+    <p>
+    If <m>G</m> is a group of cardinality <m>12</m>, then <m>G</m> either <m>G</m> has a normal <m>3</m>-Sylow subgroup or <m>G\cong A_4</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    <theorem xml:id="th_card_psquaredq">
+    <title>Groups of cardinality <m>p^2q</m></title>
+    <statement>
+    <p>
+    Let <m>p</m> and <m>q</m> be distinct primes. If <m>G</m> is a group of cardinality <m>p^2q</m>, then <m>G</m> has a normal Sylow subgroup. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+       First observe that if <m>p&gt; q</m>, then since <m>n_p(G)\mid q</m> and <m>n_p(G)\equiv 1\pmod p</m>, we must have <m>n_p(G)=1</m>, and thus <m>G</m> has a normal <m>p</m>-Sylow subgroup. 
+    </p>
+    <p>
+        Now assume <m>p&lt; q</m> and <m>n_q(G)\ne 1</m>. Since <m>n_q(G)\mid p</m>, it follows that <m>n_q(G)=p</m>, and furthermore that <m>p\equiv 1\pmod q</m>.  
+        We have the following options for the number of Sylow subgroups: 
+        <md>
+            <mrow>n_p(G) \amp \in \{1,q\}</mrow>
+            <mrow>n_q(G) \amp \in \{1,p,p^2\}</mrow>
+        </md>.
+        We will show that if <m>n_p(G)=q</m>, then <m>n_q(G)=1</m>. 
+    </p>
+    </proof>
+    </theorem>
+    
+
+</section>

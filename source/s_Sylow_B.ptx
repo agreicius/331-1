@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_Sylow_B" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Sylow theorems: conclusion</title>
+<subsection xml:id="ss_second_action">
+<title>Second action: <m>H</m> on <m>G/K</m></title>
+<p>
+    We now move on to a proof of the the <xref ref="th_Sylow_2" text="title"/>. That proof makes use of the left multiplication action of <m>G</m> on the coset space <m>G/K</m>, where <m>K\in \Syl_p(G)</m>. The proof will make use of the following proposition, which is interesting in its own right. 
+</p>
+<proposition xml:id="prop_pgroup_action">
+    <title>Fix point of <m>p</m>-group action</title>
+    <statement>
+        <p>
+            Let <m>G</m> be a <m>p</m>-group. If <m>G</m> acts on a finite set <m>A</m> satisfying <m>p\nmid \abs{A}</m>, then there is an element <m>a\in A</m> with <m>G_a=G</m>: <ie/>, <m>A</m> contains an element that is fixed by all elements of <m>G</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Decompose <m>A</m> into its distict orbits <m>O_{a_1}, O_{a_2}, \dots, O_{a_r}</m>. Since <m>\abs{O_{a_i}}=[G\colon G_{a_i}]</m>, we see that either <m>\abs{O_{a_i}}</m> is divisible by <m>p</m>, or <m>\abs{O_{a_i}}=1</m>, in which case <m>G_{a_i}=G</m>. But we cannot have <m>p\mid \abs{O_{a_i}}</m> for all <m>i</m>, since then we'd have 
+            <md>
+                <mrow>\abs{A} \amp =\sum_{i=1}^r\abs{O_{a_i}}</mrow>
+                <mrow> \amp \equiv 0 \pmod p</mrow>
+            </md>, 
+            contradicting the fact that <m>p\nmid \abs{A}</m>. Thus we have <m>G_{a_i}=G</m> for some <m>i</m>, as desired. 
+        </p>
+    </proof>
+</proposition>
+
+<proof>
+    <title>Proof of Sylow 2</title>
+    <p>
+    Let <m>p</m> be a prime divisor of <m>\abs{G}</m>, let <m>K\in Syl_p(G)</m>, let <m>H</m> be a <m>p</m>-subgroup of <m>G</m>, and consider the action of <m>H</m> on <m>G/K</m>. Since <m>\abs{G/K}=m</m>, where <m>p\nmid m</m>, it follows that one of the cosets <m>gK</m> of <m>G/K</m> is fixed under left multiplication by <m>H</m>: <ie/>, <m>h\cdot gK=gK</m> for all <m>h\in H</m>. But by <xref ref="th_stab"/> it follows that <m>H\leq G_{gK}=gKg^{-1}</m>, as desired. 
+    </p>
+</proof>
+
+</subsection>
+<subsection xml:id="ss_third_action">
+<title>Third action: <m>G</m> on <m>\Syl_p(G)</m></title>
+<p>
+    
+</p>
+</subsection>
+
+</section>

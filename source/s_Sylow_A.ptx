@@ -149,6 +149,34 @@
     </p>
     </statement>
     </theorem>
+    <p>
+        The corollary below follows almost immediately from <xref ref="th_Sylow_2"/> by taking <m>H</m> to be a <m>p</m>-Sylow subgroup. 
+    </p>
+    <corollary xml:id="cor_pSylow_subgroups">
+        <title><m>p</m>-Sylow subgroups</title>
+        <statement>
+            <p>
+                Let <m>G</m> be a finite group, and let <m>p</m> be a prime divisor of <m>\abs{G}</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            Any two <m>p</m>-Sylow subgroups of <m>G</m> are conjugate. Equivalently, <m>\Syl_p(G)</m> forms a single orbit under conjugation.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Any two <m>p</m>-Sylow subgroups are isomorphic.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>n_p(G)=1</m> if and only if <m>G</m> contains a normal <m>p</m>-Sylow subgroup.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </corollary>
     <theorem xml:id="th_Sylow_3">
     <title>Sylow 3</title>
     <statement>
