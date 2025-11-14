@@ -39,6 +39,18 @@
     </statement>
     <proof>
     <p>
+        <ol>
+            <li>
+                <p>
+                    Since <m>n_q(G)\mid p</m>,  we have <m>n_q(G)\in \{1, p\}</m>. Since <m>n_q(G)\equiv 1 \pmod q</m> and since <m>p\not\equiv 1\pmod q</m> (since <m>1&lt; p &lt; q</m>), we conclude that <m>n_q(G)=1</m> and thus that <m>G</m> has a normal <m>q</m>-Sylow subgroup. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The argument here is very similar to the one above with the roles of <m>p</m> and <m>q</m> reversed. 
+                </p>
+            </li>
+        </ol>
     </p>
     </proof>
     </theorem>
@@ -51,6 +63,12 @@
     </statement>
     <proof>
     <p>
+       We show that if <m>G</m> does not have a normal <m>3</m>-Sylow subgroup, then <m>G\cong A_4</m>. Assume <m>G</m> does not have a normal <m>3</m>-Sylow subgroup: or equivalently, <m>n_3(G)\ne 1</m>. Since <m>n_3(G)\mid 4</m> and <m>n_3(G)\equiv 1 \pmod 3</m>, it follows that <m>n_3(G)=4</m>. Let 
+       <me>
+        A=\Syl_3(G)=\{H_1, H_2,H_3,H_4\}
+       </me>.
+       By Sylow 2
+       
     </p>
     </proof>
     </theorem>
