@@ -77,7 +77,20 @@
     <title>Groups of cardinality <m>p^2q</m></title>
     <statement>
     <p>
-    Let <m>p</m> and <m>q</m> be distinct primes. If <m>G</m> is a group of cardinality <m>p^2q</m>, then <m>G</m> has a normal Sylow subgroup. 
+    Let <m>G</m> be a finite group of cardinality <m>p^2q</m>, where <m>p</m> and <m>q</m> are distinct primes.
+    <ol>
+        <li>
+            <p>
+              If <m>p&gt; q</m>, then <m>G</m> has a <m>p</m>-Sylow subgroup.  
+            </p>
+        </li>
+        <li>
+            <p>
+              If <m>q&gt; p</m>, then either <m>p=2</m> and <m>q=3</m>, or <m>G</m> has a normal <m>q</m>-Sylow subgroup.
+            </p>
+        </li>
+    </ol>
+    In particular, <m>G</m> contains a normal Sylow subgroup. 
     </p>
     </statement>
     <proof>
@@ -95,6 +108,153 @@
     </p>
     </proof>
     </theorem>
-    
+    <example xml:id="eg_card_20_group">
+    <title>Groups of cardinality 20</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>20</m>. 
+    <ol>
+        <li>
+            <p>
+                Show that <m>G</m> has a normal <m>5</m>-Sylow subgroup. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Show that <m>G</m> is a abelian if and only <m>G</m> has a normal <m>2</m>-Sylow subgroup, and that in this case <m>G</m> isomorphic either to <m>\Z/4Z\times \Z/5\Z</m> or <m>\Z/2\times \Z/2\Z\times \Z/5\Z</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                A <m>2</m>-Sylow subgroup of <m>G</m> is isomorphic either to <m>\Z/4\Z</m> or <m>\Z/2\Z\times \Z/2\Z</m>. Give examples of nonabelian groups <m>G</m> for each case. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    <ol>
+        <li>
+            <p>
+                The previous theorem guarantees that <m>n_5(G)=1</m> and hence that <m>G</m> has a normal <m>5</m>-Sylow subgroup. You can also see this easily using the Sylow theorems since <m>n_5(G)\mid 4</m> implies <m>n_5(G)\in \{1,2,4\}</m> and <m>n_5(G)\equiv 1 \pmod 5</m> implies <m>n_5(G)\notin\{2,4\}</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The reverse implication is easy: <m>G</m> has a <m>2</m>-Sylow subgroup by Sylow 1, and this subgroup is normal since <m>G</m> is abelian! 
+            </p>
+            <p>
+                Now assume <m>G</m> has a normal <m>2</m>-Sylow subgroup <m>N_1</m>, <m>\abs{N_1}=4</m>. Since <m>G</m> has a normal <m>5</m>-Sylow subgroup <m>N_2</m>, <m>\abs{N_2}=5</m>, we have <m>N_1\cap N_2=\{e\}</m> and <m>N_1N_2=G</m>. It follows from a homework exercise that <m>G\cong N_1\times N_2</m>. Since <m>N_2\cong \Z/5\Z</m> and <m>N_1</m> is isomorphic either to <m>\Z/4\Z</m> or <m>V\cong \Z/2\Z\times \Z/2\Z</m> (the only isomorphism types of groups of cardinality <m>4</m>), we have 
+                <me>
+                    G\cong \Z/4\Z\times \Z/5\Z \text{ or } G\cong \Z/2\Z\times \Z/2\Z\times \Z/5\Z
+                </me>.
+                In particular, <m>G</m> is abelian! 
+            </p>
+        </li>
+        <li>
+            <p>
+                The group <m>D_{10}=\angvec{r,s\mid r^5=s^2=e, sr=r^{-1}s}</m> is a nonabelian group whose <m>2</m>-Sylow subgroups are all isomorphic to <m>V_4</m>. Why? Because <m>D_{10}</m> has a cardinality-4 subgroup (Sylow 1), and <m>D_{10}</m> does not contain any element of order <m>4</m>. More explicitly, you can show that the subgroups 
+                <me>
+                    H_1=\angvec{r^5,s}, H_2=\angvec{r^5, r^2s}, H_3=\angvec{r^5, r^4s}, H_4=\angvec{r^5, r^6s}, H_5=\angvec{r^5, r^8s} 
+                </me>
+                are the five <m>2</m>-Sylow subgroups of <m>D_{10}</m>. 
+            </p>
+            <p>
+                The group 
+                <me>
+            \Aff(\Z/5\Z)=\{f\colon \Z/5\Z\to \Z/5\Z\mid f(x)=ax+b, (a,b)\in (\Z/n/Z)^*\times \Z/n\Z\}
+                </me>
+                is a nonabelian group of cardinality <m>20</m> whose <m>2</m>-Sylow subgroups are each isomorphic to <m>V_4</m>. (See definition below.) This is easiest to see by using the isomorphism 
+                <me>
+                    \Aff(\Z/5\Z)=\left\{A\in \GL_2(\Z/5\Z)\mid A=\begin{bmatrix}
+                    a\amp b\\ 0\amp 1
+                    \end{bmatrix}, a\in (\Z/5\Z)^*\}\leq \GL_2(\Z/5\Z)
+                </me>.
+                Indeed, the matrix 
+                <me>
+                    A=\begin{bmatrix}
+                    2\amp 0 \\ 0 \amp 1
+                    \end{bmatrix}
+                </me>
+                is easily seen to have order <m>4</m>, and thus <m>\angvec{A}\cong \Z/4\Z</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </solution>
+    </example>
+    <p>
+        The last example introduced an affine transformation group <m>\Aff(\Z/5\Z)</m>. We give an official definition of these groups in <xref ref="spec_affine_transformations"/>.  There are a number of easy claims included in that group definition that we leave as exercises to the reader. 
+    </p>
+    <activity xml:id="spec_affine_transformations">
+    <title>Group of invertible affine transformations</title>
+    <notation>
+        <usage><m>\Aff(\Z/n\Z)</m></usage>
+      <description>group of invertible affine transformations of <m>\Z/n\Z</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>n\geq 2</m> be an integer. An <term>affine transformation</term> of <m>\Z/n\Z</m> is a function <m>f\colon \Z/n\Z\rightarrow \Z/n\Z</m> of the form <m>f(x)=ax+b</m>, where <m>a,b\in \Z/n\Z</m>. Such a function is invertible if and only if <m>a\in (\Z/n\Z)^*</m> and we denote by <m>\Aff(\Z/n\Z)</m> the set of all invertible affine transformations of <m>\Z/n\Z</m>:
+    <ie/>, 
+    <men xml:id="eq_aff_trans">
+        \Aff(\Z/n\Z)=\{f\colon \Z/n\Z\rightarrow \Z/n\Z\mid f(x)=ax+b, (a,b)\in (\Z/n/Z)^*\times \Z/n\Z\}
+    </men>.
+    This set forms a group under composition of functions, and we have 
+    <me>
+        \Aff(\Z/n\Z)\cong \{A\in \GL_2(\Z/n\Z)\mid A=\begin{bmatrix}
+        a\amp b \\ 0 \amp 1
+        \end{bmatrix}, a\in (\Z/n\Z)^*\}
+    </me>, 
+    as witnessed by the map 
+    <me>
+        f(x)=ax+b\longmapsto A=\begin{bmatrix}
+        a\amp b \\ 0 \amp 1
+        \end{bmatrix}
+    </me>.
+    </p>
+    </statement>
+    </activity>
+    <theorem xml:id="th_card_60_simple">
+    <title>Simplicity of groups of cardinality 60</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>60</m>. If <m>n_5(G)&gt; 1</m>, then <m>G</m> is simple. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_A5_isomorphism">
+    <title>Unique simple group of cardinality 60</title>
+    <statement>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>60</m>. If <m>G</m> is simple, then <m>G\cong A_5</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_isos_symmetries">
+        <title>Group of rotational symmetries of the dodecahedron</title>
+        <statement>
+            <p>
+                Let <m>D</m> be a regular dodecahedron in <m>\R^3</m>, and let <m>G</m> be its group of rotational symmetries. We have <m>G\cong A_5</m>. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                The regular dodecahedron has <m>12</m> pentagonal faces, <m>30</m> edges, and <m>20</m> vertices. Consider the action of <m>G</m> on the set <m>F</m> of faces of <m>D</m>. It is easy to see that this action is transitive, and that the stabilizer <m>G_F</m> of any given face <m>F</m> consists of the rotations of degree <m>2\pi k/5</m> about the axis passing through the centers of that face and its opposite face. It follows from the orbit-stabilizer theorem that
+                <me>
+                    \abs{G}=\abs{O_{F}}\abs{G_F}=12\cdot 5=60
+                </me>.
+                Furthermore, since <m>G</m> contains such rotations of order <m>5</m> for each of the 6 pairs of opposite faces, we see that it has at least <m>24</m> elements of order <m>5</m>. It follows that <m>n_5(G)\ne 1</m>. We conclude from <xref ref="th_card_60_simple"/> that <m>G</m> is simple, and from <xref ref="th_A5_isomorphism"/> that <m>G\cong A_5</m>.
+            </p>
+        </proof>
+    </corollary>
 
 </section>
