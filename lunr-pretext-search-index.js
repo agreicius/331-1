@@ -2446,7 +2446,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.22",
   "title": "Sylow theorems: applications",
-  "body": " Sylow theorems: applications  Much of the rest of this course will be devoted to classifying finite groups up to isomorphism, and the Sylow theorems will be an important tool in this regard. We illustrate this with some general applications of the Sylow theorems.   Cauchy's theorem   Let be a finite group, and let be a prime divisor of . There is an element of of order .    Let and take any nontrivial element . Since is cyclic of cardinality for some , there is an element of order .    "
+  "body": " Sylow theorems: applications  Much of the rest of this course will be devoted to classifying finite groups up to isomorphism, and the Sylow theorems will be an important tool in this regard. We illustrate this with some first results here.   Cauchy's theorem   Let be a finite group, and let be a prime divisor of . There is an element of of order .    Let and take any nontrivial element . Since is cyclic of cardinality for some , there is an element of order .     Groups of cardinality   Let be a group of cardinality where and are distinct primes and .    has a normal subgroup of cardinality .    If , then is cyclic.          Since , we have . Since and since (since ), we conclude that and thus that has a normal -Sylow subgroup.    The argument here is very similar to the one above with the roles of and reversed.        Groups of cardinality   If is a group of cardinality , then either has a normal -Sylow subgroup or .    We show that if does not have a normal -Sylow subgroup, then . Assume does not have a normal -Sylow subgroup: or equivalently, . Since and , it follows that . Let . By Sylow 2     Groups of cardinality   Let be a finite group of cardinality , where and are distinct primes.   If , then has a -Sylow subgroup.    If , then either and , or has a normal -Sylow subgroup.   In particular, contains a normal Sylow subgroup.    First observe that if , then since and , we must have , and thus has a normal -Sylow subgroup.  Now assume and . Since , it follows that , and furthermore that . We have the following options for the number of Sylow subgroups: . We will show that if , then .     Groups of cardinality 20   Let be a group of cardinality .   Show that has a normal -Sylow subgroup.    Show that is a abelian if and only has a normal -Sylow subgroup, and that in this case isomorphic either to or .    A -Sylow subgroup of is isomorphic either to or . Give examples of nonabelian groups for each case.          The previous theorem guarantees that and hence that has a normal -Sylow subgroup. You can also see this easily using the Sylow theorems since implies and implies .    The reverse implication is easy: has a -Sylow subgroup by Sylow 1, and this subgroup is normal since is abelian!  Now assume has a normal -Sylow subgroup , . Since has a normal -Sylow subgroup , , we have and . It follows from a homework exercise that . Since and is isomorphic either to or (the only isomorphism types of groups of cardinality ), we have . In particular, is abelian!    The group is a nonabelian group whose -Sylow subgroups are all isomorphic to . Why? Because has a cardinality-4 subgroup (Sylow 1), and does not contain any element of order . More explicitly, you can show that the subgroups are the five -Sylow subgroups of .  The group is a nonabelian group of cardinality whose -Sylow subgroups are each isomorphic to . (See definition below.) This is easiest to see by using the isomorphism . Indeed, the matrix is easily seen to have order , and thus .       The last example introduced an affine transformation group . We give an official definition of these groups in . There are a number of easy claims included in that group definition that we leave as exercises to the reader.   Group of invertible affine transformations    group of invertible affine transformations of    Let be an integer. An affine transformation of is a function of the form , where . Such a function is invertible if and only if and we denote by the set of all invertible affine transformations of : , . This set forms a group under composition of functions, and we have , as witnessed by the map .     Simplicity of groups of cardinality 60   Let be a group of cardinality . If , then is simple.         Unique simple group of cardinality 60   Let be a group of cardinality . If is simple, then .         Group of rotational symmetries of the dodecahedron   Let be a regular dodecahedron in , and let be its group of rotational symmetries. We have .    The regular dodecahedron has pentagonal faces, edges, and vertices. Consider the action of on the set of faces of . It is easy to see that this action is transitive, and that the stabilizer of any given face consists of the rotations of degree about the axis passing through the centers of that face and its opposite face. It follows from the orbit-stabilizer theorem that . Furthermore, since contains such rotations of order for each of the 6 pairs of opposite faces, we see that it has at least elements of order . It follows that . We conclude from that is simple, and from that .    "
 },
 {
   "id": "th_Cauchys",
@@ -2456,6 +2456,78 @@ var ptx_lunr_docs = [
   "number": "1.174",
   "title": "Cauchy’s theorem.",
   "body": " Cauchy's theorem   Let be a finite group, and let be a prime divisor of . There is an element of of order .    Let and take any nontrivial element . Since is cyclic of cardinality for some , there is an element of order .   "
+},
+{
+  "id": "th_card_pq",
+  "level": "2",
+  "url": "s_Sylow_apps.html#th_card_pq",
+  "type": "Theorem",
+  "number": "1.175",
+  "title": "Groups of cardinality <span class=\"process-math\">\\(pq\\)<\/span>.",
+  "body": " Groups of cardinality   Let be a group of cardinality where and are distinct primes and .    has a normal subgroup of cardinality .    If , then is cyclic.          Since , we have . Since and since (since ), we conclude that and thus that has a normal -Sylow subgroup.    The argument here is very similar to the one above with the roles of and reversed.      "
+},
+{
+  "id": "th_card_12",
+  "level": "2",
+  "url": "s_Sylow_apps.html#th_card_12",
+  "type": "Theorem",
+  "number": "1.176",
+  "title": "Groups of cardinality <span class=\"process-math\">\\(12\\)<\/span>.",
+  "body": " Groups of cardinality   If is a group of cardinality , then either has a normal -Sylow subgroup or .    We show that if does not have a normal -Sylow subgroup, then . Assume does not have a normal -Sylow subgroup: or equivalently, . Since and , it follows that . Let . By Sylow 2   "
+},
+{
+  "id": "th_card_psquaredq",
+  "level": "2",
+  "url": "s_Sylow_apps.html#th_card_psquaredq",
+  "type": "Theorem",
+  "number": "1.177",
+  "title": "Groups of cardinality <span class=\"process-math\">\\(p^2q\\)<\/span>.",
+  "body": " Groups of cardinality   Let be a finite group of cardinality , where and are distinct primes.   If , then has a -Sylow subgroup.    If , then either and , or has a normal -Sylow subgroup.   In particular, contains a normal Sylow subgroup.    First observe that if , then since and , we must have , and thus has a normal -Sylow subgroup.  Now assume and . Since , it follows that , and furthermore that . We have the following options for the number of Sylow subgroups: . We will show that if , then .   "
+},
+{
+  "id": "eg_card_20_group",
+  "level": "2",
+  "url": "s_Sylow_apps.html#eg_card_20_group",
+  "type": "Example",
+  "number": "1.178",
+  "title": "Groups of cardinality 20.",
+  "body": " Groups of cardinality 20   Let be a group of cardinality .   Show that has a normal -Sylow subgroup.    Show that is a abelian if and only has a normal -Sylow subgroup, and that in this case isomorphic either to or .    A -Sylow subgroup of is isomorphic either to or . Give examples of nonabelian groups for each case.          The previous theorem guarantees that and hence that has a normal -Sylow subgroup. You can also see this easily using the Sylow theorems since implies and implies .    The reverse implication is easy: has a -Sylow subgroup by Sylow 1, and this subgroup is normal since is abelian!  Now assume has a normal -Sylow subgroup , . Since has a normal -Sylow subgroup , , we have and . It follows from a homework exercise that . Since and is isomorphic either to or (the only isomorphism types of groups of cardinality ), we have . In particular, is abelian!    The group is a nonabelian group whose -Sylow subgroups are all isomorphic to . Why? Because has a cardinality-4 subgroup (Sylow 1), and does not contain any element of order . More explicitly, you can show that the subgroups are the five -Sylow subgroups of .  The group is a nonabelian group of cardinality whose -Sylow subgroups are each isomorphic to . (See definition below.) This is easiest to see by using the isomorphism . Indeed, the matrix is easily seen to have order , and thus .      "
+},
+{
+  "id": "spec_affine_transformations",
+  "level": "2",
+  "url": "s_Sylow_apps.html#spec_affine_transformations",
+  "type": "Specimen",
+  "number": "15",
+  "title": "Group of invertible affine transformations.",
+  "body": " Group of invertible affine transformations    group of invertible affine transformations of    Let be an integer. An affine transformation of is a function of the form , where . Such a function is invertible if and only if and we denote by the set of all invertible affine transformations of : , . This set forms a group under composition of functions, and we have , as witnessed by the map .   "
+},
+{
+  "id": "th_card_60_simple",
+  "level": "2",
+  "url": "s_Sylow_apps.html#th_card_60_simple",
+  "type": "Theorem",
+  "number": "1.179",
+  "title": "Simplicity of groups of cardinality 60.",
+  "body": " Simplicity of groups of cardinality 60   Let be a group of cardinality . If , then is simple.       "
+},
+{
+  "id": "th_A5_isomorphism",
+  "level": "2",
+  "url": "s_Sylow_apps.html#th_A5_isomorphism",
+  "type": "Theorem",
+  "number": "1.180",
+  "title": "Unique simple group of cardinality 60.",
+  "body": " Unique simple group of cardinality 60   Let be a group of cardinality . If is simple, then .       "
+},
+{
+  "id": "cor_isos_symmetries",
+  "level": "2",
+  "url": "s_Sylow_apps.html#cor_isos_symmetries",
+  "type": "Corollary",
+  "number": "1.181",
+  "title": "Group of rotational symmetries of the dodecahedron.",
+  "body": " Group of rotational symmetries of the dodecahedron   Let be a regular dodecahedron in , and let be its group of rotational symmetries. We have .    The regular dodecahedron has pentagonal faces, edges, and vertices. Consider the action of on the set of faces of . It is easy to see that this action is transitive, and that the stabilizer of any given face consists of the rotations of degree about the axis passing through the centers of that face and its opposite face. It follows from the orbit-stabilizer theorem that . Furthermore, since contains such rotations of order for each of the 6 pairs of opposite faces, we see that it has at least elements of order . It follows that . We conclude from that is simple, and from that .   "
 },
 {
   "id": "appendix-notation",
