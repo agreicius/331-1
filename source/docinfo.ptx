@@ -78,6 +78,7 @@
     \DeclareMathOperator{\Log}{Log}
     \DeclareMathOperator{\Ext}{Ext}
     \DeclareMathOperator{\Int}{Int}
+    \DeclareMathOperator{\Aut}{Aut}
     \DeclareMathOperator{\Arcsin}{Arcsin}
     \DeclareMathOperator{\Arccos}{Arccos}
     \DeclareMathOperator{\Arctan}{Arctan}

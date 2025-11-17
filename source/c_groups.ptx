@@ -24,4 +24,5 @@
 <xi:include href="s_Sylow_A.ptx" />
 <xi:include href="s_Sylow_B.ptx" />
 <xi:include href="s_Sylow_apps.ptx" />
+<xi:include href="s_products_direct_semi.ptx" />
 </chapter>
