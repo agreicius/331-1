@@ -2418,8 +2418,8 @@ var ptx_lunr_docs = [
   "url": "s_Sylow_B.html",
   "type": "Section",
   "number": "1.21",
-  "title": "Sylow theorems: conclusion",
-  "body": " Sylow theorems: conclusion   Second action: on  We now move on to a proof of the the . That proof makes use of the left multiplication action of on the coset space , where . The proof will make use of the following proposition, which is interesting in its own right.   Fix point of -group action   Let be a -group. If acts on a finite set satisfying , then there is an element with : , contains an element that is fixed by all elements of .    Decompose into its distict orbits . Since , we see that either is divisible by , or , in which case . But we cannot have for all , since then we'd have , contradicting the fact that . Thus we have for some , as desired.     Proof of Sylow 2  Let be a prime divisor of , let , let be a -subgroup of , and consider the action of on . Since , where , it follows that one of the cosets of is fixed under left multiplication by : , for all . But by it follows that , as desired.     Third action: on     "
+  "title": "Sylow theorems: conclusion of proof",
+  "body": " Sylow theorems: conclusion of proof   Second action: on  We now move on to a proof of the the . That proof makes use of the left multiplication action of on the coset space , where . The proof will make use of the following proposition, which is interesting in its own right.   Fix point of -group action   Let be a -group. If acts on a finite set satisfying , then there is an element with : , contains an element that is fixed by all elements of .    Decompose into its distict orbits . Since , we see that either is divisible by , or , in which case . But we cannot have for all , since then we'd have , contradicting the fact that . Thus we have for some , as desired.     Proof of Sylow 2  Let be a prime divisor of , let , let be a -subgroup of , and consider the action of on . Since , where , it follows that one of the cosets of is fixed under left multiplication by : , for all . But by it follows that , as desired.     Third action: on     "
 },
 {
   "id": "prop_pgroup_action",
@@ -2528,6 +2528,87 @@ var ptx_lunr_docs = [
   "number": "1.181",
   "title": "Group of rotational symmetries of the dodecahedron.",
   "body": " Group of rotational symmetries of the dodecahedron   Let be a regular dodecahedron in , and let be its group of rotational symmetries. We have .    The regular dodecahedron has pentagonal faces, edges, and vertices. Consider the action of on the set of faces of . It is easy to see that this action is transitive, and that the stabilizer of any given face consists of the rotations of degree about the axis passing through the centers of that face and its opposite face. It follows from the orbit-stabilizer theorem that . Furthermore, since contains such rotations of order for each of the 6 pairs of opposite faces, we see that it has at least elements of order . It follows that . We conclude from that is simple, and from that .   "
+},
+{
+  "id": "s_products_direct_semi",
+  "level": "1",
+  "url": "s_products_direct_semi.html",
+  "type": "Section",
+  "number": "1.23",
+  "title": "Products: direct and semidirect",
+  "body": " Products: direct and semidirect   Direct products  We begin with a characterization of groups that are isomorphic to a direct product.   Characterization of direct products   A group is isomorphic to a direct product if and only if the conditions below are satisfied.   For all there is a normal subgroup and an isomorphism .    The normal subgroups satisfy .       The forward implication is relatively straightforward. Given , where , define . It is easy to see that the collection satisfy conditions (i) and (ii).  For the reverse implication, given normal subgroups satisfying conditions (i) and (ii), define . We claim is an isomorphism. Once we know is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from ; and injectivity follows from , which implies . That is a homomorphism follow from the fact that if elements from different subgroups commute with one another. We leave the details to the reader.     Interal direct product   Given a group and normal subgroups satisfying (i) and (ii) of , we say that is the internal direct product of the subgroups .     Internal direct products of Sylow subgroups   Let be a finite group of cardinality , and let be the distinct prime divisors of . The following conditions are equivalent.    is an internal direct product of its Sylow subgroups.     for all .        Sylow theorems for abelian groups   Let be a finite abelian group of cardinality , and let be the prime divisors of .   For each there is a unique -Sylow subgroup of , , and .     is the internal direct product of the . In particular, we have .        Torsion subgroups   Let be an abelian group. For all prime numbers , the -torsion subgroup of , denoted is defined as the set of all elements of whose order is a power of : , . The torsion subgroup of is the set of all elements of of finite order.     Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is a group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.      Semidirect products    Semidirect product   Let and be groups, and let be a group homomorphism. The semidirect product of and is the group whose underlying set is the Cartesian product and whose group operation is defined as , where is the automorphism .  The identity element of is . Given , its inverse is .     Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .            "
+},
+{
+  "id": "th_direct_prod",
+  "level": "2",
+  "url": "s_products_direct_semi.html#th_direct_prod",
+  "type": "Theorem",
+  "number": "1.182",
+  "title": "Characterization of direct products.",
+  "body": " Characterization of direct products   A group is isomorphic to a direct product if and only if the conditions below are satisfied.   For all there is a normal subgroup and an isomorphism .    The normal subgroups satisfy .       The forward implication is relatively straightforward. Given , where , define . It is easy to see that the collection satisfy conditions (i) and (ii).  For the reverse implication, given normal subgroups satisfying conditions (i) and (ii), define . We claim is an isomorphism. Once we know is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from ; and injectivity follows from , which implies . That is a homomorphism follow from the fact that if elements from different subgroups commute with one another. We leave the details to the reader.   "
+},
+{
+  "id": "d_internal_direct_product",
+  "level": "2",
+  "url": "s_products_direct_semi.html#d_internal_direct_product",
+  "type": "Definition",
+  "number": "1.183",
+  "title": "Interal direct product.",
+  "body": " Interal direct product   Given a group and normal subgroups satisfying (i) and (ii) of , we say that is the internal direct product of the subgroups .   "
+},
+{
+  "id": "cor_prod_Sylow",
+  "level": "2",
+  "url": "s_products_direct_semi.html#cor_prod_Sylow",
+  "type": "Corollary",
+  "number": "1.184",
+  "title": "Internal direct products of Sylow subgroups.",
+  "body": " Internal direct products of Sylow subgroups   Let be a finite group of cardinality , and let be the distinct prime divisors of . The following conditions are equivalent.    is an internal direct product of its Sylow subgroups.     for all .      "
+},
+{
+  "id": "cor_sylow_abelian",
+  "level": "2",
+  "url": "s_products_direct_semi.html#cor_sylow_abelian",
+  "type": "Corollary",
+  "number": "1.185",
+  "title": "Sylow theorems for abelian groups.",
+  "body": " Sylow theorems for abelian groups   Let be a finite abelian group of cardinality , and let be the prime divisors of .   For each there is a unique -Sylow subgroup of , , and .     is the internal direct product of the . In particular, we have .      "
+},
+{
+  "id": "d_torsion_subgroups",
+  "level": "2",
+  "url": "s_products_direct_semi.html#d_torsion_subgroups",
+  "type": "Definition",
+  "number": "1.186",
+  "title": "Torsion subgroups.",
+  "body": " Torsion subgroups   Let be an abelian group. For all prime numbers , the -torsion subgroup of , denoted is defined as the set of all elements of whose order is a power of : , . The torsion subgroup of is the set of all elements of of finite order.   "
+},
+{
+  "id": "th_structure_finite_abelian",
+  "level": "2",
+  "url": "s_products_direct_semi.html#th_structure_finite_abelian",
+  "type": "Theorem",
+  "number": "1.187",
+  "title": "Structure of finite abelian groups: elementary divisors.",
+  "body": " Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is a group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.   "
+},
+{
+  "id": "d_semidirect_product",
+  "level": "2",
+  "url": "s_products_direct_semi.html#d_semidirect_product",
+  "type": "Specimen",
+  "number": "16",
+  "title": "Semidirect product.",
+  "body": " Semidirect product   Let and be groups, and let be a group homomorphism. The semidirect product of and is the group whose underlying set is the Cartesian product and whose group operation is defined as , where is the automorphism .  The identity element of is . Given , its inverse is .   "
+},
+{
+  "id": "th_internal_semidirect_prod",
+  "level": "2",
+  "url": "s_products_direct_semi.html#th_internal_semidirect_prod",
+  "type": "Theorem",
+  "number": "1.188",
+  "title": "Internal semidirect products.",
+  "body": " Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .          "
 },
 {
   "id": "appendix-notation",
