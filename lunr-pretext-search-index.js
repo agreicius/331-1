@@ -2536,7 +2536,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.23",
   "title": "Products: direct and semidirect",
-  "body": " Products: direct and semidirect   Direct products  We begin with a characterization of groups that are isomorphic to a direct product.   Characterization of direct products   A group is isomorphic to a direct product if and only if the conditions below are satisfied.   For all there is a normal subgroup and an isomorphism .    The normal subgroups satisfy .       The forward implication is relatively straightforward. Given , where , define . It is easy to see that the collection satisfy conditions (i) and (ii).  For the reverse implication, given normal subgroups satisfying conditions (i) and (ii), define . We claim is an isomorphism. Once we know is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from ; and injectivity follows from , which implies . That is a homomorphism follow from the fact that if elements from different subgroups commute with one another. We leave the details to the reader.     Interal direct product   Given a group and normal subgroups satisfying (i) and (ii) of , we say that is the internal direct product of the subgroups .     Internal direct products of Sylow subgroups   Let be a finite group of cardinality , and let be the distinct prime divisors of . The following conditions are equivalent.    is an internal direct product of its Sylow subgroups.     for all .        Sylow theorems for abelian groups   Let be a finite abelian group of cardinality , and let be the prime divisors of .   For each there is a unique -Sylow subgroup of , , and .     is the internal direct product of the . In particular, we have .        Torsion subgroups   Let be an abelian group. For all prime numbers , the -torsion subgroup of , denoted is defined as the set of all elements of whose order is a power of : , . The torsion subgroup of is the set of all elements of of finite order.     Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is a group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.      Semidirect products    Semidirect product   Let and be groups, and let be a group homomorphism. The semidirect product of and is the group whose underlying set is the Cartesian product and whose group operation is defined as , where is the automorphism .  The identity element of is . Given , its inverse is .     Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .            "
+  "body": " Products: direct and semidirect   Direct products  We begin with a characterization of groups that are isomorphic to a direct product.   Characterization of direct products   A group is isomorphic to a direct product if and only if the conditions below are satisfied.   For all there is a normal subgroup and an isomorphism .    The normal subgroups satisfy .       The forward implication is relatively straightforward. Given , where , define . It is easy to see that the collection satisfy conditions (i) and (ii).  For the reverse implication, given normal subgroups satisfying conditions (i) and (ii), define . We claim is an isomorphism. Once we know is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from ; and injectivity follows from , which implies . That is a homomorphism follow from the fact that if elements from different subgroups commute with one another. We leave the details to the reader.     Interal direct product   Given a group and normal subgroups satisfying (i) and (ii) of , we say that is the internal direct product of the subgroups .     Internal direct products of Sylow subgroups   Let be a finite group of cardinality , and let be the distinct prime divisors of . The following conditions are equivalent.    is an internal direct product of its Sylow subgroups.     for all .        Sylow theorems for abelian groups   Let be a finite abelian group of cardinality , and let be the prime divisors of .   For each there is a unique -Sylow subgroup of , , and .     is the internal direct product of the . In particular, we have .        Torsion subgroups   Let be an abelian group. For all prime numbers , the -torsion subgroup of , denoted is defined as the set of all elements of whose order is a power of : , . The torsion subgroup of is the set of all elements of of finite order.     Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is an abelian group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.      Semidirect products  Although the definition of an (external) semidirect product might seem overly complicated, it is inspired by a scenario that comes up frequently when investigating groups. Namely, we often are able to locate subgroups with normal, such that and . If is itself normal, then implies that , and we have come a big step forward in our understanding of . But what if is not normal? In this case there is still a bijection between and the Cartesian product , but now the group operations of and the direct product do not necessarily match up! This is because elements of and need not commute with one another, as they do in the direct product . Let's look at this more closely with a concrete example.   Groups of cardinality 21   Prove that up to isomorphism there is exactly one abelian group of cardinality and one nonabelian group of cardinality .    It follows immediately from all abelian groups of cardinality are isomorphic to .  Assume now that is a nonabelian group of cardinality . From the Sylow theorems, has a unique -Sylow subgroup and that is normal. Let be a -Sylow subgroup. The usual arguments shows that and . Since furthermore and are both cyclic, we have .     Semidirect product   Let and be groups, and let be a group homomorphism. The semidirect product of and is the group whose underlying set is the Cartesian product and whose group operation is defined as , where is the automorphism .  The identity element of is . Given , its inverse is .     Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .           Since we will be dealing with automorphism groups, it will be useful to have a result identifying these groups in some familiar cases. We will prove the first two statements in in Math 331-2. The last two statements will not be used much in our examples, and are left as exercises.   Homomorphism set   Let and be groups. The set of all group homomorphisms from to is denoted .     Homomorphism sets and automorphisms      Homomorphisms from infinite cyclic groups  Let be an infinite cyclic group and let be any group. For any the map is a group homomorphism. As a result, the map is a bijection of sets. In particular, is in bijective correspondence with elements of via the map .    Homomorphisms from finite cyclic groups  Let be a cyclic group of cardinality . Given any group and any satisfying , the map is a group homomorphism. As a result, the map is a bijection of sets. In particular, is in bijective correspondence with elements of satisfying via the map .    Given a cyclic group of cardinality , the map is an isomorphism. As a result, we have . Additionally, if is prime, then is a cyclic group of cardinality .     for any positive integer .  In particular, .     for all .     for any .           The next proposition makes clearer how the choice of affects the semidirect product .   Isomorphic semidirect products   Let and be groups, and let .   If , then , where .    If , then where .        "
 },
 {
   "id": "th_direct_prod",
@@ -2590,7 +2590,16 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.187",
   "title": "Structure of finite abelian groups: elementary divisors.",
-  "body": " Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is a group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.   "
+  "body": " Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is an abelian group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.   "
+},
+{
+  "id": "eg_groups_card_21",
+  "level": "2",
+  "url": "s_products_direct_semi.html#eg_groups_card_21",
+  "type": "Example",
+  "number": "1.188",
+  "title": "Groups of cardinality 21.",
+  "body": " Groups of cardinality 21   Prove that up to isomorphism there is exactly one abelian group of cardinality and one nonabelian group of cardinality .    It follows immediately from all abelian groups of cardinality are isomorphic to .  Assume now that is a nonabelian group of cardinality . From the Sylow theorems, has a unique -Sylow subgroup and that is normal. Let be a -Sylow subgroup. The usual arguments shows that and . Since furthermore and are both cyclic, we have .   "
 },
 {
   "id": "d_semidirect_product",
@@ -2606,9 +2615,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#th_internal_semidirect_prod",
   "type": "Theorem",
-  "number": "1.188",
+  "number": "1.189",
   "title": "Internal semidirect products.",
   "body": " Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .          "
+},
+{
+  "id": "d_hom_set",
+  "level": "2",
+  "url": "s_products_direct_semi.html#d_hom_set",
+  "type": "Definition",
+  "number": "1.190",
+  "title": "Homomorphism set.",
+  "body": " Homomorphism set   Let and be groups. The set of all group homomorphisms from to is denoted .   "
+},
+{
+  "id": "th_automorphism_groups",
+  "level": "2",
+  "url": "s_products_direct_semi.html#th_automorphism_groups",
+  "type": "Proposition",
+  "number": "1.191",
+  "title": "Homomorphism sets and automorphisms.",
+  "body": " Homomorphism sets and automorphisms      Homomorphisms from infinite cyclic groups  Let be an infinite cyclic group and let be any group. For any the map is a group homomorphism. As a result, the map is a bijection of sets. In particular, is in bijective correspondence with elements of via the map .    Homomorphisms from finite cyclic groups  Let be a cyclic group of cardinality . Given any group and any satisfying , the map is a group homomorphism. As a result, the map is a bijection of sets. In particular, is in bijective correspondence with elements of satisfying via the map .    Given a cyclic group of cardinality , the map is an isomorphism. As a result, we have . Additionally, if is prime, then is a cyclic group of cardinality .     for any positive integer .  In particular, .     for all .     for any .          "
+},
+{
+  "id": "prop_semi_choice",
+  "level": "2",
+  "url": "s_products_direct_semi.html#prop_semi_choice",
+  "type": "Proposition",
+  "number": "1.192",
+  "title": "Isomorphic semidirect products.",
+  "body": " Isomorphic semidirect products   Let and be groups, and let .   If , then , where .    If , then where .      "
 },
 {
   "id": "appendix-notation",
