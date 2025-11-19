@@ -153,19 +153,25 @@
     </subsection>
     <subsection xml:id="ss_semidirect_products">
     <title>Semidirect products</title>
-    <!-- <example xml:id="eg_groups_card_21">
+    <p>
+        Although the definition of an (external) semidirect product might seem overly complicated, it is inspired by a scenario that comes up frequently when investigating groups. Namely, we often are able to locate subgroups <m>N, H\leq G</m> with <m>N</m> normal, such that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. If <m>H</m> is itself normal, then <xref ref="th_direct_prod"/> implies that <m>G\cong N\times H</m>, and we have come a big step forward in our understanding of <m>G</m>. But what if <m>H</m> is not normal? In this case there is still a bijection between <m>G</m> and the Cartesian product <m>N\times H</m>, but now the group operations of <m>G</m> and the direct product <m>N\times H</m> do not necessarily match up! This is because elements of <m>N</m> and <m>H</m> need not commute with one another, as they do in the direct product <m>N\times H</m>. Let's look at this more closely with a concrete example. 
+    </p>
+    <example xml:id="eg_groups_card_21">
     <title>Groups of cardinality 21</title>
     <statement>
     <p>
-    
+    Prove that up to isomorphism there is exactly one abelian group of cardinality <m>21</m> and one nonabelian group of cardinality <m>21</m>. 
     </p>
     </statement>
     <solution>
     <p>
-    
+    It follows immediately from <xref ref="th_structure_finite_abelian"/> all abelian groups of cardinality <m>21</m> are isomorphic to <m>\Z/3\Z\times \Z/7\Z</m>.
+    </p>
+    <p>
+        Assume now that <m>G</m> is a nonabelian group of cardinality <m>21</m>. From the Sylow theorems, <m>G</m> has a unique <m>7</m>-Sylow subgroup and that <m>N</m> is normal. Let <m>H</m> be a <m>3</m>-Sylow subgroup. The usual arguments shows that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. Since furthermore <m>N=\angvec{g}</m> and <m>H=\angvec{h}</m> are both cyclic, we have <m>G=\{n^ih^k\mid 0\leq i\leq 6, 0\leq k\leq 2\}</m>. 
     </p>
     </solution>
-    </example> -->
+    </example>
     <activity xml:id="d_semidirect_product">
     <title>Semidirect product</title>
     <statement>
@@ -212,7 +218,117 @@
     </p>
     </proof>
     </theorem>
+    <p>
+        Since we will be dealing with automorphism groups, it will be useful to have a result identifying these groups in some familiar cases. We will prove the first two statements in <xref ref="th_automorphism_groups"/> in Math 331-2. The last two statements will not be used much in our examples, and are left as exercises. 
+    </p>
+    <definition xml:id="d_hom_set">
+    <title>Homomorphism set</title>
+    <statement>
+    <p>
+    Let <m>G</m> and <m>H</m> be groups. The set of all group homomorphisms from <m>G</m> to <m>H</m> is denoted <m>\Hom(G,H)</m>. 
+    </p>
+    </statement>
+    </definition>
     
+    <proposition xml:id="th_automorphism_groups">
+    <title>Homomorphism sets and automorphisms</title>
+    <statement>
+    <p>
+    <ol>
+        <li>
+            <title>Homomorphisms from infinite cyclic groups</title>
+            <p>
+                Let <m>G=\angvec{g}</m> be an infinite cyclic group and let <m>H</m> be any group. For any <m>h\in H</m> the map <m>\phi(g^k)=h^k</m> is a group homomorphism. As a result, the map 
+                <md>
+                    <mrow>\Hom(G,H) \amp \rightarrow H</mrow>
+                    <mrow>\phi \amp \mapsto h=\phi(g)</mrow>
+                </md> 
+                is a bijection of sets. In particular, <m>\Hom(\Z, G)</m> is in bijective correspondence with elements of <m>G</m> via the map <m>\phi\mapsto \phi(1)\in G</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Homomorphisms from finite cyclic groups</title>
+            <p>
+                Let <m>G=\angvec{g}</m> be a cyclic group of cardinality <m>n</m>. Given any group <m>H</m> and any <m>h\in H</m> satisfying <m>h^n=e</m>, the map <m>\phi(g^k)=h^k</m> is a group homomorphism. As a result, the map 
+                <md>
+                    <mrow>\Hom(G,H)\amp \rightarrow \{h\in H\mid h^n=e\}</mrow>
+                    <mrow>\phi \amp \mapsto \phi(g)</mrow>
+                </md>
+                is a bijection of sets. In particular, <m>\Hom(\Z/n\Z,H)</m> is in bijective correspondence with elements <m>h</m> of <m>H</m> satisfying <m>h^n=e</m> via the map <m>\phi\mapsto \phi(1)</m>. 
+            </p>
+        </li>
+
+        <li>
+            <p>
+                Given a cyclic group <m>G</m> of cardinality <m>n</m>, the map 
+                <md>
+                    <mrow>(\Z/n\Z)^* \amp \rightarrow \Aut(G)</mrow>
+                    <mrow>i \amp \mapsto (g\mapsto g^{i})</mrow>
+                </md>
+                is an isomorphism. As a result, we have 
+                <me>
+                    \Aut(\Z/n\Z)\cong (\Z/n\Z)^*
+                </me>.
+                Additionally, if <m>p</m> is prime, then <m>(\Z/p\Z)^*</m> is a cyclic group of cardinality <m>p-1</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut((\Z/n\Z)^k)\cong\GL_k(\Z/n\Z)</m> for any positive integer <m>k</m>.
+            </p>
+            <p>
+                In particular, <m>\Aut(\Z/n\Z\times \Z/n\Z)\cong \GL_2(\Z/n\Z)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut(S_n)\cong S_n</m> for all <m>n\ne 6</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut(D_n)\cong \Aff(\Z/n\Z)</m> for any <m>n\geq 3</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </proposition>
+    <p>
+        The next proposition makes clearer how the choice of <m>\phi\colon H\rightarrow \Aut(N)</m> affects the semidirect product <m>N\rtimes_\phi H</m>. 
+    </p>
+    <proposition xml:id="prop_semi_choice">
+        <title>Isomorphic semidirect products</title>
+        <statement>
+            <p>
+                Let <m>N</m> and <m>H</m> be groups, and let <m>\phi\colon H\rightarrow \Aut(N)</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            If <m>\psi\in \Aut(H)</m>, then 
+                            <me>
+                                N\rtimes_{\phi} H\cong N\rtimes_{\phi'}H
+                            </me>,
+                            where <m>\phi'=\phi\circ \psi</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\psi\in \Aut(\Aut(N))</m>, then 
+                            <me>
+                                N\rtimes_\phi H\cong N\rtimes_{\phi'}H
+                            </me>
+                            where <m>\phi'=\psi\circ \phi</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
     </subsection>
 
 </section>
