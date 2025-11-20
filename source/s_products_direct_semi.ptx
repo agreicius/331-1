@@ -154,26 +154,33 @@
     <subsection xml:id="ss_semidirect_products">
     <title>Semidirect products</title>
     <p>
-        Although the definition of an (external) semidirect product might seem overly complicated, it is inspired by a scenario that comes up frequently when investigating groups. Namely, we often are able to locate subgroups <m>N, H\leq G</m> with <m>N</m> normal, such that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. If <m>H</m> is itself normal, then <xref ref="th_direct_prod"/> implies that <m>G\cong N\times H</m>, and we have come a big step forward in our understanding of <m>G</m>. But what if <m>H</m> is not normal? In this case there is still a bijection between <m>G</m> and the Cartesian product <m>N\times H</m>, but now the group operations of <m>G</m> and the direct product <m>N\times H</m> do not necessarily match up! This is because elements of <m>N</m> and <m>H</m> need not commute with one another, as they do in the direct product <m>N\times H</m>. Let's look at this more closely with a concrete example. 
-    </p>
-    <example xml:id="eg_groups_card_21">
-    <title>Groups of cardinality 21</title>
-    <statement>
-    <p>
-    Prove that up to isomorphism there is exactly one abelian group of cardinality <m>21</m> and one nonabelian group of cardinality <m>21</m>. 
-    </p>
-    </statement>
-    <solution>
-    <p>
-    It follows immediately from <xref ref="th_structure_finite_abelian"/> all abelian groups of cardinality <m>21</m> are isomorphic to <m>\Z/3\Z\times \Z/7\Z</m>.
+        Although the definition of an (external) semidirect product might seem overly complicated, it is inspired by a scenario that comes up frequently when investigating groups. Namely, we often are able to locate subgroups <m>N, H\leq G</m> with <m>N</m> normal, such that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. If <m>H</m> is itself normal, then <xref ref="th_direct_prod"/> implies that <m>G\cong N\times H</m>, and we have come a big step forward in our understanding of <m>G</m>. But what if <m>H</m> is not normal? In this case there is still a bijection between <m>G</m> and the Cartesian product <m>N\times H</m>, but now the group operations of <m>G</m> and the direct product <m>N\times H</m> do not necessarily match up! This is because elements of <m>N</m> and <m>H</m> need not commute with one another, as they do in the direct product <m>N\times H</m>.
     </p>
     <p>
-        Assume now that <m>G</m> is a nonabelian group of cardinality <m>21</m>. From the Sylow theorems, <m>G</m> has a unique <m>7</m>-Sylow subgroup and that <m>N</m> is normal. Let <m>H</m> be a <m>3</m>-Sylow subgroup. The usual arguments shows that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. Since furthermore <m>N=\angvec{g}</m> and <m>H=\angvec{h}</m> are both cyclic, we have <m>G=\{n^ih^k\mid 0\leq i\leq 6, 0\leq k\leq 2\}</m>. 
+        We can be more precise about this. Since <m>N</m> is normal, every element <m>h\in H</m> defines an automorphism <m>\phi_h\colon N\rightarrow N</m> via conjugation: <ie/>, <m>\phi_h(n)=hnh^{-1}</m> for all <m>n\in N</m>. Given elements <m>g=nh</m> and <m>g'=n'h'</m> in <m>G</m> we have 
+        <md>
+            <mrow>gg' \amp =nhn'h'</mrow>
+            <mrow> \amp =nn''hh' \amp n''=hn'h^{-1}</mrow>
+            <mrow> \amp =n\phi_h(n')hh' </mrow>
+        </md>.
+        Thus, the group structure of <m>G</m> together with our bijection between <m>G</m> and <m>N\times H</m> gives rise to a sort of <q>twisted</q> product <m>\star</m> on the set <m>N\times H</m>, as diagrammed below. 
+        <men xml:id="eq_semidirect_diagram">
+           \begin{array}{ccc}
+           N\times H \amp \longleftrightarrow \amp G \\
+           \hline
+           (n,h) \amp \longleftrightarrow\amp nh \\
+             (n',h') \amp \longleftrightarrow\amp n'h' \\
+              (n,h)\star (n',h')=(n\phi_h(n'),hh') \amp \longleftrightarrow\amp gg'=nhn'h'=n\phi_h(n')hh'
+           \end{array}
+        </men>
+    This is the origin of the semidirect product construction given in <xref ref="spec_semidirect_product"/>. There is one more detail that appears there that shows up in our setting above as well: the map <m>h\mapsto \phi_h</m> associating <m>h</m> to its corresponding conjugation automorphism is not just a map of sets from <m>H</m> to <m>\Aut H</m>, it is in fact a group homomorphism, as we have shown before. 
     </p>
-    </solution>
-    </example>
-    <activity xml:id="d_semidirect_product">
+    <activity xml:id="spec_semidirect_product">
     <title>Semidirect product</title>
+    <notation>
+        <usage><m>G_1\rtimes G_2</m></usage>
+      <description>semidirect product of <m>G_1</m> and <m>G_2</m></description>
+    </notation>
     <statement>
     <p>
     Let <m>G_1</m> and <m>G_2</m> be groups, and let <m>\phi\colon G_2\rightarrow \Aut(G_1)</m> be a group homomorphism. The <term>semidirect product</term> of <m>G_1</m> and <m>G_2</m> is the group <m>G_1\rtimes_\phi G_2</m> whose underlying set is the Cartesian product <m>G_1\times G_2</m> and whose group operation is defined as 
@@ -190,6 +197,9 @@
     </p>
     </statement>
     </activity>
+    <p>
+        In order to work explicit examples, we will need to get into the nuts and bolts of certain automorphism groups, as well as homomorphisms into those groups. Before we do so, we state and prove an analog to <xref ref="th_direct_prod"/> for semidirect products. Roughly, it tells us that descriptions of <m>G</m> of the form <m>G=NH</m> with <m>N</m> normal and <m>N\cap H=\{e\}</m> are equivalent to isomorphisms between <m>G</m> and a semidirect product. 
+    </p>
     <theorem xml:id="th_internal_semidirect_prod">
     <title>Internal semidirect products</title>
     <statement>
@@ -215,9 +225,67 @@
     </statement>
     <proof>
     <p>
+        The reverse implication pretty much follows our discussion above motivating the semidirect product definition. Namely, given conditions (i) and (ii), it is easy to show that the map 
+        <md>
+            <mrow>\alpha \colon G \amp \rightarrow N\rtimes_\psi H</mrow>
+            <mrow>g=nh \amp \mapsto (n,h)</mrow>
+        </md>
+        is an isomorphism, where <m>\psi\colon H\rightarrow \Aut(N)</m> is the homomorphism that sends <m>h</m> to its corresponding conjugation automorphism <m>\psi_h</m>. That the map is well-defined and bijective follows from the fact that every element in <m>G</m> can be written in a unique way in the form <m>g=nh</m>, where <m>n\in N</m> and <m>h\in H</m>. That <m>\alpha</m> is a homomorphism follows from the same reasoning we gave above and diagrammed in <xref ref="eq_semidirect_diagram"/>.
+    </p>
+    <p>
+        Lastly, the isomorphisms <m>\phi_1, \phi_2</m> give rise to an isomorphism 
+        <md>
+            <mrow>\beta\colon N\rtimes_\psi H \amp\rightarrow  G_1\rtimes_\phi G_2</mrow>
+            <mrow>(n,h) \amp \longmapsto (\phi_1^{-1}(n), \phi_2^{-1}(h))</mrow>
+        </md>,
+        where <m>\phi\colon G_2\rightarrow \Aut(G_1)</m> is the homomorphism that sends an element <m>g_2\in G_2</m> to the automorphism <m>\phi_{g_2}\in \Aut(G_1)</m> defined as 
+        <me>
+            \phi_{g_2}(g_1)=\phi_{1}^{-1}(\phi_2(g_1)\phi_1(g_1)\phi_2(g_1)^{-1})
+        </me>.
+        This is illustrated in the diagram below, which articulates how the automorphism <m>\phi_{g_2}\in \Aut(G_1)</m> corresponds to conjugation by <m>h=\phi_2(g_2)</m> as an automorphism of <m>N</m>. 
+    </p>
+    <image width="80%" xml:id="im_semidirect_corr">
+            <shortdescription>Diagram illustrating automorphisms of G2</shortdescription>
+            <latex-image>
+            \begin{tikzcd}
+            g_1 \arrow[ddd,mapsto, bend right=20] \arrow[rrr,mapsto, bend left=20] \arrow[dr,phantom,sloped, "\in"]  \amp  \amp \amp \phi_1^{-1}(hnh^{-1}) \arrow[dl,phantom,sloped, "\ni"] \\ [-20]
+            \amp   G_1 \arrow[r,"\phi_{g_2}"] \arrow[d,"\phi_1"'] \amp G_1 \amp  \\ [10]
+            \amp N \arrow[r,"\psi_h"] \amp N \arrow[u,"\phi_1^{-1}"'] \amp \\[-20]
+            n=\phi(g_1) \arrow[rrr,mapsto, bend right=20] \arrow[ur,phantom,sloped, "\in"] \amp \amp \amp hnh^{-1} \arrow[ul,phantom,sloped, "\ni"] \arrow[uuu,mapsto, bend right=20] 
+            \end{tikzcd}
+            </latex-image>
+        </image>
+    <p>
+        It is clear that <m>\beta</m> is a bijection, since the <m>\phi_i</m> maps are bijections. We leave the fact that <m>\beta</m> is a homomorphism (<ie/>, respects the semidirect product operations of both groups) to the reader. Composing <m>\alpha</m> and <m>\beta</m> gives the desired isomorphism from <m>G</m> to <m>G_1\rtimes_\phi G_2</m>. 
+    </p>
+    <p>
+        For the forward implication, first observe that if <m>G</m> is isomorphic to <m>G_1\rtimes_\phi G_2</m>, then it has subgroups satisfying conditions (i) and (ii) if and only if <m>G_1\rtimes_\phi G_2</m> has such subgroups. Thus, we assume without loss of generality that <m>G=G_1\rtimes_\phi G_2</m>, and endeavor to find subgroups <m>N, H</m> of <m>G_1\rtimes_\phi G_2</m> satisfying conditions (i) and (ii). We leave it to the reader to verify that 
+        <md>
+            <mrow>N \amp =G_1\times\{e_{G_{2}}\} =\{(g_1,e_{G_2})\mid g_1\in G\}</mrow>
+            <mrow>H \amp = \{e_{G_1}\}\times G_2=\{(e_{G_1},g_2)\mid g_2\in G_2\} </mrow>
+        </md>
+        do the trick. 
     </p>
     </proof>
     </theorem>
+    <example xml:id="eg_groups_card_21">
+    <title>Groups of cardinality 21</title>
+    <statement>
+    <p>
+    Prove that up to isomorphism there is exactly one abelian group of cardinality <m>21</m> and one nonabelian group of cardinality <m>21</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    It follows immediately from <xref ref="th_structure_finite_abelian"/> all abelian groups of cardinality <m>21</m> are isomorphic to <m>\Z/3\Z\times \Z/7\Z</m>.
+    </p>
+    <p>
+        Assume now that <m>G</m> is a nonabelian group of cardinality <m>21</m>. From the Sylow theorems, <m>G</m> has a unique <m>7</m>-Sylow subgroup and that <m>N</m> is normal. Let <m>H</m> be a <m>3</m>-Sylow subgroup. The usual arguments shows that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. Since furthermore <m>N=\angvec{g}</m> and <m>H=\angvec{h}</m> are both cyclic, we have <m>G=\{n^ih^k\mid 0\leq i\leq 6, 0\leq k\leq 2\}</m>. 
+    </p>
+    </solution>
+    </example>
+    
+    
     <p>
         Since we will be dealing with automorphism groups, it will be useful to have a result identifying these groups in some familiar cases. We will prove the first two statements in <xref ref="th_automorphism_groups"/> in Math 331-2. The last two statements will not be used much in our examples, and are left as exercises. 
     </p>
