@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_semidirect_products" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Semidirect products</title>
+    <subsection xml:id="ss_direct_products">
+    <title>Definitions and theory</title>
+   
+    <p>
+        Although the definition of an (external) semidirect product might seem overly complicated, it is inspired by a scenario that comes up frequently when investigating groups. Namely, we often are able to locate subgroups <m>N, H\leq G</m> with <m>N</m> normal, such that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. If <m>H</m> is itself normal, then <xref ref="th_direct_prod"/> implies that <m>G\cong N\times H</m>, and we have come a big step forward in our understanding of <m>G</m>. But what if <m>H</m> is not normal? In this case there is still a bijection between <m>G</m> and the Cartesian product <m>N\times H</m>, but now the group operations of <m>G</m> and the direct product <m>N\times H</m> do not necessarily match up! This is because elements of <m>N</m> and <m>H</m> need not commute with one another, as they do in the direct product <m>N\times H</m>.
+    </p>
+    <p>
+        We can be more precise about this. Since <m>N</m> is normal, every element <m>h\in H</m> defines an automorphism <m>\phi_h\colon N\rightarrow N</m> via conjugation: <ie/>, <m>\phi_h(n)=hnh^{-1}</m> for all <m>n\in N</m>. Given elements <m>g=nh</m> and <m>g'=n'h'</m> in <m>G</m> we have 
+        <md>
+            <mrow>gg' \amp =nhn'h'</mrow>
+            <mrow> \amp =nn''hh' \amp n''=hn'h^{-1}</mrow>
+            <mrow> \amp =n\phi_h(n')hh' </mrow>
+        </md>.
+        Thus, the group structure of <m>G</m> together with our bijection between <m>G</m> and <m>N\times H</m> gives rise to a sort of <q>twisted</q> product <m>\star</m> on the set <m>N\times H</m>, as diagrammed below. 
+        <men xml:id="eq_semidirect_diagram">
+           \begin{array}{ccc}
+           N\times H \amp \longleftrightarrow \amp G \\
+           \hline
+           (n,h) \amp \longleftrightarrow\amp nh \\
+             (n',h') \amp \longleftrightarrow\amp n'h' \\
+              (n,h)\star (n',h')=(n\phi_h(n'),hh') \amp \longleftrightarrow\amp gg'=nhn'h'=n\phi_h(n')hh'
+           \end{array}
+        </men>
+    This is the origin of the semidirect product construction given in <xref ref="spec_semidirect_product"/>. There is one more detail that appears there that shows up in our setting above as well: the map <m>h\mapsto \phi_h</m> associating <m>h</m> to its corresponding conjugation automorphism is not just a map of sets from <m>H</m> to <m>\Aut H</m>, it is in fact a group homomorphism, as we have shown before. 
+    </p>
+    <activity xml:id="spec_semidirect_product">
+    <title>Semidirect product</title>
+    <notation>
+        <usage><m>G_1\rtimes G_2</m></usage>
+      <description>semidirect product of <m>G_1</m> and <m>G_2</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>G_1</m> and <m>G_2</m> be groups, and let <m>\phi\colon G_2\rightarrow \Aut(G_1)</m> be a group homomorphism. The <term>semidirect product</term> of <m>G_1</m> and <m>G_2</m> is the group <m>G_1\rtimes_\phi G_2</m> whose underlying set is the Cartesian product <m>G_1\times G_2</m> and whose group operation is defined as 
+    <men xml:id="eq_semidirect">
+        (g_1,g_2)\cdot (g_1',g_2')=(g_1\phi_{g_2}(g_1'),g_2g_2')
+    </men>,
+    where <m>\phi_{g_2}</m> is the automorphism <m>\phi(g_2)\in \Aut(G_1)</m>. 
+    </p>
+    <p>
+        The identity element of <m>G_1\rtimes G_2</m> is <m>(e_{G_1}, e_{G_2})</m>. Given <m>(g_1,g_2)\in G_1\rtimes G_2</m>, its inverse is 
+        <men xml:id="eq_semidirect_inverse">
+            (g_1,g_2)^{-1}=(\phi_{g_2^{-1}}(g_1^{-1}),g_2^{-1})
+        </men>.
+    </p>
+    </statement>
+    </activity>
+    <p>
+        In order to work explicit examples, we will need to get into the nuts and bolts of certain automorphism groups, as well as homomorphisms into those groups. Before we do so, we state and prove an analog to <xref ref="th_direct_prod"/> for semidirect products. Roughly, it tells us that descriptions of <m>G</m> of the form <m>G=NH</m> with <m>N</m> normal and <m>N\cap H=\{e\}</m> are equivalent to isomorphisms between <m>G</m> and a semidirect product. 
+    </p>
+    <theorem xml:id="th_internal_semidirect_prod">
+    <title>Internal semidirect products</title>
+    <statement>
+    <p>
+    A group <m>G</m> is isomorphic to a semidirect product <m>G_1\rtimes_\phi G_2</m> if and only if the following conditions are satisfied. 
+    <ol marker="(i)">
+        <li>
+            <p>
+                There is a normal subgroup <m>N\normalin G</m> and subgroup <m>H\leq G</m>, along with isomorphisms <m>\phi_1\colon G_1\rightarrow N</m> and <m>\phi_2\colon G_2\rightarrow H</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N</m> and <m>H</m> satisfy 
+                <mdn>
+                    <mrow>G \amp = NH</mrow>
+                    <mrow>N\cap H \amp = \{e\}</mrow>
+                </mdn>.
+    </p>
+</li>
+</ol>
+</p>
+    </statement>
+    <proof>
+    <p>
+        The reverse implication pretty much follows our discussion above motivating the semidirect product definition. Namely, given conditions (i) and (ii), it is easy to show that the map 
+        <md>
+            <mrow>\alpha \colon G \amp \rightarrow N\rtimes_\psi H</mrow>
+            <mrow>g=nh \amp \mapsto (n,h)</mrow>
+        </md>
+        is an isomorphism, where <m>\psi\colon H\rightarrow \Aut(N)</m> is the homomorphism that sends <m>h</m> to its corresponding conjugation automorphism <m>\psi_h</m>. That the map is well-defined and bijective follows from the fact that every element in <m>G</m> can be written in a unique way in the form <m>g=nh</m>, where <m>n\in N</m> and <m>h\in H</m>. That <m>\alpha</m> is a homomorphism follows from the same reasoning we gave above and diagrammed in <xref ref="eq_semidirect_diagram"/>.
+    </p>
+    <p>
+        Lastly, the isomorphisms <m>\phi_1, \phi_2</m> give rise to an isomorphism 
+        <md>
+            <mrow>\beta\colon N\rtimes_\psi H \amp\rightarrow  G_1\rtimes_\phi G_2</mrow>
+            <mrow>(n,h) \amp \longmapsto (\phi_1^{-1}(n), \phi_2^{-1}(h))</mrow>
+        </md>,
+        where <m>\phi\colon G_2\rightarrow \Aut(G_1)</m> is the homomorphism that sends an element <m>g_2\in G_2</m> to the automorphism <m>\phi_{g_2}\in \Aut(G_1)</m> defined as 
+        <me>
+            \phi_{g_2}(g_1)=\phi_{1}^{-1}(\phi_2(g_1)\phi_1(g_1)\phi_2(g_1)^{-1})
+        </me>.
+        This is illustrated in the diagram below, which articulates how the automorphism <m>\phi_{g_2}\in \Aut(G_1)</m> corresponds to conjugation by <m>h=\phi_2(g_2)</m> as an automorphism of <m>N</m>. 
+    </p>
+    <image width="80%" xml:id="im_semidirect_corr">
+            <shortdescription>Diagram illustrating automorphisms of G2</shortdescription>
+            <latex-image>
+            \begin{tikzcd}
+            g_1 \arrow[ddd,mapsto, bend right=20] \arrow[rrr,mapsto, bend left=20] \arrow[dr,phantom,sloped, "\in"]  \amp  \amp \amp \phi_1^{-1}(hnh^{-1}) \arrow[dl,phantom,sloped, "\ni"] \\ [-20]
+            \amp   G_1 \arrow[r,"\phi_{g_2}"] \arrow[d,"\phi_1"'] \amp G_1 \amp  \\ [10]
+            \amp N \arrow[r,"\psi_h"] \amp N \arrow[u,"\phi_1^{-1}"'] \amp \\[-20]
+            n=\phi(g_1) \arrow[rrr,mapsto, bend right=20] \arrow[ur,phantom,sloped, "\in"] \amp \amp \amp hnh^{-1} \arrow[ul,phantom,sloped, "\ni"] \arrow[uuu,mapsto, bend right=20] 
+            \end{tikzcd}
+            </latex-image>
+        </image>
+    <p>
+        It is clear that <m>\beta</m> is a bijection, since the <m>\phi_i</m> maps are bijections. We leave the fact that <m>\beta</m> is a homomorphism (<ie/>, respects the semidirect product operations of both groups) to the reader. Composing <m>\alpha</m> and <m>\beta</m> gives the desired isomorphism from <m>G</m> to <m>G_1\rtimes_\phi G_2</m>. 
+    </p>
+    <p>
+        For the forward implication, first observe that if <m>G</m> is isomorphic to <m>G_1\rtimes_\phi G_2</m>, then it has subgroups satisfying conditions (i) and (ii) if and only if <m>G_1\rtimes_\phi G_2</m> has such subgroups. Thus, we assume without loss of generality that <m>G=G_1\rtimes_\phi G_2</m>, and endeavor to find subgroups <m>N, H</m> of <m>G_1\rtimes_\phi G_2</m> satisfying conditions (i) and (ii). We leave it to the reader to verify that 
+        <md>
+            <mrow>N \amp =G_1\times\{e_{G_{2}}\} =\{(g_1,e_{G_2})\mid g_1\in G\}</mrow>
+            <mrow>H \amp = \{e_{G_1}\}\times G_2=\{(e_{G_1},g_2)\mid g_2\in G_2\} </mrow>
+        </md>
+        do the trick. 
+    </p>
+    </proof>
+    </theorem>
+    
+    
+    
+    <p>
+        Since we will be dealing with automorphism groups, it will be useful to have a result identifying these groups in some familiar cases. We will prove the first two statements in <xref ref="th_automorphism_groups"/> in Math 331-2. The last two statements will not be used much in our examples, and are left as exercises. 
+    </p>
+    <definition xml:id="d_hom_set">
+    <title>Homomorphism set</title>
+    <statement>
+    <p>
+    Let <m>G</m> and <m>H</m> be groups. The set of all group homomorphisms from <m>G</m> to <m>H</m> is denoted <m>\Hom(G,H)</m>. 
+    </p>
+    </statement>
+    </definition>
+
+    <proposition xml:id="prop_homs_cyclic">
+        <title>Homomorphisms from cyclic groups</title>
+        <statement>
+            <p>
+                Let <m>G=\angvec{g}</m> be a cyclic group, and let <m>H</m> be a group. 
+                <ol>
+                    <li>
+                        <p>
+                            If <m>\ord g=\infty</m>, then the map 
+                            <md>
+                                <mrow>\Hom(G,H) \amp \rightarrow H</mrow>
+                                <mrow>\phi \amp \mapsto \phi(g)</mrow>
+                            </md>
+                            is a bijection of sets. Equivalently, for all <m>\phi\in \Hom(G,H)</m> there is a unique <m>h\in H</m> such that 
+                            <me>
+                                \phi(g^i)=h^i
+                            </me>
+                            for all <m>i\in \Z</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\ord g=n&lt; \infty</m>, then the map 
+                            <md>
+                                <mrow>\Hom(G,H) \amp \rightarrow \{h\in H\mid h^n=e\}</mrow>
+                                <mrow>\phi \amp \mapsto \phi(g)</mrow>
+                            </md>
+                            is a bijection of sets. Equivalently, for all <m>\phi\in \Hom(G,H)</m> there is a unique <m>h\in H</m> satisfying <m>h^n=e</m> such that 
+                            <me>
+                                \phi(g^i)=h^i
+                            </me>
+                            for all <m>i\in \Z</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Since any <m>\phi\in \Hom(G,H)</m> satisfies 
+                            <me>
+                                \phi(g^i)=(\phi(g))^i
+                            </me>,
+                            it is clear that a homomophism <m>\phi</m> is uniquely determined by <m>h=\phi(g)</m>. This means that the map 
+                            <me>
+                                \phi\mapsto \phi(g)
+                            </me>
+                            is an injection. To see that it is a surjection, we claim that for any <m>h\in H</m>, the map <m>\phi\colon G\rightarrow H</m> defined as
+                            <me>
+                                \phi(g^i)=h^i
+                            </me>
+                            is a group homomorphism satisfying <m>\phi(g)=h</m>. As usual, the only real work that needs to be done here is to show that the map map is well defined; and this follows since <m>g^i=g^j</m> if and only if <m>i=j</m>.                     
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The proof is similar. Again, it is clear that a homomorphism <m>\phi\in \Hom(G,H)</m> is uniquely determined by <m>h=\phi(g)</m>; furthermore, since <m>g^n=e</m>, we must have 
+                            <me>
+                                h^n=(\phi(g))^n=\phi(g^n)=\phi(e)=e
+                            </me>.
+                            This proves that the map 
+                            <me>
+                                \phi\mapsto \phi(g)
+                            </me>
+                            is an injection from  <m>G</m> to <m>\{h\in H\mid h^n=e\}</m>. Once again that this map is surjective follows from the fact that given any <m>h\in H</m> the map <m>\phi\colon G\rightarrow H</m> defined as 
+                            <me>
+                                \phi(g^i)=h^i
+                            </me>
+                            is a homomorphism. In this case, the fact that this map is well defined follows from the fact that in <m>G</m> we have 
+                            <me>
+                                g^i=g^j \iff i\equiv j\pmod n
+                            </me>.
+                            We leave the details to the reader.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    
+    <proposition xml:id="th_automorphism_groups">
+    <title>Automorphism groups</title>
+    <statement>
+    <p>
+    <ol>
+        <li>
+            <p>
+                Given a cyclic group <m>G</m> of cardinality <m>n</m>, the map 
+                <md>
+                    <mrow>(\Z/n\Z)^* \amp \rightarrow \Aut(G)</mrow>
+                    <mrow>i \amp \mapsto (g\mapsto g^{i})</mrow>
+                </md>
+                is an isomorphism. As a result, we have 
+                <me>
+                    \Aut(\Z/n\Z)\cong (\Z/n\Z)^*
+                </me>.
+                Additionally, if <m>p</m> is prime, then <m>(\Z/p\Z)^*</m> is a cyclic group of cardinality <m>p-1</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut((\Z/n\Z)^k)\cong\GL_k(\Z/n\Z)</m> for any positive integer <m>k</m>.
+            </p>
+            <p>
+                In particular, <m>\Aut(\Z/n\Z\times \Z/n\Z)\cong \GL_2(\Z/n\Z)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut(S_n)\cong S_n</m> for all <m>n\ne 6</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\Aut(D_n)\cong \Aff(\Z/n\Z)</m> for any <m>n\geq 3</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        The proof of (1) follows from <xref ref="prop_homs_cyclic"/>. We will prove (2) in Math 331-2. The proof of (3) can be found in the text. We leave the proof of (4) to the reader. 
+    </p>
+    </proof>
+    </proposition>
+    <p>
+        The next proposition makes clearer how the choice of <m>\phi\colon H\rightarrow \Aut(N)</m> affects the semidirect product <m>N\rtimes_\phi H</m>. 
+    </p>
+    <proposition xml:id="prop_semi_choice">
+        <title>Isomorphic semidirect products</title>
+        <statement>
+            <p>
+                Let <m>N</m> and <m>H</m> be groups, and let <m>\phi\colon H\rightarrow \Aut(N)</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            If <m>\psi\in \Aut(H)</m>, then 
+                            <me>
+                                N\rtimes_{\phi} H\cong N\rtimes_{\phi'}H
+                            </me>,
+                            where <m>\phi'=\phi\circ \psi</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\psi\in \Aut(\Aut(N))</m>, then 
+                            <me>
+                                N\rtimes_\phi H\cong N\rtimes_{\phi'}H
+                            </me>
+                            where <m>\phi'=\psi\circ \phi</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            We leave as an exercise for the reader that the map 
+                            <md>
+                                <mrow>N\rtimes_\phi H \amp \rightarrow N\rtimes_{\phi'}H</mrow>
+                                <mrow>(n,h) \amp \mapsto (n,\psi^{-1}(h))</mrow>
+                            </md>
+                            is an isomorphism. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            This one is slightly trickier. We leave it as an exercise for the reader to check that an isomorphism is given by the map 
+                            <md>
+                                <mrow>N\rtimes_\phi H \amp \rightarrow N\rtimes_{\phi'}H</mrow>
+                                <mrow>(n,h) \amp \mapsto (\psi_{\phi_h}(\phi_h^{-1}(n)),h) </mrow>
+                            </md>,
+                            where <m>\phi_h</m> is the automorphism <m>\phi(h)</m>, and <m>\psi_{\phi_h}</m> is the automorphism <m>\psi(\phi_h)=\psi(\phi(h))</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    </subsection>
+    <subsection xml:id="ss_semidirect_examples">
+    <title>Classifying groups of given cardinality</title>
+    <p>
+        We now put all this theory to work with some examples of computing all isomorphism types of groups of a given cardinality. 
+    </p>
+    <example xml:id="eg_groups_card_21">
+    <title>Groups of cardinality 21</title>
+    <statement>
+    <p>
+    Prove that up to isomorphism there is exactly one abelian group of cardinality <m>21</m> and one nonabelian group of cardinality <m>21</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>21</m>. The usual Sylow theory argument shows that <m>G</m> has a unique normal <m>7</m>-Sylow subgroup <m>N</m> isomorphic to <m>\Z/7\Z</m>. Let <m>H</m> be any <m>3</m>-Sylow subgroup. The usual counting argument shows that <m>N\cap H=\{e\}</m> and <m>G=NH</m>. From <xref ref="th_internal_semidirect_prod"/>, we conclude that <m>G\cong N\rtimes_\phi H</m> for some homomorphism <m>\phi\colon H\rightarrow \Aut(N)</m>. 
+    </p>
+    <p>
+        Let <m>N=\angvec{n}\cong \Z/7\Z</m> and <m>H=\angvec{h}\cong \Z/3\Z</m>. From <xref ref="th_automorphism_groups"/> we know that <m>\Aut(N)\cong (\Z/7\Z)^*</m> via the correspondence 
+        <me>
+            i\in (\Z/7\Z)^*\longleftrightarrow (n\mapsto n^i)
+        </me>.
+        Note also that <m>(\Z/7\Z)^*=\angvec{3}</m> is cyclic. Lastly, from <xref ref="prop_homs_cyclic"/>, we know that homomorphisms <m>\phi\colon H\rightarrow \Aut(N)</m> correspond to elements of <m>\Aut(N)</m> of order dividing <m>3</m>. It follows that there are exactly three such homomorphisms, summarized as follows:
+        <md>
+            <mrow>\phi_1 \amp \longleftrightarrow h\mapsto (g\mapsto g) </mrow>
+            <mrow>\phi_2\amp \longleftrightarrow h\mapsto (g\mapsto g^{2})  \amp </mrow>
+            <mrow>\phi_3 \amp \longleftrightarrow h\mapsto (g\mapsto g^4) \amp </mrow>
+        </md>.
+        The first homomorphism <m>\phi_1\colon H\rightarrow \Aut(N)</m> is the trivial homomorphism, and as such the corresponding semidirect product is isomorphic to the direct product: <ie/>, 
+        <me>
+            N\rtimes_{\phi_1} H\cong N\times H\cong \Z/7\Z\times \Z/3\Z
+        </me>.
+        Next, it is not difficult to see that <m>\phi_2=\phi_1\circ \psi</m>, where <m>\psi\in \Aut(H)</m> is the automorphism defined as 
+        <me>
+            \psi(h^i)=h^{2i}
+        </me>.
+        It follows from <xref ref="prop_semi_choice"/> that 
+        <me>
+            N\rtimes_{\phi_2} H\cong N\rtimes_{\phi_3} H
+        </me>. 
+        Thus there are <em>at most</em> two distinct groups of cardinality <m>21</m>, up to isomorphism: <m>N\rtimes_{\phi_1}H=N\times H</m> and <m>N\rtimes_{\phi_2} H</m>. We show that the second group is nonabelian, from which the desired result follows. In general if the homomorphism <m>\phi\colon H\rightarrow \Aut(N)</m> defining the semidirect product is nontrivial, then there will be an element of <m>\{e\}\times H</m> that does not commute with an element of <m>N\times \{e\}</m>. In this case, letting <m>g=(n,e)</m> and <m>g'=(e,h)</m>, we have 
+        <md>
+            <mrow>g'g(g')^{-1} \amp = (e,h)(n,e)(e,h)^{-1}</mrow>
+            <mrow> \amp =(e(\phi_2)_h(n),h)(e,h^{-1})</mrow>
+            <mrow> \amp =(n^2,h)(e,h^{-1})</mrow>
+            <mrow> \amp =(n^2,e)\ne g</mrow>
+        </md>.
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_groups_card_12">
+<title>Groups of cardinality <m>12</m></title>
+    <statement>
+    <p>
+    Give a classification of all groups of cardinality <m>12</m>, up to isomorphism. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Let <m>G</m> be a group of cardinality <m>12</m>. Recall that either <m>n_3(G)=1</m> or <m>G\cong A_4</m>. We consider the former case.  
+    </p>
+    <p>
+        Let <m>N=\angvec{n}</m> be the unique normal <m>3</m>-Sylow subgroup of <m>G</m>, and let <m>H</m> be a <m>2</m>-Sylow subgroup. The usual arguments show that <m>H\cap N=\{e\}</m> and <m>NH=G</m> and thus <m>G\cong N\rtimes_\phi H</m> for some homomorphism <m>\phi\colon H\rightarrow \Aut(N)</m>. 
+    </p>
+    <p>
+        <term>Case:</term> <m>H=\angvec{h}\cong \Z/4\Z</m>.  We first consider the case where <m>H=\angvec{h}\cong \Z/4\Z</m> is cyclic. Reasoning in a manner similar to <xref ref="eg_groups_card_21"/>, the possible homomorphisms from <m>H</m> to <m>\Aut(N)\cong (\Z/3\Z)^*</m> are 
+        <md>
+            <mrow>\phi_1 \amp \longleftrightarrow h\mapsto (n\mapsto n) \amp \text{(trivial homo.)}</mrow>
+            <mrow>\phi_2 \amp \longleftrightarrow h\mapsto (n\mapsto n^2=n^{-1}) </mrow>
+        </md>.
+        As before, we have <m>N\rtimes_{\phi_1}H\cong N\times H\cong \Z/3\Z\times \Z/4\Z</m>. In the second case we have the nonabelian group 
+        <me>
+            N\rtimes_{\phi_2} H\cong \Z/3\Z\rtimes_{\phi} \Z/4\Z
+        </me>,
+        where <m>\phi</m> is the nontrivial homomorphism from <m>\Z/4\Z</m> to <m>\Aut(\Z/3\Z)\cong \{\pm 1\}</m>. Alternatively, we can describe the group in this case with a presentation. Since <m>\phi_2</m> encodes how the element <m>h</m> conjugates the element <m>n</m> in our group <m>G</m>, we see that <m>G</m> has presentation 
+        <me>
+            G=\angvec{n,h\mid n^3=h^4=e, hnh^{-1}=n^2}
+        </me>.
+    </p>
+    <p>
+        <term>Case:</term> <m>H=\angvec{a,b}\cong V_4</m>. Now consider the case where our <m>2</m>-Sylow subgroups are isomorphic to the Klein 4-group. We use the presentation 
+        <me>
+            H=\angvec{a,b\mid a^2=b^2=e, ab=ba}
+        </me>,
+        to determine the possible homomorphisms <m>\phi\colon H\rightarrow \Aut(N)\cong (\Z/3/Z)^*</m> in this case. Such homomorphisms are determined by where <m>a</m> and <m>b</m> get sent. Since <m>\Aut(N)\cong \{\pm 1\}</m>, any choice of image for <m>a</m> and <m>b</m> gives rise to a unique homomorphism. Thus there are four homomorphisms <m>\phi\colon H\rightarrow \Aut(N)</m> in total. Let <m>\phi_3\colon H\rightarrow \Aut(N)</m> be the trivial homomorphism. In this case we have 
+        <me>
+            G\cong N\rtimes H\cong \Z/3\Z\times \Z/2\Z\times \Z/2\Z
+        </me>.
+         We claim the remaining three homomorphisms, each of which is nontrivial, give rise to the same semidirect product, up to isomorphism. This is because for any two of these, say <m>\phi</m> and <m>\phi'</m>, we have <m>\phi'=\phi\circ \psi</m>, where <m>\psi\colon H\rightarrow H</m> is an automorphism. For example, if <m>\phi</m> and <m>\phi'</m> are the homomorphisms
+         <md>
+            <mrow>\phi \amp \leftrightarrow \left( \begin{array}{c}
+                a\mapsto (n\mapsto n)\\
+                b\mapsto (n\mapsto n^2 )
+            \end{array}\right)</mrow>
+            <mrow>\phi' \amp \leftrightarrow \left( \begin{array}{c}
+                a\mapsto (n\mapsto n^2)\\
+                b\mapsto (n\mapsto n^2 )
+            \end{array}\right)</mrow>
+         </md>,
+         then we have <m>\phi'=\phi\circ \psi</m>, where <m>\psi</m> is the automorphism of <m>H</m> defined as follows:
+         <md>
+            <mrow>e \amp \mapsto e</mrow>
+            <mrow>a \amp \mapsto ab</mrow>
+            <mrow>b  \amp \mapsto b</mrow>
+            <mrow>ab \amp \mapsto a</mrow>
+         </md>.
+         We conclude that there are exactly two isomorphism types in this case. (Again, if <m>\phi\colon H\rightarrow \Aut(N)</m> is nontrivial, the resulting semidirect product is nonabelian.) You can show that the second group is isomorphic to <m>D_{12}</m>. 
+    </p>
+    <p>
+        In all, we see that there are exactly 5 isomorphism types for groups <m>G</m> of cardinality 12. We enumerate them below grouped according to the cases of our analysis.
+        <ul>
+            <li>
+                <title>Case: <m>n_3(G)=4</m></title>
+                <p>
+                 <m>G\cong A_4</m>
+                </p>
+            </li>
+            <li>
+                <title>Case: <m>n_3(G)=1</m>, <m>H=\angvec{h}\cong \Z/4\Z</m></title>
+                <p>
+                    <m>G\cong \Z/3\Z\times \Z/4\Z</m> or <m>G\cong \Z/3\Z\rtimes_\phi \Z/4\Z</m>, where <m>\phi\colon \Z/4\Z\rightarrow \Aut(\Z/3\Z)</m> is nontrivial. In the latter case, <m>G</m> has presentation 
+                    <me>
+                        G=\angvec{n,h\mid n^3=h^4=e, hnh^{-1}=n^2}
+                    </me>.
+                </p>
+            </li>
+            <li>
+                <title>Case: <m>n_3(G)=1</m>, <m>H=\angvec{a,b}\cong V_4</m></title>
+                <p>
+                    <m>G\cong \Z/3\Z\times \Z/2\Z\times \Z/2\Z</m> or <m>G\cong \Z/3\Z\rtimes_\phi V_4</m>, where <m>\phi\colon V_4\rightarrow \Aut(\Z/3\Z)</m> is a nontrivial homomorphism. 
+                </p>
+            </li>
+        </ul>
+    </p>
+    </solution>
+    </example>
+    
+    <example xml:id="eg_groups_card_20">
+    <title>Groups of cardinality <m>20</m></title>
+    <statement>
+    <p>
+    Give a classification of all groups of cardinality <m>20</m>, up to isomorphism. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    </subsection>
+
+</section>
