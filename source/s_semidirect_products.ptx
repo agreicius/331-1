@@ -470,9 +470,46 @@
     We have <m>28=2^2\cdot 7</m>. The usual Sylow arguments show that <m>n_7(G)=1</m>. Thus <m>G</m> has a unique normal <m>7</m>-Sylow subgroup <m>N=\angvec{n}\cong \Z/7\Z</m>. Let <m>H\in \Syl_2(G)</m>. We have <m>H\cap N=\{e\}</m> (counting argument) and thus <m>G=NH</m> (counting argument). It follows from <xref ref="th_internal_semidirect_prod"/> that <m>G\cong N\rtimes_\phi H</m> for some homomorphism <m>\phi\colon H\rightarrow \Aut(N)</m>. This semidirect products depends both on the isomorphism type of <m>H</m> (cyclic or Klein 4-group) and the choice of homomorphism <m>\phi\in \Hom(H,\Aut(N))</m>. We proceed by cases based on the isomorphism type of <m>H</m>. 
     </p>
     <p>
-        <term>Case:</term> <m>H=\angvec{h}\cong \Z/4\Z</m>. In this case, reasoning as in <xref ref="eg_groups_card_21"/>, we see that there are two homomorphisms from <m>H</m> to <m>\Aut(N)\cong (\Z/7\Z)^*</m>:
+        <term>Case:</term> <m>H=\angvec{h}\cong \Z/4\Z</m>. We have <m>\Aut(N)\cong (\Z/7\Z)^*\cong \Z/6\Z</m>. <xref ref="prop_homs_cyclic"/> implies that the elements <m>\phi\in \Hom(H,\Aut(N))</m> are in bijective correspondence with elements of <m>\Aut(N)</m> of order dividing <m>4</m>. Since <m>\Aut(N)\cong \Z/6\Z</m>, we see that there are two of these as summarized below:
         <md>
-            <mrow>\phi_1 \amp \longleftrightarrow h\mapsto (n\mapsto n) \amp \text
+            <mrow>\phi_1 \amp \longleftrightarrow h\mapsto (n\mapsto n) \amp </mrow>
+            <mrow>\phi_2 \amp \longleftrightarrow h\mapsto (n\mapsto n^{-1}) </mrow>
+        </md>.
+        The first homomorphism is trivial, leading to the direct product 
+        <me>
+            G_1\cong N\rtimes_{\phi_1} H\cong N\times H\cong \Z/7\Z\times \Z/4\Z
+        </me>.
+        Since the second homomorphism is nontrivial, the corresponding semidirect product 
+        <me>
+            G_2\cong N\rtimes_{\phi_2}N\rtimes_{\phi_2} H
+        </me>
+        is nonabelian, and in particular is distinct from <m>G_1</m>. Thus there are two isomorphism types for this case. 
+    </p>
+    <p>
+        <term>Case:</term> <m>H=\angvec{a,b\mid a^2=b^2=e,ba=ab}\cong V_4</m>. As in <xref ref="eg_groups_card_12"/>, the elements of <m>\Hom(H, \Aut(N))</m> are in bijective correspondence with pairs <m>(\psi_1,\psi_2)</m> of elements of <m>\Aut(N)</m> satisfying 
+        <me>
+            \psi_1^2=\psi_2^2=\id, \psi_2\psi_1=\psi_1\psi_2
+        </me>.
+        Since <m>\Aut(N)\cong \Z/6\Z</m>, we see that that there are exactly two elements of <m>\Aut(N)</m> of order dividing <m>2</m>. Since <m>\Aut(N)</m> is abelian, any pair <m>(\psi_1,\psi_2)</m> from among these elements satisfies the necessary condition. This gives rise to 4 homomorphisms <m>\phi\in \Hom(H,\Aut(N))</m>, described below:
+        <md>
+            <mrow>\left( \begin{array}{c}
+                a\mapsto (n\mapsto n)\\
+                b\mapsto (n\mapsto n )
+            \end{array}\right)</mrow>
+            <mrow> \left( \begin{array}{c}
+                a\mapsto (n\mapsto n)\\
+                b\mapsto (n\mapsto n^{-1} )
+            \end{array}\right)</mrow>
+            <mrow> \left( \begin{array}{c}
+                a\mapsto (n\mapsto n^{-1})\\
+                b\mapsto (n\mapsto n )
+            \end{array}\right)</mrow>
+            <mrow> \left( \begin{array}{c}
+                a\mapsto (n\mapsto n^{-1})\\
+                b\mapsto (n\mapsto n^{-1} )
+            \end{array}\right)</mrow>
+            </md>.
+    </p>
     </solution>
     </example>
     
