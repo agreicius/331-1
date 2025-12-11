@@ -639,11 +639,11 @@ H \amp = \{e_{G_1}\}\times G_2=\{(e_{G_1},g_2)\mid g_2\in G_2\}
 <div class="para">If <span class="process-math">\(\ord g=n&lt; \infty\text{,}\)</span> then the map</div>
 <div class="displaymath process-math" id="prop_homs_cyclic-2-1-3-2-1-2">
 \begin{align*}
-\Hom(G,H) \amp \rightarrow \{h\in H\mid h^n=e\}\\
+\Hom(G,H) \amp \rightarrow \{h\in H\mid \ord(h)\mid n\}\\
 \phi \amp \mapsto \phi(g)
 \end{align*}
 </div>
-<div class="para">is a bijection of sets. Equivalently, for all <span class="process-math">\(\phi\in \Hom(G,H)\)</span> there is a unique <span class="process-math">\(h\in H\)</span> satisfying <span class="process-math">\(h^n=e\)</span> such that</div>
+<div class="para">is a bijection of sets. Equivalently, for all <span class="process-math">\(\phi\in \Hom(G,H)\)</span> there is a unique <span class="process-math">\(h\in H\)</span> satisfying <span class="process-math">\(\ord(h)\mid n\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \phi(g^i)=h^i
@@ -1036,7 +1036,7 @@ G_1\cong N\rtimes_{\phi_1} H\cong N\times H\cong \Z/7\Z\times \Z/4\Z\text{.}
 <div class="para">Since the second homomorphism is nontrivial, the corresponding semidirect product</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_homs_cyclic.html">
 \begin{equation*}
-G_2\cong N\rtimes_{\phi_2}N\rtimes_{\phi_2} H
+G_2\cong N\rtimes_{\phi_2} H
 \end{equation*}
 </div>
 <div class="para">is nonabelian, and in particular is distinct from <span class="process-math">\(G_1\text{.}\)</span> Thus there are two isomorphism types for this case.</div>
@@ -1045,13 +1045,19 @@ G_2\cong N\rtimes_{\phi_2}N\rtimes_{\phi_2} H
 <div class="para logical" id="eg_groups_card_28-3-3">
 <div class="para">
 <dfn class="terminology">Case:</dfn> <span class="process-math">\(H=\angvec{a,b\mid a^2=b^2=e,ba=ab}\cong V_4\text{.}\)</span> As in <a href="s_semidirect_products.html#eg_groups_card_12" class="xref" data-knowl="./knowl/xref/eg_groups_card_12.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.194: Groups of cardinality 12">Example 1.194</a>, the elements of <span class="process-math">\(\Hom(H, \Aut(N))\)</span> are in bijective correspondence with pairs <span class="process-math">\((\psi_1,\psi_2)\)</span> of elements of <span class="process-math">\(\Aut(N)\)</span> satisfying</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html ./knowl/xref/eg_groups_card_12.html">
 \begin{equation*}
 \psi_1^2=\psi_2^2=\id, \psi_2\psi_1=\psi_1\psi_2\text{.}
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\Aut(N)\cong \Z/6\Z\text{,}\)</span> we see that that there are exactly two elements of <span class="process-math">\(\Aut(N)\)</span> of order dividing <span class="process-math">\(2\text{.}\)</span> Since <span class="process-math">\(\Aut(N)\)</span> is abelian, any pair <span class="process-math">\((\psi_1,\psi_2)\)</span> from among these elements satisfies the necessary condition. This gives rise to 4 homomorphisms <span class="process-math">\(\phi\in \Hom(H,\Aut(N))\text{,}\)</span> described below:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html" id="eg_groups_card_28-3-3-14">
+<div class="para">Since <span class="process-math">\(\Aut(N)\cong \Z/6\Z\text{,}\)</span> we see that that there are exactly two elements of <span class="process-math">\(\Aut(N)\)</span> of order dividing <span class="process-math">\(2\text{.}\)</span> These automorphisms are summarized as follows:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html ./knowl/xref/eg_groups_card_12.html" id="eg_groups_card_28-3-3-11">
+\begin{align*}
+n\amp \mapsto n \amp n\mapsto n^5=n^{-1} \text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\Aut(N)\)</span> is abelian, any pair <span class="process-math">\((\psi_1,\psi_2)\)</span> from among these elements satisfies the necessary condition. This gives rise to a total of 4 distinct homomorphisms <span class="process-math">\(\phi\in \Hom(H,\Aut(N))\text{,}\)</span> described below:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html ./knowl/xref/eg_groups_card_12.html" id="eg_groups_card_28-3-3-15">
 \begin{gather*}
 \left( \begin{array}{c}
 a\mapsto (n\mapsto n)\\
@@ -1071,7 +1077,31 @@ b\mapsto (n\mapsto n^{-1} )
 \end{array}\right)\text{.}
 \end{gather*}
 </div>
+<div class="para">The first homomorphism is trivial, giving rise to the direct product</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html ./knowl/xref/eg_groups_card_12.html">
+\begin{equation*}
+G_3\cong N\times H\cong \Z/7\Z\times \Z/2\Z\times \Z/2\Z\text{.}
+\end{equation*}
+</div>
+<div class="para">The remaining three homomorphisms all differ by an automorphism of <span class="process-math">\(H\text{,}\)</span> just as in <a href="s_semidirect_products.html#eg_groups_card_12" class="xref" data-knowl="./knowl/xref/eg_groups_card_12.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.194: Groups of cardinality 12">Example 1.194</a>. Thus they each give rise to the same semidirect product, up to isomorphism. Calling the first of these three <span class="process-math">\(\phi_4\text{,}\)</span> we have the nonabelian group</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_12.html ./knowl/xref/eg_groups_card_12.html">
+\begin{equation*}
+G_4\cong N\rtimes_{\phi_4} H\cong \Z/7\Z\rtimes_{\phi_4}V_4\text{.}
+\end{equation*}
+</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_28-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_groups_card_28-3-4">In all, we see that there are four distinct groups of cardinality <span class="process-math">\(28\text{,}\)</span> up to isomorphism, as represented by the groups <span class="process-math">\(G_1,G_2,G_3,G_4\)</span> described above. Our analysis shows that these groups are pairwise nonsisomorphic: <span class="process-math">\(G_1\)</span> and <span class="process-math">\(G_3\)</span> are abelian, while <span class="process-math">\(G_2\)</span> and <span class="process-math">\(G_4\)</span> are not; and <span class="process-math">\(G_1\)</span> and <span class="process-math">\(G_2\)</span> have a cyclic <span class="process-math">\(4\)</span>-Sylow subgroup, while <span class="process-math">\(G_3\)</span> and <span class="process-math">\(G_4\)</span> have noncyclic <span class="process-math">\(4\)</span>-Sylow subgroups.<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_28-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="eg_groups_card_28-3-5">
+<div class="para">Lastly, to make the nonabelian groups somewhat more explicit, we observe that <span class="process-math">\(G_2\)</span> has presentation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G_2=\angvec{n,h\mid n^7=h^4=e, hnh^{-1}=n^{-1}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Such a group is called a <dfn class="terminology">dicyclic group of degree 7</dfn>. Additionally, one can show that <span class="process-math">\(G_4\cong D_{14}\text{.}\)</span> In fact, this must be the case, since <span class="process-math">\(D_{14}\)</span> is nonabelian and its <span class="process-math">\(2\)</span>-Sylow subgroups are noncyclic.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_28-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.195.1"><a href="#eg_groups_card_28-3" title="Copy heading and permalink for Solution 1.195.1" aria-label="Copy heading and permalink for Solution 1.195.1">🔗</a></div>
 </div></details></div>
