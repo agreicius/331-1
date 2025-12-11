@@ -481,7 +481,7 @@
         </me>.
         Since the second homomorphism is nontrivial, the corresponding semidirect product 
         <me>
-            G_2\cong N\rtimes_{\phi_2}N\rtimes_{\phi_2} H
+            G_2\cong N\rtimes_{\phi_2} H
         </me>
         is nonabelian, and in particular is distinct from <m>G_1</m>. Thus there are two isomorphism types for this case. 
     </p>
@@ -523,7 +523,7 @@
             </me>.
     </p>
     <p>
-        In all, we see that there are four distinct groups of cardinality <m>28</m>, up to isomorphism, as represented by the groups <m>G_1,G_2,G_3,G_4</m> described above. Our analysis shows that these groups are pairwise nonsisomorphic: <m>G_1</m> and <m>G_3</m> are abelian, while <m>G_2</m> and <m>G_4</m> are not; and <m>G_1</m> and <m>G_2</m> have a cyclic <m>4</m>-Sylow subgroup, while <m>G_3</m> and <m>G_4</m> have noncyclic <m>4</m>-Sylow subgroups. 
+        In all, we see that there are four distinct groups of cardinality <m>28</m>, up to isomorphism, as represented by the groups <m>G_1,G_2,G_3,G_4</m> described above. Our analysis shows that these groups are pairwise nonisomorphic: <m>G_1</m> and <m>G_3</m> are abelian, while <m>G_2</m> and <m>G_4</m> are not; and <m>G_1</m> and <m>G_2</m> have a cyclic <m>4</m>-Sylow subgroup, while <m>G_3</m> and <m>G_4</m> have noncyclic <m>4</m>-Sylow subgroups. 
     </p>
     <p>
         Lastly, to make the nonabelian groups somewhat more explicit, we observe that <m>G_2</m> has presentation 
