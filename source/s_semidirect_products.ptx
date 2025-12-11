@@ -458,8 +458,8 @@
     </solution>
     </example>
     
-    <example xml:id="eg_groups_card_20">
-    <title>Groups of cardinality <m>20</m></title>
+    <example xml:id="eg_groups_card_28">
+    <title>Groups of cardinality <m>28</m></title>
     <statement>
     <p>
     Give a classification of all groups of cardinality <m>28</m>, up to isomorphism. 
@@ -467,8 +467,12 @@
     </statement>
     <solution>
     <p>
-    
+    We have <m>28=2^2\cdot 7</m>. The usual Sylow arguments show that <m>n_7(G)=1</m>. Thus <m>G</m> has a unique normal <m>7</m>-Sylow subgroup <m>N=\angvec{n}\cong \Z/7\Z</m>. Let <m>H\in \Syl_2(G)</m>. We have <m>H\cap N=\{e\}</m> (counting argument) and thus <m>G=NH</m> (counting argument). It follows from <xref ref="th_internal_semidirect_prod"/> that <m>G\cong N\rtimes_\phi H</m> for some homomorphism <m>\phi\colon H\rightarrow \Aut(N)</m>. This semidirect products depends both on the isomorphism type of <m>H</m> (cyclic or Klein 4-group) and the choice of homomorphism <m>\phi\in \Hom(H,\Aut(N))</m>. We proceed by cases based on the isomorphism type of <m>H</m>. 
     </p>
+    <p>
+        <term>Case:</term> <m>H=\angvec{h}\cong \Z/4\Z</m>. In this case, reasoning as in <xref ref="eg_groups_card_21"/>, we see that there are two homomorphisms from <m>H</m> to <m>\Aut(N)\cong (\Z/7\Z)^*</m>:
+        <md>
+            <mrow>\phi_1 \amp \longleftrightarrow h\mapsto (n\mapsto n) \amp \text
     </solution>
     </example>
     
