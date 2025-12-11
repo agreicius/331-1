@@ -159,10 +159,10 @@
                         <p>
                             If <m>\ord g=n&lt; \infty</m>, then the map 
                             <md>
-                                <mrow>\Hom(G,H) \amp \rightarrow \{h\in H\mid h^n=e\}</mrow>
+                                <mrow>\Hom(G,H) \amp \rightarrow \{h\in H\mid \ord(h)\mid n\}</mrow>
                                 <mrow>\phi \amp \mapsto \phi(g)</mrow>
                             </md>
-                            is a bijection of sets. Equivalently, for all <m>\phi\in \Hom(G,H)</m> there is a unique <m>h\in H</m> satisfying <m>h^n=e</m> such that 
+                            is a bijection of sets. Equivalently, for all <m>\phi\in \Hom(G,H)</m> there is a unique <m>h\in H</m> satisfying <m>\ord(h)\mid n</m> such that 
                             <me>
                                 \phi(g^i)=h^i
                             </me>
@@ -490,7 +490,11 @@
         <me>
             \psi_1^2=\psi_2^2=\id, \psi_2\psi_1=\psi_1\psi_2
         </me>.
-        Since <m>\Aut(N)\cong \Z/6\Z</m>, we see that that there are exactly two elements of <m>\Aut(N)</m> of order dividing <m>2</m>. Since <m>\Aut(N)</m> is abelian, any pair <m>(\psi_1,\psi_2)</m> from among these elements satisfies the necessary condition. This gives rise to 4 homomorphisms <m>\phi\in \Hom(H,\Aut(N))</m>, described below:
+        Since <m>\Aut(N)\cong \Z/6\Z</m>, we see that that there are exactly two elements of <m>\Aut(N)</m> of order dividing <m>2</m>. These automorphisms are summarized as follows:
+        <md>
+            <mrow>n\amp \mapsto n \amp n\mapsto n^5=n^{-1} </mrow>
+        </md>.
+        Since <m>\Aut(N)</m> is abelian, any pair <m>(\psi_1,\psi_2)</m> from among these elements satisfies the necessary condition. This gives rise to a total of 4 distinct homomorphisms <m>\phi\in \Hom(H,\Aut(N))</m>, described below:
         <md>
             <mrow>\left( \begin{array}{c}
                 a\mapsto (n\mapsto n)\\
@@ -509,6 +513,25 @@
                 b\mapsto (n\mapsto n^{-1} )
             \end{array}\right)</mrow>
             </md>.
+            The first homomorphism is trivial, giving rise to the direct product 
+            <me>
+                G_3\cong N\times H\cong \Z/7\Z\times \Z/2\Z\times \Z/2\Z
+            </me>.
+            The remaining three homomorphisms all differ by an automorphism of <m>H</m>, just as in <xref ref="eg_groups_card_12"/>. Thus they each give rise to the same semidirect product, up to isomorphism. Calling the first of these three <m>\phi_4</m>, we have the nonabelian group 
+            <me>
+                G_4\cong N\rtimes_{\phi_4} H\cong \Z/7\Z\rtimes_{\phi_4}V_4
+            </me>.
+    </p>
+    <p>
+        In all, we see that there are four distinct groups of cardinality <m>28</m>, up to isomorphism, as represented by the groups <m>G_1,G_2,G_3,G_4</m> described above. Our analysis shows that these groups are pairwise nonsisomorphic: <m>G_1</m> and <m>G_3</m> are abelian, while <m>G_2</m> and <m>G_4</m> are not; and <m>G_1</m> and <m>G_2</m> have a cyclic <m>4</m>-Sylow subgroup, while <m>G_3</m> and <m>G_4</m> have noncyclic <m>4</m>-Sylow subgroups. 
+    </p>
+    <p>
+        Lastly, to make the nonabelian groups somewhat more explicit, we observe that <m>G_2</m> has presentation 
+        <me>
+            G_2=\angvec{n,h\mid n^7=h^4=e, hnh^{-1}=n^{-1}}
+        </me>.
+        Such a group is called a <term>dicyclic group of degree 7</term>. Additionally,
+        one can show that <m>G_4\cong D_{14}</m>. In fact, this must be the case, since <m>D_{14}</m> is nonabelian and its <m>2</m>-Sylow subgroups are noncyclic.
     </p>
     </solution>
     </example>
