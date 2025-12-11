@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.194</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups of cardinality <span class="process-math">\(12\)</span>.</span>
+</h4>
+<div class="para">Give a classification of all groups of cardinality <span class="process-math">\(12\text{,}\)</span> up to isomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of cardinality <span class="process-math">\(12\text{.}\)</span> Recall that either <span class="process-math">\(n_3(G)=1\)</span> or <span class="process-math">\(G\cong A_4\text{.}\)</span> We consider the former case.<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Let <span class="process-math">\(N=\angvec{n}\)</span> be the unique normal <span class="process-math">\(3\)</span>-Sylow subgroup of <span class="process-math">\(G\text{,}\)</span> and let <span class="process-math">\(H\)</span> be a <span class="process-math">\(2\)</span>-Sylow subgroup. The usual arguments show that <span class="process-math">\(H\cap N=\{e\}\)</span> and <span class="process-math">\(NH=G\)</span> and thus <span class="process-math">\(G\cong N\rtimes_\phi H\)</span> for some homomorphism <span class="process-math">\(\phi\colon H\rightarrow \Aut(N)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case:</dfn> <span class="process-math">\(H=\angvec{h}\cong \Z/4\Z\text{.}\)</span>  We first consider the case where <span class="process-math">\(H=\angvec{h}\cong \Z/4\Z\)</span> is cyclic. Reasoning in a manner similar to <a href="s_semidirect_products.html#eg_groups_card_21" class="xref" data-knowl="./knowl/xref/eg_groups_card_21.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.193: Groups of cardinality 21">Example 1.193</a>, the possible homomorphisms from <span class="process-math">\(H\)</span> to <span class="process-math">\(\Aut(N)\cong (\Z/3\Z)^*\)</span> are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_21.html">
+\begin{align*}
+\phi_1 \amp \longleftrightarrow h\mapsto (n\mapsto n) \amp \text{(trivial homo.)}\\
+\phi_2 \amp \longleftrightarrow h\mapsto (n\mapsto n^2=n^{-1}) \text{.}
+\end{align*}
+</div>
+<div class="para">As before, we have <span class="process-math">\(N\rtimes_{\phi_1}H\cong N\times H\cong \Z/3\Z\times \Z/4\Z\text{.}\)</span> In the second case we have the nonabelian group</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_21.html">
+\begin{equation*}
+N\rtimes_{\phi_2} H\cong \Z/3\Z\rtimes_{\phi} \Z/4\Z\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\phi\)</span> is the nontrivial homomorphism from <span class="process-math">\(\Z/4\Z\)</span> to <span class="process-math">\(\Aut(\Z/3\Z)\cong \{\pm 1\}\text{.}\)</span> Alternatively, we can describe the group in this case with a presentation. Since <span class="process-math">\(\phi_2\)</span> encodes how the element <span class="process-math">\(h\)</span> conjugates the element <span class="process-math">\(n\)</span> in our group <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(G\)</span> has presentation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_groups_card_21.html">
+\begin{equation*}
+G=\angvec{n,h\mid n^3=h^4=e, hnh^{-1}=n^2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case:</dfn> <span class="process-math">\(H=\angvec{a,b}\cong V_4\text{.}\)</span> Now consider the case where our <span class="process-math">\(2\)</span>-Sylow subgroups are isomorphic to the Klein 4-group. We use the presentation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H=\angvec{a,b\mid a^2=b^2=e, ab=ba}\text{,}
+\end{equation*}
+</div>
+<div class="para">to determine the possible homomorphisms <span class="process-math">\(\phi\colon H\rightarrow \Aut(N)\cong (\Z/3/Z)^*\)</span> in this case. Such homomorphisms are determined by where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> get sent. Since <span class="process-math">\(\Aut(N)\cong \{\pm 1\}\text{,}\)</span> any choice of image for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> gives rise to a unique homomorphism. Thus there are four homomorphisms <span class="process-math">\(\phi\colon H\rightarrow \Aut(N)\)</span> in total. Let <span class="process-math">\(\phi_3\colon H\rightarrow \Aut(N)\)</span> be the trivial homomorphism. In this case we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G\cong N\rtimes H\cong \Z/3\Z\times \Z/2\Z\times \Z/2\Z\text{.}
+\end{equation*}
+</div>
+<div class="para">We claim the remaining three homomorphisms, each of which is nontrivial, give rise to the same semidirect product, up to isomorphism. This is because for any two of these, say <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\phi'\text{,}\)</span> we have <span class="process-math">\(\phi'=\phi\circ \psi\text{,}\)</span> where <span class="process-math">\(\psi\colon H\rightarrow H\)</span> is an automorphism. For example, if <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\phi'\)</span> are the homomorphisms</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi \amp \leftrightarrow \left( \begin{array}{c}
+a\mapsto (n\mapsto n)\\
+b\mapsto (n\mapsto n^2 )
+\end{array}\right)\\
+\phi' \amp \leftrightarrow \left( \begin{array}{c}
+a\mapsto (n\mapsto n^2)\\
+b\mapsto (n\mapsto n^2 )
+\end{array}\right)\text{,}
+\end{align*}
+</div>
+<div class="para">then we have <span class="process-math">\(\phi'=\phi\circ \psi\text{,}\)</span> where <span class="process-math">\(\psi\)</span> is the automorphism of <span class="process-math">\(H\)</span> defined as follows:</div>
+<div class="displaymath process-math">
+\begin{align*}
+e \amp \mapsto e\\
+a \amp \mapsto ab\\
+b  \amp \mapsto b\\
+ab \amp \mapsto a\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that there are exactly two isomorphism types in this case. (Again, if <span class="process-math">\(\phi\colon H\rightarrow \Aut(N)\)</span> is nontrivial, the resulting semidirect product is nonabelian.) You can show that the second group is isomorphic to <span class="process-math">\(D_{12}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">In all, we see that there are exactly 5 isomorphism types for groups <span class="process-math">\(G\)</span> of cardinality 12. We enumerate them below grouped according to the cases of our analysis.</div>
+<ul class="disc" id="eg_groups_card_12-3-5-2">
+<li>
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(n_3(G)=4\)</span>.</span></span><div class="para">
+<span class="process-math">\(\displaystyle G\cong A_4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-5-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: n_3(G)=4"><a href="#eg_groups_card_12-3-5-2-1" title="Copy heading and permalink for Item: Case: n_3(G)=4" aria-label="Copy heading and permalink for Item: Case: n_3(G)=4">🔗</a></div>
+</li>
+<li>
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(n_3(G)=1\text{,}\)</span> <span class="process-math">\(H=\angvec{h}\cong \Z/4\Z\)</span>.</span></span><div class="para logical">
+<div class="para">
+<span class="process-math">\(G\cong \Z/3\Z\times \Z/4\Z\)</span> or <span class="process-math">\(G\cong \Z/3\Z\rtimes_\phi \Z/4\Z\text{,}\)</span> where <span class="process-math">\(\phi\colon \Z/4\Z\rightarrow \Aut(\Z/3\Z)\)</span> is nontrivial. In the latter case, <span class="process-math">\(G\)</span> has presentation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G=\angvec{n,h\mid n^3=h^4=e, hnh^{-1}=n^2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-5-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: n_3(G)=1 H=\angvec{h}\cong \Z/4\Z"><a href="#eg_groups_card_12-3-5-2-2" title="Copy heading and permalink for Item: Case: n_3(G)=1 H=\angvec{h}\cong \Z/4\Z" aria-label="Copy heading and permalink for Item: Case: n_3(G)=1 H=\angvec{h}\cong \Z/4\Z">🔗</a></div>
+</li>
+<li>
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(n_3(G)=1\text{,}\)</span> <span class="process-math">\(H=\angvec{a,b}\cong V_4\)</span>.</span></span><div class="para">
+<span class="process-math">\(G\cong \Z/3\Z\times \Z/2\Z\times \Z/2\Z\)</span> or <span class="process-math">\(G\cong \Z/3\Z\rtimes_\phi V_4\text{,}\)</span> where <span class="process-math">\(\phi\colon V_4\rightarrow \Aut(\Z/3\Z)\)</span> is a nontrivial homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-5-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: n_3(G)=1 H=\angvec{a,b}\cong V_4"><a href="#eg_groups_card_12-3-5-2-3" title="Copy heading and permalink for Item: Case: n_3(G)=1 H=\angvec{a,b}\cong V_4" aria-label="Copy heading and permalink for Item: Case: n_3(G)=1 H=\angvec{a,b}\cong V_4">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_groups_card_12-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.194.1"><a href="#eg_groups_card_12-3" title="Copy heading and permalink for Solution 1.194.1" aria-label="Copy heading and permalink for Solution 1.194.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.194: Groups of cardinality 12"><a href="#eg_groups_card_12" title="Copy heading and permalink for Example 1.194: Groups of cardinality 12" aria-label="Copy heading and permalink for Example 1.194: Groups of cardinality 12">🔗</a></div></article><span class="incontext"><a class="internal" href="s_semidirect_products.html#eg_groups_card_12">in-context</a></span>
+</body>
+</html>
