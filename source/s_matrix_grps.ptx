@@ -3,7 +3,15 @@
 <section xml:id="s_matrix_grps" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Matrix groups</title>
 <definition xml:id="d_invertible_matrix">
-<title>Invertible matix</title>
+<title>Invertible matrix</title>
+<notation>
+    <usage><m>M_n(R)</m></usage>
+  <description><m>n\times n</m> matrices with coefficients in <m>R</m></description>
+</notation>
+<notation>
+    <usage><m>\GL_n(R)</m></usage>
+  <description>the group of invertible <m>n\times n</m> matrices with coefficients in <m>R</m></description>
+</notation>
 <statement>
 <p>
 Assume either that <m>R\in \{\Z, \Q, \R, \C\}</m> or that <m>R=\Z/m\Z</m> for some <m>m\in \Z_{&gt; 0}</m>. Fix a positive integer <m>n</m>. The set of all <m>n\times n</m> matrices with coefficients in <m>R</m> is denoted <m>M_n(R)</m>. 

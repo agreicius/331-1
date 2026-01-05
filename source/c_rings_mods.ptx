@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="c_rings_mods" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Rings and modules</title>
+<xi:include href="s_rings.ptx" />
+
+</chapter>

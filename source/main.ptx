@@ -11,6 +11,7 @@
     <xi:include href="./frontmatter.ptx" />
     <xi:include href="./c_foundations.ptx" />
     <xi:include href="./c_groups.ptx" />
+    <xi:include href="./c_rings_mods.ptx" />
     
     <backmatter>
         <appendix xml:id="appendix-notation">
