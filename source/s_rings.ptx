@@ -2,9 +2,13 @@
 
 <section xml:id="s_rings" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Rings</title>
-<p>
+<introduction><p>
     In a sense the motivation for the mathematical definition of a ring in mathematics is more immediate than that for a group. From very early on in our mathematical training we are introduced to quite a rich variety of different <em>number systems</em> including the integers <m>\Z</m>, the rational numbers <m>\Q</m>, the real numbers <m>\R</m>, and the complex numbers <m>\C</m>. Roughly understood, a number system is a set together with two distinct operations, addition and multiplication, which are each reasonably well-behaved and moreover play nicely together. <xref ref="d_ring"/> makes precise exactly what me mean by this. 
-</p>
+</p></introduction>
+<subsection xml:id="ss_ring_def_egs">
+<title>Definition and examples</title>
+
+
 <definition xml:id="d_ring">
 <title>Ring</title>
 <statement>
@@ -66,7 +70,7 @@ conscientiously point out resulting discrepancies between our exposition and the
     </p>
 </convention>
 <p>
-    As mentioned at the top, our definition of a ring is chosen to generalize the familiar number systems (<m>\Z</m>, <m>\Q</m>, <m>\R</m>, <m>\C</m>) of our mathematical youth. That these sets are rings (indeed, commutative rings) with respect to their usual arithmetic operations is a result of arithmetic properties you learned long ago. We add to this collection the slightly more exotic modular rings <m>\Z/n\Z</m> for <m>n</m> a positive integer; the ring axiom identities for modular addition and multiplication follow directly from the corresponding identites for the integer operations.
+    As mentioned at the top, our definition of a ring is chosen to generalize the familiar number systems (<m>\Z</m>, <m>\Q</m>, <m>\R</m>, <m>\C</m>) of our mathematical youth. That these sets are rings (indeed, commutative rings) with respect to their usual arithmetic operations is a result of arithmetic properties you learned long ago. We add to this collection the slightly more exotic modular rings <m>\Z/n\Z</m> for <m>n</m> a positive integer; the ring axiom identities for modular addition and multiplication follow directly from the corresponding identities for the integer operations.
 </p>
 <activity xml:id="spec_elem_comm_rings">
 <title>Elementary commutative rings</title>
@@ -76,6 +80,23 @@ The sets <m>\Z</m>, <m>\Q</m>, <m>\R</m>, and <m>\C</m> are all commutative ring
 </p>
 </statement>
 </activity>
+<example xml:id="eg_trivial_ring">
+<title>Trivial ring</title>
+<statement>
+<p>
+Show that a singleton <m>\{a\}</m> can be given a unique ring structure. We call such rings <term>trivial</term>. 
+</p>
+<p>
+    Show that a ring <m>R</m> is trivial if and only if the equality <m>0=1</m> holds in <m>R</m>. 
+</p>
+</statement>
+<solution>
+<p>
+Left to the reader. 
+</p>
+</solution>
+</example>
+
 <p>
     We need not travel too far to find an examples of noncommutative rings. Matrix arithmetic furnishes us with a familiar enough example. 
 </p>
@@ -83,25 +104,25 @@ The sets <m>\Z</m>, <m>\Q</m>, <m>\R</m>, and <m>\C</m> are all commutative ring
 <title>Matrix rings</title>
 <statement>
 <p>
-Let <m>R</m> be a commutative ring. Given a positive integer <m>n</m>, we define <m>M_n(R)</m> to be the set of all <m>n\times n</m> matrices with coefficients in <m>R</m>.  
+Let <m>R</m> be a commutative ring. Given a positive integer <m>n</m>, we define <m>\ML_n(R)</m> to be the set of all <m>n\times n</m> matrices with coefficients in <m>R</m>.  
 </p>
 <p>
-    Given matrices <m>A=[a_{ij}],B=[b_{ij}]\in M_n(R)</m>, we define their sum <m>A+B</m> and product <m>AB</m> as follows: 
+    Given matrices <m>A=[a_{ij}],B=[b_{ij}]\in \ML_n(R)</m>, we define their sum <m>A+B</m> and product <m>AB</m> as follows: 
     <md>
         <mrow number="yes" xml:id="eq_matrix_add">A+B \amp =[a_{ij}+b_{ij}]</mrow>
         <mrow number="yes" xml:id="eq_matrix_prod">AB \amp = [c_{ij}] \amp c_{ij}=\sum_{k=1}^na_{ik}b_{kj}</mrow>
     </md>.
-    The triple <m>(M_n(R), +,\cdot)</m>, where <m>+</m> and <m>\cdot</m> are the matrix addition and multiplication operations defined above, is a ring called the <term>ring of <m>n\times n</m> matrices over <m>R</m></term> (or <term>with coefficients in <m>R</m></term>).
+    The triple <m>(\ML_n(R), +,\cdot)</m>, where <m>+</m> and <m>\cdot</m> are the matrix addition and multiplication operations defined above, is a ring called the <term>ring of <m>n\times n</m> matrices over <m>R</m></term> (or <term>with coefficients in <m>R</m></term>).
 </p>
 <p>
-    If <m>n\geq 2</m>, then <m>M_n(R)</m> is a noncommutative ring, as an argument very similar to the one in <xref ref="eg_nonabelian_gln"/> shows. 
+    If <m>n\geq 2</m>, then <m>\ML_n(R)</m> is a noncommutative ring, as an argument very similar to the one in <xref ref="eg_nonabelian_gln"/> shows. 
 </p>
 </statement>
 </activity>
 <remark>
 <title>Matrix rings</title>
 <p>
-We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_matrix_rings"/>. In other words, the matrix operations <xref ref="eq_matrix_add"/> satisfy the ring axioms whether or not <m>R</m> is commutative. We will restrict our attention to the case where <m>R</m> is commutative, however, as here the algebraic properties of <m>M_n(R)</m> are somewhat simpler. In particular, when <m>R</m> is commutative, we can define a determinant function <m>\det M_n(R)\rightarrow R</m> in the usual fashion, and <m>\det</m> enjoys essentially all of the properties you are familiar with in the case where <m>R=\R</m>. 
+We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_matrix_rings"/>. In other words, the matrix operations <xref ref="eq_matrix_add"/> satisfy the ring axioms whether or not <m>R</m> is commutative. We will restrict our attention to the case where <m>R</m> is commutative, however, as here the algebraic properties of <m>\ML_n(R)</m> are somewhat simpler. In particular, when <m>R</m> is commutative, we can define a determinant function <m>\det \ML_n(R)\rightarrow R</m> in the usual fashion, and <m>\det</m> enjoys essentially all of the properties you are familiar with in the case where <m>R=\R</m>. 
 </p>
 </remark>
 <p>
@@ -165,6 +186,8 @@ We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_ma
         </p>
     </proof>
 </proposition>
+
+
 <p>
     Our matrix ring example is in fact an example of a <em>ring construction</em>: a method of building new rings from existing ones. The <em>product ring</em> construction is another such example. 
 </p>
@@ -211,6 +234,243 @@ The triple <m>(\mathcal{F}(X,R),+,\cdot)</m>, where <m>+</m> and <m>\cdot</m> ar
 </p>
 </statement>
 </activity>
+<p>
+    Another method of building a new ring from an existing one is to identify a <em>subring</em>. 
+</p>
+<definition xml:id="d_subring">
+<title>Subring</title>
+<statement>
+<p>
+A subset <m>S</m> of the ring <m>R</m> is a <term>subring</term> if it satisfies the following conditions. 
+<ol marker="(i)">
+    <li>
+        <p>
+            <m>S</m> is a subgroup of <m>(R,+)</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>1\in S</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>S</m> is closed under multiplication: <ie/>, for all <m>a,b\in S</m>, we have <m>ab\in S</m>.
+        </p>
+    </li>
+</ol>
+It follows from the ring axioms that a subring <m>S</m> of <m>R</m> is itself a ring with respect to ring operations of <m>R</m>, restricted to <m>S</m>. 
+</p>
+</statement>
+</definition>
+<activity xml:id="spec_quadratic_fields">
+<title>Quadratic extensions of <m>\Q</m></title>
+<statement>
+<p>
+Let <m>q\in \Q</m> be a rational number that does not have a rational square root, and let <m>\sqrt{q}</m> denote one of the two square roots of <m>q</m> lying in <m>\C</m>. We denote by <m>\Q[\sqrt{q}]</m> the subset of <m>\C</m> consisting of all rational linear combinations of <m>1</m> and <m>\sqrt{q}</m>: <ie/>, 
+    <md number="yes">
+        \Q[\sqrt{q}]=\{z\in \C\mid z=a+b\sqrt{q} \text{ for some } a,b\in \Q\}
+    </md>.
+The set <m>\Q[\sqrt{q}]</m> is a subring of <m>\C</m>, and hence a ring in its own right. 
+</p>
+</statement>
+</activity>
+
+</subsection>
+<subsection xml:id="ss_rings_units_nilpotents">
+<title>Units, zero divisors,nilpotents, idempotents</title>
+<p>
+    We will now discuss various types of special ring elements, starting with units. 
+</p>
+<definition xml:id="d_units">
+<title>Units and multiplicative inverses</title>
+<statement>
+<p>
+Let <m>a</m> be an element of the nontrivial ring <m>R</m>. A <term>multiplicative inverse</term> of <m>a</m> is an element <m>b\in R</m> satisfying <m>ab=ba=1</m>. We denote <m>b=a^{-1}</m> in this case. The element <m>a</m> is a <term>unit</term> (or is <term>invertible</term>) if it has a multiplicative inverse. We denote by <m>R^*</m> the set of all units of <m>R</m>: <ie/>, 
+    <md number="yes">
+        <mrow> R^* \amp =\{a\in R\mid a \text{ is invertible}\}</mrow>
+    </md>.
+It follows directly from the ring axioms that <m>R^*</m> is a group with respect to the ring multiplication operation. 
+</p>
+</statement>
+</definition>
+    <p>
+        Our definition of <m>R^*</m> is easily seen to be a generalization of <xref ref="spec_ring_mult_groups"/> to arbitrary rings. 
+    </p>
+    <p>
+        Moreover we can now extend our definition of <m>\GL_n(R)</m>, previously defined for <m>R\in \{\Z, \Q, \R, \C\}</m> or <m>R=\Z/n\Z</m> to arbitrary nontrivial commutative rings. We will take for granted the fact that the determinant function <m>\det M_n(R)\rightarrow R</m> can be defined in this setting as usual and enjoys essentially all of the familiar properties of the determinant for real matrices, with some modifications. In particular, we have  
+        <md>
+            A\in \ML_n(R) \text{ invertible} \iff \det A\in R^*
+        </md>.
+    </p>
+<activity xml:id="spec_gen_lin_group_general">
+<title>General linear group</title>
+<statement>
+<p>
+Let <m>R</m> be a nontrivial commutative ring, and let <m>n</m> be a positive integer. We denote by <m>\GL_n(R)</m> the group of units of <m>\ML_n(R)</m>: <ie/>, 
+    <md>
+        <mrow>\GL_n(R) \amp =\{A\in \ML_n(R)\mid A \text{ is invertible}\}</mrow>
+        <mrow> \amp = \{A\in \ML_n(R)\mid \det A\in R^*\}</mrow>
+    </md>.
+</p>
+</statement>
+</activity>
+<example xml:id="eg_units_product">
+<title>Units in product rings</title>
+<statement>
+<p>
+    <ol>
+        <li>
+            <p>
+               Let <m>R</m> be a product ring <m>R=\prod_{i\in I}R_i</m>. Prove: <m>R^*=\prod_{i\in I}R_i^*</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>S=\mathcal{F}(X,R)</m> for some nonempty set <m>X</m>. Prove: 
+                <md>
+                    <mrow> S^*  \amp = \{f\in \mathcal{F}(X,R)\mid f(x)\in R^* \text{ for all } x\in X\} </mrow>
+                </md>.
+            </p>
+        </li>
+    </ol>
+
+</p>
+</statement>
+<solution>
+<p>
+Left to the reader.
+</p>
+</solution>
+</example>
+<definition xml:id="d_division_rings_fields">
+<title>Division rings and fields</title>
+<statement>
+<p>
+A nontrivial ring <m>R</m> is a <term>division ring</term> if every nonzero element of <m>R</m> is a unit: <ie/>, <m>R^*=R- \{0\}</m>. A <term>field</term> is a commutative division ring.
+</p>
+</statement>
+</definition>
+<example xml:id="eg_division_rings">
+<title>Division rings</title>
+<statement>
+<p>
+Determine whether the given ring is a division ring, and whether it is a field. 
+<ol cols="2">
+    <li>
+        <p>
+            <m>\Z</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\Q</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\R</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\C</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\Z/n\Z</m> for <m>n\geq 2</m> a positive integer. The answer depends on <m>n</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\Q[\sqrt{d}]</m>, where <m>d\in \Q</m> does not have a square root in <m>\Q</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\ML_n(R)</m>, for <m>R</m> a commutative ring and <m>n\geq 2</m>. 
+</p>
+</li>
+</ol>
+</p>
+</statement>
+<solution>
+<p>
+Left to reader.
+</p>
+</solution>
+</example>
+<definition xml:id="d_zero_divisiors">
+<title>Zero divisors and integral domains</title>
+<statement>
+<p>
+Let <m>R</m> be a ring. A nonzero element <m>a\in R</m> is a <term>zero divisor</term> if there exists a nonzero element <m>b\in R</m> satisfying <m>ab=0</m> or <m>ba=0</m>.
+</p>
+<p>
+    A ring <m>R</m> is an <term>integral domain</term> if it is (i) commutative, and (ii) contains no zero divisors. 
+</p>
+</statement>
+</definition>
+<example xml:id="eg_zero_divisors">
+<title>Zero divisors</title>
+<statement>
+<p>
+For each of the rings in <xref ref="eg_division_rings"/>, determine all zero divisors and determine whether the ring is an integral domain. 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<proposition xml:id="prop_zero_divisors_cancellation">
+    <title>Cancellation of non-zero divisors</title>
+    <statement>
+        <p>
+            Assume <m>a</m> is a nonzero element of the ring <m>R</m> and is not a zero divisor. For all <m>b,c\in R</m> if <m>ab=ac</m> or <m>ba=ca</m>, then <m>b=c</m>. Using logical shorthand: 
+            <md>
+                <mrow> ab=ac \text{ or } ba=ca \implies b=c </mrow>
+            </md>.
+        </p>
+    </statement>
+</proposition>
+<theorem xml:id="th_finite_rings_fields">
+<title>Finite integral domains</title>
+<statement>
+<p>
+Let <m>R</m> be a finite commutative ring. The following statements are equivalent. 
+<ol>
+    <li>
+        <p>
+            <m>R</m> is an integral domain.
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>R</m> is a field. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+
+<definition xml:id="d_nilpotents_idempotents">
+<title>Nilpotents and idempotents</title>
+<statement>
+<p>
+An element <m>a</m> of the ring <m>R</m> is <term>nilpotent</term> if <m>a^n=0</m> for some positive integer <m>n</m>; it is <term>idempotent</term> if <m>a^2=a</m>. 
+</p>
+</statement>
+</definition>
 
 
+
+</subsection>
 </section>
