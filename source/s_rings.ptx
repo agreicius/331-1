@@ -193,7 +193,7 @@ The triple <m>(R,+,\cdot)</m> is ring called the <term>product</term> of the rin
     <me>
         \mathcal{F}(X,R)=R^X=\prod_{x\in X}R
     </me>.
-    We include it nonetheless, as this construction (in this guise) is particular important in analysis contexts. 
+    We include it nonetheless, as this construction (in this particular guise) is particular important in analysis contexts. 
 </p>
 <activity xml:id="spec_ring_of_functions">
 <title>Ring of functions</title>
