@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -461,8 +461,18 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_rings_mods.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and modules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_rings.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_rings.html#ss_ring_def_egs" class="internal"><span class="title">Definition and examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_rings.html#ss_rings_units_nilpotents" class="internal"><span class="title">Units, zero divisors,nilpotents, idempotents</span></a></div></li>
+</ul>
+</li></ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -503,14 +513,14 @@ v_p(12) \amp =0 \text{ for all primes } p\geq 5\text{.}
 </h4>
 <div class="para logical" id="d_Sylow_subgroups-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group of cardinality <span class="process-math">\(n\text{.}\)</span> Let <span class="process-math">\(p\)</span> be a prime divisor of <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(v_p(n)=k\text{.}\)</span> A <dfn class="terminology"><span class="process-math">\(p\)</span>-Sylow subgroup</dfn> of <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\)</span> of cardinality <span class="process-math">\(p^k\text{.}\)</span> We denote the set of all <span class="process-math">\(p\)</span>-Sylow subgroups <span class="process-math">\(\Syl_p(G)\text{:}\)</span> i.e.,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="d_Sylow_subgroups-2-1-13">
 \begin{equation*}
 \Syl_p(G)=\{H\leq G\mid \abs{H}=p^{k}\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Lastly we let <span class="process-math">\(n_p(G)\)</span> be the number of <span class="process-math">\(p\)</span>-Sylow subgroups of <span class="process-math">\(G\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="d_Sylow_subgroups-2-1-17">
 \begin{equation*}
 n_p(G)=\abs{\Syl_p(G)}\text{.}
 \end{equation*}
@@ -543,7 +553,7 @@ n_2(S_3) \amp = 3 \amp n_3(S_3)\amp =1
 </h4>
 <div class="para logical" id="eg_Sylow_cyclic-2-1">
 <div class="para">Let <span class="process-math">\(G=\angvec{g}\)</span> be a finite cyclic group of cardinality <span class="process-math">\(n=\ord g\text{.}\)</span> Fix a prime divisor <span class="process-math">\(p\)</span> of <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(v_p(n)=k\text{,}\)</span> so that <span class="process-math">\(n=p^km\text{,}\)</span> where <span class="process-math">\(p\nmid m\text{.}\)</span> From <a href="s_cyclic.html#th_cyclic_subgroup_fin" class="xref" data-knowl="./knowl/xref/th_cyclic_subgroup_fin.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.82: Subgroups of finite cyclic group">Theorem 1.82</a>, we know there is exactly one subgroup of <span class="process-math">\(G\)</span> of cardinality <span class="process-math">\(p^k\text{:}\)</span> namely, <span class="process-math">\(H=\angvec{g^{n/p^k}}=\angvec{g^m}\text{.}\)</span> Thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cyclic_subgroup_fin.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cyclic_subgroup_fin.html" id="eg_Sylow_cyclic-2-1-12">
 \begin{equation*}
 \Syl_p(G)=\{\angvec{g^m}\}
 \end{equation*}
@@ -586,7 +596,7 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_S4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="eg_Sylow_S4-2-3">
 <div class="para">What about the <span class="process-math">\(2\)</span>-Sylow subgroups?  Recall that you showed in a homework exercise that there are exactly three subgroups of <span class="process-math">\(S_4\)</span> that are isomorphic to <span class="process-math">\(D_4\text{:}\)</span> call them <span class="process-math">\(K_1, K_2, K_3\text{.}\)</span> (In fact, each <span class="process-math">\(K_i\)</span> can be described as <span class="process-math">\(\angvec{(abcd),(ac)}\text{.}\)</span>) Thus we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="eg_Sylow_S4-2-3-7">
 \begin{equation*}
 \Syl_2(S_4)\supseteq \{K_1,K_2,K_3\}\text{.}
 \end{equation*}
@@ -619,7 +629,7 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 </h4>
 <div class="para logical" id="th_Sylow_2-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group of finite cardinality <span class="process-math">\(n\)</span> and let <span class="process-math">\(p\)</span> be a prime divisor of <span class="process-math">\(n\text{.}\)</span> Given any <span class="process-math">\(p\)</span>-subgroup <span class="process-math">\(H\leq G\)</span> and <span class="process-math">\(p\)</span>-Sylow subgroup <span class="process-math">\(K\in \Syl_p(G)\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="th_Sylow_2-2-1-9">
 \begin{equation*}
 H\leq gKg^{-1}
 \end{equation*}
@@ -685,13 +695,13 @@ C_{(132)} \amp =\{(132),(143),(234), (124)\}\text{.}
 </h3>
 <div class="para logical" id="ss_Sylow_action_subsets-2">
 <div class="para">Our proof of the Sylow theorems proceeds as a sequence of three well-chosen group actions, each of whose decomposition into orbits yields useful information. For the first action, we have <span class="process-math">\(G\)</span> acting on the set <span class="process-math">\(A\)</span> of all subsets of <span class="process-math">\(G\)</span> of cardinality <span class="process-math">\(p^k\text{,}\)</span> where <span class="process-math">\(v_p(\abs{G})=k\text{:}\)</span> i.e.,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_G_acts_psets.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_G_acts_psets.html" id="ss_Sylow_action_subsets-2-7">
 \begin{equation*}
 A=\{X\subseteq G\mid \abs{X}=p^k\}\text{,}
 \end{equation*}
 </div>
 <div class="para">the set of all <dfn class="terminology"><span class="process-math">\(p^k\)</span>-subsets</dfn> of <span class="process-math">\(G\text{.}\)</span> The action here is by left multiplication:  i.e., given <span class="process-math">\(X=\{g_1,g_2,\dots, g_{p^k}\}\)</span> and <span class="process-math">\(g\in G\text{,}\)</span> we define</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_G_acts_psets.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_G_acts_psets.html" id="ss_Sylow_action_subsets-2-13">
 \begin{equation*}
 g\cdot X=\{gg_1,gg_2,\dots, gg_{p^k}\}\text{.}
 \end{equation*}
@@ -720,7 +730,7 @@ O_4 \amp = \{\{e,r\},\{r,r^2\},\{e, r^2\}, \{s,r^2s\}, \{s,rs\}, \{r^2s, rs\}\}\
 </h4>
 <div class="para logical" id="prop_G_acts_psets-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group of cardinality <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(p\)</span> be a prime divisor of <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(v_p(n)=k\text{,}\)</span> so that <span class="process-math">\(n=p^km\text{,}\)</span> where <span class="process-math">\(p\nmid m\text{.}\)</span> We consider the action of <span class="process-math">\(G\)</span> by left multiplication on</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-2-1-9">
 \begin{equation*}
 A=\{X\subseteq G\mid \abs{X}=p^k\}\text{,}
 \end{equation*}
@@ -759,7 +769,7 @@ A=\{X\subseteq G\mid \abs{X}=p^k\}\text{,}
 <li id="prop_G_acts_psets-3-1-1-1">
 <div class="para logical" id="prop_G_acts_psets-3-1-1-1-1">
 <div class="para">It suffices to prove that any orbit <span class="process-math">\(O_X\subseteq A\)</span> contains a subset <span class="process-math">\(X'\)</span> that contains <span class="process-math">\(e\text{.}\)</span> This is easy, if <span class="process-math">\(X=\{g_1,g_2,\dots, g_{p^k}\}\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-3-1-1-1-1-5">
 \begin{equation*}
 g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 \end{equation*}
@@ -771,13 +781,13 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 <li id="prop_G_acts_psets-3-1-1-2">
 <div class="para logical" id="prop_G_acts_psets-3-1-1-2-1">
 <div class="para">With <span class="process-math">\(X_i\)</span> as above, we have <span class="process-math">\(G_{X_i}\subseteq X_i\text{.}\)</span> This is because if <span class="process-math">\(g\in G_{X_i}\text{,}\)</span> then since <span class="process-math">\(e\in X_i\)</span> and <span class="process-math">\(g\cdot X_i=X_i\text{,}\)</span> we must have <span class="process-math">\(g=ge\in X_i\text{.}\)</span> As a result, we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-3-1-1-2-1-7">
 \begin{equation*}
 \abs{G_{X_i}}\leq \abs{X_i}=p^k\text{.}
 \end{equation*}
 </div>
 <div class="para">It follows that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-3-1-1-2-1-8">
 \begin{equation*}
 \abs{O_{X_i}}=\abs{G}/\abs{G_{X_i}}\geq n/p_k=m.\text{.}
 \end{equation*}
@@ -812,13 +822,13 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 \end{align*}
 </div>
 <div class="para">Now for a wonderful trick. Since the equivalence above holds for <em class="emphasis">any</em> group of cardinality <span class="process-math">\(n\text{,}\)</span> in particular it holds for a cyclic group. But in this special case we have <span class="process-math">\(n_p(G)=1\text{.}\)</span> It follows that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-3-1-1-4-2-15">
 \begin{equation*}
 {n\choose p^k}\equiv m \pmod p\text{.}
 \end{equation*}
 </div>
 <div class="para">Lastly, since <span class="process-math">\(\gcd(m,p)=1\text{,}\)</span> it is invertible modulo <span class="process-math">\(p\text{,}\)</span> allowing us to conclude that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_G_acts_psets-3-1-1-4-2-18">
 \begin{equation*}
 1\equiv n_p(G) \pmod p\text{,}
 \end{equation*}
@@ -838,7 +848,7 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 </h4>
 <div class="para logical" id="cor_Sylow_subgroup_exists-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group of cardinality <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(p\)</span> be a prime divisor of <span class="process-math">\(n\text{.}\)</span> We have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cor_Sylow_subgroup_exists-2-1-5">
 \begin{equation*}
 \Syl_p(G)\ne \emptyset\text{.}
 \end{equation*}
@@ -854,7 +864,7 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 </h4>
 <div class="para logical" id="cor_n_choose_pk-1-1">
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer, and let <span class="process-math">\(v_p(n)=k\)</span> for the prime integer <span class="process-math">\(p\text{.}\)</span> We have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cor_n_choose_pk-1-1-4">
 \begin{equation*}
 {n\choose p^k}\equiv \frac{n}{p^k} \pmod p\text{.}
 \end{equation*}
