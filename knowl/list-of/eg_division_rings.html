@@ -19,7 +19,7 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Division rings.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Division rings.</span>
 </h4>
 <div class="para logical">
 <div class="para">Determine whether the given ring is a division ring, and whether it is a field.</div>
@@ -70,10 +70,37 @@
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para">Left to reader.<div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">We mainly leave this to the reader, restricting our comments to the rings <span class="process-math">\(\Z/n\Z\text{,}\)</span> <span class="process-math">\(\Q(\sqrt{d})\text{,}\)</span> and <span class="process-math">\(\ML_n(R)\)</span> .<div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 2.13.1"><a href="#eg_division_rings-3" title="Copy heading and permalink for Solution 2.13.1" aria-label="Copy heading and permalink for Solution 2.13.1">🔗</a></div>
+<div class="para logical">
+<div class="para">We showed previously that</div>
+<div class="displaymath process-math">
+\begin{align}
+(\Z/n\Z)^* \amp =\{[a]_n\in \Z/n/Z\mid \gcd(a,n)=1\}\text{,}\tag{2.11}
+\end{align}
+</div>
+<div class="para">from whence it easily follows that <span class="process-math">\(\Z/n\Z\)</span> is a field if and only if <span class="process-math">\(n=p\)</span> is a prime integer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We claim <span class="process-math">\(\Q[\sqrt[d]]\)</span> is a field. Assume <span class="process-math">\(\alpha=a+b\sqrt{q}\)</span> is a nonzero element of <span class="process-math">\(\Q[\sqrt{d}]\text{.}\)</span> This is true if and only if <span class="process-math">\(a\ne 0\)</span> or <span class="process-math">\(b\ne 0\text{.}\)</span> (If <span class="process-math">\(\alpha=0\)</span> and <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> is nonzero, then we could write <span class="process-math">\(\sqrt{q}=-a/b\in \Q\)</span> or <span class="process-math">\(\sqrt{q}=-a/b\in \Q\)</span>). Contradiction.) Let <span class="process-math">\(\beta=a-b\sqrt{q}\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align}
+\alpha\beta=a^2-b^2q \amp \text{,}\tag{2.12}
+\end{align}
+</div>
+<div class="para">and this is nonzero, since otherwise we would have <span class="process-math">\(q=a^2/b^2\text{,}\)</span> contradicting the fact that <span class="process-math">\(q\)</span> is not a square in <span class="process-math">\(\Q\text{.}\)</span> Thus <span class="process-math">\(\alpha\)</span> has inverse</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^{-1}=\frac{1}{a^2-b^2q}(a-b\sqrt{q})\in \Q[\sqrt{d}]\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Lastly, from <a href="s_rings.html#th_matrix_rings" class="xref" data-knowl="./knowl/xref/th_matrix_rings.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.11: Matrix ring goodies">Theorem 2.11</a>, we know that <span class="process-math">\(A\in M_n(R)\)</span> is invertible if and only if <span class="process-math">\(\det A\in R^*\text{.}\)</span> Assuming <span class="process-math">\(n\geq 2\text{,}\)</span> it is easy to construct a nonzero matrix <span class="process-math">\(A\in M_n(R)\)</span> with <span class="process-math">\(\det A=0\text{.}\)</span> Thus <span class="process-math">\(M_n(R)\)</span> is not a division ring.<div class="autopermalink" data-description="Paragraph"><a href="#eg_division_rings-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.14.1"><a href="#eg_division_rings-3" title="Copy heading and permalink for Solution 2.14.1" aria-label="Copy heading and permalink for Solution 2.14.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 2.13: Division rings"><a href="#eg_division_rings" title="Copy heading and permalink for Example 2.13: Division rings" aria-label="Copy heading and permalink for Example 2.13: Division rings">🔗</a></div></article><span class="incontext"><a class="internal" href="s_rings.html#eg_division_rings">in-context</a></span>
+<div class="autopermalink" data-description="Example 2.14: Division rings"><a href="#eg_division_rings" title="Copy heading and permalink for Example 2.14: Division rings" aria-label="Copy heading and permalink for Example 2.14: Division rings">🔗</a></div></article><span class="incontext"><a class="internal" href="s_rings.html#eg_division_rings">in-context</a></span>
 </body>
 </html>
