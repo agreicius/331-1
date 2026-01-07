@@ -5,8 +5,8 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>Group theory</title>
-    <subtitle>Kursobjekt for Math 331-1</subtitle>
+    <title>Abstract algebra</title>
+    <subtitle>A Kursobjekt for Math 331</subtitle>
 
     <xi:include href="./frontmatter.ptx" />
     <xi:include href="./c_foundations.ptx" />
