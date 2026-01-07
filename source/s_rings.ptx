@@ -122,7 +122,7 @@ Let <m>R</m> be a commutative ring. Given a positive integer <m>n</m>, we define
 <remark>
 <title>Matrix rings</title>
 <p>
-We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_matrix_rings"/>. In other words, the matrix operations <xref ref="eq_matrix_add"/> satisfy the ring axioms whether or not <m>R</m> is commutative. We will restrict our attention to the case where <m>R</m> is commutative, however, as here the algebraic properties of <m>\ML_n(R)</m> are somewhat simpler. In particular, when <m>R</m> is commutative, we can define a determinant function <m>\det \ML_n(R)\rightarrow R</m> in the usual fashion, and <m>\det</m> enjoys essentially all of the properties you are familiar with in the case where <m>R=\R</m>. 
+We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_matrix_rings"/>. In other words, the matrix operations <xref ref="eq_matrix_add"/> satisfy the ring axioms whether or not <m>R</m> is commutative. We will restrict our attention to the case where <m>R</m> is commutative, however, as here the algebraic properties of <m>\ML_n(R)</m> are somewhat simpler. In particular, when <m>R</m> is commutative, we can define a determinant function <m>\det\colon \ML_n(R)\rightarrow R</m> in the usual fashion, and <m>\det</m> enjoys essentially all of the properties you are familiar with in the case where <m>R=\R</m>. 
 </p>
 </remark>
 <p>
@@ -141,7 +141,7 @@ We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_ma
                 </li>
                 <li>
                     <p>
-                        <m>0a=0</m> for all <m>a\in R</m>. 
+                        <m>0a=a0=0</m> for all <m>a\in R</m>. 
                     </p>
                 </li>
                 <li>
@@ -179,7 +179,7 @@ We can remove the restriction that <m>R</m> be commutative in <xref ref="spec_ma
                             <mrow> \amp \implies 0=0+0a</mrow>
                             <mrow> \amp \implies 0=0a</mrow>
                         </md>,
-                        as desired. 
+                        as desired. A similar argument shows $a0=0$. 
                     </p>
                 </li>
             </ol>
@@ -275,6 +275,50 @@ The set <m>\Q[\sqrt{q}]</m> is a subring of <m>\C</m>, and hence a ring in its o
 </p>
 </statement>
 </activity>
+<definition xml:id="d_ring_center">
+<title>Center of ring</title>
+<statement>
+<p>
+The <term>center</term> of a ring <m>R</m>, denoted <m>Z(R)</m>, is the set of elements of <m>R</m> that commute with all elements of <m>R</m>: <ie/>, 
+    <md number="yes">
+        Z(R)=\{a\in R\mid ab=ba \text{ for all } b\in R\}
+    </md>.
+</p>
+</statement>
+</definition>
+<example xml:id="eg_center">
+<title>Center of a ring</title>
+<statement>
+<p>
+Let <m>R</m> be a ring. Show that <m>Z(R)</m> is a subring of <m>R</m>. 
+</p>
+</statement>
+<solution>
+<p>
+First we show that <m>Z(R)</m> is a subring of <m>(R,+)</m>. From <xref ref="prop_ring_props"/> we know that <m>0\in Z(R)</m>. Next, assume <m>a,b\in Z(R)</m>. Given any <m>c\in R</m>, we have 
+<md>
+    <mrow>(a+b)c \amp =ac+bc=ca+cb</mrow>
+    <mrow> \amp =ca+cb</mrow>
+    <mrow> \amp = c(a+b)</mrow>
+    <mrow>(-a)c \amp =a(-c)</mrow>
+    <mrow> \amp =(-c)a</mrow>
+    <mrow> \amp =c(-a)</mrow>
+</md>,
+and thus <m>a+b, -a\in Z(R)</m>.
+</p>
+<p>
+    Next, we have <m>1\in Z(R)</m> by <xref ref="prop_ring_props"/>. Finally, we show that <m>Z(R)</m> is closed under multiplication. Assume <m>a,b\in Z(R)</m>. Given <m>c\in R</m>, we have 
+    <md>
+        <mrow>(ab)c \amp = a(bc) </mrow>
+        <mrow> \amp =a(cb)</mrow>
+        <mrow> \amp =(ac)b</mrow>
+        <mrow> \amp =(ca)b</mrow>
+        <mrow> \amp =c(ab)</mrow>
+    </md>,
+    showing <m>ab\in Z(R)</m>, as desired. 
+</p>
+</solution>
+</example>
 
 </subsection>
 <subsection xml:id="ss_rings_units_nilpotents">
@@ -401,7 +445,12 @@ Left to reader.
 </p>
 </solution>
 </example>
-<definition xml:id="d_zero_divisiors">
+<convention>
+    <p>
+        Having shown that <m>\Z/p\Z</m> is a field for <m>p</m> a prime integer, we will write <m>\F_p=\Z/p\Z</m> from now on. 
+    </p>
+</convention>
+<definition xml:id="d_zero_divisors">
 <title>Zero divisors and integral domains</title>
 <statement>
 <p>

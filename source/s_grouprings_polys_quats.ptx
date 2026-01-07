@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_grouprings_polys_quats" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group rings, polynomials and power series</title>
+    <introduction>
+        <p>
+            In this section we introduce three ring constructions: group rings, polynomial (and power series) rings, and quaternion rings. Each of these uses as an underling set a collection of <q>formal sums</q> with coefficients in a base ring <m>R</m>. This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with <xref ref="fiat_formal_sums"/> a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum <m>a+bi</m> where <m>a,b\in \R</m>, when in essence a complex number is just a pair <m>(a,b)\in \R^2</m>. Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation. 
+        </p>
+        <assumption xml:id="fiat_formal_sums">
+            <title>Formal sums are tuples</title>
+            <statement>
+                <p>
+                    Let <m>R</m> be a ring, and let <m>J</m> be a nonempty set. A <em>formal sum</em> of the form 
+                    <me>
+                        \sum_{j\in J}a_j\, j
+                    </me>
+                    is just alternative notation for the tuple <m>(a_j)_{j\in J}</m>. As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is,  we have 
+                    <md>
+                        <mrow>\sum_{j\in J}a_j\, j=\sum_{j\in J}b_j\, j \amp \iff (a_j)_{j\in J}=(b_j)_{j\in J} </mrow>
+                        <mrow> \amp \iff a_j=b_j \text{ for all } j\in J</mrow>
+                    </md>.
+                   As a form of shortening, when expanding out a formal sum <m>\sum_{j\in J}a_j j</m> we will often drop terms where <m>a_j=0</m>. Similarly, we sometimes drop the <m>1</m> in an expression like <m>1\, j</m>, writing just <m>j</m> instead.
+                </p>
+            </statement>
+        </assumption>
+    </introduction>
+    
+    <subsection xml:id="ss_group_rings">
+    <title>Group rings</title>
+    <activity xml:id="spec_group_rings">
+    <title>Group rings</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring, and let <m>G</m> be a finite group. We define <m>R\, G</m> to be the set of all formal sums 
+    <me>
+        \sum_{g\in G}a_g g
+    </me>,
+    where <m>a_g\in R</m> for all <m>g\in G</m>, and we define binary operations <m>+</m> and <m>\cdot</m> as follows: 
+    <md>
+        <mrow>\sum_{g\in G}a_g g+\sum_{g\in G}b_g g \amp =\sum_{g\in G}(a_g+b_g) g </mrow>
+        <mrow> \sum_{g\in G}a_g g\, \cdot\sum_{g\in G}b_g g \amp =
+            \sum_{g\in G}c_g g, \amp c_g=\sum_{\substack{h,k\in G\\ hk=g}}a_h b_k </mrow>
+    </md>.
+    The triple <m>(R\, G, +, \cdot)</m> is a ring called the <term>group ring</term> of <m>G</m> with coefficients in <m>R</m>. The additive and multiplicative identities of <m>R</m> are given as 
+    <md>
+        <mrow>0 \amp = \sum_{g\in G}0g</mrow>
+        <mrow>1 \amp =1e+\sum_{g\ne e}0g</mrow>
+    </md>.
+    </p>
+    </statement>
+    </activity>
+    <remark>
+    <title>Group rings</title>
+    <p>
+    <ol>
+        <li>
+            <p>
+                The subset <m>\{re\mid r\in R\}</m> is easily seen to be a subring of <m>R\, G</m>. Indeed, using the definition of the group ring operations, we see that
+                <md>
+                    <mrow>re + se \amp = (r+s) e </mrow>
+                    <mrow>re\cdot se \amp =(rs) e</mrow>
+                </md>.
+                Thus we can think of the subring <m>\{re\mid r\in R\}</m> as a copy of <m>R</m> living as a subset of <m>R\, G</m>. (Later we will be able to say that this subring is <em>isomorphic</em> to <m>R</m>.)  By slight abuse of notation, we will identify <m>R</m> with this subring of <m>R\, G</m>, and sometimes drop the <m>e</m> from the notation <m>r\, e</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                From the group ring operations definition, it follows that 
+                <md>
+                    <mrow>r\, e \cdot \left(\sum_{g\in G}a_g\, g \right)\amp =\sum_{g\in G}ra_g\, g</mrow>
+                    <mrow> \amp =\left(\sum_{g\in G}a_g\, g\right) \cdot r\, e</mrow>
+                </md>.
+                Identifying <m>R</m> with <m>\{re\mid r\in R\}</m>, we see that <m>R\leq Z(R)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                We can also think of the group <m>G</m> as sitting inside <m>R\, G</m>, using the identification 
+                <md>
+                    <mrow>g \amp =1\, g+\sum_{h\ne g}0\, h</mrow>
+                </md>.
+                With this identification in place, we that the ring multiplication on <m>R\, G</m> extends the group operation of <m>G</m>. That is, given <m>g,h\in G</m>, identifying these as the ring elements <m>1\, g</m> and <m>1\, h</m> and taking their product, we see that 
+                <md>
+                    <mrow>g\cdot h \amp = gh </mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Combining the previous observations, we can now give a decent motivation for the multiplication operation on <m>R\, G</m>. Namely, it is the unique binary operation on <m>R\, G</m> satisfying the following properties:
+                <ol>
+                    
+                    <li>
+                        <p>
+                            it distributes over the given addition operation on <m>R\, G</m>; 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            it extends the group operation in the sense that <m>g\cdot h=gh</m>;
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            we have <m>r\, e\in Z(R\, G)</m> for all <m>r\in R</m> with respect to this multiplication.
+                        </p>
+                    </li>
+                </ol>
+                In this sense our multiplication operation is the unique way of extending the group operation of <m>G</m> to a ring operation on <m>R\, G</m> in such a way that our copy of <m>R\leq R\, G</m> lies in the center of <m>R\, G</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </remark>
+    <example xml:id="eg_group_ring_D3">
+    <title>Group ring of <m>D_3</m></title>
+    <statement>
+    <p>
+    Let <m>D_3=\angvec{r,s\mid r^3=s^2=e, srs=r^{-1}}</m>, and consider the group ring <m>\F_3\, D_3</m>.
+    <ol>
+        <li>
+            <p>
+                Let <m>a=2r+ s</m> and <m>b=2r^2+r^2s</m>. Compute <m>ab</m> and <m>ba</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Show that <m>r+r^2</m> is a unit in <m>\F_3\,D_3</m>
+            </p>
+        </li>
+    </ol> 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_group_rings">
+    <title>Group ring properties</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring, and let <m>G</m> be a finite group.
+    <ol>
+        <li>
+            <p>
+                Prove that <m>R\, G</m> is commutative if and only if <m>G</m> is abelian. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Consider the element <m>r=\sum_{g\in G}1\, g\in R\, G</m>. Compute <m>g\cdot r</m>, where <m>g</m> is an element of <m>G</m>. Show that <m>R\, G</m> is not a division ring if <m>G</m> is nontrivial. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    
+    
+    </subsection>
+    
+
+</section>
