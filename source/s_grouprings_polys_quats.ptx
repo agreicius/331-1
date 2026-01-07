@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_grouprings_polys_quats" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Group rings, polynomials and power series</title>
+    <title>Group rings, polynomials, quaternions</title>
     <introduction>
         <p>
             In this section we introduce three ring constructions: group rings, polynomial (and power series) rings, and quaternion rings. Each of these uses as an underling set a collection of <q>formal sums</q> with coefficients in a base ring <m>R</m>. This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with <xref ref="fiat_formal_sums"/> a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum <m>a+bi</m> where <m>a,b\in \R</m>, when in essence a complex number is just a pair <m>(a,b)\in \R^2</m>. Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation. 
@@ -166,6 +166,77 @@
     
     
     </subsection>
+    <subsection xml:id="ss_poly_powerseries">
+    <title>Polynomials and power series</title>
+    <p>
+        Whereas normally power series are introduced as a sort of generalization of polynomials, we will take the approach of defining the notion of a ring of power series, and identify a subring as the ring of polynomials. 
+    </p>
+    <activity xml:id="spec_power_series">
+    <title>Power series ring</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring. We define the set <m>R[[x]]</m> to be the set of all formal sums of the form
+    <md>
+        <mrow> \sum_{n=0}^\infty a_n x^n \amp </mrow>
+    </md>,
+    where <m>a_n\in R</m> for all <m>n\in \Z_{\geq 0}</m>, and we define binary operations <m>+</m> and <m>\cdot</m> as follows: 
+    <md>
+        <mrow>\sum_{n=0}^\infty a_nx^n+\sum_{n=0}^\infty b_nx^n \amp = \sum_{n=0}^\infty (a_n+b_n)x^n</mrow>
+        <mrow>\sum_{n=0}^\infty a_nx^n\cdot \sum_{n=0}^\infty b_nx^n \amp = \sum_{n=0}^\infty c_nx^n \amp c_n=\sum_{k=0}^n a_k b_{n-k}</mrow>
+    </md>.
+    The triple <m>(R[[x]], +,\cdot)</m> is a commutative ring called the <term>power series ring over (or with coefficients in) <m>R</m> in the unknown (or indeterminate) <m>x</m></term>. The additive and multiplicative identities of <m>R[[x]]</m> are given as
+    <md number="yes">
+        <mrow>0 \amp =\sum_{n=0}^\infty 0x^n = 0+0x+0x^2+\cdots </mrow>
+        <mrow>1 \amp =1x^0+\sum_{n=1}^\infty 0x^n =1+0x+0x^2+\cdots </mrow>
+    </md>.
+  Given a power series <m>\sum_{n=0}^\infty</m>, we call <m>a_nx^n</m> its <term><m>n</m>-th term</term>, and <m>a_n</m> its  <term><m>n</m>-th coefficient</term>.
+    </p>
+<p> 
+    We will use function-like notation to name power series. In more detail, we will refer to power series using function letters like <m>f</m> and <m>g</m>, and will write <m>f(x)=\sum_{n=0}^\infty a_nx_n</m> when explicitly introducing names of coefficients.
+</p>
+    </statement>
+    </activity>
+    <remark>
+        <title>Power series equality</title>
+    <p>
+        When are two power series <m>f(x)=\sum_{n=0}^\infty a_nx^n</m> and <m>g(x)=\sum_{n=0}^\infty b_nx^n</m> equal? Identifying these formal sums as tuples <m>(a_n)_{n=0}^\infty</m>, <m>(b_n)_{n=0}^\infty</m>, following <xref ref="fiat_formal_sums"/>, we see that 
+        <md number="no">
+           <mrow> f=g \iff a_n=b_n \text{ for all } n\in \Z_{\geq 0}</mrow>
+        </md>.
+    </p>
+    </remark>
     
+    <p>
+        We now identify the ring <m>R[x]</m> of polynomials over <m>R</m> as the subring of <m>R[[x]]</m> consisting of all power series whose coefficients are <q>eventually</q> equal to zero. 
+    </p>
+    <activity xml:id="spec_poly_ring">
+    <title>Polynomial rings</title>
+    <statement>
+   <p>
+  Let <m>R</m> be a nontrivial commutative ring.
+  Define the <term>polynomial ring over <m>R</m> in the indeterminate <m>x</m></term> to be the subset <m>R[x]\subseteq R[[x]]</m> of all power series whose coefficients are <em>eventually</em> equal to zero: i.e., 
+  <md>
+    <mrow>R[x] \amp = \{f(x)=\sum_{n=0}^\infty a_nx^n\in R[[x]]\mid a_n=0 \text{ for all } n&gt;  N \text{ for some } N\in \Z_{\geq 0} \} </mrow>
+    <mrow> \amp =\{f\in R[[x]]\mid f(x)=\sum_{n=0}^Na_nx^n \text{ for some } N\in \Z_{\geq 0}, a_n\in R\}</mrow>
+  </md>.
+  It is easy to see that <m>R[x]</m> is a subring of <m>R[[x]]</m>, and thus a ring in its own right. Restricted to <m>R[x]</m>, the power series multiplication rule becomes the familiar polynomial multiplication rule: 
+  <md>
+    <mrow>(\anpoly)\amp \cdot (\bmpoly) =\sum_{k=0}^{m+n}c_kx^k</mrow>
+     <mrow>c_k\amp =\sum_{j=0}^k a_j b_{k-j}</mrow>
+  </md>.
+  As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: <eg/>,  <m>f(x)=a_0+a_1x+\cdots +a_nx^n</m>, or <m>f(x)=\anpoly</m>.
+</p>
 
+<p>
+  Given a nonzero polynomial <m>f\in R[x]</m>, we define its <term>degree</term>, <m>\deg f</m>, to be the smallest <m>n</m> satisfying <m>a_n\ne 0</m>.
+  If <m>f(x) = 0</m>, we define <m>\deg f=-\infty</m>.
+</p>
+
+<p>
+  If <m>f(x)=\anpoly</m> is a polynomial of degree <m>n\ne -\infty</m>, we call <m>a_{n}</m> the <term>leading coefficient</term> of <m>f</m>.
+  A polynomial with leading coefficient equal to <m>1\in R</m> is called <term>monic</term>.
+</p>
+    </statement>
+    </activity>
+    </subsection>
 </section>
