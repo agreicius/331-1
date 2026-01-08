@@ -49,7 +49,7 @@
     </p>
     </statement>
     </activity>
-    <remark>
+    <remark xml:id="rem_group_rings">
     <title>Group rings</title>
     <p>
     <ol>
@@ -79,9 +79,14 @@
                 <md>
                     <mrow>g \amp =1\, g+\sum_{h\ne g}0\, h</mrow>
                 </md>.
+                We call such elements of <m>R\, G</m> <term>group elements</term>. 
                 With this identification in place, we that the ring multiplication on <m>R\, G</m> extends the group operation of <m>G</m>. That is, given <m>g,h\in G</m>, identifying these as the ring elements <m>1\, g</m> and <m>1\, h</m> and taking their product, we see that 
                 <md>
                     <mrow>g\cdot h \amp = gh </mrow>
+                </md>.
+                As a result, it is easy to see that a group element <m>g\in R\, G</m> is invertible with inverse the group element <m>g^{-1}</m>. It follows that we can think of <m>G</m> as a subgroup of the group of units of <m>R\, G</m> (with respect to our identification): <ie/>, 
+                <md>
+                  <mrow>  G\leq (R\, G)^* \amp </mrow>
                 </md>.
             </p>
         </li>
@@ -120,7 +125,7 @@
     <ol>
         <li>
             <p>
-                Let <m>a=2r+ s</m> and <m>b=2r^2+r^2s</m>. Compute <m>ab</m> and <m>ba</m>. 
+                Let <m>a=2rs+ r^2s</m> and <m>b=s+2rs</m>. Compute <m>ab</m> and <m>ba</m>. 
             </p>
         </li>
         <li>
@@ -133,10 +138,60 @@
     </statement>
     <solution>
     <p>
-    
+        When computing an explicit product in a group ring, instead of using the formal definition in <xref ref="spec_group_rings"/>, it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms. 
+    <ol>
+        <li>
+            <p>
+                We have 
+                <md>
+                    <mrow>ab \amp =(2rs+r^2s)(s+2rs)</mrow>
+                    <mrow> \amp =2rs^2+4rsrs+r^2s^2+2r^2srs</mrow>
+                    <mrow> \amp =2r+1e+r^2+2r \amp ((rs)^2=e, 4=1, r^2srs=r)</mrow>
+                    <mrow> \amp =1e+4r+r^2</mrow>
+                    <mrow> \amp =e+r+r^2</mrow>
+                    <mrow>ba \amp =(s+2rs)(2rs+r^2s)</mrow>
+                    <mrow> \amp =2srs+sr^2s+4rsrs+2rsr^2s</mrow>
+                    <mrow> \amp =2r^2+r+4e+r^2</mrow>
+                    <mrow> \amp =4e+r+3r^2</mrow>
+                    <mrow> \amp =e+r \amp (4=1, 3=0)</mrow>
+                </md>.
+                Observe that <m>ab\ne ba</m>: no great surprise in light of <xref ref="eg_group_rings"/>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                First observe that <m>r</m> is a unit in <m>\F_3\, D_3</m> with inverse <m>r^2</m>. (See <xref ref="rem_group_rings"/>.) Since <m>r+r^2=r(e+r)  </m>, it suffices to show that <m>e+r</m> is a unit of <m>\F_3\, D_3</m>. (If <m>a</m> and <m>b</m> are units, then so is <m>ab</m>.) Playing around with some expressions, we find that 
+                <md>
+                    <mrow>(e+r)(2e+r+2r^2) \amp =(2e+r+2r^2)(e+r)=1e=1</mrow>
+                </md>.
+                Thus <m>(e+r)</m> is a unit. We conclude that <m>r+r^2</m> is a unit, with inverse 
+                <md>
+                    <mrow>(e+r)^{-1}r^{-1} \amp =(2e+r+2r^2)r^2=e+2r+2r^2</mrow>
+                </md>. 
+            </p>
+        </li>
+    </ol>
     </p>
     </solution>
     </example>
+    <remark xml:id="rem_group_ring_field">
+    <title>Group rings over a field</title>
+    <p>
+    Let <m>K</m> be a field, and let <m>G=\{g_1,g_2,\dots, g_n\}</m> be a group of cardinality <m>n</m>. In this case the group ring <m>K\, G</m> has the additional structure of a <m>K</m>-vector space, where vector addition is just the ring addition, and scalar multiplication by an element <m>c\in K</m> is defined as ring multiplication by the element <m>c\, e\in K\, G</m>. In fact, identifying elements of <m>K\, G</m> as tuples via the correspondence 
+    <md>
+        <mrow>\sum_{i=1}^n a_i\, g_i \amp \leftrightarrow (a_1,a_2,\dots, a_n) </mrow>
+    </md>,
+    we see that as a vector space, <m>K\, G</m> is literally equal to the vector space  <m>K^n</m> of <m>n</m>-tuples with coefficients in <m>K</m> with its usual vector operations: 
+    <md>
+        <mrow>K\, G \amp \longleftrightarrow K^n</mrow>
+        <mrow>\sum_{i=1}^na_i\, g_i \amp \longleftrightarrow (a_i)_{i=1}^n</mrow>
+        <mrow>\sum_{i=1}^na_i\,g_i+ \sum_{i=1}^nb_i\,g_i \amp \longleftrightarrow (a_i)_{i=1}^n+(b_i)_{i=1}^n</mrow>
+        <mrow>ce\cdot \sum_{i=1}^na_i\, g_i \amp \longleftrightarrow c(a_i)_{i=1}^n</mrow>
+    </md>.
+    As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields. 
+    </p>
+    </remark>
+    
     <example xml:id="eg_group_rings">
     <title>Group ring properties</title>
     <statement>
@@ -150,7 +205,17 @@
         </li>
         <li>
             <p>
-                Consider the element <m>r=\sum_{g\in G}1\, g\in R\, G</m>. Compute <m>g\cdot r</m>, where <m>g</m> is an element of <m>G</m>. Show that <m>R\, G</m> is not a division ring if <m>G</m> is nontrivial. 
+                Consider the element <m>r=\sum_{g\in G} g\in R\, G</m>. Compute <m>h\cdot r</m>, where <m>h</m> is an element of <m>G</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>g\in G</m> be a nontrivial element. Show that <m>e-g</m> is a zero divisor. 
+            </p>
+        </li>
+        <li>
+            <p>
+                When is a group ring <m>R\, G</m> a division ring? 
             </p>
         </li>
     </ol>
@@ -158,13 +223,68 @@
     </statement>
     <solution>
     <p>
-    
+    Let <m>g_1,g_2,\dots, g_n</m> be the distinct elements of <m>G</m>. To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and <m>\cdot</m> for the ring operation.
+    <ol>
+        <li>
+            <p>
+                Assume that <m>R\, G</m> is commutative.   For all <m>g,h\in G</m>, we have 
+                <md>
+                    <mrow>gh \amp = g\cdot h \amp (<xref ref="rem_group_rings" text="global" />) </mrow>
+                    <mrow> \amp =h\cdot g \amp (R\, G \text{ commutative})</mrow>
+                    <mrow> \amp =hg  \amp (<xref ref="rem_group_rings" text="global" />)</mrow>
+                </md>.
+                Thus <m>G</m> is abelian. 
+            </p>
+            <p>
+                Now assume <m>G</m> is abelian. Given 
+                <md>
+                    <mrow>r \amp =\sum_{g\in G}a_g\, g \amp s\amp= \sum_{g\in G}b_g\, g</mrow>
+                </md>,
+                expanding out using distributivity and commutativity of ring coefficients, we have 
+                <md>
+                    <mrow>rs \amp =\sum_{(g,h)\in G^2}(a_g b_h)gh \amp </mrow>
+                    <mrow> \amp =\sum_{(g,h)\in G^2}(b_h a_g)hg \amp (R \text{ comm.}, G \text{ abelian})</mrow>
+                    <mrow> \amp = sr </mrow>
+                </md>.
+                Thus <m>R\, G</m> is commutative. 
+            </p>
+        </li>
+        <li>
+            <p>
+                We have 
+                <md>
+                    <mrow>h\cdot r \amp = h\cdot \sum_{g\in G} g \amp </mrow>
+                    <mrow> \amp =\sum_{g\in G} hg </mrow>
+                    <mrow> \amp =\sum_{g'\in G} g' \amp (hg=g') </mrow>
+                    <mrow> \amp =r </mrow>
+                </md>,
+                where the penultimate line follows since as <m>g</m> runs through all elements of <m>G</m>, so too does <m>g'=hg</m>. 
+            </p>
+            <p>
+                Observe that if <m>G</m> is nontrivial, the taking <m>h\ne e</m>, the equality <m>hr=r</m> implies that <m>r</m> is noninvertible: if it were, we could cancel it to conclude <m>h=e</m>, a contradiction. 
+            </p>
+        </li>
+        <li>
+            <p>
+                We have 
+                <md number="yes">
+                    <mrow>(e-g)\sum_{i=0}^{n-1}g^i \amp =\sum_{i=0}g^i-\sum_{i=0}^{n-1}g^{i+1}</mrow>
+                    <mrow> \amp =e-g^n</mrow>
+                    <mrow> \amp =e-e=0</mrow>
+                </md>.
+                Since <m>e-g</m> and <m>\sum_{i=0}^{n-1}g^i=e+g+\cdots +g^{n-1}</m> are both nonzero elements of <m>R\, G</m>, we conclude that <m>e-g</m> is a zero divisor (as is <m>1+g+\cdots +g^{n-1}</m>). 
+            </p>
+        </li>
+        <li>
+            <p>
+                Both (2) and (3) imply that <m>R\, G</m> is a division ring if and only if <m>G=\{e\}</m> is trivial and <m>R</m> is a field. 
+            </p>
+        </li>
+    </ol>
     </p>
     </solution>
     </example>
-    
-    
-    
+
     </subsection>
     <subsection xml:id="ss_poly_powerseries">
     <title>Polynomials and power series</title>
@@ -228,8 +348,8 @@
 </p>
 
 <p>
-  Given a nonzero polynomial <m>f\in R[x]</m>, we define its <term>degree</term>, <m>\deg f</m>, to be the smallest <m>n</m> satisfying <m>a_n\ne 0</m>.
-  If <m>f(x) = 0</m>, we define <m>\deg f=-\infty</m>.
+  Given a nonzero polynomial <m>f\in R[x]</m>, we define its <term>degree</term>, <m>\deg f</m>, to be the largest <m>n</m> satisfying <m>a_n\ne 0</m>.
+  If <m>f = 0</m>, we define <m>\deg f=-\infty</m>.
 </p>
 
 <p>
@@ -278,7 +398,7 @@
                     <li>
                         <p>
                         Assume <m>\deg f=n</m> and <m>\deg g=m</m>, so that 
-                <md number="yes">
+                <md>
                     <mrow>f(x) \amp =\anpoly \amp </mrow>
                     <mrow>g(x)\amp=\bmpoly \amp </mrow>
                 </md>,
@@ -298,28 +418,96 @@
             </p>
         </proof>
     </proposition>
+    <example xml:id="eg_poly_deg">
+    <title>Polynomial degree</title>
+    <statement>
+    <p>
+    Find polynomials <m>f,g\in \Z/4\Z[x]</m> satisfying <m>\deg fg&lt; \deg f+\deg g</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Let <m>f(x)=2x+1</m> and <m>g(x)=2x</m>. We have <m>\deg f=\deg g=1</m> and 
+    <md number="yes">
+        <mrow>\deg fg \amp =\deg(4x^2+2x)</mrow>
+        <mrow> \amp =\deg(2x)</mrow>
+        <mrow> \amp = 1</mrow>
+        <mrow> \amp &lt; 1+1</mrow>
+        <mrow> \amp =\deg f+\deg g</mrow>
+    </md>.
+    </p>
+    </solution>
+    </example>
     <p>
         As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property. 
     </p>
     <corollary xml:id="cor_poly_int_domain">
         <statement>
             <p>
-                Let <m>R</m> be a nontrivial commutative ring. If <m>R</m> is an integral domain, then <m>R[x]</m> is an integral domain, and conversely.  
+                Let <m>R</m> be a nontrivial commutative ring. The following statements are equivalent. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>R</m> is an integral domain.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>R[x]</m> is an integral domain. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>R[[x]]</m> is an integral domain. 
+                        </p>
+                    </li>
+                </ol>
             </p>
         </statement>
         <proof>
             <p>
-                Assume <m>R</m> is an integral domain. If <m>f</m> and <m>g</m> are nonzero polynomials in <m>R[x]</m>, then <m>\deg f\in \Z_{\geq 0}</m> and <m>\deg g\in \Z_{\geq 0}</m>, in which case 
-                <md>
-                    <mrow>\deg fg=\deg f+\deg g \in \Z_{\geq 0}</mrow>
-                </md>.
-                In particular, <m>\deg fg\ne -\infty</m>, and thus <m>fg\ne 0</m>. This proves <m>R[x]</m> is an integral domain. 
+                Since clearly a subring of an integral domain is an integral domain, we have (3)<m>\implies</m>(2)<m>\implies</m>(1). It remains only  to show (1)<m>\implies</m>(3). 
             </p>
             <p>
-                The reverse implication is trivial since <m>R</m> is a subring of <m>R[x]</m>. 
+                Assume <m>R</m> is an integral domain. Given nonzero elements  <m>f,g\in R[[x]</m>, we can write 
+                <md number="yes">
+                    <mrow>f(x) \amp =a_nx^n+a_{n+1}x^{n+1}+\cdots </mrow>
+                    <mrow>g(x) \amp =b_mx^m+b_{m+1}x^{m+1}+\cdots </mrow>
+                </md>,
+                where <m>a_n,b_m\ne 0</m>. But then 
+                <md number="yes">
+                    <mrow>fg (x) \amp = a_nb_mx^{n+m}+\text{higher degree terms}</mrow>
+                </md>.
+                Since <m>R</m> is an integral domain, and since <m>a_n, b_m\ne 0</m>, we conclude that <m>fg\ne 0</m>, as desired. 
             </p>
         </proof>
     </corollary>
+    <example xml:id="eg_poly_power">
+    <title>Units of polynomial and power series rings</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring. 
+    <ol>
+        <li>
+            <p>
+                Show that <m>f(x)=\sum_{n=0}^\infty a_nx^n</m> is a unit if and only if <m>a_0\in R^*</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Prove: if <m>R</m> is an integral domain, then <m>(R[x])^*=R^*</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Left as an exercise. 
+    </p>
+    </solution>
+    </example>
+    
     </subsection>
     <subsection xml:id="ss_quaternions">
     <title>Quaternion rings</title>
@@ -357,6 +545,55 @@
     </p>
     </statement>
     </activity>
+    <definition xml:id="d_quat_norm">
+    <title>Quaternion conjugation and norm</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring. Given <m>q=a_1+a_2i+a_3j+a_4k\in H(R)</m>, its <term>quaternion conjugate</term>, denoted <m>\overline{q}</m> is defined as 
+    <md number="yes">
+        <mrow>\overline{q} \amp =a_1-a_2i-a_3j-a_4k</mrow>
+    </md>.
+    The <term>quaternion norm</term> is the function <m>N\colon H(R)\rightarrow R</m> defined as 
+    <md number="yes">
+        <mrow>N(q)=\overline{q}</mrow>
+    </md>.
+    A straight forward computation shows that if <m>q=a_1+a_2i+a_3j+a_4k</m>, then 
+    <md>
+        <mrow>N(q) \amp =a_1^2+a_2^2+a_3^2+a_4^2</mrow>
+    </md>.
+    </p>
+    </statement>
+    </definition>
+     <theorem xml:id="th_quat_norm">
+     <title>Quaternion conjugation and norm</title>
+     <statement>
+     <p>
+     Let <m>R</m> be a nontrivial commutative ring.
+     <ol>
+        <li>
+            <p>
+                <m>\overline{aq+bq'}=a\overline{q}+b\overline{q'}</m> for all <m>a,b\in R</m> and <m>q,q'\in H(R)</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\overline{qq'}=\overline{q'}\, \overline{q}</m> for all <m>q,q'\in H(R)</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N(qq')=N(q)N(q')</m> for all <m>q,q'\in H(R)</m>. 
+            </p>
+        </li>
+     </ol>
+     </p>
+     </statement>
+     <proof>
+     <p>
+        This will be given as a homework exercise. 
+     </p>
+     </proof>
+     </theorem>
     
     </subsection>
 </section>
