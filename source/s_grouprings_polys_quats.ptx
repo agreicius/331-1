@@ -239,4 +239,42 @@
     </statement>
     </activity>
     </subsection>
+    <subsection xml:id="ss_quaternions">
+    <title>Quaternion rings</title>
+    <activity xml:id="spec_quat_rings">
+    <title>Quaternion rings</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring. We define <m>H(R)</m> to be the set of all formal sums 
+    <md>
+        <mrow>a_1+a_2i+a_3j+a_4k</mrow>
+    </md>,
+    where <m>a_i\in R</m> for all <m>1\leq i\leq 4</m>. We define addition on <m>H(R)</m> as 
+    <md>
+        <mrow>(a_1+a_2i+a_3j+a_4k)+(b_1+b_2i+b_3j+b_4k) </mrow>
+        <mrow> = (a_1+b_1)+(a_2+b_2)i+(a_3+b_3)j+(a_4+b_4)k</mrow>
+    </md>.
+    We define multiplication to be the unique associative binary operation <m>\cdot</m> that distributes over the addition operation <m>+</m>, satisfies 
+    <md number="yes">
+        <mrow>b(a_1+a_2i+a_3j+a_4k) \amp =(a_1+a_2i+a_3j+a_4k)b </mrow>
+        <mrow> \amp =ba_1+ba_2i+ba_3j+ba_4k</mrow>
+    </md>
+    for all 
+    <md>
+        <mrow>b \amp =b+0i+0j+0k\in H(R)</mrow>
+    </md>,
+    and satisfies 
+    <md number="yes">
+        <mrow> i^2\amp =j^2=k^2=-1 </mrow>
+        <mrow>ij \amp = k, jk=i,  ki=j</mrow>
+    </md>.
+    The triple <m>(H(R), +, \cdot)</m> is a ring called the <term>quaternion ring over (or with coefficients in) <m>R</m></term>. 
+    </p>
+    <p>
+        In the special case where <m>R=\R</m>, we denote <m>\HH=H(\R)</m> and call <m>\HH</m> the <term>Hamilton quaternions</term>. 
+    </p>
+    </statement>
+    </activity>
+    
+    </subsection>
 </section>
