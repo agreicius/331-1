@@ -220,8 +220,8 @@
     <mrow> \amp =\{f\in R[[x]]\mid f(x)=\sum_{n=0}^Na_nx^n \text{ for some } N\in \Z_{\geq 0}, a_n\in R\}</mrow>
   </md>.
   It is easy to see that <m>R[x]</m> is a subring of <m>R[[x]]</m>, and thus a ring in its own right. Restricted to <m>R[x]</m>, the power series multiplication rule becomes the familiar polynomial multiplication rule: 
-  <md>
-    <mrow>(\anpoly)\amp \cdot (\bmpoly) =\sum_{k=0}^{m+n}c_kx^k</mrow>
+<md number="yes">
+    <mrow xml:id="eq_poly_mult">(\anpoly)\amp \cdot (\bmpoly) =\sum_{k=0}^{m+n}c_kx^k</mrow>
      <mrow>c_k\amp =\sum_{j=0}^k a_j b_{k-j}</mrow>
   </md>.
   As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: <eg/>,  <m>f(x)=a_0+a_1x+\cdots +a_nx^n</m>, or <m>f(x)=\anpoly</m>.
@@ -238,6 +238,88 @@
 </p>
     </statement>
     </activity>
+    <remark>
+    <title>Polynomial and power series rings</title>
+    <p>
+    When working with a power series ring <m>R[[x]]</m>, we will identify the ring <m>R</m> with power series of the form 
+    <md>
+        <mrow>r+\sum_{n=1}^\infty 0x^n \amp =r+0x+0x^2+\cdots</mrow>
+    </md>.
+    Since this identification preserves the ring operations of <m>R</m>, we end up with a chain of subring inclusions 
+    <md>
+        <mrow>R \amp \subseteq R[x] \subseteq R[[x]]</mrow>
+    </md>.
+    </p>
+    </remark>
+    <p>
+        The degree operation on <m>R[x]</m> turns out to be very useful, thanks in part to the properties articulated in the following proposition.
+    </p>
+    <proposition xml:id="prop_deg_poly">
+        <statement>
+            <p>
+                Let <m>R</m> be a nontrivial commutative ring, and let <m>f</m> and <m>g</m> be nonzero polynomials in <m>R[x]</m>.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\deg fg\leq \deg f+\deg g</m>, with equality if <m>R</m> is an integral domain.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\deg(f+g)\leq \max\{\deg f, \deg g\}</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                        Assume <m>\deg f=n</m> and <m>\deg g=m</m>, so that 
+                <md number="yes">
+                    <mrow>f(x) \amp =\anpoly \amp </mrow>
+                    <mrow>g(x)\amp=\bmpoly \amp </mrow>
+                </md>,
+                where <m>a_n\ne 0</m> and <m>b_m\ne 0</m>. From the polynomial multiplication rule given in <xref ref="eq_poly_mult"/>, we see that 
+                <md>
+                    <mrow>fg(x) \amp =a_nb_mx^{n+m}+\text{terms of lower degree}</mrow>
+                </md>.
+                It follows that <m>\deg fg\leq n+m=\deg f+\deg g</m>. If <m>R</m> is an integral domain, then <m>a_nb_m\ne 0</m> and thus <m>\deg fg=m+n=\deg f+\deg g</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The proof is left to the reader. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    <p>
+        As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property. 
+    </p>
+    <corollary xml:id="cor_poly_int_domain">
+        <statement>
+            <p>
+                Let <m>R</m> be a nontrivial commutative ring. If <m>R</m> is an integral domain, then <m>R[x]</m> is an integral domain, and conversely.  
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Assume <m>R</m> is an integral domain. If <m>f</m> and <m>g</m> are nonzero polynomials in <m>R[x]</m>, then <m>\deg f\in \Z_{\geq 0}</m> and <m>\deg g\in \Z_{\geq 0}</m>, in which case 
+                <md>
+                    <mrow>\deg fg=\deg f+\deg g \in \Z_{\geq 0}</mrow>
+                </md>.
+                In particular, <m>\deg fg\ne -\infty</m>, and thus <m>fg\ne 0</m>. This proves <m>R[x]</m> is an integral domain. 
+            </p>
+            <p>
+                The reverse implication is trivial since <m>R</m> is a subring of <m>R[x]</m>. 
+            </p>
+        </proof>
+    </corollary>
     </subsection>
     <subsection xml:id="ss_quaternions">
     <title>Quaternion rings</title>
