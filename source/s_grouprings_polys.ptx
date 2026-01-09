@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="s_grouprings_polys_quats" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Group rings, polynomials, quaternions</title>
+<section xml:id="s_grouprings_polys" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Group rings, polynomials, power series</title>
     <introduction>
         <p>
-            In this section we introduce three ring constructions: group rings, polynomial (and power series) rings, and quaternion rings. Each of these uses as an underling set a collection of <q>formal sums</q> with coefficients in a base ring <m>R</m>. This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with <xref ref="fiat_formal_sums"/> a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum <m>a+bi</m> where <m>a,b\in \R</m>, when in essence a complex number is just a pair <m>(a,b)\in \R^2</m>. Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation. 
+            In this section and the next we introduce three ring constructions: group rings, polynomial (and power series) rings, and Hamilton quaternion rings. Each of these uses as an underlying set a collection of <q>formal sums</q> with coefficients in a base ring <m>R</m>. This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with <xref ref="fiat_formal_sums"/> a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum <m>a+bi</m> where <m>a,b\in \R</m>, when in essence a complex number is just a pair <m>(a,b)\in \R^2</m>. Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation. 
         </p>
         <assumption xml:id="fiat_formal_sums">
             <title>Formal sums are tuples</title>
@@ -515,7 +515,7 @@
     <title>Quaternion rings</title>
     <statement>
     <p>
-    Let <m>R</m> be a nontrivial commutative ring. We define <m>H(R)</m> to be the set of all formal sums 
+    Let <m>R</m> be a nontrivial commutative ring, and assume <m>1+1\ne 0</m> in <m>R</m>. We define <m>H(R)</m> to be the set of all formal sums 
     <md>
         <mrow>a_1+a_2i+a_3j+a_4k</mrow>
     </md>,
@@ -524,7 +524,7 @@
         <mrow>(a_1+a_2i+a_3j+a_4k)+(b_1+b_2i+b_3j+b_4k) </mrow>
         <mrow> = (a_1+b_1)+(a_2+b_2)i+(a_3+b_3)j+(a_4+b_4)k</mrow>
     </md>.
-    We define multiplication to be the unique associative binary operation <m>\cdot</m> that distributes over the addition operation <m>+</m>, satisfies 
+    We define multiplication to be the unique binary operation <m>\cdot</m> that distributes over the addition operation <m>+</m>, satisfies 
     <md number="yes">
         <mrow>b(a_1+a_2i+a_3j+a_4k) \amp =(a_1+a_2i+a_3j+a_4k)b </mrow>
         <mrow> \amp =ba_1+ba_2i+ba_3j+ba_4k</mrow>
@@ -536,12 +536,14 @@
     and satisfies 
     <md number="yes">
         <mrow> i^2\amp =j^2=k^2=-1 </mrow>
-        <mrow>ij \amp = k, jk=i,  ki=j</mrow>
+        <mrow>ij \amp = -ji= k</mrow>
+        <mrow>jk \amp = -kj= i</mrow>
+        <mrow>ki \amp = -ik= j</mrow>
     </md>.
-    The triple <m>(H(R), +, \cdot)</m> is a ring called the <term>quaternion ring over (or with coefficients in) <m>R</m></term>. 
+    The triple <m>(H(R), +, \cdot)</m> is a ring called the <term>Hamilton quaternion ring over (or with coefficients in) <m>R</m></term>. 
     </p>
     <p>
-        In the special case where <m>R=\R</m>, we denote <m>\HH=H(\R)</m> and call <m>\HH</m> the <term>Hamilton quaternions</term>. 
+        In the special case where <m>R=\R</m>, we denote <m>\HH=H(\R)</m> and call <m>\HH</m> simply the <term>Hamilton quaternions</term>. 
     </p>
     </statement>
     </activity>
@@ -555,9 +557,9 @@
     </md>.
     The <term>quaternion norm</term> is the function <m>N\colon H(R)\rightarrow R</m> defined as 
     <md number="yes">
-        <mrow>N(q)=\overline{q}</mrow>
+        <mrow>N(q)=\overline{q}q</mrow>
     </md>.
-    A straight forward computation shows that if <m>q=a_1+a_2i+a_3j+a_4k</m>, then 
+    A straightforward computation shows that if <m>q=a_1+a_2i+a_3j+a_4k</m>, then 
     <md>
         <mrow>N(q) \amp =a_1^2+a_2^2+a_3^2+a_4^2</mrow>
     </md>.
@@ -585,6 +587,28 @@
                 <m>N(qq')=N(q)N(q')</m> for all <m>q,q'\in H(R)</m>. 
             </p>
         </li>
+        <li>
+            <p>
+                The following statements are equivalent. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>q\in (H(R))^*</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\overline{q}\in (H(R))^*</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>N(q)\in R^*</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </li>
      </ol>
      </p>
      </statement>
@@ -594,6 +618,12 @@
      </p>
      </proof>
      </theorem>
-    
+    <corollary xml:id="cor_">
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </corollary>
     </subsection>
 </section>

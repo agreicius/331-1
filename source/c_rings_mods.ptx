@@ -3,5 +3,7 @@
 <chapter xml:id="c_rings_mods" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Rings and modules</title>
 <xi:include href="s_rings.ptx" />
-<xi:include href="s_grouprings_polys_quats.ptx" />
+<xi:include href="s_subrings_units_divisors.ptx" />
+<xi:include href="s_grouprings_polys.ptx" />
+<!-- <xi:include href="s_quaternions.ptx" /> -->
 </chapter>
