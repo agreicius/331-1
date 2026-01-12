@@ -2689,7 +2689,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Rings",
-  "body": " Rings  In a sense the motivation for the mathematical definition of a ring in mathematics is more immediate than that for a group. From very early on in our mathematical training we are introduced to quite a rich variety of different number systems including the integers , the rational numbers , the real numbers , and the complex numbers . Roughly understood, a number system is a set together with two distinct operations, addition and multiplication, which are each reasonably well-behaved and moreover play nicely together. makes precise exactly what me mean by this.   Definition and examples   Ring   A ring is a triple , where is a nonempty set, and and are binary operations , called ring addition and ring multiplication , respectively, that satisfy the following axioms.    is an abelian group.    Ring multiplication is associative: , for all .    Ring multiplication distributes over ring addition: , we have for all .    There is a multiplicative identity element satisfying for all .   A ring is commutative if its ring multiplication is commutative and noncommutative otherwise.     The Dummit and Foote text does not include (iv) as one of the axioms a ring needs to satisfy. Instead it distinguishes between rings with and without identity . We will not follow suit and will conscientiously point out resulting discrepancies between our exposition and the book’s.    Addition in a ring will always be denoted by , and this notation will never be suppressed. In contrast, we are free to denote the ring multiplication operation in any manner we please, but will more often than not omit the notation in ring expressions.  Additionally we will use the following integer multiple notation: .   As mentioned at the top, our definition of a ring is chosen to generalize the familiar number systems ( , , , ) of our mathematical youth. That these sets are rings (indeed, commutative rings) with respect to their usual arithmetic operations is a result of arithmetic properties you learned long ago. We add to this collection the slightly more exotic modular rings for a positive integer; the ring axiom identities for modular addition and multiplication follow directly from the corresponding identities for the integer operations.   Elementary commutative rings   The sets , , , and are all commutative rings with respect to their usual addition and multiplication operations. Additionally, for any positive integer , the set is a commutative ring with respect to its modular addition and multiplication operations.     Trivial ring   Show that a singleton can be given a unique ring structure. We call such rings trivial .  Show that a ring is trivial if and only if the equality holds in .    Left to the reader.    We need not travel too far to find an examples of noncommutative rings. Matrix arithmetic furnishes us with a familiar enough example.   Matrix rings   Let be a commutative ring. Given a positive integer , we define to be the set of all matrices with coefficients in .  Given matrices , we define their sum and product as follows: . The triple , where and are the matrix addition and multiplication operations defined above, is a ring called the ring of matrices over (or with coefficients in ).  If , then is a noncommutative ring, as an argument very similar to the one in shows.     Matrix rings  We can remove the restriction that be commutative in . In other words, the matrix operations satisfy the ring axioms whether or not is commutative. We will restrict our attention to the case where is commutative, however, as here the algebraic properties of are somewhat simpler. In particular, when is commutative, we can define a determinant function in the usual fashion, and enjoys essentially all of the properties you are familiar with in the case where . See below.   We now dispense with the usual general properties result for our newly defined mathematical friends.   Ring properties   Let be a ring.   The multiplicative identity element of is unique: , there is exactly one element of satisfying the identity .     for all .     for all .     for all .       We prove (1) and (2), leaving (3) and (4) to the reader.   If an element satisfies for all , then in particular, it satisfies . But by definition of the the multiplicative identity, we have . Thus , as desired.    We have . Using the additive inverse , we see that , as desired. A similar argument shows $a0=0$.       Our matrix ring example is in fact an example of a ring construction : a method of building new rings from existing ones. The product ring construction is another such example.   Product rings   Let be a nonempty set, and let be a family of rings indexed by . We define an addition and multiplication operation on as follows: . In other words, addition and multiplication of tuples is defined component-wise.  The triple is ring called the product of the rings . Note that we have already seen that is a group. (See .) The identity element of is the tuple , where for all , is the identity element of .    Technically speaking, the ring of functions construction introduced next is just a special case of the product ring construction: that is, by definition we have . We include it nonetheless, as this construction (in this particular guise) is particular important in analysis contexts.   Ring of functions   Let be a ring, let be a nonempty set, and let be the set of all functions from to . Given functions we define their sum and product as follows: . The triple , where and are the function addition and multiplication operations defined above, is a ring called the ring of functions from to .  The additive identity of is the zero function defined as for all ; the multiplicative identity of is the constant function defined as for all .    Another method of building a new ring from an existing one is to identify a subring .   Subring   A subset of the ring is a subring if it satisfies the following conditions.    is a subgroup of .     .     is closed under multiplication: , for all , we have .   It follows from the ring axioms that a subring of is itself a ring with respect to ring operations of , restricted to .     Quadratic extensions of   Let be a rational number that does not have a rational square root, and let denote one of the two square roots of lying in . We denote by the subset of consisting of all rational linear combinations of and : , . The set is a subring of , and hence a ring in its own right.     Center of ring   The center of a ring , denoted , is the set of elements of that commute with all elements of : , .     Center of a ring   Let be a ring. Show that is a subring of .    First we show that is a subring of . From we know that . Next, assume . Given any , we have , and thus .  Next, we have by . Finally, we show that is closed under multiplication. Assume . Given , we have , showing , as desired.      Units, zero divisors,nilpotents, idempotents  We will now discuss various types of special ring elements, starting with units.   Units and multiplicative inverses   Let be an element of the nontrivial ring . A multiplicative inverse of is an element satisfying . We denote in this case. The element is a unit (or is invertible ) if it has a multiplicative inverse. We denote by the set of all units of : , . It follows directly from the ring axioms that is a group with respect to the ring multiplication operation.    As we have intimated on multiple occasions, the ring , for an arbitrary commutative ring, behaves very much like the ring . Let's make official some of these similarities, postponing a proof until later in the course. At some point we will be able to use our ring theory to prove a universal identity result allowing us to transfer certain familiar properties of familiar rings defined over or (meaning to be revealed later) and import these to analogous rings defined over an arbitrary commutative ring .   Matrix ring goodies   Let be a nontrivial commutative ring and let be a positive integer.   We can define a determinant function that can be computed by the usual expansion formula along any row or column of a matrix.     for all .    For all there is a matrix , called the adjoint matrix of , satisfying .    For all , is invertible if and only if .       Postponed.     General linear group   Let be a nontrivial commutative ring, and let be a positive integer. We denote by the group of units of : , .     Units in product rings      Let be a product ring . Prove: .     for some nonempty set . Prove: .       Left to the reader.     Division rings and fields   A nontrivial ring is a division ring if every nonzero element of is a unit: , . A field is a commutative division ring.     Division rings   Determine whether the given ring is a division ring, and whether it is a field.                        for a positive integer. The answer depends on .     , where does not have a square root in .     , for a commutative ring and .       We mainly leave this to the reader, restricting our comments to the rings , , and .  We showed previously that , from whence it easily follows that is a field if and only if is a prime integer.  We claim is a field. Assume is a nonzero element of . This is true if and only if or . (If and or is nonzero, then we could write or ). Contradiction.) Let . We have , and this is nonzero, since otherwise we would have , contradicting the fact that is not a square in . Thus has inverse .  Lastly, from , we know that is invertible if and only if . Assuming , it is easy to construct a nonzero matrix with . Thus is not a division ring.     Having shown that is a field for a prime integer, we will write from now on.    Zero divisors and integral domains   Let be a ring. A nonzero element is a zero divisor if there exists a nonzero element satisfying or .  A ring is an integral domain if it is (i) commutative, and (ii) contains no zero divisors.     Zero divisors   For each of the rings in , determine all zero divisors and determine whether the ring is an integral domain.    We leave most of this to the reader.  One interesting observation is that has zero divisors if and only if is not prime. It follows that is a field if and only if is an integral domain! This interesting fact is generalized in below.  We are tempted to say that is a zero divisor if and only if is either zero or a zero divisor of . Indeed, this is the case! However, even with at our disposal, one of the implications involved is somewhat involved. The easy direction is the forward one: if is a a zero divisor, then there is a nonzero matrix such that ; multiplying on the left by the adjoint matrix , we see that . Since , it follows that is either zero or a zero divisor in .  Although you might guess that this same argument could be employed to prove the reverse implication, we are foiled by the fact that can be the zero matrix even when is nonzero! (This is true even in the familiar setting .) The reader is invited to check out this StackExchange post, which provides an answer as well as some useful references.     Cancellation of non-zero divisors   Assume is a nonzero element of the ring and is not a zero divisor. For all if or , then . Using logical shorthand: .     Finite integral domains   Let be a finite commutative ring. The following statements are equivalent.    is an integral domain.     is a field.            Nilpotents and idempotents   An element of the ring is nilpotent if for some positive integer ; it is idempotent if .     "
+  "body": " Rings  In a sense the motivation for the mathematical definition of a ring in mathematics is more immediate than that for a group. From very early on in our mathematical training we are introduced to quite a rich variety of different number systems including the integers , the rational numbers , the real numbers , and the complex numbers . Roughly understood, a number system is a set together with two distinct operations, addition and multiplication, which are each reasonably well-behaved and moreover play nicely together. makes precise exactly what me mean by this.   Ring   A ring is a triple , where is a nonempty set, and and are binary operations , called ring addition and ring multiplication , respectively, that satisfy the following axioms.    is an abelian group.    Ring multiplication is associative: , for all .    Ring multiplication distributes over ring addition: , we have for all .    There is a multiplicative identity element satisfying for all .   A ring is commutative if its ring multiplication is commutative and noncommutative otherwise.     The Dummit and Foote text does not include (iv) as one of the axioms a ring needs to satisfy. Instead it distinguishes between rings with and without identity . We will not follow suit and will conscientiously point out resulting discrepancies between our exposition and the book’s.    Addition in a ring will always be denoted by , and this notation will never be suppressed. In contrast, we are free to denote the ring multiplication operation in any manner we please, but will more often than not omit the notation in ring expressions.  Additionally we will use the following integer multiple notation: .   As mentioned at the top, our definition of a ring is chosen to generalize the familiar number systems ( , , , ) of our mathematical youth. That these sets are rings (indeed, commutative rings) with respect to their usual arithmetic operations is a result of arithmetic properties you learned long ago. We add to this collection the slightly more exotic modular rings for a positive integer; the ring axiom identities for modular addition and multiplication follow directly from the corresponding identities for the integer operations.   Elementary commutative rings   The sets , , , and are all commutative rings with respect to their usual addition and multiplication operations. Additionally, for any positive integer , the set is a commutative ring with respect to its modular addition and multiplication operations.     Trivial ring   Show that a singleton can be given a unique ring structure. We call such rings trivial .  Show that a ring is trivial if and only if the equality holds in .    Left to the reader.    We need not travel too far to find an examples of noncommutative rings. Matrix arithmetic furnishes us with a familiar enough example.   Matrix rings   Let be a commutative ring. Given a positive integer , we define to be the set of all matrices with coefficients in .  Given matrices , we define their sum and product as follows: . The triple , where and are the matrix addition and multiplication operations defined above, is a ring called the ring of matrices over (or with coefficients in ).  If , then is a noncommutative ring, as an argument very similar to the one in shows.     Matrix rings  We can remove the restriction that be commutative in . In other words, the matrix operations satisfy the ring axioms whether or not is commutative. We will restrict our attention to the case where is commutative, however, as here the algebraic properties of are somewhat simpler. In particular, when is commutative, we can define a determinant function in the usual fashion, and enjoys essentially all of the properties you are familiar with in the case where . See below.   We now dispense with the usual general properties result for our newly defined mathematical friends.   Ring properties   Let be a ring.   The multiplicative identity element of is unique: , there is exactly one element of satisfying the identity .     for all .     for all .     for all .       We prove (1) and (2), leaving (3) and (4) to the reader.   If an element satisfies for all , then in particular, it satisfies . But by definition of the the multiplicative identity, we have . Thus , as desired.    We have . Using the additive inverse , we see that , as desired. A similar argument shows $a0=0$.       Our matrix ring example is in fact an example of a ring construction : a method of building new rings from existing ones. The product ring construction is another such example.   Product rings   Let be a nonempty set, and let be a family of rings indexed by . We define an addition and multiplication operation on as follows: . In other words, addition and multiplication of tuples is defined component-wise.  The triple is ring called the product of the rings . Note that we have already seen that is a group. (See .) The identity element of is the tuple , where for all , is the identity element of .    Technically speaking, the ring of functions construction introduced next is just a special case of the product ring construction: that is, by definition we have . We include it nonetheless, as this construction (in this particular guise) is particular important in analysis contexts.   Ring of functions   Let be a ring, let be a nonempty set, and let be the set of all functions from to . Given functions we define their sum and product as follows: . The triple , where and are the function addition and multiplication operations defined above, is a ring called the ring of functions from to .  The additive identity of is the zero function defined as for all ; the multiplicative identity of is the constant function defined as for all .    Another method of building a new ring from an existing one is to identify a subring .   Subring   A subset of the ring is a subring if it satisfies the following conditions.    is a subgroup of .     .     is closed under multiplication: , for all , we have .   It follows from the ring axioms that a subring of is itself a ring with respect to ring operations of , restricted to .     Quadratic extensions of   Let be a rational number that does not have a rational square root, and let denote one of the two square roots of lying in . We denote by the subset of consisting of all rational linear combinations of and : , . The set is a subring of , and hence a ring in its own right.     Center of ring   The center of a ring , denoted , is the set of elements of that commute with all elements of : , .     Center of a ring   Let be a ring. Show that is a subring of .    First we show that is a subring of . From we know that . Next, assume . Given any , we have , and thus .  Next, we have by . Finally, we show that is closed under multiplication. Assume . Given , we have , showing , as desired.    "
 },
 {
   "id": "d_ring",
@@ -2701,18 +2701,18 @@ var ptx_lunr_docs = [
   "body": " Ring   A ring is a triple , where is a nonempty set, and and are binary operations , called ring addition and ring multiplication , respectively, that satisfy the following axioms.    is an abelian group.    Ring multiplication is associative: , for all .    Ring multiplication distributes over ring addition: , we have for all .    There is a multiplicative identity element satisfying for all .   A ring is commutative if its ring multiplication is commutative and noncommutative otherwise.   "
 },
 {
-  "id": "ss_ring_def_egs-3",
+  "id": "s_rings-4",
   "level": "2",
-  "url": "s_rings.html#ss_ring_def_egs-3",
+  "url": "s_rings.html#s_rings-4",
   "type": "Warning",
   "number": "2.2",
   "title": "",
   "body": " The Dummit and Foote text does not include (iv) as one of the axioms a ring needs to satisfy. Instead it distinguishes between rings with and without identity . We will not follow suit and will conscientiously point out resulting discrepancies between our exposition and the book’s.  "
 },
 {
-  "id": "ss_ring_def_egs-4",
+  "id": "s_rings-5",
   "level": "2",
-  "url": "s_rings.html#ss_ring_def_egs-4",
+  "url": "s_rings.html#s_rings-5",
   "type": "Notation",
   "number": "2.3",
   "title": "",
@@ -2746,9 +2746,9 @@ var ptx_lunr_docs = [
   "body": " Matrix rings   Let be a commutative ring. Given a positive integer , we define to be the set of all matrices with coefficients in .  Given matrices , we define their sum and product as follows: . The triple , where and are the matrix addition and multiplication operations defined above, is a ring called the ring of matrices over (or with coefficients in ).  If , then is a noncommutative ring, as an argument very similar to the one in shows.   "
 },
 {
-  "id": "ss_ring_def_egs-10",
+  "id": "s_rings-11",
   "level": "2",
-  "url": "s_rings.html#ss_ring_def_egs-10",
+  "url": "s_rings.html#s_rings-11",
   "type": "Remark",
   "number": "2.5",
   "title": "Matrix rings.",
@@ -2818,9 +2818,18 @@ var ptx_lunr_docs = [
   "body": " Center of a ring   Let be a ring. Show that is a subring of .    First we show that is a subring of . From we know that . Next, assume . Given any , we have , and thus .  Next, we have by . Finally, we show that is closed under multiplication. Assume . Given , we have , showing , as desired.   "
 },
 {
+  "id": "s_subrings_units_divisors",
+  "level": "1",
+  "url": "s_subrings_units_divisors.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Subrings, units, zero divisors",
+  "body": " Subrings, units, zero divisors  We will now discuss various types of special ring elements, starting with units.   Units and multiplicative inverses   Let be an element of the nontrivial ring . A multiplicative inverse of is an element satisfying . We denote in this case. The element is a unit (or is invertible ) if it has a multiplicative inverse. We denote by the set of all units of : , . It follows directly from the ring axioms that is a group with respect to the ring multiplication operation.    As we have intimated on multiple occasions, the ring , for an arbitrary commutative ring, behaves very much like the ring . Let's make official some of these similarities, postponing a proof until later in the course. At some point we will be able to use our ring theory to prove a universal identity result allowing us to transfer certain familiar properties of familiar rings defined over or (meaning to be revealed later) and import these to analogous rings defined over an arbitrary commutative ring .   Matrix ring goodies   Let be a nontrivial commutative ring and let be a positive integer.   We can define a determinant function that can be computed by the usual expansion formula along any row or column of a matrix.     for all .    For all there is a matrix , called the adjoint matrix of , satisfying .    For all , is invertible if and only if .       Postponed.     General linear group   Let be a nontrivial commutative ring, and let be a positive integer. We denote by the group of units of : , .     Units in product rings      Let be a product ring . Prove: .     for some nonempty set . Prove: .       Left to the reader.     Division rings and fields   A nontrivial ring is a division ring if every nonzero element of is a unit: , . A field is a commutative division ring.     Division rings   Determine whether the given ring is a division ring, and whether it is a field.                        for a positive integer. The answer depends on .     , where does not have a square root in .     , for a commutative ring and .       We mainly leave this to the reader, restricting our comments to the rings , , and .  We showed previously that , from whence it easily follows that is a field if and only if is a prime integer.  We claim is a field. Assume is a nonzero element of . This is true if and only if or . (If and or is nonzero, then we could write or ). Contradiction.) Let . We have , and this is nonzero, since otherwise we would have , contradicting the fact that is not a square in . Thus has inverse .  Lastly, from , we know that is invertible if and only if . Assuming , it is easy to construct a nonzero matrix with . Thus is not a division ring.     Having shown that is a field for a prime integer, we will write from now on.    Zero divisors and integral domains   Let be a ring. A nonzero element is a zero divisor if there exists a nonzero element satisfying or .  A ring is an integral domain if it is (i) commutative, and (ii) contains no zero divisors.     Zero divisors   For each of the rings in , determine all zero divisors and determine whether the ring is an integral domain.    We leave most of this to the reader.  One interesting observation is that has zero divisors if and only if is not prime. It follows that is a field if and only if is an integral domain! This interesting fact is generalized in below.  We are tempted to say that is a zero divisor if and only if is either zero or a zero divisor of . Indeed, this is the case! However, even with at our disposal, one of the implications involved is somewhat involved. The easy direction is the forward one: if is a a zero divisor, then there is a nonzero matrix such that ; multiplying on the left by the adjoint matrix , we see that . Since , it follows that is either zero or a zero divisor in .  Although you might guess that this same argument could be employed to prove the reverse implication, we are foiled by the fact that can be the zero matrix even when is nonzero! (This is true even in the familiar setting .) The reader is invited to check out this StackExchange post, which provides an answer as well as some useful references.     Cancellation of non-zero divisors   Assume is a nonzero element of the ring and is not a zero divisor. For all if or , then . Using logical shorthand: .     Finite integral domains   Let be a finite commutative ring. The following statements are equivalent.    is an integral domain.     is a field.            Nilpotents and idempotents   An element of the ring is nilpotent if for some positive integer ; it is idempotent if .    "
+},
+{
   "id": "d_units",
   "level": "2",
-  "url": "s_rings.html#d_units",
+  "url": "s_subrings_units_divisors.html#d_units",
   "type": "Definition",
   "number": "2.10",
   "title": "Units and multiplicative inverses.",
@@ -2829,7 +2838,7 @@ var ptx_lunr_docs = [
 {
   "id": "th_matrix_rings",
   "level": "2",
-  "url": "s_rings.html#th_matrix_rings",
+  "url": "s_subrings_units_divisors.html#th_matrix_rings",
   "type": "Theorem",
   "number": "2.11",
   "title": "Matrix ring goodies.",
@@ -2838,7 +2847,7 @@ var ptx_lunr_docs = [
 {
   "id": "spec_gen_lin_group_general",
   "level": "2",
-  "url": "s_rings.html#spec_gen_lin_group_general",
+  "url": "s_subrings_units_divisors.html#spec_gen_lin_group_general",
   "type": "Specimen",
   "number": "22",
   "title": "General linear group.",
@@ -2847,7 +2856,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_units_product",
   "level": "2",
-  "url": "s_rings.html#eg_units_product",
+  "url": "s_subrings_units_divisors.html#eg_units_product",
   "type": "Example",
   "number": "2.12",
   "title": "Units in product rings.",
@@ -2856,7 +2865,7 @@ var ptx_lunr_docs = [
 {
   "id": "d_division_rings_fields",
   "level": "2",
-  "url": "s_rings.html#d_division_rings_fields",
+  "url": "s_subrings_units_divisors.html#d_division_rings_fields",
   "type": "Definition",
   "number": "2.13",
   "title": "Division rings and fields.",
@@ -2865,16 +2874,16 @@ var ptx_lunr_docs = [
 {
   "id": "eg_division_rings",
   "level": "2",
-  "url": "s_rings.html#eg_division_rings",
+  "url": "s_subrings_units_divisors.html#eg_division_rings",
   "type": "Example",
   "number": "2.14",
   "title": "Division rings.",
   "body": " Division rings   Determine whether the given ring is a division ring, and whether it is a field.                        for a positive integer. The answer depends on .     , where does not have a square root in .     , for a commutative ring and .       We mainly leave this to the reader, restricting our comments to the rings , , and .  We showed previously that , from whence it easily follows that is a field if and only if is a prime integer.  We claim is a field. Assume is a nonzero element of . This is true if and only if or . (If and or is nonzero, then we could write or ). Contradiction.) Let . We have , and this is nonzero, since otherwise we would have , contradicting the fact that is not a square in . Thus has inverse .  Lastly, from , we know that is invertible if and only if . Assuming , it is easy to construct a nonzero matrix with . Thus is not a division ring.   "
 },
 {
-  "id": "ss_rings_units_nilpotents-10",
+  "id": "s_subrings_units_divisors-10",
   "level": "2",
-  "url": "s_rings.html#ss_rings_units_nilpotents-10",
+  "url": "s_subrings_units_divisors.html#s_subrings_units_divisors-10",
   "type": "Notation",
   "number": "2.15",
   "title": "",
@@ -2883,7 +2892,7 @@ var ptx_lunr_docs = [
 {
   "id": "d_zero_divisors",
   "level": "2",
-  "url": "s_rings.html#d_zero_divisors",
+  "url": "s_subrings_units_divisors.html#d_zero_divisors",
   "type": "Definition",
   "number": "2.16",
   "title": "Zero divisors and integral domains.",
@@ -2892,7 +2901,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_zero_divisors",
   "level": "2",
-  "url": "s_rings.html#eg_zero_divisors",
+  "url": "s_subrings_units_divisors.html#eg_zero_divisors",
   "type": "Example",
   "number": "2.17",
   "title": "Zero divisors.",
@@ -2901,7 +2910,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop_zero_divisors_cancellation",
   "level": "2",
-  "url": "s_rings.html#prop_zero_divisors_cancellation",
+  "url": "s_subrings_units_divisors.html#prop_zero_divisors_cancellation",
   "type": "Proposition",
   "number": "2.18",
   "title": "Cancellation of non-zero divisors.",
@@ -2910,7 +2919,7 @@ var ptx_lunr_docs = [
 {
   "id": "th_finite_rings_fields",
   "level": "2",
-  "url": "s_rings.html#th_finite_rings_fields",
+  "url": "s_subrings_units_divisors.html#th_finite_rings_fields",
   "type": "Theorem",
   "number": "2.19",
   "title": "Finite integral domains.",
@@ -2919,25 +2928,25 @@ var ptx_lunr_docs = [
 {
   "id": "d_nilpotents_idempotents",
   "level": "2",
-  "url": "s_rings.html#d_nilpotents_idempotents",
+  "url": "s_subrings_units_divisors.html#d_nilpotents_idempotents",
   "type": "Definition",
   "number": "2.20",
   "title": "Nilpotents and idempotents.",
   "body": " Nilpotents and idempotents   An element of the ring is nilpotent if for some positive integer ; it is idempotent if .   "
 },
 {
-  "id": "s_grouprings_polys_quats",
+  "id": "s_grouprings_polys",
   "level": "1",
-  "url": "s_grouprings_polys_quats.html",
+  "url": "s_grouprings_polys.html",
   "type": "Section",
-  "number": "2.2",
-  "title": "Group rings, polynomials, quaternions",
-  "body": " Group rings, polynomials, quaternions   In this section we introduce three ring constructions: group rings, polynomial (and power series) rings, and quaternion rings. Each of these uses as an underling set a collection of formal sums with coefficients in a base ring . This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum where , when in essence a complex number is just a pair . Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation.   Formal sums are tuples   Let be a ring, and let be a nonempty set. A formal sum of the form is just alternative notation for the tuple . As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is, we have . As a form of shortening, when expanding out a formal sum we will often drop terms where . Similarly, we sometimes drop the in an expression like , writing just instead.      Group rings   Group rings   Let be a nontrivial commutative ring, and let be a finite group. We define to be the set of all formal sums , where for all , and we define binary operations and as follows: . The triple is a ring called the group ring of with coefficients in . The additive and multiplicative identities of are given as .     Group rings     The subset is easily seen to be a subring of . Indeed, using the definition of the group ring operations, we see that . Thus we can think of the subring as a copy of living as a subset of . (Later we will be able to say that this subring is isomorphic to .) By slight abuse of notation, we will identify with this subring of , and sometimes drop the from the notation .    From the group ring operations definition, it follows that . Identifying with , we see that .    We can also think of the group as sitting inside , using the identification . We call such elements of  group elements . With this identification in place, we that the ring multiplication on extends the group operation of . That is, given , identifying these as the ring elements and and taking their product, we see that . As a result, it is easy to see that a group element is invertible with inverse the group element . It follows that we can think of as a subgroup of the group of units of (with respect to our identification): , .    Combining the previous observations, we can now give a decent motivation for the multiplication operation on . Namely, it is the unique binary operation on satisfying the following properties:   it distributes over the given addition operation on ;    it extends the group operation in the sense that ;    we have for all with respect to this multiplication.   In this sense our multiplication operation is the unique way of extending the group operation of to a ring operation on in such a way that our copy of lies in the center of .       Group ring of   Let , and consider the group ring .   Let and . Compute and .    Show that is a unit in        When computing an explicit product in a group ring, instead of using the formal definition in , it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms.   We have . Observe that : no great surprise in light of .    First observe that is a unit in with inverse . (See .) Since , it suffices to show that is a unit of . (If and are units, then so is .) Playing around with some expressions, we find that . Thus is a unit. We conclude that is a unit, with inverse .        Group rings over a field  Let be a field, and let be a group of cardinality . In this case the group ring has the additional structure of a -vector space, where vector addition is just the ring addition, and scalar multiplication by an element is defined as ring multiplication by the element . In fact, identifying elements of as tuples via the correspondence , we see that as a vector space, is literally equal to the vector space of -tuples with coefficients in with its usual vector operations: . As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields.    Group ring properties   Let be a nontrivial commutative ring, and let be a finite group.   Prove that is commutative if and only if is abelian.    Consider the element . Compute , where is an element of .    Let be a nontrivial element. Show that is a zero divisor.    When is a group ring a division ring?       Let be the distinct elements of . To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and for the ring operation.   Assume that is commutative. For all , we have . Thus is abelian.  Now assume is abelian. Given , expanding out using distributivity and commutativity of ring coefficients, we have . Thus is commutative.    We have , where the penultimate line follows since as runs through all elements of , so too does .  Observe that if is nontrivial, the taking , the equality implies that is noninvertible: if it were, we could cancel it to conclude , a contradiction.    We have . Since and are both nonzero elements of , we conclude that is a zero divisor (as is ).    Both (2) and (3) imply that is a division ring if and only if is trivial and is a field.         Polynomials and power series  Whereas normally power series are introduced as a sort of generalization of polynomials, we will take the approach of defining the notion of a ring of power series, and identify a subring as the ring of polynomials.   Power series ring   Let be a nontrivial commutative ring. We define the set to be the set of all formal sums of the form , where for all , and we define binary operations and as follows: . The triple is a commutative ring called the power series ring over (or with coefficients in) in the unknown (or indeterminate) . The additive and multiplicative identities of are given as . Given a power series , we call its -th term , and its -th coefficient .  We will use function-like notation to name power series. In more detail, we will refer to power series using function letters like and , and will write when explicitly introducing names of coefficients.     Power series equality  When are two power series and equal? Identifying these formal sums as tuples , , following , we see that .   We now identify the ring of polynomials over as the subring of consisting of all power series whose coefficients are eventually equal to zero.   Polynomial rings   Let be a nontrivial commutative ring. Define the polynomial ring over in the indeterminate to be the subset of all power series whose coefficients are eventually equal to zero: i.e., . It is easy to see that is a subring of , and thus a ring in its own right. Restricted to , the power series multiplication rule becomes the familiar polynomial multiplication rule: . As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: , , or .  Given a nonzero polynomial , we define its degree , , to be the largest satisfying . If , we define .  If is a polynomial of degree , we call the leading coefficient of . A polynomial with leading coefficient equal to is called monic .     Polynomial and power series rings  When working with a power series ring , we will identify the ring with power series of the form . Since this identification preserves the ring operations of , we end up with a chain of subring inclusions .   The degree operation on turns out to be very useful, thanks in part to the properties articulated in the following proposition.    Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.        Polynomial degree   Find polynomials satisfying .    Let and . We have and .    As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property.    Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.     Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.      Quaternion rings   Quaternion rings   Let be a nontrivial commutative ring. We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique associative binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the quaternion ring over (or with coefficients in) .  In the special case where , we denote and call the Hamilton quaternions .     Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straight forward computation shows that if , then .     Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .       This will be given as a homework exercise.     "
+  "number": "2.3",
+  "title": "Group rings, polynomials, power series",
+  "body": " Group rings, polynomials, power series   In this section and the next we introduce three ring constructions: group rings, polynomial (and power series) rings, and Hamilton quaternion rings. Each of these uses as an underlying set a collection of formal sums with coefficients in a base ring . This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum where , when in essence a complex number is just a pair . Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation.   Formal sums are tuples   Let be a ring, and let be a nonempty set. A formal sum of the form is just alternative notation for the tuple . As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is, we have . As a form of shortening, when expanding out a formal sum we will often drop terms where . Similarly, we sometimes drop the in an expression like , writing just instead.      Group rings   Group rings   Let be a nontrivial commutative ring, and let be a finite group. We define to be the set of all formal sums , where for all , and we define binary operations and as follows: . The triple is a ring called the group ring of with coefficients in . The additive and multiplicative identities of are given as .     Group rings     The subset is easily seen to be a subring of . Indeed, using the definition of the group ring operations, we see that . Thus we can think of the subring as a copy of living as a subset of . (Later we will be able to say that this subring is isomorphic to .) By slight abuse of notation, we will identify with this subring of , and sometimes drop the from the notation .    From the group ring operations definition, it follows that . Identifying with , we see that .    We can also think of the group as sitting inside , using the identification . We call such elements of  group elements . With this identification in place, we that the ring multiplication on extends the group operation of . That is, given , identifying these as the ring elements and and taking their product, we see that . As a result, it is easy to see that a group element is invertible with inverse the group element . It follows that we can think of as a subgroup of the group of units of (with respect to our identification): , .    Combining the previous observations, we can now give a decent motivation for the multiplication operation on . Namely, it is the unique binary operation on satisfying the following properties:   it distributes over the given addition operation on ;    it extends the group operation in the sense that ;    we have for all with respect to this multiplication.   In this sense our multiplication operation is the unique way of extending the group operation of to a ring operation on in such a way that our copy of lies in the center of .       Group ring of   Let , and consider the group ring .   Let and . Compute and .    Show that is a unit in        When computing an explicit product in a group ring, instead of using the formal definition in , it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms.   We have . Observe that : no great surprise in light of .    First observe that is a unit in with inverse . (See .) Since , it suffices to show that is a unit of . (If and are units, then so is .) Playing around with some expressions, we find that . Thus is a unit. We conclude that is a unit, with inverse .        Group rings over a field  Let be a field, and let be a group of cardinality . In this case the group ring has the additional structure of a -vector space, where vector addition is just the ring addition, and scalar multiplication by an element is defined as ring multiplication by the element . In fact, identifying elements of as tuples via the correspondence , we see that as a vector space, is literally equal to the vector space of -tuples with coefficients in with its usual vector operations: . As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields.    Group ring properties   Let be a nontrivial commutative ring, and let be a finite group.   Prove that is commutative if and only if is abelian.    Consider the element . Compute , where is an element of .    Let be a nontrivial element. Show that is a zero divisor.    When is a group ring a division ring?       Let be the distinct elements of . To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and for the ring operation.   Assume that is commutative. For all , we have . Thus is abelian.  Now assume is abelian. Given , expanding out using distributivity and commutativity of ring coefficients, we have . Thus is commutative.    We have , where the penultimate line follows since as runs through all elements of , so too does .  Observe that if is nontrivial, the taking , the equality implies that is noninvertible: if it were, we could cancel it to conclude , a contradiction.    We have . Since and are both nonzero elements of , we conclude that is a zero divisor (as is ).    Both (2) and (3) imply that is a division ring if and only if is trivial and is a field.         Polynomials and power series  Whereas normally power series are introduced as a sort of generalization of polynomials, we will take the approach of defining the notion of a ring of power series, and identify a subring as the ring of polynomials.   Power series ring   Let be a nontrivial commutative ring. We define the set to be the set of all formal sums of the form , where for all , and we define binary operations and as follows: . The triple is a commutative ring called the power series ring over (or with coefficients in) in the unknown (or indeterminate) . The additive and multiplicative identities of are given as . Given a power series , we call its -th term , and its -th coefficient .  We will use function-like notation to name power series. In more detail, we will refer to power series using function letters like and , and will write when explicitly introducing names of coefficients.     Power series equality  When are two power series and equal? Identifying these formal sums as tuples , , following , we see that .   We now identify the ring of polynomials over as the subring of consisting of all power series whose coefficients are eventually equal to zero.   Polynomial rings   Let be a nontrivial commutative ring. Define the polynomial ring over in the indeterminate to be the subset of all power series whose coefficients are eventually equal to zero: i.e., . It is easy to see that is a subring of , and thus a ring in its own right. Restricted to , the power series multiplication rule becomes the familiar polynomial multiplication rule: . As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: , , or .  Given a nonzero polynomial , we define its degree , , to be the largest satisfying . If , we define .  If is a polynomial of degree , we call the leading coefficient of . A polynomial with leading coefficient equal to is called monic .     Polynomial and power series rings  When working with a power series ring , we will identify the ring with power series of the form . Since this identification preserves the ring operations of , we end up with a chain of subring inclusions .   The degree operation on turns out to be very useful, thanks in part to the properties articulated in the following proposition.    Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.        Polynomial degree   Find polynomials satisfying .    Let and . We have and .    As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property.    Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.     Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.     "
 },
 {
   "id": "fiat_formal_sums",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#fiat_formal_sums",
+  "url": "s_grouprings_polys.html#fiat_formal_sums",
   "type": "Fiat",
   "number": "2.21",
   "title": "Formal sums are tuples.",
@@ -2946,7 +2955,7 @@ var ptx_lunr_docs = [
 {
   "id": "spec_group_rings",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#spec_group_rings",
+  "url": "s_grouprings_polys.html#spec_group_rings",
   "type": "Specimen",
   "number": "23",
   "title": "Group rings.",
@@ -2955,7 +2964,7 @@ var ptx_lunr_docs = [
 {
   "id": "rem_group_rings",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#rem_group_rings",
+  "url": "s_grouprings_polys.html#rem_group_rings",
   "type": "Remark",
   "number": "2.22",
   "title": "Group rings.",
@@ -2964,7 +2973,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_group_ring_D3",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#eg_group_ring_D3",
+  "url": "s_grouprings_polys.html#eg_group_ring_D3",
   "type": "Example",
   "number": "2.23",
   "title": "Group ring of <span class=\"process-math\">\\(D_3\\)<\/span>.",
@@ -2973,7 +2982,7 @@ var ptx_lunr_docs = [
 {
   "id": "rem_group_ring_field",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#rem_group_ring_field",
+  "url": "s_grouprings_polys.html#rem_group_ring_field",
   "type": "Remark",
   "number": "2.24",
   "title": "Group rings over a field.",
@@ -2982,7 +2991,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_group_rings",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#eg_group_rings",
+  "url": "s_grouprings_polys.html#eg_group_rings",
   "type": "Example",
   "number": "2.25",
   "title": "Group ring properties.",
@@ -2991,7 +3000,7 @@ var ptx_lunr_docs = [
 {
   "id": "spec_power_series",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#spec_power_series",
+  "url": "s_grouprings_polys.html#spec_power_series",
   "type": "Specimen",
   "number": "24",
   "title": "Power series ring.",
@@ -3000,7 +3009,7 @@ var ptx_lunr_docs = [
 {
   "id": "ss_poly_powerseries-4",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#ss_poly_powerseries-4",
+  "url": "s_grouprings_polys.html#ss_poly_powerseries-4",
   "type": "Remark",
   "number": "2.26",
   "title": "Power series equality.",
@@ -3009,7 +3018,7 @@ var ptx_lunr_docs = [
 {
   "id": "spec_poly_ring",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#spec_poly_ring",
+  "url": "s_grouprings_polys.html#spec_poly_ring",
   "type": "Specimen",
   "number": "25",
   "title": "Polynomial rings.",
@@ -3018,7 +3027,7 @@ var ptx_lunr_docs = [
 {
   "id": "ss_poly_powerseries-7",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#ss_poly_powerseries-7",
+  "url": "s_grouprings_polys.html#ss_poly_powerseries-7",
   "type": "Remark",
   "number": "2.27",
   "title": "Polynomial and power series rings.",
@@ -3027,7 +3036,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop_deg_poly",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#prop_deg_poly",
+  "url": "s_grouprings_polys.html#prop_deg_poly",
   "type": "Proposition",
   "number": "2.28",
   "title": "",
@@ -3036,7 +3045,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_poly_deg",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#eg_poly_deg",
+  "url": "s_grouprings_polys.html#eg_poly_deg",
   "type": "Example",
   "number": "2.29",
   "title": "Polynomial degree.",
@@ -3045,7 +3054,7 @@ var ptx_lunr_docs = [
 {
   "id": "cor_poly_int_domain",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#cor_poly_int_domain",
+  "url": "s_grouprings_polys.html#cor_poly_int_domain",
   "type": "Corollary",
   "number": "2.30",
   "title": "",
@@ -3054,38 +3063,101 @@ var ptx_lunr_docs = [
 {
   "id": "eg_poly_power",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#eg_poly_power",
+  "url": "s_grouprings_polys.html#eg_poly_power",
   "type": "Example",
   "number": "2.31",
   "title": "Units of polynomial and power series rings.",
   "body": " Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.   "
 },
 {
+  "id": "s_quaternions",
+  "level": "1",
+  "url": "s_quaternions.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Hamilton quaternion rings",
+  "body": " Hamilton quaternion rings   Quaternion rings   Let be a nontrivial commutative ring, and assume in . We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the Hamilton quaternion ring over (or with coefficients in) .  In the special case where , we denote and call simply the Hamilton quaternions .     Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straightforward computation shows that if , then .     Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .    The following statements are equivalent.    .     .     .          This will be given as a homework exercise.      The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.     Division rings over  We have met our first noncommutative division ring in the form of . More than just a ring, is what we call an -algebra , which we can understand as a ring containing a copy of lying in its center. Any -algebra is in particular a vector space over : we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication , where and .  Let's call a division ring that is also an -algebra a division algebra over . Besides , note that and are also division algebras over . Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over . This is a famous result due to Frobenius: if is a finite-dimensional division algebra over , then is isomorphic to , , or ! (Of course, isomorphism is yet to be definied, but you can imagine what this will mean for rings.)    Finite division rings  While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting finite division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.   "
+},
+{
   "id": "spec_quat_rings",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#spec_quat_rings",
+  "url": "s_quaternions.html#spec_quat_rings",
   "type": "Specimen",
   "number": "26",
   "title": "Quaternion rings.",
-  "body": " Quaternion rings   Let be a nontrivial commutative ring. We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique associative binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the quaternion ring over (or with coefficients in) .  In the special case where , we denote and call the Hamilton quaternions .   "
+  "body": " Quaternion rings   Let be a nontrivial commutative ring, and assume in . We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the Hamilton quaternion ring over (or with coefficients in) .  In the special case where , we denote and call simply the Hamilton quaternions .   "
 },
 {
   "id": "d_quat_norm",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#d_quat_norm",
+  "url": "s_quaternions.html#d_quat_norm",
   "type": "Definition",
   "number": "2.32",
   "title": "Quaternion conjugation and norm.",
-  "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straight forward computation shows that if , then .   "
+  "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straightforward computation shows that if , then .   "
 },
 {
   "id": "th_quat_norm",
   "level": "2",
-  "url": "s_grouprings_polys_quats.html#th_quat_norm",
+  "url": "s_quaternions.html#th_quat_norm",
   "type": "Theorem",
   "number": "2.33",
   "title": "Quaternion conjugation and norm.",
-  "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .       This will be given as a homework exercise.   "
+  "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .    The following statements are equivalent.    .     .     .          This will be given as a homework exercise.   "
+},
+{
+  "id": "cor_",
+  "level": "2",
+  "url": "s_quaternions.html#cor_",
+  "type": "Corollary",
+  "number": "2.34",
+  "title": "",
+  "body": "  The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.   "
+},
+{
+  "id": "s_quaternions-6",
+  "level": "2",
+  "url": "s_quaternions.html#s_quaternions-6",
+  "type": "Remark",
+  "number": "2.35",
+  "title": "Division rings over <span class=\"process-math\">\\(\\R\\)<\/span>.",
+  "body": " Division rings over  We have met our first noncommutative division ring in the form of . More than just a ring, is what we call an -algebra , which we can understand as a ring containing a copy of lying in its center. Any -algebra is in particular a vector space over : we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication , where and .  Let's call a division ring that is also an -algebra a division algebra over . Besides , note that and are also division algebras over . Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over . This is a famous result due to Frobenius: if is a finite-dimensional division algebra over , then is isomorphic to , , or ! (Of course, isomorphism is yet to be definied, but you can imagine what this will mean for rings.)  "
+},
+{
+  "id": "s_quaternions-7",
+  "level": "2",
+  "url": "s_quaternions.html#s_quaternions-7",
+  "type": "Remark",
+  "number": "2.36",
+  "title": "Finite division rings.",
+  "body": " Finite division rings  While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting finite division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.  "
+},
+{
+  "id": "s_ring_homo",
+  "level": "1",
+  "url": "s_ring_homo.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Ring homomorphisms",
+  "body": " Ring homomorphisms   Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .     Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.   "
+},
+{
+  "id": "d_ring_homo",
+  "level": "2",
+  "url": "s_ring_homo.html#d_ring_homo",
+  "type": "Definition",
+  "number": "2.37",
+  "title": "Ring homomorphism.",
+  "body": " Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .   "
+},
+{
+  "id": "s_ring_homo-3",
+  "level": "2",
+  "url": "s_ring_homo.html#s_ring_homo-3",
+  "type": "Warning",
+  "number": "2.38",
+  "title": "Ring homomorphism.",
+  "body": " Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.  "
 },
 {
   "id": "appendix-notation",
