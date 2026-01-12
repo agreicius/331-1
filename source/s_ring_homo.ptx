@@ -49,6 +49,69 @@
             The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): <eg/>, the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily. 
         </p>
     </warning>
+    <proposition xml:id="prop_ring_homos">
+        <title>Ring homomorphisms</title>
+        
+        <statement>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Subring inclusions are ring homomorphisms. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The composition of ring homomorphisms is a ring homomorphism. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Given a bijective ring homomorphism <m>\phi\colon R\rightarrow S</m>, its inverse <m>\phi^{-1}\colon S\rightarrow R</m> is a ring homomorphism. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>\phi\colon R\rightarrow S</m> is a ring homomorphism, then <m>\phi(R)</m> is a subring of <m>S</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A ring homomorphism <m>\phi\colon R\rightarrow S</m> is injective if and only if <m>\ker \phi =\{0\}</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Left to the reader.
+            </p>
+        </proof>
+    </proposition>
+    <remark>
+        <title>Group structure of rings</title>
+        
+        <p>
+            The last statement of <xref ref="prop_ring_homos"/> follows immediately from the fact that a ring homomorphism <m>\phi\colon R\rightarrow S</m> is in particular a group homomorphism with respect to the additive structures of <m>R</m> and <m>S</m>. This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings. 
+        </p>
+    </remark>
+    
+    <example xml:id="eg_empty_ring_homo_set">
+    <title><m>\Hom(\Z/3\Z, \Z/2\Z)</m></title>
+    <statement>
+    <p>
+    Prove that <m>\Hom(\Z/3\Z, \Z/2\Z)=\emptyset</m>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Assume by contradiction that <m>\phi\colon \Z/3\Z\rightarrow \Z/2\Z</m> is a ring homomorphism. Since in particular <m>\phi</m> is a group homomorphism, <m>\phi([1]_3)</m> is an element of <m>\Z/2\Z</m> of order dividing <m>3</m>. (See <xref ref="prop_homs_cyclic"/>.) But <m>[0]_2</m> is the only such element. Thus <m>\phi([1]_3)=[0]_2</m>: a contradiction, since <m>[0]_2\ne 1</m> in <m>\Z/2\Z</m>. 
+    </p>
+    </solution>
+    </example>
+    
+    
     <activity xml:id="spec_hom_Z">
     <title>Ring homomorphisms from <m>\Z</m></title>
     <statement>
@@ -57,6 +120,97 @@
     </p>
     </statement>
     </activity>
+    <activity xml:id="spec_poly_ring_homo">
+    <title>Polynomial ring homomorphisms</title>
+    <statement>
+    <p>
+    Let <m>R</m> and <m>S</m> be commutative rings. A ring homomorphism <m>\phi\colon R[x]\rightarrow S</m> is uniquely determined by its restriction <m>\phi_R</m> to the subring <m>R\subseteq R[x]</m> and the value <m>\phi(x)\in S</m>. Conversely, given a ring homomorphism <m>\psi\colon R\rightarrow S</m> and an element <m>s\in S</m>, there is a unique ring homomorphism <m>\phi\colon R[x]\rightarrow S</m> such that <m>\phi_R=\psi</m> and <m>\phi(x)=s</m>. Thus we have the following bijection:
+    </p>
+    <image xml:id="im_poly_ring_homo" width="75%">
+                <shortdescription>Description of polynomial ring homomorphisms</shortdescription>
+                <latex-image>
+                \begin{tikzcd}
+                \Hom(R[x],S) \arrow[r,leftrightarrow] \amp \Hom(R,S)\times S \\
+                \phi \arrow[r,mapsto] \amp (\phi\vert_R, \phi(x)) \\
+                \phi(\sum_{k=0}^na_kx^k)=\sum_{k=0}^n \psi(a_k)s^k \amp (\psi, s) \arrow[l,mapsto]
+                \end{tikzcd}
+                </latex-image>
+    </image>
+    <p>
+        Given a ring homomorphism <m>\phi\colon R[x]\rightarrow S</m> corresponding to the pair <m>(\psi, s)\in \Hom(R,S)\times S</m>, if the map <m>\psi</m> is clear from the context, we will often call <m>\phi</m> the <term>evaluation at <m>s</m></term> homomorphism.
+    </p>
+    <p>
+        Similarly, if <m>R</m> and <m>S</m> are nontrivial commutative rings, and if <m>\psi\colon R\rightarrow S</m> is a ring homomorphism, identifying <m>\psi</m> with the map <m>R\rightarrow S[x]</m> obtained by composing with the subring inclusion <m>S\subseteq S[x]</m>, we will often use <m>\phi</m> (or its name) to refer to the corresponding ring homomorphism <m>\phi\colon R[x]\rightarrow S[x]</m>.
+    </p>
+    </statement>
+    </activity>
+    <example xml:id="eg_poly_homo">
+    <title><m>\Hom(\Z[x],R)</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be a commutative ring. Show that there is a bijection between <m>\Hom(\Z[x], R)</m> and <m>R</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    From <xref ref="spec_poly_ring_homo"/> we know there is a bijection between 
+    <m>\Hom(\Z[x], R)</m> and <m>\Hom(\Z, R)\times R</m>. From <xref ref="spec_hom_Z"/>, on the other hand, we know that <m>\Hom(\Z, R)=\{\phi}</m>, where <m>\phi(n)=n\cdot 1_R=n\in R</m> for all <m>n\in \Z</m>. The result follows since <m>\{\phi\}\times R</m> is in bijective correspondence with <m>R</m>. More explicitly, all homomorphisms <m>\phi\colon \Z[x]\rightarrow R</m> are of the form 
+    <md number="yes">
+        <mrow>\phi(\sum_{k=0}^na_kx^k) \amp = \sum_{k=0}^na_k r^k</mrow>
+    </md>,
+    for some <m>r\in R</m>. Note that the integers <m>a_k</m> appearing on the right must be interpreted as the ring elements 
+    <md>
+        <mrow>a_k \amp =a_k\cdot 1_R\in R</mrow>
+    </md>.
+    </p>
+    </solution>
+    </example>
+    
+    <activity xml:id="spec_augementation_map">
+    <title>Augmentation map</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring, and let <m>G</m> be a finite group The map <m>\phi\colon R\, G\rightarrow R</m> defined as 
+    <md>
+        <mrow>\phi(\sum_{g\in G}a_g g)\amp = \sum_{g\in G} a_g \amp </mrow>
+    </md>
+    is a surjective ring homomorphism called the <term>augmentation map</term>. Its kernel 
+    <md>
+        <mrow>\ker \phi \amp =\{\sum_{g\in G}a_g\, g\in R\, G\mid \sum_{g\in G}a_g=0\}</mrow>
+    </md>
+    is called the <term>augmentation ideal</term>. 
+    </p>
+    </statement>
+    </activity>
+    <example xml:id="eg_augmentation_map">
+    <title>Augmentation map</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring, and let <m>G</m> be a finite group. Prove that the augmentation map <m>\phi\colon R\, G\rightarrow R</m> is a surjective ring homomorphism. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    It is easy to see that <m>\phi</m> is group homomorphism, <m>\phi(1)=1_R</m>, and moreover that it is surjective (since <m>\phi(r\, e)=r</m> for any <m>r\in R</m>). It remains only to show that it is multiplicative. Given elements <m>r=\sum_{g\in G}a_g\, g</m>, <m>s=\sum_{g\in G}b_g\, g</m> of <m>R\, G</m>, we have <m>rs=\sum_{g\in G}c_g\, g</m>, where
+    <md>
+        <mrow>c_g \amp =\sum_{\substack{(h,k)\in G\times G\\ hk=g}}a_h b_k</mrow>
+        <mrow> \amp = \sum_{h\in G}a_h b_{h^{-1}g}</mrow>
+    </md>.
+    Thus 
+    <md>
+        <mrow>\phi(rs) \amp =\sum_{g\in G}c_g</mrow>
+        <mrow> \amp =\sum_{g\in G}\sum_{h\in G}a_hb_{h^{-1}g}</mrow>
+        <mrow> \amp =\sum_{h\in H}\sum_{g\in G}a_hb_{h^{-1}g} \amp (+ \text{ is comm. and assoc.})</mrow>
+        <mrow> \amp =\sum_{h\in G}a_h\sum_{g\in G}b_{h^{-1}g} \amp (\text{dist.})</mrow>
+        <mrow> \amp = \sum_{h\in G}a_h\sum_{g'\in G}b_{g'}</mrow>
+        <mrow> \amp = \sum_{g\in G}a_h \cdot \sum_{g\in G}b_g \amp (\text{dist.})</mrow>
+        <mrow> \amp = \phi(r)\phi(s)</mrow>
+    </md>,
+    as desired. 
+    </p>
+    </solution>
+    </example>
+    
     
 </subsection>
 <subsection xml:id="ss_ideals">
@@ -87,5 +241,119 @@ A subset <m>I</m> of <m>R</m> is a <term>left ideal</term> if it satisfies (i) a
 </p>
 </statement>
 </definition>
+<proposition xml:id="prop_ideals">
+<title>Ideals</title>
+    <statement>
+        <p>
+            Let <m>R</m> be a ring. 
+            <ol>
+                <li>
+                    <p>
+                        If <m>(I_\alpha)_{\alpha\in J}</m> is an indexed family of ideals of <m>R</m>, then <m>\bigcap_{\alpha\in J}I_\alpha</m> is an ideal. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>I</m> and <m>J</m> are ideals of <m>R</m>, then so is <m>I+J</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The set <m>IJ</m> defined as the set of all finite sums of products <m>ij</m>, where <m>i\in I</m> and <m>j\in J</m>, is an ideal of <m>R</m>. 
+                    </p>
+                    <p>
+                        For a positive integer <m>n</m>, we define <m>I^n</m> to be the <m>n</m>-fold ideal product of <m>I</m> with itself. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>\phi\colon R\rightarrow S</m> is a ring homomorphism, then <m>\ker\phi</m> is an ideal of <m>R</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            We leave all but (3) to the reader. For (3), it is clear that <m>IJ</m> as defined is a subgroup of <m>(R,+)</m>. Given any <m>r,s\in R</m>, and element <m>a=\sum_{k=1}^ni_kj_k\in IJ</m>, with <m>i_k\in I</m> and <m>j_k\in J</m> for all <m>k</m>, we have 
+            <md number="yes">
+                <mrow>ras \amp = \sum_{k=1}^n(ri_k)(j_ks)</mrow>
+                <mrow> \amp = \sum_{k=1}^ni_k' j_k'</mrow>
+            </md>,
+            where 
+            <md number="yes">
+                <mrow>i_k' \amp = ri_k\in I \amp (I \text{ an ideal})</mrow>
+                <mrow>j_k' \amp j_ks\in J \amp (J \text{ an idea})</mrow>
+            </md>,
+            showing that <m>ras\in IJ</m>, as desired. 
+        </p>
+    </proof>
+</proposition>
+<example xml:id="eg_ideals_integers">
+<title>Ideals of <m>\Z</m></title>
+<statement>
+<p>
+Give an explicit description of the set of all ideals of <m>\Z</m>. 
+</p>
+</statement>
+<solution>
+<p>
+Let <m>I</m> be an ideal of <m>\Z</m>. Since in particular <m>I</m> is a subgroup of <m>\Z</m>, we know that <m>I</m> can be written uniquely as 
+<md>
+    <mrow>I \amp =\angvec{n}</mrow>
+    <mrow> \amp =\{kn\mid k\in \Z\}</mrow>
+</md> 
+for some nonnegative integer <m>n\in \Z_{\geq 0}</m>. Since furthermore it is easy to see that the subgroups <m>\angvec{n}</m> satisfy axioms (ii) and (iii) of <xref ref="d_ideal"/>, we conclude that the correspondence 
+<md>
+    <mrow>n \amp \leftrightarrow \angvec{n}</mrow>
+</md>
+gives a bijective correspondence between nonnegative integers of <m>\Z</m> and ideals of <m>\Z</m>. 
+</p>
+</solution>
+</example>
+<example xml:id="eg_ideals_division_rings">
+<title>Ideals of division rings</title>
+<statement>
+<p>
+Let <m>D</m> be a division ring. Prove that the only ideals of <m>D</m> are <m>\{0\}</m> and <m>D</m> itself. 
+</p>
+</statement>
+<solution>
+<p>
+Let <m>I</m> be an ideal of <m>D</m> that is not the zero ideal, and let <m>a\in I</m> be any nonzero element. Since <m>D</m> is a division ring, there is an element <m>b\in D</m> satisfying <m>ab=ba=1</m>. It follows that for any <m>r\in D</m>, we have 
+<md>
+    <mrow>r \amp =r\cdot 1= r(ba)=(rb)a\in I</mrow>
+</md>,
+and thus that <m>I=D</m>. 
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_ideals_matrix_rings">
+<title>Ideals of <m>M_n(R)</m></title>
+<statement>
+<p>
+Let <m>R</m> be comutative ring. Prove that all ideals of <m>M_n(R)</m> are of the form <m>M_n(I)</m> for some ideal <m>I\subseteq R</m>, where we define 
+<md>
+    <mrow>M_n(I) \amp = \{[a_{ij}]\in M_n(R)\mid a_{ij}\in I\}</mrow>
+</md>.
+In particular, given a field <m>K</m>, the only ideals of <m>M_n(K)</m> are <m>\{0\}</m> and <m>M_n(K)</m> itself. 
+</p>
+</statement>
+<solution>
+<p>
+Left as homework exercise. 
+</p>
+</solution>
+</example>
+<definition xml:id="d_simple">
+<title>Simple ring</title>
+<statement>
+<p>
+A ring <m>R</m> is <term>simple</term> if its only ideals are <m>\{0\}</m> and <m>R</m>. 
+</p>
+</statement>
+</definition>
+
 </subsection>
 </section>
