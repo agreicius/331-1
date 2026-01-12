@@ -3139,7 +3139,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.5",
   "title": "Ring homomorphisms and ideals",
-  "body": " Ring homomorphisms and ideals   Ring homomorphisms   Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .     Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.    Ring homomorphisms from   Let be a ring. There is a unique ring homomorphism , defined as for all . In particular, is a singleton.      Ideals   Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).     "
+  "body": " Ring homomorphisms and ideals   Ring homomorphisms   Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .     Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.    Ring homomorphisms      Subring inclusions are ring homomorphisms.    The composition of ring homomorphisms is a ring homomorphism.    Given a bijective ring homomorphism , its inverse is a ring homomorphism.    If is a ring homomorphism, then is a subring of .    A ring homomorphism is injective if and only if .       Left to the reader.     Group structure of rings  The last statement of follows immediately from the fact that a ring homomorphism is in particular a group homomorphism with respect to the additive structures of and . This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings.      Prove that     Assume by contradiction that is a ring homomorphism. Since in particular is a group homomorphism, is an element of of order dividing . (See .) But is the only such element. Thus : a contradiction, since in .     Ring homomorphisms from   Let be a ring. There is a unique ring homomorphism , defined as for all . In particular, is a singleton.     Polynomial ring homomorphisms   Let and be commutative rings. A ring homomorphism is uniquely determined by its restriction to the subring and the value . Conversely, given a ring homomorphism and an element , there is a unique ring homomorphism such that and . Thus we have the following bijection:   Description of polynomial ring homomorphisms    Given a ring homomorphism corresponding to the pair , if the map is clear from the context, we will often call the evaluation at homomorphism.  Similarly, if and are nontrivial commutative rings, and if is a ring homomorphism, identifying with the map obtained by composing with the subring inclusion , we will often use (or its name) to refer to the corresponding ring homomorphism .       Let be a commutative ring. Show that there is a bijection between and .    From we know there is a bijection between and . From , on the other hand, we know that , where for all . The result follows since is in bijective correspondence with . More explicitly, all homomorphisms are of the form , for some . Note that the integers appearing on the right must be interpreted as the ring elements .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group The map defined as is a surjective ring homomorphism called the augmentation map . Its kernel is called the augmentation ideal .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group. Prove that the augmentation map is a surjective ring homomorphism.    It is easy to see that is group homomorphism, , and moreover that it is surjective (since for any ). It remains only to show that it is multiplicative. Given elements , of , we have , where . Thus , as desired.      Ideals   Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).     Ideals   Let be a ring.   If is an indexed family of ideals of , then is an ideal.    If and are ideals of , then so is .    The set defined as the set of all finite sums of products , where and , is an ideal of .  For a positive integer , we define to be the -fold ideal product of with itself.    If is a ring homomorphism, then is an ideal of .       We leave all but (3) to the reader. For (3), it is clear that as defined is a subgroup of . Given any , and element , with and for all , we have , where , showing that , as desired.     Ideals of   Give an explicit description of the set of all ideals of .    Let be an ideal of . Since in particular is a subgroup of , we know that can be written uniquely as for some nonnegative integer . Since furthermore it is easy to see that the subgroups satisfy axioms (ii) and (iii) of , we conclude that the correspondence gives a bijective correspondence between nonnegative integers of and ideals of .     Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .     Ideals of   Let be comutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.     Simple ring   A ring is simple if its only ideals are and .     "
 },
 {
   "id": "d_ring_homo",
@@ -3160,6 +3160,33 @@ var ptx_lunr_docs = [
   "body": " Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.  "
 },
 {
+  "id": "prop_ring_homos",
+  "level": "2",
+  "url": "s_ring_homo.html#prop_ring_homos",
+  "type": "Proposition",
+  "number": "2.39",
+  "title": "Ring homomorphisms.",
+  "body": " Ring homomorphisms      Subring inclusions are ring homomorphisms.    The composition of ring homomorphisms is a ring homomorphism.    Given a bijective ring homomorphism , its inverse is a ring homomorphism.    If is a ring homomorphism, then is a subring of .    A ring homomorphism is injective if and only if .       Left to the reader.   "
+},
+{
+  "id": "ss_rings-5",
+  "level": "2",
+  "url": "s_ring_homo.html#ss_rings-5",
+  "type": "Remark",
+  "number": "2.40",
+  "title": "Group structure of rings.",
+  "body": " Group structure of rings  The last statement of follows immediately from the fact that a ring homomorphism is in particular a group homomorphism with respect to the additive structures of and . This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings.  "
+},
+{
+  "id": "eg_empty_ring_homo_set",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_empty_ring_homo_set",
+  "type": "Example",
+  "number": "2.41",
+  "title": "<span class=\"process-math\">\\(\\Hom(\\Z\/3\\Z, \\Z\/2\\Z)\\)<\/span>.",
+  "body": "   Prove that     Assume by contradiction that is a ring homomorphism. Since in particular is a group homomorphism, is an element of of order dividing . (See .) But is the only such element. Thus : a contradiction, since in .   "
+},
+{
   "id": "spec_hom_Z",
   "level": "2",
   "url": "s_ring_homo.html#spec_hom_Z",
@@ -3169,13 +3196,94 @@ var ptx_lunr_docs = [
   "body": " Ring homomorphisms from   Let be a ring. There is a unique ring homomorphism , defined as for all . In particular, is a singleton.   "
 },
 {
+  "id": "spec_poly_ring_homo",
+  "level": "2",
+  "url": "s_ring_homo.html#spec_poly_ring_homo",
+  "type": "Specimen",
+  "number": "28",
+  "title": "Polynomial ring homomorphisms.",
+  "body": " Polynomial ring homomorphisms   Let and be commutative rings. A ring homomorphism is uniquely determined by its restriction to the subring and the value . Conversely, given a ring homomorphism and an element , there is a unique ring homomorphism such that and . Thus we have the following bijection:   Description of polynomial ring homomorphisms    Given a ring homomorphism corresponding to the pair , if the map is clear from the context, we will often call the evaluation at homomorphism.  Similarly, if and are nontrivial commutative rings, and if is a ring homomorphism, identifying with the map obtained by composing with the subring inclusion , we will often use (or its name) to refer to the corresponding ring homomorphism .   "
+},
+{
+  "id": "eg_poly_homo",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_poly_homo",
+  "type": "Example",
+  "number": "2.42",
+  "title": "<span class=\"process-math\">\\(\\Hom(\\Z[x],R)\\)<\/span>.",
+  "body": "   Let be a commutative ring. Show that there is a bijection between and .    From we know there is a bijection between and . From , on the other hand, we know that , where for all . The result follows since is in bijective correspondence with . More explicitly, all homomorphisms are of the form , for some . Note that the integers appearing on the right must be interpreted as the ring elements .   "
+},
+{
+  "id": "spec_augementation_map",
+  "level": "2",
+  "url": "s_ring_homo.html#spec_augementation_map",
+  "type": "Specimen",
+  "number": "29",
+  "title": "Augmentation map.",
+  "body": " Augmentation map   Let be a nontrivial commutative ring, and let be a finite group The map defined as is a surjective ring homomorphism called the augmentation map . Its kernel is called the augmentation ideal .   "
+},
+{
+  "id": "eg_augmentation_map",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_augmentation_map",
+  "type": "Example",
+  "number": "2.43",
+  "title": "Augmentation map.",
+  "body": " Augmentation map   Let be a nontrivial commutative ring, and let be a finite group. Prove that the augmentation map is a surjective ring homomorphism.    It is easy to see that is group homomorphism, , and moreover that it is surjective (since for any ). It remains only to show that it is multiplicative. Given elements , of , we have , where . Thus , as desired.   "
+},
+{
   "id": "d_ideal",
   "level": "2",
   "url": "s_ring_homo.html#d_ideal",
   "type": "Definition",
-  "number": "2.39",
+  "number": "2.44",
   "title": "Ideal.",
   "body": " Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).   "
+},
+{
+  "id": "prop_ideals",
+  "level": "2",
+  "url": "s_ring_homo.html#prop_ideals",
+  "type": "Proposition",
+  "number": "2.45",
+  "title": "Ideals.",
+  "body": " Ideals   Let be a ring.   If is an indexed family of ideals of , then is an ideal.    If and are ideals of , then so is .    The set defined as the set of all finite sums of products , where and , is an ideal of .  For a positive integer , we define to be the -fold ideal product of with itself.    If is a ring homomorphism, then is an ideal of .       We leave all but (3) to the reader. For (3), it is clear that as defined is a subgroup of . Given any , and element , with and for all , we have , where , showing that , as desired.   "
+},
+{
+  "id": "eg_ideals_integers",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_ideals_integers",
+  "type": "Example",
+  "number": "2.46",
+  "title": "Ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
+  "body": " Ideals of   Give an explicit description of the set of all ideals of .    Let be an ideal of . Since in particular is a subgroup of , we know that can be written uniquely as for some nonnegative integer . Since furthermore it is easy to see that the subgroups satisfy axioms (ii) and (iii) of , we conclude that the correspondence gives a bijective correspondence between nonnegative integers of and ideals of .   "
+},
+{
+  "id": "eg_ideals_division_rings",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_ideals_division_rings",
+  "type": "Example",
+  "number": "2.47",
+  "title": "Ideals of division rings.",
+  "body": " Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .   "
+},
+{
+  "id": "eg_ideals_matrix_rings",
+  "level": "2",
+  "url": "s_ring_homo.html#eg_ideals_matrix_rings",
+  "type": "Example",
+  "number": "2.48",
+  "title": "Ideals of <span class=\"process-math\">\\(M_n(R)\\)<\/span>.",
+  "body": " Ideals of   Let be comutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.   "
+},
+{
+  "id": "d_simple",
+  "level": "2",
+  "url": "s_ring_homo.html#d_simple",
+  "type": "Definition",
+  "number": "2.49",
+  "title": "Simple ring.",
+  "body": " Simple ring   A ring is simple if its only ideals are and .   "
 },
 {
   "id": "appendix-notation",
