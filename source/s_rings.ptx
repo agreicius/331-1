@@ -64,6 +64,7 @@ conscientiously point out resulting discrepancies between our exposition and the
             <mrow>n a \amp = \underset{n \text{ times}}{\underbrace{a+a+\cdots +a}} \amp a\in R, n\in \Z_{\geq 1}</mrow>
             <mrow>(-n)a \amp = n(-a) \amp a\in R, n\in \Z_{\geq 1}</mrow>
         </md>.
+        Additionally in a ring <m>R</m> we will denote <m>n=n\cdot 1_R</m> for all <m>n\in \Z</m>. 
     </p>
 </convention>
 <p>

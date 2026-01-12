@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_ring_homo" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Ring homomorphisms</title>
+    <title>Ring homomorphisms and ideals</title>
+<subsection xml:id="ss_rings">
+<title>Ring homomorphisms</title>
+
 
     <definition xml:id="d_ring_homo">
     <title>Ring homomorphism</title>
@@ -27,7 +30,7 @@
     </ol>
     Given a ring homomorphism <m>\phi\colon R\rightarrow S</m>, its <term>kernel</term> <m>\ker \phi</m> is defined as 
     <md>
-        \ker\phi=\{r\in R\mid \phi(r)=0\}
+       <mrow>  \ker\phi\amp =\{r\in R\mid \phi(r)=0\}\amp </mrow>
     </md>.
     An <term>isomorphism</term> is a bijective ring homomorphism. 
     </p>
@@ -46,5 +49,43 @@
             The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): <eg/>, the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily. 
         </p>
     </warning>
-
+    <activity xml:id="spec_hom_Z">
+    <title>Ring homomorphisms from <m>\Z</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. There is a unique ring homomorphism <m>\phi\colon \Z\rightarrow R</m>, defined as <m>\phi(n)=n\cdot 1_R</m> for all <m>n\in \Z</m>. In particular, <m>\Hom(\Z,R)=\{\phi\}</m> is a singleton. 
+    </p>
+    </statement>
+    </activity>
+    
+</subsection>
+<subsection xml:id="ss_ideals">
+<title>Ideals</title>
+<definition xml:id="d_ideal">
+<title>Ideal</title>
+<statement>
+<p>
+An <term>ideal</term> of a ring <m>R</m> is a subset <m>I\subseteq R</m> satisfying the following properties. 
+<ol marker="(i)">
+    <li>
+        <p>
+            <m>I</m> is a subgroup of  <m>(R,+)</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>I</m> is <term>closed under left multiplication</term>: <ie/>, if <m>i\in I</m>, then <m>ri\in I</m> for all <m>r\in R</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>I</m> is <term>closed under right multiplication</term>: <ie/>, if <m>i\in I</m>, then <m>ir\in I</m> for all <m>r\in R</m>.
+        </p>
+    </li>
+</ol>
+A subset <m>I</m> of <m>R</m> is a <term>left ideal</term> if it satisfies (i) and (ii); it is a <term>right ideal</term> if it satisfies (i) and (iii). 
+</p>
+</statement>
+</definition>
+</subsection>
 </section>
