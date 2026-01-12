@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_ring_homo" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Ring homomorphisms</title>
+
+    <definition xml:id="d_ring_homo">
+    <title>Ring homomorphism</title>
+    <statement>
+    <p>
+    Let <m>R</m> and <m>S</m> be rings. A <term>ring homomorphism</term> is a function <m>\phi\colon R\rightarrow S</m> satisfying the following properties. 
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>\phi(r+r')=\phi(r)+\phi(r')</m> (<ie/>, <m>\phi</m> is a group homomorphism from <m>(R,+)</m> to <m>(S,+)</m>).
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\phi(r\, r')=\phi(r)\phi(r')</m> for all <m>r,r'\in R</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\phi(1_R)=1_S</m>.
+            </p>
+        </li>
+    </ol>
+    Given a ring homomorphism <m>\phi\colon R\rightarrow S</m>, its <term>kernel</term> <m>\ker \phi</m> is defined as 
+    <md>
+        \ker\phi=\{r\in R\mid \phi(r)=0\}
+    </md>.
+    An <term>isomorphism</term> is a bijective ring homomorphism. 
+    </p>
+    <p>
+        Given rings <m>R</m> and <m>S</m>, we will write <m>\Hom(R,S)</m> for the set of all ring homomorphisms from <m>R</m> to <m>S</m>: <ie/>, 
+        <md>
+            <mrow>\Hom(R,S)\amp =\{\phi\colon R\rightarrow S\mid \phi \text{ a ring homomorphism}\} \amp </mrow>
+        </md>.
+        
+    </p>
+    </statement>
+    </definition>
+    <warning>
+        <title>Ring homomorphism</title>
+        <p>
+            The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): <eg/>, the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily. 
+        </p>
+    </warning>
+
+</section>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_quaternions" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Hamilton quaternion rings</title>
+    <activity xml:id="spec_quat_rings">
+    <title>Quaternion rings</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring, and assume <m>1+1\ne 0</m> in <m>R</m>. We define <m>H(R)</m> to be the set of all formal sums 
+    <md>
+        <mrow>a_1+a_2i+a_3j+a_4k</mrow>
+    </md>,
+    where <m>a_i\in R</m> for all <m>1\leq i\leq 4</m>. We define addition on <m>H(R)</m> as 
+    <md>
+        <mrow>(a_1+a_2i+a_3j+a_4k)+(b_1+b_2i+b_3j+b_4k) </mrow>
+        <mrow> = (a_1+b_1)+(a_2+b_2)i+(a_3+b_3)j+(a_4+b_4)k</mrow>
+    </md>.
+    We define multiplication to be the unique binary operation <m>\cdot</m> that distributes over the addition operation <m>+</m>, satisfies 
+    <md number="yes">
+        <mrow>b(a_1+a_2i+a_3j+a_4k) \amp =(a_1+a_2i+a_3j+a_4k)b </mrow>
+        <mrow> \amp =ba_1+ba_2i+ba_3j+ba_4k</mrow>
+    </md>
+    for all 
+    <md>
+        <mrow>b \amp =b+0i+0j+0k\in H(R)</mrow>
+    </md>,
+    and satisfies 
+    <md number="yes">
+        <mrow> i^2\amp =j^2=k^2=-1 </mrow>
+        <mrow>ij \amp = -ji= k</mrow>
+        <mrow>jk \amp = -kj= i</mrow>
+        <mrow>ki \amp = -ik= j</mrow>
+    </md>.
+    The triple <m>(H(R), +, \cdot)</m> is a ring called the <term>Hamilton quaternion ring over (or with coefficients in) <m>R</m></term>. 
+    </p>
+    <p>
+        In the special case where <m>R=\R</m>, we denote <m>\HH=H(\R)</m> and call <m>\HH</m> simply the <term>Hamilton quaternions</term>. 
+    </p>
+    </statement>
+    </activity>
+    <definition xml:id="d_quat_norm">
+    <title>Quaternion conjugation and norm</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nontrivial commutative ring. Given <m>q=a_1+a_2i+a_3j+a_4k\in H(R)</m>, its <term>quaternion conjugate</term>, denoted <m>\overline{q}</m> is defined as 
+    <md number="yes">
+        <mrow>\overline{q} \amp =a_1-a_2i-a_3j-a_4k</mrow>
+    </md>.
+    The <term>quaternion norm</term> is the function <m>N\colon H(R)\rightarrow R</m> defined as 
+    <md number="yes">
+        <mrow>N(q)=\overline{q}q</mrow>
+    </md>.
+    A straightforward computation shows that if <m>q=a_1+a_2i+a_3j+a_4k</m>, then 
+    <md>
+        <mrow>N(q) \amp =a_1^2+a_2^2+a_3^2+a_4^2</mrow>
+    </md>.
+    </p>
+    </statement>
+    </definition>
+     <theorem xml:id="th_quat_norm">
+     <title>Quaternion conjugation and norm</title>
+     <statement>
+     <p>
+     Let <m>R</m> be a nontrivial commutative ring.
+     <ol>
+        <li>
+            <p>
+                <m>\overline{aq+bq'}=a\overline{q}+b\overline{q'}</m> for all <m>a,b\in R</m> and <m>q,q'\in H(R)</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\overline{qq'}=\overline{q'}\, \overline{q}</m> for all <m>q,q'\in H(R)</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>N(qq')=N(q)N(q')</m> for all <m>q,q'\in H(R)</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The following statements are equivalent. 
+                <ol>
+                    <li>
+                        <p>
+                            <m>q\in (H(R))^*</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\overline{q}\in (H(R))^*</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>N(q)\in R^*</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </li>
+     </ol>
+     </p>
+     </statement>
+     <proof>
+     <p>
+        This will be given as a homework exercise. 
+     </p>
+     </proof>
+     </theorem>
+    <corollary xml:id="cor_">
+        <statement>
+            <p>
+                The Hamilton quaternions <m>\HH=H(\R)</m> is a division ring. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                For <m>q=a_1+a_2i+a_3j+a_4k\in \HH</m>, we have 
+                <md number="yes">
+                    <mrow>q\ne 0 \amp  \iff a_i\ne 0 \text{ for some } i </mrow>
+                    <mrow> \amp \iff a_1^2+a_2^2+a_3^2+a_4^2\ne 0 \amp (a_i^2&gt; 0 \iff a_i\ne 0)</mrow>
+                    <mrow> \amp \iff N(q)\ne 0</mrow>
+                    <mrow> \amp \iff N(q)\in \R^*</mrow>
+                    <mrow> \amp \iff q\in \HH^*</mrow>
+                </md>. 
+                Thus <m>\HH^*=\HH-\{0\}</m>, as desired. 
+            </p>
+        </proof>
+    </corollary>
+    <remark>
+        <title>Division rings over <m>\R</m></title>
+        <p>
+            We have met our first noncommutative division ring in the form of <m>\HH</m>. More than just a ring, <m>\HH</m> is what we call an <em><m>\R</m>-algebra</em>, which we can understand as a ring containing a <q>copy</q> of <m>\R</m> lying in its center. Any <m>\R</m>-algebra <m>A</m> is in particular a vector space over <m>\R</m>: we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication <m>ra</m>, where <m>r\in \R</m> and <m>a\in A</m>.
+        </p>
+        <p>
+            Let's call a division ring that is also an <m>\R</m>-algebra a <em>division algebra</em> over <m>\R</m>. Besides <m>\HH</m>, note that <m>\R</m> and <m>\C</m> are also division algebras over <m>\R</m>. Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over <m>\R</m>. This is a famous result due to Frobenius: if <m>A</m> is a finite-dimensional division algebra over <m>\R</m>, then <m>A</m> is isomorphic to <m>\R</m>, <m>\C</m>, or <m>\HH</m>! (Of course, <q>isomorphism</q> is yet to be definied, but you can imagine what this will mean for rings.)
+        </p>
+    </remark>
+    <remark>
+        <title>Finite division rings</title>
+        <p>
+            While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting <em>finite</em> division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.   
+        </p>
+    </remark>
+    
+
+</section>
