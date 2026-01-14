@@ -3286,6 +3286,69 @@ var ptx_lunr_docs = [
   "body": " Simple ring   A ring is simple if its only ideals are and .   "
 },
 {
+  "id": "s_quot_ring",
+  "level": "1",
+  "url": "s_quot_ring.html",
+  "type": "Section",
+  "number": "2.6",
+  "title": "Quotient rings and isomorphism theorems",
+  "body": " Quotient rings and isomorphism theorems  The definition of a quotient ring is a straightforward generalization of the ring structure we defined for modular rings in . Since an ideal of a ring is in particular a subgroup of , and a normal one at that (since is abelian), we can form the coset space , which comes equipped with a well-defined addition operation . Not surprisingly there is also a well-defined multiplication that can be defined on : . Let's see why this is well defined: . As usual, once we know the two operations and are well defined on , the fact that they satisfy the ring axioms follows almost immediately from their being defined in terms of the operations of .   Quotient ring   Let be an ideal of the ring . We define binary operations and on as follows: . The triple is a ring, called the quotient ring of by . Its additive identity is , and its multiplciative identity is .     Modular rings   Let be a positive integer. Show that the ring is equal to the quotient ring , where .    We have seen previously that as a group, is equal to the quotient group . Moreover, it is clear that the coset multiplication operation is identical to the modular multiplication operation defined in . Thus the two rings are identical.    The connection between ring quotients and group quotients is strong. Indeed, by definition a ring quotient is equal to the group quotient , thinking of as a subgroup of , together with an extra layer of strucutre coming from the coset multiplication. It is not all that surprising, then, that ring quotients enjoy many of the same properties as group quotients, starting with a universal mapping property.   Quotient map: universal property   Let be an ideal of the ring , and let be the corresponding quotient map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       We get most of this result for free from . The only thing we need to be careful about is that all maps in question satisfy the additional ring homomorphism axioms (ii) and (iii) from , and this is straightforward.    The following corollary is simply a compact restatement of using the language of and can be handy for computing the set of homomorphisms between rings.   Quotient ring homomorphisms   Let be an ideal of the ring , and let be the quotient map. Given any ring , the map is an injection onto the set of all satisfying . In other words, we can identify with the set .     Quotient ring homomorphisms   Let be a positive integer, and let be a ring. Prove that is either empty or a singleton.        Of course, we also get an analogue of the isomorphism theorems for rings. We state them here without proof, and in somewhat terse fashion. Notice that some things are simplified by the fact that the normality issue does not arise (since is an abelian group).   Isomorphism theorems for rings   Let be a ring.   First isomorphism theorem  Given a ring homomorphism with kernel , we have via the isomorphism .    Second isomorphism theorem  Given a subring and ideal , is a subring of , is an ideal of , and .    Third isomorphism theorem  Let be a surjective ring homomorphism. If is an ideal of containing , then is an ideal of , and we have . In particular, considering the quotient map , we see that if is a chain of ideals in , then is an ideal of , and we have     Fourth isomorphism theorem  Let be a surjective ring homomorphism. The map is a bijection between the set of ideals of that contain and the set of ideals of , with inverse given by . Moreover, this bijection preserves just about all ideal operations and relations: , inclusion, intersection, sum, product, .           "
+},
+{
+  "id": "spec_quot_ring",
+  "level": "2",
+  "url": "s_quot_ring.html#spec_quot_ring",
+  "type": "Specimen",
+  "number": "30",
+  "title": "Quotient ring.",
+  "body": " Quotient ring   Let be an ideal of the ring . We define binary operations and on as follows: . The triple is a ring, called the quotient ring of by . Its additive identity is , and its multiplciative identity is .   "
+},
+{
+  "id": "eg_modular_rings",
+  "level": "2",
+  "url": "s_quot_ring.html#eg_modular_rings",
+  "type": "Example",
+  "number": "2.50",
+  "title": "Modular rings.",
+  "body": " Modular rings   Let be a positive integer. Show that the ring is equal to the quotient ring , where .    We have seen previously that as a group, is equal to the quotient group . Moreover, it is clear that the coset multiplication operation is identical to the modular multiplication operation defined in . Thus the two rings are identical.   "
+},
+{
+  "id": "th_ring_quot_map",
+  "level": "2",
+  "url": "s_quot_ring.html#th_ring_quot_map",
+  "type": "Theorem",
+  "number": "2.51",
+  "title": "Quotient map: universal property.",
+  "body": " Quotient map: universal property   Let be an ideal of the ring , and let be the corresponding quotient map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       We get most of this result for free from . The only thing we need to be careful about is that all maps in question satisfy the additional ring homomorphism axioms (ii) and (iii) from , and this is straightforward.   "
+},
+{
+  "id": "cor_quot_ring_map",
+  "level": "2",
+  "url": "s_quot_ring.html#cor_quot_ring_map",
+  "type": "Corollary",
+  "number": "2.53",
+  "title": "Quotient ring homomorphisms.",
+  "body": " Quotient ring homomorphisms   Let be an ideal of the ring , and let be the quotient map. Given any ring , the map is an injection onto the set of all satisfying . In other words, we can identify with the set .   "
+},
+{
+  "id": "eg_ring_quot_homs",
+  "level": "2",
+  "url": "s_quot_ring.html#eg_ring_quot_homs",
+  "type": "Example",
+  "number": "2.54",
+  "title": "Quotient ring homomorphisms.",
+  "body": " Quotient ring homomorphisms   Let be a positive integer, and let be a ring. Prove that is either empty or a singleton.       "
+},
+{
+  "id": "th_ring_isom_theorems",
+  "level": "2",
+  "url": "s_quot_ring.html#th_ring_isom_theorems",
+  "type": "Theorem",
+  "number": "2.55",
+  "title": "Isomorphism theorems for rings.",
+  "body": " Isomorphism theorems for rings   Let be a ring.   First isomorphism theorem  Given a ring homomorphism with kernel , we have via the isomorphism .    Second isomorphism theorem  Given a subring and ideal , is a subring of , is an ideal of , and .    Third isomorphism theorem  Let be a surjective ring homomorphism. If is an ideal of containing , then is an ideal of , and we have . In particular, considering the quotient map , we see that if is a chain of ideals in , then is an ideal of , and we have     Fourth isomorphism theorem  Let be a surjective ring homomorphism. The map is a bijection between the set of ideals of that contain and the set of ideals of , with inverse given by . Moreover, this bijection preserves just about all ideal operations and relations: , inclusion, intersection, sum, product, .          "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
