@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_quot_ring" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Quotient rings and isomorphism theorems</title>
+    <p>
+        The definition of a quotient ring is a straightforward generalization of the ring structure we defined for modular rings <m>\Z/m\Z</m> in <xref ref="s_mod_rings"/>.
+        Since an ideal <m>I</m> of a ring <m>R</m> is in particular a subgroup of <m>(R,+)</m>, and a normal one at that (since <m>(R,+)</m> is abelian), we can form the coset space
+        <md>
+            <mrow>R/I=\{r+I\mid r\in R\} \amp </mrow>
+        </md>,
+        which comes equipped with a well-defined addition operation
+        <md>
+            <mrow>(r+I)+(s+I) \amp = (r+s)+I</mrow>
+        </md>.
+        Not surprisingly there is also a well-defined multiplication that can be defined on <m>R/I</m>: 
+        <md>
+            <mrow>(r+I)\cdot (s+I) \amp = rs+I</mrow>
+        </md>.
+        Let's see why this is well defined: 
+        <md>
+            <mrow>r+I=r'+I, s+I=s'+I \amp \implies r'=r+i, s'=s+j \text{ for some } i,j\in I</mrow>
+            <mrow> \amp \implies r's'=rs+rj+is+ij</mrow>
+            <mrow> \amp \implies r's'=rs+k, k=rj+is+ij\in I</mrow>
+            <mrow> \amp \implies rs+I=r's'+I</mrow>
+        </md>.
+        As usual, once we know the two operations <m>+</m> and <m>\cdot</m> are well defined on <m>R/I</m>, the fact that they satisfy the ring axioms follows almost immediately from their being defined in terms of the operations of <m>R</m>. 
+    </p>
+    <activity xml:id="spec_quot_ring">
+    <title>Quotient ring</title>
+    <statement>
+    <p>
+    Let <m>I</m> be an ideal of the ring <m>R</m>. We define binary operations <m>+</m> and <m>\cdot</m> on <m>R/I</m> as follows: 
+    <md>
+        <mrow>(r+I)+(s+I) \amp = (r+s)+I</mrow>
+        <mrow>(r+I)\cdot (s+I) \amp =rs+I</mrow>
+    </md>.
+    The triple <m>(R/I,+,\cdot)</m> is a ring, called the <term>quotient ring</term> of <m>R</m> by <m>I</m>. Its additive identity is <m>0=0+I</m>, and its multiplciative identity is <m>1=1+I</m>. 
+    </p>
+    </statement>
+    </activity>
+    <example xml:id="eg_modular_rings">
+    <title>Modular rings</title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. Show that the ring <m>\Z/n\Z</m> is equal to the quotient ring <m>\Z/I</m>, where <m>I=\angvec{n}=\{kn\mid k\in \Z\}</m>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have seen previously that as a group, <m>\Z/n\Z</m> is equal to the quotient group <m>\Z/\angvec{n}</m>. Moreover, it is clear that the coset multiplication operation is identical to the modular multiplication operation defined in <xref ref="s_mod_rings"/>. Thus the two rings are identical.
+    </p>
+    </solution>
+    </example>
+    <p>
+        The connection between ring quotients and group quotients is strong. Indeed, by definition a ring quotient is equal to the group quotient <m>R/I</m>, thinking of <m>I</m> as a subgroup of <m>(R,+)</m>, together with an extra layer of strucutre coming from the coset multiplication. It is not all that surprising, then, that ring quotients enjoy many of the same properties as group quotients, starting with a universal mapping property. 
+    </p>
+    <theorem xml:id="th_ring_quot_map">
+    <title>Quotient map: universal property</title>
+    <statement>
+    <p>
+    Let <m>I</m> be an ideal of the ring <m>R</m>, and let <m>\pi\colon R\rightarrow R/I</m> be the corresponding quotient map. Given any ring homomorphism <m>\phi\colon R\rightarrow S</m> satisfying <m>I\subseteq \ker \phi</m>, there exists a unique ring homomorphism <m>\overline{\phi}\colon R/I\rightarrow S</m> satisfying 
+    <men xml:id="eq_ring_quot_universal_commute">
+        \overline{\phi}\circ \pi=\phi
+    </men>.
+     Moreover, <m>\overline{\phi}</m> is defined as
+        <men xml:id="eq_ring_quot_map_universal">
+            \overline{\phi}(r+I)=\phi(r)
+        </men>.
+        for all <m>r+I\in R/I</m>. 
+    </p>
+    <p>
+        In short, there is a unique homomorphism <m>\overline{\phi}</m> making the diagram below commutative. 
+    </p>
+    <figure xml:id="fig_ring_quot_univ_prop">
+        <caption>Universal property of quotient map</caption>
+    
+    <image width="30%">
+        <shortdescription>Universal property of quotient map</shortdescription>
+        <latex-image>
+        \begin{tikzcd}
+        R \arrow[rr,"\phi"] \arrow[dr,"\pi"'] \amp \amp S\\
+        \amp R/I \arrow[ru, "\exists\, ! \,\overline{\phi}"', dotted]
+        \end{tikzcd}
+        </latex-image>
+    </image>
+    </figure>
+    </statement>
+    <proof>
+    <p>
+        We get most of this result for free from <xref ref="th_quot_map"/>. The only thing we need to be careful about is that all maps in question satisfy the additional ring homomorphism axioms (ii) and (iii) from <xref ref="d_ring_homo"/>, and this is straightforward. 
+    </p>
+    </proof>
+    </theorem>
+    <p>
+        The following corollary is simply a compact restatement of <xref ref="th_ring_quot_map"/> using the language of <m>\Hom(R,S)</m> and can be handy for computing the set of homomorphisms between rings. 
+    </p>
+    <corollary xml:id="cor_quot_ring_map">
+        <title>Quotient ring homomorphisms</title>
+        <statement>
+            <p>
+                Let <m>I</m> be an ideal of the ring <m>R</m>, and let <m>\pi\colon R\rightarrow R/I</m> be the quotient map. Given any ring <m>S</m>, the map 
+                <md number="yes">
+                    <mrow>\Hom(R/I,S) \amp\rightarrow \Hom(R,S)</mrow>
+                    <mrow>\overline{\phi} \amp \mapsto \overline{\phi}\circ \pi</mrow>                    
+                </md>
+                is an injection onto the set of all <m>\phi\in \Hom(R,S)</m> satisfying <m>I\subseteq \ker \phi</m>. In other words, we can identify <m>\Hom(R/I, S)</m> with the set 
+                <md>
+                    <mrow>\{\phi\in \Hom(R,S)\mid I\subseteq \ker\phi\} \amp </mrow>
+                </md>.
+            </p>
+        </statement>
+    </corollary>
+    <example xml:id="eg_ring_quot_homs">
+    <title>Quotient ring homomorphisms</title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer, and let <m>S</m> be a ring. Prove that <m>\Hom(\Z/n\Z, S)</m> is either empty or a singleton. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+        Of course, we also get an analogue of the isomorphism theorems for rings. We state them here without proof, and in somewhat terse fashion. Notice that some things are simplified by the fact that the normality issue does not arise (since <m>(R,+)</m> is an abelian group). 
+    </p>
+    <theorem xml:id="th_ring_isom_theorems">
+    <title>Isomorphism theorems for rings</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring.
+    <ol>
+        <li>
+            <title>First isomorphism theorem</title>
+            <p>
+                Given a ring homomorphism <m>\phi\colon R\rightarrow S</m> with kernel <m>I=\ker\phi</m>,  we have <m>R/I\cong S</m> via the isomorphism <m>\overline{\phi}(r+I)=\phi(r)</m>.
+            </p>
+        </li>
+        <li>
+            <title>Second isomorphism theorem</title>
+            <p>
+                Given a subring <m>S\subseteq R</m> and ideal <m>I\subseteq R</m>, <m>S+I</m> is a subring of <m>R</m>, <m>S\cap I</m> is an ideal of <m>S</m>, and <m>(S+I)/I\cong S/S\cap I</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Third isomorphism theorem</title>
+            <p>
+                Let <m>\phi\colon R\rightarrow S</m> be a surjective ring homomorphism. If  <m>J</m> is an ideal of <m>R</m> containing <m>\ker \phi</m>, then <m>\phi(J)</m> is an ideal of <m>S</m>, and we have 
+                <md>
+                    <mrow>R/J \amp \cong S/\phi(J)</mrow>
+                </md>.
+                In particular, considering the quotient map <m>\pi\colon R\rightarrow R/I</m>, we see that if <m>I\subseteq J</m> is a chain of ideals in <m>R</m>, then <m>J/I</m> is an ideal of <m>R/I</m>, and we have 
+                <md>
+                    <mrow>(R/I)/(J/I)\amp \cong R/J</mrow>
+                </md>
+            </p>
+        </li>
+        <li>
+            <title>Fourth isomorphism theorem</title>
+            <p>
+                Let <m>\phi\colon R\rightarrow S</m> be a surjective ring homomorphism. The map 
+                <md>
+                    <mrow>J \amp \mapsto \phi(J)</mrow>
+                </md>
+                is a bijection between the set of ideals of <m>R</m> that contain <m>\ker\phi</m> and the set of ideals of <m>S</m>, with inverse given by 
+                <md>
+                    <mrow>J'\subseteq S \amp \mapsto \phi^{-1}(J')</mrow>
+                </md>.
+                Moreover, this bijection preserves just about all ideal operations and relations: <eg/>, inclusion, intersection, sum, product, <etc/>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    
+    
+    
+
+</section>
