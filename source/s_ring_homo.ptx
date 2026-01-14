@@ -328,7 +328,23 @@ If <m>A=\{a_1,a_2,\dots, a_n\}</m>, we wite <m>(A)=(a_1,a_2,\dots, a_n)</m> for 
         </p>
     </statement>
 </proposition>
-
+<corollary xml:id="cor_gen_ideal_kernel">
+    <title>Generated ideals and kernels</title>
+    <statement>
+        <p>
+            Let <m>\phi\colon R\rightarrow S</m> be a ring homomorphism. For any set <m>A\subseteq R</m>, we have <m>(A)\subseteq \ker\phi</m> if and only if <m>\phi(a)=0</m> for all <m>a\in A</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Since <m>\ker\phi</m> is an ideal of <m>R</m>,  we have 
+            <md>
+                <mrow>(A)\subseteq \ker\phi \amp  \iff A\subseteq \ker\phi \amp (<xref ref="prop_generated_ideals" text="global"/>)</mrow>
+                <mrow> \amp \iff \phi(a)=0 \text{ for all } a\in A</mrow>
+            </md>.
+        </p>
+    </proof>
+</corollary>
 <example xml:id="eg_ideals_integers">
 <title>Ideals of <m>\Z</m></title>
 <statement>

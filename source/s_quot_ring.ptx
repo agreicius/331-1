@@ -135,7 +135,7 @@
         <li>
             <title>First isomorphism theorem</title>
             <p>
-                Given a ring homomorphism <m>\phi\colon R\rightarrow S</m> with kernel <m>I=\ker\phi</m>,  we have <m>R/I\cong S</m> via the isomorphism <m>\overline{\phi}(r+I)=\phi(r)</m>.
+                Given a ring homomorphism <m>\phi\colon R\rightarrow S</m> with kernel <m>I=\ker\phi</m>,  we have <m>R/I\cong im\phi</m> via the isomorphism <m>\overline{\phi}(r+I)=\phi(r)</m>.
             </p>
         </li>
         <li>
@@ -179,6 +179,77 @@
     </p>
     </proof>
     </theorem>
+    <example xml:id="eg_first_isom_complex">
+    <title>First isomorphism theorem</title>
+    <statement>
+    <p>
+    Identify the quotient <m>\R[x]/(x^2+1)</m> up to isomorphism with a familiar ring using the first isomorphism theorem.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We claim that <m>\R[x]/(x^2+1)\cong \C</m>. Define <m>\phi\colon \R[x]\rightarrow \C</m> as <m>\phi(f)=f(i)</m>: <ie/>, <m>\phi</m> is the evaluation at <m>i</m> map, thinking of <m>\R</m> as a subring of <m>\C</m>. This a ring homomorphism according to <xref ref="spec_poly_ring_homo"/>, and is easily seen to be surjective, since <m>a+bi=\phi(a+bx)</m> for any <m>a,b\in \R</m>. We claim that <m>\ker\phi=(x^2+1)</m>. Indeed, we see that 
+    <md number="yes">
+        <mrow>\phi(x^2+1) \amp =i^2+1=-1+1=0</mrow>
+    </md>.
+    Thus <m>x^2+1\in \ker\phi</m>. It follows from <xref ref="cor_gen_ideal_kernel"/> that <m>(x^2+1)\subseteq \ker\phi</m>. Conversely, suppose <m>f\in \ker\phi</m>, and thus <m>f(i)=0</m>. Applying polynomial division (with remainder), we can write 
+    <md number="yes">
+        <mrow>f(x) \amp =q(x)(x^2+1)+r(x)</mrow>
+    </md>,
+    where <m>\deg r(x)&lt; 2</m>, and thus <m>r(x)=ax+b</m> for some <m>a,b\in \R</m>. Applying <m>\phi</m>, we conclude that 
+    <md>
+        <mrow>0 \amp =\phi(f)</mrow>
+        <mrow> \amp =\phi(q(x))\phi(x^2+1)+\phi(r(x)) \amp (\text{ring homo. props.})</mrow>
+        <mrow> \amp =\phi(r(x)) \amp (\phi(x^2+1)=0)</mrow>
+        <mrow> \amp =r(i)</mrow>
+        <mrow> \amp =a+bi</mrow>
+    </md>.
+    But in <m>\C</m>, we have <m>a+bi=0</m>, <m>a,b\in \R</m>, if and only if <m>a=b=0</m>. Thus <m>r(x)=0</m>, and we see that <m>f(x)=q(x)(x^2+1)\in (x^2+1)</m>. Thus <m>\ker\phi=(x^2+1)</m>, and we conclude that 
+    <md>
+        <mrow>\R[x]/(x^2+1) \amp =R[x]/\ker\phi\cong \C</mrow>
+    </md>,
+    by the first isomorphism theorem. 
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_ideals_modularring">
+    <title>Ideals of <m>\Z/n\Z</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. Use the fourth isomorphism to describe the ideals of <m>\Z/n\Z</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have <m>\Z/n\Z=\Z/I</m>, where <m>I=(n)</m>. Let <m>\pi\colon \Z\rightarrow \Z/I</m> be the quotient map. We have <m>\ker\pi=(n)</m>. By the fourth isomorphism theorem, the ideals of <m>\Z/n\Z</m> are in bijective correspondence with the ideals of <m>\Z</m> that contain <m>(n)</m>. A previous result tells us that these are precisely ideals of the form <m>(a)</m>, where <m>a\geq 0</m> and <m>a\mid n</m>. Since the bijection is given by <m>J\mapsto \pi(J)</m>, we see that the ideals of <m>\Z/n\Z</m> are preciseley those of the form <m>(\overline{a})</m>, where <m>a\geq 0</m> and <m>a\mid n</m>. In particular, all ideals of <m>\Z/n\Z</m> are principal, and there are finitely many of them. 
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_images_modular_ring">
+    <title>Quotients of <m>\Z/n\Z</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. Determine, up to isomorphism, all the quotients of <m>\Z/n\Z</m> by an ideal. Your answers should be expressed as familiar rings. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Let <m>I=(n)</m>, so that <m>\Z/n\Z=\Z/I</m>. From the previous example, the ideals of <m>\Z/n\Z</m> are precisely those of the form <m>(\overline{a})</m>, where <m>a\geq 0</m> and <m>a\mid n</m>. Furthermore we have for any such <m>a</m>,
+    <md>
+        <mrow>(\overline{a}) \amp = \pi(J)=J/I</mrow>
+    </md>,
+    where <m>J=(a)</m>. We conclude from the third isomorphism theorem that 
+    <md>
+        <mrow>(\Z/n\Z)/(\overline{a}) \amp = (\Z/I\Z)/(J/I)</mrow>
+        <mrow> \amp \cong \Z/J </mrow>
+        <mrow> \amp = \Z/a\Z</mrow>
+    </md>.
+    Thus, up to isomorphism, the quotients of <m>\Z/n\Z</m> are precisely the rings <m>\Z/a\Z</m>, where <m>a\geq 0</m> and <m>a\mid n</m>. 
+    </p>
+    </solution>
+    </example>
+    
+    
     
     
     
