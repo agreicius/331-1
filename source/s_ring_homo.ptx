@@ -345,6 +345,7 @@ If <m>A=\{a_1,a_2,\dots, a_n\}</m>, we wite <m>(A)=(a_1,a_2,\dots, a_n)</m> for 
         </p>
     </proof>
 </corollary>
+
 <example xml:id="eg_ideals_integers">
 <title>Ideals of <m>\Z</m></title>
 <statement>
