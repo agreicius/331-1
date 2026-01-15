@@ -8,5 +8,5 @@
 <xi:include href="s_quaternions.ptx" />
 <xi:include href="s_ring_homo.ptx" />
 <xi:include href="s_quot_ring.ptx" />
-
+<xi:include href="s_prime_maximal.ptx" />
 </chapter>

@@ -120,6 +120,8 @@
     </p>
     </statement>
     </activity>
+    
+    
     <activity xml:id="spec_poly_ring_homo">
     <title>Polynomial ring homomorphisms</title>
     <statement>
@@ -368,6 +370,21 @@ gives a bijective correspondence between nonnegative integers of <m>\Z</m> and i
 </p>
 </solution>
 </example>
+<p>
+    Recall that for any ring <m>R</m>, there is a unique ring homomorphism <m>\phi\colon \Z\rightarrow R</m>: namely, <m>\phi(n)=n\cdot 1_R</m> for all <m>n\in R</m>. We can define the <term>characteristic</term> of a ring using this homomorphism. 
+</p>
+<definition xml:id="d_characteristic_ring">
+    <title>Characteristic of a ring</title>
+    <notation>
+        <usage><m>\char R</m></usage>
+      <description>characteristic of the ring <m>R</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero ring. The <term>characteristic</term> of <m>R</m>, denoted <m>\char R</m>, is defined as the nonnegative integer <m>n</m> such that <m>\ker \phi = (n)</m>, where <m>\phi\colon \Z\rightarrow R</m> is the unique ring homomorphism from <m>\Z</m> to <m>R</m>. Equivalently, <m>\char R</m> is either the smallest positive integeger <m>n</m> satisfying <m>n\cdot 1_R=0</m>, or 0 if no such integer exists. 
+    </p>
+    </statement>
+    </definition>
 <example xml:id="eg_ideals_division_rings">
 <title>Ideals of division rings</title>
 <statement>
@@ -407,7 +424,7 @@ Left as homework exercise.
 <title>Simple ring</title>
 <statement>
 <p>
-A ring <m>R</m> is <term>simple</term> if its only ideals are <m>\{0\}</m> and <m>R</m>. 
+A nonzero ring <m>R</m> is <term>simple</term> if its only ideals are <m>\{0\}</m> and <m>R</m>. 
 </p>
 </statement>
 </definition>

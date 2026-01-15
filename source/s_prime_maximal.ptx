@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_prime_maximal" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Prime and maximal ideals</title>
+
+    <subsection xml:id="ss_zorn">
+    <title>Zorn's lemma</title>
+    <p>
+        We begin this section fumbling around in the foundations of set theory. The immediate motivation for our foray into the murky depths of mathematics is our needing <em>Zorn's lemma</em> to prove the existence of maximal ideals in rings. Beyond that, however, <em>partially ordered sets</em> are ubiquitous in mathematics and well worth a formal introduction. 
+    </p>
+    <definition xml:id="d_partial_order">
+    <title>Partial order</title>
+    <statement>
+    <p>
+    A <term>partial order</term> on a nonempty set <m>X</m> is a binary relation <m>\leq</m> satisfying the following properties. 
+    <ol marker="(i)">
+        <li>
+            <title>Reflexivity</title>
+            <p>
+                <m>x\leq x</m> for all <m>x\in X</m>
+            </p>
+        </li>
+        <li>
+            <title>Antisymmetry</title>
+
+            <p>
+                If <m>x\leq y</m> and <m>y\leq x</m>, then <m>x=y</m>.
+            </p>
+        </li>
+        <li>
+            <title>Transitivity</title>
+            <p>
+                If <m>x\leq y</m> and <m>y\leq z</m>, then <m>x\leq z</m>. 
+            </p>
+        </li>
+    </ol>
+    A <term>partially ordered set</term> (or <term>POSET</term>) is a pair <m>(X,\leq)</m> where <m>\leq</m> is a partial order on <m>X</m>. 
+</p>
+<p>
+    Let <m>(X,\leq)</m> be a POSET. A subset <m>Y\subseteq X</m> is <term>totally ordered</term> (or a <term>chain</term>) with respect to <m>\leq</m> if for all <m>x,y\in Y</m>, either <m>x\leq y</m> or <m>y\leq x</m>. An <term>upper bound</term> of <m>Y</m> is an element <m>u\in X</m> such that <m>u\geq y</m> for all <m>y\in Y</m>.  An element <m>m\in Y</m> is a <term>maximal element</term> of <m>Y</m> if <m>m\leq y</m> implies <m>m=y</m> for all <m>y\in Y</m>; similarly, <m>m</m> is a <term>minimal element</term> of <m>Y</m> if <m>y\leq m</m> implies <m>m=y</m> for all <m>y\in Y</m>.
+</p>
+    </statement>
+    </definition>
+    
+    <theorem xml:id="th_zorns_lemma">
+    <title>Zorn's lemma</title>
+    <statement>
+    <p>
+        If <m>(X,\leq)</m> is a POSET for which every totally ordered subset has an upper bound, then <m>X</m> has a maximal element.  
+    </p>
+    </statement>
+    <proof>
+    <p>
+        Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most set theory textbooks. 
+    </p>
+    </proof>
+    </theorem>
+    <remark>
+    <title><q>Totally ordered</q> versus <q>chain</q></title>
+    <p>
+    We prefer the term <q>totally ordered</q> to <q>chain</q>, as the latter connotes a <em>countable</em> set. This is important, as to verify the conditions of Zorn's lemma, we must consider <em>all</em> totally ordered subsets, countable or not. It is not enough to just look at countable totally ordered subsets <m>Y</m>.
+    </p>
+    </remark>
+
+    </subsection>
+    <subsection xml:id="ss_prime_max_ideals">
+    <title>Prime and maximal ideals</title>
+    <definition xml:id="d_maximal_ideal">
+    <title>Maximal ideal</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. An ideal <m>M</m> of <m>R</m> is <term>maximal</term> if <m>M\ne R</m> and if <m>M\subseteq I</m> for some ideal <m>I</m>, then either <m>M=I</m> or <m>I=R</m>. Using logical shorthand: an ideal <m>M</m> is maximal if <m>M\ne R</m> and 
+    <md number="yes">
+        <mrow xml:id="eq_maximal_ideal">M\subseteq I \amp \implies M=I \text{ or } I=R </mrow>
+    </md>.
+    Equivalently, <m>M</m> is a maximal element of the set of all proper ideals of <m>R</m> with respect to the partial order <m>\subseteq</m>. 
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_division_ring">
+    <title>Division ring</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a division ring. Prove that <m>(0)</m> is the only maximal ideal of <m>R</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Indeed, <m>(0)</m> is the <em>only</em> proper ideal of <m>R</m>, since if an <m>I</m> contains a nonzero element <m>a</m>, then since <m>a</m> is a unit it follows easily that <m>I=R</m>. Thus <m>(0)</m> is maximal. 
+    </p>
+    </solution>
+    </example>
+    
+    <example xml:id="eg_maximal_ideals_M_nF">
+    <title>Maximal ideals of <m>M_n(F)</m></title>
+    <statement>
+    <p>
+    Let <m>F</m> be a field, and let <m>n</m> be a positive integer. Prove that <m>(0)</m> is a maximal ideal of <m>M_n(F)</m>.  
+    </p>
+    </statement>
+    <solution>
+    <p>
+    You have shown on your homework that the only ideals of <m>M_n(F)</m> are of the form <m>M_n(I)</m> where <m>I</m> is an ideal of <m>F</m>. Since the only ideals of <m>F</m> are <m>(0)</m> and <m>F</m>, it follows that <m>M_n((0))=(0)</m> is the only proper ideal of <m>M_n(F)</m>, and hence maximal. 
+    </p>
+    </solution>
+    </example>
+    
+    <example xml:id="eg_max_ideals_Z">
+    <title>Maximal ideals of <m>\Z</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a nonnegative integer. Prove that the ideal <m>(n)</m> is maximal if and only if <m>(n)=(p)</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have 
+    <md number="yes">
+        <mrow>(n) \text{ maximal} \amp \iff (n)\subseteq (a) \implies (m)=(a) \text{ or } (a)=\Z  </mrow>
+        <mrow> \amp \iff a\mid n \implies a=\pm n \text{ or } a=\pm 1</mrow>
+        <mrow> \amp \iff n \prime</mrow> 
+    </md>.
+    </p>
+    </solution>
+    </example>
+    <p>
+        At the end of this section we will prove that maximal ideals exist in any ring using Zorn's lemma. Before getting to that, however, we first introduce prime ideals and relate these to maximal ideals. 
+        The theory of prime ideals can be developed for any ring, commutative or not, but for simplicity, we will restrict our attention to commutative rings. 
+    </p>
+    <definition xml:id="d_prime_ideal">
+    <title>Prime ideal</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a commutative ring. An ideal <m>P</m> of <m>R</m> is <term>prime</term> if <m>P\ne R</m> and the following condition holds: for all <m>a,b\in R</m>, if <m>ab\in P</m>, then <m>a\in P</m> or <m>b\in P</m>. Using logical shorthand: <m>P</m> is prime if <m>P\ne R</m> and 
+    <md number="yes">
+        <mrow xml:id="eq_prime_ideal">ab\in P \amp \implies a\in P \text{ or } b\in P</mrow>
+    </md>.
+    </p>
+    </statement>
+    </definition>
+    <p>
+        The next theorem will help us identify prime and maximal ideals, and places both types of ideals in a common framework. Note that we include a useful criterion for maximal ideals that holds for all rings, commutative or not, in the form of statement (1). We take pains to emphasize that the remaining statements include the condition that the ring is commutative.  
+    </p>
+    <theorem xml:id="th_prime_maximal_ideals">
+    <title>Prime and maximal ideals</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. 
+    <ol>
+        <li>
+            <p>
+                An ideal <m>M</m> of <m>R</m> is maximal if and only if <m>R/M</m> is simple.
+            </p>
+        </li>
+        <li>
+            <p>
+                Assume <m>R</m> is commutative.  An ideal <m>P</m> of <m>R</m> is prime if and only if <m>R/P</m> is an integral domain. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Assume <m>R</m> is commutative.  An ideal <m>M</m> of <m>R</m> is maximal if and only if <m>R/M</m> is a field. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Assume <m>R</m> is commutative. All maximal ideals of <m>R</m> are prime ideals. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    By the fourth isomorphism theorem, the ideals of <m>R/M</m> are in bijective correspondence with the ideals of <m>R</m> containing <m>M</m>. The result now follows immediately from the definitions of maximal ideal and simple ring. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    We have <m>R/P</m> integral if and only if <m>(a+P)(b+P)=0+P=P</m> implies <m>a+P=P</m> or <m>b+P=P</m> for all <m>a,b\in R</m> if and only if <m>ab+P=P</m> implies <m>a+P=P</m> or <m>b+P</m> for all <m>a,b\in R</m>, if and only if <m>ab\in P</m> implies <m>a\in P</m> or <m>b\in P</m> for all <m>a,b\in R</m>, if and only if <m>P</m> is prime.
+                </p>
+            </li>
+            <li>
+                <p>
+                    From (1), <m>M</m> is maximal if and only if <m>R/M</m> is simple. It is easy to see that for commutative rings, simple is equivalent to being a field. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Since all fields are integral domains, <m>(2)</m> and <m>(3)</m> now imply that all maximal ideals are prime. 
+                </p>
+            </li>
+        </ol>
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_prime_max_integers">
+    <title>Prime and maximal ideals of <m>\Z</m></title>
+    <statement>
+    <p>
+    Let <m>n</m> be a positive integer. Show that the following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>(n)</m> is prime.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(n)</m> is maximal.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>n=p</m> is a prime integer.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    We have seen previously that for positive <m>n</m>, the ring <m>\Z/n\Z</m> is an integral domain if and only if it is a field, if and only if <m>n=p</m> is a prime integer. The result now follows from <xref ref="th_prime_maximal_ideals"/>. 
+    </p>
+    </solution>
+    </example>
+    <remark>
+        <title>Prime integers</title>
+        <p>
+            From the equivalence of (1) and (3) in <xref ref="th_prime_maximal_ideals"/>, it follows that a positive integer <m>n</m> is a prime integer if and only if <m>(n)</m> is a prime ideal, if and only if <m>n\mid ab</m> implies <m>n\mid a</m> or <m>n\mid b</m> for all integers <m>a,b</m>. We have thus derived, in a roundabout way, an equivalent formulation of being prime. (Recall that our original definition of a prime integer is one that has exactly two positive divisors: 1 and itself.) We will study the notion of a prime elements in arbitrary commutative rings down the line, and will in fact adopt this alternate formulation as our definition. 
+        </p>
+    </remark>
+    
+    
+    </subsection>
+</section>
