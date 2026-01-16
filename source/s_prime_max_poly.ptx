@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_prime_max_poly" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Case study: polynomial rings</title>
+    <introduction>
+        <p>
+        The integers furnish us with a nice example where we can completely analyze a rings ideal structure, including its prime and maximal ideals, as well as its quotients. In this section we will look at another case study: polynomial rings <m>F[x]</m>, where <m>F</m> is a field. As you will see, the ideal structure of <m>F[x]</m> has many similarities with that of the integers. We will see later that these similarities are the result of a deeper similarity between the two rings: namely, that both are examples of <em>Euclidean domains</em>. Our discussion will also include concrete descriptions of the quotients of polynomial rings <m>F[x]</m>, which in turn provide us with many new examples of rings to work. In particular, the construction of fields as quotients <m>F[x]/M</m> where <m>M</m> is a maximal ideal will play an important role in our development of field theory in Math 331-3. 
+    </p>
+    </introduction>
+    <subsection xml:id="ss_div_alg">
+    <title>Division algorithm for polynomials</title>
+    <p>
+        Although we will mainly be interested in polynomial rings over fields, we begin with a useful result that applies to general polynomial rings. 
+    </p>
+    <theorem xml:id="th_div_alg_poly">
+    <title>Division algorithm for polynomials</title>
+    <statement>
+    <p>
+     Let <m>R</m> be a nontrivial commutative ring, and let <m>f\in R[x]</m> be a nonzero polynomial whose leading coefficient is a unit: <ie/>, we have <m>f(x)=\anpoly</m>, where <m>a_n\in R^*</m>. Given a polynomial <m>g\in R[x]</m>, there is a unique pair of polynomials <m>(q,r)\in R[x]\times R[x]</m> satisfying the following properties. 
+     <ol>
+        <li>
+            <p>
+                <m>g=qf+r</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\deg r&lt; \def f</m>.
+            </p>
+        </li>
+     </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        We need to prove two things: that given any <m>g</m> there are polynomials <m>q,r</m> satisfying properties (i) and (ii), and furthermore that the pair <m>(q,r)</m> is unique. 
+    </p>
+    <p>
+        We begin with existence. Let <m>X</m> be the set of all pairs of polynomials <m>(q',r')</m> satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair <m>(q,r)\in X</m> that also satisfies (ii).  Observe that <m>X</m> is nonempty, since in particular it contains the pair <m>(0,g)</m>. If <m>(q,0)\in X</m>, then this pair satisfies (ii) since <m>\deg 0=-\infty&lt; \deg f</m> (<m>f</m> being a nonzero polynomial). Otherwise, let <m>(q,r)</m> be an element of <m>X</m> for which <m>r</m> has minimal finite degree. (Such a pair exists since the set <m>\{\deg r'\mid (q',r')\in X\}</m> is a nonempty subset of <m>\Z_{\geq 0}</m>, and hence has a minimal element.)
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_">
+    <title></title>
+    <statement>
+    <p>
+    
+    </p>
+    </statement>
+    </definition>
+    
+    </subsection>
+
+</section>
