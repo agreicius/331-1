@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.77</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximal ideals exist.</span>
+</h5>
+<div class="para">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(I\)</span> be a proper ideal of <span class="process-math">\(R\)</span> (i.e., <span class="process-math">\(I\ne R\)</span>). There exists a maximal ideal <span class="process-math">\(M\)</span> of <span class="process-math">\(R\)</span> containing <span class="process-math">\(I\text{.}\)</span> In particular, if <span class="process-math">\(R\)</span> is nonzero, then <span class="process-math">\(R\)</span> contains a maximal ideal.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.77: Maximal ideals exist"><a href="#th_max_ideals_exist" title="Copy heading and permalink for Theorem 2.77: Maximal ideals exist" aria-label="Copy heading and permalink for Theorem 2.77: Maximal ideals exist">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para">First observe that the second statement follows from the first by taking the ideal <span class="process-math">\(I=(0)\text{:}\)</span> a maximal ideal containing <span class="process-math">\((0)\)</span> is the same thing as a maximal ideal.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now let <span class="process-math">\(I\)</span> be a proper ideal of <span class="process-math">\(R\text{,}\)</span> and let <span class="process-math">\(X\)</span> be the set of all proper ideals of <span class="process-math">\(R\)</span> containing <span class="process-math">\(I\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+X \amp =\{J\subseteq R\mid J \text{ a proper ideal}, I\subseteq J\}\text{.}
+\end{align*}
+</div>
+<div class="para">Note that <span class="process-math">\(X\)</span> is nonempty since <span class="process-math">\(I\in X\text{.}\)</span> The binary relation given by set inclusion <span class="process-math">\(\subseteq\)</span> gives <span class="process-math">\(X\)</span> the structure of a POSET. We use Zorn’s lemma to show that <span class="process-math">\(X\)</span> has a maximal element with respect to <span class="process-math">\(\subseteq\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Consider any subset <span class="process-math">\(Y\subseteq X\)</span> that is totally ordered with respect to <span class="process-math">\(\subseteq\text{.}\)</span> We must show that <span class="process-math">\(Y\)</span> has an upper bound in <span class="process-math">\(X\text{.}\)</span> To this end we let</div>
+<div class="displaymath process-math">
+\begin{align*}
+J^* \amp =\bigcup_{J\in Y}J\text{.}
+\end{align*}
+</div>
+<div class="para">It is clear that <span class="process-math">\(J\subseteq J^*\)</span> for all <span class="process-math">\(J\in Y\text{,}\)</span> so it remains to show that <span class="process-math">\(J^*\in X\text{:}\)</span> that is, we must show that (i) <span class="process-math">\(J^*\)</span> is an ideal containing <span class="process-math">\(I\text{,}\)</span> and (ii) <span class="process-math">\(J^*\ne R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(I\subseteq J\)</span> for all <span class="process-math">\(J\in Y\text{,}\)</span> and since <span class="process-math">\(J^*\)</span> is the union of all such ideals, we have <span class="process-math">\(I\subseteq J^*\text{.}\)</span>  To show <span class="process-math">\(J^*\)</span> is an ideal, we must show that it is a subgroup of <span class="process-math">\((R,+)\)</span> and is closed under left and right multiplication by elements of <span class="process-math">\(R\text{.}\)</span> Since <span class="process-math">\(I\subseteq J^*\text{,}\)</span> we have <span class="process-math">\(0\in J^*\text{.}\)</span> Now take <span class="process-math">\(a,b\in J^*\text{.}\)</span> By definition we have <span class="process-math">\(a\in J\)</span> and <span class="process-math">\(b\in J'\)</span> for some ideals <span class="process-math">\(J,J'\in Y\text{.}\)</span> Since <span class="process-math">\(Y\)</span> is totally ordered, we have either <span class="process-math">\(J\subseteq J'\)</span> or <span class="process-math">\(J'\subseteq\text{.}\)</span> Assuming without loss of generality that the first condition holds, we may assume that <span class="process-math">\(a,b\in J\text{.}\)</span> Since <span class="process-math">\(J\)</span> is an ideal it follows that</div>
+<div class="displaymath process-math">
+\begin{align*}
+-a\amp \in J \amp a+b\amp \in J \amp ab\amp \in J \text{,}
+\end{align*}
+</div>
+<div class="para">and thus that <span class="process-math">\(-a,a+b,ab\in J^*\text{.}\)</span> This shows that <span class="process-math">\(J^*\)</span> is an ideal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Next we show that <span class="process-math">\(J^*\ne R\text{.}\)</span> This is a consequence of the fact that in any ring <span class="process-math">\(J=R\)</span> for an ideal <span class="process-math">\(J\)</span> if and only if <span class="process-math">\(1\in J\text{.}\)</span> Since <span class="process-math">\(J\ne R\)</span> for all <span class="process-math">\(J\in Y\text{,}\)</span> it follows that <span class="process-math">\(1\notin J\)</span> for all <span class="process-math">\(J\in Y\text{,}\)</span> and hence that <span class="process-math">\(1\notin J^*\text{.}\)</span> Thus <span class="process-math">\(J^*\ne R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Having verified the conditions of Zorn’s lemma for all nonempty well-ordered subsets of <span class="process-math">\(X\text{,}\)</span> we conclude that <span class="process-math">\(X\)</span> has a maximal element <span class="process-math">\(M\text{.}\)</span> By definition <span class="process-math">\(M\ne R\)</span> and <span class="process-math">\(I\subseteq M\text{.}\)</span> We conclude our proof by showing that <span class="process-math">\(M\)</span> is maximal. Suppose <span class="process-math">\(M\subseteq J\)</span> for some proper ideal <span class="process-math">\(J\ne R\text{:}\)</span> then <span class="process-math">\(J\in X\)</span> by definition, and hence <span class="process-math">\(M=J\)</span> by maximality. Thus <span class="process-math">\(M\)</span> is a maximal ideal of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_max_ideals_exist-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.77.1"><a href="#th_max_ideals_exist-3" title="Copy heading and permalink for Proof 2.77.1" aria-label="Copy heading and permalink for Proof 2.77.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_prime_maximal.html#th_max_ideals_exist">in-context</a></span>
+</body>
+</html>
