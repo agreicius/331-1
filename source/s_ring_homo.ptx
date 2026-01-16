@@ -212,7 +212,8 @@
     </p>
     </solution>
     </example>
-    
+
+
     
 </subsection>
 <subsection xml:id="ss_ideals">
@@ -243,6 +244,20 @@ A subset <m>I</m> of <m>R</m> is a <term>left ideal</term> if it satisfies (i) a
 </p>
 </statement>
 </definition>
+<example xml:id="eg_trivial_ideals">
+<title>Trivial ideals</title>
+<statement>
+<p>
+Given a ring <m>R</m>, the sets <m>\{0\}</m> and <m>R</m> are easily seen to be ideals of <m>R</m>. We will call these <term>trivial ideals</term>. Additionally we will call an ideal <m>I</m> <term>nonzero</term> if <m>I\ne \{0\}</m>, and <term>proper</term> if <m>I\ne R</m>. 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
 <proposition xml:id="prop_ideals">
 <title>Ideals</title>
     <statement>
@@ -407,7 +422,7 @@ and thus that <m>I=D</m>.
 <title>Ideals of <m>M_n(R)</m></title>
 <statement>
 <p>
-Let <m>R</m> be comutative ring. Prove that all ideals of <m>M_n(R)</m> are of the form <m>M_n(I)</m> for some ideal <m>I\subseteq R</m>, where we define 
+Let <m>R</m> be commutative ring. Prove that all ideals of <m>M_n(R)</m> are of the form <m>M_n(I)</m> for some ideal <m>I\subseteq R</m>, where we define 
 <md>
     <mrow>M_n(I) \amp = \{[a_{ij}]\in M_n(R)\mid a_{ij}\in I\}</mrow>
 </md>.
@@ -428,6 +443,38 @@ A nonzero ring <m>R</m> is <term>simple</term> if its only ideals are <m>\{0\}</
 </p>
 </statement>
 </definition>
+<p>
+    From the previous examples, we see that fields, division rings more generally, and also matrix rings over fields are all examples of simple rings. One useful property of simple rings is that any nontrivial homomorphism out of a simple ring is injective. 
+</p>
+<proposition xml:id="prop_simple_ring_homo">
+    <title>Homomorphisms from simple rings</title>
+    <statement>
+        <p>
+            Let <m>R</m> be a simple ring. If <m>\phi\colon R\rightarrow S</m> is a ring homomorphism with <m>S</m> a nonzero ring, then <m>\phi</m> is injective. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Since <m>S</m> is nonzero, the ideal <m>\ker\phi</m> is not equal to <m>R</m>. It follows that <m>\ker\phi=(0)</m>, and hence that <m>\phi</m> is injective (by group homomorphism properties). 
+        </p>
+    </proof>
+</proposition>
+<p>
+    We end this section with an official definition of a ring algebra. 
+</p>
+
+<definition xml:id="d_algebra">
+<title><m>R</m>-algebra</title>
+<statement>
+<p>
+Let <m>R</m> be a commutative ring. An <term><m>R</m>-algebra</term> (or <term>algebra over <m>R</m></term>) is a nonzero ring <m>S</m> together with a ring homomorphism <m>\phi\colon R\rightarrow S</m> such that <m>\im\phi=\phi(R)</m> is contained in the center of <m>S</m> (<ie/>, elements of the subring <m>\phi(R)\subseteq S</m> commute with all elements of <m>S</m>). We write <m>S/R</m> to denote that <m>S</m> is an <m>R</m>-algebra. 
+</p>
+</statement>
+</definition>
+<p>
+    It is easy to see that our constructions <m>R\, G</m>, <m>M_n(R)</m>, <m>R[x]</m>, and <m>R[[x]]</m> are all examples of <m>R</m>-algebras. Furthermore,  in these examples, the corresponding ring homomorphism defining the <m>R</m>-algebra structure is injective, allowing us to identify <m>R</m> as a subring of the given <m>R</m>-algebra. This of course is not always the case, simply because a ring homomorphism need not be injective. However, it is always the case with algebras <m>S/F</m> where <m>F</m> is a field. This is because nontrivial ring homomorphisms <m>\phi\colon F\rightarrow S</m> are injective by <xref ref="prop_simple_ring_homo"/>
+</p>
+
 
 </subsection>
 </section>

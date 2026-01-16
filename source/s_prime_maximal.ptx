@@ -3,66 +3,7 @@
 <section xml:id="s_prime_maximal" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Prime and maximal ideals</title>
 
-    <subsection xml:id="ss_zorn">
-    <title>Zorn's lemma</title>
-    <p>
-        We begin this section fumbling around in the foundations of set theory. The immediate motivation for our foray into the murky depths of mathematics is our needing <em>Zorn's lemma</em> to prove the existence of maximal ideals in rings. Beyond that, however, <em>partially ordered sets</em> are ubiquitous in mathematics and well worth a formal introduction. 
-    </p>
-    <definition xml:id="d_partial_order">
-    <title>Partial order</title>
-    <statement>
-    <p>
-    A <term>partial order</term> on a nonempty set <m>X</m> is a binary relation <m>\leq</m> satisfying the following properties. 
-    <ol marker="(i)">
-        <li>
-            <title>Reflexivity</title>
-            <p>
-                <m>x\leq x</m> for all <m>x\in X</m>
-            </p>
-        </li>
-        <li>
-            <title>Antisymmetry</title>
-
-            <p>
-                If <m>x\leq y</m> and <m>y\leq x</m>, then <m>x=y</m>.
-            </p>
-        </li>
-        <li>
-            <title>Transitivity</title>
-            <p>
-                If <m>x\leq y</m> and <m>y\leq z</m>, then <m>x\leq z</m>. 
-            </p>
-        </li>
-    </ol>
-    A <term>partially ordered set</term> (or <term>POSET</term>) is a pair <m>(X,\leq)</m> where <m>\leq</m> is a partial order on <m>X</m>. 
-</p>
-<p>
-    Let <m>(X,\leq)</m> be a POSET. A subset <m>Y\subseteq X</m> is <term>totally ordered</term> (or a <term>chain</term>) with respect to <m>\leq</m> if for all <m>x,y\in Y</m>, either <m>x\leq y</m> or <m>y\leq x</m>. An <term>upper bound</term> of <m>Y</m> is an element <m>u\in X</m> such that <m>u\geq y</m> for all <m>y\in Y</m>.  An element <m>m\in Y</m> is a <term>maximal element</term> of <m>Y</m> if <m>m\leq y</m> implies <m>m=y</m> for all <m>y\in Y</m>; similarly, <m>m</m> is a <term>minimal element</term> of <m>Y</m> if <m>y\leq m</m> implies <m>m=y</m> for all <m>y\in Y</m>.
-</p>
-    </statement>
-    </definition>
     
-    <theorem xml:id="th_zorns_lemma">
-    <title>Zorn's lemma</title>
-    <statement>
-    <p>
-        If <m>(X,\leq)</m> is a POSET for which every totally ordered subset has an upper bound, then <m>X</m> has a maximal element.  
-    </p>
-    </statement>
-    <proof>
-    <p>
-        Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most set theory textbooks. 
-    </p>
-    </proof>
-    </theorem>
-    <remark>
-    <title><q>Totally ordered</q> versus <q>chain</q></title>
-    <p>
-    We prefer the term <q>totally ordered</q> to <q>chain</q>, as the latter connotes a <em>countable</em> set. This is important, as to verify the conditions of Zorn's lemma, we must consider <em>all</em> totally ordered subsets, countable or not. It is not enough to just look at countable totally ordered subsets <m>Y</m>.
-    </p>
-    </remark>
-
-    </subsection>
     <subsection xml:id="ss_prime_max_ideals">
     <title>Prime and maximal ideals</title>
     <definition xml:id="d_maximal_ideal">
@@ -109,7 +50,7 @@
     <title>Maximal ideals of <m>\Z</m></title>
     <statement>
     <p>
-    Let <m>n</m> be a nonnegative integer. Prove that the ideal <m>(n)</m> is maximal if and only if <m>(n)=(p)</m>. 
+    Let <m>n</m> be a nonnegative integer. Prove that the ideal <m>(n)</m> is maximal if and only if <m>n=p</m> is prime. 
     </p>
     </statement>
     <solution>
@@ -233,6 +174,152 @@
             From the equivalence of (1) and (3) in <xref ref="th_prime_maximal_ideals"/>, it follows that a positive integer <m>n</m> is a prime integer if and only if <m>(n)</m> is a prime ideal, if and only if <m>n\mid ab</m> implies <m>n\mid a</m> or <m>n\mid b</m> for all integers <m>a,b</m>. We have thus derived, in a roundabout way, an equivalent formulation of being prime. (Recall that our original definition of a prime integer is one that has exactly two positive divisors: 1 and itself.) We will study the notion of a prime elements in arbitrary commutative rings down the line, and will in fact adopt this alternate formulation as our definition. 
         </p>
     </remark>
+    <subsection xml:id="ss_zorn">
+    <title>Zorn's lemma</title>
+    <p>
+        We begin this section fumbling around in the foundations of set theory. The immediate motivation for our foray into the murky depths of mathematics is our needing <em>Zorn's lemma</em> to prove the existence of maximal ideals in rings. Beyond that, however, <em>partially ordered sets</em> are ubiquitous in mathematics and well worth a formal introduction. 
+    </p>
+    <definition xml:id="d_partial_order">
+    <title>Partial order</title>
+    <statement>
+    <p>
+    A <term>partial order</term> on a nonempty set <m>X</m> is a binary relation <m>\leq</m> satisfying the following properties. 
+    <ol marker="(i)">
+        <li>
+            <title>Reflexivity</title>
+            <p>
+                <m>x\leq x</m> for all <m>x\in X</m>
+            </p>
+        </li>
+        <li>
+            <title>Antisymmetry</title>
+
+            <p>
+                If <m>x\leq y</m> and <m>y\leq x</m>, then <m>x=y</m>.
+            </p>
+        </li>
+        <li>
+            <title>Transitivity</title>
+            <p>
+                If <m>x\leq y</m> and <m>y\leq z</m>, then <m>x\leq z</m>. 
+            </p>
+        </li>
+    </ol>
+    A <term>partially ordered set</term> (or <term>POSET</term>) is a pair <m>(X,\leq)</m> where <m>\leq</m> is a partial order on <m>X</m>. 
+</p>
+<p>
+    Let <m>(X,\leq)</m> be a POSET. A subset <m>Y\subseteq X</m> is <term>totally ordered</term> (or a <term>chain</term>) with respect to <m>\leq</m> if for all <m>x,y\in Y</m>, either <m>x\leq y</m> or <m>y\leq x</m>. An <term>upper bound</term> of <m>Y</m> is an element <m>u\in X</m> such that <m>u\geq y</m> for all <m>y\in Y</m>.  An element <m>m\in Y</m> is a <term>maximal element</term> of <m>Y</m> if <m>m\leq y</m> implies <m>m=y</m> for all <m>y\in Y</m>; similarly, <m>m</m> is a <term>minimal element</term> of <m>Y</m> if <m>y\leq m</m> implies <m>m=y</m> for all <m>y\in Y</m>.
+</p>
+    </statement>
+    </definition>
+    
+    <theorem xml:id="th_zorns_lemma">
+    <title>Zorn's lemma</title>
+    <statement>
+    <p>
+        If <m>(X,\leq)</m> is a nonempty POSET for which every totally ordered subset has an upper bound, then <m>X</m> has a maximal element.  
+    </p>
+    </statement>
+    <proof>
+    <p>
+        Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most set theory textbooks. 
+    </p>
+    </proof>
+    </theorem>
+    <remark>
+    <title><q>Totally ordered</q> versus <q>chain</q></title>
+    <p>
+    We prefer the term <q>totally ordered</q> to <q>chain</q>, as the latter connotes a <em>countable</em> set. This is important, as to verify the conditions of Zorn's lemma, we must consider <em>all</em> totally ordered subsets, countable or not. It is not enough to just look at countable totally ordered subsets <m>Y</m>.
+    </p>
+    </remark>
+    <p>
+        Let's see how we can use Zorn's lemma to prove the existence of maximal ideals. The underlying POSET we will use is a certain set of ideals of a ring, along the the partial order given by set inclusion. 
+    </p>
+    <theorem xml:id="th_max_ideals_exist">
+    <title>Maximal ideals exist</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, and let <m>I</m> be a proper ideal of <m>R</m> (<ie/>, <m>I\ne R</m>). There exists a maximal ideal <m>M</m> of <m>R</m> containing <m>I</m>. In particular, if <m>R</m> is nonzero, then <m>R</m> contains a maximal ideal. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        First observe that the second statement follows from the first by taking the ideal <m>I=(0)</m>: a maximal ideal containing <m>(0)</m> is the same thing as a maximal ideal.
+    </p>
+    <p>
+        Now let <m>I</m> be a proper ideal of <m>R</m>, and let <m>X</m> be the set of all proper ideals of <m>R</m> containing <m>I</m>:
+        <md>
+            <mrow>X \amp =\{J\subseteq R\mid J \text{ a proper ideal}, I\subseteq J\}</mrow>
+        </md>.
+        Note that <m>X</m> is nonempty since <m>I\in X</m>. The binary relation given by set inclusion <m>\subseteq</m> gives <m>X</m> the structure of a POSET. We use Zorn's lemma to show that <m>X</m> has a maximal element with respect to <m>\subseteq</m>. 
+    </p>
+    <p>
+        Consider any subset <m>Y\subseteq X</m> that is totally ordered with respect to <m>\subseteq</m>. We must show that <m>Y</m> has an upper bound in <m>X</m>. To this end we let 
+        <md>
+            <mrow>J^* \amp =\bigcup_{J\in Y}J</mrow>
+        </md>.
+        It is clear that <m>J\subseteq J^*</m> for all <m>J\in Y</m>, so it remains to show that <m>J^*\in X</m>: that is, we must show that (i) <m>J^*</m> is an ideal containing <m>I</m>, and (ii) <m>J^*\ne R</m>.
+    </p>
+    <p>
+        Since <m>I\subseteq J</m> for all <m>J\in Y</m>, and since <m>J^*</m> is the union of all such ideals, we have <m>I\subseteq J^*</m>.  To show <m>J^*</m> is an ideal, we must show that it is a subgroup of <m>(R,+)</m> and is closed under left and right multiplication by elements of <m>R</m>. Since <m>I\subseteq J^*</m>, we have <m>0\in J^*</m>. Now take <m>a,b\in J^*</m>. By definition we have <m>a\in J</m> and <m>b\in J'</m> for some ideals <m>J,J'\in Y</m>. Since <m>Y</m> is totally ordered, we have either <m>J\subseteq J'</m> or <m>J'\subseteq</m>. Assuming without loss of generality that the first condition holds, we may assume that <m>a,b\in J</m>. Since <m>J</m> is an ideal it follows that 
+        <md>
+            <mrow>-a\amp \in J \amp a+b\amp \in J \amp ab\amp \in J </mrow>
+        </md>,
+        and thus that <m>-a,a+b,ab\in J^*</m>. This shows that <m>J^*</m> is an ideal. 
+    </p>
+    <p>
+        Next we show that <m>J^*\ne R</m>. This is a consequence of the fact that in any ring <m>J=R</m> for an ideal <m>J</m> if and only if <m>1\in J</m>. Since <m>J\ne R</m> for all <m>J\in Y</m>, it follows that <m>1\notin J</m> for all <m>J\in Y</m>, and hence that <m>1\notin J^*</m>. Thus <m>J^*\ne R</m>. 
+    </p>
+    <p>
+        Having verified the conditions of Zorn's lemma for all nonempty well-ordered subsets of <m>X</m>, we conclude that <m>X</m> has a maximal element <m>M</m>. By definition <m>M\ne R</m> and <m>I\subseteq M</m>. We conclude our proof by showing that <m>M</m> is maximal. Suppose <m>M\subseteq J</m> for some proper ideal <m>J\ne R</m>: then <m>J\in X</m> by definition, and hence <m>M=J</m> by maximality. Thus <m>M</m> is a maximal ideal of <m>R</m>.
+    </p>
+    </proof>
+    </theorem>
+<remark xml:id="rem_zorn_max_ideals">
+    <title>Zorn's lemma and maximal ideals</title>
+    <p>
+    You might wonder whether there is a proof of the existence of maximal ideals that does not rely on Zorn's lemma. Surprisingly, we can say with assurance that the answer is no! As it turns out, not only does Zorn's lemma imply the existence of maximal ideals, but the converse is also true: the existence of maximal ideals in arbitrary rings implies Zorn's lemma. As a result, the following statements are all equivalent. 
+    <ul>
+        <li>
+            <p>
+                Zorn's lemma.
+            </p>
+        </li>
+        <li>
+            <p>
+                Any nonzero ring has a maximal ideal. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The axiom of choice: if <m>(X_i)_{i\in I}</m> is a family of nonempty sets indexed by the nonempty set <m>I</m>, then <m>\prod_{i\in I} X_i</m> is nonempty. (In other words, there is a way to <q>choose</q> for each <m>i\in I</m>, an element of <m>x_i\in X_i</m> in order to form a tuple <m>(x_i)\in \prod_{i\in I}X_i</m>.)
+            </p>
+        </li>
+    </ul>
+    In fact, we can add a few more equivalent statements to the list. The three statements above can be shown to be equivalent to the following statements. 
+    <ul>
+        <li>
+            <p>
+                Every vector space has a basis. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Arbitrary products of compact topological spaces are compact. (Tychonoff's theorem).
+            </p>
+        </li>
+        <li>
+            <p>
+                Every set <m>X</m> admits a total order <m>\leq</m> satisfying the well-ordering principle: <ie/>, every nonempty subset of <m>X</m> has a minimal element with respect to <m>\leq</m>. (Well-ordering theorem.)
+            </p>
+        </li>
+    </ul>
+    It is quite a wonder that these six statements, which on the surface seem to say very different things, are in fact all equivalent. Moreover, on a psychological level there is a great range of plausibility among the various statements: whereas the axiom of choice seems intuitively obvious, the well-ordering principle is quite a shocker, since it would imply that even <m>\R</m> admits some mysterious well-ordering. This is the basis of the following <em>bon mot</em> attributed to Jerry Bona, professor emeritus at UIC: <q>The axiom of choice is obviously true, the well-ordering theorem obviously false, and who can tell about Zorn's lemma?</q>
+    </p>
+    </remark>
+    
+    </subsection>
+    
     
     
     </subsection>
