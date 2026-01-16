@@ -25,7 +25,7 @@
         </li>
         <li>
             <p>
-                <m>\deg r&lt; \def f</m>.
+                <m>\deg r&lt; \deg f</m>.
             </p>
         </li>
      </ol>
@@ -36,18 +36,83 @@
         We need to prove two things: that given any <m>g</m> there are polynomials <m>q,r</m> satisfying properties (i) and (ii), and furthermore that the pair <m>(q,r)</m> is unique. 
     </p>
     <p>
-        We begin with existence. Let <m>X</m> be the set of all pairs of polynomials <m>(q',r')</m> satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair <m>(q,r)\in X</m> that also satisfies (ii).  Observe that <m>X</m> is nonempty, since in particular it contains the pair <m>(0,g)</m>. If <m>(q,0)\in X</m>, then this pair satisfies (ii) since <m>\deg 0=-\infty&lt; \deg f</m> (<m>f</m> being a nonzero polynomial). Otherwise, let <m>(q,r)</m> be an element of <m>X</m> for which <m>r</m> has minimal finite degree. (Such a pair exists since the set <m>\{\deg r'\mid (q',r')\in X\}</m> is a nonempty subset of <m>\Z_{\geq 0}</m>, and hence has a minimal element.)
+        We begin with existence. Let <m>X</m> be the set of all pairs of polynomials <m>(q',r')</m> satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair <m>(q,r)\in X</m> that also satisfies (ii).  Observe that <m>X</m> is nonempty, since in particular it contains the pair <m>(0,g)</m>. If <m>(q,0)\in X</m>, then this pair satisfies (ii) since <m>\deg 0=-\infty&lt; \deg f</m> (<m>f</m> being a nonzero polynomial). Otherwise, let <m>(q,r)</m> be an element of <m>X</m> for which <m>r</m> has minimal finite degree. (Such a pair exists since the set <m>\{\deg r'\mid (q',r')\in X\}</m> is a nonempty subset of <m>\Z_{\geq 0}</m>, and hence has a minimal element.) We claim that <m>\deg r&lt; \deg f</m>, and hence that <m>(q,r)</m> satisfies (ii). Suppose, by contradiction, that <m>r(x)=\bmpoly</m> with <m>\deg r=m\geq \deg f=n</m>. Since the leading term <m>a_n</m> of <m>f</m> is a unit, we can write 
+        <md>
+            <mrow>r(x) \amp b_ma_n^{-1}x^{m-n}f(x)+r(x)-b_ma_n^{-1}x^{m-n}f(x)</mrow>
+            <mrow> \amp =h(x)f(x)+s(x)</mrow>
+        </md>,
+        where <m>h(x)=b_ma_n^{-1}x^{m-n}</m>, and where
+        <md>
+            <mrow>s(x) \amp =r(x)-b_ma_n^{-1}x^{m-n}f(x)</mrow>
+            <mrow> \amp = r(x)-b_ma_n^{-1}x^{m-n}(\anpoly)</mrow>
+            <mrow>     \amp =(b_m-b_m)x^{m}+(b_{m-1}-b_ma_n^{-1}a_{n-1})x^{m-1}+\cdots</mrow>
+            <mrow> \amp =(b_{m-1}-b_ma_{n}^{-1}a_{n-1})x^{n-1}+\cdots</mrow>
+        </md>
+        has degree at most <m>m-1</m>. But then we have 
+        <md>
+            <mrow>g\amp =qf+r </mrow>
+            <mrow> \amp = qf+hf+s</mrow>
+            <mrow> \amp = (q+h)f+s</mrow>
+        </md>,
+        showing that <m>(q+h,s)\in X</m> and <m>\deg s&lt; \deg r</m>. This contradicts the minimality of <m>\deg r</m>. Thus <m>\deg r&lt; \deg f</m>, and we are done. 
+    </p>
+    <p>
+        We now prove that there is exactly one pair <m>(q,r)</m> satisfying (i) and (ii). Indeed, suppose <m>(q,r)</m> and <m>(q',r')</m> both satisfy these properties. From <m>g=qf+r=q'f+r'</m>, it follows that 
+        <md>
+            <mrow>(q-q')f \amp =(r'-r)</mrow>
+        </md>.
+        If <m>q-q'\ne 0</m>, then since the leading coefficient of <m>f</m> is a unit, it is easy to see that <m>\deg (q-q')f\geq \deg f</m>. But then we would have 
+        <md>
+            <mrow>\deg r'-r \amp =\deg (q-q')f \geq \deg f</mrow>
+        </md>,
+        a contradiction since <m>\deg (r-r')\leq \max\{\deg r,\deg r'\}&lt; \deg f</m>. Thus <m>q-q'=0</m>, from which it follows that <m>r'-r=0</m>. We conclude that <m>q=q'</m> and <m>r=r'</m>, and thus that <m>(q,r)=(q',r')</m>, as desired. 
     </p>
     </proof>
     </theorem>
-    <definition xml:id="d_">
-    <title></title>
+    <definition xml:id="d_poly_division">
+    <title>Polynomial division with remainder</title>
     <statement>
     <p>
-    
+    Let <m>R</m> be a nontrivial commutative ring, and let <m>f\in R[x]</m> be a nonzero polynomial whose leading coefficient is a unit. Given a polynomial <m>g\in R[x]</m> we call the unique polynomials <m>q</m> and <m>r</m> satisfying the two conditions of <xref ref="th_div_alg_poly"/> the <term>quotient</term> and <term>remainder</term> upon division of <m>g</m> by <m>f</m>. 
     </p>
     </statement>
     </definition>
+    <p>
+        The following result is a corollary of the division algorithm theorem, but is important enough to be deemed a theorem.
+    </p>
+    <theorem xml:id="th_quot_poly">
+        <title>Quotients of polynomial rings</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a nontrivial commutative ring, and let <m>f\in R</m> be a polynomial of degree <m>n&gt; 1</m> whose leading coefficient is a unit in <m>R</m>. Additionally, let <m>\pi\colon R[x]\rightarrow R[x]/(f)</m> and write <m>\pi(g)=\overline{g}</m> for all <m>g\in R[x]</m>, so that in particular we have  
+                <md>
+                    <mrow>\overline{x}\amp = \pi(x)=x+(f)</mrow>
+                </md>.
+                <ol>
+                    <li>
+                        <p>
+                            The restriction <m>\pi\vert_R\colon R\rightarrow R[x]/(f)</m> is injective. Thus we can identify <m>\pi(R)</m> with <m>R</m>, and we will write <m>\pi(r)=\overline{r}=r</m> for all <m>r\in R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For all <m>g\in R[x]</m> we have <m>\overline{g}=\overline{r}</m>, where <m>r</m> is the remainder upon division of <m>g</m> by <m>f</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Every element of <m>R[x]/(f)</m> can be written in the form 
+                            <md>
+                                <mrow>\sum_{k=0}^{n-1}r_k\overline{x}^{k}\amp =r_0+r_1\overline{x}+\cdots + {r}_{n-1}\overline{x}^{n-1}</mrow>
+                            </md>,
+                            where <m>r_k\in \pi(R)</m> for all <m>k</m>, 
+                            and this representation is unique in the following sense: we have <m>\sum_{k=0}^{n-1}r_k\overline{x}^k=\sum_{k=0}^{n-1}s_k\overline{x}^k</m> with <m>r_k, s_k\in \pi(R)</m> if and only if <m>r_k=s_k</m> for all <m>k</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </theorem>
     
     </subsection>
 
