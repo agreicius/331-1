@@ -187,13 +187,13 @@
       <!-- <baseurl href="https://changetomywebsite.org"/> -->
 
     <!-- Control behavior of online WeBWorK, per type: -->
-      <!--<webwork
+      <webwork
         inline="dynamic"
         divisional="dynamic"
         reading="static"
         worksheet="static"
         project="dynamic"
-      />-->
+      />
 
     <!-- Use the tabbed viewer for tasks in exercises. "project" and "reading" can be added to the list of types in the @tabbed-tasks attribute (but not worksheet). -->
       <!--<exercises tabbed-tasks="inline divisional"/>-->
@@ -224,7 +224,7 @@
 
 
   <!-- To use WeBWorK, you need a server.  -->
-    <!-- <webwork server="https://webwork-ptx.aimath.org" /> -->
+    <webwork server="https://webwork-ptx.aimath.org" />
     <!-- @course, @coursepassword, @user, and @userpassword can also be set. -->
     <!-- You can also set how tasks are revealed for webwork problems using the @task-reveal attribute on the above-->
 

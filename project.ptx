@@ -28,11 +28,11 @@
 
   <!-- The following targets are used to create stand-alone documents, -->
   <!-- either scorm archives or pdfs. Run with `pretext build scorm -i source/[filename.ptx]`-->
-    <target name="scorm" standalone="yes" format="html" compression="scorm"
+    <!-- <target name="scorm" standalone="yes" format="html" compression="scorm"
             output-dir="scorms" publication="publication_standalone.ptx"
             />
     <target name="pdf" standalone="yes" format="pdf"
-            output-dir="pdfs" publication="publication_standalone.ptx" />
+            output-dir="pdfs" publication="publication_standalone.ptx" /> -->
   </targets>
 </project>
 
