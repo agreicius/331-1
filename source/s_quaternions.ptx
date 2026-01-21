@@ -110,6 +110,7 @@
      </proof>
      </theorem>
     <corollary xml:id="cor_">
+        <title><m>\HH</m> is a division ring</title>
         <statement>
             <p>
                 The Hamilton quaternions <m>\HH=H(\R)</m> is a division ring. 

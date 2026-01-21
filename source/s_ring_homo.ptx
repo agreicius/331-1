@@ -391,15 +391,31 @@ gives a bijective correspondence between nonnegative integers of <m>\Z</m> and i
 <definition xml:id="d_characteristic_ring">
     <title>Characteristic of a ring</title>
     <notation>
-        <usage><m>\char R</m></usage>
+        <usage><m>\ch R</m></usage>
       <description>characteristic of the ring <m>R</m></description>
     </notation>
     <statement>
     <p>
-    Let <m>R</m> be a nonzero ring. The <term>characteristic</term> of <m>R</m>, denoted <m>\char R</m>, is defined as the nonnegative integer <m>n</m> such that <m>\ker \phi = (n)</m>, where <m>\phi\colon \Z\rightarrow R</m> is the unique ring homomorphism from <m>\Z</m> to <m>R</m>. Equivalently, <m>\char R</m> is either the smallest positive integeger <m>n</m> satisfying <m>n\cdot 1_R=0</m>, or 0 if no such integer exists. 
+    Let <m>R</m> be a nonzero ring. The <term>characteristic</term> of <m>R</m>, denoted <m>\ch R</m>, is defined as the nonnegative integer <m>n</m> such that <m>\ker \phi = (n)</m>, where <m>\phi\colon \Z\rightarrow R</m> is the unique ring homomorphism from <m>\Z</m> to <m>R</m>. Equivalently, <m>\ch R</m> is either the smallest positive integeger <m>n</m> satisfying <m>n\cdot 1_R=0</m>, or 0 if no such integer exists. 
     </p>
     </statement>
     </definition>
+<proposition xml:id="prop_first_years_dream">
+    <title>Characteristic <m>p</m>: first-year's dream</title>
+    <statement>
+        <p>
+            Let <m>R</m> be a commutative ring with <m>\ch R=p</m> for some prime integer <m>p</m>. For all positive integers <m>n</m> and elements <m>a,b\in R</m>, we have 
+            <md number="yes">
+                <mrow xml:id="eq_firstyears_dream"> (a+b)^{p^n} \amp = a^{p^n} + b^{p^n} </mrow>
+            </md>.
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Left as an exercise. 
+        </p>
+    </proof>
+</proposition>
 <example xml:id="eg_ideals_division_rings">
 <title>Ideals of division rings</title>
 <statement>
