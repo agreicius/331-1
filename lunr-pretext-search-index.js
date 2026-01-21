@@ -2941,7 +2941,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Group rings, polynomials, power series",
-  "body": " Group rings, polynomials, power series   In this section and the next we introduce three ring constructions: group rings, polynomial (and power series) rings, and Hamilton quaternion rings. Each of these uses as an underlying set a collection of formal sums with coefficients in a base ring . This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum where , when in essence a complex number is just a pair . Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation.   Formal sums are tuples   Let be a ring, and let be a nonempty set. A formal sum of the form is just alternative notation for the tuple . As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is, we have . As a form of shortening, when expanding out a formal sum we will often drop terms where . Similarly, we sometimes drop the in an expression like , writing just instead.      Group rings   Group rings   Let be a nontrivial commutative ring, and let be a finite group. We define to be the set of all formal sums , where for all , and we define binary operations and as follows: . The triple is a ring called the group ring of with coefficients in . The additive and multiplicative identities of are given as .     Group rings     The subset is easily seen to be a subring of . Indeed, using the definition of the group ring operations, we see that . Thus we can think of the subring as a copy of living as a subset of . (Later we will be able to say that this subring is isomorphic to .) By slight abuse of notation, we will identify with this subring of , and sometimes drop the from the notation .    From the group ring operations definition, it follows that . Identifying with , we see that .    We can also think of the group as sitting inside , using the identification . We call such elements of  group elements . With this identification in place, we that the ring multiplication on extends the group operation of . That is, given , identifying these as the ring elements and and taking their product, we see that . As a result, it is easy to see that a group element is invertible with inverse the group element . It follows that we can think of as a subgroup of the group of units of (with respect to our identification): , .    Combining the previous observations, we can now give a decent motivation for the multiplication operation on . Namely, it is the unique binary operation on satisfying the following properties:   it distributes over the given addition operation on ;    it extends the group operation in the sense that ;    we have for all with respect to this multiplication.   In this sense our multiplication operation is the unique way of extending the group operation of to a ring operation on in such a way that our copy of lies in the center of .       Group ring of   Let , and consider the group ring .   Let and . Compute and .    Show that is a unit in        When computing an explicit product in a group ring, instead of using the formal definition in , it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms.   We have . Observe that : no great surprise in light of .    First observe that is a unit in with inverse . (See .) Since , it suffices to show that is a unit of . (If and are units, then so is .) Playing around with some expressions, we find that . Thus is a unit. We conclude that is a unit, with inverse .        Group rings over a field  Let be a field, and let be a group of cardinality . In this case the group ring has the additional structure of a -vector space, where vector addition is just the ring addition, and scalar multiplication by an element is defined as ring multiplication by the element . In fact, identifying elements of as tuples via the correspondence , we see that as a vector space, is literally equal to the vector space of -tuples with coefficients in with its usual vector operations: . As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields.    Group ring properties   Let be a nontrivial commutative ring, and let be a finite group.   Prove that is commutative if and only if is abelian.    Consider the element . Compute , where is an element of .    Let be a nontrivial element. Show that is a zero divisor.    When is a group ring a division ring?       Let be the distinct elements of . To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and for the ring operation.   Assume that is commutative. For all , we have . Thus is abelian.  Now assume is abelian. Given , expanding out using distributivity and commutativity of ring coefficients, we have . Thus is commutative.    We have , where the penultimate line follows since as runs through all elements of , so too does .  Observe that if is nontrivial, the taking , the equality implies that is noninvertible: if it were, we could cancel it to conclude , a contradiction.    We have . Since and are both nonzero elements of , we conclude that is a zero divisor (as is ).    Both (2) and (3) imply that is a division ring if and only if is trivial and is a field.         Polynomials and power series  Whereas normally power series are introduced as a sort of generalization of polynomials, we will take the approach of defining the notion of a ring of power series, and identify a subring as the ring of polynomials.   Power series ring   Let be a nontrivial commutative ring. We define the set to be the set of all formal sums of the form , where for all , and we define binary operations and as follows: . The triple is a commutative ring called the power series ring over (or with coefficients in) in the unknown (or indeterminate) . The additive and multiplicative identities of are given as . Given a power series , we call its -th term , and its -th coefficient .  We will use function-like notation to name power series. In more detail, we will refer to power series using function letters like and , and will write when explicitly introducing names of coefficients.     Power series equality  When are two power series and equal? Identifying these formal sums as tuples , , following , we see that .   We now identify the ring of polynomials over as the subring of consisting of all power series whose coefficients are eventually equal to zero.   Polynomial rings   Let be a nontrivial commutative ring. Define the polynomial ring over in the indeterminate to be the subset of all power series whose coefficients are eventually equal to zero: i.e., . It is easy to see that is a subring of , and thus a ring in its own right. Restricted to , the power series multiplication rule becomes the familiar polynomial multiplication rule: . As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: , , or .  Given a nonzero polynomial , we define its degree , , to be the largest satisfying . If , we define .  If is a polynomial of degree , we call the leading coefficient of . A polynomial with leading coefficient equal to is called monic .     Polynomial and power series rings  When working with a power series ring , we will identify the ring with power series of the form . Since this identification preserves the ring operations of , we end up with a chain of subring inclusions .   The degree operation on turns out to be very useful, thanks in part to the properties articulated in the following proposition.    Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.        Polynomial degree   Find polynomials satisfying .    Let and . We have and .    As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property.    Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.     Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.     "
+  "body": " Group rings, polynomials, power series   In this section and the next we introduce three ring constructions: group rings, polynomial (and power series) rings, and Hamilton quaternion rings. Each of these uses as an underlying set a collection of formal sums with coefficients in a base ring . This somewhat ambiguous language of formal sums comes up frequently in mathematics. As we make official with a formal sum is really just a tuple that we have decided to write using summation notation. The definition of the complex numbers is a typical example of this phenomenon: complex numbers are usually defined as a formal sum where , when in essence a complex number is just a pair . Why not just use tuple notation? We tend to reach for the formal sum notation in situations where there is a (well-behaved) multiplication defined on our tuples, which further more respects the component-wise addition of these tuples. In these situations algebraic manipulation often proceeds more smoothly with the formal sum representation of objects, as opposed to the tuple representation.   Formal sums are tuples   Let be a ring, and let be a nonempty set. A formal sum of the form is just alternative notation for the tuple . As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is, we have . As a form of shortening, when expanding out a formal sum we will often drop terms where . Similarly, we sometimes drop the in an expression like , writing just instead.      Group rings   Group rings   Let be a nontrivial commutative ring, and let be a finite group. We define to be the set of all formal sums , where for all , and we define binary operations and as follows: . The triple is a ring called the group ring of with coefficients in . The additive and multiplicative identities of are given as .     Group rings     The subset is easily seen to be a subring of . Indeed, using the definition of the group ring operations, we see that . Thus we can think of the subring as a copy of living as a subset of . (Later we will be able to say that this subring is isomorphic to .) By slight abuse of notation, we will identify with this subring of , and sometimes drop the from the notation .    From the group ring operations definition, it follows that . Identifying with , we see that .    We can also think of the group as sitting inside , using the identification . We call such elements of  group elements . With this identification in place, we that the ring multiplication on extends the group operation of . That is, given , identifying these as the ring elements and and taking their product, we see that . As a result, it is easy to see that a group element is invertible with inverse the group element . It follows that we can think of as a subgroup of the group of units of (with respect to our identification): , .    Combining the previous observations, we can now give a decent motivation for the multiplication operation on . Namely, it is the unique binary operation on satisfying the following properties:   it distributes over the given addition operation on ;    it extends the group operation in the sense that ;    we have for all with respect to this multiplication.   In this sense our multiplication operation is the unique way of extending the group operation of to a ring operation on in such a way that our copy of lies in the center of .       Group ring of   Let , and consider the group ring .   Let and . Compute and .    Show that is a unit in        When computing an explicit product in a group ring, instead of using the formal definition in , it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms.   We have . Observe that : no great surprise in light of .    First observe that is a unit in with inverse . (See .) Since , it suffices to show that is a unit of . (If and are units, then so is .) Playing around with some expressions, we find that . Thus is a unit. We conclude that is a unit, with inverse .        Group rings over a field  Let be a field, and let be a group of cardinality . In this case the group ring has the additional structure of a -vector space, where vector addition is just the ring addition, and scalar multiplication by an element is defined as ring multiplication by the element . In fact, identifying elements of as tuples via the correspondence , we see that as a vector space, is literally equal to the vector space of -tuples with coefficients in with its usual vector operations: . As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields.    Group ring properties   Let be a nontrivial commutative ring, and let be a finite group.   Prove that is commutative if and only if is abelian.    Consider the element . Compute , where is an element of .    Let be a nontrivial element. Show that is a zero divisor.    When is a group ring a division ring?       Let be the distinct elements of . To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and for the ring operation.   Assume that is commutative. For all , we have . Thus is abelian.  Now assume is abelian. Given , expanding out using distributivity and commutativity of ring coefficients, we have . Thus is commutative.    We have , where the penultimate line follows since as runs through all elements of , so too does .  Observe that if is nontrivial, the taking , the equality implies that is noninvertible: if it were, we could cancel it to conclude , a contradiction.    We have . Since and are both nonzero elements of , we conclude that is a zero divisor (as is ).    Both (2) and (3) imply that is a division ring if and only if is trivial and is a field.         Polynomials and power series  Whereas normally power series are introduced as a sort of generalization of polynomials, we will take the approach of defining the notion of a ring of power series, and identify a subring as the ring of polynomials.   Power series ring   Let be a nontrivial commutative ring. We define the set to be the set of all formal sums of the form , where for all , and we define binary operations and as follows: . The triple is a commutative ring called the power series ring over (or with coefficients in) in the unknown (or indeterminate) . The additive and multiplicative identities of are given as . Given a power series , we call its -th term , and its -th coefficient .  We will use function-like notation to name power series. In more detail, we will refer to power series using function letters like and , and will write when explicitly introducing names of coefficients.     Power series equality  When are two power series and equal? Identifying these formal sums as tuples , , following , we see that .   We now identify the ring of polynomials over as the subring of consisting of all power series whose coefficients are eventually equal to zero.   Polynomial rings   Let be a nontrivial commutative ring. Define the polynomial ring over in the indeterminate to be the subset of all power series whose coefficients are eventually equal to zero: i.e., . It is easy to see that is a subring of , and thus a ring in its own right. Restricted to , the power series multiplication rule becomes the familiar polynomial multiplication rule: . As illustrated above, when denoting polynomials we will usually drop all the terms with zero coefficients: , , or .  Given a nonzero polynomial , we define its degree , , to be the largest satisfying . If , we define .  If is a polynomial of degree , we call the leading coefficient of . A polynomial with leading coefficient equal to is called monic .     Polynomial and power series rings  When working with a power series ring , we will identify the ring with power series of the form . Since this identification preserves the ring operations of , we end up with a chain of subring inclusions .   The degree operation on turns out to be very useful, thanks in part to the properties articulated in the following proposition.   Polynomial degree properties   Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.        Polynomial degree   Find polynomials satisfying .    Let and . We have and .    As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property.   Intregral polynomial rings   Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.     Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.     "
 },
 {
   "id": "fiat_formal_sums",
@@ -3039,8 +3039,8 @@ var ptx_lunr_docs = [
   "url": "s_grouprings_polys.html#prop_deg_poly",
   "type": "Proposition",
   "number": "2.28",
-  "title": "",
-  "body": "  Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.      "
+  "title": "Polynomial degree properties.",
+  "body": " Polynomial degree properties   Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.      "
 },
 {
   "id": "eg_poly_deg",
@@ -3057,8 +3057,8 @@ var ptx_lunr_docs = [
   "url": "s_grouprings_polys.html#cor_poly_int_domain",
   "type": "Corollary",
   "number": "2.30",
-  "title": "",
-  "body": "  Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.   "
+  "title": "Intregral polynomial rings.",
+  "body": " Intregral polynomial rings   Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.   "
 },
 {
   "id": "eg_poly_power",
@@ -3076,7 +3076,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Hamilton quaternion rings",
-  "body": " Hamilton quaternion rings   Quaternion rings   Let be a nontrivial commutative ring, and assume in . We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the Hamilton quaternion ring over (or with coefficients in) .  In the special case where , we denote and call simply the Hamilton quaternions .     Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straightforward computation shows that if , then .     Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .    The following statements are equivalent.    .     .     .          This will be given as a homework exercise.      The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.     Division rings over  We have met our first noncommutative division ring in the form of . More than just a ring, is what we call an -algebra , which we can understand as a ring containing a copy of lying in its center. Any -algebra is in particular a vector space over : we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication , where and .  Let's call a division ring that is also an -algebra a division algebra over . Besides , note that and are also division algebras over . Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over . This is a famous result due to Frobenius: if is a finite-dimensional division algebra over , then is isomorphic to , , or ! (Of course, isomorphism is yet to be definied, but you can imagine what this will mean for rings.)    Finite division rings  While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting finite division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.   "
+  "body": " Hamilton quaternion rings   Quaternion rings   Let be a nontrivial commutative ring, and assume in . We define to be the set of all formal sums , where for all . We define addition on as . We define multiplication to be the unique binary operation that distributes over the addition operation , satisfies for all , and satisfies . The triple is a ring called the Hamilton quaternion ring over (or with coefficients in) .  In the special case where , we denote and call simply the Hamilton quaternions .     Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straightforward computation shows that if , then .     Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .    The following statements are equivalent.    .     .     .          This will be given as a homework exercise.     is a division ring   The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.     Division rings over  We have met our first noncommutative division ring in the form of . More than just a ring, is what we call an -algebra , which we can understand as a ring containing a copy of lying in its center. Any -algebra is in particular a vector space over : we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication , where and .  Let's call a division ring that is also an -algebra a division algebra over . Besides , note that and are also division algebras over . Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over . This is a famous result due to Frobenius: if is a finite-dimensional division algebra over , then is isomorphic to , , or ! (Of course, isomorphism is yet to be definied, but you can imagine what this will mean for rings.)    Finite division rings  While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting finite division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.   "
 },
 {
   "id": "spec_quat_rings",
@@ -3111,8 +3111,8 @@ var ptx_lunr_docs = [
   "url": "s_quaternions.html#cor_",
   "type": "Corollary",
   "number": "2.34",
-  "title": "",
-  "body": "  The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.   "
+  "title": "<span class=\"process-math\">\\(\\HH\\)<\/span> is a division ring.",
+  "body": " is a division ring   The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.   "
 },
 {
   "id": "s_quaternions-6",
@@ -3139,7 +3139,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.5",
   "title": "Ring homomorphisms and ideals",
-  "body": " Ring homomorphisms and ideals   Ring homomorphisms   Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .     Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.    Ring homomorphisms      Subring inclusions are ring homomorphisms.    The composition of ring homomorphisms is a ring homomorphism.    Given a bijective ring homomorphism , its inverse is a ring homomorphism.    If is a ring homomorphism, then is a subring of .    A ring homomorphism is injective if and only if .       Left to the reader.     Group structure of rings  The last statement of follows immediately from the fact that a ring homomorphism is in particular a group homomorphism with respect to the additive structures of and . This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings.      Prove that     Assume by contradiction that is a ring homomorphism. Since in particular is a group homomorphism, is an element of of order dividing . (See .) But is the only such element. Thus : a contradiction, since in .     Ring homomorphisms from   Let be a ring. There is a unique ring homomorphism , defined as for all . In particular, is a singleton.     Polynomial ring homomorphisms   Let and be commutative rings. A ring homomorphism is uniquely determined by its restriction to the subring and the value . Conversely, given a ring homomorphism and an element , there is a unique ring homomorphism such that and . Thus we have the following bijection:   Description of polynomial ring homomorphisms    Given a ring homomorphism corresponding to the pair , if the map is clear from the context, we will often call the evaluation at homomorphism.  Similarly, if and are nontrivial commutative rings, and if is a ring homomorphism, identifying with the map obtained by composing with the subring inclusion , we will often use (or its name) to refer to the corresponding ring homomorphism .       Let be a commutative ring. Show that there is a bijection between and .    From we know there is a bijection between and . From , on the other hand, we know that , where for all . The result follows since is in bijective correspondence with . More explicitly, all homomorphisms are of the form , for some . Note that the integers appearing on the right must be interpreted as the ring elements .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group The map defined as is a surjective ring homomorphism called the augmentation map . Its kernel is called the augmentation ideal .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group. Prove that the augmentation map is a surjective ring homomorphism.    It is easy to see that is group homomorphism, , and moreover that it is surjective (since for any ). It remains only to show that it is multiplicative. Given elements , of , we have , where . Thus , as desired.      Ideals   Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).     Trivial ideals   Given a ring , the sets and are easily seen to be ideals of . We will call these trivial ideals . Additionally we will call an ideal  nonzero if , and proper if .         Ideals   Let be a ring.   If is an indexed family of ideals of , then is an ideal.    If and are ideals of , then so is .    The set defined as the set of all finite sums of products , where and , is an ideal of .  For a positive integer , we define to be the -fold ideal product of with itself.    If is a ring homomorphism, then is an ideal of .       We leave all but (3) to the reader. For (3), it is clear that as defined is a subgroup of . Given any , and element , with and for all , we have , where , showing that , as desired.     Generated ideals    the ideal generated by    Let be a subset of a ring . The ideal generated by , denoted , is the intersection of all ideals of containing : , . If , we wite for ; similarly, if , we write .  An ideal is finitely generated if we have for some elements ; it is principal if for some .     Generated ideals   Let be a subset of the ring .    is the smallest ideal of containing in the following sense: if is an ideal of containing , then .     is the set of all finite sums of elements of the form , where and : , letting , we have .        Generated ideals and kernels   Let be a ring homomorphism. For any set , we have if and only if for all .    Since is an ideal of , we have .     Ideals of   Give an explicit description of the set of all ideals of .    Let be an ideal of . Since in particular is a subgroup of , we know that can be written uniquely as for some nonnegative integer . It is easy to see, using , that , the principal ideal generated by . We conclude that the correspondence gives a bijective correspondence between nonnegative integers of and ideals of . In particular, all ideals of are principal.    Recall that for any ring , there is a unique ring homomorphism : namely, for all . We can define the characteristic of a ring using this homomorphism.   Characteristic of a ring    characteristic of the ring    Let be a nonzero ring. The characteristic of , denoted , is defined as the nonnegative integer such that , where is the unique ring homomorphism from to . Equivalently, is either the smallest positive integeger satisfying , or 0 if no such integer exists.     Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .     Ideals of   Let be commutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.     Simple ring   A nonzero ring is simple if its only ideals are and .    From the previous examples, we see that fields, division rings more generally, and also matrix rings over fields are all examples of simple rings. One useful property of simple rings is that any nontrivial homomorphism out of a simple ring is injective.   Homomorphisms from simple rings   Let be a simple ring. If is a ring homomorphism with a nonzero ring, then is injective.    Since is nonzero, the ideal is not equal to . It follows that , and hence that is injective (by group homomorphism properties).    We end this section with an official definition of a ring algebra.   -algebra   Let be a commutative ring. An -algebra (or algebra over ) is a nonzero ring together with a ring homomorphism such that is contained in the center of ( , elements of the subring commute with all elements of ). We write to denote that is an -algebra.    It is easy to see that our constructions , , , and are all examples of -algebras. Furthermore, in these examples, the corresponding ring homomorphism defining the -algebra structure is injective, allowing us to identify as a subring of the given -algebra. This of course is not always the case, simply because a ring homomorphism need not be injective. However, it is always the case with algebras where is a field. This is because nontrivial ring homomorphisms are injective by    "
+  "body": " Ring homomorphisms and ideals   Ring homomorphisms   Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .     Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.    Ring homomorphisms      Subring inclusions are ring homomorphisms.    The composition of ring homomorphisms is a ring homomorphism.    Given a bijective ring homomorphism , its inverse is a ring homomorphism.    If is a ring homomorphism, then is a subring of .    A ring homomorphism is injective if and only if .       Left to the reader.     Group structure of rings  The last statement of follows immediately from the fact that a ring homomorphism is in particular a group homomorphism with respect to the additive structures of and . This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings.      Prove that     Assume by contradiction that is a ring homomorphism. Since in particular is a group homomorphism, is an element of of order dividing . (See .) But is the only such element. Thus : a contradiction, since in .     Ring homomorphisms from   Let be a ring. There is a unique ring homomorphism , defined as for all . In particular, is a singleton.     Polynomial ring homomorphisms   Let and be commutative rings. A ring homomorphism is uniquely determined by its restriction to the subring and the value . Conversely, given a ring homomorphism and an element , there is a unique ring homomorphism such that and . Thus we have the following bijection:   Description of polynomial ring homomorphisms    Given a ring homomorphism corresponding to the pair , if the map is clear from the context, we will often call the evaluation at homomorphism.  Similarly, if and are nontrivial commutative rings, and if is a ring homomorphism, identifying with the map obtained by composing with the subring inclusion , we will often use (or its name) to refer to the corresponding ring homomorphism .       Let be a commutative ring. Show that there is a bijection between and .    From we know there is a bijection between and . From , on the other hand, we know that , where for all . The result follows since is in bijective correspondence with . More explicitly, all homomorphisms are of the form , for some . Note that the integers appearing on the right must be interpreted as the ring elements .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group The map defined as is a surjective ring homomorphism called the augmentation map . Its kernel is called the augmentation ideal .     Augmentation map   Let be a nontrivial commutative ring, and let be a finite group. Prove that the augmentation map is a surjective ring homomorphism.    It is easy to see that is group homomorphism, , and moreover that it is surjective (since for any ). It remains only to show that it is multiplicative. Given elements , of , we have , where . Thus , as desired.      Ideals   Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).     Trivial ideals   Given a ring , the sets and are easily seen to be ideals of . We will call these trivial ideals . Additionally we will call an ideal  nonzero if , and proper if .         Ideals   Let be a ring.   If is an indexed family of ideals of , then is an ideal.    If and are ideals of , then so is .    The set defined as the set of all finite sums of products , where and , is an ideal of .  For a positive integer , we define to be the -fold ideal product of with itself.    If is a ring homomorphism, then is an ideal of .       We leave all but (3) to the reader. For (3), it is clear that as defined is a subgroup of . Given any , and element , with and for all , we have , where , showing that , as desired.     Generated ideals    the ideal generated by    Let be a subset of a ring . The ideal generated by , denoted , is the intersection of all ideals of containing : , . If , we wite for ; similarly, if , we write .  An ideal is finitely generated if we have for some elements ; it is principal if for some .     Generated ideals   Let be a subset of the ring .    is the smallest ideal of containing in the following sense: if is an ideal of containing , then .     is the set of all finite sums of elements of the form , where and : , letting , we have .        Generated ideals and kernels   Let be a ring homomorphism. For any set , we have if and only if for all .    Since is an ideal of , we have .     Ideals of   Give an explicit description of the set of all ideals of .    Let be an ideal of . Since in particular is a subgroup of , we know that can be written uniquely as for some nonnegative integer . It is easy to see, using , that , the principal ideal generated by . We conclude that the correspondence gives a bijective correspondence between nonnegative integers of and ideals of . In particular, all ideals of are principal.    Recall that for any ring , there is a unique ring homomorphism : namely, for all . We can define the characteristic of a ring using this homomorphism.   Characteristic of a ring    characteristic of the ring    Let be a nonzero ring. The characteristic of , denoted , is defined as the nonnegative integer such that , where is the unique ring homomorphism from to . Equivalently, is either the smallest positive integeger satisfying , or 0 if no such integer exists.     Characteristic : first-year's dream   Let be a commutative ring with for some prime integer . For all positive integers and elements , we have .    Left as an exercise.     Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .     Ideals of   Let be commutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.     Simple ring   A nonzero ring is simple if its only ideals are and .    From the previous examples, we see that fields, division rings more generally, and also matrix rings over fields are all examples of simple rings. One useful property of simple rings is that any nontrivial homomorphism out of a simple ring is injective.   Homomorphisms from simple rings   Let be a simple ring. If is a ring homomorphism with a nonzero ring, then is injective.    Since is nonzero, the ideal is not equal to . It follows that , and hence that is injective (by group homomorphism properties).    We end this section with an official definition of a ring algebra.   -algebra   Let be a commutative ring. An -algebra (or algebra over ) is a nonzero ring together with a ring homomorphism such that is contained in the center of ( , elements of the subring commute with all elements of ). We write to denote that is an -algebra.    It is easy to see that our constructions , , , and are all examples of -algebras. Furthermore, in these examples, the corresponding ring homomorphism defining the -algebra structure is injective, allowing us to identify as a subring of the given -algebra. This of course is not always the case, simply because a ring homomorphism need not be injective. However, it is always the case with algebras where is a field. This is because nontrivial ring homomorphisms are injective by    "
 },
 {
   "id": "d_ring_homo",
@@ -3313,11 +3313,20 @@ var ptx_lunr_docs = [
   "body": " Characteristic of a ring    characteristic of the ring    Let be a nonzero ring. The characteristic of , denoted , is defined as the nonnegative integer such that , where is the unique ring homomorphism from to . Equivalently, is either the smallest positive integeger satisfying , or 0 if no such integer exists.   "
 },
 {
+  "id": "prop_first_years_dream",
+  "level": "2",
+  "url": "s_ring_homo.html#prop_first_years_dream",
+  "type": "Proposition",
+  "number": "2.52",
+  "title": "Characteristic <span class=\"process-math\">\\(p\\text{:}\\)<\/span> first-year’s dream.",
+  "body": " Characteristic : first-year's dream   Let be a commutative ring with for some prime integer . For all positive integers and elements , we have .    Left as an exercise.   "
+},
+{
   "id": "eg_ideals_division_rings",
   "level": "2",
   "url": "s_ring_homo.html#eg_ideals_division_rings",
   "type": "Example",
-  "number": "2.52",
+  "number": "2.53",
   "title": "Ideals of division rings.",
   "body": " Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .   "
 },
@@ -3326,7 +3335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_ideals_matrix_rings",
   "type": "Example",
-  "number": "2.53",
+  "number": "2.54",
   "title": "Ideals of <span class=\"process-math\">\\(M_n(R)\\)<\/span>.",
   "body": " Ideals of   Let be commutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.   "
 },
@@ -3335,7 +3344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_simple",
   "type": "Definition",
-  "number": "2.54",
+  "number": "2.55",
   "title": "Simple ring.",
   "body": " Simple ring   A nonzero ring is simple if its only ideals are and .   "
 },
@@ -3344,7 +3353,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_simple_ring_homo",
   "type": "Proposition",
-  "number": "2.55",
+  "number": "2.56",
   "title": "Homomorphisms from simple rings.",
   "body": " Homomorphisms from simple rings   Let be a simple ring. If is a ring homomorphism with a nonzero ring, then is injective.    Since is nonzero, the ideal is not equal to . It follows that , and hence that is injective (by group homomorphism properties).   "
 },
@@ -3353,7 +3362,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_algebra",
   "type": "Definition",
-  "number": "2.56",
+  "number": "2.57",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-algebra.",
   "body": " -algebra   Let be a commutative ring. An -algebra (or algebra over ) is a nonzero ring together with a ring homomorphism such that is contained in the center of ( , elements of the subring commute with all elements of ). We write to denote that is an -algebra.   "
 },
@@ -3380,7 +3389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_modular_rings",
   "type": "Example",
-  "number": "2.57",
+  "number": "2.58",
   "title": "Modular rings.",
   "body": " Modular rings   Let be a positive integer. Show that the ring is equal to the quotient ring , where .    We have seen previously that as a group, is equal to the quotient group . Moreover, it is clear that the coset multiplication operation is identical to the modular multiplication operation defined in . Thus the two rings are identical.   "
 },
@@ -3389,7 +3398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#th_ring_quot_map",
   "type": "Theorem",
-  "number": "2.58",
+  "number": "2.59",
   "title": "Quotient map: universal property.",
   "body": " Quotient map: universal property   Let be an ideal of the ring , and let be the corresponding quotient map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       We get most of this result for free from . The only thing we need to be careful about is that all maps in question satisfy the additional ring homomorphism axioms (ii) and (iii) from , and this is straightforward.   "
 },
@@ -3398,7 +3407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#cor_quot_ring_map",
   "type": "Corollary",
-  "number": "2.60",
+  "number": "2.61",
   "title": "Quotient ring homomorphisms.",
   "body": " Quotient ring homomorphisms   Let be an ideal of the ring , and let be the quotient map. Given any ring , the map is an injection onto the set of all satisfying . In other words, we can identify with the set .   "
 },
@@ -3407,7 +3416,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_ring_quot_homs",
   "type": "Example",
-  "number": "2.61",
+  "number": "2.62",
   "title": "Quotient ring homomorphisms.",
   "body": " Quotient ring homomorphisms   Let be a positive integer, and let be a ring. Prove that is either empty or a singleton.       "
 },
@@ -3416,7 +3425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#th_ring_isom_theorems",
   "type": "Theorem",
-  "number": "2.62",
+  "number": "2.63",
   "title": "Isomorphism theorems for rings.",
   "body": " Isomorphism theorems for rings   Let be a ring.   First isomorphism theorem  Given a ring homomorphism with kernel , we have via the isomorphism .    Second isomorphism theorem  Given a subring and ideal , is a subring of , is an ideal of , and .    Third isomorphism theorem  Let be a surjective ring homomorphism. If is an ideal of containing , then is an ideal of , and we have . In particular, considering the quotient map , we see that if is a chain of ideals in , then is an ideal of , and we have     Fourth isomorphism theorem  Let be a surjective ring homomorphism. The map is a bijection between the set of ideals of that contain and the set of ideals of , with inverse given by . Moreover, this bijection preserves just about all ideal operations and relations: , inclusion, intersection, sum, product, .          "
 },
@@ -3425,7 +3434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_first_isom_complex",
   "type": "Example",
-  "number": "2.63",
+  "number": "2.64",
   "title": "First isomorphism theorem.",
   "body": " First isomorphism theorem   Identify the quotient up to isomorphism with a familiar ring using the first isomorphism theorem.    We claim that . Define as : , is the evaluation at map, thinking of as a subring of . This a ring homomorphism according to , and is easily seen to be surjective, since for any . We claim that . Indeed, we see that . Thus . It follows from that . Conversely, suppose , and thus . Applying polynomial division (with remainder), we can write , where , and thus for some . Applying , we conclude that . But in , we have , , if and only if . Thus , and we see that . Thus , and we conclude that , by the first isomorphism theorem.   "
 },
@@ -3434,7 +3443,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_ideals_modularring",
   "type": "Example",
-  "number": "2.64",
+  "number": "2.65",
   "title": "Ideals of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Ideals of   Let be a positive integer. Use the fourth isomorphism to describe the ideals of .    We have , where . Let be the quotient map. We have . By the fourth isomorphism theorem, the ideals of are in bijective correspondence with the ideals of that contain . A previous result tells us that these are precisely ideals of the form , where and . Since the bijection is given by , we see that the ideals of are preciseley those of the form , where and . In particular, all ideals of are principal, and there are finitely many of them.   "
 },
@@ -3443,7 +3452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_images_modular_ring",
   "type": "Example",
-  "number": "2.65",
+  "number": "2.66",
   "title": "Quotients of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Quotients of   Let be a positive integer. Determine, up to isomorphism, all the quotients of by an ideal. Your answers should be expressed as familiar rings.    Let , so that . From the previous example, the ideals of are precisely those of the form , where and . Furthermore we have for any such , , where . We conclude from the third isomorphism theorem that . Thus, up to isomorphism, the quotients of are precisely the rings , where and .   "
 },
@@ -3461,7 +3470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_maximal_ideal",
   "type": "Definition",
-  "number": "2.66",
+  "number": "2.67",
   "title": "Maximal ideal.",
   "body": " Maximal ideal   Let be a ring. An ideal of is maximal if and if for some ideal , then either or . Using logical shorthand: an ideal is maximal if and . Equivalently, is a maximal element of the set of all proper ideals of with respect to the partial order .   "
 },
@@ -3470,7 +3479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_division_ring",
   "type": "Example",
-  "number": "2.67",
+  "number": "2.68",
   "title": "Division ring.",
   "body": " Division ring   Let be a division ring. Prove that is the only maximal ideal of .    Indeed, is the only proper ideal of , since if an contains a nonzero element , then since is a unit it follows easily that . Thus is maximal.   "
 },
@@ -3479,7 +3488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_maximal_ideals_M_nF",
   "type": "Example",
-  "number": "2.68",
+  "number": "2.69",
   "title": "Maximal ideals of <span class=\"process-math\">\\(M_n(F)\\)<\/span>.",
   "body": " Maximal ideals of   Let be a field, and let be a positive integer. Prove that is a maximal ideal of .    You have shown on your homework that the only ideals of are of the form where is an ideal of . Since the only ideals of are and , it follows that is the only proper ideal of , and hence maximal.   "
 },
@@ -3488,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_max_ideals_Z",
   "type": "Example",
-  "number": "2.69",
+  "number": "2.70",
   "title": "Maximal ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Maximal ideals of   Let be a nonnegative integer. Prove that the ideal is maximal if and only if is prime.    We have .   "
 },
@@ -3497,7 +3506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_prime_ideal",
   "type": "Definition",
-  "number": "2.70",
+  "number": "2.71",
   "title": "Prime ideal.",
   "body": " Prime ideal   Let be a commutative ring. An ideal of is prime if and the following condition holds: for all , if , then or . Using logical shorthand: is prime if and .   "
 },
@@ -3506,7 +3515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_prime_maximal_ideals",
   "type": "Theorem",
-  "number": "2.71",
+  "number": "2.72",
   "title": "Prime and maximal ideals.",
   "body": " Prime and maximal ideals   Let be a ring.   An ideal of is maximal if and only if is simple.    Assume is commutative. An ideal of is prime if and only if is an integral domain.    Assume is commutative. An ideal of is maximal if and only if is a field.    Assume is commutative. All maximal ideals of are prime ideals.          By the fourth isomorphism theorem, the ideals of are in bijective correspondence with the ideals of containing . The result now follows immediately from the definitions of maximal ideal and simple ring.    We have integral if and only if implies or for all if and only if implies or for all , if and only if implies or for all , if and only if is prime.    From (1), is maximal if and only if is simple. It is easy to see that for commutative rings, simple is equivalent to being a field.    Since all fields are integral domains, and now imply that all maximal ideals are prime.      "
 },
@@ -3515,7 +3524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_prime_max_integers",
   "type": "Example",
-  "number": "2.72",
+  "number": "2.73",
   "title": "Prime and maximal ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Prime and maximal ideals of   Let be a positive integer. Show that the following statements are equivalent.    is prime.     is maximal.     is a prime integer.       We have seen previously that for positive , the ring is an integral domain if and only if it is a field, if and only if is a prime integer. The result now follows from .   "
 },
@@ -3524,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#ss_prime_max_ideals-11",
   "type": "Remark",
-  "number": "2.73",
+  "number": "2.74",
   "title": "Prime integers.",
   "body": " Prime integers  From the equivalence of (1) and (3) in , it follows that a positive integer is a prime integer if and only if is a prime ideal, if and only if implies or for all integers . We have thus derived, in a roundabout way, an equivalent formulation of being prime. (Recall that our original definition of a prime integer is one that has exactly two positive divisors: 1 and itself.) We will study the notion of a prime elements in arbitrary commutative rings down the line, and will in fact adopt this alternate formulation as our definition.  "
 },
@@ -3533,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_partial_order",
   "type": "Definition",
-  "number": "2.74",
+  "number": "2.75",
   "title": "Partial order.",
   "body": " Partial order   A partial order on a nonempty set is a binary relation satisfying the following properties.   Reflexivity   for all     Antisymmetry  If and , then .    Transitivity  If and , then .   A partially ordered set (or POSET ) is a pair where is a partial order on .  Let be a POSET. A subset is totally ordered (or a chain ) with respect to if for all , either or . An upper bound of is an element such that for all . An element is a maximal element of if implies for all ; similarly, is a minimal element of if implies for all .   "
 },
@@ -3542,7 +3551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_zorns_lemma",
   "type": "Theorem",
-  "number": "2.75",
+  "number": "2.76",
   "title": "Zorn’s lemma.",
   "body": " Zorn's lemma   If is a nonempty POSET for which every totally ordered subset has an upper bound, then has a maximal element.    Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most set theory textbooks.   "
 },
@@ -3551,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#ss_zorn-5",
   "type": "Remark",
-  "number": "2.76",
+  "number": "2.77",
   "title": "“Totally ordered” versus “chain”.",
   "body": " Totally ordered versus chain  We prefer the term totally ordered to chain , as the latter connotes a countable set. This is important, as to verify the conditions of Zorn's lemma, we must consider all totally ordered subsets, countable or not. It is not enough to just look at countable totally ordered subsets .  "
 },
@@ -3560,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_max_ideals_exist",
   "type": "Theorem",
-  "number": "2.77",
+  "number": "2.78",
   "title": "Maximal ideals exist.",
   "body": " Maximal ideals exist   Let be a ring, and let be a proper ideal of ( , ). There exists a maximal ideal of containing . In particular, if is nonzero, then contains a maximal ideal.    First observe that the second statement follows from the first by taking the ideal : a maximal ideal containing is the same thing as a maximal ideal.  Now let be a proper ideal of , and let be the set of all proper ideals of containing : . Note that is nonempty since . The binary relation given by set inclusion gives the structure of a POSET. We use Zorn's lemma to show that has a maximal element with respect to .  Consider any subset that is totally ordered with respect to . We must show that has an upper bound in . To this end we let . It is clear that for all , so it remains to show that : that is, we must show that (i) is an ideal containing , and (ii) .  Since for all , and since is the union of all such ideals, we have . To show is an ideal, we must show that it is a subgroup of and is closed under left and right multiplication by elements of . Since , we have . Now take . By definition we have and for some ideals . Since is totally ordered, we have either or . Assuming without loss of generality that the first condition holds, we may assume that . Since is an ideal it follows that , and thus that . This shows that is an ideal.  Next we show that . This is a consequence of the fact that in any ring for an ideal if and only if . Since for all , it follows that for all , and hence that . Thus .  Having verified the conditions of Zorn's lemma for all nonempty well-ordered subsets of , we conclude that has a maximal element . By definition and . We conclude our proof by showing that is maximal. Suppose for some proper ideal : then by definition, and hence by maximality. Thus is a maximal ideal of .   "
 },
@@ -3569,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#rem_zorn_max_ideals",
   "type": "Remark",
-  "number": "2.78",
+  "number": "2.79",
   "title": "Zorn’s lemma and maximal ideals.",
   "body": " Zorn's lemma and maximal ideals  You might wonder whether there is a proof of the existence of maximal ideals that does not rely on Zorn's lemma. Surprisingly, we can say with assurance that the answer is no! As it turns out, not only does Zorn's lemma imply the existence of maximal ideals, but the converse is also true: the existence of maximal ideals in arbitrary rings implies Zorn's lemma. As a result, the following statements are all equivalent.   Zorn's lemma.    Any nonzero ring has a maximal ideal.    The axiom of choice: if is a family of nonempty sets indexed by the nonempty set , then is nonempty. (In other words, there is a way to choose for each , an element of in order to form a tuple .)   In fact, we can add a few more equivalent statements to the list. The three statements above can be shown to be equivalent to the following statements.   Every vector space has a basis.    Arbitrary products of compact topological spaces are compact. (Tychonoff's theorem).    Every set admits a total order satisfying the well-ordering principle: , every nonempty subset of has a minimal element with respect to . (Well-ordering theorem.)   It is quite a wonder that these six statements, which on the surface seem to say very different things, are in fact all equivalent. Moreover, on a psychological level there is a great range of plausibility among the various statements: whereas the axiom of choice seems intuitively obvious, the well-ordering principle is quite a shocker, since it would imply that even admits some mysterious well-ordering. This is the basis of the following bon mot attributed to Jerry Bona, professor emeritus at UIC: The axiom of choice is obviously true, the well-ordering theorem obviously false, and who can tell about Zorn's lemma?   "
 },
@@ -3587,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_div_alg_poly",
   "type": "Theorem",
-  "number": "2.79",
+  "number": "2.80",
   "title": "Division algorithm for polynomials.",
   "body": " Division algorithm for polynomials   Let be a nontrivial commutative ring, and let be a nonzero polynomial whose leading coefficient is a unit: , we have , where . Given a polynomial , there is a unique pair of polynomials satisfying the following properties.    .     .       We need to prove two things: that given any there are polynomials satisfying properties (i) and (ii), and furthermore that the pair is unique.  We begin with existence. Let be the set of all pairs of polynomials satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair that also satisfies (ii). Observe that is nonempty, since in particular it contains the pair . If , then this pair satisfies (ii) since ( being a nonzero polynomial). Otherwise, let be an element of for which has minimal finite degree. (Such a pair exists since the set is a nonempty subset of , and hence has a minimal element.) We claim that , and hence that satisfies (ii). Suppose, by contradiction, that with . Since the leading term of is a unit, we can write , where , and where has degree at most . But then we have , showing that and . This contradicts the minimality of . Thus , and we are done.  We now prove that there is exactly one pair satisfying (i) and (ii). Indeed, suppose and both satisfy these properties. From , it follows that . If , then since the leading coefficient of is a unit, it is easy to see that . But then we would have , a contradiction since . Thus , from which it follows that . We conclude that and , and thus that , as desired.   "
 },
@@ -3596,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_poly_division",
   "type": "Definition",
-  "number": "2.80",
+  "number": "2.81",
   "title": "Polynomial division with remainder.",
   "body": " Polynomial division with remainder   Let be a nontrivial commutative ring, and let be a nonzero polynomial whose leading coefficient is a unit. Given a polynomial we call the unique polynomials and satisfying the two conditions of the quotient and remainder upon division of by .   "
 },
@@ -3605,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_quot_poly",
   "type": "Theorem",
-  "number": "2.81",
+  "number": "2.82",
   "title": "Quotients of polynomial rings.",
   "body": " Quotients of polynomial rings   Let be a nontrivial commutative ring, and let be a polynomial of degree whose leading coefficient is a unit in . Additionally, let and write for all , so that in particular we have .   The restriction is injective. Thus we can identify with , and we will write for all .    For all we have , where is the remainder upon division of by .    Every element of can be written in the form , where for all , and this representation is unique in the following sense: we have with if and only if for all .      "
 },
@@ -3614,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#ss_div_alg-7",
   "type": "Remark",
-  "number": "2.82",
+  "number": "2.83",
   "title": "Quotients of polynomial rings.",
   "body": " Quotients of polynomial rings  Note that is an -algebra, with structural ring homomorphism given by the composition . Once we have the language of modules at our disposal, we will be able to summarize (2) of by saying that is an -algebra that is free of rank as an -module.  For now we content ourselves with a special case of this observation. Namely, when is a field, then is an -algebra and hence an -vector space. In this context, (2) of tells us that is a basis of as an -vector space, and hence that as an -vector space.  "
 },
@@ -3623,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_pid",
   "type": "Definition",
-  "number": "2.83",
+  "number": "2.84",
   "title": "Principal ideal domain.",
   "body": " Principal ideal domain   A principal ideal domain (PID) is an integral domain in which every ideal is principal.   "
 },
@@ -3632,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_poly_ring_field",
   "type": "Theorem",
-  "number": "2.84",
+  "number": "2.85",
   "title": "Polynomial ring over a field.",
   "body": " Polynomial ring over a field   If is a field, then is a principal ideal domain. In more detail, for every nonzero proper ideal , there is a unique monic polynomial such that .    First note that is an integral domain since is an integral domain, as we have seen previously.  As always we have and . Let be a proper nonzero ideal. Since , it contains no elements of . It follows that the set is a nonzero subset of , and thus has a minimal element . Let be an element of with . Since for all , we may assume without loss of generality that is monic. We will show that . It is clear that . For the other direction, given any , we may write , where . Since , and since has minimal degree among elements of , we see that , and . This proves that and hence that .  We now show that the monic polynomial with is unique. Suppose we have where and are monic. It follows that and , or equivalently and for polynomials . From , we conclude that . It follows that , and hence that for some constant . Since and are both monic, we conclude that and .   "
 },
@@ -3641,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_divisibility",
   "type": "Definition",
-  "number": "2.85",
+  "number": "2.86",
   "title": "Divisibility.",
   "body": " Divisibility   Let be a ring. Given elements , we say that  divides  in (or is a multiple of in ), written , if there is an element satisfying .   "
 },
@@ -3650,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_prime_irreducible",
   "type": "Definition",
-  "number": "2.86",
+  "number": "2.87",
   "title": "Prime and irreducible elements.",
   "body": " Prime and irreducible elements   Let be an integral domain.  A nonzero element is prime if implies or for all . Equivalently, is prime if the ideal is a nonzero prime ideal.  A nonzero, non-unit element is irreducible if implies or .  Elements are associates if for some unit .   "
 },
@@ -3659,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_max_prime_poly",
   "type": "Theorem",
-  "number": "2.87",
+  "number": "2.88",
   "title": "Prime and maximal ideals of <span class=\"process-math\">\\(F[x]\\)<\/span>.",
   "body": " Prime and maximal ideals of   Let be a field, and let . The following statements are equivalent.    is an irreducible element of .     is a maximal ideal of .     is a prime ideal of .          "
 },
@@ -3668,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#cor_quotient_fields",
   "type": "Corollary",
-  "number": "2.88",
+  "number": "2.89",
   "title": "Quotient fields of <span class=\"process-math\">\\(F[x]\\)<\/span>.",
   "body": " Quotient fields of   Let be a field, and let be irreducible of degree . The quotient ring is a field, as well as an -algebra of dimension .   "
 },
