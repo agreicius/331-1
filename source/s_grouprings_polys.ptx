@@ -375,6 +375,7 @@
         The degree operation on <m>R[x]</m> turns out to be very useful, thanks in part to the properties articulated in the following proposition.
     </p>
     <proposition xml:id="prop_deg_poly">
+        <title>Polynomial degree properties</title>
         <statement>
             <p>
                 Let <m>R</m> be a nontrivial commutative ring, and let <m>f</m> and <m>g</m> be nonzero polynomials in <m>R[x]</m>.
@@ -442,6 +443,7 @@
         As a first illustration of the utility of the degree operation, we show that the polynomial ring construction preserves the integral domain property. 
     </p>
     <corollary xml:id="cor_poly_int_domain">
+        <title>Intregral polynomial rings</title>
         <statement>
             <p>
                 Let <m>R</m> be a nontrivial commutative ring. The following statements are equivalent. 

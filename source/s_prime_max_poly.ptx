@@ -113,6 +113,135 @@
             </p>
         </statement>
     </theorem>
+    <remark>
+        <title>Quotients of polynomial rings</title>
+        <p>
+            Note that <m>R[x]/(f)</m> is an <m>R</m>-algebra, with structural ring homomorphism given by the composition 
+            <md>
+                <mrow>R \amp \rightarrow R[x] \rightarrow R[x]/(f)</mrow>
+            </md>.
+            Once we have the language of modules at our disposal, we will be able to summarize (2) of <xref ref="th_quot_poly"/> by saying that <m>R[x]/(f)</m> is an <m>R</m>-algebra that is free of rank <m>\deg f</m> as an <m>R</m>-module.
+        </p>
+        <p>
+            For now we content ourselves with a special case of this observation. Namely, when <m>F</m> is a field, then <m>F[x]/(f)</m> is an <m>F</m>-algebra and hence an <m>F</m>-vector space. In this context, (2) of <xref ref="th_quot_poly"/> tells us that 
+            <md>
+                <mrow>B \amp =(1, \overline{x}, \overline{x}^2, \ldots, \overline{x}^{n-1})</mrow>
+            </md>
+            is a basis of <m>F[x]/(f)</m> as an <m>F</m>-vector space, and hence that <m>\dim F[x]/(f)=n</m> as an <m>F</m>-vector space. 
+        </p>
+    </remark>
+    </subsection>
+
+    <subsection xml:id="ss_poly_ring_fields">
+    <title>Polynomial rings over fields</title>
+    <definition xml:id="d_pid">
+    <title>Principal ideal domain</title>
+    <statement>
+    <p>
+    A <term>principal ideal domain (PID)</term> is an integral domain <m>R</m> in which every ideal is principal. 
+    </p>
+    </statement>
+    </definition>
+   <p>
+    The integers <m>\Z</m> are the quintessential example of a PID that is not a field. As we now show with the help of the <xref ref="th_div_alg_poly"/>, polynomial rings over fields furnish us with another interesting example. The proof is very similar to the one we gave for <xref ref="th_cyclic_subgroup_inf"/>.
+   </p>
+    
+    <theorem xml:id="th_poly_ring_field">
+    <title>Polynomial ring over a field</title>
+    <statement>
+    <p>
+    If <m>F</m> is a field, then <m>F[x]</m> is a principal ideal domain. In more detail, for every nonzero proper ideal <m>I</m>, there is a unique monic polynomial <m>f\in F[x]</m> such that <m>I=(f)</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        First note that <m>F[x]</m> is an integral domain since <m>F</m> is an integral domain, as we have seen previously.
+    </p>
+    <p>
+        As always we have <m>\{0\}=(0)</m> and <m>F[x]=(1)</m>. Let <m>I</m> be a proper nonzero ideal.  Since <m>I\ne F[x]</m>, it contains no elements of <m>(F[x])^*=F^*</m>. It follows that the set 
+        <md>
+            <mrow>\deg(I-\{0\}) \amp =\{\deg f\mid f\in I\}</mrow>
+        </md> 
+        is a nonzero subset of <m>\Z_{\geq 1}</m>, and thus has a minimal element <m>n\geq 1</m>. Let <m>f</m> be an element of <m>I</m> with <m>\deg f=n</m>. Since <m>cf\in I</m> for all <m>c\in F</m>, we may assume without loss of generality that <m>f</m> is monic. We will show that <m>(f)=I</m>. It is clear that <m>(f)\subseteq I</m>. For the other direction,  given any <m>g\in I</m>, we may write 
+        <md>
+            <mrow>g \amp =qf+r</mrow>
+        </md>,
+        where <m>\deg r\leq \deg f</m>. Since <m>r=g-qf\in I</m>, and since <m>f</m> has minimal degree among elements of <m>I-\{0\}</m>, we see that <m>r=0</m>, and <m>g=qf\in (f)</m>. This proves that <m>I\subseteq (f)</m> and hence that <m>I=(f)</m>. 
+    </p>
+    <p>
+        We now show that the monic polynomial <m>f</m> with <m>I=(f)</m> is unique. Suppose we have <m>(f)=(g)</m> where <m>f</m> and <m>g</m> are monic. It follows that <m>f\mid g</m> and <m>g\mid f</m>, or equivalently <m>g=pf</m> and <m>f=qg</m> for polynomials <m>p,q\in F[x]</m>. From <xref ref="prop_deg_poly"/>, we conclude that 
+        <md number="yes">
+            <mrow>\deg g \amp =\deg p+\deg f\leq \deg f</mrow>
+            <mrow>\deg f \amp =\deg q+\deg g\leq \deg g</mrow>
+        </md>.
+        It follows that <m>\deg f=\deg g</m>, and hence that <m>g=c f</m> for some constant <m>c\in F^*</m>. Since <m>f</m> and <m>g</m> are both monic, we conclude that <m>c=1</m> and <m>f=g</m>. 
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_divisibility">
+    <title>Divisibility</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. Given elements <m>a,b\in R</m>, we say that <m>a</m> <term>divides</term> <m>b</m> in <m>R</m> (or <m>b</m> is a <term>multiple</term> of <m>a</m> in <m>R</m>), written <m>a\mid b</m>, if there is an element <m>r\in R</m> satisfying <m>b=ra</m>. 
+    </p>
+    </statement>
+    </definition>
+    
+    <definition xml:id="d_prime_irreducible">
+    <title>Prime and irreducible elements</title>
+    <statement>
+    <p>
+    Let <m>R</m> be an integral domain. 
+    </p>
+    <p>
+        A nonzero element <m>p\in R-\{0\}</m> is <term>prime</term> if <m>p\mid ab</m> implies <m>p\mid a</m> or <m>p\mid b</m> for all <m>a,b\in R</m>. Equivalently, <m>p</m> is prime if the ideal <m>(p)</m> is a nonzero prime ideal. 
+    </p>
+    <p>
+        A nonzero, non-unit element <m>r\in R-R^*-\{0\}</m> is <term>irreducible</term> if <m>r=ab</m> implies <m>a\in R^*</m> or <m>b\in R^*</m>. 
+    </p>
+    <p>
+        Elements <m>a,b\in R</m> are associates if <m>a=ub</m> for some unit <m>u\in R^*</m>. 
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_max_prime_poly">
+    <title>Prime and maximal ideals of <m>F[x]</m></title>
+    <statement>
+    <p>
+    Let <m>F</m> be a field, and let <m>f\in F[x]</m>. The following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>f</m> is an irreducible element of <m>F[x]</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(f)</m> is a maximal ideal of <m>F[x]</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(f)</m> is a prime ideal of <m>F[x]</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_quotient_fields">
+        <title>Quotient fields of <m>F[x]</m></title>
+        <statement>
+            <p>
+                Let <m>F</m> be a field, and let <m>f\in F[x]</m> be irreducible of degree <m>n\geq 1</m>. The quotient ring <m>F[x]/(f)</m> is a field, as well as an <m>F</m>-algebra of dimension <m>n</m>. 
+            </p>
+        </statement>
+    </corollary>
+    
     
     </subsection>
 
