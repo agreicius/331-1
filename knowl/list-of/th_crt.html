@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.97</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chinese remainder theorem (CRT).</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring, and let <span class="process-math">\(I_1, I_2, \dots, I_n\)</span> be ideals of <span class="process-math">\(R\text{.}\)</span> For all <span class="process-math">\(1\leq k\leq n\text{,}\)</span> we let <span class="process-math">\(\pi_k\colon R\rightarrow R/I_k\)</span> be the quotient map, and we define</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi\colon R \amp \rightarrow \prod_{k=1}^n R/I_k\\
+r \amp \mapsto (\pi_1(r), \pi_2(r),\dots, \pi_n(r)) \text{.}
+\end{align*}
+</div>
+<ol class="decimal" id="th_crt-2-1-7">
+<li>
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(\phi\)</span> is a ring homomorphism with kernel</div>
+<div class="displaymath process-math">
+\begin{align*}
+\ker\phi \amp =\bigcap_{k=1}^n I_k\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_crt-2-1-7-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\phi\)</span> is surjective if and only if the ideals <span class="process-math">\(I_k\)</span> are pairwise relatively prime: i.e., <span class="process-math">\(I_j+I_k=R\)</span> for all <span class="process-math">\(j\ne k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_crt-2-1-7-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">If the ideals <span class="process-math">\(I_k\)</span> are pairwise relatively prime, then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\bigcap_{k=1}^n I_k \amp =\prod_{k=1}^n I_k\text{,}
+\end{align*}
+</div>
+<div class="para">and we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+R/\prod_{k=1}^n I_k \amp \cong \prod_{k=1}^n R/I_k\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_crt-2-1-7-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.97: Chinese remainder theorem (CRT)"><a href="#th_crt" title="Copy heading and permalink for Theorem 2.97: Chinese remainder theorem (CRT)" aria-label="Copy heading and permalink for Theorem 2.97: Chinese remainder theorem (CRT)">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<ol class="decimal" id="th_crt-3-1-1">
+<li>
+<div class="para logical">
+<div class="para">That <span class="process-math">\(\phi\)</span> is a ring homomorphism follows easily from the ring structure on <span class="process-math">\(\prod_{k=1}^n R/I_k\text{.}\)</span> As for the statement about the kernel, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\ker\phi \amp = \bigcap_{k=1}^n\ker \pi_k\\
+\amp =\bigcap_{k=1}^n I_k\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_crt-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para"><div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_crt-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.97.1"><a href="#th_crt-3" title="Copy heading and permalink for Proof 2.97.1" aria-label="Copy heading and permalink for Proof 2.97.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_crt.html#th_crt">in-context</a></span>
+</body>
+</html>
