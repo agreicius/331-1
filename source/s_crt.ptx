@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_crt" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Chinese remainder theorem</title>
+    <theorem xml:id="th_crt">
+    <title>Chinese remainder theorem (CRT)</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a commutative ring, and let <m>I_1, I_2, \dots, I_n</m> be ideals of <m>R</m>. For all <m>1\leq k\leq n</m>, we let <m>\pi_k\colon R\rightarrow R/I_k</m> be the quotient map, and we define  
+    <md>
+        <mrow>\phi\colon R \amp \rightarrow \prod_{k=1}^n R/I_k</mrow>
+        <mrow> r \amp \mapsto (\pi_1(r), \pi_2(r),\dots, \pi_n(r)) </mrow>
+    </md>.
+    <ol>
+        <li>
+            <p>
+                <m>\phi</m> is a ring homomorphism with kernel 
+                <md>
+                    <mrow>\ker\phi \amp =\bigcap_{k=1}^n I_k</mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>\phi</m> is surjective if and only if the ideals <m>I_k</m> are pairwise relatively prime: <ie/>, <m>I_j+I_k=R</m> for all <m>j\ne k</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                If the ideals <m>I_k</m> are pairwise relatively prime, then 
+                <md>
+                    <mrow>\bigcap_{k=1}^n I_k \amp =\prod_{k=1}^n I_k</mrow>
+                </md>,
+                and we have 
+                <md>
+                    <mrow>R/\prod_{k=1}^n I_k \amp \cong \prod_{k=1}^n R/I_k</mrow>
+                </md>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    That <m>\phi</m> is a ring homomorphism follows easily from the ring structure on <m>\prod_{k=1}^n R/I_k</m>; and we have 
+                    <md>
+                        <mrow>\ker\phi \amp = \bigcap_{k=1}^n\ker \pi_k</mrow>
+                        <mrow> \amp =\bigcap_{k=1}^n I_k</mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    
+                </p>
+            </li>
+        </ol>
+    </p>
+    </proof>
+    </theorem>
+    
+    
+
+</section>
