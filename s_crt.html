@@ -703,7 +703,7 @@ r+I \amp \mapsto (r+I_1, r+I_2,\dots, r+I_n)\tag{2.63}
 x \amp \equiv m_1 \pmod{a_1}\\
 x \amp \equiv m_2 \pmod{a_2}\\
 \amp \vdots \\
-x \amp \equiv m_n \pmod{a_n}
+x \amp \equiv m_n \pmod{a_n}  
 \end{align*}
 </div>
 <div class="para">forms a unique congruence class modulo <span class="process-math">\(a\text{.}\)</span> That is, (i) there is a solution <span class="process-math">\(x\in \Z\)</span> to this system of congruences, and (ii) <span class="process-math">\(y\)</span> is another solution if and only if <span class="process-math">\(x\equiv y\pmod a\text{.}\)</span>
@@ -715,25 +715,67 @@ x \amp \equiv m_n \pmod{a_n}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_crt_integers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.101: CRT: integers"><a href="#th_crt_integers" title="Copy heading and permalink for Theorem 2.101: CRT: integers" aria-label="Copy heading and permalink for Theorem 2.101: CRT: integers">🔗</a></div></article><article class="corollary theorem-like" id="cor_tot_func"><h4 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.102</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler totient function.</span>
+<div class="autopermalink" data-description="Theorem 2.101: CRT: integers"><a href="#th_crt_integers" title="Copy heading and permalink for Theorem 2.101: CRT: integers" aria-label="Copy heading and permalink for Theorem 2.101: CRT: integers">🔗</a></div></article><article class="definition definition-like" id="d_euler_totient"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.102</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s totient function.</span>
+</h4>
+<div class="para logical" id="d_euler_totient-2-1">
+<div class="para">
+<dfn class="terminology">Euler’s totient function</dfn> is the function <span class="process-math">\(\varphi\colon \Z_{\geq 0}\rightarrow \Z\)</span> defined as</div>
+<div class="displaymath process-math" id="d_euler_totient-2-1-3">
+\begin{align*}
+\varphi(n) \amp \abs{\{k\in \{1,2,\dots, n\}\mid \gcd(k,n)=1\}}\text{.}
+\end{align*}
+</div>
+<div class="para">In other words, <span class="process-math">\(\varphi(n)\)</span> is the number of integers in <span class="process-math">\(\{1,2,\dots, n\}\)</span> that are relatively prime to <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_euler_totient-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.102: Euler’s totient function"><a href="#d_euler_totient" title="Copy heading and permalink for Definition 2.102: Euler’s totient function" aria-label="Copy heading and permalink for Definition 2.102: Euler’s totient function">🔗</a></div></article><article class="corollary theorem-like" id="cor_tot_func"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.103</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s totient function.</span>
 </h4>
 <div class="para logical" id="cor_tot_func-2-1">
-<div class="para">Let <span class="process-math">\(\varphi\)</span> be the Euler totient function: i.e., <span class="process-math">\(\varphi(m)\)</span> is the number of integers in <span class="process-math">\(\{1,2,\dots, m\}\)</span> that are relatively prime to <span class="process-math">\(m\text{.}\)</span> If <span class="process-math">\(a_1,a_2,\dots, a_n\)</span> are pairwise relatively prime integers, then</div>
-<div class="displaymath process-math" id="cor_tot_func-2-1-7">
+<div class="para">Let <span class="process-math">\(\varphi\)</span> be the Euler totient function. If <span class="process-math">\(a_1,a_2,\dots, a_n\)</span> are pairwise relatively prime integers, then</div>
+<div class="displaymath process-math" id="cor_tot_func-2-1-3">
 \begin{align}
 \phi(a_1a_2\cdots a_n) \amp = \phi(a_1)\phi(a_2)\cdots \phi(a_n) \text{.}\tag{2.64}
 \end{align}
 </div>
 <div class="para">Additionally, given <span class="process-math">\(m=\prod_{k=1}^r p_k^{n_k}\text{,}\)</span> where the <span class="process-math">\(p_k\)</span> are distinct prime integers, we have</div>
-<div class="displaymath process-math" id="cor_tot_func-2-1-10">
+<div class="displaymath process-math" id="cor_tot_func-2-1-6">
 \begin{align}
 \varphi(m) \amp = \prod_{k=1}^{r}p^{n_k-1}(p_k-1) \text{.}\tag{2.65}
 \end{align}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_tot_func-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.102: Euler totient function"><a href="#cor_tot_func" title="Copy heading and permalink for Corollary 2.102: Euler totient function" aria-label="Copy heading and permalink for Corollary 2.102: Euler totient function">🔗</a></div></article><div class="autopermalink" data-description="Subsection: CRT: the integers"><a href="#ss_CRT_integers" title="Copy heading and permalink for Subsection: CRT: the integers" aria-label="Copy heading and permalink for Subsection: CRT: the integers">🔗</a></div></section><div class="autopermalink" data-description="Section 2.9: Chinese remainder theorem"><a href="#s_crt" title="Copy heading and permalink for Section 2.9: Chinese remainder theorem" aria-label="Copy heading and permalink for Section 2.9: Chinese remainder theorem">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 2.103: Euler’s totient function"><a href="#cor_tot_func" title="Copy heading and permalink for Corollary 2.103: Euler’s totient function" aria-label="Copy heading and permalink for Corollary 2.103: Euler’s totient function">🔗</a></div></article><details id="cor_tot_func-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_tot_func-3-1">
+<div class="para">Statement (1) follows immediately from <a href="s_crt.html#th_crt_integers" class="xref" data-knowl="./knowl/xref/th_crt_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.101: CRT: integers">Theorem 2.101</a> and the fact (proven elsewhere) that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_crt_integers.html" id="cor_tot_func-3-1-2">
+\begin{align*}
+\var\phi(m) \amp = \abs{(\Z/m\Z)^*}\text{.}
+\end{align*}
+</div>
+<div class="para">For (2), observe first the if <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct prime integers, then <span class="process-math">\(\gcd(p^j, q^k)=1\)</span> for any positive integers <span class="process-math">\(j\)</span> and <span class="process-math">\(k\text{.}\)</span> Thus given the factorization <span class="process-math">\(m=\prod_{k=1}^r p_k^{n_k}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_crt_integers.html" id="cor_tot_func-3-1-9">
+\begin{align*}
+\var\phi(m) \amp =\prod_{k=1}^n\var(p_k^{n_k})
+\end{align*}
+</div>
+<div class="para">by (1). Furthermore, for any prime power <span class="process-math">\(p^\ell\)</span> an integer <span class="process-math">\(k\in \{1,2,\dots, p^k\}\)</span> is relatively prime to <span class="process-math">\(p^\ell\)</span> if and only if it is not divisible by <span class="process-math">\(p\text{,}\)</span> if and only if it is not a multiple of <span class="process-math">\(p\text{.}\)</span> The set of multiples of <span class="process-math">\(p\)</span> in <span class="process-math">\(\{1,2,\dots, p^\ell\}\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_crt_integers.html" id="cor_tot_func-3-1-17">
+\begin{align*}
+\{p, 2p, 3p, \dots, p^{\ell-1}p\} \amp =\{kp\mid k\in \{1,2,\dots, p^{\ell-1}\}\}\text{,}
+\end{align*}
+</div>
+<div class="para">which has cardinality <span class="process-math">\(p^{\ell-1}\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_crt_integers.html" id="cor_tot_func-3-1-19">
+\begin{align*}
+\varphi(p^\ell) \amp = p^\ell-p^{\ell-1}=p^{\ell-1}(p-1)\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_tot_func-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.103.1"><a href="#cor_tot_func-3" title="Copy heading and permalink for Proof 2.103.1" aria-label="Copy heading and permalink for Proof 2.103.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: CRT: the integers"><a href="#ss_CRT_integers" title="Copy heading and permalink for Subsection: CRT: the integers" aria-label="Copy heading and permalink for Subsection: CRT: the integers">🔗</a></div></section><div class="autopermalink" data-description="Section 2.9: Chinese remainder theorem"><a href="#s_crt" title="Copy heading and permalink for Section 2.9: Chinese remainder theorem" aria-label="Copy heading and permalink for Section 2.9: Chinese remainder theorem">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_prime_max_poly.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
