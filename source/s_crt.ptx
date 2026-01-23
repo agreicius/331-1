@@ -2,6 +2,24 @@
 
 <section xml:id="s_crt" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Chinese remainder theorem</title>
+   
+   <subsection xml:id="ss_">
+   <title>Chinese remainder theorem: general form</title>
+    <p>
+        In its general form, the Chinese remainder theorem (CRT) articulates conditions for which a given ring can be expressed (up to isomorphism) as a direct product of rings. The result is a pervasive and useful tool in ring theory, often employed to prove some property of a given ring <m>R</m> by exhibiting an isomorphism between <m>R</m> and a product ring <m>\prod_{k=1}^n S_k</m>, and proving a similar result for the (often simpler rings) <m>S_k</m>, and then using the simple structure of product rings to lift the result back to <m>R</m>.
+    </p>
+    <p>
+        The specific conditions laid out by the CRT involve quotients of rings by pairwise <em>relatively prime ideals</em>. 
+    </p>
+    <definition xml:id="d_rel_prime_ideals">
+    <title>Relatively prime ideals</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. Ideals <m>I</m> and <m>J</m> of <m>R</m> are relatively prime if <m>I+J=R</m>. Equivalently, <m>I</m> and <m>J</m> are relatively prime if we can write <m>1=i+j</m> for some <m>i\in I</m> and <m>j\in J</m>. 
+    </p>
+    </statement>
+    </definition>
+    
     <theorem xml:id="th_crt">
     <title>Chinese remainder theorem (CRT)</title>
     <statement>
@@ -45,7 +63,7 @@
         <ol>
             <li>
                 <p>
-                    That <m>\phi</m> is a ring homomorphism follows easily from the ring structure on <m>\prod_{k=1}^n R/I_k</m>; and we have 
+                    That <m>\phi</m> is a ring homomorphism follows easily from the ring structure on <m>\prod_{k=1}^n R/I_k</m>. As for the statement about the kernel, we have 
                     <md>
                         <mrow>\ker\phi \amp = \bigcap_{k=1}^n\ker \pi_k</mrow>
                         <mrow> \amp =\bigcap_{k=1}^n I_k</mrow>
@@ -61,7 +79,115 @@
     </p>
     </proof>
     </theorem>
-    
+    <p>
+        Since a ring isomorphism <m>\phi\colon R\rightarrow S</m> restricts to an isomorphism between the unit groups <m>R^*</m> and <m>S^*</m>, and since for any product ring <m>S=\prod_{i\in I}R_i</m> we have <m>S^*=\prod_{i\in i}R_i^*</m>, we immediately obtain the following corollary.
+    </p>
+    <corollary xml:id="cor_crt_units">
+    <title>CRT for unit groups</title>
+    <statement>
+    <p>
+        Let <m>R</m> be a commutative ring, let <m>I_1, I_2, \dots, I_n</m> be a collection of pairwise relatively prime ideals of <m>R</m>, and let 
+        <md>
+            <mrow>I \amp =\bigcap_{k=1}^n I_k=\prod_{k=1}^n I_k</mrow>
+        </md>.
+        The map 
+        <md number="yes">
+            <mrow>\phi\colon (R/I)^* \amp\rightarrow  \prod_{k=1}^n (R/I_k)^* </mrow>
+            <mrow>r+I \amp \mapsto (r+I_1, r+I_2,\dots, r+I_n)</mrow>
+        </md>
+        is an isomorphism of groups. 
+    </p>
+    </statement>
+    </corollary>
+    </subsection>
+    <subsection xml:id="ss_CRT_integers">
+    <title>CRT: the integers</title>
+    <p>
+        In a PID we have an alternative formulation for when two ideals are relatively prime. 
+    </p>
+    <proposition xml:id="prop_pid_rel_prime">
+        <title>Relatively prime ideals in PID</title>
+        <statement>
+            <p>
+                Let <m>(a)</m> and <m>(b)</m> be ideals of the PID <m>R</m>. The following statements are equivalent.
+                <ol>
+                    <li>
+                        <p>
+                            <m>(a)</m> and <m>(b)</m> are relatively prime. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(a,b)=(1)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>c\in R</m> satisfies <m>c\mid a</m> and <m>c\mid b</m>, then <m>c</m> is a unit. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+   <theorem xml:id="th_crt_integers">
+   <title>CRT: integers</title>
+   <statement>
+   <p>
+   Let <m>a_1,a_2,\dots, a_n</m> be pairwise relatively prime integers (<ie/>, <m>\gcd(a_i, a_j)=1</m> for all <m>i\ne j</m>), and let <m>a=\prod_{k=1}^na_i</m>. 
+   <ol>
+    <li>
+        <p>
+            The map 
+        <md number="no">
+        <mrow>\phi\colon \Z/a\Z \amp \rightarrow \prod_{k=1}^n \Z/a_k\Z</mrow>
+        <mrow>[m]_a \amp \mapsto ([m]_{a_1}, [m]_{a_2},\dots, [m]_{a_n}) </mrow>
+        </md>
+    is an isomorphism of rings. 
+        </p>
+    </li>
+    <li>
+        <p>
+            The map 
+        <md number="no">
+        <mrow>\phi\colon (\Z/a\Z)^* \amp \rightarrow \prod_{k=1}^n (\Z/a_k\Z)^*</mrow>
+        <mrow>[m]_a \amp \mapsto ([m]_{a_1}, [m]_{a_2},\dots, [m]_{a_n}) </mrow>
+        </md>
+    is an isomorphism of groups. 
+        </p>
+    </li>
+    <li>
+        <p>
+            For any choice of integers <m>m_1, m_2, \dots, m_n</m>, the set of <m>x</m> satisfying the system of congruences
+            <md>
+                <mrow> x \amp \equiv m_1 \pmod{a_1}</mrow>
+                <mrow>x \amp \equiv m_2 \pmod{a_2}</mrow>
+                <mrow> \amp \vdots </mrow>
+                <mrow>x \amp \equiv m_n \pmod{a_n}</mrow>
+            </md>
+            forms a unique congruence class modulo <m>a</m>. That is, (i) there is a solution <m>x\in \Z</m> to this system of congruences, and (ii) <m>y</m> is another solution if and only if <m>x\equiv y\pmod a</m>. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   </theorem>
+   <corollary xml:id="cor_tot_func">
+    <title>Euler totient function</title>
+    <statement>
+        <p>
+            Let <m>\varphi</m> be the Euler totient function: <ie/>, <m>\varphi(m)</m> is the number of integers in <m>\{1,2,\dots, m\}</m> that are relatively prime to <m>m</m>. If <m>a_1,a_2,\dots, a_n</m> are pairwise relatively prime integers, then 
+            <md number="yes">
+                <mrow xml:id="eq_totient_mult">\phi(a_1a_2\cdots a_n) \amp = \phi(a_1)\phi(a_2)\cdots \phi(a_n) </mrow>
+            </md>.
+            Additionally, given <m>m=\prod_{k=1}^r p_k^{n_k}</m>, where the <m>p_k</m> are distinct prime integers, we have  
+            <md number="yes">
+                <mrow xml:id="eq_totient_formula">\varphi(m) \amp = \prod_{k=1}^{r}p^{n_k-1}(p_k-1) </mrow>
+            </md>.
+        </p>
+    </statement>
+   </corollary>
+    </subsection>
     
 
 </section>
