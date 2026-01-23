@@ -103,15 +103,50 @@
                         <p>
                             Every element of <m>R[x]/(f)</m> can be written in the form 
                             <md>
-                                <mrow>\sum_{k=0}^{n-1}r_k\overline{x}^{k}\amp =r_0+r_1\overline{x}+\cdots + {r}_{n-1}\overline{x}^{n-1}</mrow>
+                                <mrow>\sum_{k=0}^{n-1}a_k\overline{x}^{k}\amp =a_0+a_1\overline{x}+\cdots + {a}_{n-1}\overline{x}^{n-1}</mrow>
                             </md>,
-                            where <m>r_k\in \pi(R)</m> for all <m>k</m>, 
-                            and this representation is unique in the following sense: we have <m>\sum_{k=0}^{n-1}r_k\overline{x}^k=\sum_{k=0}^{n-1}s_k\overline{x}^k</m> with <m>r_k, s_k\in \pi(R)</m> if and only if <m>r_k=s_k</m> for all <m>k</m>. 
+                            where <m>a_k\in \pi(R)</m> for all <m>k</m>, 
+                            and this representation is unique in the following sense: we have <m>\sum_{k=0}^{n-1}a_k\overline{x}^k=\sum_{k=0}^{n-1}b_k\overline{x}^k</m> with <m>a_k, b_k\in \pi(R)</m> if and only if <m>a_k=b_k</m> for all <m>k</m>. 
                         </p>
                     </li>
                 </ol>
             </p>
         </statement>
+        <proof>
+            <p>
+                For (1) it suffices to show that <m>\ker\pi \cap R=\{0\}</m>. Since <m>\ker \pi=(f)</m>, and since <m>\deg gf=\deg g+\deg f</m> for any <m>g\in R[x]</m> (<xref ref="prop_deg_poly"/>), it is easy to see that <m>gf\in R</m> if and only if if <m>g=0</m> and thus <m>gf=0</m>. 
+            </p>
+            <p>
+                Next, given <m>g\in R[x]</m> and writing <m>g=qf+r</m> as in the division algorithm, we see that 
+                <md>
+                    <mrow>\pi(g) \amp = \pi(qf+r)</mrow>
+                    <mrow> \amp = \pi(q)\pi(f)+\pi(r)</mrow>
+                    <mrow> \amp =\pi(r) \amp (\pi(f)=0)</mrow>
+                </md>.
+                This proves (2).
+            </p>
+            <p>
+                Lastly,  given any <m>g\in R[x]</m>, let <m>r</m> be its remainder upon division by <m>f</m>. Since <m>\deg r&lt; \deg f=n</m>, we may write 
+                <md>
+                    <mrow>r(x) \amp =a_0+a_1x+\cdots +a_{n-1}x^{n-1}</mrow>
+                </md>
+                for elements <m>a_k\in R</m>. From (2) we have 
+                <md>
+                    <mrow>\overline{g} \amp =\overline{r} </mrow>
+                    <mrow> \amp = a_0+a_1\overline{x}+\cdots +a_{n-1}\overline{x}^{n-1}</mrow>
+                </md>.
+                Thus every element of the quotient can be expressed in the desired form. Lastly, to see that this expression is unique, if we have 
+                <md>
+                    <mrow>\overline{g} \amp = \sum_{k=0}^na_k\overline{x}^k=\sum_{k=0}^nb_k\overline{x}^k</mrow>
+                </md>, 
+                then we have <m>\pi(r)=\pi(s)</m>, where 
+                <md>
+                    <mrow>r(x) \amp =\sum_{k=0}^na_kx^k</mrow>
+                    <mrow>s(x) \amp =\sum_{k=0}^nb_kx^k</mrow>
+                </md>
+                and thus <m>r(x)-s(x)\in \ker\pi=(f)</m>. But any nonzero element of <m>(f)</m> must have degree at least <m>n</m>, since <m>\deg qf=\deg q+\deg f\geq n</m> for any <em>nonzero</em> polynomial <m>q</m>. It follows that <m>r(x)-s(x)=0</m> and thus that <m>a_k=b_k</m> for all <m>k</m>. 
+            </p>
+        </proof>
     </theorem>
     <remark>
         <title>Quotients of polynomial rings</title>
@@ -204,6 +239,13 @@
     </p>
     </statement>
     </definition>
+    <remark xml:id="rem_prime_element_ideal">
+    <title>Prime elements and prime ideals</title>
+    <p>
+    Let <m>R</m> be a commutative ring. It is easy to see that an element <m>r\in R</m> is prime (as in <xref ref="d_prime_irreducible"/>) if and only if its principal ideal <m>(r)</m> is prime (as in <xref ref="d_prime_ideal"/>).
+    </p>
+    </remark>
+    
     <theorem xml:id="th_max_prime_poly">
     <title>Prime and maximal ideals of <m>F[x]</m></title>
     <statement>
@@ -229,10 +271,16 @@
     </p>
     </statement>
     <proof>
+    <p> Implication: (1)<m>\implies</m>(2). Assume <m>f</m> is irreducible and let <m>I</m> be an ideal of <m>F[x]</m> satisfying <m>(f)\subseteq I</m>. Since <m>F[x]</m> is a PID, we have <m>I=(g)</m>, in which case <m>(f)\subseteq (g)</m> is equivalent to <m>g\mid f</m>. Since <m>f</m> is irreducible, this implies <m>g</m> is a unit, or <m>g=cf</m>, where <m>c</m> is a unit. But then, either <m>(g)=F[x]</m>, or <m>(g)=(f)</m>. This proves <m>(f)</m> is maximal. 
+    </p>
+    <p> Implication: (2)<m>\implies</m>(3). This implication is just a special instance of the more general fact that in a commutative ring all maximal ideals are prime ideals.
+    </p>
     <p>
+    Implication: (3)<m>\implies</m>(1). Assume <m>(f)</m> is prime. As observed in <xref ref="rem_prime_element_ideal"/>, it follows that <m>f</m> is a prime element of <m>F[x]</m>. Assume <m>f=gh</m> for some polynomials <m>g,h\in F[x]</m>. Since <m>f</m> is prime, we have <m>f\mid g</m> or <m>f\mid h</m>. In the first case, we have <m>g=qf</m> and hence <m>f=fqh</m>. Since <m>F[x]</m> is integral and <m>f\ne 0</m>, it follows that <m>qh=1</m> and thus <m>h</m> is a unit. Similarly, if <m>f\mid h</m>, then <m>g</m> is a unit. Thus <m>f=gh</m> implies <m>g</m> is a unit or <m>h</m> is a unit, and we conclude that <m>f</m> is irreducible. 
     </p>
     </proof>
     </theorem>
+    
     <remark>
     <title>Comparing <m>\Z</m> and <m>F[x]</m></title>
     <p>
