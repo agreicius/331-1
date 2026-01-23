@@ -163,7 +163,7 @@
                 <mrow> x \amp \equiv m_1 \pmod{a_1}</mrow>
                 <mrow>x \amp \equiv m_2 \pmod{a_2}</mrow>
                 <mrow> \amp \vdots </mrow>
-                <mrow>x \amp \equiv m_n \pmod{a_n}</mrow>
+                <mrow>x \amp \equiv m_n \pmod{a_n}  </mrow>
             </md>
             forms a unique congruence class modulo <m>a</m>. That is, (i) there is a solution <m>x\in \Z</m> to this system of congruences, and (ii) <m>y</m> is another solution if and only if <m>x\equiv y\pmod a</m>. 
         </p>
@@ -172,11 +172,24 @@
    </p>
    </statement>
    </theorem>
+   <definition xml:id="d_euler_totient">
+   <title>Euler's totient function</title>
+   <statement>
+   <p>
+   <term>Euler's totient function</term> is the function <m>\varphi\colon \Z_{\geq 0}\rightarrow \Z</m> defined as 
+   <md>
+    <mrow>\varphi(n) \amp =\abs{\{k\in \{0,1,\dots, n-1\}\mid \gcd(k,n)=1\}}</mrow>
+   </md>.
+   In other words, <m>\varphi(n)</m> is the number of integers in <m>\{0,1\dots, n-1\}</m> that are relatively prime to <m>n</m>.
+   </p>
+   </statement>
+   </definition>
+   
    <corollary xml:id="cor_tot_func">
-    <title>Euler totient function</title>
+    <title>Euler's totient function</title>
     <statement>
         <p>
-            Let <m>\varphi</m> be the Euler totient function: <ie/>, <m>\varphi(m)</m> is the number of integers in <m>\{1,2,\dots, m\}</m> that are relatively prime to <m>m</m>. If <m>a_1,a_2,\dots, a_n</m> are pairwise relatively prime integers, then 
+            Let <m>\varphi</m> be the Euler totient function. If <m>a_1,a_2,\dots, a_n</m> are pairwise relatively prime integers, then 
             <md number="yes">
                 <mrow xml:id="eq_totient_mult">\phi(a_1a_2\cdots a_n) \amp = \phi(a_1)\phi(a_2)\cdots \phi(a_n) </mrow>
             </md>.
@@ -186,6 +199,26 @@
             </md>.
         </p>
     </statement>
+    <proof>
+        <p>
+            Statement (1) follows immediately from <xref ref="th_crt_integers"/> and the fact (proven elsewhere) that 
+            <md>
+                <mrow>\var\phi(m) \amp = \abs{(\Z/m\Z)^*}</mrow>
+            </md>.
+            For (2), observe first the if <m>p</m> and <m>q</m> are distinct prime integers, then <m>\gcd(p^j, q^k)=1</m> for any positive integers <m>j</m> and <m>k</m>. Thus given the factorization <m>m=\prod_{k=1}^r p_k^{n_k}</m>, we have 
+            <md>
+                <mrow>\var\phi(m) \amp =\prod_{k=1}^n\var(p_k^{n_k})</mrow>
+            </md>
+            by (1). Furthermore, for any prime power <m>p^\ell</m> an integer <m>k\in \{0,1,\dots, p^\ell-1\}</m> is relatively prime to <m>p^\ell</m> if and only if it is not divisible by <m>p</m>, if and only if it is not a multiple of <m>p</m>. The set of multiples of <m>p</m> in <m>\{0,1,\dots, p^\ell-1\}</m> is 
+            <md>
+                <mrow>\{0,p, 2p, 3p, \dots, (p^{\ell-1}-1)p\} \amp =\{kp\mid k\in \{0,2,\dots, p^{\ell}-1\}\}</mrow>
+            </md>,
+            which has cardinality <m>p^{\ell-1}</m>. Thus 
+            <md>
+                <mrow>\varphi(p^\ell) \amp = p^\ell-p^{\ell-1}=p^{\ell-1}(p-1)</mrow>
+            </md>.
+        </p>
+    </proof>
    </corollary>
     </subsection>
     
