@@ -44,10 +44,10 @@
 <div class="para">Every element of <span class="process-math">\(R[x]/(f)\)</span> can be written in the form</div>
 <div class="displaymath process-math">
 \begin{align*}
-\sum_{k=0}^{n-1}r_k\overline{x}^{k}\amp =r_0+r_1\overline{x}+\cdots + {r}_{n-1}\overline{x}^{n-1}\text{,}
+\sum_{k=0}^{n-1}a_k\overline{x}^{k}\amp =a_0+a_1\overline{x}+\cdots + {a}_{n-1}\overline{x}^{n-1}\text{,}
 \end{align*}
 </div>
-<div class="para">where <span class="process-math">\(r_k\in \pi(R)\)</span> for all <span class="process-math">\(k\text{,}\)</span> and this representation is unique in the following sense: we have <span class="process-math">\(\sum_{k=0}^{n-1}r_k\overline{x}^k=\sum_{k=0}^{n-1}s_k\overline{x}^k\)</span> with <span class="process-math">\(r_k, s_k\in \pi(R)\)</span> if and only if <span class="process-math">\(r_k=s_k\)</span> for all <span class="process-math">\(k\text{.}\)</span>
+<div class="para">where <span class="process-math">\(a_k\in \pi(R)\)</span> for all <span class="process-math">\(k\text{,}\)</span> and this representation is unique in the following sense: we have <span class="process-math">\(\sum_{k=0}^{n-1}a_k\overline{x}^k=\sum_{k=0}^{n-1}b_k\overline{x}^k\)</span> with <span class="process-math">\(a_k, b_k\in \pi(R)\)</span> if and only if <span class="process-math">\(a_k=b_k\)</span> for all <span class="process-math">\(k\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-2-1-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -56,6 +56,51 @@
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.82: Quotients of polynomial rings"><a href="#th_quot_poly" title="Copy heading and permalink for Theorem 2.82: Quotients of polynomial rings" aria-label="Copy heading and permalink for Theorem 2.82: Quotients of polynomial rings">🔗</a></div></article><span class="incontext"><a class="internal" href="s_prime_max_poly.html#th_quot_poly">in-context</a></span>
+<div class="autopermalink" data-description="Theorem 2.82: Quotients of polynomial rings"><a href="#th_quot_poly" title="Copy heading and permalink for Theorem 2.82: Quotients of polynomial rings" aria-label="Copy heading and permalink for Theorem 2.82: Quotients of polynomial rings">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">For (1) it suffices to show that <span class="process-math">\(\ker\pi \cap R=\{0\}\text{.}\)</span> Since <span class="process-math">\(\ker \pi=(f)\text{,}\)</span> and since <span class="process-math">\(\deg gf=\deg g+\deg f\)</span> for any <span class="process-math">\(g\in R[x]\)</span> (<a href="s_grouprings_polys.html#prop_deg_poly" class="xref" data-knowl="./knowl/xref/prop_deg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.28: Polynomial degree properties">Proposition 2.28</a>), it is easy to see that <span class="process-math">\(gf\in R\)</span> if and only if if <span class="process-math">\(g=0\)</span> and thus <span class="process-math">\(gf=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Next, given <span class="process-math">\(g\in R[x]\)</span> and writing <span class="process-math">\(g=qf+r\)</span> as in the division algorithm, we see that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\pi(g) \amp = \pi(qf+r)\\
+\amp = \pi(q)\pi(f)+\pi(r)\\
+\amp =\pi(r) \amp (\pi(f)=0)\text{.}
+\end{align*}
+</div>
+<div class="para">This proves (2).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Lastly,  given any <span class="process-math">\(g\in R[x]\text{,}\)</span> let <span class="process-math">\(r\)</span> be its remainder upon division by <span class="process-math">\(f\text{.}\)</span> Since <span class="process-math">\(\deg r&lt; \deg f=n\text{,}\)</span> we may write</div>
+<div class="displaymath process-math">
+\begin{align*}
+r(x) \amp =a_0+a_1x+\cdots +a_{n-1}x^{n-1}
+\end{align*}
+</div>
+<div class="para">for elements <span class="process-math">\(a_k\in R\text{.}\)</span> From (2) we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\overline{g} \amp =\overline{r} \\
+\amp = a_0+a_1\overline{x}+\cdots +a_{n-1}\overline{x}^{n-1}\text{.}
+\end{align*}
+</div>
+<div class="para">Thus every element of the quotient can be expressed in the desired form. Lastly, to see that this expression is unique, if we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\overline{g} \amp = \sum_{k=0}^na_k\overline{x}^k=\sum_{k=0}^nb_k\overline{x}^k\text{,}
+\end{align*}
+</div>
+<div class="para">then we have <span class="process-math">\(\pi(r)=\pi(s)\text{,}\)</span> where</div>
+<div class="displaymath process-math">
+\begin{align*}
+r(x) \amp =\sum_{k=0}^na_kx^k\\
+s(x) \amp =\sum_{k=0}^nb_kx^k
+\end{align*}
+</div>
+<div class="para">and thus <span class="process-math">\(r(x)-s(x)\in \ker\pi=(f)\text{.}\)</span> But any nonzero element of <span class="process-math">\((f)\)</span> must have degree at least <span class="process-math">\(n\text{,}\)</span> since <span class="process-math">\(\deg qf=\deg q+\deg f\geq n\)</span> for any <em class="emphasis">nonzero</em> polynomial <span class="process-math">\(q\text{.}\)</span> It follows that <span class="process-math">\(r(x)-s(x)=0\)</span> and thus that <span class="process-math">\(a_k=b_k\)</span> for all <span class="process-math">\(k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.82.1"><a href="#th_quot_poly-3" title="Copy heading and permalink for Proof 2.82.1" aria-label="Copy heading and permalink for Proof 2.82.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_prime_max_poly.html#th_quot_poly">in-context</a></span>
 </body>
 </html>
