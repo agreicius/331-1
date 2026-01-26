@@ -9,13 +9,13 @@
         In its general form, the Chinese remainder theorem (CRT) articulates conditions for which a given ring can be expressed (up to isomorphism) as a direct product of rings. The result is a pervasive and useful tool in ring theory, often employed to prove some property of a given ring <m>R</m> by exhibiting an isomorphism between <m>R</m> and a product ring <m>\prod_{k=1}^n S_k</m>, and proving a similar result for the (often simpler rings) <m>S_k</m>, and then using the simple structure of product rings to lift the result back to <m>R</m>.
     </p>
     <p>
-        The specific conditions laid out by the CRT involve quotients of rings by pairwise <em>relatively prime ideals</em>. 
+        The specific conditions laid out by the CRT involve quotients of rings by pairwise <em>coprime ideals</em>. 
     </p>
-    <definition xml:id="d_rel_prime_ideals">
-    <title>Relatively prime ideals</title>
+    <definition xml:id="d_coprime_ideals">
+    <title>Coprime ideals</title>
     <statement>
     <p>
-    Let <m>R</m> be a nonzero commutative ring. Ideals <m>I</m> and <m>J</m> of <m>R</m> are relatively prime if <m>I+J=R</m>. Equivalently, <m>I</m> and <m>J</m> are relatively prime if we can write <m>1=i+j</m> for some <m>i\in I</m> and <m>j\in J</m>. 
+    Let <m>R</m> be a nonzero commutative ring. Ideals <m>I</m> and <m>J</m> of <m>R</m> are coprime if <m>I+J=R</m>. Equivalently, <m>I</m> and <m>J</m> are coprime if we can write <m>1=i+j</m> for some <m>i\in I</m> and <m>j\in J</m>. 
     </p>
     </statement>
     </definition>
@@ -40,12 +40,12 @@
         </li>
         <li>
             <p>
-                <m>\phi</m> is surjective if and only if the ideals <m>I_k</m> are pairwise relatively prime: <ie/>, <m>I_j+I_k=R</m> for all <m>j\ne k</m>. 
+                <m>\phi</m> is surjective if and only if the ideals <m>I_k</m> are pairwise coprime: <ie/>, <m>I_j+I_k=R</m> for all <m>j\ne k</m>. 
             </p>
         </li>
         <li>
             <p>
-                If the ideals <m>I_k</m> are pairwise relatively prime, then 
+                If the ideals <m>I_k</m> are pairwise coprime, then 
                 <md>
                     <mrow>\bigcap_{k=1}^n I_k \amp =\prod_{k=1}^n I_k</mrow>
                 </md>,
@@ -72,7 +72,61 @@
             </li>
             <li>
                 <p>
-                    
+                   For each <m>1\keq k\leq n</m>, let <m>e_k=(a_i)_{i=1}^n</m> be defined as 
+                   <md>
+                    <mrow>a_i \amp =\begin{cases}
+                    1 \amp \text{if } i=k\\
+                    0       \amp \text{if } i\ne k
+                    \end{cases}</mrow>
+                   </md>. 
+                    It is not difficult to see that <m>\phi</m> is surjective if and only if for each <m>k</m> there is some <m>r_k\in R</m> such that <m>\phi(r_k)=e_k</m>. Indeed, the forward implication is obvious, and the reverse follows from the fact that given any <m>(a_1+I_1,a_2+I_2,\dots, a_n+I_n)\in \prod_{k=1}^nR/I_k</m>, we have 
+                    <md>
+                        <mrow>\phi(\sum_{k=1}^na_kr_k) \amp =\sum_{k=1}^n\phi(a_k)\phi(r_k)</mrow>
+                        <mrow> \amp = \sum_{k=1}\phi(a_k)e_k</mrow>
+                        <mrow> \amp =(a_1+I_1, a_2+I_2,\dots, a_n+I_n)</mrow>
+                    </md>.
+                    Thus it suffices to show that we can find <m>r_k</m> satisfying <m>\phi(r_k)=e_k</m> if and only if the ideals <m>I_k</m> are pairwise coprime. 
+                </p>
+                <p>
+                    Assume for all <m>k</m> there exist <m>r_k\in R</m> satisfying <m>\phi(r_k)=e_k</m>. For ideals <m>I_j</m> and <m>I_k</m>, <m>j\ne k</m>, since <m>\phi(r_k)=e_k</m>, we have, by definition of <m>\phi</m>, 
+                    <md number="yes">
+                        <mrow>r_k \amp = 1+i_k \amp </mrow>
+                        <mrow>r_k \amp =0+i_j </mrow>
+                    </md>
+                    for elements <m>i_k\in I_k</m> and <m>i_j\in I_j</m>. But then 
+                    <md>
+                        <mrow>1 \amp =r_k-i_k=i_j-i_k\in I_j+I_k</mrow>
+                    </md>,
+                    showing that <m>I_j</m> and <m>I_k</m> are coprime. 
+                </p>
+                <p>
+                    Now assume that the ideals <m>I_k</m> are pairwise coprime. Fix <m>1\leq k \leq n</m>. For any <m>j\ne k</m>, since <m>I_k+I_j=R</m>, we can find elements <m>i_j\in I_j</m> and <m>i_{k,j}\in I_k</m> such that <m>i_j=1-i_{k,j}</m>. Let 
+                    <md>
+                        <mrow>r_k \amp =\prod_{j\ne k} i_j=\prod_{k=1}(1-i_{k,j})</mrow>
+                    </md>.
+                    Since <m>i_j\in I_j</m> for all <m>j\ne k</m>, we have 
+                    <md>
+                        <mrow>r_k \amp =\prod_{j\ne k}i_j\in \bigcap_{j\ne k}I_j</mrow>
+                    </md>
+                    and hence <m>\pi_j(r_k)=0</m> for all <m>j\ne k</m>.
+                </p>
+                <p>
+                    Since <m>1-i_{k,j}\in 1+I_k</m> for all <m>j\ne k</m>, we have 
+                    <md number="yes">
+                        <mrow>\pi_k(r_k) \amp = \prod_{j\ne k}\pi_k(1-i_{k,j})</mrow>
+                        <mrow> \amp = \prod_{j\ne K}(1+I_k)</mrow>
+                        <mrow> \amp = 1</mrow>
+                    </md>,
+                    as desired. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    From (1) and (2), it remains only to show that if the ideals <m>I_k</m> are pairwise coprime, then 
+                    <md>
+                        <mrow>\prod_{j=1}^n I_j \amp = \bigcap_{j=1}^n I_j</mrow>
+                    </md>.
+                    The inclusion <m>\subseteq</m> holds for any collection of ideals: we have seen this for <m>n=2</m>, and the result generalizes easy by induction. Let's show that reverse inclusion under the additional assumption of coprimality. 
                 </p>
             </li>
         </ol>
@@ -86,7 +140,7 @@
     <title>CRT for unit groups</title>
     <statement>
     <p>
-        Let <m>R</m> be a commutative ring, let <m>I_1, I_2, \dots, I_n</m> be a collection of pairwise relatively prime ideals of <m>R</m>, and let 
+        Let <m>R</m> be a commutative ring, let <m>I_1, I_2, \dots, I_n</m> be a collection of pairwise coprime ideals of <m>R</m>, and let 
         <md>
             <mrow>I \amp =\bigcap_{k=1}^n I_k=\prod_{k=1}^n I_k</mrow>
         </md>.
@@ -101,19 +155,19 @@
     </corollary>
     </subsection>
     <subsection xml:id="ss_CRT_integers">
-    <title>CRT: the integers</title>
+    <title>CRT in PIDs</title>
     <p>
-        In a PID we have an alternative formulation for when two ideals are relatively prime. 
+        In a PID we have an alternative formulation for when two ideals are coprime. 
     </p>
     <proposition xml:id="prop_pid_rel_prime">
-        <title>Relatively prime ideals in PID</title>
+        <title>Coprime prime ideals in PID</title>
         <statement>
             <p>
                 Let <m>(a)</m> and <m>(b)</m> be ideals of the PID <m>R</m>. The following statements are equivalent.
                 <ol>
                     <li>
                         <p>
-                            <m>(a)</m> and <m>(b)</m> are relatively prime. 
+                            <m>(a)</m> and <m>(b)</m> are coprime. 
                         </p>
                     </li>
                     <li>
@@ -130,6 +184,9 @@
             </p>
         </statement>
     </proposition>
+    <p>
+        In particular, in the case of integers, <xref ref="prop_pid_rel_prime"/> tells that ideals <m>(a)</m> and <m>(b)</m> of <m>\Z</m> are coprime if and only if <m>\gcd(a,b)=1</m>. We immediately get the following special case of the CRT for integers. The last statement of <xref ref="th_crt_integers"/> is simply a restatement of the first using the language of congruences. It is the classic form of the CRT encountered in courses in discrete mathematics or elementary number theory. 
+    </p>
    <theorem xml:id="th_crt_integers">
    <title>CRT: integers</title>
    <statement>
@@ -159,8 +216,8 @@
     <li>
         <p>
             For any choice of integers <m>m_1, m_2, \dots, m_n</m>, the set of <m>x</m> satisfying the system of congruences
-            <md>
-                <mrow> x \amp \equiv m_1 \pmod{a_1}</mrow>
+            <md number="yes">
+                <mrow xml:id="eq_crt_integers" > x \amp \equiv m_1 \pmod{a_1}</mrow>
                 <mrow>x \amp \equiv m_2 \pmod{a_2}</mrow>
                 <mrow> \amp \vdots </mrow>
                 <mrow>x \amp \equiv m_n \pmod{a_n}  </mrow>
@@ -172,6 +229,75 @@
    </p>
    </statement>
    </theorem>
+   <remark>
+   <title>CRT for integers</title>
+   <p>
+   In the special case of the CRT applied to integers, when asked to solve a system of congruences as in <xref ref="eq_crt_integers"/>, it suffices to find one solution <m>x</m>, in which case the set of all solutions is <m>[x]_a</m>, where <m>a=a_1a_2\cdots a_n</m>. Furthermore, we can use the division algorithm to find our solution <m>x</m> in a relatively low-cost manner. The steps below outline such a computational method. 
+   <ol>
+    <li>
+        <p>
+            For each <m>k</m>, compute <m>M_k=\prod_{j\ne k}a_j</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            For each <m>k</m> compute a multiplicative inverse <m>c_k</m> of <m>M_k</m> modulo <m>a_k</m>: <ie/>, find <m>c_k</m> satisfying <m>c_kM_k\equiv 1 \pmod a_k</m>. This can be done either by inspection (in simple cases) or by performing the Euclidean algorithm to find integers <m>c,d</m> satisfying <m>cM_k+da_k=1</m> (since <m>\gcd(M_k, a_k)=1</m>) and setting <m>c_k=c</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            The integer 
+            <md>
+                <mrow>x \amp =m_1c_1M_1+m_2c_2M_2+\cdots +m_nc_nM_m</mrow>
+            </md>
+            is a solution to the system of congruences <xref ref="eq_crt_integers"/>.
+        </p>
+    </li>
+   </ol>
+   </p>
+   </remark>
+   <example xml:id="eg_crt_integers">
+   <title>CRT for integers</title>
+   <statement>
+   <p>
+   Find the unique number <m>x\in \{0,1\dots, 769\}</m> satisfying 
+   <md number="yes">
+    <mrow>x \amp \equiv 4 \pmod{7}</mrow>
+    <mrow>x \amp \equiv 8 \pmod{10}</mrow>
+    <mrow> x \amp \equiv 3 \pmod{11} </mrow>
+   </md>
+   </p>
+   </statement>
+   <solution>
+   <p>
+   Following the algorithm described in the remark above, we first compute the constants 
+   <md>
+    <mrow>M_1 \amp = 110 \amp M_2\amp 77 \amp M_3\amp =70</mrow>
+   </md>
+   Next, to find inverses <m>c_k</m> of <m>M_k</m> modulo <m>a_k</m>, we may work with <m>M_k\boldmod a_k</m>. Thus we have 
+   <md>
+    <mrow>M_1\equiv 5 \pmod 7 \amp \implies c_1=3 \amp (3\cdot 5=15\equiv 1\pmod 7)</mrow>
+    <mrow>M_2\equiv 7 \pmod{10} \amp \implies c_2=3 \amp (3\cdot 7=21\equiv 1\pmod{10})</mrow>
+    <mrow>M_3\equiv 4 \pmod{11} \amp \implies c_3=3 \amp (3\cdot 4=12\equiv 1\pmod{11})</mrow>
+   </md>.
+   We conclude that the integer 
+   <md>
+    <mrow>y \amp =4 c_1M_1+8c_2M_2+3c_3M_3</mrow>
+    <mrow> \amp = 4(3\cdot 110)+8(3\cdot 77)+3(3\cdot 70) </mrow>
+   </md>
+   is a solution to the congruences. To get a solution <m>x</m> in the desired range, we simply compute <m>y\boldmod 770</m>:
+   <md number="yes">
+    <mrow>y \amp = (7+5)(110)+(20+4)77+(11-2)70</mrow>
+    <mrow> \amp = 770+550+2\cdot 770+4\cdot 77+770-140</mrow>
+    <mrow> \amp \equiv 550+308-140 \pmod{770}</mrow>
+    <mrow> \amp = 718 \pmod{770}</mrow>
+   </md>.
+   It follows that <m>x=718</m> is the unique element of <m>\{0,1,\dots, 769\}</m> satisfying the given congruences. (Check that it does!) 
+   
+   </p>
+   </solution>
+   </example>
+   
    <definition xml:id="d_euler_totient">
    <title>Euler's totient function</title>
    <statement>
@@ -220,6 +346,82 @@
         </p>
     </proof>
    </corollary>
+   <p>
+    Similarly, in a polynomial ring <m>F[x]</m> over a field <m>F</m>, ideals <m>(f)</m> and <m>(g)</m> are coprime if and only if the polynomials <m>f</m> and <m>g</m> are <em>relatively prime</em> as polynomials. We haven't said exactly what that means yet, and indeed will say much more about it when we discuss PIDs and factorization into irreducibles in more detail. For the time being, we include a useful <em>sufficient</em> (though not <em>necessary</em>) condition for two polynomials to have coprime ideals. 
+   </p>
+   <corollary xml:id="cor_coprime_ideals_poly">
+    <title>Coprime ideals: monic irreducibles</title>
+    <statement>
+        <p>
+            Let <m>F</m> be a field. If <m>f</m> and <m>g</m> are distinct monic irreducible polynomials in <m>F[x]</m>, then the ideals <m>(f)</m> and <m>(g)</m> are coprime. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            We use condition (3) of <xref ref="prop_pid_rel_prime"/>. Suppose <m>h\in F[x]</m> divides <m>f</m> and <m>g</m>. Since <m>f</m> is irreducible, either <m>h(x)=c\in F^*</m> is a unit, or <m>h=cf</m> for some unit <m>c\in F^*</m>. If the latter is the case, then since <m>h=cf\mid g</m> it follows that <m>f\mid g</m>. But since <m>g</m> is irreducible and <m>f</m> is not a unit, we must have <m>f=dg</m> for some unit <m>d\in F^*</m>. Lastly, since <m>f</m> and <m>g</m> are monic, it follows that <m>d=1</m> and <m>f=g</m>: a contradiction. We conclude that <m>h</m> is a unit, showing that the only common divisors of <m>f</m> and <m>g</m> are units. Thus <m>(f)</m> and <m>(g)</m> are relatively prime. 
+        </p>
+    </proof>
+   </corollary>
+   <example xml:id="eg_CRT_poly">
+   <title>CRT in polynomial rings</title>
+   <statement>
+   <p>
+   Exhibit an isomorphism between the given ring and a product of fields. 
+   <ol>
+    <li>
+        <p>
+            <m>\R[x]/(x^3-x)</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\R[x]/(x^3-1)</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\F_3[x]/(x^2+2)</m>
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   <solution>
+   <p>
+   <ol>
+    <li>
+        <p>
+            We have <m>x^3-x=x(x^2-1)=x(x-1)(x-2)</m>. The polynomials <m>f(x)=x</m>, <m>g(x)=x-1</m>, <m>h(x)=x-2</m> are distinct, irreducible (since they are of degree 1), and monic. By <xref ref="cor_coprime_ideals_poly"/>, the CRT applies and we have 
+            <md>
+                <mrow>\R[x]/(x^3-x) \amp \cong \R[x]/(x)\times \R[x]/(x-1)\times \R[x]/(x+1)</mrow>
+                <mrow> \amp \cong \R\times \R\times \R</mrow>
+            </md>.
+        </p>
+    </li>
+    <li>
+        <p>
+            We have <m>x^3-1=(x-1)(x^2+x+1)</m>. The polynomials <m>f(x)=x-1</m> and <m>g(x)=x^2+x+1</m> are distinct, monic, and irreducible (the latter since it has no roots in <m>\R</m>). By <xref ref="cor_coprime_ideals_poly"/>, the CRT applies and we have 
+            <md>
+                <mrow>\R[x]/(x^3-1) \amp \cong \R[x]/(x-1)\times \R[x]/(x^2+x+1)</mrow>
+                <mrow> \amp \cong \R\times \C</mrow>
+            </md>.
+            See <xref ref="eg_quot_real_poly"/> for the isomorphism <m>\R[x]/(x^2+x+1)\cong \C</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+           The polynomial <m>x^2+2</m> factors as <m>(x-1)(x-2)=(x+1)(x+2)</m> in <m>\F_3[x]</m>. The ideals <m>(x-1)</m> and <m>(x-2)</m> are coprime by <xref ref="cor_coprime_ideals_poly"/>, and thus we have 
+            <md>
+                <mrow>\F_3[x]/(x^2+2) \amp \cong \F_3[x]/(x-1)\times \F_3[x]/(x-2)</mrow>
+                <mrow> \amp \cong \F_3\times \F_3</mrow>
+            </md>.
+        </p>
+    </li>
+   </ol>
+   </p>
+   </solution>
+   </example>
+   
     </subsection>
     
 
