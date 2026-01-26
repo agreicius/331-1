@@ -3751,16 +3751,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.9",
   "title": "Chinese remainder theorem",
-  "body": " Chinese remainder theorem   Chinese remainder theorem: general form  In its general form, the Chinese remainder theorem (CRT) articulates conditions for which a given ring can be expressed (up to isomorphism) as a direct product of rings. The result is a pervasive and useful tool in ring theory, often employed to prove some property of a given ring by exhibiting an isomorphism between and a product ring , and proving a similar result for the (often simpler rings) , and then using the simple structure of product rings to lift the result back to .  The specific conditions laid out by the CRT involve quotients of rings by pairwise relatively prime ideals .   Relatively prime ideals   Let be a nonzero commutative ring. Ideals and of are relatively prime if . Equivalently, and are relatively prime if we can write for some and .     Chinese remainder theorem (CRT)   Let be a commutative ring, and let be ideals of . For all , we let be the quotient map, and we define .    is a ring homomorphism with kernel .     is surjective if and only if the ideals are pairwise relatively prime: , for all .    If the ideals are pairwise relatively prime, then , and we have .          That is a ring homomorphism follows easily from the ring structure on . As for the statement about the kernel, we have .           Since a ring isomorphism restricts to an isomorphism between the unit groups and , and since for any product ring we have , we immediately obtain the following corollary.   CRT for unit groups   Let be a commutative ring, let be a collection of pairwise relatively prime ideals of , and let . The map is an isomorphism of groups.      CRT: the integers  In a PID we have an alternative formulation for when two ideals are relatively prime.   Relatively prime ideals in PID   Let and be ideals of the PID . The following statements are equivalent.    and are relatively prime.         If satisfies and , then is a unit.        CRT: integers   Let be pairwise relatively prime integers ( , for all ), and let .   The map is an isomorphism of rings.    The map is an isomorphism of groups.    For any choice of integers , the set of satisfying the system of congruences forms a unique congruence class modulo . That is, (i) there is a solution to this system of congruences, and (ii) is another solution if and only if .        Euler's totient function    Euler's totient function is the function defined as . In other words, is the number of integers in that are relatively prime to .     Euler's totient function   Let be the Euler totient function. If are pairwise relatively prime integers, then . Additionally, given , where the are distinct prime integers, we have .    Statement (1) follows immediately from and the fact (proven elsewhere) that . For (2), observe first the if and are distinct prime integers, then for any positive integers and . Thus given the factorization , we have by (1). Furthermore, for any prime power an integer is relatively prime to if and only if it is not divisible by , if and only if it is not a multiple of . The set of multiples of in is , which has cardinality . Thus .     "
+  "body": " Chinese remainder theorem   Chinese remainder theorem: general form  In its general form, the Chinese remainder theorem (CRT) articulates conditions for which a given ring can be expressed (up to isomorphism) as a direct product of rings. The result is a pervasive and useful tool in ring theory, often employed to prove some property of a given ring by exhibiting an isomorphism between and a product ring , and proving a similar result for the (often simpler rings) , and then using the simple structure of product rings to lift the result back to .  The specific conditions laid out by the CRT involve quotients of rings by pairwise coprime ideals .   Coprime ideals   Let be a nonzero commutative ring. Ideals and of are coprime if . Equivalently, and are coprime if we can write for some and .     Chinese remainder theorem (CRT)   Let be a commutative ring, and let be ideals of . For all , we let be the quotient map, and we define .    is a ring homomorphism with kernel .     is surjective if and only if the ideals are pairwise coprime: , for all .    If the ideals are pairwise coprime, then , and we have .          That is a ring homomorphism follows easily from the ring structure on . As for the statement about the kernel, we have .    For each , let be defined as . It is not difficult to see that is surjective if and only if for each there is some such that . Indeed, the forward implication is obvious, and the reverse follows from the fact that given any , we have . Thus it suffices to show that we can find satisfying if and only if the ideals are pairwise coprime.  Assume for all there exist satisfying . For ideals and , , since , we have, by definition of , for elements and . But then , showing that and are coprime.  Now assume that the ideals are pairwise coprime. Fix . For any , since , we can find elements and such that . Let . Since for all , we have and hence for all .  Since for all , we have , as desired.    From (1) and (2), it remains only to show that if the ideals are pairwise coprime, then . The inclusion holds for any collection of ideals: we have seen this for , and the result generalizes easy by induction. Let's show that reverse inclusion under the additional assumption of coprimality.       Since a ring isomorphism restricts to an isomorphism between the unit groups and , and since for any product ring we have , we immediately obtain the following corollary.   CRT for unit groups   Let be a commutative ring, let be a collection of pairwise coprime ideals of , and let . The map is an isomorphism of groups.      CRT in PIDs  In a PID we have an alternative formulation for when two ideals are coprime.   Coprime prime ideals in PID   Let and be ideals of the PID . The following statements are equivalent.    and are coprime.         If satisfies and , then is a unit.       In particular, in the case of integers, tells that ideals and of are coprime if and only if . We immediately get the following special case of the CRT for integers. The last statement of is simply a restatement of the first using the language of congruences. It is the classic form of the CRT encountered in courses in discrete mathematics or elementary number theory.   CRT: integers   Let be pairwise relatively prime integers ( , for all ), and let .   The map is an isomorphism of rings.    The map is an isomorphism of groups.    For any choice of integers , the set of satisfying the system of congruences forms a unique congruence class modulo . That is, (i) there is a solution to this system of congruences, and (ii) is another solution if and only if .        CRT for integers  In the special case of the CRT applied to integers, when asked to solve a system of congruences as in , it suffices to find one solution , in which case the set of all solutions is , where . Furthermore, we can use the division algorithm to find our solution in a relatively low-cost manner. The steps below outline such a computational method.   For each , compute .    For each compute a multiplicative inverse of modulo : , find satisfying . This can be done either by inspection (in simple cases) or by performing the Euclidean algorithm to find integers satisfying (since ) and setting .    The integer is a solution to the system of congruences .       CRT for integers   Find the unique number satisfying     Following the algorithm described in the remark above, we first compute the constants Next, to find inverses of modulo , we may work with . Thus we have . We conclude that the integer is a solution to the congruences. To get a solution in the desired range, we simply compute : . It follows that is the unique element of satisfying the given congruences. (Check that it does!)     Euler's totient function    Euler's totient function is the function defined as . In other words, is the number of integers in that are relatively prime to .     Euler's totient function   Let be the Euler totient function. If are pairwise relatively prime integers, then . Additionally, given , where the are distinct prime integers, we have .    Statement (1) follows immediately from and the fact (proven elsewhere) that . For (2), observe first the if and are distinct prime integers, then for any positive integers and . Thus given the factorization , we have by (1). Furthermore, for any prime power an integer is relatively prime to if and only if it is not divisible by , if and only if it is not a multiple of . The set of multiples of in is , which has cardinality . Thus .    Similarly, in a polynomial ring over a field , ideals and are coprime if and only if the polynomials and are relatively prime as polynomials. We haven't said exactly what that means yet, and indeed will say much more about it when we discuss PIDs and factorization into irreducibles in more detail. For the time being, we include a useful sufficient (though not necessary ) condition for two polynomials to have coprime ideals.   Coprime ideals: monic irreducibles   Let be a field. If and are distinct monic irreducible polynomials in , then the ideals and are coprime.    We use condition (3) of . Suppose divides and . Since is irreducible, either is a unit, or for some unit . If the latter is the case, then since it follows that . But since is irreducible and is not a unit, we must have for some unit . Lastly, since and are monic, it follows that and : a contradiction. We conclude that is a unit, showing that the only common divisors of and are units. Thus and are relatively prime.     CRT in polynomial rings   Exhibit an isomorphism between the given ring and a product of fields.                        We have . The polynomials , , are distinct, irreducible (since they are of degree 1), and monic. By , the CRT applies and we have .    We have . The polynomials and are distinct, monic, and irreducible (the latter since it has no roots in ). By , the CRT applies and we have . See for the isomorphism .    The polynomial factors as in . The ideals and are coprime by , and thus we have .        "
 },
 {
-  "id": "d_rel_prime_ideals",
+  "id": "d_coprime_ideals",
   "level": "2",
-  "url": "s_crt.html#d_rel_prime_ideals",
+  "url": "s_crt.html#d_coprime_ideals",
   "type": "Definition",
   "number": "2.97",
-  "title": "Relatively prime ideals.",
-  "body": " Relatively prime ideals   Let be a nonzero commutative ring. Ideals and of are relatively prime if . Equivalently, and are relatively prime if we can write for some and .   "
+  "title": "Coprime ideals.",
+  "body": " Coprime ideals   Let be a nonzero commutative ring. Ideals and of are coprime if . Equivalently, and are coprime if we can write for some and .   "
 },
 {
   "id": "th_crt",
@@ -3769,7 +3769,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.98",
   "title": "Chinese remainder theorem (CRT).",
-  "body": " Chinese remainder theorem (CRT)   Let be a commutative ring, and let be ideals of . For all , we let be the quotient map, and we define .    is a ring homomorphism with kernel .     is surjective if and only if the ideals are pairwise relatively prime: , for all .    If the ideals are pairwise relatively prime, then , and we have .          That is a ring homomorphism follows easily from the ring structure on . As for the statement about the kernel, we have .          "
+  "body": " Chinese remainder theorem (CRT)   Let be a commutative ring, and let be ideals of . For all , we let be the quotient map, and we define .    is a ring homomorphism with kernel .     is surjective if and only if the ideals are pairwise coprime: , for all .    If the ideals are pairwise coprime, then , and we have .          That is a ring homomorphism follows easily from the ring structure on . As for the statement about the kernel, we have .    For each , let be defined as . It is not difficult to see that is surjective if and only if for each there is some such that . Indeed, the forward implication is obvious, and the reverse follows from the fact that given any , we have . Thus it suffices to show that we can find satisfying if and only if the ideals are pairwise coprime.  Assume for all there exist satisfying . For ideals and , , since , we have, by definition of , for elements and . But then , showing that and are coprime.  Now assume that the ideals are pairwise coprime. Fix . For any , since , we can find elements and such that . Let . Since for all , we have and hence for all .  Since for all , we have , as desired.    From (1) and (2), it remains only to show that if the ideals are pairwise coprime, then . The inclusion holds for any collection of ideals: we have seen this for , and the result generalizes easy by induction. Let's show that reverse inclusion under the additional assumption of coprimality.      "
 },
 {
   "id": "cor_crt_units",
@@ -3778,7 +3778,7 @@ var ptx_lunr_docs = [
   "type": "Corollary",
   "number": "2.99",
   "title": "CRT for unit groups.",
-  "body": " CRT for unit groups   Let be a commutative ring, let be a collection of pairwise relatively prime ideals of , and let . The map is an isomorphism of groups.   "
+  "body": " CRT for unit groups   Let be a commutative ring, let be a collection of pairwise coprime ideals of , and let . The map is an isomorphism of groups.   "
 },
 {
   "id": "prop_pid_rel_prime",
@@ -3786,8 +3786,8 @@ var ptx_lunr_docs = [
   "url": "s_crt.html#prop_pid_rel_prime",
   "type": "Proposition",
   "number": "2.100",
-  "title": "Relatively prime ideals in PID.",
-  "body": " Relatively prime ideals in PID   Let and be ideals of the PID . The following statements are equivalent.    and are relatively prime.         If satisfies and , then is a unit.      "
+  "title": "Coprime prime ideals in PID.",
+  "body": " Coprime prime ideals in PID   Let and be ideals of the PID . The following statements are equivalent.    and are coprime.         If satisfies and , then is a unit.      "
 },
 {
   "id": "th_crt_integers",
@@ -3799,11 +3799,29 @@ var ptx_lunr_docs = [
   "body": " CRT: integers   Let be pairwise relatively prime integers ( , for all ), and let .   The map is an isomorphism of rings.    The map is an isomorphism of groups.    For any choice of integers , the set of satisfying the system of congruences forms a unique congruence class modulo . That is, (i) there is a solution to this system of congruences, and (ii) is another solution if and only if .      "
 },
 {
+  "id": "ss_CRT_integers-6",
+  "level": "2",
+  "url": "s_crt.html#ss_CRT_integers-6",
+  "type": "Remark",
+  "number": "2.102",
+  "title": "CRT for integers.",
+  "body": " CRT for integers  In the special case of the CRT applied to integers, when asked to solve a system of congruences as in , it suffices to find one solution , in which case the set of all solutions is , where . Furthermore, we can use the division algorithm to find our solution in a relatively low-cost manner. The steps below outline such a computational method.   For each , compute .    For each compute a multiplicative inverse of modulo : , find satisfying . This can be done either by inspection (in simple cases) or by performing the Euclidean algorithm to find integers satisfying (since ) and setting .    The integer is a solution to the system of congruences .     "
+},
+{
+  "id": "eg_crt_integers",
+  "level": "2",
+  "url": "s_crt.html#eg_crt_integers",
+  "type": "Example",
+  "number": "2.103",
+  "title": "CRT for integers.",
+  "body": " CRT for integers   Find the unique number satisfying     Following the algorithm described in the remark above, we first compute the constants Next, to find inverses of modulo , we may work with . Thus we have . We conclude that the integer is a solution to the congruences. To get a solution in the desired range, we simply compute : . It follows that is the unique element of satisfying the given congruences. (Check that it does!)   "
+},
+{
   "id": "d_euler_totient",
   "level": "2",
   "url": "s_crt.html#d_euler_totient",
   "type": "Definition",
-  "number": "2.102",
+  "number": "2.104",
   "title": "Euler’s totient function.",
   "body": " Euler's totient function    Euler's totient function is the function defined as . In other words, is the number of integers in that are relatively prime to .   "
 },
@@ -3812,9 +3830,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#cor_tot_func",
   "type": "Corollary",
-  "number": "2.103",
+  "number": "2.105",
   "title": "Euler’s totient function.",
   "body": " Euler's totient function   Let be the Euler totient function. If are pairwise relatively prime integers, then . Additionally, given , where the are distinct prime integers, we have .    Statement (1) follows immediately from and the fact (proven elsewhere) that . For (2), observe first the if and are distinct prime integers, then for any positive integers and . Thus given the factorization , we have by (1). Furthermore, for any prime power an integer is relatively prime to if and only if it is not divisible by , if and only if it is not a multiple of . The set of multiples of in is , which has cardinality . Thus .   "
+},
+{
+  "id": "cor_coprime_ideals_poly",
+  "level": "2",
+  "url": "s_crt.html#cor_coprime_ideals_poly",
+  "type": "Corollary",
+  "number": "2.106",
+  "title": "Coprime ideals: monic irreducibles.",
+  "body": " Coprime ideals: monic irreducibles   Let be a field. If and are distinct monic irreducible polynomials in , then the ideals and are coprime.    We use condition (3) of . Suppose divides and . Since is irreducible, either is a unit, or for some unit . If the latter is the case, then since it follows that . But since is irreducible and is not a unit, we must have for some unit . Lastly, since and are monic, it follows that and : a contradiction. We conclude that is a unit, showing that the only common divisors of and are units. Thus and are relatively prime.   "
+},
+{
+  "id": "eg_CRT_poly",
+  "level": "2",
+  "url": "s_crt.html#eg_CRT_poly",
+  "type": "Example",
+  "number": "2.107",
+  "title": "CRT in polynomial rings.",
+  "body": " CRT in polynomial rings   Exhibit an isomorphism between the given ring and a product of fields.                        We have . The polynomials , , are distinct, irreducible (since they are of degree 1), and monic. By , the CRT applies and we have .    We have . The polynomials and are distinct, monic, and irreducible (the latter since it has no roots in ). By , the CRT applies and we have . See for the isomorphism .    The polynomial factors as in . The ideals and are coprime by , and thus we have .      "
 },
 {
   "id": "appendix-notation",

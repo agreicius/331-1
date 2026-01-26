@@ -45,13 +45,13 @@ r \amp \mapsto (\pi_1(r), \pi_2(r),\dots, \pi_n(r)) \text{.}
 </li>
 <li>
 <div class="para">
-<span class="process-math">\(\phi\)</span> is surjective if and only if the ideals <span class="process-math">\(I_k\)</span> are pairwise relatively prime: i.e., <span class="process-math">\(I_j+I_k=R\)</span> for all <span class="process-math">\(j\ne k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\phi\)</span> is surjective if and only if the ideals <span class="process-math">\(I_k\)</span> are pairwise coprime: i.e., <span class="process-math">\(I_j+I_k=R\)</span> for all <span class="process-math">\(j\ne k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_crt-2-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 2"><a href="#th_crt-2-1-7-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li>
 <div class="para logical">
-<div class="para">If the ideals <span class="process-math">\(I_k\)</span> are pairwise relatively prime, then</div>
+<div class="para">If the ideals <span class="process-math">\(I_k\)</span> are pairwise coprime, then</div>
 <div class="displaymath process-math">
 \begin{align*}
 \bigcap_{k=1}^n I_k \amp =\prod_{k=1}^n I_k\text{,}
@@ -86,8 +86,88 @@ R/\prod_{k=1}^n I_k \amp \cong \prod_{k=1}^n R/I_k\text{.}
 <div class="autopermalink" data-description="Item 1"><a href="#th_crt-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li>
-<div class="para"><div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical">
+<div class="para">For each <span class="process-math">\(1\keq k\leq n\text{,}\)</span> let <span class="process-math">\(e_k=(a_i)_{i=1}^n\)</span> be defined as</div>
+<div class="displaymath process-math">
+\begin{align*}
+a_i \amp =\begin{cases}
+1 \amp \text{if } i=k\\
+0       \amp \text{if } i\ne k
+\text{.}\end{cases}
+\end{align*}
+</div>
+<div class="para">It is not difficult to see that <span class="process-math">\(\phi\)</span> is surjective if and only if for each <span class="process-math">\(k\)</span> there is some <span class="process-math">\(r_k\in R\)</span> such that <span class="process-math">\(\phi(r_k)=e_k\text{.}\)</span> Indeed, the forward implication is obvious, and the reverse follows from the fact that given any <span class="process-math">\((a_1+I_1,a_2+I_2,\dots, a_n+I_n)\in \prod_{k=1}^nR/I_k\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(\sum_{k=1}^na_kr_k) \amp =\sum_{k=1}^n\phi(a_k)\phi(r_k)\\
+\amp = \sum_{k=1}\phi(a_k)e_k\\
+\amp =(a_1+I_1, a_2+I_2,\dots, a_n+I_n)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus it suffices to show that we can find <span class="process-math">\(r_k\)</span> satisfying <span class="process-math">\(\phi(r_k)=e_k\)</span> if and only if the ideals <span class="process-math">\(I_k\)</span> are pairwise coprime.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Assume for all <span class="process-math">\(k\)</span> there exist <span class="process-math">\(r_k\in R\)</span> satisfying <span class="process-math">\(\phi(r_k)=e_k\text{.}\)</span> For ideals <span class="process-math">\(I_j\)</span> and <span class="process-math">\(I_k\text{,}\)</span> <span class="process-math">\(j\ne k\text{,}\)</span> since <span class="process-math">\(\phi(r_k)=e_k\text{,}\)</span> we have, by definition of <span class="process-math">\(\phi\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align}
+r_k \amp = 1+i_k \amp \tag{2.62}\\
+r_k \amp =0+i_j \tag{2.63}
+\end{align}
+</div>
+<div class="para">for elements <span class="process-math">\(i_k\in I_k\)</span> and <span class="process-math">\(i_j\in I_j\text{.}\)</span> But then</div>
+<div class="displaymath process-math">
+\begin{align*}
+1 \amp =r_k-i_k=i_j-i_k\in I_j+I_k\text{,}
+\end{align*}
+</div>
+<div class="para">showing that <span class="process-math">\(I_j\)</span> and <span class="process-math">\(I_k\)</span> are coprime.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now assume that the ideals <span class="process-math">\(I_k\)</span> are pairwise coprime. Fix <span class="process-math">\(1\leq k \leq n\text{.}\)</span> For any <span class="process-math">\(j\ne k\text{,}\)</span> since <span class="process-math">\(I_k+I_j=R\text{,}\)</span> we can find elements <span class="process-math">\(i_j\in I_j\)</span> and <span class="process-math">\(i_{k,j}\in I_k\)</span> such that <span class="process-math">\(i_j=1-i_{k,j}\text{.}\)</span> Let</div>
+<div class="displaymath process-math">
+\begin{align*}
+r_k \amp =\prod_{j\ne k} i_j=\prod_{k=1}(1-i_{k,j})\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(i_j\in I_j\)</span> for all <span class="process-math">\(j\ne k\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+r_k \amp =\prod_{j\ne k}i_j\in \bigcap_{j\ne k}I_j
+\end{align*}
+</div>
+<div class="para">and hence <span class="process-math">\(\pi_j(r_k)=0\)</span> for all <span class="process-math">\(j\ne k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(1-i_{k,j}\in 1+I_k\)</span> for all <span class="process-math">\(j\ne k\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align}
+\pi_k(r_k) \amp = \prod_{j\ne k}\pi_k(1-i_{k,j})\tag{2.64}\\
+\amp = \prod_{j\ne K}(1+I_k)\tag{2.65}\\
+\amp = 1\text{,}\tag{2.66}
+\end{align}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Item 2"><a href="#th_crt-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">From (1) and (2), it remains only to show that if the ideals <span class="process-math">\(I_k\)</span> are pairwise coprime, then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\prod_{j=1}^n I_j \amp = \bigcap_{j=1}^n I_j\text{.}
+\end{align*}
+</div>
+<div class="para">The inclusion <span class="process-math">\(\subseteq\)</span> holds for any collection of ideals: we have seen this for <span class="process-math">\(n=2\text{,}\)</span> and the result generalizes easy by induction. Let’s show that reverse inclusion under the additional assumption of coprimality.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_crt-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_crt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
