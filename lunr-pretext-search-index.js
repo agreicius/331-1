@@ -23,7 +23,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_sets",
   "type": "Definition",
-  "number": "0.1",
+  "number": "0.1.1",
   "title": "Sets.",
   "body": " Sets  sets  sets empty sets  sets membership      set membership    A set is a collection of objects. An object is a member (or element ) of a set if contains . In this case, we write . If is not a member of , we write .   "
 },
@@ -32,7 +32,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_set_equality",
   "type": "Definition",
-  "number": "0.2",
+  "number": "0.1.2",
   "title": "Set equality.",
   "body": " Set equality  sets equality   Sets and are equal , denoted , if they have precisely the same elements: , if for any object , we have if and only if .   "
 },
@@ -41,7 +41,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_set_inclusion",
   "type": "Definition",
-  "number": "0.3",
+  "number": "0.1.3",
   "title": "Set inclusion (subsets).",
   "body": " Set inclusion (subsets)  sets subset  sets inclusion    set inclusion    A set is a subset of a set , denoted , if every member of is a member of : , implies for any object . The relation is called set inclusion .   "
 },
@@ -50,7 +50,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_equal_subset_logic",
   "type": "Remark",
-  "number": "0.4",
+  "number": "0.1.4",
   "title": "",
   "body": " The definitions of set equality and the subset relation make use of two important logical operations: namely, the if and only if (or iff for short) and if-then operations.  "
 },
@@ -59,7 +59,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_set_builder_notation",
   "type": "Definition",
-  "number": "0.5",
+  "number": "0.1.5",
   "title": "Set-builder notation.",
   "body": " Set-builder notation  sets set builder notation   Let be a set, and let be a property that elements of either satisfy or do not satisfy. For an element , let denote the statement that satisfies . The set of all elements of satisfying is denoted .   "
 },
@@ -68,7 +68,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_set_builder",
   "type": "Remark",
-  "number": "0.6",
+  "number": "0.1.6",
   "title": "",
   "body": " Set builder notation is parsed from left to right as follows:    is read as the set of      is read as elements of      is read as such that      is read as is true .   Taken altogether we get: The set of elements of such that is true .  "
 },
@@ -77,7 +77,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#ex_set_builder",
   "type": "Example",
-  "number": "0.7",
+  "number": "0.1.7",
   "title": "",
   "body": "  Let be the set of nonnegative integers. The subset of even positive integers can be described using set-builder notation as , or alternatively, .   "
 },
@@ -86,7 +86,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_set_operations",
   "type": "Definition",
-  "number": "0.8",
+  "number": "0.1.8",
   "title": "Union, intersection, difference, and complement.",
   "body": " Union, intersection, difference, and complement  sets union  sets intersection  sets complement  sets difference    set union     set intersection       set difference     set complement    Let and be subsets of a common set .   Set union  The union  of and is defined as . More generally, if is any collection of subsets indexed by an arbitrary set , then the union  of this collection is defined as .    Set intersection  The intersection  of and is defined as . More generally, if is any collection of subsets indexed by an arbitrary set , then the intersection  of this collection is defined as     Set difference  The difference  is defined as .    Set complement  The complement of in is defined as . In contexts where there is clear what the larger set is, we denote the complement of in as .      "
 },
@@ -95,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_common_sets",
   "type": "Definition",
-  "number": "0.9",
+  "number": "0.1.9",
   "title": "Common mathematical sets.",
   "body": " Common mathematical sets  sets empty set  real numbers  integers  rational numbers     the empty set     real numbers     integers     positive integers     the set of all integers greater than or equal to     rational numbers    The empty set is the set containing no objects, denoted or .  We denote by the set of all real numbers. The integers  and rational numbers  are the subsets of defined as . This yields the following chain of subsets: . Additionally, for any integer we denote by the set of all integers : , . Lastly, we denote by the set of all positive integers: , .   "
 },
@@ -104,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_power_set",
   "type": "Definition",
-  "number": "0.10",
+  "number": "0.1.10",
   "title": "Power set.",
   "body": " Power set  power set    power set of    Given a set , its power set  is defined as the set of all subsets of .   "
 },
@@ -113,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#eg_power_set",
   "type": "Example",
-  "number": "0.11",
+  "number": "0.1.11",
   "title": "Power set.",
   "body": " Power set   Let . The power set is the set of all subsets of . We can enumerate systematically by listing all the subsets in order of increasing cardinality. There is one subset of containing zero elements: namely, the empty set . The two subsets of containing exactly one element are and . Lastly, the unique subset of containing two elements is itself. We conclude that . In general if has cardinality , then has cardinality .   "
 },
@@ -122,7 +122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_function",
   "type": "Definition",
-  "number": "0.12",
+  "number": "0.1.12",
   "title": "Functions.",
   "body": " Functions  function    a function from to    Let and be two sets. A function from to , denoted , is a rule which, given any input  , returns an output  . In this case we write and call the image of under , or the value of at  . Similarly, we say  maps (or sends ) the input to the output .  The set is called the domain of ; the set is called the codomain of .  When we wish to indicate what rule defines the function, we use the elaborated notation . This is read as The function with domain and codomain maps an input to the output .   "
 },
@@ -131,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#ss_functions-3",
   "type": "Example",
-  "number": "0.13",
+  "number": "0.1.13",
   "title": "",
   "body": "  Consider the function . This function has domain and codomain equal to and maps an integer to its square.   "
 },
@@ -140,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#eg_addition_mult_as_functions",
   "type": "Example",
-  "number": "0.14",
+  "number": "0.1.14",
   "title": "Arithmetic operations as functions.",
   "body": " Arithmetic operations as functions   Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function and multiplication is the function    "
 },
@@ -149,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_function_as_relation",
   "type": "Remark",
-  "number": "0.15",
+  "number": "0.1.15",
   "title": "",
   "body": " Invoking the notion of a rule in the definition of a function is admittedly somewhat vague. A more precise definition can be given using the Cartesian product. Namely, given sets and , we define a function to be a subset satisfying the following property: for all there is a unique element . The uniqueness of the pair then allows us to define the value of at as , denoted .  "
 },
@@ -158,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_function_equality",
   "type": "Definition",
-  "number": "0.16",
+  "number": "0.1.16",
   "title": "Function equality.",
   "body": " Function equality  function equality   Functions and are equal if   they have the same domain and codomain , and    for all , we have .      "
 },
@@ -167,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_image",
   "type": "Definition",
-  "number": "0.17",
+  "number": "0.1.17",
   "title": "Image of a set.",
   "body": " Image of a set  function image of a set  function image    image of the set under     image of a function    Given a function and a subset , the image of under , denoted , is defined as . In other words, is the set of all outputs , where .  The image of , denoted , is the set of all outputs of : , .   "
 },
@@ -176,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_preimage_of_set",
   "type": "Definition",
-  "number": "0.18",
+  "number": "0.1.18",
   "title": "Preimage of set.",
   "body": " Preimage of set  preimage of a set    preimage of under    Given a function , the preimage of a subset is the subset defined as . In plain English: the preimage of under is the set of all whose image under lies in .   "
 },
@@ -185,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_injective_surjective_bijective",
   "type": "Definition",
-  "number": "0.19",
+  "number": "0.1.19",
   "title": "Injective, surjective, bijective.",
   "body": " Injective, surjective, bijective  invertible function  bijective function  injective function  surjective function  one-to-one function  onto function  one-to-one correspondence   Let be a function.   The function is injective (or one-to-one ) if for all , if , then : equivalently, if , then .    The function is surjective (or onto ) if for all , there is an such that : equivalently, .    The function is bijective (or a one-to-one correspondence ) if it is injective and surjective.      "
 },
@@ -194,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#ss_functions-11",
   "type": "Example",
-  "number": "0.20",
+  "number": "0.1.20",
   "title": "Role of domain and codomain in injectivity and surjectivity.",
   "body": " Role of domain and codomain in injectivity and surjectivity   Consider the following three functions . Although all three functions are defined using the same rule ( ), they are not equal thanks to their differing domains and\/or codomains. The choice of domain and codomain in these examples also plays a crucial role in determining whether the function is injective and\/or surjective. The function is neither injective ( ) nor surjective ( ); the function is injective but not surjective; the function is both injective and surjective, hence bijective.   "
 },
@@ -203,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_function_composition",
   "type": "Definition",
-  "number": "0.21",
+  "number": "0.1.21",
   "title": "Function composition.",
   "body": " Function composition  function composition    the composition of and    Suppose and are functions satisfying . The composition of and is the function defined as , for all .   "
 },
@@ -212,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_invertible_function",
   "type": "Definition",
-  "number": "0.22",
+  "number": "0.1.22",
   "title": "Identity and inverse functions.",
   "body": " Identity and inverse functions  function invertible  function inverse  function identity   For any set the identity function on is the function defined as for all .  A function is invertible if there is a function satisfying and : , . The function in this case is called the inverse of , denoted .   "
 },
@@ -221,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#th_invertible_bijective",
   "type": "Theorem",
-  "number": "0.23",
+  "number": "0.1.23",
   "title": "Invertible is equivalent to bijective.",
   "body": " Invertible is equivalent to bijective   A function is invertible if and only if it is bijective.   "
 },
@@ -230,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_Ituple",
   "type": "Definition",
-  "number": "0.24",
+  "number": "0.1.24",
   "title": "Tuple.",
   "body": " Tuple  tuple arbitrary    tuple indexed by    Let and be sets. An -valued tuple indexed by is a function . We call the indexing set of the tuple , and for all , we call the -th entry (or coordinate ) of . Furthermore, we will write to denote the function defined as for all .   "
 },
@@ -239,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_tuple_function",
   "type": "Remark",
-  "number": "0.25",
+  "number": "0.1.25",
   "title": "Tuple versus function.",
   "body": " Tuple versus function  As mentioned above, the introduction of tuple language and notation simply gives us another way of conceptualizing a function : one that let's us think of a function as a sort of sequence. Being able to fluently move between these two conceptions requires a little bit of practice. The following correspondence diagram can help in this regard:   Correspondence between functions and tuples   Correspondence between functions and tuples     "
 },
@@ -248,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#ss_tuples_cart_prod-5",
   "type": "Remark",
-  "number": "0.27",
+  "number": "0.1.27",
   "title": "Tuple equality.",
   "body": " Tuple equality  Fix a set , and let and be two tuples with entries in . When are these tuples equal? The answer is provided by our definition of function equality . By definition, the functions and are equal if and only if (i) (the indexing sets are equal), and (ii) for all . In terms of our tuple notation this means if and only if for all : , two tuples with the same indexing set are equal if and only if their -th coordinate is equal for all . Sound familiar? This is precisely how we define equality between two finite (ordered)sequences and . We make this observation more official in the next definition.  "
 },
@@ -257,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_ntuple",
   "type": "Definition",
-  "number": "0.28",
+  "number": "0.1.28",
   "title": "<span class=\"process-math\">\\(n\\)<\/span>-tuples.",
   "body": " -tuples   Let be a set. An -tuple (or sequence of length ) with entries in is a tuple indexed by the set . We write or to denote the -tuple whose -th entry is for all .   "
 },
@@ -266,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_pairs_triples",
   "type": "Remark",
-  "number": "0.29",
+  "number": "0.1.29",
   "title": "",
   "body": " We have more suggestive names for -tuples when is small: a 2-tuple is called a pair, a 3-tuple is called a triple, a 4-tuple is called a quadruple, . We will use the generic term tuple to designate a -tuple of unspecified length.  "
 },
@@ -275,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#rm_tuple_ordered",
   "type": "Remark",
-  "number": "0.30",
+  "number": "0.1.30",
   "title": "",
   "body": " Observe how tuples capture the notion of an ordered collection of object. For example, whereas the sets and are all equal to one another, the 4-tuples and are not: they differ in their second entries.  "
 },
@@ -284,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_infinite_sequence",
   "type": "Definition",
-  "number": "0.31",
+  "number": "0.1.31",
   "title": "Infinite sequence.",
   "body": " Infinite sequence   Let be a set. An infinite sequence with entries in is a tuple of the form , for some . We write or to denote the tuple whose -th entry is for all .   "
 },
@@ -293,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#ss_tuples_cart_prod-11",
   "type": "Remark",
-  "number": "0.32",
+  "number": "0.1.32",
   "title": "Indexed collection of sets.",
   "body": " Indexed collection of sets  In mathematics we often deal with indexed collections of sets: that is, a collection of sets indexed by some set . When all of the sets are subsets of a common set , we can make this notion rigorous with the concept of a tuple: namely, a collection of subsets of indexed by is just a tuple , where each is a subset of . More technically, this is just a function from to the power set of .  "
 },
@@ -302,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_cartesian_product_arbitrary",
   "type": "Definition",
-  "number": "0.33",
+  "number": "0.1.33",
   "title": "Cartesian product.",
   "body": " Cartesian product  Cartesian product    Cartesian product of the sets     -fold Cartesian product of     Cartesian product    Let be a set, and let be a collection of subsets indexed by the set . The Cartesian product  of this collection is defined as . In other words, the Cartesian product is the set of all -valued tuples whose -th coordinate is an element of for all .  When for all , we denote as .  Additionally, in the special case where we write and , and we call the -fold Cartesian product of .  Lastly, in the special case where we write and .   "
 },
@@ -311,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_sets_functions.html#d_cardinality",
   "type": "Definition",
-  "number": "0.34",
+  "number": "0.1.34",
   "title": "Cardinality.",
   "body": " Cardinality  cardinality  finite set  infinite set  countably infinite set  countable set  uncountable set    cardinality of set    Let be a set.   Finite and infinite sets  The set is finite if either or there is a bijection for some positive integer . Roughly speaking, the cardinality of a finite set , denoted , is the number of distinct elements it contains. In more detail if , then by definition; if there is a bijection , then .  The set is infinite if it is not finite. In this case is said to have infinite cardinality .    Countable and uncountable sets  The set is countably infinite if there is a bijection , where is the set of all positive integers; it is countable if it is either finite or countable infinite.  The set is uncountable if it is not countable.      "
 },
@@ -329,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#d_logical_ops",
   "type": "Definition",
-  "number": "0.35",
+  "number": "0.2.1",
   "title": "Logical operators.",
   "body": " Logical operators      Negation  Given a proposition , the negation of is the proposition Not , denoted in logical notation, the truth value of which is defined as follows: is true exactly when is false.    Conjunction (logical and)  Given propositions and , their conjuction is the proposition and , denoted in logical notation, the truth value of which is defined as follows: is true when both and are true, and false otherwise.    Disjunction (logical or)  Given propositions and , their disjunction is the proposition or , denoted in logical notation, the truth value of which is defined as follows: is true when at least one of and is true, and false otherwise.    Logical implication (if-then)  Given propositions and , the proposition If , then , denoted in logical notation, is called an implication , and its truth value is defined as follows: is false when is true and is false, and true otherwise.    Logical equivalence (if and only if)  Given propositions and , the proposition if and only if , denoted in logical notation, is called an equivalence , and its truth value is defined as follows: is true when and have the same truth value, and false otherwise. We say and are logically equivalent when is true.      "
 },
@@ -338,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#rm_truth_tables",
   "type": "Remark",
-  "number": "0.36",
+  "number": "0.2.2",
   "title": "",
   "body": "  A truth table of a compound proposition is a concise way of displaying how the truth value of depends on the truth values of its component propositions. It contains one row for each possible truth assignment of the component propositions. As illustration, we give the truth tables for the logical operators defined above:    "
 },
@@ -347,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#ss_propositional_calculus-5",
   "type": "Example",
-  "number": "0.37",
+  "number": "0.2.3",
   "title": "",
   "body": "  Use a truth table to find all truth value assignments of and making the compound proposition false.    We construct a truth table with columns for , , , , and : . We conclude that is false exactly when is false and is true. (It follows that is equivalent to . )   "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#rm_logic_vs_vernacular",
   "type": "Remark",
-  "number": "0.38",
+  "number": "0.2.4",
   "title": "",
   "body": "  Our definitions of the logical operators above are chosen to agree with their usage in a very particular type of discourse: namely, mathematical discourse. They do not always agree with their use in natural language: hence the modifier logical in their titles.  For example, disjunctions in natural language of the form or are often understood to be true when is true or is true, but not both . This notion of disjunction is called the exclusive or in logic, in contrast to the standard logical or.  Similarly, according to our definition, the implication If the President of the US is a dog, then the Vice President of the US is a cat is true, since the proposition The President of the US is a dog is false. (In logic we say the implication is vacuously true in this case.) However, working outside of our logical definitions of truth value, we may have been inclined to treat this implication as false, since both The President of the US is a dog and The Vice President of the US is a cat are false.   "
 },
@@ -365,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#d_quantifiers",
   "type": "Definition",
-  "number": "0.39",
+  "number": "0.2.5",
   "title": "Logical quantifiers.",
   "body": " Logical quantifiers   Let be a set, and let be a propositional function that assigns to all elements the proposition . The set is called the domain of discourse of .    Universal quantifier  The proposition For all in , , denoted in logical notation, is called a universal quantification , and its truth value is defined as follows: is true if for all elements of , the proposition is true; it is false if there is some such that is false.    Existential quantifier  The proposition There exists an in such that , denoted in logical notation, is called an existential quantification , and its truth value is defined as follows: is true if there is some element of for which the proposition is true; it is false if is false for all .     "
 },
@@ -374,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#rm_domain_discourse",
   "type": "Remark",
-  "number": "0.40",
+  "number": "0.2.6",
   "title": "Truth depends on domain of discourse.",
   "body": " Truth depends on domain of discourse   Just as a function is not properly defined before its domain is specified, we do not have a well-defined propositional function, nor well-defined truth values of propositions built from this propositional function, until its domain of discourse is given.  For example, let be x>0 . If we declare , then the proposition is true, since by definition every is positive. On the other hand, if we declare , the proposition is false since not all elements of are positive: indeed, is negative, making false.  Because of the important role played by the domain of discourse , we sometimes include it in our quantifier expressions: , , . Using this convention allows us to see more immediately that is true and is false.   "
 },
@@ -383,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#ex_model_quant",
   "type": "Example",
-  "number": "0.41",
+  "number": "0.2.7",
   "title": "Modeling “Every positive number has a square-root”.",
   "body": " Modeling Every positive number has a square-root   Model the sentence Every positive real number has a square-root in the form , where is a propositional function with domain of discourse . Determine the truth value of using .    Fix our domain of discourse to be . For any , let be the proposition that is a square-root of . Define to be the propositional function . Thus for any , is the proposition that if is positive, then has a square-root. It follows that is the proposition that for all real numbers , if is positive, then has a square-root. This is clearly equivalent to the proposition that every positive real number has a square-root, as desired.  Lastly, we use to show is true. Take any . The real number is either positive or not positive. If is not positive, then is false and hence , which is the implication , is true vacuously. If is positive, then is true, and is true, since has a square-root in this case: namely, . But if is true and is true, then the implication is true. We have proved is true for all . Thus is true.   "
 },
@@ -392,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#warning_order_quantifiers",
   "type": "Warning",
-  "number": "0.42",
+  "number": "0.2.8",
   "title": "Order of quantifiers matters.",
   "body": " Order of quantifiers matters   As illustrates, we can take a propositional function in two variables and quantify one of the two variables to obtain a propositional function in one variable: , or . Proceeding in this manner we engender propositions involving sequences of quantifiers. Mark well that the order of the quantifiers in such sequences is important!  For example, letting be is a square-root of with domain of discourse . The proposition says that every positive real number has a positive square-root (true); the proposition says that there is a positive real number that is the square-root of all real numbers (false).  In general to unpack a sequence of quantifiers we start from the leftmost quantifier and proceed to the right.   "
 },
@@ -401,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#rm_negating_quantifiers",
   "type": "Remark",
-  "number": "0.43",
+  "number": "0.2.9",
   "title": "Negating quantifiers.",
   "body": " Negating quantifiers   Let be a propositional function with domain of discourse . According to a universal quantification is false if it is not the case that is true for all for all ; that is, if there is some such that is false. Letting be the propositional function defined as for all , we see that is false if and only if is true. This proves the equivalence . Similarly, we have . These equivalences can be understood as rules of negating quantifier statements. They can be summarized as follow: swap quantifiers and negate the predicate.    "
 },
@@ -410,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_logic.html#ex_limit_doesnt_exist",
   "type": "Example",
-  "number": "0.44",
+  "number": "0.2.10",
   "title": "The limit does not exist.",
   "body": " The limit does not exist   Let be a function with domain , and let be a point of this domain. By definition, the proposition that exists is equivalent to the following proposition: . (We made a number of shortcuts in our logical notation above (  , ) in order to simplify the expression somewhat; the intended meaning should still be clear. )  Use the negation rules described in to derive a similar proposition equivalent to the statement that do not exist.    Let be the proposition in . Using the negation rules in series, we derive the chain of equivalences below. We've added parentheses to emphasize what is being negated at each step. Note how a quantifiers are swapped each time we pass the negation to the right. . (The last link in our chain uses the fact that is equivalent to , as a truth table easily shows.) Translating back into English, we conclude that the limit not existing ( ) is equivalent to the following: for every there is an such that for all there exists an satisfying and . Quite a mouthful!   "
 },
@@ -428,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#sss_implication-4",
   "type": "Warning",
-  "number": "0.45",
+  "number": "0.3.1",
   "title": "",
   "body": " The converse of an implication is the implication ; the inverse of is the implication . Neither the converse nor the inverse is equivalent to the original implication, and thus neither of these can be used to give an indirect proof of . (Exercise: use a truth table to show that neither the converse nor the inverse implication is logically equivalent to the original implication. )  "
 },
@@ -437,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#sss_logical_chains-3",
   "type": "Warning",
-  "number": "0.46",
+  "number": "0.3.2",
   "title": "",
   "body": " It is often tempting, for the sake of space, to try and prove an equivalence via a chain of equivalences, as opposed to showing and separately. When proceeding in this manner, make doubly sure that each is indeed an equivalence: , that the implication arrow really goes both ways at each step. Even if each step in your chain truly is an equivalence, you should consider whether this will be obvious to your reader.  "
 },
@@ -446,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#ex_invertible_bijective",
   "type": "Example",
-  "number": "0.47",
+  "number": "0.3.3",
   "title": "Proof: invertible is equivalent to bijective.",
   "body": " Proof: invertible is equivalent to bijective   Let be a function. Prove: is invertible if and only if is bijective.    Let be the proposition that is invertible, and let be the proposition that is bijective. We prove the equivalence by proving the two implications and .   Proof of  We must show that if is invertible, then is bijective. Assume is invertible. Then has an inverse . We show separately that is injective and surjective, hence bijective.   is injective  We show via a chain of implications: .    is surjective  Let be an element of . We must show that there is an such that . Letting , we have .     Proof of  We must show that if is bijective, then is invertible. Assume is bijective. First we define a function as follows: for all , let be the unique element such that . Note that our definition of uses both that is surjective (there is some element such that )) and injective (there is exactly one element such that ).  We now prove that is the inverse of , showing and separately.    Take any and let . By definition of , we have and hence . This proves .     Take any . By definition of , is the unique such that . Thus . This proves .     "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#ex_proof_by_contradiction",
   "type": "Example",
-  "number": "0.48",
+  "number": "0.3.4",
   "title": "Proof by contradiction.",
   "body": " Proof by contradiction   Prove by contradiction that has no multiplicative inverse in the reals: , there is no such that .    We prove the claim by contradiction. Assume there is an such that . Since for any (a property of multiplication by 0), we have : a contradiction since . We conclude that there is no such that .   "
 },
@@ -464,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#rm_proof_by_contradiction",
   "type": "Remark",
-  "number": "0.49",
+  "number": "0.3.5",
   "title": "",
   "body": " Proof by contradiction resembles, but is not quite the same thing as proving an implication via its contrapositive. Letting denote an arbitrary falsehood (the described above) what we do in a proof by contradiction is show that the implication is true. Since is false, and the implication is true, must be false: equivalently, must be true.  "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#sss_chain_equalities-3",
   "type": "Warning",
-  "number": "0.50",
+  "number": "0.3.6",
   "title": "",
   "body": " Never attempt to prove an equality by starting off with the equality you wish to prove, and then deduce a series of further equalities ending in some inanity: , . What this suggests is that you are in fact proving an implication: namely, if the desired equality is true, then  . Clearly this is not what we set out to prove! This type of fallacious argument is called begging the question ( petitio princippii in Latin), as we assume that which was to be proven.  "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#rm_induction",
   "type": "Remark",
-  "number": "0.51",
+  "number": "0.3.7",
   "title": "“Step 0” of induction.",
   "body": " Step 0 of induction  When meeting a proposition in the wild that we wish to prove by induction, you should first take care to model the proposition in the form . Make explicit the predicate in question, as well as the base case . We illustrate this preparatory Step 0 in the examples below.  "
 },
@@ -518,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#eg_weak_induction",
   "type": "Example",
-  "number": "0.52",
+  "number": "0.3.8",
   "title": "Weak induction.",
   "body": " Weak induction   Prove the identity for all . Recall: .    We prove the proposition by induction.   Step 0: preparation  The proposition is modeled logically as , where is the proposition that .    Base step:  The proposition is the statement that , which is clearly true.    Induction step  We must show the universal implication . Let , and assume is true: , The proposition states that . We prove this, assuming , via a chain of equalities: , as desired.   Having completed our base and induction steps, our proof is now finished.   "
 },
@@ -527,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#fig_proof_induction",
   "type": "Figure",
-  "number": "0.53",
+  "number": "0.3.9",
   "title": "Mathematical induction as ladder of propositions",
   "body": " Mathematical induction as ladder of propositions  Mathematical induction as ladder of propositions     "
 },
@@ -545,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_proof_technique.html#eg_strong_induction",
   "type": "Example",
-  "number": "0.54",
+  "number": "0.3.10",
   "title": "Strong induction.",
   "body": " Strong induction   Prove that every integer can be written as a product of primes.    We prove the statement by induction.   Step 0: preparation  The proposition is modeled logically as , where is the proposition that is a product of primes.    Base step:  The proposition asserts that is a product of primes. This is true since is itself prime, hence a product of one prime number.    Strong induction step  We must show the universal implication . Let , and assume is true for all : , for all such we assume can be written as a product of primes. We use this assumption to prove : , that is a product of primes. We proceed in two cases, depending on whether is itself prime.   Case 1: is prime  If is prime, then it is trivially a product of one prime number, just as with the base case.    Case 2 : is not prime  If is not prime, then we can factor nontrivially as . Here nontrivially means that we have . Using the strong induction hypothesis, we may assume that and are both products of primes: , we have , where and are prime for all and . It follows that , and hence that is also a product of primes, as desired.    Having completed the base and induction steps, our proof by induction is now finished.   "
 },
@@ -563,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_group",
   "type": "Definition",
-  "number": "1.1",
+  "number": "1.1.1",
   "title": "Groups.",
   "body": " Groups   A group is an ordered pair where is a nonempty set and is a binary operation , satisfying the following axioms.   Associativity  For all we have .    Group identity  There is an element , such that for all , we have . We call the group identity of .    Group inverses  For all there is an element satisfying . We call the group inverse of .      "
 },
@@ -572,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#fiat_group_law",
   "type": "Fiat",
-  "number": "1.2",
+  "number": "1.1.2",
   "title": "Group law notation.",
   "body": " Group law notation   You are free to denote the binary group law in any manner you like. Often, as in , we will make a notational choice that reflects the specific nature of a given group.  Furthermore, with the exception of the case where is used to denote the group law, we will often omit the group operation symbol when writing expressions involving group elements.   "
 },
@@ -599,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_abelian_group",
   "type": "Definition",
-  "number": "1.3",
+  "number": "1.1.3",
   "title": "Abelian group.",
   "body": " Abelian group   A group is abelian (or commutative ) if for all . The group is nonabelian (or noncommutative ), if it is not abelian.   "
 },
@@ -617,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#eg_nonabelian_gln",
   "type": "Example",
-  "number": "1.4",
+  "number": "1.1.4",
   "title": "<span class=\"process-math\">\\(\\GL_n(R)\\)<\/span> is nonabelian.",
   "body": " is nonabelian   Let and let . Prove that is a nonabelian group.    Let . We have (easy determinant computation), and furthermore . Since , we conclude that is nonabelian.  Next, given any , consider the block matrices , where and are the matrices above. From properties of block matrix arithmetic it follows that and are invertible (in fact, ) and . Since , we conclude that is nonabelian, as desired.   "
 },
@@ -626,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_product_group",
   "type": "Definition",
-  "number": "1.5",
+  "number": "1.1.5",
   "title": "Product group.",
   "body": " Product group    product of groups and     product of family of groups    Given groups and , the product group  is the group with underlying set and group operation . More generally, given a family of groups indexed by a nonempty set , their product is the group with underling set and group operation for all and in .  We write for the -fold group product of a group with itself.   "
 },
@@ -635,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#ss_product_groups-4",
   "type": "Remark",
-  "number": "1.6",
+  "number": "1.1.6",
   "title": "Arbitrary products.",
   "body": " Arbitrary products  See for more details about tuples and Cartesian products indexed by arbitrary sets .  "
 },
@@ -644,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#prop_product_group",
   "type": "Proposition",
-  "number": "1.7",
+  "number": "1.1.7",
   "title": "Product group.",
   "body": " Product group   Given a family of groups indexed by a nonempty set , the product is a group with respect to the binary operation defined in .    We verify each group axiom in turn.   Given elements , , and of , we have .    Let denote the identity element of for each , and let . For any , we have and , showing that satisfies the group identity axiom.    Given , let . We have and , showing that is a group inverse of .      "
 },
@@ -653,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#th_group_props",
   "type": "Proposition",
-  "number": "1.8",
+  "number": "1.1.8",
   "title": "Group properties.",
   "body": " Group properties   Let be a group.   Cancellation laws  Let .    if and only if .     if and only if .       Uniqueness of identity  The identity element of is unique: , there is exactly one element satisfying .    Uniqueness of inverse  Every has a unique inverse element: , for each there is exactly one element satisfying .     for all .    Inverse of product   for all .    Generalized associativity  Any two parenthetical groupings of an -tuple give rise to the same product in , which we denote as . For example, we have for any , and we denote this common element .          "
 },
@@ -662,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_group_exp",
   "type": "Definition",
-  "number": "1.9",
+  "number": "1.1.9",
   "title": "Group exponentiation.",
   "body": " Group exponentiation   Let be a group. Given and , the -th power of , denoted is defined via cases as follows.        Given positive integer , we define .      "
 },
@@ -671,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#d_order_group_element",
   "type": "Definition",
-  "number": "1.10",
+  "number": "1.1.10",
   "title": "Group element order.",
   "body": " Group element order   Let be an element of the group . The order of , denoted is defined as follows.   If there is no positive integer , such that , then has infinite order , denoted .    If there is a positive integer such that , then is defined as the smallest positive integer satisfying .      "
 },
@@ -680,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#eg_order_inverse",
   "type": "Example",
-  "number": "1.11",
+  "number": "1.1.11",
   "title": "Order of inverse.",
   "body": " Order of inverse   Let be an element of the group . Prove: .   "
 },
@@ -689,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_groups.html#eg_infinite_order",
   "type": "Example",
-  "number": "1.12",
+  "number": "1.1.12",
   "title": "Element of infinite order.",
   "body": " Element of infinite order   Assume is an element of the group of infinite order. Prove that the elements , , are all distinct.   "
 },
@@ -707,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_divis",
   "type": "Definition",
-  "number": "1.13",
+  "number": "1.2.1",
   "title": "Divisibilty.",
   "body": " Divisibilty    divides    Given integers we say that  divides  (or that is a multiple of ) if there is an integer satisfying . In this case, is called the quotient of by .   "
 },
@@ -716,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_cong_mod_n",
   "type": "Definition",
-  "number": "1.14",
+  "number": "1.2.2",
   "title": "Congruence modulo <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Congruence modulo    is congruent to modulo     the congruence class of modulo    Let be a positive integer. Integers and are congruent modulo , denoted , if one of the two following equivalent conditions holds: . The congruence class (or residue class ) of modulo , denoted (or ) is the set of all integers congruent to modulo : , . Elements of a congruence class are called representatives (or residues ) of that class.  The set of all congruence classes modulo is denoted : , . The integer in all the settings above is called a modulus .   "
 },
@@ -725,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_cong_mod_3",
   "type": "Example",
-  "number": "1.15",
+  "number": "1.2.3",
   "title": "Congruence modulo <span class=\"process-math\">\\(3\\)<\/span>.",
   "body": " Congruence modulo   Consider the modulus .   Compute and .   Find a finite list of integers such that .   Compute .          We have .    It is not difficult to show that for any we have for some . (See theory below more generally.) Thus .    The sets are clearly all distinct from one another. Thus .      "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong-5",
   "type": "Remark",
-  "number": "1.16",
+  "number": "1.2.4",
   "title": "Congruence classes.",
   "body": " Congruence classes  Fix an integer . The notation is ambiguous since it does not indicate the modulus in question. This is one reason for the alternative notation . Furthermore, the notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a set of integers .  We will use both notations interchangeably. Typically, we will favor when performing modular arithmetic (see below), and when asserting something about sets.  "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#th_cong_class",
   "type": "Theorem",
-  "number": "1.17",
+  "number": "1.2.5",
   "title": "Congruence.",
   "body": " Congruence   Fix a modulus .   The congruence modulo relation is an equivalence relation: ,   Reflexivity   for all .    Reflexivity  If , then .    Transitivity  If and , then .       The following statements are equivalent.    .     .     .       The congruence classes modulo form a partition of : , we have , and if , then . Using logical notation: .    Assume is positive. For every , there is a unique such that . Equivalently, and for all . As a consequence, .       See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation: .   "
 },
@@ -752,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_least_residue",
   "type": "Definition",
-  "number": "1.18",
+  "number": "1.2.6",
   "title": "Least residue modulo <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Least residue modulo   Fix a positive modulus . Given an integer the least residue of modulo , denoted is the unique satisfying .   "
 },
@@ -761,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong-8",
   "type": "Warning",
-  "number": "1.19",
+  "number": "1.2.7",
   "title": "Congruence relation and least residues.",
   "body": " Congruence relation and least residues  Do not confuse the two quite similar looking notations and . The first asserts that a certain relation holds, namely that is congruent to modulo . The second denotes the unique integer in that is congruent to modulo .  Said differently, the notion of the least residue defines a function .  "
 },
@@ -770,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#th_div_alg",
   "type": "Theorem",
-  "number": "1.20",
+  "number": "1.2.8",
   "title": "Division algorithm.",
   "body": " Division algorithm   Given any integer with nonzero, there is a unique pair of integers satisfying the following properties:    ;     .   We call the integers and satisfying these properties the quotient and remainder upon dividing by .   "
 },
@@ -779,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#prop_least_residue",
   "type": "Proposition",
-  "number": "1.21",
+  "number": "1.2.9",
   "title": "Least residue.",
   "body": " Least residue   Let be a positive integer, and let . The following statements are equivalent.    .     and .     is the remainder upon division of by .      "
 },
@@ -788,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#prop_cong_arith",
   "type": "Proposition",
-  "number": "1.22",
+  "number": "1.2.10",
   "title": "Modular arithmetic.",
   "body": " Modular arithmetic   Fix a modulus . Assume integers satisfy . We have . It follows from this that .   "
 },
@@ -797,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#cor_mod_ring_ops",
   "type": "Corollary",
-  "number": "1.23",
+  "number": "1.2.11",
   "title": "Ring structure of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Ring structure of   Fix a modulus . We have well-defined binary operations and defined on as follows: .   "
 },
@@ -806,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_arith",
   "type": "Example",
-  "number": "1.24",
+  "number": "1.2.12",
   "title": "Modular arithmetic.",
   "body": " Modular arithmetic   Fix the modulus . Find a representative for the congruence class .       "
 },
@@ -815,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_least_residue",
   "type": "Example",
-  "number": "1.25",
+  "number": "1.2.13",
   "title": "Least residue.",
   "body": " Least residue   Let and let . Compute .       "
 },
@@ -833,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_mult_inv_elements",
   "type": "Definition",
-  "number": "1.26",
+  "number": "1.2.14",
   "title": "Multiplicative units in <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Multiplicative units in   Fix a modulus . An element is a unit (or (multiplicatively) invertible ) if there is an element satisfying . The element in this case is called the multiplicative inverse of , denoted . The set of all units of is denoted : , .   "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_groups",
   "type": "Example",
-  "number": "1.27",
+  "number": "1.2.15",
   "title": "Modulus <span class=\"process-math\">\\(n=5\\)<\/span>.",
   "body": " Modulus   Compute group tables for both and . Naturally, for the latter you should first determine the units of .       "
 },
@@ -860,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#eg_mod_units",
   "type": "Example",
-  "number": "1.28",
+  "number": "1.2.16",
   "title": "Units modulo <span class=\"process-math\">\\(9\\)<\/span>.",
   "body": " Units modulo   Compute a group table for .       "
 },
@@ -869,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#d_gcd",
   "type": "Definition",
-  "number": "1.29",
+  "number": "1.2.17",
   "title": "Greatest common divisor.",
   "body": " Greatest common divisor   Let and be integers, at least one of which is nonzero. The greatest common divisor of and , denoted , is the greatest positive integer dividing both and : , .   "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mod_rings.html#ss_cong_ring_structure-12",
   "type": "Remark",
-  "number": "1.30",
+  "number": "1.2.18",
   "title": "Units mod <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Units mod  As we will see later, it turns out that an element is a unit if and only if is relatively prime to : , if and only if . As a result of this very much non-obvious fact, we have .  "
 },
@@ -896,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#d_invertible_matrix",
   "type": "Definition",
-  "number": "1.31",
+  "number": "1.3.1",
   "title": "Invertible matrix.",
   "body": " Invertible matrix    matrices with coefficients in     the group of invertible matrices with coefficients in    Assume either that or that for some . Fix a positive integer . The set of all matrices with coefficients in is denoted .  Given matrices we define their product to be the matrix , where for all .  A matrix is invertible if there is a matrix such that , where is the identity matrix.  We denote by the set of all invertible matrices with coefficients in : , .   "
 },
@@ -914,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#s_matrix_grps-4",
   "type": "Remark",
-  "number": "1.32",
+  "number": "1.3.2",
   "title": "Invertible matrices and determinant.",
   "body": " Invertible matrices and determinant  It turns out that matrix algebra in proceeds essentialy exactly as you are accustomed to, no matter how exotic our ring is. In particular, we can define a determinant function using the usual formula, since has notions of addition and multiplication. Furthermore, you can show that as usual satisfies for all , and that for all there is a special matrix called the adjoint matrix of that satisfies . From these observations it follows that , where is the group of units of , as defined in and .  Of course, that these properties of the determinant and adjoint matrix hold very much requires a proof. We will not do that here, as these will not play a fundamental role in the current course beyond making computation within these groups more convenient. However, the ring theory developed in Math 331-2 will provide a powerful general method that allows us to conclude that properties enjoyed by mathematical objects defined over  and are sometimes inherited by the same types of objects defined over a more general .  "
 },
@@ -923,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_matrix_grps.html#eg_GL_mod2",
   "type": "Example",
-  "number": "1.33",
+  "number": "1.3.3",
   "title": "<span class=\"process-math\">\\(\\GL_2(\\Z\/2\\Z)\\)<\/span>.",
   "body": "   Consider the group .   Compute by explicitly enumerating all of its elements. You can use and to denote the congruence classes .    Compute for all .    Find such that .    For your choice of above, express as as in .    Use the above to construct a full multiplication table of in terms of and .       Since , we see that to be invertible, we need . This restriction allows us to easily enumerate the invertible matrices as . The matrices named and above satisfy . Thus . Furthermore, we see that . The three relations then easily allow us to compute with the group law: that is as long as we express elements of the group in the form . For example, we have . Computations like this allow us to easily compute orders of elements: . We leave it to you to compute the entire multiplication table of . A good exercise!   "
 },
@@ -941,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#d_isom",
   "type": "Definition",
-  "number": "1.34",
+  "number": "1.4.1",
   "title": "Isometry.",
   "body": " Isometry    isometries of    Fix a positive integer . Let denote the standard Euclidean distance on : , , for all -tuples and . An isometry (or rigid motion ) of with respect to is a function satisfying for all . We denote by the set of all isometries of .   "
 },
@@ -959,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_isometries",
   "type": "Example",
-  "number": "1.35",
+  "number": "1.4.2",
   "title": "Isometries.",
   "body": " Isometries   Fix a positive integer . Investigate the claim that is a group with respect to composition. In more detail:   Explain why the group operation is well defined.    What is the group identity of this group, and what are the group inverses?    There is a nontrivial detail in the last part that requires proof. What is it?          "
 },
@@ -968,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#ss_isometries-5",
   "type": "Remark",
-  "number": "1.36",
+  "number": "1.4.3",
   "title": "Rigid motions of <span class=\"process-math\">\\(\\R^2\\)<\/span>.",
   "body": " Rigid motions of  Rotations about a point, reflections through a line, and translation by a fixed vector are easily seen to be examples of rigid motions of the plane. Furthermore, it can be shown that a rigid motion that maps the origin to itself is a linear transformation, that itself is either rotation about or reflection through a line passing through . It follows from this that any rigid motion has a formula of the form , where is a rotation or reflection matrix, and is a fixed vector in .  "
 },
@@ -986,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#ss_dihedral-3",
   "type": "Warning",
-  "number": "1.37",
+  "number": "1.4.4",
   "title": "<span class=\"process-math\">\\(D_n\\)<\/span> or <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": " or  What we call the book calls ! This is somewhat unfortunate, but it turns out there is no real consensus in the mathematical community as to which is the preferred notation. As we see below, the subscript has the advantage of indicating the cardinality of the group in question. On the other hand, the subscript reminds us that the group is defined in terms of isometries that fix an -gon. The latter is consistent with our notation for permutation groups (to be introduced soon), which are defined as the group of permutations acting on a set of elements. That fact, along with the fact that I was simply raised on and not has persuaded me to part ways with the text in this case.  "
 },
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#th_dihedral",
   "type": "Theorem",
-  "number": "1.38",
+  "number": "1.4.5",
   "title": "Dihedral group.",
   "body": " Dihedral group   Fix an integer , let be the regular -gon centered at the origin with one vertex at , and let be the corresponding dihedral group.  Furthermore, define to be rotation by about the origin, and define to be reflection across the -axis.   We have and .    The elements and satisfy .          "
 },
@@ -1004,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_D3",
   "type": "Example",
-  "number": "1.39",
+  "number": "1.4.6",
   "title": "Computing in <span class=\"process-math\">\\(D_3\\)<\/span>.",
   "body": " Computing in   Fix . Visualize the elements of as follows.   Draw the equilateral triangle as described in .    For each element , where and are defined as in , give an explicit geometric description of this rigid motion.    Compute a group table for .          "
 },
@@ -1013,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_dihedral.html#eg_dihedral_geom",
   "type": "Example",
-  "number": "1.40",
+  "number": "1.4.7",
   "title": "Dihedral geometry.",
   "body": " Dihedral geometry   Fix an integer , and let be as defined in .   Give a precise geometric description of each rigid motion .    Let for any . Prove that and that satisfies . In other words, in the description of given in , we can replace the reflection with any of the reflections .          "
 },
@@ -1040,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#d_permutation",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.5.1",
   "title": "Permutations.",
   "body": " Permutations    permutations of the set    Let be a nonempty set. A permutation of is a bijective function . We denote by the set of all permutations of : , . If for some positive integer , we will write for .   "
 },
@@ -1058,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#s_permutations-4",
   "type": "Notation",
-  "number": "1.42",
+  "number": "1.5.2",
   "title": "Table notation.",
   "body": " Table notation  Let , where the are distinct. Given a permutation satisfying for all , we represent using table notation as   "
 },
@@ -1067,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#eg_S_3",
   "type": "Example",
-  "number": "1.43",
+  "number": "1.5.3",
   "title": "Permutations: table notation.",
   "body": " Permutations: table notation   Write down all elements of using table notation.   "
 },
@@ -1076,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#d_cycle",
   "type": "Definition",
-  "number": "1.44",
+  "number": "1.5.4",
   "title": "Cycles.",
   "body": " Cycles   Let be a -tuple of distinct elements of the set . The permutation defined as is called the k-cycle of associated to the tuple , and is denoted . Two cycles are disjoint if .   "
 },
@@ -1085,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#prop_cycle_arith",
   "type": "Proposition",
-  "number": "1.45",
+  "number": "1.5.5",
   "title": "Cycle arithmetic.",
   "body": " Cycle arithmetic   Let and be cycles of the set .   For all , we have .     .         If and are disjoint, then : , disjoint cycles commute.    If , where the are pairwise disjoint cycles, then the order of is the least common multiple of the orders of the : , .       Left as a homework exercise.   "
 },
@@ -1094,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#th_cycle_decomposition",
   "type": "Theorem",
-  "number": "1.46",
+  "number": "1.5.6",
   "title": "Cycle decomposition.",
   "body": " Cycle decomposition   Let be a finite set, and let .   We can write where the are pairwise disjoint cycles.    If we assume that the union of the set of elements appearing in the cycles is all of , then the set of disjoint cycles appearing in the decomposition is uniquely determined by .       The following is an outline for proving this theorem. Fix .   Step 1  Prove that the relation is an equivalence relation on     Step 2  Let be the equivalence classes defined by the relation above. Prove that for each and each , we have , where and .    Step 3  For each , pick such that , and let be the cycle . Show that .    Step 4 (uniqueness)  Assume be a decomposition of into disjoint cycles , and that the union of elements appearing in the is . For each , let be the set of elements of appearing in the cycle .   Prove that .    Prove that and that after a reordering, we have for all .    Prove that .       "
 },
@@ -1103,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#s_permutations-10",
   "type": "Remark",
-  "number": "1.47",
+  "number": "1.5.7",
   "title": "Uniqueness of cycle decomposition.",
   "body": " Uniqueness of cycle decomposition  Let's make a few important remarks about the uniqueness of cycle decomposition.   First off, to have any uniqueness property whatsoever, the cycle decomposition must be a disjoint one. Indeed, for all -cycles we have , giving us many different ways of writing as a composition of 2-cycles.    Although the cycles appearing in a disjoint cycle decomposition are unique, the order in which they appear in this expression is not unique. Indeed, since disjoint cycles commute, we can order the on the right side of the equation any way we like!    Furthermore, remember that any given cycle can itself be expressed in many (in fact ) different ways.     "
 },
@@ -1112,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#eg_cycle_decomp",
   "type": "Example",
-  "number": "1.48",
+  "number": "1.5.8",
   "title": "Cycle decomposition.",
   "body": " Cycle decomposition   We work in the group . Let .   Compute disjoint cycle decompositions of the following permutations.                          Compute .    True or false: .          "
 },
@@ -1121,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_permutations.html#proc_cycle_decomp",
   "type": "Procedure",
-  "number": "1.49",
+  "number": "1.5.9",
   "title": "",
   "body": "  Let be a finite set, and let . To compute a decomposition of into disjoint cycles, proceed as follows.   Initialize: set , the empty product of cycles.    If all elements of appear in the cycles appearing in , then stop.  Otherwise, pick any that does not appear in and compute the cycle it generates by evaluating at successive powers until you get an output of .  Update: set and repeat Step 2.      "
 },
@@ -1139,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#d_homomorphism",
   "type": "Definition",
-  "number": "1.50",
+  "number": "1.6.1",
   "title": "Homomorphism.",
   "body": " Homomorphism   Let and be groups. A (group) homomorphism is a map satisfying for all .   "
 },
@@ -1148,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#s_homomorph-3",
   "type": "Remark",
-  "number": "1.51",
+  "number": "1.6.2",
   "title": "Homomorphism.",
   "body": " Homomorphism  There is an important subtlety in the defining property : namely, there are two group operations at play. In more detail, the input of on the left side is a product within the domain group ; the right side on the other hand is a product within the codomain group .  A useful way of thinking of a group homomorphism is as a function between groups that respects the group structure , in the sense articulated by . You might ask: shouldn't a group homomorphism also respect the group identities and group inverses? It turns out that the property is itself enough to guarantee this.  "
 },
@@ -1157,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#prop_homo",
   "type": "Proposition",
-  "number": "1.52",
+  "number": "1.6.3",
   "title": "Homomorphism properties.",
   "body": " Homomorphism properties   Let be a group homomorphism, and let and be the identity elements of and , respectively.                   Since and is a homomorphism, we have . Now do some algebra in : .    Fix . We have , where the last implication follows from the fact that inverses in groups are unique.      "
 },
@@ -1166,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#eg_homos",
   "type": "Example",
-  "number": "1.53",
+  "number": "1.6.4",
   "title": "Homormorphisms.",
   "body": " Homormorphisms   Decide whether the given map is a group homormorphism.   Trivial homomorphism  Let and be groups. Define as for all .    Identity map  Let be a group, and let be the identity map as usual.    Fix and define as .    Define as .    Determinant  Assume or for some positive integer . Fix a positive integer and define as .    Exponential map  Define as .          "
 },
@@ -1175,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#prop_Dn_homo",
   "type": "Proposition",
-  "number": "1.54",
+  "number": "1.6.5",
   "title": "Homomorphisms from <span class=\"process-math\">\\(D_n\\)<\/span>.",
   "body": " Homomorphisms from   Fix an integer , and let . Given a group and elements satisfying , the map defined as is a homomorphism.    The proof is left as a homework exercise.   "
 },
@@ -1184,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#d_isomorphism",
   "type": "Definition",
-  "number": "1.55",
+  "number": "1.6.6",
   "title": "Isomorphism.",
   "body": " Isomorphism   An isomorphism is a bijective group homomorphism . Groups and are isomorphic , denoted , if there is an isomorphism .   "
 },
@@ -1193,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homomorph.html#eg_Sn",
   "type": "Example",
-  "number": "1.56",
+  "number": "1.6.7",
   "title": "Permutation groups.",
   "body": " Permutation groups   Let and be nonempty sets of the same cardinality: , . Prove: .    By definition of cardinality, since , there exists a bijective function . Using , we define as . Let's first see why this is a well-defined map from to . From , we see that . Next since and are bijective, so is their composition. Thus , as desired.  Next, we show is a homomorphism. We must show that for all . By definition, we have (dropping the symbols) . This proves is a homomorphism. To show it is bijective, and hence an isomorphism, we will show that it has an inverse function . To this end, given , define . Reasoning exactly as above, we see that is well-defined: , is indeed an element of . Lastly, computations much like the one above show that and thus that the two functions are inverses of one another.   "
 },
@@ -1211,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#d_group_action",
   "type": "Definition",
-  "number": "1.57",
+  "number": "1.7.1",
   "title": "Group action.",
   "body": " Group action   A (left) group action is a triple , where is a group, is a nonempty set, and is a binary operation satisfying the following axioms.   Associativity   for and .    Identity action   for all .      "
 },
@@ -1220,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#eg_group_actions",
   "type": "Example",
-  "number": "1.58",
+  "number": "1.7.2",
   "title": "Group actions.",
   "body": " Group actions      The group acts on via evaluation: , given and , we define .    The group acts on the regular polygon via evaluation: , given and , we define .  Furthermore, acts on the set of vertices of and the set of its edges.    The group acts on via evaluation: , given and , we define .    Any group acts on itself (treated as a set) via multiplication on the left: . Note that multiplication on the right is not in a general a group action since by definition we have and .    Any group acts on itself (treated as a set) via conjugation :     Given or the group of units acts on via multiplication: .      "
 },
@@ -1229,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#th_group_actions",
   "type": "Theorem",
-  "number": "1.59",
+  "number": "1.7.3",
   "title": "Group actions and homomorphisms.",
   "body": " Group actions and homomorphisms   Assume acts on the the nonempty set via the binary operation .   Given , the map defined as . is a permutation of : , .    The map defined as is a group homomorphism.    There is a bijection between the set of all group actions and the set of all homomorphisms given by where given , is the permutation defined as .          By definition for all , so the recipe for does indeed yield a well-defined function . To prove that is a permutation, we will show that it has an inverse: in fact, we claim . We must show that composition of these two functions, in any order, yields the identity map on . This follows from the group action axioms: .          "
 },
@@ -1238,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#d_permutation_rep",
   "type": "Definition",
-  "number": "1.60",
+  "number": "1.7.4",
   "title": "Permutation representation.",
   "body": " Permutation representation   Given a group , a homomorphism for some nonempty set is called a permutation representation .   "
 },
@@ -1247,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_action.html#eg_isom",
   "type": "Example",
-  "number": "1.61",
+  "number": "1.7.5",
   "title": "Isomorphisms.",
   "body": " Isomorphisms   Prove: is isomorphic to . Use a group action to produce your homomorphism.    Recall the definition of as the set of rigid motions of fixing the equilateral triangle centered at the origin with one vertex at . Let be the set of vertices of . Since acts on (as described in ), by we get a group homomorphism that maps a function to the permutation it defines on via evaluation. This means that , the function restriction of to the set of vertices of . We claim is in fact an isomorphism. Since , it suffices to show that is injective. To this end, we note that given , we have , where the last implication follows from the fact that two rigid motions of are uniquely determined by their values at three non-colinear points.  We have shown that is an isomorphism and thus that . Lastly, by , we have that and thus that . (The isomorphism relation between groups is easily seen to be an equivalence relation since compositions of isomorphisms are isomorphisms.)   "
 },
@@ -1265,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_subgroup",
   "type": "Definition",
-  "number": "1.62",
+  "number": "1.8.1",
   "title": "Subgroup.",
   "body": " Subgroup    is a subgroup of    A subgroup of a group is a subset satisfying the following properties.   Identity element   .    Closed under group law  For all , if , then . Using logical shorthand: .    Closed under inverses  For all , if , then . Using logical shorthand: .   We write to denote that is a subgroup of .   "
 },
@@ -1274,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#s_subgroups-3",
   "type": "Remark",
-  "number": "1.63",
+  "number": "1.8.2",
   "title": "Subgroup.",
   "body": " Subgroup  There are common equivalent variations of . For example we could define a subgroup of to be a subset satisfying the following conditions.    .    For all , if , then .   Such equivalent versions have the advantage of brevity. I prefer as it makes more evident the important result of : namely, that subgroups are themselves examples of groups.  "
 },
@@ -1283,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#prop_subgrp_is_grp",
   "type": "Proposition",
-  "number": "1.64",
+  "number": "1.8.3",
   "title": "",
   "body": "  Let be a group and suppose is a subgroup of .   Restricting the group operation to defines a binary operation .    The pair is a group.          The only issue here is whether the output of the proposed operation actually land in , and this is guaranteed by axiom (ii) of .    Since is just the restriction of to the subset , it is easy to see that it inherits the group axiom properties of .  For example, since for all elements , it is certainly true for all . Thus is associative.  Similarly, since by definition and is the identity with respect to , it is also is an identity element with respect to . The same argument shows that the inverse of an element of with respect to is also an inverse with respect to ; since by definition is closed under the inverse operations, all elements of have inverses with respect to .      "
 },
@@ -1292,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_",
   "type": "Example",
-  "number": "1.65",
+  "number": "1.8.4",
   "title": "Examples.",
   "body": " Examples      Given a group the subsets and itself are both easily seen to be subgroups.    For all , the set is a subgroup of .    For all , the set is not a subgroup.    For any group and element , the subset is a subgroup of .      "
 },
@@ -1301,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_cyclic_groups",
   "type": "Definition",
-  "number": "1.66",
+  "number": "1.8.5",
   "title": "Cyclic groups.",
   "body": " Cyclic groups   Given a group and element , the subgroup is the cyclic group generated by , denoted .  A group is cyclic if for some .   "
 },
@@ -1310,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_cyclic_groups",
   "type": "Example",
-  "number": "1.67",
+  "number": "1.8.6",
   "title": "Cyclic groups.",
   "body": " Cyclic groups   Decide which of the following groups are cyclic. If the example is a family of groups, decide whether all elements of the family are cyclic or not.                             Since , is cyclic.    No is cyclic, as a simple order computation shows. Namely, all rotations in have order at most , and all reflections have order . It follows that for all . Since , we see that there is no satisfying .    We have , showing that it is cylic.    The group is not always cyclic, the first counterexample being . (Show for yourself that this group is cyclic for .) To see why is not cyclic, we first compute , and then note that each of these elements has order at most . It follows that is not cyclic.      "
 },
@@ -1337,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#s_subgroups-11",
   "type": "Remark",
-  "number": "1.68",
+  "number": "1.8.7",
   "title": "Klein 4-group.",
   "body": " Klein 4-group  So what's with the V in our notation? This group is called the Kleinsche Vierergruppe in German, vier being German for four .  "
 },
@@ -1346,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_D_n",
   "type": "Example",
-  "number": "1.69",
+  "number": "1.8.8",
   "title": "Subgroups of <span class=\"process-math\">\\(D_n\\)<\/span>.",
   "body": " Subgroups of      Find all subgroups of .    Find all cyclic subgroups of . Produce a noncyclic subgroup of .          "
 },
@@ -1355,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_kernel",
   "type": "Definition",
-  "number": "1.70",
+  "number": "1.8.9",
   "title": "Kernel of homomorphism.",
   "body": " Kernel of homomorphism   Let be a group homomorphism. The kernel of , denoted , is the set .   "
 },
@@ -1364,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#th_kernel_image_subgroup",
   "type": "Theorem",
-  "number": "1.71",
+  "number": "1.8.10",
   "title": "Kernel and image.",
   "body": " Kernel and image   Let be a group homomorphism.    is a subgroup of .     is a subgroup of .          "
 },
@@ -1373,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_ker_im",
   "type": "Example",
-  "number": "1.72",
+  "number": "1.8.11",
   "title": "Kernel and image.",
   "body": " Kernel and image   Compute and for the given group homomorphism .   Fix and define .     ,     Let be the set of three ``diameters\" in the regular hexagon . Let be the homomorphism associated to the group action of on .          "
 },
@@ -1382,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#d_centralizer",
   "type": "Definition",
-  "number": "1.73",
+  "number": "1.8.12",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center    centralizer of in     normalizer of in    Let be a subset of the group .   The centralizer of in , denoted , is the set .    The normalizer of in , denoted , is the set .    The center of , denoted , is the set .       "
 },
@@ -1391,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#th_centralzer_norm_center",
   "type": "Theorem",
-  "number": "1.74",
+  "number": "1.8.13",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center   Let be a group, and let be a subset of .    is a subgroup of .     is a subgroup of .     is a subgroup of .          "
 },
@@ -1400,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgroups.html#eg_centralzer_normalizer_center",
   "type": "Example",
-  "number": "1.75",
+  "number": "1.8.14",
   "title": "Centralizer, normalizer, center.",
   "body": " Centralizer, normalizer, center   Let .   Let . Compute and .    Let . Compute and .    Compute .          "
 },
@@ -1418,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_fact_gcd_lcm",
   "type": "Theorem",
-  "number": "1.76",
+  "number": "1.9.1",
   "title": "Prime factorization formulas.",
   "body": " Prime factorization formulas   Let and be positive integers, and let , where is a list of distinct prime integers, and for all .   We have .    We have .      "
 },
@@ -1427,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#prop_finite_order",
   "type": "Proposition",
-  "number": "1.77",
+  "number": "1.9.2",
   "title": "Order of group elements.",
   "body": " Order of group elements   Let be an element of .   If , then if and only if .    If for , then if and only if .    If , for integers , then .    If , then for all .      "
 },
@@ -1436,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_isom",
   "type": "Theorem",
-  "number": "1.78",
+  "number": "1.9.3",
   "title": "Isomorphic cyclic groups.",
   "body": " Isomorphic cyclic groups   Let and be cyclic groups.    .     if and only if .          "
 },
@@ -1445,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#cor_cyclic_isom",
   "type": "Corollary",
-  "number": "1.79",
+  "number": "1.9.4",
   "title": "Isomorphic cyclic groups.",
   "body": " Isomorphic cyclic groups   If is cyclic, then or for some positive integer .   "
 },
@@ -1454,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroups",
   "type": "Theorem",
-  "number": "1.80",
+  "number": "1.9.5",
   "title": "Cyclic group equivalence.",
   "body": " Cyclic group equivalence   A group is cyclic if and only if all subgroups of are cyclic.       "
 },
@@ -1463,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroup_inf",
   "type": "Theorem",
-  "number": "1.81",
+  "number": "1.9.6",
   "title": "Subgroups of infinite cyclic group.",
   "body": " Subgroups of infinite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence is a bijection. In other words, every subgroup of is equal to exactly one of the following list of subgroups: .          "
 },
@@ -1472,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cyclic.html#th_cyclic_subgroup_fin",
   "type": "Theorem",
-  "number": "1.82",
+  "number": "1.9.7",
   "title": "Subgroups of finite cyclic group.",
   "body": " Subgroups of finite cyclic group   Let and assume .   All subgroups of are cyclic.    The correspondence from the positive divisors of and the subgroups of . Furthermore, . As a result for each positive divisor of there is a unique subgroup of that cardinality.          "
 },
@@ -1490,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgrp_lattice.html#prop_intersection_subgroups",
   "type": "Proposition",
-  "number": "1.83",
+  "number": "1.10.1",
   "title": "Intersection of subgroups.",
   "body": " Intersection of subgroups   Let be a group, and let be a family of subgroups indexed by the nonempty set . The intersection is a subgroup of . In plain English, the intersection of a family of subgroups is again a subgroup.    Note that the indexing set is arbitrary here: it need not be finite, or even countable. This does not complicate our proof in anyway: in the end, this is an exercise in dealinging with the quantifier for all that defines the intersection. Let's show that the three axioms of are satisfied.   Since for all , by definition , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .    Assume . By definition, this means for all . Since each is a subgroup of , we have for all , and thus .      "
 },
@@ -1499,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgrp_lattice.html#d_subgroup_generated",
   "type": "Definition",
-  "number": "1.84",
+  "number": "1.10.2",
   "title": "Subgroup generated by a set.",
   "body": " Subgroup generated by a set    subgroup generated by set    Let be a subset of the group . The subgroup generated by , denoted , is defined as the intersection of all subgroups of containing : , .   "
 },
@@ -1508,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subgrp_lattice.html#prop_subgroup_generated",
   "type": "Proposition",
-  "number": "1.85",
+  "number": "1.10.3",
   "title": "Subgroup generated by a set.",
   "body": " Subgroup generated by a set   Let be a subset of .    is the smallest subgroup (with respect to the ordering) of containing : , if and , then . Using logical shorthand: .     is the set of all finite products of elements of and their inverses: . We declare, by convention, that a product of elements (the empty product ) is equal to .      "
 },
@@ -1526,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#d_set_actions",
   "type": "Definition",
-  "number": "1.86",
+  "number": "1.11.1",
   "title": "Group operations on subsets.",
   "body": " Group operations on subsets   Let be a subset of the group . Given , the sets , , are defined as follows: .   "
 },
@@ -1535,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#d_cosets",
   "type": "Definition",
-  "number": "1.87",
+  "number": "1.11.2",
   "title": "Coset and coset space.",
   "body": " Coset and coset space   Let be a subgroup of the group . Given the set defined as is called the left -coset in corresponding to , and the set defined as is called the right -coset in corresponding to . Elements of a coset are called representatives of that coset.  The set of all left (resp. right) -cosets is called the left (resp. right) coset space of , and is denoted (resp. ).   "
 },
@@ -1544,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#s_cosets_lagrange-4",
   "type": "Notation",
-  "number": "1.88",
+  "number": "1.11.3",
   "title": "Cosets are left cosets by default.",
   "body": " Cosets are left cosets by default  Unless stated otherwise, a coset in this course will be assumed to be a left coset.  "
 },
@@ -1553,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#eg_cosets_Z",
   "type": "Example",
-  "number": "1.89",
+  "number": "1.11.4",
   "title": "Cosets in <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Cosets in   Recall that any subgroup of can be described as for a unique . Show that the cosets of are precisely the congruence classes modulo .    Fix . Given the coset is by definition . This computation shows cosets are congruence classes and vice versa.   "
 },
@@ -1562,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#eg_cosets_Zn",
   "type": "Example",
-  "number": "1.90",
+  "number": "1.11.5",
   "title": "Cosets in <span class=\"process-math\">\\(\\Z\/12\\Z\\)<\/span>.",
   "body": " Cosets in   Let and let . Compute .    We have . A simple computation shows . This suggests that . This can be shown by proving that if and only if . below takes care of this for us.   "
 },
@@ -1571,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#eg_cosets_Dn",
   "type": "Example",
-  "number": "1.91",
+  "number": "1.11.6",
   "title": "Cosets in <span class=\"process-math\">\\(D_4\\)<\/span>.",
   "body": " Cosets in   Let and let . Compute and .    We have . We compute We conclude that . Let's look at the right cosets: . We conclude that .   "
 },
@@ -1580,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#th_cosets",
   "type": "Theorem",
-  "number": "1.92",
+  "number": "1.11.7",
   "title": "Cosets and coset space.",
   "body": " Cosets and coset space   Let be a subgroup of the group .   The relation if and only if for some is an equivalence relation and the cosets are the corresponding equivalence classes.    Given , the following statements are equivalent.    .     .     .     .       The cosets of form a partition of . That is, we have and .       This is another example of a theorem where we get a lot of mileage out of defining an equivalence relation. The relation if and only if is easily seen to be an equivalence relation: . Since the equivalence classes of are precisely the cosets by definition, statement (3) and most of the equivalent statements in (2) follow immediately. The exception is the statement that if and only if , which follows using equivalent formulation (b), since .   "
 },
@@ -1589,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#th_lagrange",
   "type": "Theorem",
-  "number": "1.93",
+  "number": "1.11.8",
   "title": "Lagrange’s theorem.",
   "body": " Lagrange's theorem   Let be a subgroup of the group .   We have . When is infinite, this can be interpreted as saying is infinite or is infinite.    If , then we have .       Statement (2) follows directly from (1). Statement (1) follows from and a counting argument. First observe that for all we have as witnessed by the map , which has inverse map . Next, let be the family of distinct cosets, so that we have and for all . If and are both finite, then the sum rule for disjoint sets yields . This both proves the result in the case where is finite, and shows that if is infinite, than either or is infinite.   "
 },
@@ -1598,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#d_index",
   "type": "Definition",
-  "number": "1.94",
+  "number": "1.11.9",
   "title": "Index of subgroup.",
   "body": " Index of subgroup    index of in    Given a subgroup of the group , its index is defined as . In other words, is the cardinality of the coset space .   "
 },
@@ -1607,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#s_cosets_lagrange-11",
   "type": "Remark",
-  "number": "1.95",
+  "number": "1.11.10",
   "title": "Lagrange’s theorem.",
   "body": " Lagrange's theorem  Using the index notation, we can re-write Lagrange's theorem as .  "
 },
@@ -1616,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#cor_subgroup_card",
   "type": "Corollary",
-  "number": "1.96",
+  "number": "1.11.11",
   "title": "Cardinality of subgroups.",
   "body": " Cardinality of subgroups   Assume is a finite group.   For any subgroup , we have .    For any we have .      "
 },
@@ -1625,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_cosets_lagrange.html#cor_groups_prime_card",
   "type": "Corollary",
-  "number": "1.97",
+  "number": "1.11.12",
   "title": "Groups of prime cardinality.",
   "body": " Groups of prime cardinality   If for a prime integer , then is cyclic. It follows that .   "
 },
@@ -1643,7 +1643,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#d_normal_subgroup",
   "type": "Definition",
-  "number": "1.98",
+  "number": "1.12.1",
   "title": "Normal subgroup.",
   "body": " Normal subgroup   A subgroup of the group is called normal if for all . We write to indicate that is a normal subgroup of .   "
 },
@@ -1652,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#th_normal",
   "type": "Theorem",
-  "number": "1.99",
+  "number": "1.12.2",
   "title": "Normal subgroups.",
   "body": " Normal subgroups   Let be a subgroup of the group . The following statements are equivalent.    .          for all .    The operation is well defined.       The equivalence follows directly from the definition of normality and .  The equivalence is left as an exercise.  We prove . Assume . Assume and . We will show that . Since and , we have and for some elements , and thus . Next since (assuming (3)), we have for some , yielding . It follows from that , as desired.  The implication is left as an exercise.   "
 },
@@ -1661,7 +1661,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#th_quot_group",
   "type": "Theorem",
-  "number": "1.100",
+  "number": "1.12.3",
   "title": "Quotient groups.",
   "body": " Quotient groups   Let be a normal subgroup of the group .   The pair , where is the operation , is a group.  The group identity of is the coset . Given coset its group inverse is the coset .    The map defined as is a surjective group homormorphism satisfying .          "
 },
@@ -1670,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#eg_normality_D4",
   "type": "Example",
-  "number": "1.101",
+  "number": "1.12.4",
   "title": "Normality in <span class=\"process-math\">\\(D_4\\)<\/span>.",
   "body": " Normality in   Decide whether the given subgroup of is normal. Verify your answer by checking multiple conditions of the equivalence in .                        "
 },
@@ -1679,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#eg_normal_abelian",
   "type": "Example",
-  "number": "1.102",
+  "number": "1.12.5",
   "title": "Abelian groups.",
   "body": " Abelian groups   Show that an abelian group every subgroup is normal.    Let be abelian. Given a subgroup , for any and we have . It follows that for all and hence that is normal.   "
 },
@@ -1688,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#cor_normal_ker",
   "type": "Corollary",
-  "number": "1.103",
+  "number": "1.12.6",
   "title": "Normality and kernels.",
   "body": " Normality and kernels   Let be a subgroup of . The following statements are equivalent.    is normal.     for some group homomorphism .      "
 },
@@ -1697,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotient_group.html#eg_normality_S4",
   "type": "Example",
-  "number": "1.104",
+  "number": "1.12.7",
   "title": "Normality in <span class=\"process-math\">\\(S_4\\)<\/span>.",
   "body": " Normality in   Determine whether the given subgroup is normal in . If it is, identify the corresponding quotient group with a familiar group.                   "
 },
@@ -1715,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#th_quot_map",
   "type": "Theorem",
-  "number": "1.105",
+  "number": "1.13.1",
   "title": "Quotient map: universal property.",
   "body": " Quotient map: universal property   Let be a normal subgroup of , and let be the corresponding quotient map. Given any group homomorphism satisfying , there exists a unique group homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       First consider the uniqueness claim. If satisfies , then since for all , we must have . Thus there is at most one such homomorphism , in fact we must define .  We now show that this formula gives rise to a well-defined map . We must show that if , then . We have . Having shown is well defined, it is easy to how that it is a group homomorphism. We have . Lastly, satisfies essentially by definition, since for all .   "
 },
@@ -1724,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#th_isom_thm_1",
   "type": "Theorem",
-  "number": "1.107",
+  "number": "1.13.3",
   "title": "First isomorphism theorem.",
   "body": " First isomorphism theorem   Let be a group homomorphism, and let be the quotient map.    .    In more detail, letting , the map defined as for all is an isomorphism, and is the unique homomorphism satisfying .       Assume is a group homomorphism. Setting , implies that the map is a homomorphism. Furthermore, it is easy to see that and hence that is surjective. We claim that is injective and hence that the map above is an isomorphism, showing .  According to , it suffices to show that . By definition, we have , as desired.   "
 },
@@ -1733,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#lemma_ker_inj",
   "type": "Lemma",
-  "number": "1.108",
+  "number": "1.13.4",
   "title": "Kernel and injectivity.",
   "body": " Kernel and injectivity   Let be a group homomorphism.  Given we have .    is injective if and only if .          We have . Thus .    If is injective, then if and only if , showing that . Inversely, if is not injective, then we can find such that . But then . Since it follows that and hence .      "
 },
@@ -1742,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#eg_first_isom",
   "type": "Example",
-  "number": "1.109",
+  "number": "1.13.5",
   "title": "First isomorphism theorem.",
   "body": " First isomorphism theorem   Let , a normal subgroup of . Use the first isomorphism theorem to identify with a familiar group.    We convinced ourselves earlier that was isomorphic to , which is isomorphic to . That argument involved finding appropriate generators of the quotient group that gave us the relations. Let's see how the first isomorphism theorem can clean things up a bit.  Consider the set where . In other words, is the set of all partitions of into two disjoint sets of cardinality 2. It is easy to see that $S_4$ acts on as . As such we get a homomorphism that associates to each its corresponding permutation of the elements of . The first isomorphism theorem tells us that . We will show that and , from whence it follows that , where the last isomorphism follows from the fact that .  Let's see why . Note that by definition for an element to lie in , we need . An argument similar to the ones we used to compute normalizers and centralizers in shows that given , we have . It follows that for all if and only if . Thus .  Having proved that , the first isomorphism tells us that , and in particular . Since , we conclude that , and hence that , as claimed.   "
 },
@@ -1751,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#eg_first_isom_matrices",
   "type": "Example",
-  "number": "1.110",
+  "number": "1.13.6",
   "title": "First isomorphism theorem: <span class=\"process-math\">\\(\\SL_n(R)\\)<\/span>.",
   "body": " First isomorphism theorem:   Let be one of our familiar rings: , or for some positive integer . Fix a positive integer and define . Show that is normal in and identify the quotient with a familiar group.    The determinant map is a group homomorphism, and it is easy to see that it is surjective: given the diagonal matrix with in the first diagonal entry and 1's elsewhere satisfies .  By definition we have . It follows that and we have by the first isomorphism theorem.   "
 },
@@ -1760,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_A.html#eg_first_isom_RmodZ",
   "type": "Example",
-  "number": "1.111",
+  "number": "1.13.7",
   "title": "First isomorphism theorem: <span class=\"process-math\">\\(\\R\/\\Z\\)<\/span>.",
   "body": " First isomorphism theorem:   Let , and let    Prove that is a subgroup of and that is a subgroup of .    Prove that .    Prove that .       This example relies on the following notions from complex arithmetic.   Given , with , we define its modulus as . Geometrically, this is just the length of the vector .   Given , if the point has polar coordinates , then we have . Defining , we have . If we specify that , then we have .   Given and , we have . In other words, geomtrically speaking, two multiply two complex numbers, we (a) multiply their moduli, and (b) add their angles.   Using these properties, we see that the map defined as is a group homomorphism with kernel . We leave the details to discussion section.   "
 },
@@ -1787,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#prop_subgroup_prod",
   "type": "Proposition",
-  "number": "1.112",
+  "number": "1.14.1",
   "title": "Product of subgroups.",
   "body": " Product of subgroups   Let and be subgroups of . We define .   We have . In particular, if and are finite, then we have .     is a subgroup of if and only if .    If , then is a subgroup. In particular, if , then is a subgroup of .          Consider the map of sets defined by . This map is surjective by definition of . Given any , we have . Let , and notice that . It follows easily that for all , we have . Furthermore, the map can be shown to be a bijection.  Now, if and are finite, then and are finite, and we have , as desired.  Moreover, if either or is infinite, then so is , in which case the equality still holds.    Left as an exercise.    Left as an exercise.      "
 },
@@ -1796,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#th_isom_thm_2",
   "type": "Theorem",
-  "number": "1.113",
+  "number": "1.14.2",
   "title": "Second isomorphism theorem.",
   "body": " Second isomorphism theorem   Let and be subgroups of the group and assume .         .       First we prove . Given and , we have .  To prove the stated isomorphism, we start with the quotient map and let , its restriction to the subgroup . We have . By the first isomorphism theorem, we have . It remains to show that . Given any , we have for some and , in which case . It follows that . This proves is surjective, and hence that .   "
 },
@@ -1805,7 +1805,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#s_isom_thms_B-4",
   "type": "Remark",
-  "number": "1.114",
+  "number": "1.14.3",
   "title": "Second isomorphism theorem.",
   "body": " Second isomorphism theorem  The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the diamond isomorphism theorem .   Lattice diagram of second isomorhphism theorem   Lattice diagram of second isomorhphism theorem      further tells us that .  "
 },
@@ -1814,7 +1814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#th_third_isom",
   "type": "Theorem",
-  "number": "1.116",
+  "number": "1.14.5",
   "title": "Third isomorphism theorem.",
   "body": " Third isomorphism theorem   Let be a surjective homomorphism, and suppose is a normal subgroup of containing .    .     .          "
 },
@@ -1823,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#s_isom_thms_B-6",
   "type": "Notation",
-  "number": "1.117",
+  "number": "1.14.6",
   "title": "Images under quotients.",
   "body": " Images under quotients  Let be a normal subgroup of . Given any subset , we denote by its image under the quotient map .  "
 },
@@ -1832,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_B.html#cor_second_isom_theorem",
   "type": "Corollary",
-  "number": "1.118",
+  "number": "1.14.7",
   "title": "Quotients of quotients.",
   "body": " Quotients of quotients   Let and be normal subgroups of and assume . We have .   "
 },
@@ -1850,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_C.html#th_isom_thms_4",
   "type": "Theorem",
-  "number": "1.119",
+  "number": "1.15.1",
   "title": "Fourth isomorphism theorem.",
   "body": " Fourth isomorphism theorem   Let be a surjective homomorphism, and let . Define . In other words, is the set of all subgroups of containing , and is the set of all subgroups of .   There is a bijective correspondence between and given as follows:   Fourth isomorphism theorem bijection      For , we have           "
 },
@@ -1859,7 +1859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_isom_thms_C.html#cor_4th_isom_thm",
   "type": "Corollary",
-  "number": "1.120",
+  "number": "1.15.2",
   "title": "Fourth isomorphism theorem: quotients.",
   "body": " Fourth isomorphism theorem: quotients   Let be a normal subgroup of . The subgroups of are in bijective correspondence with the subgroups of containing . Furthermore, this correspondence preserves normality, inclusion, intersection, generated subgroups, .   "
 },
@@ -1877,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#d_transposition",
   "type": "Definition",
-  "number": "1.121",
+  "number": "1.16.1",
   "title": "Transposition.",
   "body": " Transposition   Let be a finite set of cardinality at least 2. A -cycle is called a transposition of .   "
 },
@@ -1886,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#th_transp_generate",
   "type": "Theorem",
-  "number": "1.122",
+  "number": "1.16.2",
   "title": "Transpositions generate <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": " Transpositions generate   Let be a finite set of cardinality at least 2.   Given -cycle , we have .    Let be the set of transpositions of . We have : , is generated by its transpositions.          This is a straightforward proof by induction, the base case being trivial. For the induction step, assume any -cycle can be written as in . Given any -cycle , we have , as desired.    From (1) we see that contains all cycles. Since any permutation can be written as a product of (disjoint) cycles, it follows that .      "
 },
@@ -1895,7 +1895,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#d_even_odd",
   "type": "Definition",
-  "number": "1.123",
+  "number": "1.16.3",
   "title": "Even and odd permutations.",
   "body": " Even and odd permutations    the sign map    Let be a finite set of cardinality at least 2. A permutation is called even if it can be written as a product of an even number of transpositions, and odd if it can be written as an odd product of transpositions. Two permutations have the same parity if they are both even or both odd.  We define the sign map as Equivalently, if can be written as a product of transpositions, then .   "
 },
@@ -1904,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#eg_sign",
   "type": "Example",
-  "number": "1.124",
+  "number": "1.16.4",
   "title": "Sign of permutations.",
   "body": " Sign of permutations   From , we see that any -cycle can be written as a product of transpositions. It follows that a -cycle is even if and only if is odd.  What about the identity permutation ? Since for any -cycle, we see that is even.   "
 },
@@ -1913,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#prop_sign",
   "type": "Proposition",
-  "number": "1.125",
+  "number": "1.16.5",
   "title": "Sign map.",
   "body": " Sign map   Let be a set of cardinality at least 2. The sign map is a surjective homomorphism.    The proof is straightforward, assuming of course that our definition of even\/odd is well defined! Indeed, if can be written as a product of traspositions, and can be written as a product of transpositions, then can be written as a product of transpositions, and thus . Surjectivity is clear since and for any transposition .   "
 },
@@ -1931,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#eg_A4",
   "type": "Example",
-  "number": "1.126",
+  "number": "1.16.6",
   "title": "<span class=\"process-math\">\\(A_4\\)<\/span>.",
   "body": "   Compute the full lattice of subgroups of and identify any normal subgroups.    Let's first describe all elements of . Below we look at all cycle types of elements in , determine their parity, and count the number of elements of that cycle type. . If is a subgroup of , then since , we have . There are cardinality-2 subgroups generated by the elements of the form . There are exactly cyclic subgroups of cardinality : one for each pair . Furthermore, as we have seen before, we have , a cardinality-4 subgroup isomorphic to the Klein 4-group. Since conjugation preserves cycle type, and since this subgroup contains all elements of type , it is easy to see that it is normal. This gives rise to the the lattice of subgroups in . We claim that this is the complete lattice of subgroups. It suffices to argue that any subgroup of containing an element of the form and an element of the form must be all of . It is not difficult to show this just by computing some products of elements of order 2 and 3. Below you find a slightly slicker argument.  Suppose we had a subgroup containing $H=\\angvec{(12)(34)}$ and . It would follow that . Since and , we have and thus . But then we must have , in which case is normal in since . Since all elements of type are conjugate in (as one can easily verify), we'd have . This is a contradiction, since . Thus there is no such .   "
 },
@@ -1940,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#fig_A4",
   "type": "Figure",
-  "number": "1.127",
+  "number": "1.16.7",
   "title": "",
   "body": " Lattice of subgroups of   Lattice of subgroups of A4    "
 },
@@ -1967,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#th_permutation_rep",
   "type": "Theorem",
-  "number": "1.128",
+  "number": "1.16.8",
   "title": "Permutation group representation.",
   "body": " Permutation group representation   Let be an integer. For all , let be the -tuple whose -th coordinate is , and whose other coordinates are . Given , we define to be the unique matrix in satisfying for all .   The map defines a group homomorphism .    The composition defines a surjective group homomorphism .    We have if and only if can be written as a product of an even number of transpositions. As a result, is well defined.       The proof is left as an exercise.   "
 },
@@ -1976,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_alt_group.html#s_alt_group-14",
   "type": "Remark",
-  "number": "1.129",
+  "number": "1.16.9",
   "title": "Parity.",
   "body": " Parity  At last, thanks to , we see that our definition of parity is well defined. But wait, you might object, applies only to , not a general permutation group . Of course, the easy way to get around this is to choose an isomorphism from to that sends transpositions to transpositions (the isomorphism in does this), and compose this with . The resulting homomorphism satisfies the same properties as described in .  There is another way of seeing this, however. Namely, tells us that has a normal subgroup of index 2, and hence so does and , where . In fact, it is possible to show that has exactly one such subgroup, and it is made up precisely of the elements of that can be written as a product of an even number of transpositions. We leave this fact as an exercise.  "
 },
@@ -1994,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#d_Gsets",
   "type": "Definition",
-  "number": "1.130",
+  "number": "1.17.1",
   "title": "G-sets.",
   "body": " G-sets   Let be a group. A G-set is a nonempty set together with a group action .  Given -sets and , a -set morphism is a function satisfying for all and . A -set isomorphism is a bijective -set morphism.   "
 },
@@ -2003,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#d_",
   "type": "Definition",
-  "number": "1.131",
+  "number": "1.17.2",
   "title": "Stabilizers and kernels of actions.",
   "body": " Stabilizers and kernels of actions    group action stabilizer of    Let be a group, and let be a -set. Given a -set and nonempty subset , the stabilizer of is the set of all elements of that fix every element of : , . In the case of a singleton , we write instead of .  The kernel of a a group action is .   "
 },
@@ -2012,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#th_stab",
   "type": "Theorem",
-  "number": "1.132",
+  "number": "1.17.3",
   "title": "Stabilizers.",
   "body": " Stabilizers   Let be a group, and let be a -set.   Given any nonempty subset , the stabilizer is a subgroup of .    For all and , letting , we have     The kernel of the action is a normal subgroup of . In fact, letting be the homomorphism associated to the group action , we have .          Left as an exercise.    Let . We have . This proves .    The fact that follows essentially from the definition of and : if and only if for all , if and only if its associated permutation , defined as for all , is the identity map.      "
 },
@@ -2021,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#d_faithful_transitive",
   "type": "Definition",
-  "number": "1.133",
+  "number": "1.17.4",
   "title": "Permutation representation and faithfulness.",
   "body": " Permutation representation and faithfulness   Given a group action , the corresponding homomorphism , where for all , is called the permutation representation associated to the group action. The homomorphism associated to the the action of on itself by left multiplication is called the regular permutation representation .  A group action is faithful if : equivalently, if its associated permutation representation is injective.   "
 },
@@ -2030,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#cor_coset_space_action",
   "type": "Corollary",
-  "number": "1.134",
+  "number": "1.17.5",
   "title": "Action on coset space.",
   "body": " Action on coset space   Let be a subgroup of the group , and consider the group action of on given by left multiplication .   This action is transitive.    Let . We have . As a result, is the largest normal subgroup contained in .          Given any elements , we have .    We have , where the last line follows from the fact that if and only if .  Lastly, if is a normal subgroup of , then by definition we must have for all . It follows that .      "
 },
@@ -2039,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#th_cayley",
   "type": "Theorem",
-  "number": "1.135",
+  "number": "1.17.6",
   "title": "Cayley’s theorem.",
   "body": " Cayley's theorem   Every group is isomorphic to a subgroup of . If , then is isomorphic to a subgroup of .    Consider the action of on itself by left multiplication, and corresponding regular permutation representation . Since this action is faithful, and is injective. We conclude that is an isomorphism between and the subgroup .  In the case where , composing with an isomorphism yields an isomorphism between and a subgroup of .   "
 },
@@ -2048,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_stabilizers.html#th_index_p",
   "type": "Theorem",
-  "number": "1.136",
+  "number": "1.17.7",
   "title": "Subgroups of prime index.",
   "body": " Subgroups of prime index   Let be a finite group and let be the smallest prime divisor of . If is a subgroup of of index , then is normal.    Consider the left multiplication action of on the coset space and the corresponding permutation representation . By the first isomorphism theorem, we have , where is a subgroup of . Note that since , we have , and thus .  We claim , whence the result follows. From we know that . It follows that . Next, since , . Since furthermore , we see that is a common divisor of and . But since all prime divisors of are less than , we see that and are relatively prime! Thus and , as claimed.   "
 },
@@ -2066,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#d_orbits",
   "type": "Definition",
-  "number": "1.137",
+  "number": "1.18.1",
   "title": "Orbits.",
   "body": " Orbits   Let be a group action. Given , we define its orbit  as .   "
 },
@@ -2075,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#d_transitive",
   "type": "Definition",
-  "number": "1.138",
+  "number": "1.18.2",
   "title": "Transitive group action.",
   "body": " Transitive group action   A group action is transitive if for all there is a satisfying .   "
 },
@@ -2084,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#th_transitive_action",
   "type": "Theorem",
-  "number": "1.139",
+  "number": "1.18.3",
   "title": "Orbit-stabilizer.",
   "body": " Orbit-stabilizer   Let be a group action.   For all , the function is an isomorphism of -sets, where acts on by left multiplication, and the action of on is given by restriction.    For all we have .          "
 },
@@ -2093,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#eg_tetrahedron",
   "type": "Example",
-  "number": "1.140",
+  "number": "1.18.4",
   "title": "Rotational symmetries of a tetrahedron.",
   "body": " Rotational symmetries of a tetrahedron   Let be a regular tetrahedron in and let be the group of rotations in that map to itself. Establish an isomorphism between and one of our familiar groups.    Left as an exercise.   "
 },
@@ -2102,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#eg_cube",
   "type": "Example",
-  "number": "1.141",
+  "number": "1.18.5",
   "title": "Rotational symmetries of a tetrahedron.",
   "body": " Rotational symmetries of a tetrahedron   Let be a cube in and let be the group of rotational symmetries of . Establish an isomorphism between and one of our familiar groups.    Left as an exercise.   "
 },
@@ -2111,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#th_orbit_decomp",
   "type": "Theorem",
-  "number": "1.142",
+  "number": "1.18.6",
   "title": "Orbit decomposition theorem.",
   "body": " Orbit decomposition theorem   Let be a group action.   The relation if and only if is an equivalence relation whose equivalence classes are the distinct orbits of the group action. As a result, we have a partition of into disjoint orbits, and if and only if .    As a -set, decomposes into a disjoint union of orbits, each of which is isomorphic as a -set to for some subgroup .          "
 },
@@ -2120,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#d_fix_sets",
   "type": "Definition",
-  "number": "1.143",
+  "number": "1.18.7",
   "title": "Fix sets.",
   "body": " Fix sets   Let be a group action. Given an element , the fix set of under this action, denoted , is defined as . More generally, given a subset , we define its fix set as .   "
 },
@@ -2129,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_group_actions_orbits.html#th_burnside",
   "type": "Theorem",
-  "number": "1.144",
+  "number": "1.18.8",
   "title": "Burnside’s lemma.",
   "body": " Burnside's lemma  Frobenius   Let be a finite group acting on a finite nonempty set , and let be the set of orbits of the group action. We have .       "
 },
@@ -2147,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#d_conjugacy_class",
   "type": "Definition",
-  "number": "1.145",
+  "number": "1.19.1",
   "title": "Conjugacy class.",
   "body": " Conjugacy class   The conjugacy class of an element of the group , denoted is the set of all conjugates of in: , . Equivalently, the conjugacy class of is the orbit of under the action of conjugation.   "
 },
@@ -2156,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#th_class_equation",
   "type": "Theorem",
-  "number": "1.146",
+  "number": "1.19.2",
   "title": "Conjugacy and the class equation.",
   "body": " Conjugacy and the class equation   Let be a finite group and consider the action of on itself by conjugation.   For all , we have . It follows from the orbit-stabilizer theorem that .    We have .    Let , be the distinct conjugacy classes of , and assume further that , , is the set of conjugacy classes consisting of a single element. We have a partition , from which it follows that .          "
 },
@@ -2165,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#d_class_equation",
   "type": "Definition",
-  "number": "1.147",
+  "number": "1.19.3",
   "title": "Class equation.",
   "body": " Class equation   Let be a finite group, and let be the distinct conjugacy classes of . The class equation of is the equation .   "
 },
@@ -2174,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#eg_class_eq_abelian",
   "type": "Example",
-  "number": "1.148",
+  "number": "1.19.4",
   "title": "Class equation: abelian groups.",
   "body": " Class equation: abelian groups   Prove: a finite group is abelian if and only if its class equation is of the form .       "
 },
@@ -2183,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#eg_class_eqn_D8",
   "type": "Example",
-  "number": "1.149",
+  "number": "1.19.5",
   "title": "Class equation: <span class=\"process-math\">\\(D_8\\)<\/span>.",
   "body": " Class equation:   Compute the class equation of .       "
 },
@@ -2192,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#th_center_pgroup",
   "type": "Theorem",
-  "number": "1.150",
+  "number": "1.19.6",
   "title": "Center of a <span class=\"process-math\">\\(p\\)<\/span>-group.",
   "body": " Center of a -group   Assume is a group of cardinality , where is a prime integer. The center of is nontrivial: , .       "
 },
@@ -2201,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#cor_psquared",
   "type": "Corollary",
-  "number": "1.151",
+  "number": "1.19.7",
   "title": "Groups of cardinality <span class=\"process-math\">\\(p^2\\)<\/span>.",
   "body": " Groups of cardinality   If is a group of cardinality , where is a prime integer, then is abelian.   "
 },
@@ -2210,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#d_partitions_of_n",
   "type": "Definition",
-  "number": "1.152",
+  "number": "1.19.8",
   "title": "Partition of <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": " Partition of   Let be a positive integer. A partition of is an -tuple for some satisfying . Given a partiion we define its type  to be the -tuple , where is the number of entries of equal to for all .   "
 },
@@ -2219,7 +2219,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#th_class_eq_Sn",
   "type": "Theorem",
-  "number": "1.153",
+  "number": "1.19.9",
   "title": "Class equation of <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": " Class equation of   Let be a positive integer, let be the set of all partitions of , and let be the set of all types of these partitions. The class equation of is .       "
 },
@@ -2228,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#cor_stab_cycle",
   "type": "Corollary",
-  "number": "1.154",
+  "number": "1.19.10",
   "title": "Stabilizers of cycles.",
   "body": " Stabilizers of cycles   Let be a -cycle in . Let and let . We have .   "
 },
@@ -2237,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#eg_class_eq_A5",
   "type": "Example",
-  "number": "1.155",
+  "number": "1.19.11",
   "title": "Class equation: <span class=\"process-math\">\\(A_5\\)<\/span>.",
   "body": " Class equation:   Determine the class equation of .    First we describe the different cycle types of elements of . . Given of one of these types, we know that its conjugacy class in consists of all elements of that same type. However, we are computing conjugacy classes in ! Since we are conjugating by fewer elements, its conjugacy class in will be a subset of its conjugacy class in . It follows that each conjugacy class in breaks ups into a disjoint union of conjugacy classes in . As you will show in your homework, some of these conjugacy classes remain intact, while the others split into exactly two conjugacy classes.   "
 },
@@ -2246,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_class_number.html#th_simple_An",
   "type": "Theorem",
-  "number": "1.156",
+  "number": "1.19.12",
   "title": "Simplicity of <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": " Simplicity of   For all the alternating group is simple.       "
 },
@@ -2264,7 +2264,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#d_order_p",
   "type": "Definition",
-  "number": "1.157",
+  "number": "1.20.1",
   "title": "Order at <span class=\"process-math\">\\(p\\)<\/span>.",
   "body": " Order at    -adic valuation of    Let be nonzero integer, and let be a prime integer. The -adic valuation of , denoted , is the largest integer such that .   "
 },
@@ -2273,7 +2273,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#ss_Sylow_statements-3",
   "type": "Remark",
-  "number": "1.158",
+  "number": "1.20.2",
   "title": "<span class=\"process-math\">\\(p\\)<\/span>-adic valuation.",
   "body": " -adic valuation  It follows from the fundamental theorem of arithmetic that the -adic valuation of an integer can be read directly from the prime factorization of . For example, from $12=2^2\\cdot 3$ we conclude .  "
 },
@@ -2282,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#d_Sylow_subgroups",
   "type": "Definition",
-  "number": "1.159",
+  "number": "1.20.3",
   "title": "Sylow subgroups.",
   "body": " Sylow subgroups   Let be a finite group of cardinality . Let be a prime divisor of , and let . A -Sylow subgroup of is a subgroup of of cardinality . We denote the set of all -Sylow subgroups : , . Lastly we let be the number of -Sylow subgroups of : .   "
 },
@@ -2291,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#eg_Sylow_S3",
   "type": "Example",
-  "number": "1.160",
+  "number": "1.20.4",
   "title": "Sylow subgroups of <span class=\"process-math\">\\(S_3\\)<\/span>.",
   "body": " Sylow subgroups of   We have . From the lattice of subgroups of , we see immediately that and thus    "
 },
@@ -2300,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#eg_Sylow_cyclic",
   "type": "Example",
-  "number": "1.161",
+  "number": "1.20.5",
   "title": "Sylow subgroups of cyclic groups.",
   "body": " Sylow subgroups of cyclic groups   Let be a finite cyclic group of cardinality . Fix a prime divisor of , and let , so that , where . From , we know there is exactly one subgroup of of cardinality : namely, . Thus and .   "
 },
@@ -2309,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#eg_Sylow_A4",
   "type": "Example",
-  "number": "1.162",
+  "number": "1.20.6",
   "title": "Sylow subgroups of <span class=\"process-math\">\\(A_4\\)<\/span>.",
   "body": " Sylow subgroups of   We have . Having computed the complete lattice of subgroups of (see ) we see that and thus .   "
 },
@@ -2318,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#eg_Sylow_S4",
   "type": "Example",
-  "number": "1.163",
+  "number": "1.20.7",
   "title": "Sylow subgroups of <span class=\"process-math\">\\(S_4\\)<\/span>.",
   "body": " Sylow subgroups of   We have . We have not computed the full lattice of subgroups of yet, so we are not quite in a position to say immediately what the various Sylow subgroups of are.  However, since a 3-Sylow subgroup is just a group of cardinality 3 in this case, it must be a cyclic subgroup generated by a 3-cycle. Thus, we have , just as in .  What about the -Sylow subgroups? Recall that you showed in a homework exercise that there are exactly three subgroups of that are isomorphic to : call them . (In fact, each can be described as .) Thus we have . It turns out that this inclusion is in fact an equality, as we will be able to show using Sylow 2.   "
 },
@@ -2327,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#d_pgroup",
   "type": "Definition",
-  "number": "1.164",
+  "number": "1.20.8",
   "title": "<span class=\"process-math\">\\(p\\)<\/span>-group.",
   "body": " -group   Let be a prime integer. A -group is a group of cardinality for some positive integer . Given a group , a -subgroup of is a subgroup that is a -group.   "
 },
@@ -2336,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#th_Sylow_1",
   "type": "Theorem",
-  "number": "1.165",
+  "number": "1.20.9",
   "title": "Sylow 1.",
   "body": " Sylow 1   Let be a group of finite cardinality , and let be a prime divisor of . We have . In other words, has a -Sylow subgroup.   "
 },
@@ -2345,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#th_Sylow_2",
   "type": "Theorem",
-  "number": "1.166",
+  "number": "1.20.10",
   "title": "Sylow 2.",
   "body": " Sylow 2   Let be a group of finite cardinality and let be a prime divisor of . Given any -subgroup and -Sylow subgroup , we have for some . As a result, any two -Sylow subgroups of are conjugate.   "
 },
@@ -2354,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#cor_pSylow_subgroups",
   "type": "Corollary",
-  "number": "1.167",
+  "number": "1.20.11",
   "title": "<span class=\"process-math\">\\(p\\)<\/span>-Sylow subgroups.",
   "body": " -Sylow subgroups   Let be a finite group, and let be a prime divisor of .   Any two -Sylow subgroups of are conjugate. Equivalently, forms a single orbit under conjugation.    Any two -Sylow subgroups are isomorphic.     if and only if contains a normal -Sylow subgroup.      "
 },
@@ -2363,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#th_Sylow_3",
   "type": "Theorem",
-  "number": "1.168",
+  "number": "1.20.12",
   "title": "Sylow 3.",
   "body": " Sylow 3   Let be a group of finite cardinality , let be a prime divisor of , and let , so that , where . We have .   "
 },
@@ -2381,7 +2381,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#eg_pk-set_action",
   "type": "Example",
-  "number": "1.169",
+  "number": "1.20.13",
   "title": "Action of <span class=\"process-math\">\\(D_3\\)<\/span> on <span class=\"process-math\">\\(2\\)<\/span>-subsets.",
   "body": " Action of on -subsets   Let , and let be the set of all -subsets of . The action of on gives rise to the following orbits: . Note that the three -Sylow subgroups of are contained in the three distinct orbits of size , and that the one orbit whose cardinality is greater than includes no -Sylow subgroups.   "
 },
@@ -2390,7 +2390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#prop_G_acts_psets",
   "type": "Proposition",
-  "number": "1.170",
+  "number": "1.20.14",
   "title": "Action of <span class=\"process-math\">\\(G\\)<\/span> on <span class=\"process-math\">\\(p^k\\)<\/span>-subsets.",
   "body": " Action of on -subsets   Let be a finite group of cardinality , let be a prime divisor of , and let , so that , where . We consider the action of by left multiplication on , the set of all -subsets of .   There are elements such that decomposes into disjoint orbits , and for all .     for all . Furthermore, if and only if .     if and only if is a -Sylow subgroup of . In this case .     .          It suffices to prove that any orbit contains a subset that contains . This is easy, if , then .    With as above, we have . This is because if , then since and , we must have . As a result, we have . It follows that . For the second statement notes that since is a divisor of , it must be of the form or for some with . From this it follows that if and only if .    Since and , it follows that for some .We have if and only if if and only if , since and . In this case is a -Sylow subgroup of , and by definition of the group action, the orbit is literally the coset space .    We claim that the -Sylow subgroups of are in 1-1 correspondence with the orbits of of cardinality . Indeed, since each such orbit is of the form for some , and since is the only subgroup of the coset space , we see that each such orbit contains exactly one -Sylow subgroup. Furthermore, for any -Sylow subgroup its orbit must have cardinality .  Let be the distinct orbits of of cardinality . We have , where for all . The last line follows since there are exactly orbits of cardinality , and since all other orbits have cardinality for some . As a result, we have . Now for a wonderful trick. Since the equivalence above holds for any group of cardinality , in particular it holds for a cyclic group. But in this special case we have . It follows that . Lastly, since , it is invertible modulo , allowing us to conclude that , as desired.      "
 },
@@ -2399,7 +2399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#cor_Sylow_subgroup_exists",
   "type": "Corollary",
-  "number": "1.171",
+  "number": "1.20.15",
   "title": "Sylow subgroups exist.",
   "body": " Sylow subgroups exist   Let be a finite group of cardinality , and let be a prime divisor of . We have .    Since and , it follows that . Equivalently, .   "
 },
@@ -2408,7 +2408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_A.html#cor_n_choose_pk",
   "type": "Corollary",
-  "number": "1.172",
+  "number": "1.20.16",
   "title": "",
   "body": "  Let be a positive integer, and let for the prime integer . We have .   "
 },
@@ -2426,7 +2426,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_B.html#prop_pgroup_action",
   "type": "Proposition",
-  "number": "1.173",
+  "number": "1.21.1",
   "title": "Fix point of <span class=\"process-math\">\\(p\\)<\/span>-group action.",
   "body": " Fix point of -group action   Let be a -group. If acts on a finite set satisfying , then there is an element with : , contains an element that is fixed by all elements of .    Decompose into its distict orbits . Since , we see that either is divisible by , or , in which case . But we cannot have for all , since then we'd have , contradicting the fact that . Thus we have for some , as desired.   "
 },
@@ -2435,7 +2435,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_B.html#ss_second_action-4",
   "type": "Proof",
-  "number": "1",
+  "number": "1.21.1.1",
   "title": "Proof of Sylow 2.",
   "body": " Proof of Sylow 2  Let be a prime divisor of , let , let be a -subgroup of , and consider the action of on . Since , where , it follows that one of the cosets of is fixed under left multiplication by : , for all . But by it follows that , as desired.  "
 },
@@ -2453,7 +2453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_Cauchys",
   "type": "Theorem",
-  "number": "1.174",
+  "number": "1.22.1",
   "title": "Cauchy’s theorem.",
   "body": " Cauchy's theorem   Let be a finite group, and let be a prime divisor of . There is an element of of order .    Let and take any nontrivial element . Since is cyclic of cardinality for some , there is an element of order .   "
 },
@@ -2462,7 +2462,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_card_pq",
   "type": "Theorem",
-  "number": "1.175",
+  "number": "1.22.2",
   "title": "Groups of cardinality <span class=\"process-math\">\\(pq\\)<\/span>.",
   "body": " Groups of cardinality   Let be a group of cardinality where and are distinct primes and .    has a normal subgroup of cardinality .    If , then is cyclic.          Since , we have . Since and since (since ), we conclude that and thus that has a normal -Sylow subgroup.    The argument here is very similar to the one above with the roles of and reversed.      "
 },
@@ -2471,7 +2471,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_card_12",
   "type": "Theorem",
-  "number": "1.176",
+  "number": "1.22.3",
   "title": "Groups of cardinality <span class=\"process-math\">\\(12\\)<\/span>.",
   "body": " Groups of cardinality   If is a group of cardinality , then either has a normal -Sylow subgroup or .    We show that if does not have a normal -Sylow subgroup, then . Assume does not have a normal -Sylow subgroup: or equivalently, . Since and , it follows that . Let . By Sylow 2   "
 },
@@ -2480,7 +2480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_card_psquaredq",
   "type": "Theorem",
-  "number": "1.177",
+  "number": "1.22.4",
   "title": "Groups of cardinality <span class=\"process-math\">\\(p^2q\\)<\/span>.",
   "body": " Groups of cardinality   Let be a finite group of cardinality , where and are distinct primes.   If , then has a -Sylow subgroup.    If , then either and , or has a normal -Sylow subgroup.   In particular, contains a normal Sylow subgroup.    First observe that if , then since and , we must have , and thus has a normal -Sylow subgroup.  Now assume and . Since , it follows that , and furthermore that . We have the following options for the number of Sylow subgroups: . We will show that if , then .   "
 },
@@ -2489,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#eg_card_20_group",
   "type": "Example",
-  "number": "1.178",
+  "number": "1.22.5",
   "title": "Groups of cardinality 20.",
   "body": " Groups of cardinality 20   Let be a group of cardinality .   Show that has a normal -Sylow subgroup.    Show that is a abelian if and only has a normal -Sylow subgroup, and that in this case isomorphic either to or .    A -Sylow subgroup of is isomorphic either to or . Give examples of nonabelian groups for each case.          The previous theorem guarantees that and hence that has a normal -Sylow subgroup. You can also see this easily using the Sylow theorems since implies and implies .    The reverse implication is easy: has a -Sylow subgroup by Sylow 1, and this subgroup is normal since is abelian!  Now assume has a normal -Sylow subgroup , . Since has a normal -Sylow subgroup , , we have and . It follows from a homework exercise that . Since and is isomorphic either to or (the only isomorphism types of groups of cardinality ), we have . In particular, is abelian!    The group is a nonabelian group whose -Sylow subgroups are all isomorphic to . Why? Because has a cardinality-4 subgroup (Sylow 1), and does not contain any element of order . More explicitly, you can show that the subgroups are the five -Sylow subgroups of .  The group is a nonabelian group of cardinality whose -Sylow subgroups are each isomorphic to . (See definition below.) This is easiest to see by using the isomorphism . Indeed, the matrix is easily seen to have order , and thus .      "
 },
@@ -2507,7 +2507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_card_60_simple",
   "type": "Theorem",
-  "number": "1.179",
+  "number": "1.22.6",
   "title": "Simplicity of groups of cardinality 60.",
   "body": " Simplicity of groups of cardinality 60   Let be a group of cardinality . If , then is simple.       "
 },
@@ -2516,7 +2516,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#th_A5_isomorphism",
   "type": "Theorem",
-  "number": "1.180",
+  "number": "1.22.7",
   "title": "Unique simple group of cardinality 60.",
   "body": " Unique simple group of cardinality 60   Let be a group of cardinality . If is simple, then .       "
 },
@@ -2525,7 +2525,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Sylow_apps.html#cor_isos_symmetries",
   "type": "Corollary",
-  "number": "1.181",
+  "number": "1.22.8",
   "title": "Group of rotational symmetries of the dodecahedron.",
   "body": " Group of rotational symmetries of the dodecahedron   Let be a regular dodecahedron in , and let be its group of rotational symmetries. We have .    The regular dodecahedron has pentagonal faces, edges, and vertices. Consider the action of on the set of faces of . It is easy to see that this action is transitive, and that the stabilizer of any given face consists of the rotations of degree about the axis passing through the centers of that face and its opposite face. It follows from the orbit-stabilizer theorem that . Furthermore, since contains such rotations of order for each of the 6 pairs of opposite faces, we see that it has at least elements of order . It follows that . We conclude from that is simple, and from that .   "
 },
@@ -2543,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#th_direct_prod",
   "type": "Theorem",
-  "number": "1.182",
+  "number": "1.23.1",
   "title": "Characterization of direct products.",
   "body": " Characterization of direct products   A group is isomorphic to a direct product if and only if the conditions below are satisfied.   For all there is a normal subgroup and an isomorphism .    The normal subgroups satisfy .       The forward implication is relatively straightforward. Given , where , define . It is easy to see that the collection satisfy conditions (i) and (ii).  For the reverse implication, given normal subgroups satisfying conditions (i) and (ii), define . We claim is an isomorphism. Once we know is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from ; and injectivity follows from , which implies . That is a homomorphism follow from the fact that if elements from different subgroups commute with one another. We leave the details to the reader.   "
 },
@@ -2552,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#d_internal_direct_product",
   "type": "Definition",
-  "number": "1.183",
+  "number": "1.23.2",
   "title": "Interal direct product.",
   "body": " Interal direct product   Given a group and normal subgroups satisfying (i) and (ii) of , we say that is the internal direct product of the subgroups .   "
 },
@@ -2561,7 +2561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#cor_prod_Sylow",
   "type": "Corollary",
-  "number": "1.184",
+  "number": "1.23.3",
   "title": "Internal direct products of Sylow subgroups.",
   "body": " Internal direct products of Sylow subgroups   Let be a finite group of cardinality , and let be the distinct prime divisors of . The following conditions are equivalent.    is an internal direct product of its Sylow subgroups.     for all .      "
 },
@@ -2570,7 +2570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#cor_sylow_abelian",
   "type": "Corollary",
-  "number": "1.185",
+  "number": "1.23.4",
   "title": "Sylow theorems for abelian groups.",
   "body": " Sylow theorems for abelian groups   Let be a finite abelian group of cardinality , and let be the prime divisors of .   For each there is a unique -Sylow subgroup of , , and .     is the internal direct product of the . In particular, we have .      "
 },
@@ -2579,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#d_torsion_subgroups",
   "type": "Definition",
-  "number": "1.186",
+  "number": "1.23.5",
   "title": "Torsion subgroups.",
   "body": " Torsion subgroups   Let be an abelian group. For all prime numbers , the -torsion subgroup of , denoted is defined as the set of all elements of whose order is a power of : , . The torsion subgroup of is the set of all elements of of finite order.   "
 },
@@ -2588,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_products_direct_semi.html#th_structure_finite_abelian",
   "type": "Theorem",
-  "number": "1.187",
+  "number": "1.23.6",
   "title": "Structure of finite abelian groups: elementary divisors.",
   "body": " Structure of finite abelian groups: elementary divisors   Let be a finite abelian group of cardinality , let be the distinct prime divisors of . Assume factors as .    , where is an abelian group of cardinality .    For all there are is a unique sequence of integers satisfying .       In Math 331-2 we will prove a more general result, called the structure theorem for finitely generated modules over PIDs that implies this theorem.   "
 },
@@ -2615,7 +2615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#th_internal_semidirect_prod",
   "type": "Theorem",
-  "number": "1.188",
+  "number": "1.24.1",
   "title": "Internal semidirect products.",
   "body": " Internal semidirect products   A group is isomorphic to a semidirect product if and only if the following conditions are satisfied.   There is a normal subgroup and subgroup , along with isomorphisms and .     and satisfy .       The reverse implication pretty much follows our discussion above motivating the semidirect product definition. Namely, given conditions (i) and (ii), it is easy to show that the map is an isomorphism, where is the homomorphism that sends to its corresponding conjugation automorphism . That the map is well-defined and bijective follows from the fact that every element in can be written in a unique way in the form , where and . That is a homomorphism follows from the same reasoning we gave above and diagrammed in .  Lastly, the isomorphisms give rise to an isomorphism , where is the homomorphism that sends an element to the automorphism defined as . This is illustrated in the diagram below, which articulates how the automorphism corresponds to conjugation by as an automorphism of .   Diagram illustrating automorphisms of G2    It is clear that is a bijection, since the maps are bijections. We leave the fact that is a homomorphism ( , respects the semidirect product operations of both groups) to the reader. Composing and gives the desired isomorphism from to .  For the forward implication, first observe that if is isomorphic to , then it has subgroups satisfying conditions (i) and (ii) if and only if has such subgroups. Thus, we assume without loss of generality that , and endeavor to find subgroups of satisfying conditions (i) and (ii). We leave it to the reader to verify that do the trick.   "
 },
@@ -2624,7 +2624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#d_hom_set",
   "type": "Definition",
-  "number": "1.189",
+  "number": "1.24.2",
   "title": "Homomorphism set.",
   "body": " Homomorphism set   Let and be groups. The set of all group homomorphisms from to is denoted .   "
 },
@@ -2633,7 +2633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#prop_homs_cyclic",
   "type": "Proposition",
-  "number": "1.190",
+  "number": "1.24.3",
   "title": "Homomorphisms from cyclic groups.",
   "body": " Homomorphisms from cyclic groups   Let be a cyclic group, and let be a group.   If , then the map is a bijection of sets. Equivalently, for all there is a unique such that for all     If , then the map is a bijection of sets. Equivalently, for all there is a unique satisfying such that for all .          Since any satisfies , it is clear that a homomophism is uniquely determined by . This means that the map is an injection. To see that it is a surjection, we claim that for any , the map defined as is a group homomorphism satisfying . As usual, the only real work that needs to be done here is to show that the map map is well defined; and this follows since if and only if .    The proof is similar. Again, it is clear that a homomorphism is uniquely determined by ; furthermore, since , we must have . This proves that the map is an injection from to . Once again that this map is surjective follows from the fact that given any the map defined as is a homomorphism. In this case, the fact that this map is well defined follows from the fact that in we have . We leave the details to the reader.      "
 },
@@ -2642,7 +2642,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#th_automorphism_groups",
   "type": "Proposition",
-  "number": "1.191",
+  "number": "1.24.4",
   "title": "Automorphism groups.",
   "body": " Automorphism groups      Given a cyclic group of cardinality , the map is an isomorphism. As a result, we have . Additionally, if is prime, then is a cyclic group of cardinality .     for any positive integer .  In particular, .     for all .     for any .       The proof of (1) follows from . We will prove (2) in Math 331-2. The proof of (3) can be found in the text. We leave the proof of (4) to the reader.   "
 },
@@ -2651,7 +2651,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#prop_semi_choice",
   "type": "Proposition",
-  "number": "1.192",
+  "number": "1.24.5",
   "title": "Isomorphic semidirect products.",
   "body": " Isomorphic semidirect products   Let and be groups, and let .   If , then , where .    If , then where .          We leave as an exercise for the reader that the map is an isomorphism.    This one is slightly trickier. We leave it as an exercise for the reader to check that an isomorphism is given by the map , where is the automorphism , and is the automorphism .      "
 },
@@ -2660,7 +2660,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#eg_groups_card_21",
   "type": "Example",
-  "number": "1.193",
+  "number": "1.24.6",
   "title": "Groups of cardinality 21.",
   "body": " Groups of cardinality 21   Prove that up to isomorphism there is exactly one abelian group of cardinality and one nonabelian group of cardinality .    Let be a group of cardinality . The usual Sylow theory argument shows that has a unique normal -Sylow subgroup isomorphic to . Let be any -Sylow subgroup. The usual counting argument shows that and . From , we conclude that for some homomorphism .  Let and . From we know that via the correspondence . Note also that is cyclic. Lastly, from , we know that homomorphisms correspond to elements of of order dividing . It follows that there are exactly three such homomorphisms, summarized as follows: . The first homomorphism is the trivial homomorphism, and as such the corresponding semidirect product is isomorphic to the direct product: , . Next, it is not difficult to see that , where is the automorphism defined as . It follows from that . Thus there are at most two distinct groups of cardinality , up to isomorphism: and . We show that the second group is nonabelian, from which the desired result follows. In general if the homomorphism defining the semidirect product is nontrivial, then there will be an element of that does not commute with an element of . In this case, letting and , we have .   "
 },
@@ -2669,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#eg_groups_card_12",
   "type": "Example",
-  "number": "1.194",
+  "number": "1.24.7",
   "title": "Groups of cardinality <span class=\"process-math\">\\(12\\)<\/span>.",
   "body": " Groups of cardinality   Give a classification of all groups of cardinality , up to isomorphism.    Let be a group of cardinality . Recall that either or . We consider the former case.  Let be the unique normal -Sylow subgroup of , and let be a -Sylow subgroup. The usual arguments show that and and thus for some homomorphism .   Case:  . We first consider the case where is cyclic. Reasoning in a manner similar to , the possible homomorphisms from to are . As before, we have . In the second case we have the nonabelian group , where is the nontrivial homomorphism from to . Alternatively, we can describe the group in this case with a presentation. Since encodes how the element conjugates the element in our group , we see that has presentation .   Case:  . Now consider the case where our -Sylow subgroups are isomorphic to the Klein 4-group. We use the presentation , to determine the possible homomorphisms in this case. Such homomorphisms are determined by where and get sent. Since , any choice of image for and gives rise to a unique homomorphism. Thus there are four homomorphisms in total. Let be the trivial homomorphism. In this case we have . We claim the remaining three homomorphisms, each of which is nontrivial, give rise to the same semidirect product, up to isomorphism. This is because for any two of these, say and , we have , where is an automorphism. For example, if and are the homomorphisms , then we have , where is the automorphism of defined as follows: . We conclude that there are exactly two isomorphism types in this case. (Again, if is nontrivial, the resulting semidirect product is nonabelian.) You can show that the second group is isomorphic to .  In all, we see that there are exactly 5 isomorphism types for groups of cardinality 12. We enumerate them below grouped according to the cases of our analysis.   Case:       Case: ,   or , where is nontrivial. In the latter case, has presentation .    Case: ,   or , where is a nontrivial homomorphism.      "
 },
@@ -2678,7 +2678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_semidirect_products.html#eg_groups_card_28",
   "type": "Example",
-  "number": "1.195",
+  "number": "1.24.8",
   "title": "Groups of cardinality <span class=\"process-math\">\\(28\\)<\/span>.",
   "body": " Groups of cardinality   Give a classification of all groups of cardinality , up to isomorphism.    We have . The usual Sylow arguments show that . Thus has a unique normal -Sylow subgroup . Let . We have (counting argument) and thus (counting argument). It follows from that for some homomorphism . This semidirect products depends both on the isomorphism type of (cyclic or Klein 4-group) and the choice of homomorphism . We proceed by cases based on the isomorphism type of .   Case:  . We have . implies that the elements are in bijective correspondence with elements of of order dividing . Since , we see that there are two of these as summarized below: . The first homomorphism is trivial, leading to the direct product . Since the second homomorphism is nontrivial, the corresponding semidirect product is nonabelian, and in particular is distinct from . Thus there are two isomorphism types for this case.   Case:  . As in , the elements of are in bijective correspondence with pairs of elements of satisfying . Since , we see that that there are exactly two elements of of order dividing . These automorphisms are summarized as follows: . Since is abelian, any pair from among these elements satisfies the necessary condition. This gives rise to a total of 4 distinct homomorphisms , described below: . The first homomorphism is trivial, giving rise to the direct product . The remaining three homomorphisms all differ by an automorphism of , just as in . Thus they each give rise to the same semidirect product, up to isomorphism. Calling the first of these three , we have the nonabelian group .  In all, we see that there are four distinct groups of cardinality , up to isomorphism, as represented by the groups described above. Our analysis shows that these groups are pairwise nonisomorphic: and are abelian, while and are not; and and have a cyclic -Sylow subgroup, while and have noncyclic -Sylow subgroups.  Lastly, to make the nonabelian groups somewhat more explicit, we observe that has presentation . Such a group is called a dicyclic group of degree 7 . Additionally, one can show that . In fact, this must be the case, since is nonabelian and its -Sylow subgroups are noncyclic.   "
 },
@@ -2696,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#d_ring",
   "type": "Definition",
-  "number": "2.1",
+  "number": "2.1.1",
   "title": "Ring.",
   "body": " Ring   A ring is a triple , where is a nonempty set, and and are binary operations , called ring addition and ring multiplication , respectively, that satisfy the following axioms.    is an abelian group.    Ring multiplication is associative: , for all .    Ring multiplication distributes over ring addition: , we have for all .    There is a multiplicative identity element satisfying for all .   A ring is commutative if its ring multiplication is commutative and noncommutative otherwise.   "
 },
@@ -2705,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#s_rings-4",
   "type": "Warning",
-  "number": "2.2",
+  "number": "2.1.2",
   "title": "",
   "body": " The Dummit and Foote text does not include (iv) as one of the axioms a ring needs to satisfy. Instead it distinguishes between rings with and without identity . We will not follow suit and will conscientiously point out resulting discrepancies between our exposition and the book’s.  "
 },
@@ -2714,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#s_rings-5",
   "type": "Notation",
-  "number": "2.3",
+  "number": "2.1.3",
   "title": "",
   "body": " Addition in a ring will always be denoted by , and this notation will never be suppressed. In contrast, we are free to denote the ring multiplication operation in any manner we please, but will more often than not omit the notation in ring expressions.  Additionally we will use the following integer multiple notation: . Additionally, in a ring we will denote for all .  "
 },
@@ -2732,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#eg_trivial_ring",
   "type": "Example",
-  "number": "2.4",
+  "number": "2.1.4",
   "title": "Trivial ring.",
   "body": " Trivial ring   Show that a singleton can be given a unique ring structure. We call such rings trivial .  Show that a ring is trivial if and only if the equality holds in .    Left to the reader.   "
 },
@@ -2750,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#s_rings-11",
   "type": "Remark",
-  "number": "2.5",
+  "number": "2.1.5",
   "title": "Matrix rings.",
   "body": " Matrix rings  We can remove the restriction that be commutative in . In other words, the matrix operations satisfy the ring axioms whether or not is commutative. We will restrict our attention to the case where is commutative, however, as here the algebraic properties of are somewhat simpler. In particular, when is commutative, we can define a determinant function in the usual fashion, and enjoys essentially all of the properties you are familiar with in the case where . See below.  "
 },
@@ -2759,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#prop_ring_props",
   "type": "Proposition",
-  "number": "2.6",
+  "number": "2.1.6",
   "title": "Ring properties.",
   "body": " Ring properties   Let be a ring.   The multiplicative identity element of is unique: , there is exactly one element of satisfying the identity .     for all .     for all .     for all .       We prove (1) and (2), leaving (3) and (4) to the reader.   If an element satisfies for all , then in particular, it satisfies . But by definition of the the multiplicative identity, we have . Thus , as desired.    We have . Using the additive inverse , we see that , as desired. A similar argument shows $a0=0$.      "
 },
@@ -2786,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#d_subring",
   "type": "Definition",
-  "number": "2.7",
+  "number": "2.1.7",
   "title": "Subring.",
   "body": " Subring   A subset of the ring is a subring if it satisfies the following conditions.    is a subgroup of .     .     is closed under multiplication: , for all , we have .   It follows from the ring axioms that a subring of is itself a ring with respect to ring operations of , restricted to .   "
 },
@@ -2804,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#d_ring_center",
   "type": "Definition",
-  "number": "2.8",
+  "number": "2.1.8",
   "title": "Center of ring.",
   "body": " Center of ring   The center of a ring , denoted , is the set of elements of that commute with all elements of : , .   "
 },
@@ -2813,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_rings.html#eg_center",
   "type": "Example",
-  "number": "2.9",
+  "number": "2.1.9",
   "title": "Center of a ring.",
   "body": " Center of a ring   Let be a ring. Show that is a subring of .    First we show that is a subring of . From we know that . Next, assume . Given any , we have , and thus .  Next, we have by . Finally, we show that is closed under multiplication. Assume . Given , we have , showing , as desired.   "
 },
@@ -2831,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#d_units",
   "type": "Definition",
-  "number": "2.10",
+  "number": "2.2.1",
   "title": "Units and multiplicative inverses.",
   "body": " Units and multiplicative inverses   Let be an element of the nontrivial ring . A multiplicative inverse of is an element satisfying . We denote in this case. The element is a unit (or is invertible ) if it has a multiplicative inverse. We denote by the set of all units of : , . It follows directly from the ring axioms that is a group with respect to the ring multiplication operation.   "
 },
@@ -2840,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#th_matrix_rings",
   "type": "Theorem",
-  "number": "2.11",
+  "number": "2.2.2",
   "title": "Matrix ring goodies.",
   "body": " Matrix ring goodies   Let be a nontrivial commutative ring and let be a positive integer.   We can define a determinant function that can be computed by the usual expansion formula along any row or column of a matrix.     for all .    For all there is a matrix , called the adjoint matrix of , satisfying .    For all , is invertible if and only if .       Postponed.   "
 },
@@ -2858,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#eg_units_product",
   "type": "Example",
-  "number": "2.12",
+  "number": "2.2.3",
   "title": "Units in product rings.",
   "body": " Units in product rings      Let be a product ring . Prove: .     for some nonempty set . Prove: .       Left to the reader.   "
 },
@@ -2867,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#d_division_rings_fields",
   "type": "Definition",
-  "number": "2.13",
+  "number": "2.2.4",
   "title": "Division rings and fields.",
   "body": " Division rings and fields   A nontrivial ring is a division ring if every nonzero element of is a unit: , . A field is a commutative division ring.   "
 },
@@ -2876,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#eg_division_rings",
   "type": "Example",
-  "number": "2.14",
+  "number": "2.2.5",
   "title": "Division rings.",
   "body": " Division rings   Determine whether the given ring is a division ring, and whether it is a field.                        for a positive integer. The answer depends on .     , where does not have a square root in .     , for a commutative ring and .       We mainly leave this to the reader, restricting our comments to the rings , , and .  We showed previously that , from whence it easily follows that is a field if and only if is a prime integer.  We claim is a field. Assume is a nonzero element of . This is true if and only if or . (If and or is nonzero, then we could write or ). Contradiction.) Let . We have , and this is nonzero, since otherwise we would have , contradicting the fact that is not a square in . Thus has inverse .  Lastly, from , we know that is invertible if and only if . Assuming , it is easy to construct a nonzero matrix with . Thus is not a division ring.   "
 },
@@ -2885,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#s_subrings_units_divisors-10",
   "type": "Notation",
-  "number": "2.15",
+  "number": "2.2.6",
   "title": "",
   "body": " Having shown that is a field for a prime integer, we will write from now on.  "
 },
@@ -2894,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#d_zero_divisors",
   "type": "Definition",
-  "number": "2.16",
+  "number": "2.2.7",
   "title": "Zero divisors and integral domains.",
   "body": " Zero divisors and integral domains   Let be a ring. A nonzero element is a zero divisor if there exists a nonzero element satisfying or .  A ring is an integral domain if it is (i) commutative, and (ii) contains no zero divisors.   "
 },
@@ -2903,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#eg_zero_divisors",
   "type": "Example",
-  "number": "2.17",
+  "number": "2.2.8",
   "title": "Zero divisors.",
   "body": " Zero divisors   For each of the rings in , determine all zero divisors and determine whether the ring is an integral domain.    We leave most of this to the reader.  One interesting observation is that has zero divisors if and only if is not prime. It follows that is a field if and only if is an integral domain! This interesting fact is generalized in below.  We are tempted to say that is a zero divisor if and only if is either zero or a zero divisor of . Indeed, this is the case! However, even with at our disposal, one of the implications involved is somewhat involved. The easy direction is the forward one: if is a a zero divisor, then there is a nonzero matrix such that ; multiplying on the left by the adjoint matrix , we see that . Since , it follows that is either zero or a zero divisor in .  Although you might guess that this same argument could be employed to prove the reverse implication, we are foiled by the fact that can be the zero matrix even when is nonzero! (This is true even in the familiar setting .) The reader is invited to check out this StackExchange post, which provides an answer as well as some useful references.   "
 },
@@ -2912,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#prop_zero_divisors_cancellation",
   "type": "Proposition",
-  "number": "2.18",
+  "number": "2.2.9",
   "title": "Cancellation of non-zero divisors.",
   "body": " Cancellation of non-zero divisors   Assume is a nonzero element of the ring and is not a zero divisor. For all if or , then . Using logical shorthand: .   "
 },
@@ -2921,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#th_finite_rings_fields",
   "type": "Theorem",
-  "number": "2.19",
+  "number": "2.2.10",
   "title": "Finite integral domains.",
   "body": " Finite integral domains   Let be a finite commutative ring. The following statements are equivalent.    is an integral domain.     is a field.          "
 },
@@ -2930,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_subrings_units_divisors.html#d_nilpotents_idempotents",
   "type": "Definition",
-  "number": "2.20",
+  "number": "2.2.11",
   "title": "Nilpotents and idempotents.",
   "body": " Nilpotents and idempotents   An element of the ring is nilpotent if for some positive integer ; it is idempotent if .   "
 },
@@ -2948,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#fiat_formal_sums",
   "type": "Fiat",
-  "number": "2.21",
+  "number": "2.3.1",
   "title": "Formal sums are tuples.",
   "body": " Formal sums are tuples   Let be a ring, and let be a nonempty set. A formal sum of the form is just alternative notation for the tuple . As a very important consequence of this identification, formal sums inherit a coefficient-wise notion of equality from tuples. That is, we have . As a form of shortening, when expanding out a formal sum we will often drop terms where . Similarly, we sometimes drop the in an expression like , writing just instead.   "
 },
@@ -2966,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#rem_group_rings",
   "type": "Remark",
-  "number": "2.22",
+  "number": "2.3.2",
   "title": "Group rings.",
   "body": " Group rings     The subset is easily seen to be a subring of . Indeed, using the definition of the group ring operations, we see that . Thus we can think of the subring as a copy of living as a subset of . (Later we will be able to say that this subring is isomorphic to .) By slight abuse of notation, we will identify with this subring of , and sometimes drop the from the notation .    From the group ring operations definition, it follows that . Identifying with , we see that .    We can also think of the group as sitting inside , using the identification . We call such elements of  group elements . With this identification in place, we that the ring multiplication on extends the group operation of . That is, given , identifying these as the ring elements and and taking their product, we see that . As a result, it is easy to see that a group element is invertible with inverse the group element . It follows that we can think of as a subgroup of the group of units of (with respect to our identification): , .    Combining the previous observations, we can now give a decent motivation for the multiplication operation on . Namely, it is the unique binary operation on satisfying the following properties:   it distributes over the given addition operation on ;    it extends the group operation in the sense that ;    we have for all with respect to this multiplication.   In this sense our multiplication operation is the unique way of extending the group operation of to a ring operation on in such a way that our copy of lies in the center of .     "
 },
@@ -2975,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#eg_group_ring_D3",
   "type": "Example",
-  "number": "2.23",
+  "number": "2.3.3",
   "title": "Group ring of <span class=\"process-math\">\\(D_3\\)<\/span>.",
   "body": " Group ring of   Let , and consider the group ring .   Let and . Compute and .    Show that is a unit in        When computing an explicit product in a group ring, instead of using the formal definition in , it is usually easiest to expand out using distributivity, use the fact that the ring coefficients commute with everything and that the ring product of group elements is given by the group product, and the collect like terms.   We have . Observe that : no great surprise in light of .    First observe that is a unit in with inverse . (See .) Since , it suffices to show that is a unit of . (If and are units, then so is .) Playing around with some expressions, we find that . Thus is a unit. We conclude that is a unit, with inverse .      "
 },
@@ -2984,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#rem_group_ring_field",
   "type": "Remark",
-  "number": "2.24",
+  "number": "2.3.4",
   "title": "Group rings over a field.",
   "body": " Group rings over a field  Let be a field, and let be a group of cardinality . In this case the group ring has the additional structure of a -vector space, where vector addition is just the ring addition, and scalar multiplication by an element is defined as ring multiplication by the element . In fact, identifying elements of as tuples via the correspondence , we see that as a vector space, is literally equal to the vector space of -tuples with coefficients in with its usual vector operations: . As you will see on your homework, this added vector space structure gives us additional tools for studying group rings over fields.  "
 },
@@ -2993,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#eg_group_rings",
   "type": "Example",
-  "number": "2.25",
+  "number": "2.3.5",
   "title": "Group ring properties.",
   "body": " Group ring properties   Let be a nontrivial commutative ring, and let be a finite group.   Prove that is commutative if and only if is abelian.    Consider the element . Compute , where is an element of .    Let be a nontrivial element. Show that is a zero divisor.    When is a group ring a division ring?       Let be the distinct elements of . To distinguish between the group operation and ring multiplication, we will use concatenation for the group operation and for the ring operation.   Assume that is commutative. For all , we have . Thus is abelian.  Now assume is abelian. Given , expanding out using distributivity and commutativity of ring coefficients, we have . Thus is commutative.    We have , where the penultimate line follows since as runs through all elements of , so too does .  Observe that if is nontrivial, the taking , the equality implies that is noninvertible: if it were, we could cancel it to conclude , a contradiction.    We have . Since and are both nonzero elements of , we conclude that is a zero divisor (as is ).    Both (2) and (3) imply that is a division ring if and only if is trivial and is a field.      "
 },
@@ -3011,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#ss_poly_powerseries-4",
   "type": "Remark",
-  "number": "2.26",
+  "number": "2.3.6",
   "title": "Power series equality.",
   "body": " Power series equality  When are two power series and equal? Identifying these formal sums as tuples , , following , we see that .  "
 },
@@ -3029,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#ss_poly_powerseries-7",
   "type": "Remark",
-  "number": "2.27",
+  "number": "2.3.7",
   "title": "Polynomial and power series rings.",
   "body": " Polynomial and power series rings  When working with a power series ring , we will identify the ring with power series of the form . Since this identification preserves the ring operations of , we end up with a chain of subring inclusions .  "
 },
@@ -3038,7 +3038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#prop_deg_poly",
   "type": "Proposition",
-  "number": "2.28",
+  "number": "2.3.8",
   "title": "Polynomial degree properties.",
   "body": " Polynomial degree properties   Let be a nontrivial commutative ring, and let and be nonzero polynomials in .    , with equality if is an integral domain.     .          Assume and , so that , where and . From the polynomial multiplication rule given in , we see that . It follows that . If is an integral domain, then and thus .    The proof is left to the reader.      "
 },
@@ -3047,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#eg_poly_deg",
   "type": "Example",
-  "number": "2.29",
+  "number": "2.3.9",
   "title": "Polynomial degree.",
   "body": " Polynomial degree   Find polynomials satisfying .    Let and . We have and .   "
 },
@@ -3056,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#cor_poly_int_domain",
   "type": "Corollary",
-  "number": "2.30",
+  "number": "2.3.10",
   "title": "Intregral polynomial rings.",
   "body": " Intregral polynomial rings   Let be a nontrivial commutative ring. The following statements are equivalent.    is an integral domain.     is an integral domain.     is an integral domain.       Since clearly a subring of an integral domain is an integral domain, we have (3) (2) (1). It remains only to show (1) (3).  Assume is an integral domain. Given nonzero elements , we can write , where . But then . Since is an integral domain, and since , we conclude that , as desired.   "
 },
@@ -3065,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_grouprings_polys.html#eg_poly_power",
   "type": "Example",
-  "number": "2.31",
+  "number": "2.3.11",
   "title": "Units of polynomial and power series rings.",
   "body": " Units of polynomial and power series rings   Let be a nontrivial commutative ring.   Show that is a unit if and only if .    Prove: if is an integral domain, then .       Left as an exercise.   "
 },
@@ -3092,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quaternions.html#d_quat_norm",
   "type": "Definition",
-  "number": "2.32",
+  "number": "2.4.1",
   "title": "Quaternion conjugation and norm.",
   "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring. Given , its quaternion conjugate , denoted is defined as . The quaternion norm is the function defined as . A straightforward computation shows that if , then .   "
 },
@@ -3101,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quaternions.html#th_quat_norm",
   "type": "Theorem",
-  "number": "2.33",
+  "number": "2.4.2",
   "title": "Quaternion conjugation and norm.",
   "body": " Quaternion conjugation and norm   Let be a nontrivial commutative ring.    for all and .     for all .     for all .    The following statements are equivalent.    .     .     .          This will be given as a homework exercise.   "
 },
@@ -3110,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quaternions.html#cor_",
   "type": "Corollary",
-  "number": "2.34",
+  "number": "2.4.3",
   "title": "<span class=\"process-math\">\\(\\HH\\)<\/span> is a division ring.",
   "body": " is a division ring   The Hamilton quaternions is a division ring.    For , we have . Thus , as desired.   "
 },
@@ -3119,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quaternions.html#s_quaternions-6",
   "type": "Remark",
-  "number": "2.35",
+  "number": "2.4.4",
   "title": "Division rings over <span class=\"process-math\">\\(\\R\\)<\/span>.",
   "body": " Division rings over  We have met our first noncommutative division ring in the form of . More than just a ring, is what we call an -algebra , which we can understand as a ring containing a copy of lying in its center. Any -algebra is in particular a vector space over : we define vector addition as the ring addition, and we define scalar multiplication as the ring multiplication , where and .  Let's call a division ring that is also an -algebra a division algebra over . Besides , note that and are also division algebras over . Are there any others? The answer is no, if we further stipulate that the division algebra have finite dimension over . This is a famous result due to Frobenius: if is a finite-dimensional division algebra over , then is isomorphic to , , or ! (Of course, isomorphism is yet to be definied, but you can imagine what this will mean for rings.)  "
 },
@@ -3128,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quaternions.html#s_quaternions-7",
   "type": "Remark",
-  "number": "2.36",
+  "number": "2.4.5",
   "title": "Finite division rings.",
   "body": " Finite division rings  While we are hunting for interesting examples of division rings, you might also wonder whether there are any interesting finite division rings. The answer here is similarly constrictive. A famous result due to Wedderburn states that every finite division ring is in fact a finite field! Thus there are no noncommutative finite division rings. Moreover, it is not very difficult to describe all finite fields, as you will see in Math 331-3.  "
 },
@@ -3146,7 +3146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_ring_homo",
   "type": "Definition",
-  "number": "2.37",
+  "number": "2.5.1",
   "title": "Ring homomorphism.",
   "body": " Ring homomorphism   Let and be rings. A ring homomorphism is a function satisfying the following properties.    ( , is a group homomorphism from to ).     for all .     .   Given a ring homomorphism , its kernel  is defined as . An isomorphism is a bijective ring homomorphism.  Given rings and , we will write for the set of all ring homomorphisms from to : , .   "
 },
@@ -3155,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#ss_rings-3",
   "type": "Warning",
-  "number": "2.38",
+  "number": "2.5.2",
   "title": "Ring homomorphism.",
   "body": " Ring homomorphism  The Dummit and Foote text does not include axiom (iii), since rings there are not assumed to be unital. Additionally, (iii) does not follow logically form (i) and (ii): , the zero map between any two rings satisfies (i) and (ii), but not (iii) necessarily.  "
 },
@@ -3164,7 +3164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_ring_homos",
   "type": "Proposition",
-  "number": "2.39",
+  "number": "2.5.3",
   "title": "Ring homomorphisms.",
   "body": " Ring homomorphisms      Subring inclusions are ring homomorphisms.    The composition of ring homomorphisms is a ring homomorphism.    Given a bijective ring homomorphism , its inverse is a ring homomorphism.    If is a ring homomorphism, then is a subring of .    A ring homomorphism is injective if and only if .       Left to the reader.   "
 },
@@ -3173,7 +3173,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#ss_rings-5",
   "type": "Remark",
-  "number": "2.40",
+  "number": "2.5.4",
   "title": "Group structure of rings.",
   "body": " Group structure of rings  The last statement of follows immediately from the fact that a ring homomorphism is in particular a group homomorphism with respect to the additive structures of and . This is one of many examples where we will exploit the group structure of rings to obtain useful results (or steps toward a result) in the context of rings.  "
 },
@@ -3182,7 +3182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_empty_ring_homo_set",
   "type": "Example",
-  "number": "2.41",
+  "number": "2.5.5",
   "title": "<span class=\"process-math\">\\(\\Hom(\\Z\/3\\Z, \\Z\/2\\Z)\\)<\/span>.",
   "body": "   Prove that     Assume by contradiction that is a ring homomorphism. Since in particular is a group homomorphism, is an element of of order dividing . (See .) But is the only such element. Thus : a contradiction, since in .   "
 },
@@ -3209,7 +3209,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_poly_homo",
   "type": "Example",
-  "number": "2.42",
+  "number": "2.5.6",
   "title": "<span class=\"process-math\">\\(\\Hom(\\Z[x],R)\\)<\/span>.",
   "body": "   Let be a commutative ring. Show that there is a bijection between and .    From we know there is a bijection between and . From , on the other hand, we know that , where for all . The result follows since is in bijective correspondence with . More explicitly, all homomorphisms are of the form , for some . Note that the integers appearing on the right must be interpreted as the ring elements .   "
 },
@@ -3227,7 +3227,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_augmentation_map",
   "type": "Example",
-  "number": "2.43",
+  "number": "2.5.7",
   "title": "Augmentation map.",
   "body": " Augmentation map   Let be a nontrivial commutative ring, and let be a finite group. Prove that the augmentation map is a surjective ring homomorphism.    It is easy to see that is group homomorphism, , and moreover that it is surjective (since for any ). It remains only to show that it is multiplicative. Given elements , of , we have , where . Thus , as desired.   "
 },
@@ -3236,7 +3236,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_ideal",
   "type": "Definition",
-  "number": "2.44",
+  "number": "2.5.8",
   "title": "Ideal.",
   "body": " Ideal   An ideal of a ring is a subset satisfying the following properties.    is a subgroup of .     is closed under left multiplication : , if , then for all .     is closed under right multiplication : , if , then for all .   A subset of is a left ideal if it satisfies (i) and (ii); it is a right ideal if it satisfies (i) and (iii).   "
 },
@@ -3245,7 +3245,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_trivial_ideals",
   "type": "Example",
-  "number": "2.45",
+  "number": "2.5.9",
   "title": "Trivial ideals.",
   "body": " Trivial ideals   Given a ring , the sets and are easily seen to be ideals of . We will call these trivial ideals . Additionally we will call an ideal  nonzero if , and proper if .       "
 },
@@ -3254,7 +3254,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_ideals",
   "type": "Proposition",
-  "number": "2.46",
+  "number": "2.5.10",
   "title": "Ideals.",
   "body": " Ideals   Let be a ring.   If is an indexed family of ideals of , then is an ideal.    If and are ideals of , then so is .    The set defined as the set of all finite sums of products , where and , is an ideal of .  For a positive integer , we define to be the -fold ideal product of with itself.    If is a ring homomorphism, then is an ideal of .       We leave all but (3) to the reader. For (3), it is clear that as defined is a subgroup of . Given any , and element , with and for all , we have , where , showing that , as desired.   "
 },
@@ -3263,7 +3263,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_gen_ideal",
   "type": "Definition",
-  "number": "2.47",
+  "number": "2.5.11",
   "title": "Generated ideals.",
   "body": " Generated ideals    the ideal generated by    Let be a subset of a ring . The ideal generated by , denoted , is the intersection of all ideals of containing : , . If , we wite for ; similarly, if , we write .  An ideal is finitely generated if we have for some elements ; it is principal if for some .   "
 },
@@ -3272,7 +3272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_generated_ideals",
   "type": "Proposition",
-  "number": "2.48",
+  "number": "2.5.12",
   "title": "Generated ideals.",
   "body": " Generated ideals   Let be a subset of the ring .    is the smallest ideal of containing in the following sense: if is an ideal of containing , then .     is the set of all finite sums of elements of the form , where and : , letting , we have .      "
 },
@@ -3281,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#cor_gen_ideal_kernel",
   "type": "Corollary",
-  "number": "2.49",
+  "number": "2.5.13",
   "title": "Generated ideals and kernels.",
   "body": " Generated ideals and kernels   Let be a ring homomorphism. For any set , we have if and only if for all .    Since is an ideal of , we have .   "
 },
@@ -3290,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_ideals_integers",
   "type": "Example",
-  "number": "2.50",
+  "number": "2.5.14",
   "title": "Ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Ideals of   Give an explicit description of the set of all ideals of .    Let be an ideal of . Since in particular is a subgroup of , we know that can be written uniquely as for some nonnegative integer . It is easy to see, using , that , the principal ideal generated by . We conclude that the correspondence gives a bijective correspondence between nonnegative integers of and ideals of . In particular, all ideals of are principal.   "
 },
@@ -3308,7 +3308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_characteristic_ring",
   "type": "Definition",
-  "number": "2.51",
+  "number": "2.5.15",
   "title": "Characteristic of a ring.",
   "body": " Characteristic of a ring    characteristic of the ring    Let be a nonzero ring. The characteristic of , denoted , is defined as the nonnegative integer such that , where is the unique ring homomorphism from to . Equivalently, is either the smallest positive integeger satisfying , or 0 if no such integer exists.   "
 },
@@ -3317,7 +3317,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_first_years_dream",
   "type": "Proposition",
-  "number": "2.52",
+  "number": "2.5.16",
   "title": "Characteristic <span class=\"process-math\">\\(p\\text{:}\\)<\/span> first-year’s dream.",
   "body": " Characteristic : first-year's dream   Let be a commutative ring with for some prime integer . For all positive integers and elements , we have .    Left as an exercise.   "
 },
@@ -3326,7 +3326,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_ideals_division_rings",
   "type": "Example",
-  "number": "2.53",
+  "number": "2.5.17",
   "title": "Ideals of division rings.",
   "body": " Ideals of division rings   Let be a division ring. Prove that the only ideals of are and itself.    Let be an ideal of that is not the zero ideal, and let be any nonzero element. Since is a division ring, there is an element satisfying . It follows that for any , we have , and thus that .   "
 },
@@ -3335,7 +3335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#eg_ideals_matrix_rings",
   "type": "Example",
-  "number": "2.54",
+  "number": "2.5.18",
   "title": "Ideals of <span class=\"process-math\">\\(M_n(R)\\)<\/span>.",
   "body": " Ideals of   Let be commutative ring. Prove that all ideals of are of the form for some ideal , where we define . In particular, given a field , the only ideals of are and itself.    Left as homework exercise.   "
 },
@@ -3344,7 +3344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_simple",
   "type": "Definition",
-  "number": "2.55",
+  "number": "2.5.19",
   "title": "Simple ring.",
   "body": " Simple ring   A nonzero ring is simple if its only ideals are and .   "
 },
@@ -3353,7 +3353,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#prop_simple_ring_homo",
   "type": "Proposition",
-  "number": "2.56",
+  "number": "2.5.20",
   "title": "Homomorphisms from simple rings.",
   "body": " Homomorphisms from simple rings   Let be a simple ring. If is a ring homomorphism with a nonzero ring, then is injective.    Since is nonzero, the ideal is not equal to . It follows that , and hence that is injective (by group homomorphism properties).   "
 },
@@ -3362,7 +3362,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_ring_homo.html#d_algebra",
   "type": "Definition",
-  "number": "2.57",
+  "number": "2.5.21",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-algebra.",
   "body": " -algebra   Let be a commutative ring. An -algebra (or algebra over ) is a nonzero ring together with a ring homomorphism such that is contained in the center of ( , elements of the subring commute with all elements of ). We write to denote that is an -algebra.   "
 },
@@ -3389,7 +3389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_modular_rings",
   "type": "Example",
-  "number": "2.58",
+  "number": "2.6.1",
   "title": "Modular rings.",
   "body": " Modular rings   Let be a positive integer. Show that the ring is equal to the quotient ring , where .    We have seen previously that as a group, is equal to the quotient group . Moreover, it is clear that the coset multiplication operation is identical to the modular multiplication operation defined in . Thus the two rings are identical.   "
 },
@@ -3398,7 +3398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#th_ring_quot_map",
   "type": "Theorem",
-  "number": "2.59",
+  "number": "2.6.2",
   "title": "Quotient map: universal property.",
   "body": " Quotient map: universal property   Let be an ideal of the ring , and let be the corresponding quotient map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . for all .  In short, there is a unique homomorphism making the diagram below commutative.   Universal property of quotient map   Universal property of quotient map       We get most of this result for free from . The only thing we need to be careful about is that all maps in question satisfy the additional ring homomorphism axioms (ii) and (iii) from , and this is straightforward.   "
 },
@@ -3407,7 +3407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#cor_quot_ring_map",
   "type": "Corollary",
-  "number": "2.61",
+  "number": "2.6.4",
   "title": "Quotient ring homomorphisms.",
   "body": " Quotient ring homomorphisms   Let be an ideal of the ring , and let be the quotient map. Given any ring , the map is an injection onto the set of all satisfying . In other words, we can identify with the set .   "
 },
@@ -3416,7 +3416,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_ring_quot_homs",
   "type": "Example",
-  "number": "2.62",
+  "number": "2.6.5",
   "title": "Quotient ring homomorphisms.",
   "body": " Quotient ring homomorphisms   Let be a positive integer, and let be a ring. Prove that is either empty or a singleton.       "
 },
@@ -3425,7 +3425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#th_ring_isom_theorems",
   "type": "Theorem",
-  "number": "2.63",
+  "number": "2.6.6",
   "title": "Isomorphism theorems for rings.",
   "body": " Isomorphism theorems for rings   Let be a ring.   First isomorphism theorem  Given a ring homomorphism with kernel , we have via the isomorphism .    Second isomorphism theorem  Given a subring and ideal , is a subring of , is an ideal of , and .    Third isomorphism theorem  Let be a surjective ring homomorphism. If is an ideal of containing , then is an ideal of , and we have . In particular, considering the quotient map , we see that if is a chain of ideals in , then is an ideal of , and we have     Fourth isomorphism theorem  Let be a surjective ring homomorphism. The map is a bijection between the set of ideals of that contain and the set of ideals of , with inverse given by . Moreover, this bijection preserves just about all ideal operations and relations: , inclusion, intersection, sum, product, .          "
 },
@@ -3434,7 +3434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_first_isom_complex",
   "type": "Example",
-  "number": "2.64",
+  "number": "2.6.7",
   "title": "First isomorphism theorem.",
   "body": " First isomorphism theorem   Identify the quotient up to isomorphism with a familiar ring using the first isomorphism theorem.    We claim that . Define as : , is the evaluation at map, thinking of as a subring of . This a ring homomorphism according to , and is easily seen to be surjective, since for any . We claim that . Indeed, we see that . Thus . It follows from that . Conversely, suppose , and thus . Applying polynomial division (with remainder), we can write , where , and thus for some . Applying , we conclude that . But in , we have , , if and only if . Thus , and we see that . Thus , and we conclude that , by the first isomorphism theorem.   "
 },
@@ -3443,7 +3443,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_ideals_modularring",
   "type": "Example",
-  "number": "2.65",
+  "number": "2.6.8",
   "title": "Ideals of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Ideals of   Let be a positive integer. Use the fourth isomorphism to describe the ideals of .    We have , where . Let be the quotient map. We have . By the fourth isomorphism theorem, the ideals of are in bijective correspondence with the ideals of that contain . A previous result tells us that these are precisely ideals of the form , where and . Since the bijection is given by , we see that the ideals of are preciseley those of the form , where and . In particular, all ideals of are principal, and there are finitely many of them.   "
 },
@@ -3452,7 +3452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quot_ring.html#eg_images_modular_ring",
   "type": "Example",
-  "number": "2.66",
+  "number": "2.6.9",
   "title": "Quotients of <span class=\"process-math\">\\(\\Z\/n\\Z\\)<\/span>.",
   "body": " Quotients of   Let be a positive integer. Determine, up to isomorphism, all the quotients of by an ideal. Your answers should be expressed as familiar rings.    Let , so that . From the previous example, the ideals of are precisely those of the form , where and . Furthermore we have for any such , , where . We conclude from the third isomorphism theorem that . Thus, up to isomorphism, the quotients of are precisely the rings , where and .   "
 },
@@ -3470,7 +3470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_maximal_ideal",
   "type": "Definition",
-  "number": "2.67",
+  "number": "2.7.1",
   "title": "Maximal ideal.",
   "body": " Maximal ideal   Let be a ring. An ideal of is maximal if and if for some ideal , then either or . Using logical shorthand: an ideal is maximal if and . Equivalently, is a maximal element of the set of all proper ideals of with respect to the partial order .   "
 },
@@ -3479,7 +3479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_division_ring",
   "type": "Example",
-  "number": "2.68",
+  "number": "2.7.2",
   "title": "Division ring.",
   "body": " Division ring   Let be a division ring. Prove that is the only maximal ideal of .    Indeed, is the only proper ideal of , since if an contains a nonzero element , then since is a unit it follows easily that . Thus is maximal.   "
 },
@@ -3488,7 +3488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_maximal_ideals_M_nF",
   "type": "Example",
-  "number": "2.69",
+  "number": "2.7.3",
   "title": "Maximal ideals of <span class=\"process-math\">\\(M_n(F)\\)<\/span>.",
   "body": " Maximal ideals of   Let be a field, and let be a positive integer. Prove that is a maximal ideal of .    You have shown on your homework that the only ideals of are of the form where is an ideal of . Since the only ideals of are and , it follows that is the only proper ideal of , and hence maximal.   "
 },
@@ -3497,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_max_ideals_Z",
   "type": "Example",
-  "number": "2.70",
+  "number": "2.7.4",
   "title": "Maximal ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Maximal ideals of   Let be a nonnegative integer. Prove that the ideal is maximal if and only if is prime.    We have .   "
 },
@@ -3506,7 +3506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_prime_ideal",
   "type": "Definition",
-  "number": "2.71",
+  "number": "2.7.5",
   "title": "Prime ideal.",
   "body": " Prime ideal   Let be a commutative ring. An ideal of is prime if and the following condition holds: for all , if , then or . Using logical shorthand: is prime if and .   "
 },
@@ -3515,7 +3515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_prime_maximal_ideals",
   "type": "Theorem",
-  "number": "2.72",
+  "number": "2.7.6",
   "title": "Prime and maximal ideals.",
   "body": " Prime and maximal ideals   Let be a ring.   An ideal of is maximal if and only if is simple.    Assume is commutative. An ideal of is prime if and only if is an integral domain.    Assume is commutative. An ideal of is maximal if and only if is a field.    Assume is commutative. All maximal ideals of are prime ideals.          By the fourth isomorphism theorem, the ideals of are in bijective correspondence with the ideals of containing . The result now follows immediately from the definitions of maximal ideal and simple ring.    We have integral if and only if implies or for all if and only if implies or for all , if and only if implies or for all , if and only if is prime.    From (1), is maximal if and only if is simple. It is easy to see that for commutative rings, simple is equivalent to being a field.    Since all fields are integral domains, and now imply that all maximal ideals are prime.      "
 },
@@ -3524,7 +3524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#eg_prime_max_integers",
   "type": "Example",
-  "number": "2.73",
+  "number": "2.7.7",
   "title": "Prime and maximal ideals of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Prime and maximal ideals of   Let be a positive integer. Show that the following statements are equivalent.    is prime.     is maximal.     is a prime integer.       We have seen previously that for positive , the ring is an integral domain if and only if it is a field, if and only if is a prime integer. The result now follows from .   "
 },
@@ -3533,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#ss_prime_max_ideals-11",
   "type": "Remark",
-  "number": "2.74",
+  "number": "2.7.8",
   "title": "Prime integers.",
   "body": " Prime integers  From the equivalence of (1) and (3) in , it follows that a positive integer is a prime integer if and only if is a prime ideal, if and only if implies or for all integers . We have thus derived, in a roundabout way, an equivalent formulation of being prime. (Recall that our original definition of a prime integer is one that has exactly two positive divisors: 1 and itself.) We will study the notion of a prime elements in arbitrary commutative rings down the line, and will in fact adopt this alternate formulation as our definition.  "
 },
@@ -3542,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#d_partial_order",
   "type": "Definition",
-  "number": "2.75",
+  "number": "2.7.9",
   "title": "Partial order.",
   "body": " Partial order   A partial order on a nonempty set is a binary relation satisfying the following properties.   Reflexivity   for all     Antisymmetry  If and , then .    Transitivity  If and , then .   A partially ordered set (or POSET ) is a pair where is a partial order on .  Let be a POSET. A subset is totally ordered (or a chain ) with respect to if for all , either or . An upper bound of is an element such that for all . An element is a maximal element of if implies for all ; similarly, is a minimal element of if implies for all .   "
 },
@@ -3551,7 +3551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_zorns_lemma",
   "type": "Theorem",
-  "number": "2.76",
+  "number": "2.7.10",
   "title": "Zorn’s lemma.",
   "body": " Zorn's lemma   If is a nonempty POSET for which every totally ordered subset has an upper bound, then has a maximal element.    Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most set theory textbooks.   "
 },
@@ -3560,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#ss_zorn-5",
   "type": "Remark",
-  "number": "2.77",
+  "number": "2.7.11",
   "title": "“Totally ordered” versus “chain”.",
   "body": " Totally ordered versus chain  We prefer the term totally ordered to chain , as the latter connotes a countable set. This is important, as to verify the conditions of Zorn's lemma, we must consider all totally ordered subsets, countable or not. It is not enough to just look at countable totally ordered subsets .  "
 },
@@ -3569,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#th_max_ideals_exist",
   "type": "Theorem",
-  "number": "2.78",
+  "number": "2.7.12",
   "title": "Maximal ideals exist.",
   "body": " Maximal ideals exist   Let be a ring, and let be a proper ideal of ( , ). There exists a maximal ideal of containing . In particular, if is nonzero, then contains a maximal ideal.    First observe that the second statement follows from the first by taking the ideal : a maximal ideal containing is the same thing as a maximal ideal.  Now let be a proper ideal of , and let be the set of all proper ideals of containing : . Note that is nonempty since . The binary relation given by set inclusion gives the structure of a POSET. We use Zorn's lemma to show that has a maximal element with respect to .  Consider any subset that is totally ordered with respect to . We must show that has an upper bound in . To this end we let . It is clear that for all , so it remains to show that : that is, we must show that (i) is an ideal containing , and (ii) .  Since for all , and since is the union of all such ideals, we have . To show is an ideal, we must show that it is a subgroup of and is closed under left and right multiplication by elements of . Since , we have . Now take . By definition we have and for some ideals . Since is totally ordered, we have either or . Assuming without loss of generality that the first condition holds, we may assume that . Since is an ideal it follows that , and thus that . This shows that is an ideal.  Next we show that . This is a consequence of the fact that in any ring for an ideal if and only if . Since for all , it follows that for all , and hence that . Thus .  Having verified the conditions of Zorn's lemma for all nonempty well-ordered subsets of , we conclude that has a maximal element . By definition and . We conclude our proof by showing that is maximal. Suppose for some proper ideal : then by definition, and hence by maximality. Thus is a maximal ideal of .   "
 },
@@ -3578,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_maximal.html#rem_zorn_max_ideals",
   "type": "Remark",
-  "number": "2.79",
+  "number": "2.7.13",
   "title": "Zorn’s lemma and maximal ideals.",
   "body": " Zorn's lemma and maximal ideals  You might wonder whether there is a proof of the existence of maximal ideals that does not rely on Zorn's lemma. Surprisingly, we can say with assurance that the answer is no! As it turns out, not only does Zorn's lemma imply the existence of maximal ideals, but the converse is also true: the existence of maximal ideals in arbitrary rings implies Zorn's lemma. As a result, the following statements are all equivalent.   Zorn's lemma.    Any nonzero ring has a maximal ideal.    The axiom of choice: if is a family of nonempty sets indexed by the nonempty set , then is nonempty. (In other words, there is a way to choose for each , an element of in order to form a tuple .)   In fact, we can add a few more equivalent statements to the list. The three statements above can be shown to be equivalent to the following statements.   Every vector space has a basis.    Arbitrary products of compact topological spaces are compact. (Tychonoff's theorem).    Every set admits a total order satisfying the well-ordering principle: , every nonempty subset of has a minimal element with respect to . (Well-ordering theorem.)   It is quite a wonder that these six statements, which on the surface seem to say very different things, are in fact all equivalent. Moreover, on a psychological level there is a great range of plausibility among the various statements: whereas the axiom of choice seems intuitively obvious, the well-ordering principle is quite a shocker, since it would imply that even admits some mysterious well-ordering. This is the basis of the following bon mot attributed to Jerry Bona, professor emeritus at UIC: The axiom of choice is obviously true, the well-ordering theorem obviously false, and who can tell about Zorn's lemma?   "
 },
@@ -3596,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_div_alg_poly",
   "type": "Theorem",
-  "number": "2.80",
+  "number": "2.8.1",
   "title": "Division algorithm for polynomials.",
   "body": " Division algorithm for polynomials   Let be a nontrivial commutative ring, and let be a nonzero polynomial whose leading coefficient is a unit: , we have , where . Given a polynomial , there is a unique pair of polynomials satisfying the following properties.    .     .       We need to prove two things: that given any there are polynomials satisfying properties (i) and (ii), and furthermore that the pair is unique.  We begin with existence. Let be the set of all pairs of polynomials satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair that also satisfies (ii). Observe that is nonempty, since in particular it contains the pair . If , then this pair satisfies (ii) since ( being a nonzero polynomial). Otherwise, let be an element of for which has minimal finite degree. (Such a pair exists since the set is a nonempty subset of , and hence has a minimal element.) We claim that , and hence that satisfies (ii). Suppose, by contradiction, that with . Since the leading term of is a unit, we can write , where , and where has degree at most . But then we have , showing that and . This contradicts the minimality of . Thus , and we are done.  We now prove that there is exactly one pair satisfying (i) and (ii). Indeed, suppose and both satisfy these properties. From , it follows that . If , then since the leading coefficient of is a unit, it is easy to see that . But then we would have , a contradiction since . Thus , from which it follows that . We conclude that and , and thus that , as desired.   "
 },
@@ -3605,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_poly_division",
   "type": "Definition",
-  "number": "2.81",
+  "number": "2.8.2",
   "title": "Polynomial division with remainder.",
   "body": " Polynomial division with remainder   Let be a nontrivial commutative ring, and let be a nonzero polynomial whose leading coefficient is a unit. Given a polynomial we call the unique polynomials and satisfying the two conditions of the quotient and remainder upon division of by .   "
 },
@@ -3614,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_quot_poly",
   "type": "Theorem",
-  "number": "2.82",
+  "number": "2.8.3",
   "title": "Quotients of polynomial rings.",
   "body": " Quotients of polynomial rings   Let be a nontrivial commutative ring, and let be a polynomial of degree whose leading coefficient is a unit in . Additionally, let and write for all , so that in particular we have .   The restriction is injective. Thus we can identify with , and we will write for all .    For all we have , where is the remainder upon division of by .    Every element of can be written in the form , where for all , and this representation is unique in the following sense: we have with if and only if for all .       For (1) it suffices to show that . Since , and since for any ( ), it is easy to see that if and only if if and thus .  Next, given and writing as in the division algorithm, we see that . This proves (2).  Lastly, given any , let be its remainder upon division by . Since , we may write for elements . From (2) we have . Thus every element of the quotient can be expressed in the desired form. Lastly, to see that this expression is unique, if we have , then we have , where and thus . But any nonzero element of must have degree at least , since for any nonzero polynomial . It follows that and thus that for all .   "
 },
@@ -3623,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#ss_div_alg-7",
   "type": "Remark",
-  "number": "2.83",
+  "number": "2.8.4",
   "title": "Quotients of polynomial rings.",
   "body": " Quotients of polynomial rings  Note that is an -algebra, with structural ring homomorphism given by the composition . Once we have the language of modules at our disposal, we will be able to summarize (2) of by saying that is an -algebra that is free of rank as an -module.  For now we content ourselves with a special case of this observation. Namely, when is a field, then is an -algebra and hence an -vector space. In this context, (2) of tells us that is a basis of as an -vector space, and hence that as an -vector space.  "
 },
@@ -3632,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_pid",
   "type": "Definition",
-  "number": "2.84",
+  "number": "2.8.5",
   "title": "Principal ideal domain.",
   "body": " Principal ideal domain   A principal ideal domain (PID) is an integral domain in which every ideal is principal.   "
 },
@@ -3641,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_poly_ring_field",
   "type": "Theorem",
-  "number": "2.85",
+  "number": "2.8.6",
   "title": "Polynomial ring over a field.",
   "body": " Polynomial ring over a field   If is a field, then is a principal ideal domain. In more detail, for every nonzero proper ideal , there is a unique monic polynomial such that .    First note that is an integral domain since is an integral domain, as we have seen previously.  As always we have and . Let be a proper nonzero ideal. Since , it contains no elements of . It follows that the set is a nonzero subset of , and thus has a minimal element . Let be an element of with . Since for all , we may assume without loss of generality that is monic. We will show that . It is clear that . For the other direction, given any , we may write , where . Since , and since has minimal degree among elements of , we see that , and . This proves that and hence that .  We now show that the monic polynomial with is unique. Suppose we have where and are monic. It follows that and , or equivalently and for polynomials . From , we conclude that . It follows that , and hence that for some constant . Since and are both monic, we conclude that and .   "
 },
@@ -3650,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_divisibility",
   "type": "Definition",
-  "number": "2.86",
+  "number": "2.8.7",
   "title": "Divisibility.",
   "body": " Divisibility   Let be a ring. Given elements , we say that  divides  in (or is a multiple of in ), written , if there is an element satisfying .   "
 },
@@ -3659,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#d_prime_irreducible",
   "type": "Definition",
-  "number": "2.87",
+  "number": "2.8.8",
   "title": "Prime and irreducible elements.",
   "body": " Prime and irreducible elements   Let be an integral domain.  A nonzero element is prime if implies or for all . Equivalently, is prime if the ideal is a nonzero prime ideal.  A nonzero, non-unit element is irreducible if implies or .  Elements are associates if for some unit .   "
 },
@@ -3668,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#rem_prime_element_ideal",
   "type": "Remark",
-  "number": "2.88",
+  "number": "2.8.9",
   "title": "Prime elements and prime ideals.",
   "body": " Prime elements and prime ideals  Let be a commutative ring. It is easy to see that an element is prime (as in ) if and only if its principal ideal is prime (as in ).  "
 },
@@ -3677,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#th_max_prime_poly",
   "type": "Theorem",
-  "number": "2.89",
+  "number": "2.8.10",
   "title": "Prime and maximal ideals of <span class=\"process-math\">\\(F[x]\\)<\/span>.",
   "body": " Prime and maximal ideals of   Let be a field, and let be nonzero. The following statements are equivalent.    is an irreducible element of .     is a maximal ideal of .     is a prime ideal of .       Implication: (1) (2). Assume is irreducible and let be an ideal of satisfying . Since is a PID, we have , in which case is equivalent to . Since is irreducible, this implies is a unit, or , where is a unit. But then, either , or . This proves is maximal.  Implication: (2) (3). This implication is just a special instance of the more general fact that in a commutative ring all maximal ideals are prime ideals.  Implication: (3) (1). Assume is prime. As observed in , it follows that is a prime element of . Assume for some polynomials . Since is prime, we have or . In the first case, we have and hence . Since is integral and , it follows that and thus is a unit. Similarly, if , then is a unit. Thus implies is a unit or is a unit, and we conclude that is irreducible.   "
 },
@@ -3686,7 +3686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#ss_poly_ring_fields-9",
   "type": "Remark",
-  "number": "2.90",
+  "number": "2.8.11",
   "title": "Comparing <span class=\"process-math\">\\(\\Z\\)<\/span> and <span class=\"process-math\">\\(F[x]\\)<\/span>.",
   "body": " Comparing and  Let be a field. As should be clear by now there are a number of structural similarities between the rings and :   Both rings are PIDs.    In both rings, a ring element is prime if and only if it is irreducible.    In both rings the prime ideals consist of the zero ideal and ideals of the form , where is irreducible in the ring.    In both rings all nonzero prime ideals are maximal, generated by irreducible (equivalently, prime) elements.     "
 },
@@ -3695,7 +3695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#cor_quotient_fields",
   "type": "Corollary",
-  "number": "2.91",
+  "number": "2.8.12",
   "title": "Quotient fields of <span class=\"process-math\">\\(F[x]\\)<\/span>.",
   "body": " Quotient fields of   Let be a field, and let be irreducible of degree . The quotient ring is a field, as well as an -algebra of dimension .   "
 },
@@ -3704,7 +3704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#rem_irr_poly",
   "type": "Remark",
-  "number": "2.92",
+  "number": "2.8.13",
   "title": "Irreducible polynomials.",
   "body": " Irreducible polynomials  Let be a field. It is easy to see that a polynomial is irreducible if and only if it has no factor of positive degree. Although in general it can be quite tricky to determine whether a polynomial is irreducible, for polynomials of degree at most 3, the situation is simpler, as we now summarize.   Degree 1  Every degree-1 polynomial is irreducible. Indeed, if , then since , we must have or . But then either is a unit or is a unit.    Degree 2  Let be a polynomial of degree 2. To have a nontrivial factorization , the same degree argument above implies that both and must be linear. Note that any linear polynomial has a root in (namely ). As a result, it follows that a polynomial has a linear factor if and only if we have for some : , if and only if has a root in . We conclude that a degree-2 polynomial is irreducible if and only if it has no roots in .    Degree 3  Again, looking at degrees, we see that if is a degree-3 polynomial, then has a nontrivial factorization if and only if one of the factors is linear. Thus, just as in the degree-2 case, we conclude that a degree-3 polynomial is irreducible if and only if it has no roots in .   Things become more complicated once our polynomials have degree 4 or higher: in particular, being irreducible is no longer equivalent to having no roots. For example, the polynomial is easily seen to have no roots in , and yet is manifestly reducible.  "
 },
@@ -3713,7 +3713,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#eg_poly_quot_linear",
   "type": "Example",
-  "number": "2.93",
+  "number": "2.8.14",
   "title": "Quotients by linear polynials.",
   "body": " Quotients by linear polynials   Let be a field, and let be a linear ( , degree-1) polynomial in . Prove: .    Let be the surjective ring homomorphism defined as . Clearly, , and thus . Since is maximal ( is irreducible), and , we have . By the first isomorphism theorem, we conclude that .   "
 },
@@ -3722,7 +3722,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#eg_quot_real_poly",
   "type": "Example",
-  "number": "2.94",
+  "number": "2.8.15",
   "title": "Quotients of <span class=\"process-math\">\\(\\R[x]\\)<\/span>.",
   "body": " Quotients of   Show that and are both fields, and are isomorphic to one another.    From the quadratic formula theorem, we see easily that the polynomials and have no roots in . It follows from that both polynomials are irreducible in , and hence that the corresponding quotients are fields. We prove that both are isomorphic to .  For , consider the ring homomorphism defined as . The map is clearly surjective, since for all . Furthermore, clearly, , since ; and since is maximal ( is irreducible), it follows that . The claim follows from the first isomorphism theorem.  Now consider , and let . Verify for yourself that is one of the two complex roots of ; is the other. Define as . Again, clearly , and since is maximal, we conclude that and . We claim that . This is not as obvious as in the previous case. However, from , we know that is a -dimensional -subspace of . Since itself is a -dimensional -vector space, we must have .   "
 },
@@ -3731,7 +3731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#eg_field_25",
   "type": "Example",
-  "number": "2.95",
+  "number": "2.8.16",
   "title": "Field of cardinality 25.",
   "body": " Field of cardinality 25   Construct an explicit field of cardinality     Consider the polynomial ring . Any quotient of the form is an -algebra that is of dimension 2 as an -vector space. As a result, any such ring satisfies . To produce a field, we simply must pick an irreducible quadratic polynomial ; and according to , this is equivalent to picking so that it has no roots in . Since only has 5 elements, it is easy to verify whether a given polynomial has a root in or not. Consider , for example. We simply need to compute a table of values to see that has two roots in ( and ), which corresponds to the factorization in . Thus is not irreducible, and the corresponding quotient is not a field. Indeed, from the factorization we see that and are nonzero elements of satisfying . Thus is not even an integral domain! (We will see in the next section that .)  Similar computations show that has no roots in and hence is irreducible. Thus is a field of cardinality . Concretetely, since in , we have for all . From this formula, it is easy to see that any nonzero element has inverse .   "
 },
@@ -3740,7 +3740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prime_max_poly.html#ss_poly_ring_fields-16",
   "type": "Remark",
-  "number": "2.96",
+  "number": "2.8.17",
   "title": "Finite fields.",
   "body": " Finite fields  It turns out that there are exactly irreducible polynomials of the form in . Each of the corresponding quotients is thus a field of cardinality . Miraculously, these fields are all isomorphic! In fact, as we will prove in the next quarter, given any prime power there is exactly one field (up to isomorphism) of cardinality .  "
 },
@@ -3758,7 +3758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#d_coprime_ideals",
   "type": "Definition",
-  "number": "2.97",
+  "number": "2.9.1",
   "title": "Coprime ideals.",
   "body": " Coprime ideals   Let be a nonzero commutative ring. Ideals and of are coprime if . Equivalently, and are coprime if we can write for some and .   "
 },
@@ -3767,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#th_crt",
   "type": "Theorem",
-  "number": "2.98",
+  "number": "2.9.2",
   "title": "Chinese remainder theorem (CRT).",
   "body": " Chinese remainder theorem (CRT)   Let be a commutative ring, and let be ideals of . For all , we let be the quotient map, and we define .    is a ring homomorphism with kernel .     is surjective if and only if the ideals are pairwise coprime: , for all .    If the ideals are pairwise coprime, then , and we have .          That is a ring homomorphism follows easily from the ring structure on . As for the statement about the kernel, we have .    For each , let be defined as . It is not difficult to see that is surjective if and only if for each there is some such that . Indeed, the forward implication is obvious, and the reverse follows from the fact that given any , we have . Thus it suffices to show that we can find satisfying if and only if the ideals are pairwise coprime.  Assume for all there exist satisfying . For ideals and , , since , we have, by definition of , for elements and . But then , showing that and are coprime.  Now assume that the ideals are pairwise coprime. Fix . For any , since , we can find elements and such that . Let . Since for all , we have and hence for all .  Since for all , we have , as desired.    From (1) and (2), it remains only to show that if the ideals are pairwise coprime, then . The inclusion holds for any collection of ideals: we have seen this for , and the result generalizes easy by induction. Let's show that reverse inclusion under the additional assumption of coprimality.      "
 },
@@ -3776,7 +3776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#cor_crt_units",
   "type": "Corollary",
-  "number": "2.99",
+  "number": "2.9.3",
   "title": "CRT for unit groups.",
   "body": " CRT for unit groups   Let be a commutative ring, let be a collection of pairwise coprime ideals of , and let . The map is an isomorphism of groups.   "
 },
@@ -3785,7 +3785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#prop_pid_rel_prime",
   "type": "Proposition",
-  "number": "2.100",
+  "number": "2.9.4",
   "title": "Coprime prime ideals in PID.",
   "body": " Coprime prime ideals in PID   Let and be ideals of the PID . The following statements are equivalent.    and are coprime.         If satisfies and , then is a unit.      "
 },
@@ -3794,7 +3794,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#th_crt_integers",
   "type": "Theorem",
-  "number": "2.101",
+  "number": "2.9.5",
   "title": "CRT: integers.",
   "body": " CRT: integers   Let be pairwise relatively prime integers ( , for all ), and let .   The map is an isomorphism of rings.    The map is an isomorphism of groups.    For any choice of integers , the set of satisfying the system of congruences forms a unique congruence class modulo . That is, (i) there is a solution to this system of congruences, and (ii) is another solution if and only if .      "
 },
@@ -3803,7 +3803,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#ss_CRT_integers-6",
   "type": "Remark",
-  "number": "2.102",
+  "number": "2.9.6",
   "title": "CRT for integers.",
   "body": " CRT for integers  In the special case of the CRT applied to integers, when asked to solve a system of congruences as in , it suffices to find one solution , in which case the set of all solutions is , where . Furthermore, we can use the division algorithm to find our solution in a relatively low-cost manner. The steps below outline such a computational method.   For each , compute .    For each compute a multiplicative inverse of modulo : , find satisfying . This can be done either by inspection (in simple cases) or by performing the Euclidean algorithm to find integers satisfying (since ) and setting .    The integer is a solution to the system of congruences .     "
 },
@@ -3812,7 +3812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#eg_crt_integers",
   "type": "Example",
-  "number": "2.103",
+  "number": "2.9.7",
   "title": "CRT for integers.",
   "body": " CRT for integers   Find the unique number satisfying     Following the algorithm described in the remark above, we first compute the constants Next, to find inverses of modulo , we may work with . Thus we have . We conclude that the integer is a solution to the congruences. To get a solution in the desired range, we simply compute : . It follows that is the unique element of satisfying the given congruences. (Check that it does!)   "
 },
@@ -3821,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#d_euler_totient",
   "type": "Definition",
-  "number": "2.104",
+  "number": "2.9.8",
   "title": "Euler’s totient function.",
   "body": " Euler's totient function    Euler's totient function is the function defined as . In other words, is the number of integers in that are relatively prime to .   "
 },
@@ -3830,7 +3830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#cor_tot_func",
   "type": "Corollary",
-  "number": "2.105",
+  "number": "2.9.9",
   "title": "Euler’s totient function.",
   "body": " Euler's totient function   Let be the Euler totient function. If are pairwise relatively prime integers, then . Additionally, given , where the are distinct prime integers, we have .    Statement (1) follows immediately from and the fact (proven elsewhere) that . For (2), observe first the if and are distinct prime integers, then for any positive integers and . Thus given the factorization , we have by (1). Furthermore, for any prime power an integer is relatively prime to if and only if it is not divisible by , if and only if it is not a multiple of . The set of multiples of in is , which has cardinality . Thus .   "
 },
@@ -3839,7 +3839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#cor_coprime_ideals_poly",
   "type": "Corollary",
-  "number": "2.106",
+  "number": "2.9.10",
   "title": "Coprime ideals: monic irreducibles.",
   "body": " Coprime ideals: monic irreducibles   Let be a field. If and are distinct monic irreducible polynomials in , then the ideals and are coprime.    We use condition (3) of . Suppose divides and . Since is irreducible, either is a unit, or for some unit . If the latter is the case, then since it follows that . But since is irreducible and is not a unit, we must have for some unit . Lastly, since and are monic, it follows that and : a contradiction. We conclude that is a unit, showing that the only common divisors of and are units. Thus and are relatively prime.   "
 },
@@ -3848,9 +3848,171 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_crt.html#eg_CRT_poly",
   "type": "Example",
-  "number": "2.107",
+  "number": "2.9.11",
   "title": "CRT in polynomial rings.",
   "body": " CRT in polynomial rings   Exhibit an isomorphism between the given ring and a product of fields.                        We have . The polynomials , , are distinct, irreducible (since they are of degree 1), and monic. By , the CRT applies and we have .    We have . The polynomials and are distinct, monic, and irreducible (the latter since it has no roots in ). By , the CRT applies and we have . See for the isomorphism .    The polynomial factors as in . The ideals and are coprime by , and thus we have .      "
+},
+{
+  "id": "s_localization",
+  "level": "1",
+  "url": "s_localization.html",
+  "type": "Section",
+  "number": "2.10",
+  "title": "Localizations and fraction fields",
+  "body": " Localizations and fraction fields   Localization    localization of ring by    Let be a nonzero commutative ring. A subset is multiplicative if the following conditions hold.    .    If , then .   Given a multiplicative subset we define an equivalence relation on the set as follows:   we formally write for all ;    define if there exists satisfying , or equivalently, .   The localization of by (or ring of fractions of by ), denoted is the set of all equivalence classes of with respect to : , . By abuse of notation, we will write instead of , and instead of .     as localization of  The definition of a localization should remind you immediately of the construction of from . Indeed, with our new notation, we have , where .    Localization equivalence relation  The extra appearing in the equivalence relation definition tends to bum people out. It is not used in the usual construction of , so why is it included here? It turns out, you need this even to show that is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of are nonzero and are not zero divisors, then the can be cancelled in , and we recover the more familiar definition of equality .    Localization by   Let be a multiplicative subset of the nonzero commutative ring . The rules yield well-defined binary operations and on , turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are and .  Additionally we call the map defined as the localization map with respect to .     Localization map   Let be a multiplicative subset of the nonzero commutative ring . Define .    is a ring homomorphism.     .     . In other words, is a unit of for all .        Localization  Predictably, given a ring and multiplicative subset , we will often want to identify as a familiar ring or quotient thereof (or product thereof). below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what might be in different cases. The proposition above, combined with the concrete construction of partially spells out this intuition: the ring should be thought of as the result of adjoining inverses to all elements of . Equivalently, is the result of inverting all elements of .  That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of . For example, if contains a zero divisor, then it is not difficult to show that ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element is both a zero divisor and a unit, then the ring must be the trivial ring.    Fraction field   Let be an integral domain.   The set is a multiplicative subset of .     is a field.    The localization map is injective.          Let , the set of all nonzero elements of . Clearly . And is closed under multiplication because is an integral domain.    First observe that in if and only if there is a such that . Since is integral and , we see that this is true if and only if . Thus, given nonzero , we may assume , in which case . But then the element is easily seen to be an inverse of .        Fraction field    the fraction field of    Let be an integral domain, and let . The field is called the fraction field of , denoted .     Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.           When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.   Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map           Fraction field mapping property   Let be an integral domain with fraction field , and let be the localization map. Given any field and ring homomorphism , there is a unique injective ring homomorphism satisfying .     Fraction field mapping property  With the set up as in , if we identify with its isomorphic image in , then we obtain the following version of this result: given any ring homomorphism , where is a field, there is a unique extension . This property is summarized by the following diagram, obtained simply by replacing the map in with the inclusion relation.   Diagram summarizing mapping property of fraction field    Since the maps and are both injective, this property is often summarized by saying that is the smallest field containing .    Special types of localizations  Let be a commutative ring. Given a nonzero element , we define , where . Loosely speaking, is the ring obtained from by adjoining an inverse of .  Given a prime ideal , we define , where . Note that the primality of implies is multiplicative: since , , and hence ; and is closed under multiplication because if and are not elements of , then neither is .  The localization is called the localization of at the prime ideal . It can be thought of as the ring obtained from by inverting all elements outside of .    Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .         Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.         Ideals of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map.  Given an ideal , define , the ideal of generated by the set .   We have for all ideals . Furthermore, we have . Equivalently, is a proper ideal of if and only if does not intersect ( , ).    Given an ideal , let . We have .    The maps define a bijective correspondence between the set of prime ideals that do not intersect ( , ), and the prime ideals of .            Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .       "
+},
+{
+  "id": "d_localization",
+  "level": "2",
+  "url": "s_localization.html#d_localization",
+  "type": "Definition",
+  "number": "2.10.1",
+  "title": "Localization.",
+  "body": " Localization    localization of ring by    Let be a nonzero commutative ring. A subset is multiplicative if the following conditions hold.    .    If , then .   Given a multiplicative subset we define an equivalence relation on the set as follows:   we formally write for all ;    define if there exists satisfying , or equivalently, .   The localization of by (or ring of fractions of by ), denoted is the set of all equivalence classes of with respect to : , . By abuse of notation, we will write instead of , and instead of .   "
+},
+{
+  "id": "s_localization-3",
+  "level": "2",
+  "url": "s_localization.html#s_localization-3",
+  "type": "Remark",
+  "number": "2.10.2",
+  "title": "<span class=\"process-math\">\\(\\Q\\)<\/span> as localization of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
+  "body": " as localization of  The definition of a localization should remind you immediately of the construction of from . Indeed, with our new notation, we have , where .  "
+},
+{
+  "id": "s_localization-4",
+  "level": "2",
+  "url": "s_localization.html#s_localization-4",
+  "type": "Remark",
+  "number": "2.10.3",
+  "title": "Localization equivalence relation.",
+  "body": " Localization equivalence relation  The extra appearing in the equivalence relation definition tends to bum people out. It is not used in the usual construction of , so why is it included here? It turns out, you need this even to show that is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of are nonzero and are not zero divisors, then the can be cancelled in , and we recover the more familiar definition of equality .  "
+},
+{
+  "id": "spec_localization",
+  "level": "2",
+  "url": "s_localization.html#spec_localization",
+  "type": "Specimen",
+  "number": "31",
+  "title": "Localization by <span class=\"process-math\">\\(S\\)<\/span>.",
+  "body": " Localization by   Let be a multiplicative subset of the nonzero commutative ring . The rules yield well-defined binary operations and on , turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are and .  Additionally we call the map defined as the localization map with respect to .   "
+},
+{
+  "id": "prop_locali",
+  "level": "2",
+  "url": "s_localization.html#prop_locali",
+  "type": "Proposition",
+  "number": "2.10.4",
+  "title": "Localization map.",
+  "body": " Localization map   Let be a multiplicative subset of the nonzero commutative ring . Define .    is a ring homomorphism.     .     . In other words, is a unit of for all .      "
+},
+{
+  "id": "s_localization-7",
+  "level": "2",
+  "url": "s_localization.html#s_localization-7",
+  "type": "Remark",
+  "number": "2.10.5",
+  "title": "Localization.",
+  "body": " Localization  Predictably, given a ring and multiplicative subset , we will often want to identify as a familiar ring or quotient thereof (or product thereof). below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what might be in different cases. The proposition above, combined with the concrete construction of partially spells out this intuition: the ring should be thought of as the result of adjoining inverses to all elements of . Equivalently, is the result of inverting all elements of .  That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of . For example, if contains a zero divisor, then it is not difficult to show that ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element is both a zero divisor and a unit, then the ring must be the trivial ring.  "
+},
+{
+  "id": "th_frac_field",
+  "level": "2",
+  "url": "s_localization.html#th_frac_field",
+  "type": "Theorem",
+  "number": "2.10.6",
+  "title": "Fraction field.",
+  "body": " Fraction field   Let be an integral domain.   The set is a multiplicative subset of .     is a field.    The localization map is injective.          Let , the set of all nonzero elements of . Clearly . And is closed under multiplication because is an integral domain.    First observe that in if and only if there is a such that . Since is integral and , we see that this is true if and only if . Thus, given nonzero , we may assume , in which case . But then the element is easily seen to be an inverse of .      "
+},
+{
+  "id": "d_frac_field",
+  "level": "2",
+  "url": "s_localization.html#d_frac_field",
+  "type": "Definition",
+  "number": "2.10.7",
+  "title": "Fraction field.",
+  "body": " Fraction field    the fraction field of    Let be an integral domain, and let . The field is called the fraction field of , denoted .   "
+},
+{
+  "id": "eg_frac_fields",
+  "level": "2",
+  "url": "s_localization.html#eg_frac_fields",
+  "type": "Example",
+  "number": "2.10.8",
+  "title": "Fraction fields.",
+  "body": " Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.          "
+},
+{
+  "id": "th_locali_mapping",
+  "level": "2",
+  "url": "s_localization.html#th_locali_mapping",
+  "type": "Theorem",
+  "number": "2.10.9",
+  "title": "Mapping property of localizations.",
+  "body": " Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map         "
+},
+{
+  "id": "cor_frac_field",
+  "level": "2",
+  "url": "s_localization.html#cor_frac_field",
+  "type": "Corollary",
+  "number": "2.10.10",
+  "title": "Fraction field mapping property.",
+  "body": " Fraction field mapping property   Let be an integral domain with fraction field , and let be the localization map. Given any field and ring homomorphism , there is a unique injective ring homomorphism satisfying .   "
+},
+{
+  "id": "s_localization-14",
+  "level": "2",
+  "url": "s_localization.html#s_localization-14",
+  "type": "Remark",
+  "number": "2.10.11",
+  "title": "Fraction field mapping property.",
+  "body": " Fraction field mapping property  With the set up as in , if we identify with its isomorphic image in , then we obtain the following version of this result: given any ring homomorphism , where is a field, there is a unique extension . This property is summarized by the following diagram, obtained simply by replacing the map in with the inclusion relation.   Diagram summarizing mapping property of fraction field    Since the maps and are both injective, this property is often summarized by saying that is the smallest field containing .  "
+},
+{
+  "id": "notation_locali_at_x",
+  "level": "2",
+  "url": "s_localization.html#notation_locali_at_x",
+  "type": "Notation",
+  "number": "2.10.12",
+  "title": "Special types of localizations.",
+  "body": " Special types of localizations  Let be a commutative ring. Given a nonzero element , we define , where . Loosely speaking, is the ring obtained from by adjoining an inverse of .  Given a prime ideal , we define , where . Note that the primality of implies is multiplicative: since , , and hence ; and is closed under multiplication because if and are not elements of , then neither is .  The localization is called the localization of at the prime ideal . It can be thought of as the ring obtained from by inverting all elements outside of .  "
+},
+{
+  "id": "eg_locali_at_2",
+  "level": "2",
+  "url": "s_localization.html#eg_locali_at_2",
+  "type": "Example",
+  "number": "2.10.13",
+  "title": "Localizing at an element: <span class=\"process-math\">\\(\\Z_2\\)<\/span>.",
+  "body": " Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .       "
+},
+{
+  "id": "eg_locali_int_poly",
+  "level": "2",
+  "url": "s_localization.html#eg_locali_int_poly",
+  "type": "Example",
+  "number": "2.10.14",
+  "title": "Localization of <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
+  "body": " Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.       "
+},
+{
+  "id": "th_locali_ideals",
+  "level": "2",
+  "url": "s_localization.html#th_locali_ideals",
+  "type": "Theorem",
+  "number": "2.10.15",
+  "title": "Ideals of localizations.",
+  "body": " Ideals of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map.  Given an ideal , define , the ideal of generated by the set .   We have for all ideals . Furthermore, we have . Equivalently, is a proper ideal of if and only if does not intersect ( , ).    Given an ideal , let . We have .    The maps define a bijective correspondence between the set of prime ideals that do not intersect ( , ), and the prime ideals of .          "
+},
+{
+  "id": "cor_primes_polyintergers",
+  "level": "2",
+  "url": "s_localization.html#cor_primes_polyintergers",
+  "type": "Corollary",
+  "number": "2.10.16",
+  "title": "Prime ideals of <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
+  "body": " Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .      "
 },
 {
   "id": "appendix-notation",

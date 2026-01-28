@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Localizations and fraction fields</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Abstract algebra">
+<meta property="book:author" content="Aaron Greicius">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="NUgt" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Abstract algebra</span> <span class="subtitle">A Kursobjekt for Math 331</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_crt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_rings_mods.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\T}{{\mathbb T}}
+\newcommand{\F}{{\mathbb F}}
+\newcommand{\PP}{{\mathbb P}}
+\newcommand{\HH}{{\mathbb H}}
+\newcommand{\compose}{\circ}
+\newcommand{\bolda}{{\mathbf a}}
+\newcommand{\boldb}{{\mathbf b}}
+\newcommand{\boldc}{{\mathbf c}}
+\newcommand{\boldd}{{\mathbf d}}
+\newcommand{\bolde}{{\mathbf e}}
+\newcommand{\boldi}{{\mathbf i}}
+\newcommand{\boldj}{{\mathbf j}}
+\newcommand{\boldk}{{\mathbf k}}
+\newcommand{\boldn}{{\mathbf n}}
+\newcommand{\boldp}{{\mathbf p}}
+\newcommand{\boldq}{{\mathbf q}}
+\newcommand{\boldr}{{\mathbf r}}
+\newcommand{\bolds}{{\mathbf s}}
+\newcommand{\boldt}{{\mathbf t}}
+\newcommand{\boldu}{{\mathbf u}}
+\newcommand{\boldv}{{\mathbf v}}
+\newcommand{\boldw}{{\mathbf w}}
+\newcommand{\boldx}{{\mathbf x}}
+\newcommand{\boldy}{{\mathbf y}}
+\newcommand{\boldz}{{\mathbf z}}
+\newcommand{\boldzero}{{\mathbf 0}}
+\newcommand{\boldmod}{\boldsymbol{ \bmod }}
+\newcommand{\boldT}{{\mathbf T}}
+\newcommand{\boldN}{{\mathbf N}}
+\newcommand{\boldB}{{\mathbf B}}
+\newcommand{\boldF}{{\mathbf F}}
+\newcommand{\boldS}{{\mathbf S}}
+\newcommand{\boldE}{{\mathbf E}}
+\newcommand{\boldG}{{\mathbf G}}
+\newcommand{\boldK}{{\mathbf K}}
+\newcommand{\boldL}{{\mathbf L}}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\lns}{lns}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\NS}{null}
+\DeclareMathOperator{\RS}{row}
+\DeclareMathOperator{\CS}{col}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\Arccos}{Arccos}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mdeg}{mdeg}
+\DeclareMathOperator{\Lt}{Lt}
+\DeclareMathOperator{\Lc}{Lc}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\diver}{div}
+\DeclareMathOperator{\flux}{flux}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\ML}{M}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\ab}{ab}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\surjects}{\twoheadrightarrow}
+\newcommand{\injects}{\hookrightarrow}
+\newcommand{\bijects}{\leftrightarrow}
+\newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+\newcommand{\mclass}[2][m]{[#2]_{#1}}
+\newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\normalin}{\trianglelefteq}
+\newcommand{\angvec}[1]{\langle #1\rangle}
+\newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+\newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+\newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+\newcommand{\abcdmatrix}[4]{\begin{bmatrix}#1\amp #2\\ #3\amp #4 \end{bmatrix}
+}
+\newenvironment{amatrix}[1][ccc|c]{\left[\begin{array}{#1}}{\end{array}\right]}
+\newenvironment{linsys}[2][m]{
+\begin{array}[#1]{@{}*{#2}{rc}r@{}}
+}{
+\end{array}}
+\newcommand{\eqsys}{\begin{array}{rcrcrcr}
+a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+\end{array}
+}
+\newcommand{\numeqsys}{\begin{array}{rrcrcrcr}
+e_1:\amp  a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+e_2: \amp a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+e_m: \amp a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+\end{array}
+}
+\newcommand{\homsys}{\begin{array}{rcrcrcr}
+a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp 0\\
+a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp 0\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp \\
+a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp 0
+\end{array}
+}
+\newcommand{\vareqsys}[4]{
+\begin{array}{ccccccc}
+#3_{11}x_{1}\amp +\amp #3_{12}x_{2}\amp +\cdots+\amp  #3_{1#2}x_{#2}\amp =\amp #4_1\\
+#3_{21}x_{1}\amp +\amp #3_{22}x_{2}\amp +\cdots+\amp #3_{2#2}x_{#2}\amp =\amp #4_2\\
+\vdots \amp \amp \vdots \amp  \amp \vdots \amp =\amp  \\
+#3_{#1 1}x_{1}\amp +\amp #3_{#1 2}x_{2}\amp +\cdots +\amp #3_{#1 #2}x_{#2}\amp =\amp #4_{#1}
+\end{array}
+}
+\newcommand{\genmatrix}[1][a]{
+\begin{bmatrix}
+#1_{11} \amp  #1_{12} \amp  \cdots \amp  #1_{1n} \\
+#1_{21} \amp  #1_{22} \amp  \cdots \amp  #1_{2n} \\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+#1_{m1} \amp  #1_{m2} \amp  \cdots \amp  #1_{mn}
+\end{bmatrix}
+}
+\newcommand{\varmatrix}[3]{
+\begin{bmatrix}
+#3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \\
+#3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+#3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}
+\end{bmatrix}
+}
+\newcommand{\augmatrix}{
+\begin{amatrix}[cccc|c]
+a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \amp b_{1}\\
+a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \amp b_{2}\\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
+\end{amatrix}
+}
+\newcommand{\varaugmatrix}[4]{
+\begin{amatrix}[cccc|c]
+#3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \amp #4_{1}\\
+#3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \amp #4_{2}\\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+#3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}\amp #4_{#1}
+\end{amatrix}
+}
+\newcommand{\spaceforemptycolumn}{\makebox[\wd\boxofmathplus]{\ }}
+
+\newcommand{\generalmatrix}[3]{
+\left(
+\begin{array}{cccc}
+#1_{1,1}  \amp #1_{1,2}  \amp \ldots  \amp #1_{1,#2}  \\
+#1_{2,1}  \amp #1_{2,2}  \amp \ldots  \amp #1_{2,#2}  \\
+\amp \vdots                         \\
+#1_{#3,1} \amp #1_{#3,2} \amp \ldots  \amp #1_{#3,#2}
+\end{array}
+\right)  }
+\newcommand{\colvec}[2][c]{\begin{amatrix}[#1] #2 \end{amatrix}}
+\newcommand{\rowvec}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_tuples_cart_prod" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Tuples and Cartesian product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_cardinality" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Cardinality and countability</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Propositional logic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Predicate logic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="codenumber">0.3.1</span> <span class="title">Logical structure</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="codenumber">0.3.2</span> <span class="title">Equalities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="codenumber">0.3.3</span> <span class="title">Basic set properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="codenumber">0.3.4</span> <span class="title">Basic function properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="codenumber">0.3.5</span> <span class="title">Mathematical induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Group Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_groups.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_def_group" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_product_groups" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Product groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_elem_group_proos" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Elementary properties</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_mod_rings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Modular arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Congruence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong_ring_structure" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_matrix_grps.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Matrix groups</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_dihedral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Dihedral groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_isometries" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Isometries of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_dihedral" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Dihedral groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_group_presentation" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Group presentations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_permutations.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_homomorph.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Homomorphisms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_action.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Group actions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgroups.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Subgroups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cyclic.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgrp_lattice.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Subgroup lattice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cosets_lagrange.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Cosets and Lagrange’s theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quotient_group.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Quotient groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_A.html" class="internal"><span class="codenumber">1.13</span> <span class="title">First isomorphism theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_B.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Isomorphism theorems: second and third</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_C.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Fourth isomorphism theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_alt_group.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Alternating subgroup</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_stabilizers.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Group actions: stabilizer</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_orbits.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Group actions: orbits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_class_number.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Class equation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Sylow_A.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Sylow theorems: intro</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_A.html#ss_Sylow_statements" class="internal"><span class="codenumber">1.20.1</span> <span class="title">Stamement and illustration of Sylow theorems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_A.html#ss_Sylow_action_subsets" class="internal"><span class="codenumber">1.20.2</span> <span class="title">First action: <span class="process-math">\(G\)</span> on <span class="process-math">\(p^k\)</span>-subsets of <span class="process-math">\(G\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Sylow_B.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Sylow theorems: conclusion of proof</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_B.html#ss_second_action" class="internal"><span class="codenumber">1.21.1</span> <span class="title">Second action: <span class="process-math">\(H\)</span> on <span class="process-math">\(G/K\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_B.html#ss_third_action" class="internal"><span class="codenumber">1.21.2</span> <span class="title">Third action: <span class="process-math">\(G\)</span> on <span class="process-math">\(\Syl_p(G)\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Sylow_apps.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Sylow theorems: applications</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_products_direct_semi.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Direct products</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_semidirect_products.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Semidirect products</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_semidirect_products.html#ss_direct_products" class="internal"><span class="codenumber">1.24.1</span> <span class="title">Definitions and theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_semidirect_products.html#ss_semidirect_examples" class="internal"><span class="codenumber">1.24.2</span> <span class="title">Classifying groups of given cardinality</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="c_rings_mods.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and modules</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_rings.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subrings_units_divisors.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subrings, units, zero divisors</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_grouprings_polys.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Group rings, polynomials, power series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_grouprings_polys.html#ss_group_rings" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Group rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_grouprings_polys.html#ss_poly_powerseries" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Polynomials and power series</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quaternions.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Hamilton quaternion rings</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_ring_homo.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Ring homomorphisms and ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ring_homo.html#ss_rings" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Ring homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ring_homo.html#ss_ideals" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Ideals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quot_ring.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Quotient rings and isomorphism theorems</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_prime_maximal.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Prime and maximal ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_maximal.html#ss_prime_max_ideals" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Prime and maximal ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_maximal.html#ss_zorn" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Zorn’s lemma</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_prime_max_poly.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Case study: polynomial rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_max_poly.html#ss_div_alg" class="internal"><span class="codenumber">2.8.1</span> <span class="title">Division algorithm for polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_max_poly.html#ss_poly_ring_fields" class="internal"><span class="codenumber">2.8.2</span> <span class="title">Polynomial rings over fields</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_crt.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Chinese remainder theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_crt.html#ss_" class="internal"><span class="codenumber">2.9.1</span> <span class="title">Chinese remainder theorem: general form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_crt.html#ss_CRT_integers" class="internal"><span class="codenumber">2.9.2</span> <span class="title">CRT in PIDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_localization.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Localizations and fraction fields</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-specs.html" class="internal"><span class="codenumber">E</span> <span class="title">Specimens</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-vids.html" class="internal"><span class="codenumber">F</span> <span class="title">Mantras and fiats</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_localization"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizations and fraction fields</span>
+</h2>
+<article class="definition definition-like" id="d_localization"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization.</span>
+</h3>
+<div class="para logical" id="d_localization-3-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a nonzero commutative ring. A subset <span class="process-math">\(S\subseteq R\)</span> is <dfn class="terminology">multiplicative</dfn> if the following conditions hold.</div>
+<ol class="lower-roman ol-marker-2" id="d_localization-3-1-4">
+<li id="d_localization-3-1-4-1">
+<div class="para" id="d_localization-3-1-4-1-1">
+<span class="process-math">\(1\in S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_localization-3-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#d_localization-3-1-4-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="d_localization-3-1-4-2">
+<div class="para" id="d_localization-3-1-4-2-1">If <span class="process-math">\(s,t\in S\text{,}\)</span> then <span class="process-math">\(st\in S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_localization-3-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#d_localization-3-1-4-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="para">Given a multiplicative subset <span class="process-math">\(S\subseteq R\)</span> we define an equivalence relation <span class="process-math">\(\sim\)</span> on the set <span class="process-math">\(R\times S\)</span> as follows:</div>
+<ul class="disc" id="d_localization-3-1-8">
+<li id="d_localization-3-1-8-1">
+<div class="para" id="d_localization-3-1-8-1-1">we formally write <span class="process-math">\((r,s)=r/s\)</span> for all <span class="process-math">\((r,s)\in R\times S\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_localization-3-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#d_localization-3-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="d_localization-3-1-8-2">
+<div class="para logical" id="d_localization-3-1-8-2-1">
+<div class="para">define <span class="process-math">\(r/s\sim r'/s'\)</span> if there exists <span class="process-math">\(t\in S\)</span> satisfying</div>
+<div class="displaymath process-math" id="d_localization-3-1-8-2-1-3">
+\begin{align}
+t(s'r-sr') \amp = 0\text{,}\tag{2.10.1}
+\end{align}
+</div>
+<div class="para">or equivalently,</div>
+<div class="displaymath process-math" id="d_localization-3-1-8-2-1-4">
+\begin{align}
+ts'r=tsr' \amp \text{.}\tag{2.10.2}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_localization-3-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#d_localization-3-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The <dfn class="terminology">localization of <span class="process-math">\(R\)</span> by <span class="process-math">\(S\)</span></dfn> (or <dfn class="terminology">ring of fractions of <span class="process-math">\(R\)</span> by <span class="process-math">\(S\)</span></dfn>), denoted <span class="process-math">\(S^{-1}R\)</span> is the set of all equivalence classes of <span class="process-math">\(R\times S\)</span> with respect to <span class="process-math">\(\sim\text{:}\)</span> i.e.,</div>
+<div class="displaymath process-math" id="d_localization-3-1-15">
+\begin{align*}
+S^{-1}R \amp =\{[r/s]_{\sim}\mid (r,s)\in R\times S\}\text{.}
+\end{align*}
+</div>
+<div class="para">By abuse of notation, we will write <span class="process-math">\(r/s\)</span> instead of <span class="process-math">\([r/s]_{\sim}\text{,}\)</span> and <span class="process-math">\(r/s=r'/s'\)</span> instead of <span class="process-math">\(r/s\sim r'/s'\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_localization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.10.1: Localization"><a href="#d_localization" title="Copy heading and permalink for Definition 2.10.1: Localization" aria-label="Copy heading and permalink for Definition 2.10.1: Localization">🔗</a></div></article><article class="remark remark-like" id="s_localization-3"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\Q\)</span> as localization of <span class="process-math">\(\Z\)</span>.</span>
+</h3>
+<div class="para logical" id="s_localization-3-2">
+<div class="para">The definition of a localization <span class="process-math">\(S^{-1}R\)</span> should remind you immediately of the construction of <span class="process-math">\(\Q\)</span> from <span class="process-math">\(\Z\text{.}\)</span> Indeed, with our new notation, we have <span class="process-math">\(\Q=S^{-1}\Z\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="s_localization-3-2-5">
+\begin{align*}
+S \amp =\Z-\{0\}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.10.2: \Q as localization of \Z"><a href="#s_localization-3" title="Copy heading and permalink for Remark 2.10.2: \Q as localization of \Z" aria-label="Copy heading and permalink for Remark 2.10.2: \Q as localization of \Z">🔗</a></div></article><article class="remark remark-like" id="s_localization-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization equivalence relation.</span>
+</h3>
+<div class="para" id="s_localization-4-2">The extra <span class="process-math">\(t\)</span> appearing in the equivalence relation definition <a href="s_localization.html#d_localization-3-1-8-2-1-3" class="xref" data-knowl="./knowl/xref/eq_locali_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.10.1">(2.10.1)</a> tends to bum people out. It is not used in the usual construction of <span class="process-math">\(\Q\text{,}\)</span> so why is it included here? It turns out, you need this even to show that <span class="process-math">\(\sim\)</span> is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of <span class="process-math">\(S\)</span> are nonzero and are not zero divisors, then the <span class="process-math">\(t\)</span> can be cancelled in <a href="s_localization.html#d_localization-3-1-8-2-1-3" class="xref" data-knowl="./knowl/xref/eq_locali_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.10.1">(2.10.1)</a>, and we recover the more familiar definition of “equality”.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.10.3: Localization equivalence relation"><a href="#s_localization-4" title="Copy heading and permalink for Remark 2.10.3: Localization equivalence relation" aria-label="Copy heading and permalink for Remark 2.10.3: Localization equivalence relation">🔗</a></div></article><article class="activity project-like" id="spec_localization"><h3 class="heading">
+<span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization by <span class="process-math">\(S\)</span>.</span>
+</h3>
+<div class="para logical" id="spec_localization-2-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{.}\)</span> The rules</div>
+<div class="displaymath process-math" id="spec_localization-2-1-3">
+\begin{align}
+r/s+r'/s' \amp = (s'r+r's)/ss'\tag{2.10.3}\\
+r/s\cdot r'/s' \amp = rr'/ss'\tag{2.10.4}
+\end{align}
+</div>
+<div class="para">yield well-defined binary operations <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> on <span class="process-math">\(S^{-1}R\text{,}\)</span> turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are <span class="process-math">\(0=0/1\)</span> and <span class="process-math">\(1=1/1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#spec_localization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="spec_localization-2-2">Additionally we call the map <span class="process-math">\(\lambda\colon R\rightarrow S^{-1}R\)</span> defined as <span class="process-math">\(\lambda(r)=r/1\)</span> the <dfn class="terminology">localization map</dfn> with respect to <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_localization-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Specimen 31: Localization by S"><a href="#spec_localization" title="Copy heading and permalink for Specimen 31: Localization by S" aria-label="Copy heading and permalink for Specimen 31: Localization by S">🔗</a></div></article><article class="proposition theorem-like" id="prop_locali"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization map.</span>
+</h3>
+<div class="para logical" id="prop_locali-2-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{.}\)</span> Define</div>
+<div class="displaymath process-math" id="prop_locali-2-1-3">
+\begin{align}
+\phi\colon R \amp \rightarrow S^{-1}R\tag{2.10.5}\\
+r \amp \mapsto r/1\text{.}\tag{2.10.6}
+\end{align}
+</div>
+<ol class="decimal" id="prop_locali-2-1-4">
+<li id="prop_locali-2-1-4-1">
+<div class="para" id="prop_locali-2-1-4-1-1">
+<span class="process-math">\(\phi\)</span> is a ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#prop_locali-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#prop_locali-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="prop_locali-2-1-4-2">
+<div class="para" id="prop_locali-2-1-4-2-1">
+<span class="process-math">\(\ker\phi=\{r\in R\mid sr=0 \text{ for some } s\in S\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_locali-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#prop_locali-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="prop_locali-2-1-4-3">
+<div class="para" id="prop_locali-2-1-4-3-1">
+<span class="process-math">\(\phi(S)\subseteq (S^{-1}R)^*\text{.}\)</span> In other words, <span class="process-math">\(\phi(s)\)</span> is a unit of <span class="process-math">\(S^{-1}R\)</span> for all <span class="process-math">\(s\in S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_locali-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#prop_locali-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_locali-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.10.4: Localization map"><a href="#prop_locali" title="Copy heading and permalink for Proposition 2.10.4: Localization map" aria-label="Copy heading and permalink for Proposition 2.10.4: Localization map">🔗</a></div></article><article class="remark remark-like" id="s_localization-7"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization.</span>
+</h3>
+<div class="para" id="s_localization-7-2">Predictably, given a ring <span class="process-math">\(R\)</span> and multiplicative subset <span class="process-math">\(S\subseteq R\text{,}\)</span> we will often want to identify <span class="process-math">\(S^{-1}R\)</span> as a familiar ring or quotient thereof (or product thereof). <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what <span class="process-math">\(S^{-1}R\)</span> might be in different cases. The proposition above, combined with the concrete construction of <span class="process-math">\(S^{-1}R\)</span> partially spells out this intuition: the ring <span class="process-math">\(S^{-1}R\)</span> should be thought of as the result of adjoining inverses <span class="process-math">\(1/s\)</span> to all elements of <span class="process-math">\(S\text{.}\)</span> Equivalently, <span class="process-math">\(S^{-1}R\)</span> is the result of inverting all elements of <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_localization-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_localization-7-3">That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of <span class="process-math">\(S\text{.}\)</span> For example, if <span class="process-math">\(S\)</span> contains a zero divisor, then it is not difficult to show that <span class="process-math">\(S^{-1}R=\{0\}\)</span> ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element <span class="process-math">\(s\)</span> is both a zero divisor and a unit, then the ring must be the trivial ring.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.10.5: Localization"><a href="#s_localization-7" title="Copy heading and permalink for Remark 2.10.5: Localization" aria-label="Copy heading and permalink for Remark 2.10.5: Localization">🔗</a></div></article><article class="theorem theorem-like" id="th_frac_field"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field.</span>
+</h3>
+<div class="para logical" id="th_frac_field-2-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be an integral domain.</div>
+<ol class="decimal" id="th_frac_field-2-1-2">
+<li id="th_frac_field-2-1-2-1">
+<div class="para" id="th_frac_field-2-1-2-1-1">The set <span class="process-math">\(S=R-\{0\}\)</span> is a multiplicative subset of <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_frac_field-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_frac_field-2-1-2-2">
+<div class="para" id="th_frac_field-2-1-2-2-1">
+<span class="process-math">\(F=S^{-1}R\)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_frac_field-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_frac_field-2-1-2-3">
+<div class="para" id="th_frac_field-2-1-2-3-1">The localization map <span class="process-math">\(\lambda\colon R\rightarrow F\)</span> is injective.<div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_frac_field-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.10.6: Fraction field"><a href="#th_frac_field" title="Copy heading and permalink for Theorem 2.10.6: Fraction field" aria-label="Copy heading and permalink for Theorem 2.10.6: Fraction field">🔗</a></div></article><details id="th_frac_field-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_frac_field-3-1">
+<ol class="decimal" id="th_frac_field-3-1-1">
+<li id="th_frac_field-3-1-1-1">
+<div class="para" id="th_frac_field-3-1-1-1-1">Let <span class="process-math">\(S=R-\{0\}\text{,}\)</span> the set of all nonzero elements of <span class="process-math">\(R\text{.}\)</span>  Clearly <span class="process-math">\(1\in S\text{.}\)</span> And <span class="process-math">\(S\)</span> is closed under multiplication because <span class="process-math">\(R\)</span> is an integral domain.<div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_frac_field-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_frac_field-3-1-1-2">
+<div class="para" id="th_frac_field-3-1-1-2-1">First observe that <span class="process-math">\(r/s= 0=0/0\)</span> in <span class="process-math">\(S^{-1}R\)</span> if and only if there is a <span class="process-math">\(t\in S\)</span> such that <span class="process-math">\(tr=0\text{.}\)</span> Since <span class="process-math">\(R\)</span> is integral and <span class="process-math">\(S=R-\{0\}\text{,}\)</span> we see that this is true if and only if <span class="process-math">\(r=0\text{.}\)</span> Thus, given nonzero <span class="process-math">\(r/s\text{,}\)</span> we may assume <span class="process-math">\(r\ne 0\text{,}\)</span> in which case <span class="process-math">\(r\in S=R-\{0\}\text{.}\)</span> But then the element <span class="process-math">\(s/r\)</span> is easily seen to be an inverse of <span class="process-math">\(r/s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_frac_field-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_frac_field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.10.6.1"><a href="#th_frac_field-3" title="Copy heading and permalink for Proof 2.10.6.1" aria-label="Copy heading and permalink for Proof 2.10.6.1">🔗</a></div></article></details><article class="definition definition-like" id="d_frac_field"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field.</span>
+</h3>
+<div class="para" id="d_frac_field-3-1">Let <span class="process-math">\(R\)</span> be an integral domain, and let <span class="process-math">\(S=R-\{0\}\text{.}\)</span> The field <span class="process-math">\(S^{-1}R\)</span> is called the <dfn class="terminology">fraction field</dfn> of <span class="process-math">\(R\text{,}\)</span> denoted <span class="process-math">\(\Frac R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_frac_field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.10.7: Fraction field"><a href="#d_frac_field" title="Copy heading and permalink for Definition 2.10.7: Fraction field" aria-label="Copy heading and permalink for Definition 2.10.7: Fraction field">🔗</a></div></article><article class="example example-like" id="eg_frac_fields"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction fields.</span>
+</h3>
+<div class="para logical" id="eg_frac_fields-2-1">
+<div class="para">Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?</div>
+<ol class="decimal" id="eg_frac_fields-2-1-1">
+<li id="eg_frac_fields-2-1-1-1">
+<div class="para" id="eg_frac_fields-2-1-1-1-1">
+<span class="process-math">\(\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_frac_fields-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_frac_fields-2-1-1-2">
+<div class="para" id="eg_frac_fields-2-1-1-2-1">
+<span class="process-math">\(F[x]\text{,}\)</span> where <span class="process-math">\(F\)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_frac_fields-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_frac_fields-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_frac_fields-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 2.10.8.1"><a href="#eg_frac_fields-3" title="Copy heading and permalink for Solution 2.10.8.1" aria-label="Copy heading and permalink for Solution 2.10.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.10.8: Fraction fields"><a href="#eg_frac_fields" title="Copy heading and permalink for Example 2.10.8: Fraction fields" aria-label="Copy heading and permalink for Example 2.10.8: Fraction fields">🔗</a></div></article><div class="para" id="s_localization-11">When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="th_locali_mapping"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping property of localizations.</span>
+</h3>
+<div class="para logical" id="th_locali_mapping-2-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow S^{-1}R\)</span> be the localization map.  Given any ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow T\)</span> satisfying <span class="process-math">\(\phi(S)\subseteq T^*\text{,}\)</span> there exists a unique ring homomorphism <span class="process-math">\(\phi^*\colon S^{-1}R\rightarrow T\)</span> satisfying</div>
+<div class="displaymath process-math" id="th_locali_mapping-2-1-7">
+\begin{align*}
+\phi \amp =\phi^*\circ \lambda\text{.}
+\end{align*}
+</div>
+<div class="para">Moreover, <span class="process-math">\(\phi^*\)</span> is defined as</div>
+<div class="displaymath process-math" id="th_locali_mapping-2-1-9">
+\begin{align}
+\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}\text{.}\tag{2.10.7}
+\end{align}
+</div>
+<div class="para">In short, there is a unique homomorphism <span class="process-math">\(\phi^*\)</span> making the diagram below commutative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/th_locali_mapping-2-2.svg" role="img" class="contained" alt="Commutative diagram summarizing mapping property of the localization map"></div>
+<div class="autopermalink" data-description="Theorem 2.10.9: Mapping property of localizations"><a href="#th_locali_mapping" title="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations" aria-label="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations">🔗</a></div></article><details id="th_locali_mapping-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_locali_mapping-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.10.9.1"><a href="#th_locali_mapping-3" title="Copy heading and permalink for Proof 2.10.9.1" aria-label="Copy heading and permalink for Proof 2.10.9.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_frac_field"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
+</h3>
+<div class="para" id="cor_frac_field-2-1">Let <span class="process-math">\(R\)</span> be an integral domain with fraction field <span class="process-math">\(\Frac R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow \Frac R\)</span> be the localization map. Given any field <span class="process-math">\(K\)</span> and ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow K\text{,}\)</span> there is a unique injective ring homomorphism <span class="process-math">\(\phi^*\colon \Frac R\rightarrow K\)</span> satisfying <span class="process-math">\(\phi=\phi^*\lambda\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_frac_field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.10.10: Fraction field mapping property"><a href="#cor_frac_field" title="Copy heading and permalink for Corollary 2.10.10: Fraction field mapping property" aria-label="Copy heading and permalink for Corollary 2.10.10: Fraction field mapping property">🔗</a></div></article><article class="remark remark-like" id="s_localization-14"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
+</h3>
+<div class="para" id="s_localization-14-2">With the set up as in <a href="s_localization.html#cor_frac_field" class="xref" data-knowl="./knowl/xref/cor_frac_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.10.10: Fraction field mapping property">Corollary 2.10.10</a>, if we identify <span class="process-math">\(R\)</span> with its isomorphic image <span class="process-math">\(\lambda(R)\)</span> in <span class="process-math">\(\Frac R\text{,}\)</span> then we obtain the following version of this result: given any ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow K\text{,}\)</span> where  <span class="process-math">\(K\)</span> is a field, there is a unique extension <span class="process-math">\(\phi^*\colon \Frac R\rightarrow K\text{.}\)</span> This property is summarized by the following diagram, obtained simply by replacing the map <span class="process-math">\(\lambda\)</span> in  <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> with the inclusion relation.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/s_localization-14-3.svg" role="img" class="contained" alt="Diagram summarizing mapping property of fraction field"></div>
+<div class="para" id="s_localization-14-4">Since the maps <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\phi^*\)</span> are both injective, this property is often summarized by saying that <span class="process-math">\(\Frac R\)</span> is the <em class="emphasis">smallest</em> field containing <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_localization-14-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.10.11: Fraction field mapping property"><a href="#s_localization-14" title="Copy heading and permalink for Remark 2.10.11: Fraction field mapping property" aria-label="Copy heading and permalink for Remark 2.10.11: Fraction field mapping property">🔗</a></div></article><article class="convention remark-like" id="notation_locali_at_x"><h3 class="heading">
+<span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special types of localizations.</span>
+</h3>
+<div class="para logical" id="notation_locali_at_x-2">
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring. Given a nonzero element <span class="process-math">\(x\in R\text{,}\)</span> we define <span class="process-math">\(R_x=S^{-1}R\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="notation_locali_at_x-2-4">
+\begin{align*}
+S= \amp \{x^n\mid n\in \Z_{\geq 0}\}=\{1,x,x^2,\dots\}\text{.}
+\end{align*}
+</div>
+<div class="para">Loosely speaking, <span class="process-math">\(R_x\)</span> is the ring obtained from <span class="process-math">\(R\)</span> by adjoining an inverse of <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notation_locali_at_x-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="notation_locali_at_x-3">
+<div class="para">Given a prime ideal <span class="process-math">\(P\subseteq R\text{,}\)</span> we define <span class="process-math">\(R_P=S^{-1}P\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="notation_locali_at_x-3-3">
+\begin{align*}
+S \amp = \{x\in R\mid x\notin P\}\text{.}
+\end{align*}
+</div>
+<div class="para">Note that the primality of <span class="process-math">\(P\)</span> implies <span class="process-math">\(S\)</span> is multiplicative: since <span class="process-math">\(P\ne R\text{,}\)</span> <span class="process-math">\(1\notin P\text{,}\)</span> and hence <span class="process-math">\(1\in S\text{;}\)</span> and <span class="process-math">\(S\)</span> is closed under multiplication because if <span class="process-math">\(s\)</span> and <span class="process-math">\(t\)</span> are not elements of <span class="process-math">\(P\text{,}\)</span> then neither is <span class="process-math">\(st\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notation_locali_at_x-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notation_locali_at_x-4">The localization <span class="process-math">\(R_P\)</span> is called the localization of <span class="process-math">\(R\)</span> at the prime ideal <span class="process-math">\(P\text{.}\)</span> It can be thought of as the ring obtained from <span class="process-math">\(R\)</span> by inverting all elements outside of <span class="process-math">\(P\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notation_locali_at_x-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Notation 2.10.12: Special types of localizations"><a href="#notation_locali_at_x" title="Copy heading and permalink for Notation 2.10.12: Special types of localizations" aria-label="Copy heading and permalink for Notation 2.10.12: Special types of localizations">🔗</a></div></article><article class="example example-like" id="eg_locali_at_2"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizing at an element: <span class="process-math">\(\Z_2\)</span>.</span>
+</h3>
+<div class="para" id="eg_locali_at_2-2-1">Identify <span class="process-math">\(\Z_2\)</span> (up to isomorphism) as a subring of a familiar ring. To be clear, <span class="process-math">\(\Z_2=S^{-1}\Z\text{,}\)</span> where <span class="process-math">\(S=\{1,2,2^2,\dots\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="eg_locali_at_2-2-2">Use <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_locali_at_2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_locali_at_2-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 2.10.13.1"><a href="#eg_locali_at_2-3" title="Copy heading and permalink for Solution 2.10.13.1" aria-label="Copy heading and permalink for Solution 2.10.13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.10.13: Localizing at an element: \Z_2"><a href="#eg_locali_at_2" title="Copy heading and permalink for Example 2.10.13: Localizing at an element: \Z_2" aria-label="Copy heading and permalink for Example 2.10.13: Localizing at an element: \Z_2">🔗</a></div></article><article class="example example-like" id="eg_locali_int_poly"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization of <span class="process-math">\(\Z[x]\)</span>.</span>
+</h3>
+<div class="para logical" id="eg_locali_int_poly-2-1">
+<div class="para">Define the subset <span class="process-math">\(S\)</span> of <span class="process-math">\(\Z[x]\)</span> as</div>
+<div class="displaymath process-math" id="eg_locali_int_poly-2-1-3">
+\begin{align*}
+S \amp =\Z-\{0\}\text{,}
+\end{align*}
+</div>
+<div class="para">where as usual, we identify <span class="process-math">\(\Z\)</span> with the subring of <span class="process-math">\(\Z[x]\)</span> consisting of the constant polynomials. Identify <span class="process-math">\(S^{-1}\Z[x]\)</span> (up to isomorphism) with a familiar ring.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_int_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_locali_int_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_locali_int_poly-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_int_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Solution 2.10.14.1"><a href="#eg_locali_int_poly-3" title="Copy heading and permalink for Solution 2.10.14.1" aria-label="Copy heading and permalink for Solution 2.10.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.10.14: Localization of \Z[x]"><a href="#eg_locali_int_poly" title="Copy heading and permalink for Example 2.10.14: Localization of \Z[x]" aria-label="Copy heading and permalink for Example 2.10.14: Localization of \Z[x]">🔗</a></div></article><article class="theorem theorem-like" id="th_locali_ideals"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideals of localizations.</span>
+</h3>
+<div class="para" id="th_locali_ideals-2-1">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow S^{-1}R\)</span> be the localization map.<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="th_locali_ideals-2-2">
+<div class="para">Given an ideal <span class="process-math">\(I\subseteq R\text{,}\)</span> define</div>
+<div class="displaymath process-math" id="th_locali_ideals-2-2-2">
+\begin{align}
+S^{-1}I \amp =(\lambda(I))\text{,}\tag{2.10.8}
+\end{align}
+</div>
+<div class="para">the ideal of <span class="process-math">\(S^{-1}R\)</span> generated by the set <span class="process-math">\(\lambda(I)\text{.}\)</span>
+</div>
+<ol class="decimal" id="th_locali_ideals-2-2-5">
+<li id="th_locali_ideals-2-2-5-1">
+<div class="para logical" id="th_locali_ideals-2-2-5-1-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="th_locali_ideals-2-2-5-1-1-1">
+\begin{align}
+S^{-1}I \amp = \{r/s\mid r\in I\}\tag{2.10.9}
+\end{align}
+</div>
+<div class="para">for all ideals <span class="process-math">\(I\subseteq R\text{.}\)</span> Furthermore, we have</div>
+<div class="displaymath process-math" id="th_locali_ideals-2-2-5-1-1-3">
+\begin{align}
+S^{-1}I=S^{-1}R \amp  \text{ if and only if } I\cap S\ne \emptyset\text{.}\tag{2.10.10}
+\end{align}
+</div>
+<div class="para">Equivalently, <span class="process-math">\(S^{-1}I\)</span> is a proper ideal of <span class="process-math">\(S^{-1}R\)</span> if and only if <span class="process-math">\(I\)</span> does not intersect <span class="process-math">\(S\)</span> (i.e., <span class="process-math">\(I\cap S=\emptyset\)</span>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_locali_ideals-2-2-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_locali_ideals-2-2-5-2">
+<div class="para logical" id="th_locali_ideals-2-2-5-2-1">
+<div class="para">Given an ideal <span class="process-math">\(J\subseteq S^{-1}R\text{,}\)</span> let <span class="process-math">\(I=\lambda^{-1}(J)=\{r\in R\mid r/1\in J\}\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="th_locali_ideals-2-2-5-2-1-3">
+\begin{align}
+J \amp =S^{-1}(I)\text{.}\tag{2.10.11}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_locali_ideals-2-2-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_locali_ideals-2-2-5-3">
+<div class="para logical" id="th_locali_ideals-2-2-5-3-1">
+<div class="para">The maps</div>
+<div class="displaymath process-math" id="th_locali_ideals-2-2-5-3-1-1">
+\begin{align}
+P \amp  \mapsto S^{-1}P\tag{2.10.12}\\
+Q\amp \mapsto \lambda^{-1}(Q)\tag{2.10.13}
+\end{align}
+</div>
+<div class="para">define a bijective correspondence between the set of prime ideals <span class="process-math">\(P\subseteq R\)</span> that do not intersect <span class="process-math">\(S\)</span> (i.e., <span class="process-math">\(P\cap S=\emptyset\)</span>), and the prime ideals of <span class="process-math">\(S^{-1}R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_locali_ideals-2-2-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.10.15: Ideals of localizations"><a href="#th_locali_ideals" title="Copy heading and permalink for Theorem 2.10.15: Ideals of localizations" aria-label="Copy heading and permalink for Theorem 2.10.15: Ideals of localizations">🔗</a></div></article><details id="th_locali_ideals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_locali_ideals-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.10.15.1"><a href="#th_locali_ideals-3" title="Copy heading and permalink for Proof 2.10.15.1" aria-label="Copy heading and permalink for Proof 2.10.15.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_primes_polyintergers"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime ideals of <span class="process-math">\(\Z[x]\)</span>.</span>
+</h3>
+<div class="para logical" id="cor_primes_polyintergers-2-1">
+<div class="para">If <span class="process-math">\(P\)</span> is a prime ideal of <span class="process-math">\(\Z[x]\text{,}\)</span> then one of the following statements holds.</div>
+<ol class="decimal" id="cor_primes_polyintergers-2-1-3">
+<li id="cor_primes_polyintergers-2-1-3-1">
+<div class="para" id="cor_primes_polyintergers-2-1-3-1-1">
+<span class="process-math">\(P=(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#cor_primes_polyintergers-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="cor_primes_polyintergers-2-1-3-2">
+<div class="para" id="cor_primes_polyintergers-2-1-3-2-1">
+<span class="process-math">\(P=(p)\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer.<div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#cor_primes_polyintergers-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="cor_primes_polyintergers-2-1-3-3">
+<div class="para" id="cor_primes_polyintergers-2-1-3-3-1">
+<span class="process-math">\(P=(p,f)\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer, <span class="process-math">\(f\in \Z[x]\)</span> is monic, and <span class="process-math">\(\overline{f}\text{,}\)</span> the reduction of <span class="process-math">\(f\)</span> modulo <span class="process-math">\(p\text{,}\)</span> is an irreducible polynomial of <span class="process-math">\(\F_p[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#cor_primes_polyintergers-2-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="cor_primes_polyintergers-2-1-3-4">
+<div class="para" id="cor_primes_polyintergers-2-1-3-4-1">
+<span class="process-math">\(P=(f)\text{,}\)</span> where <span class="process-math">\(f\in \Z[x]\)</span> is irreducible when considered as a polynomial in <span class="process-math">\(\Q[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#cor_primes_polyintergers-2-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.10.16: Prime ideals of \Z[x]"><a href="#cor_primes_polyintergers" title="Copy heading and permalink for Corollary 2.10.16: Prime ideals of \Z[x]" aria-label="Copy heading and permalink for Corollary 2.10.16: Prime ideals of \Z[x]">🔗</a></div></article><div class="autopermalink" data-description="Section 2.10: Localizations and fraction fields"><a href="#s_localization" title="Copy heading and permalink for Section 2.10: Localizations and fraction fields" aria-label="Copy heading and permalink for Section 2.10: Localizations and fraction fields">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="s_crt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
