@@ -71,16 +71,16 @@
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
-    <divisions chapter-start="0" level="2"/>
-    <blocks level="1"/>
-    <examples level="1"/>
-    <definitions level="1"/>
-    <theorems level="1"/>
-    <corollaries level="1"/>
+    <divisions chapter-start="0" level="3"/>
+    <blocks level="2"/>
+    <examples level="3"/>
+    <definitions level="3"/>
+    <theorems level="3"/>
+    <corollaries level="3"/>
     <projects level="0"/>
     <activity level="0"/>
-    <equations level="1"/>
-    <footnotes level="1"/>
+    <equations level="2"/>
+    <footnotes level="3"/>
   </numbering>
 
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->

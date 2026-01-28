@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_localization" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Localizations and fraction fields</title>
+
+    <definition xml:id="d_localization">
+    <title>Localization</title>
+    <notation>
+        <usage><m>S^{-1}R</m></usage>
+      <description>localization of ring <m>R</m> by <m>S</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. A subset <m>S\subseteq R</m> is <term>multiplicative</term> if the following conditions hold.
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>1\in S</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                If <m>s,t\in S</m>, then <m>st\in S</m>. 
+            </p>
+        </li>
+    </ol>
+    Given a multiplicative subset <m>S\subseteq R</m> we define an equivalence relation <m>\sim</m> on the set <m>R\times S</m> as follows: 
+    <ul>
+        <li>
+            <p>
+                we formally write <m>(r,s)=r/s</m> for all <m>(r,s)\in R\times S</m>; 
+            </p>
+        </li>
+        <li>
+            <p>
+                define <m>r/s\sim r'/s'</m> if there exists <m>t\in S</m> satisfying 
+                <md number="yes">
+                    <mrow xml:id="eq_locali_equiv">t(s'r-sr') \amp = 0</mrow>
+                </md>,
+                or equivalently, 
+                <md number="yes">
+                    <mrow>ts'r=tsr' \amp </mrow>
+                </md>.
+            </p>
+        </li>
+    </ul>
+    The <term>localization of <m>R</m> by <m>S</m></term> (or <term>ring of fractions of <m>R</m> by <m>S</m></term>), denoted <m>S^{-1}R</m> is the set of all equivalence classes of <m>R\times S</m> with respect to <m>\sim</m>: <ie/>, 
+    <md>
+        <mrow>S^{-1}R \amp =\{[r/s]_{\sim}\mid (r,s)\in R\times S\}</mrow>
+    </md>.
+    By abuse of notation, we will write <m>r/s</m> instead of <m>[r/s]_{\sim}</m>, and <m>r/s=r'/s'</m> instead of <m>r/s\sim r'/s'</m>.
+    </p>
+    </statement>
+    </definition>
+    <remark>
+    <title><m>\Q</m> as localization of <m>\Z</m></title>
+    <p>
+    The definition of a localization <m>S^{-1}R</m> should remind you immediately of the construction of <m>\Q</m> from <m>\Z</m>. Indeed, with our new notation, we have <m>\Q=S^{-1}\Z</m>, where 
+    <md>
+        <mrow>S \amp =\Z-\{0\}</mrow>
+    </md>.
+    </p>
+    </remark>
+    <remark>
+    <title>Equivalence <m>\sim</m></title>
+    <p>
+    The extra <m>t</m> appearing in the equivalence relation definition <xref ref="eq_locali_equiv"/> tends to bum people out. It is not used in the usual construction of <m>\Q</m>, so why is it included here? It turns out, you need this even to show that <m>\sim</m> is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of <m>S</m> are nonzero and are not zero divisors, then the <m>t</m> can be cancelled in <xref ref="eq_locali_equiv"/>, and we recover the more familiar definition of <q>equality</q>.  
+    </p>
+    </remark>
+    <activity xml:id="spec_localization">
+    <title>Localization by <m>S</m></title>
+    <statement>
+    <p>
+    Let <m>S</m> be a multiplicative subset of the nonzero commutative ring <m>R</m>. The rules 
+    <md number="yes">
+        <mrow>r/s+r'/s' \amp = (s'r+r's)/ss'</mrow>
+        <mrow>r/s\cdot r'/s' \amp = rr'/ss'</mrow>
+    </md>
+    yield well-defined binary operations <m>+</m> and <m>\cdot</m> on <m>S^{-1}R</m>, turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are <m>0=0/1</m> and <m>1=1/1</m>. 
+    </p>
+    <p>
+        Additionally we call the map <m>\lambda\colon R\rightarrow S^{-1}R</m> defined as <m>\lambda(r)=r/1</m> the <term>localization map</term> with respect to <m>S</m>. 
+    </p>
+    </statement>
+    </activity>
+    <proposition xml:id="prop_locali">
+        <title>Localization map</title>
+        <statement>
+            <p>
+                Let <m>S</m> be a multiplicative subset of the nonzero commutative ring <m>R</m>. Define 
+                <md number="yes">
+                    <mrow>\phi\colon R \amp \rightarrow S^{-1}R</mrow>
+                    <mrow>r \amp \mapsto r/1</mrow>
+                </md>.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\phi</m> is a ring homomorphism.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\ker\phi=\{r\in R\mid sr=0 \text{ for some } s\in S\}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\phi(S)\subseteq (S^{-1}R)^*</m>. In other words, <m>\phi(s)</m> is a unit of <m>S^{-1}R</m> for all <m>s\in S</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+    <theorem xml:id="th_frac_field">
+    <title>Fraction field</title>
+    <statement>
+    <p>
+    Let <m>R</m> be an integral domain. 
+    <ol>
+        <li>
+            <p>
+                The set <m>S=R-\{0\}</m> is a multiplicative subset of <m>R</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>F=S^{-1}R</m> is a field. 
+            </p>
+        </li>
+        <li>
+            <p>
+                The localization map <m>\lambda\colon R\rightarrow F</m> is injective. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    Let <m>S=R-\{0\}</m>, the set of all nonzero elements of <m>R</m>.  Clearly <m>1\in S</m>. And <m>S</m> is closed under multiplication because <m>R</m> is an integral domain. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    First observe that <m>r/s= 0=0/0</m> in <m>S^{-1}R</m> if and only if there is a <m>t\in S</m> such that <m>tr=0</m>. Since <m>R</m> is integral and <m>S=R-\{0\}</m>, we see that this is true if and only if <m>r=0</m>. Thus, given nonzero <m>r/s</m>, we may assume <m>r\ne 0</m>, in which case <m>r\in S=R-\{0\}</m>. But then the element <m>s/r</m> is easily seen to be an inverse of <m>r/s</m>. 
+                </p>
+            </li>
+        </ol>
+    </p>
+    </proof>
+    </theorem>
+    <definition xml:id="d_frac_field">
+    <title>Fraction field</title>
+    <notation>
+        <usage><m>\Frac R</m></usage>
+      <description>the fraction field of <m>R</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>R</m> be an integral domain, and let <m>S=R-\{0\}</m>. The field <m>S^{-1}R</m> is called the <term>fraction field</term> of <m>R</m>, denoted <m>\Frac R</m>. 
+    </p>
+    </statement>
+    </definition>
+    
+    <example xml:id="eg_frac_fields">
+    <title>Fraction fields</title>
+    <statement>
+    <p>
+    Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?
+    <ol>
+        <li>
+            <p>
+                <m>\Z</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>F[x]</m>, where <m>F</m> is a field. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+         When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential. 
+    </p>
+    <theorem xml:id="th_locali_mapping">
+    <title>Mapping property of localizations</title>
+    <statement>
+    <p>
+    Let <m>S</m> be a multiplicative subset of the nonzero commutative ring <m>R</m>, and let <m>\lambda\colon R\rightarrow S^{-1}R</m> be the localization map.  Given any ring homomorphism <m>\phi\colon R\rightarrow T</m> satisfying <m>\phi(S)\subseteq T^*</m>, there exists a unique ring homomorphism <m>\phi^*\colon S^{-1}R\rightarrow T</m> satisfying 
+    <md>
+        <mrow>\phi \amp =\phi^*\circ \lambda</mrow>
+    </md>.
+    Moreover, <m>\phi^*</m> is defined as 
+    <md number="yes">
+        <mrow xml:id="eq_locali_map">\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}</mrow>
+    </md>.
+    In short, there is a unique homomorphism <m>\phi^*</m> making the diagram below commutative. 
+    </p>
+    <image width="40%">
+        <shortdescription>Commutative diagram summarizing mapping property of the localization map</shortdescription>
+        <latex-image>
+        \begin{tikzcd}
+        R\arrow[rr,"\phi"] \arrow[rd,"\lambda"'] \amp  \amp T \\
+        \amp S^{-1}R \arrow[ru,"\exists\, ! \,\phi^*"', dotted] \amp  \amp 
+        \end{tikzcd}
+        </latex-image>
+    </image>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_frac_field">
+        <title>Fraction field mapping property</title>
+        <statement>
+            <p>
+              Let <m>R</m> be an integral domain with fraction field <m>\Frac R</m>, and let <m>\lambda\colon R\rightarrow \Frac R</m> be the localization map. Given any field <m>K</m> and ring homomorphism <m>\phi\colon R\rightarrow K</m>, there is a unique injective ring homomorphism <m>\phi^*\colon \Frac R\rightarrow K</m> satisfying <m>\phi=\phi^*\lambda</m>. 
+            </p>
+        </statement>
+    </corollary>
+    <remark>
+        <title>Fraction field mapping property</title>
+        <p>
+            With the set up as in <xref ref="cor_frac_field"/>, if we identify <m>R</m> with its isomorphic image <m>\lambda(R)</m> in <m>\Frac R</m>, then we obtain the following version of this result: given any ring homomorphism <m>\phi\colon R\rightarrow K</m>, where  <m>K</m> is a field, there is a unique extension <m>\phi^*\colon \Frac R\rightarrow K</m>. This property is summarized by the following diagram, obtained simply by replacing the map <m>\lambda</m> in  <xref ref="th_locali_mapping"/> with the inclusion relation. 
+        </p>
+        <image width="35%">
+            <shortdescription>Diagram summarizing mapping property of fraction field</shortdescription>
+            <latex-image>
+            \begin{tikzcd}
+            R\arrow[dr,phantom,sloped, "\subseteq"] \arrow[rr,"\phi"] \amp [-20] \amp [-20] K \\ 
+            \amp \Frac R\arrow[ru,hookrightarrow,"\phi^*"'] \amp
+            \end{tikzcd}
+            </latex-image>
+        </image>
+        <p>
+            Since the maps <m>\phi</m> and <m>\phi^*</m> are both injective, this property is often summarized by saying that <m>\Frac R</m> is the <em>smallest</em> field containing <m>R</m>. 
+        </p>
+    </remark>
+    <convention xml:id="notation_locali_at_x">
+        <title>Special types of localizations</title>
+        <p>
+            Let <m>R</m> be a commutative ring. Given a nonzero element <m>x\in R</m>, we define <m>R_x=S^{-1}R</m>, where 
+            <md>
+                <mrow>S= \amp \{x^n\mid n\in \Z_{\geq 0}\}=\{1,x,x^2,\dots\}</mrow>
+            </md>.
+            Loosely speaking, <m>R_x</m> is the ring obtained from <m>R</m> by adjoining an inverse of <m>x</m>. 
+        </p>
+        <p>
+            Given a prime ideal <m>P\subseteq R</m>, we define <m>R_P=S^{-1}P</m>, where 
+            <md>
+                <mrow>S \amp = \{x\in R\mid x\notin P\}</mrow>
+            </md>.
+            Note that the primality of <m>P</m> implies <m>S</m> is multiplicative: since <m>P\ne R</m>, <m>1\notin P</m>, and hence <m>1\in S</m>; and <m>S</m> is closed under multiplication because if <m>s</m> and <m>t</m> are not elements of <m>P</m>, then neither is <m>st</m>. 
+        </p>
+        <p>
+            The localization <m>R_P</m> is called the localization of <m>R</m> at the prime ideal <m>P</m>. It can be thought of as the ring obtained from <m>R</m> by inverting all elements outside of <m>P</m>. 
+        </p>
+    </convention>
+    <example xml:id="eg_locali_at_2">
+    <title>Localizing at an element: <m>\Z_2</m></title>
+    <statement>
+    <p>
+    Identify <m>\Z_2</m> (up to isomorphism) as a subring of a familiar ring. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+
+</section>

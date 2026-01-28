@@ -74,7 +74,7 @@
     <figure xml:id="fig_ring_quot_univ_prop">
         <caption>Universal property of quotient map</caption>
     
-    <image width="30%">
+    <image width="40%">
         <shortdescription>Universal property of quotient map</shortdescription>
         <latex-image>
         \begin{tikzcd}
