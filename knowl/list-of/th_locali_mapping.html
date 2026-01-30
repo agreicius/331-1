@@ -31,13 +31,60 @@
 <div class="para">Moreover, <span class="process-math">\(\phi^*\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{align}
-\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}\text{.}\tag{2.10.7}
+\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}\text{.}\tag{2.10.8}
 \end{align}
 </div>
 <div class="para">In short, there is a unique homomorphism <span class="process-math">\(\phi^*\)</span> making the diagram below commutative.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/th_locali_mapping-2-2.svg" role="img" class="contained" alt="Commutative diagram summarizing mapping property of the localization map"></div>
-<div class="autopermalink" data-description="Theorem 2.10.9: Mapping property of localizations"><a href="#th_locali_mapping" title="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations" aria-label="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Theorem 2.10.9: Mapping property of localizations"><a href="#th_locali_mapping" title="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations" aria-label="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Given such a map <span class="process-math">\(\phi\text{,}\)</span> if <span class="process-math">\(\phi^*\)</span> exists making the diagram commutative, then in particular, we must have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi^*(r/1) \amp =\phi(r)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(r\in R\text{.}\)</span> Since <span class="process-math">\(\phi^*\)</span> is a ring homomorphism, we must have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(r/s) \amp =\phi(r/1\cdot 1/s)\\
+\amp \phi^*(r/1\cdot (s/1)^{-1}) \\
+\amp =\phi^*(r/1)\cdot (\phi^*(s/1))^{-1}\\
+\amp = \phi(r)\phi(s)^{-1}\text{,}
+\end{align*}
+</div>
+<div class="para">as claimed.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To finish the proof, we simply show that the proposed formula gives rise to a well-defined ring homomorphism <span class="process-math">\(\phi^*\colon S^{-1}R\rightarrow T\)</span> satisfying <span class="process-math">\(\phi=\phi^*\circ \lambda\text{.}\)</span> We first check that we get a well-defined function. Suppose <span class="process-math">\(r/s=r'/s'\text{,}\)</span> so that there exists an element <span class="process-math">\(s''\in S\)</span> satisfying <span class="process-math">\(s''s'r=s''sr'\text{.}\)</span> We then have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(s''s'r)=\phi(s''sr') \amp\implies \phi(s'')phi(s')\phi(r)=\phi(s'')\phi(s)\phi(r') \\
+\amp \implies \phi(r)\phi(s)^{-1}=\phi(r')\phi(s')^{-1} \amp (x\in S\implies \phi(x)\in T^*) \\
+\amp \implies \phi^*(r/s)=\phi^*(r'/s')\text{.}
+\end{align*}
+</div>
+<div class="para">As is often the case in these situations, having establish well-definedness of <span class="process-math">\(\phi^*\text{,}\)</span> the remaining desired properties are easily verified. Here is a quick verification of all the properties we need:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi^*(\lambda(r)) \amp =\phi^*(r/1)\\
+\amp =\phi(r)\phi(1)^{-1}=\phi(r) \\
+\phi^*(r/s+r'/s') \amp =\phi^*((s'r+r's)/ss')\\
+\amp \phi(s'r+r's)\phi(ss')^{-1} \\
+\amp =(\phi(s')\phi(r)+\phi(r')\phi(s))\phi(s)^{-1}\phi(s')^{-1}\\
+\amp =\phi(r)\phi(s)^{-1}+\phi(r')\phi(s')^{-1} \\
+\amp =\phi(r/s)+\phi(r'/s')\\
+\phi^*(r/s\cdot r'/s') \amp =\phi^*(rr'/ss')\\
+\amp = \phi(rr')\phi(ss')^{-1}\\
+\amp =\phi(r)\phi(s)^{-1}\phi(r')\phi(s')\\
+\amp = \phi^*(r/s)\phi^*(r'/s')\\
+\phi^*(1) \amp =\phi^*(1/1)\\
+\amp =\phi(1)\phi(1)^{-1}=1\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Proof 2.10.9.1"><a href="#th_locali_mapping-3" title="Copy heading and permalink for Proof 2.10.9.1" aria-label="Copy heading and permalink for Proof 2.10.9.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_localization.html#th_locali_mapping">in-context</a></span>
 </body>
 </html>

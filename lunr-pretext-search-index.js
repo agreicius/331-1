@@ -3859,7 +3859,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.10",
   "title": "Localizations and fraction fields",
-  "body": " Localizations and fraction fields   Localization    localization of ring by    Let be a nonzero commutative ring. A subset is multiplicative if the following conditions hold.    .    If , then .   Given a multiplicative subset we define an equivalence relation on the set as follows:   we formally write for all ;    define if there exists satisfying , or equivalently, .   The localization of by (or ring of fractions of by ), denoted is the set of all equivalence classes of with respect to : , . By abuse of notation, we will write instead of , and instead of .     as localization of  The definition of a localization should remind you immediately of the construction of from . Indeed, with our new notation, we have , where .    Localization equivalence relation  The extra appearing in the equivalence relation definition tends to bum people out. It is not used in the usual construction of , so why is it included here? It turns out, you need this even to show that is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of are nonzero and are not zero divisors, then the can be cancelled in , and we recover the more familiar definition of equality .    Localization by   Let be a multiplicative subset of the nonzero commutative ring . The rules yield well-defined binary operations and on , turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are and .  Additionally we call the map defined as the localization map with respect to .     Localization map   Let be a multiplicative subset of the nonzero commutative ring . Define .    is a ring homomorphism.     .     . In other words, is a unit of for all .        Localization  Predictably, given a ring and multiplicative subset , we will often want to identify as a familiar ring or quotient thereof (or product thereof). below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what might be in different cases. The proposition above, combined with the concrete construction of partially spells out this intuition: the ring should be thought of as the result of adjoining inverses to all elements of . Equivalently, is the result of inverting all elements of .  That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of . For example, if contains a zero divisor, then it is not difficult to show that ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element is both a zero divisor and a unit, then the ring must be the trivial ring.    Fraction field   Let be an integral domain.   The set is a multiplicative subset of .     is a field.    The localization map is injective.          Let , the set of all nonzero elements of . Clearly . And is closed under multiplication because is an integral domain.    First observe that in if and only if there is a such that . Since is integral and , we see that this is true if and only if . Thus, given nonzero , we may assume , in which case . But then the element is easily seen to be an inverse of .        Fraction field    the fraction field of    Let be an integral domain, and let . The field is called the fraction field of , denoted .     Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.           When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.   Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map           Fraction field mapping property   Let be an integral domain with fraction field , and let be the localization map. Given any field and ring homomorphism , there is a unique injective ring homomorphism satisfying .     Fraction field mapping property  With the set up as in , if we identify with its isomorphic image in , then we obtain the following version of this result: given any ring homomorphism , where is a field, there is a unique extension . This property is summarized by the following diagram, obtained simply by replacing the map in with the inclusion relation.   Diagram summarizing mapping property of fraction field    Since the maps and are both injective, this property is often summarized by saying that is the smallest field containing .    Special types of localizations  Let be a commutative ring. Given a nonzero element , we define , where . Loosely speaking, is the ring obtained from by adjoining an inverse of .  Given a prime ideal , we define , where . Note that the primality of implies is multiplicative: since , , and hence ; and is closed under multiplication because if and are not elements of , then neither is .  The localization is called the localization of at the prime ideal . It can be thought of as the ring obtained from by inverting all elements outside of .    Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .         Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.         Localizations and ideals   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map.  Given an ideal , define , the ideal of generated by the set .   We have for all ideals . Furthermore, we have . Equivalently, is a proper ideal of if and only if does not intersect ( , ).    Given an ideal , let . We have .    The maps define a bijective correspondence between the set of prime ideals that do not intersect ( , ), and the prime ideals of .            Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .       "
+  "body": " Localizations and fraction fields   Localization    localization of ring by    Let be a nonzero commutative ring. A subset is multiplicative if the following conditions hold.    .    If , then .   Given a multiplicative subset we define an equivalence relation on the set as follows:   we formally write for all ;    define if there exists satisfying , or equivalently, .   The localization of by (or ring of fractions of by ), denoted is the set of all equivalence classes of with respect to : , . By abuse of notation, we will write instead of , and instead of .     as localization of  The definition of a localization should remind you immediately of the construction of from . Indeed, with our new notation, we have , where .    Localization equivalence relation  The extra appearing in the equivalence relation definition tends to bum people out. It is not used in the usual construction of , so why is it included here? It turns out, you need this even to show that is an equivalence relation! The issue becomes apparent when you try to verify the transitivity property. Note, however, that if all elements of are nonzero and are not zero divisors, then the can be cancelled in , and we recover the more familiar definition of equality .    Localization by   Let be a multiplicative subset of the nonzero commutative ring . The rules yield well-defined binary operations and on , turning it into a commutative ring. The additive and multiplicative identities with respect to this ring structure are and .  Additionally we call the map defined as the localization map with respect to .     Localization map   Let be a multiplicative subset of the nonzero commutative ring . Define .    is a ring homomorphism.     .     . In other words, is a unit of for all .        Localization  Predictably, given a ring and multiplicative subset , we will often want to identify as a familiar ring or quotient thereof (or product thereof). below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what might be in different cases. The proposition above, combined with the concrete construction of partially spells out this intuition: the ring should be thought of as the result of adjoining inverses to all elements of . Equivalently, is the result of inverting all elements of .  That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of . For example, if contains a zero divisor, then it is not difficult to show that ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element is both a zero divisor and a unit, then the ring must be the trivial ring.    Fraction field   Let be an integral domain.   The set is a multiplicative subset of .     is a field.    The localization map is injective.          Let , the set of all nonzero elements of . Clearly . And is closed under multiplication because is an integral domain.    First observe that in if and only if there is a such that . Since is integral and , we see that this is true if and only if . Thus, given nonzero , we may assume , in which case . But then the element is easily seen to be an inverse of .        Fraction field    the fraction field of    Let be an integral domain, and let . The field is called the fraction field of , denoted .     Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.       These two fraction fields are precisely the rational numbers , and the so-called field of rational functions over , respectively.     Rational functions over field   Given a field , the field of rational functions over in the indeterminate , denoted is defined as the fraction field of : , .    When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.   Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map      Given such a map , if exists making the diagram commutative, then in particular, we must have for all . Since is a ring homomorphism, we must have , as claimed.  To finish the proof, we simply show that the proposed formula gives rise to a well-defined ring homomorphism satisfying . We first check that we get a well-defined function. Suppose , so that there exists an element satisfying . We then have . As is often the case in these situations, having establish well-definedness of , the remaining desired properties are easily verified. Here is a quick verification of all the properties we need: .    The next corollary is a useful summary of that will help when computing the set of ring homomorphisms out of a localization ring.   Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any nonzero ring , the map is a bijection.    As a special case, we can consider an integral domain and with multiplicative set . In this case, we have , immediately yielding the following result.   Fraction field mapping property   Let be an integral domain with fraction field , and let be the localization map. Given any field and ring homomorphism , there is a unique injective ring homomorphism satisfying .     Fraction field mapping property  With the set up as in , if we identify with its isomorphic image in , then we obtain the following version of this result: given any ring homomorphism , where is a field, there is a unique extension . This property is summarized by the following diagram, obtained simply by replacing the map in with the inclusion relation.   Diagram summarizing mapping property of fraction field    Since the maps and are both injective, this property is often summarized by saying that is the smallest field containing .    Special types of localizations  Let be a commutative ring. Given a nonzero element , we define , where . Loosely speaking, is the ring obtained from by adjoining an inverse of .  Given a prime ideal , we define , where . Note that the primality of implies is multiplicative: since , , and hence ; and is closed under multiplication because if and are not elements of , then neither is .  The localization is called the localization of at the prime ideal . It can be thought of as the ring obtained from by inverting all elements outside of .   We now proceed to some examples illustrating how to use in order to identify localizations as familiar rings. Since we will be interested in establishing isomorphisms, we will want to know when the map is injective . The following proposition is helpful in that regard.   Kernel of   Let be a multiplicative subset of the nonzero commutative ring , let be a ring homomorphism satisfying , and let be its associated map as in . We have . In particular, if is injective, then so is .     Kernel of  Getting ahead of ourselves somewhat, using the notation and results of , we can summarize as follows: .    Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .    Using the intuitive idea of as the smallest ring obtained from by adding an inverse to (and hence all of its powers), and observing that is precisely such a ring, we guess that might be isomorphic to some subring of . Let's use to make things precise (and rigorous). We let be the inclusion map.  Let , since , we have a ring homomorphism defined as . By , since is injective, so is . By the first isomorphism theorem, we have .     Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.    Again, working intuitively, we ask ourselves what would be the result of taking the ring and inverting all nonzero integers. The resulting ring should then contain . But a ring that contains and , then you should probably containg , right? So we guess that . Let be the usual inclusion map. We have , since in general the units of a polynomial ring are precisely the nonzero constant polynomials. Since is injective, so is the associated map . Thus we have . For the last equality, the inclusion is clear. For the reverse inclusion, given any , we have , where , and .     Localizations and ideals   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map.  Given an ideal , define , the ideal of generated by the set .   We have for all ideals . Furthermore, we have . Equivalently, is a proper ideal of if and only if does not intersect ( , ).    Given an ideal , let . We have .    The maps define a bijective correspondence between the set of prime ideals that do not intersect ( , ), and the prime ideals of .            Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .       "
 },
 {
   "id": "d_localization",
@@ -3940,7 +3940,16 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.10.8",
   "title": "Fraction fields.",
-  "body": " Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.          "
+  "body": " Fraction fields   Give a description of the fraction fields of the following integral domains. Do you recognize these as objects you saw before in your mathematical youth?    .     , where is a field.       These two fraction fields are precisely the rational numbers , and the so-called field of rational functions over , respectively.   "
+},
+{
+  "id": "spec_rational_functions",
+  "level": "2",
+  "url": "s_localization.html#spec_rational_functions",
+  "type": "Specimen",
+  "number": "32",
+  "title": "Rational functions over field.",
+  "body": " Rational functions over field   Given a field , the field of rational functions over in the indeterminate , denoted is defined as the fraction field of : , .   "
 },
 {
   "id": "th_locali_mapping",
@@ -3949,23 +3958,32 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.10.9",
   "title": "Mapping property of localizations.",
-  "body": " Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map         "
+  "body": " Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any ring homomorphism satisfying , there exists a unique ring homomorphism satisfying . Moreover, is defined as . In short, there is a unique homomorphism making the diagram below commutative.   Commutative diagram summarizing mapping property of the localization map      Given such a map , if exists making the diagram commutative, then in particular, we must have for all . Since is a ring homomorphism, we must have , as claimed.  To finish the proof, we simply show that the proposed formula gives rise to a well-defined ring homomorphism satisfying . We first check that we get a well-defined function. Suppose , so that there exists an element satisfying . We then have . As is often the case in these situations, having establish well-definedness of , the remaining desired properties are easily verified. Here is a quick verification of all the properties we need: .   "
+},
+{
+  "id": "cor_locali_map",
+  "level": "2",
+  "url": "s_localization.html#cor_locali_map",
+  "type": "Corollary",
+  "number": "2.10.10",
+  "title": "Mapping property of localizations.",
+  "body": " Mapping property of localizations   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map. Given any nonzero ring , the map is a bijection.   "
 },
 {
   "id": "cor_frac_field",
   "level": "2",
   "url": "s_localization.html#cor_frac_field",
   "type": "Corollary",
-  "number": "2.10.10",
+  "number": "2.10.11",
   "title": "Fraction field mapping property.",
   "body": " Fraction field mapping property   Let be an integral domain with fraction field , and let be the localization map. Given any field and ring homomorphism , there is a unique injective ring homomorphism satisfying .   "
 },
 {
-  "id": "s_localization-14",
+  "id": "s_localization-18",
   "level": "2",
-  "url": "s_localization.html#s_localization-14",
+  "url": "s_localization.html#s_localization-18",
   "type": "Remark",
-  "number": "2.10.11",
+  "number": "2.10.12",
   "title": "Fraction field mapping property.",
   "body": " Fraction field mapping property  With the set up as in , if we identify with its isomorphic image in , then we obtain the following version of this result: given any ring homomorphism , where is a field, there is a unique extension . This property is summarized by the following diagram, obtained simply by replacing the map in with the inclusion relation.   Diagram summarizing mapping property of fraction field    Since the maps and are both injective, this property is often summarized by saying that is the smallest field containing .  "
 },
@@ -3974,34 +3992,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_localization.html#notation_locali_at_x",
   "type": "Notation",
-  "number": "2.10.12",
+  "number": "2.10.13",
   "title": "Special types of localizations.",
   "body": " Special types of localizations  Let be a commutative ring. Given a nonzero element , we define , where . Loosely speaking, is the ring obtained from by adjoining an inverse of .  Given a prime ideal , we define , where . Note that the primality of implies is multiplicative: since , , and hence ; and is closed under multiplication because if and are not elements of , then neither is .  The localization is called the localization of at the prime ideal . It can be thought of as the ring obtained from by inverting all elements outside of .  "
+},
+{
+  "id": "prop_locali_ker_map",
+  "level": "2",
+  "url": "s_localization.html#prop_locali_ker_map",
+  "type": "Proposition",
+  "number": "2.10.14",
+  "title": "Kernel of <span class=\"process-math\">\\(\\phi^*\\)<\/span>.",
+  "body": " Kernel of   Let be a multiplicative subset of the nonzero commutative ring , let be a ring homomorphism satisfying , and let be its associated map as in . We have . In particular, if is injective, then so is .   "
+},
+{
+  "id": "s_localization-22",
+  "level": "2",
+  "url": "s_localization.html#s_localization-22",
+  "type": "Remark",
+  "number": "2.10.15",
+  "title": "Kernel of <span class=\"process-math\">\\(\\phi^*\\)<\/span>.",
+  "body": " Kernel of  Getting ahead of ourselves somewhat, using the notation and results of , we can summarize as follows: .  "
 },
 {
   "id": "eg_locali_at_2",
   "level": "2",
   "url": "s_localization.html#eg_locali_at_2",
   "type": "Example",
-  "number": "2.10.13",
+  "number": "2.10.16",
   "title": "Localizing at an element: <span class=\"process-math\">\\(\\Z_2\\)<\/span>.",
-  "body": " Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .       "
+  "body": " Localizing at an element:   Identify (up to isomorphism) as a subring of a familiar ring. To be clear, , where .  Use .    Using the intuitive idea of as the smallest ring obtained from by adding an inverse to (and hence all of its powers), and observing that is precisely such a ring, we guess that might be isomorphic to some subring of . Let's use to make things precise (and rigorous). We let be the inclusion map.  Let , since , we have a ring homomorphism defined as . By , since is injective, so is . By the first isomorphism theorem, we have .   "
 },
 {
   "id": "eg_locali_int_poly",
   "level": "2",
   "url": "s_localization.html#eg_locali_int_poly",
   "type": "Example",
-  "number": "2.10.14",
+  "number": "2.10.17",
   "title": "Localization of <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
-  "body": " Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.       "
+  "body": " Localization of   Define the subset of as , where as usual, we identify with the subring of consisting of the constant polynomials. Identify (up to isomorphism) with a familiar ring.    Again, working intuitively, we ask ourselves what would be the result of taking the ring and inverting all nonzero integers. The resulting ring should then contain . But a ring that contains and , then you should probably containg , right? So we guess that . Let be the usual inclusion map. We have , since in general the units of a polynomial ring are precisely the nonzero constant polynomials. Since is injective, so is the associated map . Thus we have . For the last equality, the inclusion is clear. For the reverse inclusion, given any , we have , where , and .   "
 },
 {
   "id": "th_locali_ideals",
   "level": "2",
   "url": "s_localization.html#th_locali_ideals",
   "type": "Theorem",
-  "number": "2.10.15",
+  "number": "2.10.18",
   "title": "Localizations and ideals.",
   "body": " Localizations and ideals   Let be a multiplicative subset of the nonzero commutative ring , and let be the localization map.  Given an ideal , define , the ideal of generated by the set .   We have for all ideals . Furthermore, we have . Equivalently, is a proper ideal of if and only if does not intersect ( , ).    Given an ideal , let . We have .    The maps define a bijective correspondence between the set of prime ideals that do not intersect ( , ), and the prime ideals of .          "
 },
@@ -4010,7 +4046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_localization.html#cor_primes_polyintergers",
   "type": "Corollary",
-  "number": "2.10.16",
+  "number": "2.10.19",
   "title": "Prime ideals of <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
   "body": " Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .      "
 },

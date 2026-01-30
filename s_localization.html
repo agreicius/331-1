@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.11';
+eBookConfig.runestone_version = '7.11.12';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -716,10 +716,23 @@ r \amp \mapsto r/1\text{.}\tag{2.10.6}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="eg_frac_fields-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="eg_frac_fields-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="eg_frac_fields-3-1">These two fraction fields are precisely the rational numbers <span class="process-math">\(\Q\text{,}\)</span> and the so-called field of rational functions over <span class="process-math">\(F\text{,}\)</span> respectively.<div class="autopermalink" data-description="Paragraph"><a href="#eg_frac_fields-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Solution 2.10.8.1"><a href="#eg_frac_fields-3" title="Copy heading and permalink for Solution 2.10.8.1" aria-label="Copy heading and permalink for Solution 2.10.8.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 2.10.8: Fraction fields"><a href="#eg_frac_fields" title="Copy heading and permalink for Example 2.10.8: Fraction fields" aria-label="Copy heading and permalink for Example 2.10.8: Fraction fields">🔗</a></div></article><div class="para" id="s_localization-11">When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 2.10.8: Fraction fields"><a href="#eg_frac_fields" title="Copy heading and permalink for Example 2.10.8: Fraction fields" aria-label="Copy heading and permalink for Example 2.10.8: Fraction fields">🔗</a></div></article><article class="activity project-like" id="spec_rational_functions"><h3 class="heading">
+<span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rational functions over field.</span>
+</h3>
+<div class="para logical" id="spec_rational_functions-2-1">
+<div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> the <dfn class="terminology">field of rational functions</dfn> over <span class="process-math">\(F\)</span> in the indeterminate <span class="process-math">\(x\text{,}\)</span> denoted <span class="process-math">\(F((x))\)</span> is defined as the fraction field of <span class="process-math">\(F[x]\text{:}\)</span> i.e.,</div>
+<div class="displaymath process-math" id="spec_rational_functions-2-1-8">
+\begin{align}
+F((x))\amp = \Frac F[x] \text{.}\tag{2.10.7}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#spec_rational_functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Specimen 32: Rational functions over field"><a href="#spec_rational_functions" title="Copy heading and permalink for Specimen 32: Rational functions over field" aria-label="Copy heading and permalink for Specimen 32: Rational functions over field">🔗</a></div></article><div class="para" id="s_localization-12">When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="th_locali_mapping"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping property of localizations.</span>
@@ -734,28 +747,93 @@ r \amp \mapsto r/1\text{.}\tag{2.10.6}
 <div class="para">Moreover, <span class="process-math">\(\phi^*\)</span> is defined as</div>
 <div class="displaymath process-math" id="th_locali_mapping-2-1-9">
 \begin{align}
-\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}\text{.}\tag{2.10.7}
+\phi^*(r/s) \amp = \phi(r)\phi(s)^{-1}\text{.}\tag{2.10.8}
 \end{align}
 </div>
 <div class="para">In short, there is a unique homomorphism <span class="process-math">\(\phi^*\)</span> making the diagram below commutative.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/th_locali_mapping-2-2.svg" role="img" class="contained" alt="Commutative diagram summarizing mapping property of the localization map"></div>
-<div class="autopermalink" data-description="Theorem 2.10.9: Mapping property of localizations"><a href="#th_locali_mapping" title="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations" aria-label="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations">🔗</a></div></article><details id="th_locali_mapping-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_locali_mapping-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 2.10.9.1"><a href="#th_locali_mapping-3" title="Copy heading and permalink for Proof 2.10.9.1" aria-label="Copy heading and permalink for Proof 2.10.9.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_frac_field"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
+<div class="autopermalink" data-description="Theorem 2.10.9: Mapping property of localizations"><a href="#th_locali_mapping" title="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations" aria-label="Copy heading and permalink for Theorem 2.10.9: Mapping property of localizations">🔗</a></div></article><details id="th_locali_mapping-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_locali_mapping-3-1">
+<div class="para">Given such a map <span class="process-math">\(\phi\text{,}\)</span> if <span class="process-math">\(\phi^*\)</span> exists making the diagram commutative, then in particular, we must have</div>
+<div class="displaymath process-math" id="th_locali_mapping-3-1-3">
+\begin{align*}
+\phi^*(r/1) \amp =\phi(r)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(r\in R\text{.}\)</span> Since <span class="process-math">\(\phi^*\)</span> is a ring homomorphism, we must have</div>
+<div class="displaymath process-math" id="th_locali_mapping-3-1-6">
+\begin{align*}
+\phi(r/s) \amp =\phi(r/1\cdot 1/s)\\
+\amp \phi^*(r/1\cdot (s/1)^{-1}) \\
+\amp =\phi^*(r/1)\cdot (\phi^*(s/1))^{-1}\\
+\amp = \phi(r)\phi(s)^{-1}\text{,}
+\end{align*}
+</div>
+<div class="para">as claimed.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="th_locali_mapping-3-2">
+<div class="para">To finish the proof, we simply show that the proposed formula gives rise to a well-defined ring homomorphism <span class="process-math">\(\phi^*\colon S^{-1}R\rightarrow T\)</span> satisfying <span class="process-math">\(\phi=\phi^*\circ \lambda\text{.}\)</span> We first check that we get a well-defined function. Suppose <span class="process-math">\(r/s=r'/s'\text{,}\)</span> so that there exists an element <span class="process-math">\(s''\in S\)</span> satisfying <span class="process-math">\(s''s'r=s''sr'\text{.}\)</span> We then have</div>
+<div class="displaymath process-math" id="th_locali_mapping-3-2-6">
+\begin{align*}
+\phi(s''s'r)=\phi(s''sr') \amp\implies \phi(s'')phi(s')\phi(r)=\phi(s'')\phi(s)\phi(r') \\
+\amp \implies \phi(r)\phi(s)^{-1}=\phi(r')\phi(s')^{-1} \amp (x\in S\implies \phi(x)\in T^*) \\
+\amp \implies \phi^*(r/s)=\phi^*(r'/s')\text{.}
+\end{align*}
+</div>
+<div class="para">As is often the case in these situations, having establish well-definedness of <span class="process-math">\(\phi^*\text{,}\)</span> the remaining desired properties are easily verified. Here is a quick verification of all the properties we need:</div>
+<div class="displaymath process-math" id="th_locali_mapping-3-2-8">
+\begin{align*}
+\phi^*(\lambda(r)) \amp =\phi^*(r/1)\\
+\amp =\phi(r)\phi(1)^{-1}=\phi(r) \\
+\phi^*(r/s+r'/s') \amp =\phi^*((s'r+r's)/ss')\\
+\amp \phi(s'r+r's)\phi(ss')^{-1} \\
+\amp =(\phi(s')\phi(r)+\phi(r')\phi(s))\phi(s)^{-1}\phi(s')^{-1}\\
+\amp =\phi(r)\phi(s)^{-1}+\phi(r')\phi(s')^{-1} \\
+\amp =\phi(r/s)+\phi(r'/s')\\
+\phi^*(r/s\cdot r'/s') \amp =\phi^*(rr'/ss')\\
+\amp = \phi(rr')\phi(ss')^{-1}\\
+\amp =\phi(r)\phi(s)^{-1}\phi(r')\phi(s')\\
+\amp = \phi^*(r/s)\phi^*(r'/s')\\
+\phi^*(1) \amp =\phi^*(1/1)\\
+\amp =\phi(1)\phi(1)^{-1}=1\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_mapping-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.10.9.1"><a href="#th_locali_mapping-3" title="Copy heading and permalink for Proof 2.10.9.1" aria-label="Copy heading and permalink for Proof 2.10.9.1">🔗</a></div></article></details><div class="para" id="s_localization-14">The next corollary is a useful summary of <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> that will help when computing the set of ring homomorphisms out of a localization ring.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor_locali_map"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping property of localizations.</span>
+</h3>
+<div class="para logical" id="cor_locali_map-2-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow S^{-1}R\)</span> be the localization map. Given any nonzero ring <span class="process-math">\(T\text{,}\)</span> the map</div>
+<div class="displaymath process-math" id="cor_locali_map-2-1-5">
+\begin{align}
+\Hom(S^{-1}R, T)\amp \rightarrow \{\psi\in \Hom(R,T)\mid \phi(S)\subseteq T^*\}\tag{2.10.9}\\
+\phi \amp \mapsto \psi=\phi\circ \lambda\tag{2.10.10}
+\end{align}
+</div>
+<div class="para">is a bijection.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_locali_map-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.10.10: Mapping property of localizations"><a href="#cor_locali_map" title="Copy heading and permalink for Corollary 2.10.10: Mapping property of localizations" aria-label="Copy heading and permalink for Corollary 2.10.10: Mapping property of localizations">🔗</a></div></article><div class="para" id="s_localization-16">As a special case, we can consider an integral domain <span class="process-math">\(R\)</span> and with multiplicative set <span class="process-math">\(S=R-\{0\}\text{.}\)</span> In this case, we have <span class="process-math">\(S^{-1}R=\Frac R\text{,}\)</span> immediately yielding the following result.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor_frac_field"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
 </h3>
 <div class="para" id="cor_frac_field-2-1">Let <span class="process-math">\(R\)</span> be an integral domain with fraction field <span class="process-math">\(\Frac R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow \Frac R\)</span> be the localization map. Given any field <span class="process-math">\(K\)</span> and ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow K\text{,}\)</span> there is a unique injective ring homomorphism <span class="process-math">\(\phi^*\colon \Frac R\rightarrow K\)</span> satisfying <span class="process-math">\(\phi=\phi^*\lambda\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_frac_field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.10.10: Fraction field mapping property"><a href="#cor_frac_field" title="Copy heading and permalink for Corollary 2.10.10: Fraction field mapping property" aria-label="Copy heading and permalink for Corollary 2.10.10: Fraction field mapping property">🔗</a></div></article><article class="remark remark-like" id="s_localization-14"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
+<div class="autopermalink" data-description="Corollary 2.10.11: Fraction field mapping property"><a href="#cor_frac_field" title="Copy heading and permalink for Corollary 2.10.11: Fraction field mapping property" aria-label="Copy heading and permalink for Corollary 2.10.11: Fraction field mapping property">🔗</a></div></article><article class="remark remark-like" id="s_localization-18"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fraction field mapping property.</span>
 </h3>
-<div class="para" id="s_localization-14-2">With the set up as in <a href="s_localization.html#cor_frac_field" class="xref" data-knowl="./knowl/xref/cor_frac_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.10.10: Fraction field mapping property">Corollary 2.10.10</a>, if we identify <span class="process-math">\(R\)</span> with its isomorphic image <span class="process-math">\(\lambda(R)\)</span> in <span class="process-math">\(\Frac R\text{,}\)</span> then we obtain the following version of this result: given any ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow K\text{,}\)</span> where  <span class="process-math">\(K\)</span> is a field, there is a unique extension <span class="process-math">\(\phi^*\colon \Frac R\rightarrow K\text{.}\)</span> This property is summarized by the following diagram, obtained simply by replacing the map <span class="process-math">\(\lambda\)</span> in  <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> with the inclusion relation.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="s_localization-18-2">With the set up as in <a href="s_localization.html#cor_frac_field" class="xref" data-knowl="./knowl/xref/cor_frac_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.10.11: Fraction field mapping property">Corollary 2.10.11</a>, if we identify <span class="process-math">\(R\)</span> with its isomorphic image <span class="process-math">\(\lambda(R)\)</span> in <span class="process-math">\(\Frac R\text{,}\)</span> then we obtain the following version of this result: given any ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow K\text{,}\)</span> where  <span class="process-math">\(K\)</span> is a field, there is a unique extension <span class="process-math">\(\phi^*\colon \Frac R\rightarrow K\text{.}\)</span> This property is summarized by the following diagram, obtained simply by replacing the map <span class="process-math">\(\lambda\)</span> in  <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> with the inclusion relation.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/s_localization-14-3.svg" role="img" class="contained" alt="Diagram summarizing mapping property of fraction field"></div>
-<div class="para" id="s_localization-14-4">Since the maps <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\phi^*\)</span> are both injective, this property is often summarized by saying that <span class="process-math">\(\Frac R\)</span> is the <em class="emphasis">smallest</em> field containing <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_localization-14-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/s_localization-18-3.svg" role="img" class="contained" alt="Diagram summarizing mapping property of fraction field"></div>
+<div class="para" id="s_localization-18-4">Since the maps <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\phi^*\)</span> are both injective, this property is often summarized by saying that <span class="process-math">\(\Frac R\)</span> is the <em class="emphasis">smallest</em> field containing <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_localization-18-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.10.11: Fraction field mapping property"><a href="#s_localization-14" title="Copy heading and permalink for Remark 2.10.11: Fraction field mapping property" aria-label="Copy heading and permalink for Remark 2.10.11: Fraction field mapping property">🔗</a></div></article><article class="convention remark-like" id="notation_locali_at_x"><h3 class="heading">
-<span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special types of localizations.</span>
+<div class="autopermalink" data-description="Remark 2.10.12: Fraction field mapping property"><a href="#s_localization-18" title="Copy heading and permalink for Remark 2.10.12: Fraction field mapping property" aria-label="Copy heading and permalink for Remark 2.10.12: Fraction field mapping property">🔗</a></div></article><article class="convention remark-like" id="notation_locali_at_x"><h3 class="heading">
+<span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special types of localizations.</span>
 </h3>
 <div class="para logical" id="notation_locali_at_x-2">
 <div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring. Given a nonzero element <span class="process-math">\(x\in R\text{,}\)</span> we define <span class="process-math">\(R_x=S^{-1}R\text{,}\)</span> where</div>
@@ -781,18 +859,65 @@ S \amp = \{x\in R\mid x\notin P\}\text{.}
 </div>
 <div class="para" id="notation_locali_at_x-4">The localization <span class="process-math">\(R_P\)</span> is called the localization of <span class="process-math">\(R\)</span> at the prime ideal <span class="process-math">\(P\text{.}\)</span> It can be thought of as the ring obtained from <span class="process-math">\(R\)</span> by inverting all elements outside of <span class="process-math">\(P\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notation_locali_at_x-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Notation 2.10.12: Special types of localizations"><a href="#notation_locali_at_x" title="Copy heading and permalink for Notation 2.10.12: Special types of localizations" aria-label="Copy heading and permalink for Notation 2.10.12: Special types of localizations">🔗</a></div></article><article class="example example-like" id="eg_locali_at_2"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizing at an element: <span class="process-math">\(\Z_2\)</span>.</span>
+<div class="autopermalink" data-description="Notation 2.10.13: Special types of localizations"><a href="#notation_locali_at_x" title="Copy heading and permalink for Notation 2.10.13: Special types of localizations" aria-label="Copy heading and permalink for Notation 2.10.13: Special types of localizations">🔗</a></div></article><div class="para" id="s_localization-20">We now proceed to some examples illustrating how to use <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> in order to identify localizations as familiar rings. Since we will be interested in establishing isomorphisms, we will want to know when the map <span class="process-math">\(\phi^*\)</span> is <em class="emphasis">injective</em>. The following proposition is helpful in that regard.<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="prop_locali_ker_map"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kernel of <span class="process-math">\(\phi^*\)</span>.</span>
+</h3>
+<div class="para logical" id="prop_locali_ker_map-2-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{,}\)</span> let <span class="process-math">\(\phi\colon R\rightarrow T\)</span> be a ring homomorphism satisfying <span class="process-math">\(\phi(S)\subseteq T^*\text{,}\)</span> and let <span class="process-math">\(\phi^*\colon S^{-1}R\rightarrow T\)</span> be its associated map as in <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a>. We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_locali_mapping.html" id="prop_locali_ker_map-2-1-7">
+\begin{align*}
+\ker\phi^* \amp =\{r/s\in S^{-1}R\mid r\in \ker\phi\}\text{.}
+\end{align*}
+</div>
+<div class="para">In particular, if <span class="process-math">\(\phi\)</span> is injective, then so is <span class="process-math">\(\phi^*\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_locali_ker_map-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.10.14: Kernel of \phi^*"><a href="#prop_locali_ker_map" title="Copy heading and permalink for Proposition 2.10.14: Kernel of \phi^*" aria-label="Copy heading and permalink for Proposition 2.10.14: Kernel of \phi^*">🔗</a></div></article><article class="remark remark-like" id="s_localization-22"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kernel of <span class="process-math">\(\phi^*\)</span>.</span>
+</h3>
+<div class="para logical" id="s_localization-22-2">
+<div class="para">Getting ahead of ourselves somewhat, using the notation and results of <a href="s_localization.html#th_locali_ideals" class="xref" data-knowl="./knowl/xref/th_locali_ideals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.18: Localizations and ideals">Theorem 2.10.18</a>, we can summarize <a href="s_localization.html#prop_locali_ker_map" class="xref" data-knowl="./knowl/xref/prop_locali_ker_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.10.14: Kernel of \phi^*">Proposition 2.10.14</a> as follows:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_locali_ideals.html ./knowl/xref/prop_locali_ker_map.html" id="s_localization-22-2-3">
+\begin{align*}
+\ker\phi^* \amp =S^{-1}\ker\phi\\
+\amp = (\lambda(\ker\phi))\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_localization-22-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.10.15: Kernel of \phi^*"><a href="#s_localization-22" title="Copy heading and permalink for Remark 2.10.15: Kernel of \phi^*" aria-label="Copy heading and permalink for Remark 2.10.15: Kernel of \phi^*">🔗</a></div></article><article class="example example-like" id="eg_locali_at_2"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizing at an element: <span class="process-math">\(\Z_2\)</span>.</span>
 </h3>
 <div class="para" id="eg_locali_at_2-2-1">Identify <span class="process-math">\(\Z_2\)</span> (up to isomorphism) as a subring of a familiar ring. To be clear, <span class="process-math">\(\Z_2=S^{-1}\Z\text{,}\)</span> where <span class="process-math">\(S=\{1,2,2^2,\dots\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="eg_locali_at_2-2-2">Use <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="eg_locali_at_2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="eg_locali_at_2-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Solution 2.10.13.1"><a href="#eg_locali_at_2-3" title="Copy heading and permalink for Solution 2.10.13.1" aria-label="Copy heading and permalink for Solution 2.10.13.1">🔗</a></div>
+<div class="para" id="eg_locali_at_2-3-1">Using the intuitive idea of <span class="process-math">\(\Z_2\)</span> as the “smallest” ring obtained from <span class="process-math">\(\Z\)</span> by adding an inverse to <span class="process-math">\(2\)</span> (and hence all of its powers), and observing that <span class="process-math">\(\Q\)</span> is precisely such a ring, we guess that <span class="process-math">\(\Z_2\)</span> might be isomorphic to some subring of <span class="process-math">\(\Q\text{.}\)</span> Let’s use <a href="s_localization.html#th_locali_mapping" class="xref" data-knowl="./knowl/xref/th_locali_mapping.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.9: Mapping property of localizations">Theorem 2.10.9</a> to make things precise (and rigorous). We let <span class="process-math">\(\phi\colon \Z\rightarrow \Q\)</span> be the inclusion map.<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="eg_locali_at_2-3-2">
+<div class="para">Let <span class="process-math">\(S=\{1,2,2^2,\dots\}\text{,}\)</span> since <span class="process-math">\(\phi(S)=S\subseteq \Q^*\text{,}\)</span> we have a ring homomorphism <span class="process-math">\(\phi^*\colon \Z_2\rightarrow \Q\)</span> defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_locali_ker_map.html" id="eg_locali_at_2-3-2-4">
+\begin{align*}
+\phi^*(m/2^r)\amp =\phi(m)\phi(2^r)^{-1}\\
+\amp =m(2^r)^{-1}\\
+\amp =\frac{m}{2^r}\text{.}
+\end{align*}
+</div>
+<div class="para">By <a href="s_localization.html#prop_locali_ker_map" class="xref" data-knowl="./knowl/xref/prop_locali_ker_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.10.14: Kernel of \phi^*">Proposition 2.10.14</a>, since <span class="process-math">\(\phi\)</span> is injective, so is <span class="process-math">\(\phi^*\text{.}\)</span> By the first isomorphism theorem, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_locali_ker_map.html" id="eg_locali_at_2-3-2-8">
+\begin{align*}
+\Z_2 \amp \cong \phi^*(\Z_2)=\{q\in \Q\mid q=m/2^r \text{ for some } m\in \Z, r\geq 0\}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_at_2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.10.16.1"><a href="#eg_locali_at_2-3" title="Copy heading and permalink for Solution 2.10.16.1" aria-label="Copy heading and permalink for Solution 2.10.16.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 2.10.13: Localizing at an element: \Z_2"><a href="#eg_locali_at_2" title="Copy heading and permalink for Example 2.10.13: Localizing at an element: \Z_2" aria-label="Copy heading and permalink for Example 2.10.13: Localizing at an element: \Z_2">🔗</a></div></article><article class="example example-like" id="eg_locali_int_poly"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization of <span class="process-math">\(\Z[x]\)</span>.</span>
+<div class="autopermalink" data-description="Example 2.10.16: Localizing at an element: \Z_2"><a href="#eg_locali_at_2" title="Copy heading and permalink for Example 2.10.16: Localizing at an element: \Z_2" aria-label="Copy heading and permalink for Example 2.10.16: Localizing at an element: \Z_2">🔗</a></div></article><article class="example example-like" id="eg_locali_int_poly"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localization of <span class="process-math">\(\Z[x]\)</span>.</span>
 </h3>
 <div class="para logical" id="eg_locali_int_poly-2-1">
 <div class="para">Define the subset <span class="process-math">\(S\)</span> of <span class="process-math">\(\Z[x]\)</span> as</div>
@@ -805,18 +930,40 @@ S \amp =\Z-\{0\}\text{,}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_int_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="eg_locali_int_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="eg_locali_int_poly-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_int_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Solution 2.10.14.1"><a href="#eg_locali_int_poly-3" title="Copy heading and permalink for Solution 2.10.14.1" aria-label="Copy heading and permalink for Solution 2.10.14.1">🔗</a></div>
+<div class="para logical" id="eg_locali_int_poly-3-1">
+<div class="para">Again, working intuitively, we ask ourselves what would be the result of taking the ring <span class="process-math">\(\Z[x]\)</span> and inverting all nonzero integers. The resulting ring should then contain <span class="process-math">\(\Q\text{.}\)</span> But a ring that contains <span class="process-math">\(\Q\)</span> and <span class="process-math">\(\Z[x]\text{,}\)</span> then you should probably containg <span class="process-math">\(\Q[x]\text{,}\)</span> right? So we guess that <span class="process-math">\(S^{-1}\Z[x]\cong \Q[x]\text{.}\)</span> Let <span class="process-math">\(\phi\colon \Z[x]\rightarrow \Q[x]\)</span> be the usual inclusion map. We have <span class="process-math">\(\phi(S)=\Z-\{0\}\subseteq \Q[x]^*\text{,}\)</span> since in general the units of a polynomial ring <span class="process-math">\(F[x]\)</span> are precisely the nonzero constant polynomials. Since <span class="process-math">\(\phi\)</span> is injective, so is the associated map <span class="process-math">\(\phi^*\colon S^{-1}\Z[x]\rightarrow \Q[x]\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" id="eg_locali_int_poly-3-1-12">
+\begin{align*}
+S^{-1}\Z[x] \amp \cong \phi^*(\Z[x])\\
+\amp = \{\phi^*(f/m)\mid f\in \Z[x], m\in \Z-\{0\}\}\\
+\amp = \{\phi(f)\phi(m)^{-1}\mid f\in \Z[x], m\in \Z-\{0\}\}\\
+\amp = \{f/m\mid f\in \Z[x], m\in \Z-\{0\}\}\\
+\amp = \Q[x]\text{.}
+\end{align*}
+</div>
+<div class="para">For the last equality, the <span class="process-math">\(\subseteq\)</span> inclusion is clear. For the reverse inclusion, given any <span class="process-math">\(g\in \Q[x]\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="eg_locali_int_poly-3-1-15">
+\begin{align*}
+g(x) \amp = \frac{p_n}{q^n}x^n+\cdots +\frac{p_1}{q_1}x+\frac{p_0}{q_0}, \ p_i, q_i\in \Z \\
+\amp = \frac{1}{q_nq_{n-1}\cdots q_0}(\sum_{k=0}^np_k\prod_{j\ne k}q_jx^k)\\
+\amp = \frac{1}{m}f(x)\text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(m=\prod_{k=0}^nq_i\text{,}\)</span> and <span class="process-math">\(f=\sum_{k=0}^np_k\prod_{j\ne k}q_jx^k\in \Z[x]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_locali_int_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.10.17.1"><a href="#eg_locali_int_poly-3" title="Copy heading and permalink for Solution 2.10.17.1" aria-label="Copy heading and permalink for Solution 2.10.17.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 2.10.14: Localization of \Z[x]"><a href="#eg_locali_int_poly" title="Copy heading and permalink for Example 2.10.14: Localization of \Z[x]" aria-label="Copy heading and permalink for Example 2.10.14: Localization of \Z[x]">🔗</a></div></article><article class="theorem theorem-like" id="th_locali_ideals"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizations and ideals.</span>
+<div class="autopermalink" data-description="Example 2.10.17: Localization of \Z[x]"><a href="#eg_locali_int_poly" title="Copy heading and permalink for Example 2.10.17: Localization of \Z[x]" aria-label="Copy heading and permalink for Example 2.10.17: Localization of \Z[x]">🔗</a></div></article><article class="theorem theorem-like" id="th_locali_ideals"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizations and ideals.</span>
 </h3>
 <div class="para" id="th_locali_ideals-2-1">Let <span class="process-math">\(S\)</span> be a multiplicative subset of the nonzero commutative ring <span class="process-math">\(R\text{,}\)</span> and let <span class="process-math">\(\lambda\colon R\rightarrow S^{-1}R\)</span> be the localization map.<div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="th_locali_ideals-2-2">
 <div class="para">Given an ideal <span class="process-math">\(I\subseteq R\text{,}\)</span> define</div>
 <div class="displaymath process-math" id="th_locali_ideals-2-2-2">
 \begin{align}
-S^{-1}I \amp =(\lambda(I))\text{,}\tag{2.10.8}
+S^{-1}I \amp =(\lambda(I))\text{,}\tag{2.10.11}
 \end{align}
 </div>
 <div class="para">the ideal of <span class="process-math">\(S^{-1}R\)</span> generated by the set <span class="process-math">\(\lambda(I)\text{.}\)</span>
@@ -827,13 +974,13 @@ S^{-1}I \amp =(\lambda(I))\text{,}\tag{2.10.8}
 <div class="para">We have</div>
 <div class="displaymath process-math" id="th_locali_ideals-2-2-5-1-1-1">
 \begin{align}
-S^{-1}I \amp = \{r/s\mid r\in I\}\tag{2.10.9}
+S^{-1}I \amp = \{r/s\mid r\in I\}\tag{2.10.12}
 \end{align}
 </div>
 <div class="para">for all ideals <span class="process-math">\(I\subseteq R\text{.}\)</span> Furthermore, we have</div>
 <div class="displaymath process-math" id="th_locali_ideals-2-2-5-1-1-3">
 \begin{align}
-S^{-1}I=S^{-1}R \amp  \text{ if and only if } I\cap S\ne \emptyset\text{.}\tag{2.10.10}
+S^{-1}I=S^{-1}R \amp  \text{ if and only if } I\cap S\ne \emptyset\text{.}\tag{2.10.13}
 \end{align}
 </div>
 <div class="para">Equivalently, <span class="process-math">\(S^{-1}I\)</span> is a proper ideal of <span class="process-math">\(S^{-1}R\)</span> if and only if <span class="process-math">\(I\)</span> does not intersect <span class="process-math">\(S\)</span> (i.e., <span class="process-math">\(I\cap S=\emptyset\)</span>).</div>
@@ -846,7 +993,7 @@ S^{-1}I=S^{-1}R \amp  \text{ if and only if } I\cap S\ne \emptyset\text{.}\tag{2
 <div class="para">Given an ideal <span class="process-math">\(J\subseteq S^{-1}R\text{,}\)</span> let <span class="process-math">\(I=\lambda^{-1}(J)=\{r\in R\mid r/1\in J\}\text{.}\)</span> We have</div>
 <div class="displaymath process-math" id="th_locali_ideals-2-2-5-2-1-3">
 \begin{align}
-J \amp =S^{-1}(I)\text{.}\tag{2.10.11}
+J \amp =S^{-1}(I)\text{.}\tag{2.10.14}
 \end{align}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -858,8 +1005,8 @@ J \amp =S^{-1}(I)\text{.}\tag{2.10.11}
 <div class="para">The maps</div>
 <div class="displaymath process-math" id="th_locali_ideals-2-2-5-3-1-1">
 \begin{align}
-P \amp  \mapsto S^{-1}P\tag{2.10.12}\\
-Q\amp \mapsto \lambda^{-1}(Q)\tag{2.10.13}
+P \amp  \mapsto S^{-1}P\tag{2.10.15}\\
+Q\amp \mapsto \lambda^{-1}(Q)\tag{2.10.16}
 \end{align}
 </div>
 <div class="para">define a bijective correspondence between the set of prime ideals <span class="process-math">\(P\subseteq R\)</span> that do not intersect <span class="process-math">\(S\)</span> (i.e., <span class="process-math">\(P\cap S=\emptyset\)</span>), and the prime ideals of <span class="process-math">\(S^{-1}R\text{.}\)</span>
@@ -871,9 +1018,9 @@ Q\amp \mapsto \lambda^{-1}(Q)\tag{2.10.13}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.10.15: Localizations and ideals"><a href="#th_locali_ideals" title="Copy heading and permalink for Theorem 2.10.15: Localizations and ideals" aria-label="Copy heading and permalink for Theorem 2.10.15: Localizations and ideals">🔗</a></div></article><details id="th_locali_ideals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_locali_ideals-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 2.10.15.1"><a href="#th_locali_ideals-3" title="Copy heading and permalink for Proof 2.10.15.1" aria-label="Copy heading and permalink for Proof 2.10.15.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_primes_polyintergers"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime ideals of <span class="process-math">\(\Z[x]\)</span>.</span>
+<div class="autopermalink" data-description="Theorem 2.10.18: Localizations and ideals"><a href="#th_locali_ideals" title="Copy heading and permalink for Theorem 2.10.18: Localizations and ideals" aria-label="Copy heading and permalink for Theorem 2.10.18: Localizations and ideals">🔗</a></div></article><details id="th_locali_ideals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_locali_ideals-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_locali_ideals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.10.18.1"><a href="#th_locali_ideals-3" title="Copy heading and permalink for Proof 2.10.18.1" aria-label="Copy heading and permalink for Proof 2.10.18.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_primes_polyintergers"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime ideals of <span class="process-math">\(\Z[x]\)</span>.</span>
 </h3>
 <div class="para logical" id="cor_primes_polyintergers-2-1">
 <div class="para">If <span class="process-math">\(P\)</span> is a prime ideal of <span class="process-math">\(\Z[x]\text{,}\)</span> then one of the following statements holds.</div>
@@ -905,7 +1052,7 @@ Q\amp \mapsto \lambda^{-1}(Q)\tag{2.10.13}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_primes_polyintergers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.10.16: Prime ideals of \Z[x]"><a href="#cor_primes_polyintergers" title="Copy heading and permalink for Corollary 2.10.16: Prime ideals of \Z[x]" aria-label="Copy heading and permalink for Corollary 2.10.16: Prime ideals of \Z[x]">🔗</a></div></article><div class="autopermalink" data-description="Section 2.10: Localizations and fraction fields"><a href="#s_localization" title="Copy heading and permalink for Section 2.10: Localizations and fraction fields" aria-label="Copy heading and permalink for Section 2.10: Localizations and fraction fields">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 2.10.19: Prime ideals of \Z[x]"><a href="#cor_primes_polyintergers" title="Copy heading and permalink for Corollary 2.10.19: Prime ideals of \Z[x]" aria-label="Copy heading and permalink for Corollary 2.10.19: Prime ideals of \Z[x]">🔗</a></div></article><div class="autopermalink" data-description="Section 2.10: Localizations and fraction fields"><a href="#s_localization" title="Copy heading and permalink for Section 2.10: Localizations and fraction fields" aria-label="Copy heading and permalink for Section 2.10: Localizations and fraction fields">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_crt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
