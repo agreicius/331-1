@@ -198,10 +198,23 @@
     </statement>
     <solution>
     <p>
-    
+    These two fraction fields are precisely the rational numbers <m>\Q</m>, and the so-called field of rational functions over <m>F</m>, respectively. 
     </p>
     </solution>
     </example>
+    <activity xml:id="spec_rational_functions">
+    <title>Rational functions over field</title>
+    <statement>
+    <p>
+    Given a field <m>F</m>, the <term>field of rational functions</term> over <m>F</m> in the indeterminate <m>x</m>, denoted <m>F((x))</m> is defined as the fraction field of <m>F[x]</m>: <ie/>, 
+    <md number="yes">
+        <mrow xml:id="eq_frac_field"> F((x))\amp = \Frac F[x] </mrow>
+    </md>.
+    </p>
+    </statement>
+    </activity>
+    
+    
     <p>
          When the fraction field of an integral domain is not something familiar to us (based solely on the construction as a localization ring), we will want to identify it as a familiar field. To do so, the following mapping property of localizations is essential. 
     </p>
@@ -231,9 +244,64 @@
     </statement>
     <proof>
     <p>
+        Given such a map <m>\phi</m>, if <m>\phi^*</m> exists making the diagram commutative, then in particular, we must have 
+        <md>
+            <mrow>\phi^*(r/1) \amp =\phi(r)</mrow>
+        </md>
+        for all <m>r\in R</m>. Since <m>\phi^*</m> is a ring homomorphism, we must have 
+        <md>
+            <mrow>\phi(r/s) \amp =\phi(r/1\cdot 1/s)</mrow>
+            <mrow> \amp \phi^*(r/1\cdot (s/1)^{-1}) </mrow>
+            <mrow> \amp =\phi^*(r/1)\cdot (\phi^*(s/1))^{-1}</mrow>
+            <mrow> \amp = \phi(r)\phi(s)^{-1}</mrow>
+        </md>,
+        as claimed. 
+    </p>
+    <p>
+        To finish the proof, we simply show that the proposed formula gives rise to a well-defined ring homomorphism <m>\phi^*\colon S^{-1}R\rightarrow T</m> satisfying <m>\phi=\phi^*\circ \lambda</m>. We first check that we get a well-defined function. Suppose <m>r/s=r'/s'</m>, so that there exists an element <m>s''\in S</m> satisfying <m>s''s'r=s''sr'</m>. We then have 
+        <md>
+            <mrow>\phi(s''s'r)=\phi(s''sr') \amp\implies \phi(s'')phi(s')\phi(r)=\phi(s'')\phi(s)\phi(r') </mrow>
+            <mrow> \amp \implies \phi(r)\phi(s)^{-1}=\phi(r')\phi(s')^{-1} \amp (x\in S\implies \phi(x)\in T^*) </mrow>
+            <mrow> \amp \implies \phi^*(r/s)=\phi^*(r'/s')</mrow>
+        </md>.
+        As is often the case in these situations, having establish well-definedness of <m>\phi^*</m>, the remaining desired properties are easily verified. Here is a quick verification of all the properties we need:
+        <md>
+            <mrow>\phi^*(\lambda(r)) \amp =\phi^*(r/1)</mrow>
+          <mrow>  \amp =\phi(r)\phi(1)^{-1}=\phi(r) </mrow>
+          <mrow>\phi^*(r/s+r'/s') \amp =\phi^*((s'r+r's)/ss')</mrow>
+          <mrow> \amp \phi(s'r+r's)\phi(ss')^{-1} </mrow>
+          <mrow> \amp =(\phi(s')\phi(r)+\phi(r')\phi(s))\phi(s)^{-1}\phi(s')^{-1}</mrow>
+          <mrow> \amp =\phi(r)\phi(s)^{-1}+\phi(r')\phi(s')^{-1} </mrow>
+          <mrow> \amp =\phi(r/s)+\phi(r'/s')</mrow>
+          <mrow>\phi^*(r/s\cdot r'/s') \amp =\phi^*(rr'/ss')</mrow>
+          <mrow> \amp = \phi(rr')\phi(ss')^{-1}</mrow>
+          <mrow> \amp =\phi(r)\phi(s)^{-1}\phi(r')\phi(s')</mrow>
+          <mrow> \amp = \phi^*(r/s)\phi^*(r'/s')</mrow>
+          <mrow>\phi^*(1) \amp =\phi^*(1/1)</mrow>
+          <mrow> \amp =\phi(1)\phi(1)^{-1}=1</mrow>
+        </md>.
     </p>
     </proof>
     </theorem>
+    <p>
+        The next corollary is a useful summary of <xref ref="th_locali_mapping"/> that will help when computing the set of ring homomorphisms out of a localization ring. 
+    </p>
+    <corollary xml:id="cor_locali_map">
+        <title>Mapping property of localizations</title> 
+        <statement>
+            <p>
+                Let <m>S</m> be a multiplicative subset of the nonzero commutative ring <m>R</m>, and let <m>\lambda\colon R\rightarrow S^{-1}R</m> be the localization map. Given any nonzero ring <m>T</m>, the map  
+                <md number="yes">
+                    <mrow>\Hom(S^{-1}R, T)\amp \rightarrow \{\psi\in \Hom(R,T)\mid \phi(S)\subseteq T^*\}</mrow>
+                    <mrow>\phi \amp \mapsto \psi=\phi\circ \lambda</mrow>
+                </md>
+                is a bijection. 
+            </p>
+        </statement>
+    </corollary>
+    <p>
+        As a special case, we can consider an integral domain <m>R</m> and with multiplicative set <m>S=R-\{0\}</m>. In this case, we have <m>S^{-1}R=\Frac R</m>, immediately yielding the following result. 
+    </p>
     <corollary xml:id="cor_frac_field">
         <title>Fraction field mapping property</title>
         <statement>
@@ -280,6 +348,32 @@
             The localization <m>R_P</m> is called the localization of <m>R</m> at the prime ideal <m>P</m>. It can be thought of as the ring obtained from <m>R</m> by inverting all elements outside of <m>P</m>. 
         </p>
     </convention>
+    <p>
+        We now proceed to some examples illustrating how to use <xref ref="th_locali_mapping"/> in order to identify localizations as familiar rings. Since we will be interested in establishing isomorphisms, we will want to know when the map <m>\phi^*</m> is <em>injective</em>. The following proposition is helpful in that regard. 
+    </p>
+    <proposition xml:id="prop_locali_ker_map">
+        <title>Kernel of <m>\phi^*</m></title>
+        <statement>
+            <p>
+                Let <m>S</m> be a multiplicative subset of the nonzero commutative ring <m>R</m>, let <m>\phi\colon R\rightarrow T</m> be a ring homomorphism satisfying <m>\phi(S)\subseteq T^*</m>, and let <m>\phi^*\colon S^{-1}R\rightarrow T</m> be its associated map as in <xref ref="th_locali_mapping"/>. We have 
+                <md>
+                    <mrow>\ker\phi^* \amp =\{r/s\in S^{-1}R\mid r\in \ker\phi\}</mrow>
+                </md>.
+                In particular, if <m>\phi</m> is injective, then so is <m>\phi^*</m>.  
+            </p>
+        </statement>
+    </proposition>
+    <remark>
+        <title>Kernel of <m>\phi^*</m></title>
+        <p>
+            Getting ahead of ourselves somewhat, using the notation and results of <xref ref="th_locali_ideals"/>, we can summarize <xref ref="prop_locali_ker_map"/> as follows: 
+            <md>
+                <mrow>\ker\phi^* \amp =S^{-1}\ker\phi</mrow>
+                <mrow> \amp = (\lambda(\ker\phi))</mrow>
+            </md>.
+        </p>
+        
+    </remark>
     <example xml:id="eg_locali_at_2">
     <title>Localizing at an element: <m>\Z_2</m></title>
     <statement>
@@ -292,7 +386,19 @@
     </statement>
     <solution>
     <p>
-    
+    Using the intuitive idea of <m>\Z_2</m> as the <q>smallest</q> ring obtained from <m>\Z</m> by adding an inverse to <m>2</m> (and hence all of its powers), and observing that <m>\Q</m> is precisely such a ring, we guess that <m>\Z_2</m> might be isomorphic to some subring of <m>\Q</m>. Let's use <xref ref="th_locali_mapping"/> to make things precise (and rigorous). We let <m>\phi\colon \Z\rightarrow \Q</m> be the inclusion map. 
+    </p>
+    <p> Let <m>S=\{1,2,2^2,\dots\}</m>, since <m>\phi(S)=S\subseteq \Q^*</m>, we have a ring homomorphism <m>\phi^*\colon \Z_2\rightarrow \Q</m> defined as 
+        <md>
+            <mrow>\phi^*(m/2^r)\amp =\phi(m)\phi(2^r)^{-1}</mrow>
+            <mrow> \amp =m(2^r)^{-1}</mrow>
+            <mrow> \amp =\frac{m}{2^r}</mrow>
+        </md>.
+    By <xref ref="prop_locali_ker_map"/>, since <m>\phi</m> is injective, so is <m>\phi^*</m>. By the first isomorphism theorem, we have 
+    <md>
+        <mrow>\Z_2 \amp \cong \phi^*(\Z_2)=\{q\in \Q\mid q=m/2^r \text{ for some } m\in \Z, r\geq 0\}</mrow>
+    </md>.
+
     </p>
     </solution>
     </example>
@@ -309,7 +415,21 @@
     </statement>
     <solution>
     <p>
-    
+    Again, working intuitively, we ask ourselves what would be the result of taking the ring <m>\Z[x]</m> and inverting all nonzero integers. The resulting ring should then contain <m>\Q</m>. But a ring that contains <m>\Q</m> and <m>\Z[x]</m>, then you should probably containg <m>\Q[x]</m>, right? So we guess that <m>S^{-1}\Z[x]\cong \Q[x]</m>. Let <m>\phi\colon \Z[x]\rightarrow \Q[x]</m> be the usual inclusion map. We have <m>\phi(S)=\Z-\{0\}\subseteq \Q[x]^*</m>, since in general the units of a polynomial ring <m>F[x]</m> are precisely the nonzero constant polynomials. Since <m>\phi</m> is injective, so is the associated map <m>\phi^*\colon S^{-1}\Z[x]\rightarrow \Q[x]</m>. Thus we have 
+    <md>
+        <mrow>S^{-1}\Z[x] \amp \cong \phi^*(\Z[x])</mrow>
+        <mrow> \amp = \{\phi^*(f/m)\mid f\in \Z[x], m\in \Z-\{0\}\}</mrow>
+        <mrow> \amp = \{\phi(f)\phi(m)^{-1}\mid f\in \Z[x], m\in \Z-\{0\}\}</mrow>
+        <mrow> \amp = \{f/m\mid f\in \Z[x], m\in \Z-\{0\}\}</mrow>
+        <mrow> \amp = \Q[x]</mrow>
+    </md>.
+    For the last equality, the <m>\subseteq</m> inclusion is clear. For the reverse inclusion, given any <m>g\in \Q[x]</m>, we have 
+    <md>
+        <mrow>g(x) \amp = \frac{p_n}{q^n}x^n+\cdots +\frac{p_1}{q_1}x+\frac{p_0}{q_0}, \ p_i, q_i\in \Z </mrow>
+        <mrow> \amp = \frac{1}{q_nq_{n-1}\cdots q_0}(\sum_{k=0}^np_k\prod_{j\ne k}q_jx^k)</mrow>
+        <mrow> \amp = \frac{1}{m}f(x)</mrow>
+    </md>,
+    where <m>m=\prod_{k=0}^nq_i</m>, and <m>f=\sum_{k=0}^np_k\prod_{j\ne k}q_jx^k\in \Z[x]</m>.
     </p>
     </solution>
     </example>
