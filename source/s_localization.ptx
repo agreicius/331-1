@@ -112,15 +112,14 @@
             </p>
         </statement>
     </proposition>
-    <remark>
+    <remark xml:id="rem_locali">
         <title>Localization</title>
         <p>
-            Predictably, given a ring <m>R</m> and multiplicative subset <m>S\subseteq R</m>, we will often want to identify <m>S^{-1}R</m> as a familiar ring or quotient thereof (or product thereof). <xref ref="th_locali_mapping"/> below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what <m>S^{-1}R</m> might be in different cases. The proposition above, combined with the concrete construction of <m>S^{-1}R</m> partially spells out this intuition: the ring <m>S^{-1}R</m> should be thought of as the result of adjoining inverses <m>1/s</m> to all elements of <m>S</m>. Equivalently, <m>S^{-1}R</m> is the result of inverting all elements of <m>S</m>. 
+            Predictably, given a ring <m>R</m> and multiplicative subset <m>S\subseteq R</m>, we will often want to identify <m>S^{-1}R</m> as a familiar ring or quotient thereof (or product thereof). <xref ref="th_locali_mapping"/> below will provide our main technical tool for establishing isomorphisms. However, we also want to develop some intuition about what <m>S^{-1}R</m> might be in different cases. The proposition above, combined with the concrete construction of <m>S^{-1}R</m> partially spells out this intuition: the ring <m>S^{-1}R</m> should be thought of as the result of adjoining inverses <m>1/s</m> to all elements of <m>S</m>. Equivalently, <m>S^{-1}R</m> is the result of inverting all elements of <m>S</m>. To refine this intuition somewhat, the mapping property articulated in <xref ref="th_locali_mapping"/> below can be interpreted as saying that <m>S^{-1}R</m> is the <q>smallest</q> ring <q>containing</q> <m>R</m> in which all elements of <m>S</m> are units. 
         </p>
         <p>
-            That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of <m>S</m>. For example, if <m>S</m> contains a zero divisor, then it is not difficult to show that <m>S^{-1}R=\{0\}</m> ! Indeed, the intuitive principle described above strongly suggests this: in any ring, if an element <m>s</m> is both a zero divisor and a unit, then the ring must be the trivial ring. 
+            That interpretation seems straightforward enough, but there are often unforeseen consequences to inverting elements of <m>S</m>. For example, if <m>S</m> contains a zero divisor, then according to <xref ref="prop_locali"/>, if <m>r\in R</m> satisfies <m>sr=0</m>, then <m>r/1=0</m> in the localization <m>S^{-1}R</m>.  This reveals a cruel reality of the localization process, at least as it pertains to zero divisors: for every <m>s\in S</m> that is granted an inverse <m>1/s</m> in <m>S^{-1}R</m>, there is potentially a zero divisor <m>r</m> that is killed in the process! 
         </p>
-        
     </remark>
 
     <theorem xml:id="th_frac_field">
@@ -362,6 +361,17 @@
                 In particular, if <m>\phi</m> is injective, then so is <m>\phi^*</m>.  
             </p>
         </statement>
+        <proof>
+            <p>
+                This follows directly from the definition of <m>\phi^*</m> and the fact that <m>\phi(S)\subseteq T^*</m>: we have 
+                <md>
+                    <mrow>\phi^*(r/s)=0 \amp \iff \phi(r)\phi(s)^{-1}=0</mrow>
+                    <mrow> \amp \iff \phi(r)=0 \amp (\phi(s)\in T^*)</mrow>
+                    <mrow> \amp \iff r\in \ker\phi</mrow>
+                </md>,
+                as desired. 
+            </p>
+        </proof>
     </proposition>
     <remark>
         <title>Kernel of <m>\phi^*</m></title>
@@ -372,7 +382,6 @@
                 <mrow> \amp = (\lambda(\ker\phi))</mrow>
             </md>.
         </p>
-        
     </remark>
     <example xml:id="eg_locali_at_2">
     <title>Localizing at an element: <m>\Z_2</m></title>
@@ -470,8 +479,8 @@
         <li>
             <p>
                 The maps 
-                <md number="yes">
-                    <mrow xml:id="eq_locali_spec">P \amp  \mapsto S^{-1}P</mrow>
+                <md>
+                    <mrow>P \amp  \mapsto S^{-1}P </mrow>
                     <mrow>Q\amp \mapsto \lambda^{-1}(Q)</mrow>
                 </md>
                 define a bijective correspondence between the set of prime ideals <m>P\subseteq R</m> that do not intersect <m>S</m> (<ie/>, <m>P\cap S=\emptyset</m>), and the prime ideals of <m>S^{-1}R</m>.
