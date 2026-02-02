@@ -12,4 +12,5 @@
 <xi:include href="s_prime_max_poly.ptx" />
 <xi:include href="s_crt.ptx" />
 <xi:include href="s_localization.ptx" />
+<xi:include href="s_euc_domain.ptx" />
 </chapter>

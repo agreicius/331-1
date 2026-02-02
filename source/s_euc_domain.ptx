@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_euc_domain" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Euclidean domains</title>
+
+    <definition xml:id="d_euc_domain">
+    <title>Euclidean domain</title>
+    <statement>
+    <p>
+    A <m>Euclidean domain</m> is a pair <m>(R,N)</m>, where <m>R</m> is an integral domain and <m>N</m> is a function <m>N\colon R-\{0\}\rightarrow \Z_{\geq 0}</m> satisfying the following <term>generalized division algorithm</term> condition: for all nonzero <m>a\in R</m> and all <m>b\in R</m>, there exists elements <m>q,r\in R</m> satisfying 
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>b=qa+r</m>,
+            </p>
+        </li>
+        <li>
+            <p>
+                either <m>r=0</m> or <m>N(r)&lt; N(a)</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </definition>
+    
+    <definition xml:id="d_norm_function">
+    <title>Norm function on <m>\C</m></title>
+    <statement>
+    <p>
+    Given <m>z=a+bi\in \C</m>, where <m>a,b\in \R</m>, we define 
+    <md>
+        <mrow>N(z) \amp =z\overline{z}=(a+bi)(a-bi)=a^2+b^2</mrow>
+    </md>.
+    We call the function <m>N\colon \C\rightarrow \R^{\geq 0}</m> the <term>norm function</term> on <m>\C</m>. 
+    </p>
+    </statement>
+    </definition>
+    
+    <activity xml:id="spec_gauss_int">
+    <title>Gaussian integers</title>
+    <statement>
+    <p>
+    The subring <m>\Z[i]=\{m+n i\mid m,n\in \Z\}</m> of <m>\C</m> is called the ring of <term>Gaussian integers</term>. The pair <m>(\Z[i], N)</m>, where <m>N\colon \Z[i]-\{0\}\rightarrow \Z_{\geq 0}</m> is the restriction of the norm function on <m>\C</m> to <m>\Z[i]</m>, is a Euclidean domain. 
+    </p>
+    <p>
+        Given a nonzero <m>z\in \Z[i]</m> and any <m>w\in\Z[i]</m>, you can produce a pair <m>q,r</m> satisfying the division algorithm conditions as follows: 
+        <ol>
+            <li>
+                <p>
+                    find <m>\alpha\in \Q[i]</m> satisfying <m>qz=w</m>;
+                </p>
+            </li>
+            <li>
+                <p>
+                    write <m>\alpha=q+(s+ti)</m>, where <m>q\in \Z[i]</m> and <m>\{\abs{s},\abs{t}\}\subseteq [0,1/2]</m>;
+                </p>
+            </li>
+            <li>
+                <p>
+                    we have <m>w=qz+r</m>, where <m>r=w-zq</m> satisfies <m>r=0</m> or <m>N(r)&lt; N(z)  </m>.
+                </p>
+            </li>
+        </ol>
+    </p>
+    </statement>
+    </activity>
+    <theorem xml:id="th_euc_dom_PID">
+    <title>Euclidean domains are principal</title>
+    <statement>
+    <p>
+    If <m>(R,N)</m> is a Euclidean domain, then <m>R</m> is a principal ideal domain. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <remark>
+        <title>Euclidean domains are principal</title>
+        <p>
+            <xref ref="th_euc_dom_PID"/> can be summarized as follows: 
+            <md>
+                <mrow>\text{Euclidean domain} \amp \implies \text{PID} </mrow>
+            </md>.
+        Surprisingly, the converse implication does not hold: that is, 
+        <md>
+            <mrow>\text{PID} \amp \not\Rightarrow \text{Euclidean domain}</mrow>
+        </md>.
+        For example, you can show that the ring <m>\Z[\alpha]</m>, <m>\alpha=\tfrac{1}{2}+\tfrac{\sqrt{19}}{2}i</m> is a PID, but not a Euclidean domain. (See the Dummit and Foote text.) 
+        </p>
+    </remark>
+    <definition xml:id="d_gcd_lcm">
+    <title>Greatest common divisor and least common multiple</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a commutative ring. Given elements <m>a,b\in R</m> a <term>greatest common divisor</term> (or <term>GCD</term>) of <m>a</m> and <m>b</m> is an element <m>d\in R</m> satisfying the following conditions: 
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>d\mid a</m> and <m>d\mid b</m>;
+            </p>
+        </li>
+        <li>
+            <p>
+                if <m>d'\in R</m> satisfies <m>d'\mid a</m> and <m>d'\mid b</m>, then <m>d'\mid d</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    <p>
+    A <term>least common multiple</term> (or <term>LCM</term>) of <m>a</m> and <m>b</m> is an element <m>m\in R</m> satisfying the following conditions:
+    <ol marker="(i)">
+        <li>
+            <p>
+                <m>a\mid m</m> and <m>b\mid m</m>;
+            </p>
+        </li>
+        <li>
+            <p>
+                if <m>m'\in R</m> satisfies <m>a\mid m'</m> and <m>b\mid m'</m>, then <m>m\mid m'</m>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </definition>
+    <remark>
+        <title>GCDs and LCDs</title>
+        <p>
+            Although the definition of GCDs and LCMs is a straightforward generalization of the corresponding notion from the integers, you should proceed with caution when making use of these concepts. In particular, be aware of the following facts: 
+            <ul>
+                <li>
+                    <p>
+                        GCDs and LCMs need not exist in an arbitrary commutative ring; 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        if GCDs and LCMs do exist, they are only unique modulo multiplication by a unit. 
+                    </p>
+                </li>
+            </ul>
+        The uniqueness issue is already in evidence in the context of the integers. To nonzero integers <m>a, b</m> will always have two GCDs, namely <m>\gcd(a,b)</m> and <m>-\gcd(a,b)</m>, where <m>\gcd(a,b)</m>, as you will recall, is defined to be the greatest <em>positive</em> integer dividing <m>a</m> and <m>b</m>.  
+        </p>
+    </remark>
+    <proposition xml:id="prop_gcd_lcm">
+        <title>GCDs and LCMs</title>
+        
+        
+        <statement>
+            <p>
+                Let <m>R</m> be a nonzero commutative ring, and let <m>a,b</m> be elements of <m>R</m>. 
+                <ol>
+                    <li>
+                        <p>
+                        An element <m>d</m> is a GCD of <m>a</m> and <m>b</m> if and only if <m>(d)</m> is the smallest principal ideal of <m>R</m> containing <m>(a,b)</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            An element <m>m</m> is a LCM of <m>a</m> and <m>b</m> if and only if <m>(m)</m> is the largest principal ideal of <m>R</m> contained in <m>(a)\cap (b)</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+    <corollary xml:id="cor_gcd_lcm">
+        <title>GCDs and LCMs</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a principle ideal domain, and let <m>a,b\in R</m> be two elements of <m>R</m>, one of which is nonzero. Since <m>R</m> is a PID, we have 
+                <md number="yes">
+                    <mrow>(a,b) \amp =(d)</mrow>
+                    <mrow>(a)\cap (b) \amp =(m)</mrow>
+                </md>
+                for some elements <m>d,m\in R</m>. 
+                <ol>
+                    <li>
+                        <p>
+                         <m>d</m> is a GCD of <m>(a,b)</m>. Furthermore, an element <m>d'</m> is a GCD of <m>a</m> and <m>b</m> if and only if <m>d'=ud</m> for some unit <m>u \in R^*</m> (<ie/>, <m>d'</m> and <m>d</m> are associates).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>m</m> is a LCM of <m>(a,b)</m>. Furthermore, an element <m>m'</m> is a LCM of <m>a</m> and <m>b</m> if and only if <m>m'=um</m> for some unit <m>u \in R^*</m> (<ie/>, <m>m'</m> and <m>m</m> are associates).
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </corollary>
+    <p>
+        Let <m>(R,N)</m> be a Euclidean domain. Since <m>R</m> is a PID, GCDs exist for all sets <m>\{a,b\}\ne \{0\}</m>. Whereas in general it might be challenge to actually produce a GCD, the division algorithm condition for Euclidean domains provides us with an algorithm of sorts, called the <term>Euclidean algorithm</term>. 
+    </p>
+    <theorem xml:id="th_euc_alg">
+    <title>Euclidean algorithm</title>
+    <statement>
+    <p>
+        Let <m>(R,N)</m> be a Euclidean domain and let <m>a</m> be a nonzero element of <m>R</m>. Given any element <m>b\in R</m>, we can find a <m>d</m> satisfying <m>(d)=(a,b)</m> (hence a GCD of <m>(a,b)</m>) as follows. 
+        <ol>
+            <li>
+                <p>
+                   If <m>b=qa+r</m> for elements <m>q,r\in R</m>, then  <m>(a,b)=(a,r)</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>a\mid b</m>, then <m>(a,b)=(a)</m>. Otherwise,  we can produce a sequence of division algorithm instances 
+                    <md number="yes">
+                        <mrow>b\amp =q_1a+r_1 \amp r_1\amp \ne 0, N(r_1)&lt; N(a) </mrow>
+                        <mrow>a\amp =q_2r_1+r_2 \amp r_2\amp \ne 0, N(r_2)&lt; N(r_1)</mrow>
+                        <mrow> \amp \vdots</mrow>
+                        <mrow>r_{n-1} \amp =q_{n+1}r_{n}+r_{n+1} \amp r_{n+1}\amp\ne 0, N(r_{n+1})&lt; N(r_{n})</mrow>
+                        <mrow>r_{n} \amp = q_{n+2}r_{n+1}+\boxed{0}</mrow>
+                    </md>
+                    satisfying 
+                    <md>
+                        <!-- <mrow>r_k\amp \ne 0  \text{ and }  N(a)&gt; N(r_k)&gt; N(r_{k+1}) \text{ for all k} </mrow> -->
+                        <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>.
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    As a consequence, <m>r_{n+1}</m> is a GCD of <m>a</m> and <m>b</m>. Moreover, beginning with the penultimate equation <m>r_{n-1}=q_{n+1}r_n+r_{n+1}</m>, and working our way upward, solving successively for <m>r_{k}</m> in terms of <m>r_{k-1}</m> and <m>r_{k-2}</m>, we can find elements <m>c,d\in R</m> satisfying 
+                    <md>
+                        <mrow>r_n \amp =ca+db</mrow>. 
+                    </md>
+                </p>
+            </li>
+        </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        First we prove (1), using <xref ref="prop_generated_ideals"/>. In general, assume we have <m>b=qa+r</m>. Since <m>a\in (a,r)</m> and <m>b=qa+r\in (a,r)</m>, we have <m>(a,b)\subseteq (a,r)</m>. Similarly, since <m>a\in (a,b)</m> and <m>r=b-qa\in (a,b)</m>, we have <m>(a,r)\subseteq (a,b)</m>.  
+    </p>
+    <p>
+        From (1), it follows by induction that if we have a sequence of division algorithm instances as in (2), then we have 
+        <md>
+            <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>.
+        </md>.
+        It suffices, then, to show that there is such a sequence. The basic idea is that at each step 
+        <md>
+            <mrow>r_{k} \amp =q_{k+2}r_{k+1}+r_{k+2}</mrow>
+        </md>,
+        if <m>r_{k+2}\ne 0</m>, then we can apply the division algorithm to <m>r_{k+2}</m> and <m>r_{k+1}</m>. Since at each step where the remainder is nonzero, the successive remainder has strictly smaller <m>N</m>-value, the process must terminate: <ie/>, at some point we must have <m>r_{k}=0</m>. (To make this argument rigorous, we would have to re-case it as an induction argument. There nothing difficult in doing so, but we will spare you this technicality.)
+    </p>
+    <p>
+        Statement (3) follows immediately from (2), though again strictly speaking an induction argument should be used. 
+    </p>
+    </proof>
+    </theorem>
+<example xml:id="eg_gcd_poly">
+<title>GCD in polynomial ring</title>
+<statement>
+<p>
+Use the Euclidean algorithm to find a GCD <m>h</m> of <m>f(x)=x^9-1</m> and <m>g(x)=x^3+2x^2+2x+1</m> in the ring <m>\Q[x]</m>, and write <m>h=pf+qg</m>, where <m>p,q\in \Q[x]</m>.
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
+<example xml:id="eg_gauss_ints">
+<title>Ideal generator in <m>\Z[i]</m></title>
+<statement>
+<p>
+Find a Gaussian integer <m>z</m> satisfying <m>(2,1+3i)=(z)</m> and express <m>z</m> as 
+<m>z=\alpha\cdot 2+\beta\cdot(1+3i)</m> for elements <m>\alpha, \beta\in \Z[i]</m>.
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
+</section>
