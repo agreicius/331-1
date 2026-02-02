@@ -219,7 +219,7 @@
                     satisfying 
                     <md>
                         <!-- <mrow>r_k\amp \ne 0  \text{ and }  N(a)&gt; N(r_k)&gt; N(r_{k+1}) \text{ for all k} </mrow> -->
-                        <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>.
+                        <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>
                     </md>.
                 </p>
             </li>
@@ -227,8 +227,8 @@
                 <p>
                     As a consequence, <m>r_{n+1}</m> is a GCD of <m>a</m> and <m>b</m>. Moreover, beginning with the penultimate equation <m>r_{n-1}=q_{n+1}r_n+r_{n+1}</m>, and working our way upward, solving successively for <m>r_{k}</m> in terms of <m>r_{k-1}</m> and <m>r_{k-2}</m>, we can find elements <m>c,d\in R</m> satisfying 
                     <md>
-                        <mrow>r_n \amp =ca+db</mrow>. 
-                    </md>
+                        <mrow>r_n \amp =ca+db</mrow> 
+                    </md>.
                 </p>
             </li>
         </ol>
@@ -241,7 +241,7 @@
     <p>
         From (1), it follows by induction that if we have a sequence of division algorithm instances as in (2), then we have 
         <md>
-            <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>.
+            <mrow>(a,b) \amp =(a,r_1)=(r_1,r_2)=\dots =(r_n,r_{n+1})=(r_{n+1})</mrow>
         </md>.
         It suffices, then, to show that there is such a sequence. The basic idea is that at each step 
         <md>
