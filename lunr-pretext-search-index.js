@@ -4051,6 +4051,132 @@ var ptx_lunr_docs = [
   "body": " Prime ideals of   If is a prime ideal of , then one of the following statements holds.    .     , where is a prime integer.     , where is a prime integer, is monic, and , the reduction of modulo , is an irreducible polynomial of .     , where is irreducible when considered as a polynomial in .      "
 },
 {
+  "id": "s_euc_domain",
+  "level": "1",
+  "url": "s_euc_domain.html",
+  "type": "Section",
+  "number": "2.11",
+  "title": "Euclidean domains",
+  "body": " Euclidean domains   Euclidean domain   A is a pair , where is an integral domain and is a function satisfying the following generalized division algorithm condition: for all nonzero and all , there exists elements satisfying    ,    either or .        Norm function on   Given , where , we define . We call the function the norm function on .     Gaussian integers   The subring of is called the ring of Gaussian integers . The pair , where is the restriction of the norm function on to , is a Euclidean domain.  Given a nonzero and any , you can produce a pair satisfying the division algorithm conditions as follows:   find satisfying ;    write , where and ;    we have , where satisfies or .        Euclidean domains are principal   If is a Euclidean domain, then is a principal ideal domain.         Euclidean domains are principal   can be summarized as follows: . Surprisingly, the converse implication does not hold: that is, . For example, you can show that the ring , is a PID, but not a Euclidean domain. (See the Dummit and Foote text.)    Greatest common divisor and least common multiple   Let be a commutative ring. Given elements a greatest common divisor (or GCD ) of and is an element satisfying the following conditions:    and ;    if satisfies and , then .     A least common multiple (or LCM ) of and is an element satisfying the following conditions:    and ;    if satisfies and , then .        GCDs and LCDs  Although the definition of GCDs and LCMs is a straightforward generalization of the corresponding notion from the integers, you should proceed with caution when making use of these concepts. In particular, be aware of the following facts:   GCDs and LCMs need not exist in an arbitrary commutative ring;    if GCDs and LCMs do exist, they are only unique modulo multiplication by a unit.   The uniqueness issue is already in evidence in the context of the integers. To nonzero integers will always have two GCDs, namely and , where , as you will recall, is defined to be the greatest positive integer dividing and .    GCDs and LCMs   Let be a nonzero commutative ring, and let be elements of .   An element is a GCD of and if and only if is the smallest principal ideal of containing .    An element is a LCM of and if and only if is the largest principal ideal of contained in .        GCDs and LCMs   Let be a principle ideal domain, and let be two elements of , one of which is nonzero. Since is a PID, we have for some elements .    is a GCD of . Furthermore, an element is a GCD of and if and only if for some unit ( , and are associates).     is a LCM of . Furthermore, an element is a LCM of and if and only if for some unit ( , and are associates).       Let be a Euclidean domain. Since is a PID, GCDs exist for all sets . Whereas in general it might be challenge to actually produce a GCD, the division algorithm condition for Euclidean domains provides us with an algorithm of sorts, called the Euclidean algorithm .   Euclidean algorithm   Let be a Euclidean domain and let be a nonzero element of . Given any element , we can find a satisfying (hence a GCD of ) as follows.   If for elements , then .    If , then . Otherwise, we can produce a sequence of division algorithm instances satisfying .    As a consequence, is a GCD of and . Moreover, beginning with the penultimate equation , and working our way upward, solving successively for in terms of and , we can find elements satisfying        First we prove (1), using . In general, assume we have . Since and , we have . Similarly, since and , we have .  From (1), it follows by induction that if we have a sequence of division algorithm instances as in (2), then we have . It suffices, then, to show that there is such a sequence. The basic idea is that at each step , if , then we can apply the division algorithm to and . Since at each step where the remainder is nonzero, the successive remainder has strictly smaller -value, the process must terminate: , at some point we must have . (To make this argument rigorous, we would have to re-case it as an induction argument. There nothing difficult in doing so, but we will spare you this technicality.)  Statement (3) follows immediately from (2), though again strictly speaking an induction argument should be used.     GCD in polynomial ring   Use the Euclidean algorithm to find a GCD of and in the ring , and write , where .         Ideal generator in   Find a Gaussian integer satisfying and express as for elements .        "
+},
+{
+  "id": "d_euc_domain",
+  "level": "2",
+  "url": "s_euc_domain.html#d_euc_domain",
+  "type": "Definition",
+  "number": "2.11.1",
+  "title": "Euclidean domain.",
+  "body": " Euclidean domain   A is a pair , where is an integral domain and is a function satisfying the following generalized division algorithm condition: for all nonzero and all , there exists elements satisfying    ,    either or .      "
+},
+{
+  "id": "d_norm_function",
+  "level": "2",
+  "url": "s_euc_domain.html#d_norm_function",
+  "type": "Definition",
+  "number": "2.11.2",
+  "title": "Norm function on <span class=\"process-math\">\\(\\C\\)<\/span>.",
+  "body": " Norm function on   Given , where , we define . We call the function the norm function on .   "
+},
+{
+  "id": "spec_gauss_int",
+  "level": "2",
+  "url": "s_euc_domain.html#spec_gauss_int",
+  "type": "Specimen",
+  "number": "33",
+  "title": "Gaussian integers.",
+  "body": " Gaussian integers   The subring of is called the ring of Gaussian integers . The pair , where is the restriction of the norm function on to , is a Euclidean domain.  Given a nonzero and any , you can produce a pair satisfying the division algorithm conditions as follows:   find satisfying ;    write , where and ;    we have , where satisfies or .      "
+},
+{
+  "id": "th_euc_dom_PID",
+  "level": "2",
+  "url": "s_euc_domain.html#th_euc_dom_PID",
+  "type": "Theorem",
+  "number": "2.11.3",
+  "title": "Euclidean domains are principal.",
+  "body": " Euclidean domains are principal   If is a Euclidean domain, then is a principal ideal domain.       "
+},
+{
+  "id": "s_euc_domain-6",
+  "level": "2",
+  "url": "s_euc_domain.html#s_euc_domain-6",
+  "type": "Remark",
+  "number": "2.11.4",
+  "title": "Euclidean domains are principal.",
+  "body": " Euclidean domains are principal   can be summarized as follows: . Surprisingly, the converse implication does not hold: that is, . For example, you can show that the ring , is a PID, but not a Euclidean domain. (See the Dummit and Foote text.)  "
+},
+{
+  "id": "d_gcd_lcm",
+  "level": "2",
+  "url": "s_euc_domain.html#d_gcd_lcm",
+  "type": "Definition",
+  "number": "2.11.5",
+  "title": "Greatest common divisor and least common multiple.",
+  "body": " Greatest common divisor and least common multiple   Let be a commutative ring. Given elements a greatest common divisor (or GCD ) of and is an element satisfying the following conditions:    and ;    if satisfies and , then .     A least common multiple (or LCM ) of and is an element satisfying the following conditions:    and ;    if satisfies and , then .      "
+},
+{
+  "id": "s_euc_domain-8",
+  "level": "2",
+  "url": "s_euc_domain.html#s_euc_domain-8",
+  "type": "Remark",
+  "number": "2.11.6",
+  "title": "GCDs and LCDs.",
+  "body": " GCDs and LCDs  Although the definition of GCDs and LCMs is a straightforward generalization of the corresponding notion from the integers, you should proceed with caution when making use of these concepts. In particular, be aware of the following facts:   GCDs and LCMs need not exist in an arbitrary commutative ring;    if GCDs and LCMs do exist, they are only unique modulo multiplication by a unit.   The uniqueness issue is already in evidence in the context of the integers. To nonzero integers will always have two GCDs, namely and , where , as you will recall, is defined to be the greatest positive integer dividing and .  "
+},
+{
+  "id": "prop_gcd_lcm",
+  "level": "2",
+  "url": "s_euc_domain.html#prop_gcd_lcm",
+  "type": "Proposition",
+  "number": "2.11.7",
+  "title": "GCDs and LCMs.",
+  "body": " GCDs and LCMs   Let be a nonzero commutative ring, and let be elements of .   An element is a GCD of and if and only if is the smallest principal ideal of containing .    An element is a LCM of and if and only if is the largest principal ideal of contained in .      "
+},
+{
+  "id": "cor_gcd_lcm",
+  "level": "2",
+  "url": "s_euc_domain.html#cor_gcd_lcm",
+  "type": "Corollary",
+  "number": "2.11.8",
+  "title": "GCDs and LCMs.",
+  "body": " GCDs and LCMs   Let be a principle ideal domain, and let be two elements of , one of which is nonzero. Since is a PID, we have for some elements .    is a GCD of . Furthermore, an element is a GCD of and if and only if for some unit ( , and are associates).     is a LCM of . Furthermore, an element is a LCM of and if and only if for some unit ( , and are associates).      "
+},
+{
+  "id": "s_euc_domain-11",
+  "level": "2",
+  "url": "s_euc_domain.html#s_euc_domain-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Euclidean algorithm "
+},
+{
+  "id": "th_euc_alg",
+  "level": "2",
+  "url": "s_euc_domain.html#th_euc_alg",
+  "type": "Theorem",
+  "number": "2.11.9",
+  "title": "Euclidean algorithm.",
+  "body": " Euclidean algorithm   Let be a Euclidean domain and let be a nonzero element of . Given any element , we can find a satisfying (hence a GCD of ) as follows.   If for elements , then .    If , then . Otherwise, we can produce a sequence of division algorithm instances satisfying .    As a consequence, is a GCD of and . Moreover, beginning with the penultimate equation , and working our way upward, solving successively for in terms of and , we can find elements satisfying        First we prove (1), using . In general, assume we have . Since and , we have . Similarly, since and , we have .  From (1), it follows by induction that if we have a sequence of division algorithm instances as in (2), then we have . It suffices, then, to show that there is such a sequence. The basic idea is that at each step , if , then we can apply the division algorithm to and . Since at each step where the remainder is nonzero, the successive remainder has strictly smaller -value, the process must terminate: , at some point we must have . (To make this argument rigorous, we would have to re-case it as an induction argument. There nothing difficult in doing so, but we will spare you this technicality.)  Statement (3) follows immediately from (2), though again strictly speaking an induction argument should be used.   "
+},
+{
+  "id": "eg_gcd_poly",
+  "level": "2",
+  "url": "s_euc_domain.html#eg_gcd_poly",
+  "type": "Example",
+  "number": "2.11.10",
+  "title": "GCD in polynomial ring.",
+  "body": " GCD in polynomial ring   Use the Euclidean algorithm to find a GCD of and in the ring , and write , where .       "
+},
+{
+  "id": "eg_gauss_ints",
+  "level": "2",
+  "url": "s_euc_domain.html#eg_gauss_ints",
+  "type": "Example",
+  "number": "2.11.11",
+  "title": "Ideal generator in <span class=\"process-math\">\\(\\Z[i]\\)<\/span>.",
+  "body": " Ideal generator in   Find a Gaussian integer satisfying and express as for elements .       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
