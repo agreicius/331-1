@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="pid_ufd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>PIDs and UFDs</title>
+    <proposition xml:id="prop_prime_implies_irr">
+        <title>Prime implies irreducible</title>
+        <statement>
+            <p>
+                Let <m>R</m> be an integral domain. For all <m>p\in R</m>, if <m>p</m> is prime, then <m>p</m> is irreducible. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Proof by delegation. 
+            </p>
+        </proof>
+    </proposition>
+    <theorem xml:id="th_PID">
+    <title>PIDs</title>
+    <statement>
+    <p>
+    Let <m>p</m> be an element of the principal ideal domain <m>R</m>. The following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>p</m> is prime (equivalently, <m>(p)</m> is a prime ideal).
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>p</m> is irreducible. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(p)</m> is maximal. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_5i">
+    <title><m>\Z[\sqrt{-5}]</m> is not a PID</title>
+    <statement>
+    <p>
+    Let <m>R=\Z[\sqrt{-5}]</m>. Show that the elements <m>2</m> and <m>3</m> are irreducible, but not prime. Conclude that <m>R</m> is not a PID (nor a Euclidean domain). 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <definition xml:id="d_ufd">
+    <title>Unique factorization domain</title>
+    <statement>
+    <p>
+    A <term>unique factorization domain (UFD)</term> is an integral domain <m>R</m> that satisfies the following properties. 
+    <ol marker="(i)">
+        <li>
+            <title>Factorization into irreducibles</title>
+            <p>
+                If <m>a\in R</m> is nonzero and not a unit, then there are irreducible elements <m>p_1,p_2,\dots, p_n</m> in <m>R</m> satisfying 
+                <md number="yes">
+                    <mrow xml:id="eq_factor_irr">a \amp = p_1p_2\cdots p_n</mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <p>
+                The factorization <xref ref="eq_factor_irr"/> is unique in the following sense: if we have 
+                <md>
+                    <mrow>a \amp =p_1p_2\cdots p_n=q_1q_2\cdots q_m</mrow>
+                </md>,
+                where the <m>p_i</m> and <m>q_j</m> are irreducible, 
+                then <m>n=m</m>, and after a reordering there are units <m>u_i\in R^*</m> such that <m>q_i=u_ip_i</m> for all <m>1\leq i\leq n</m>. In other words, in any factorization of <m>a</m> into irreducibles, the number of irreducible factors is constant, and the irreducible elements appearing in the factorization are unique up to multiplication by a unit. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_ufds">
+    <title>UFDs</title>
+    <statement>
+    <p>
+    Let <m>p</m> be an element of the unique factorization domain <m>R</m>. The following statements are equivalent. 
+    <ol>
+        <li>
+            <p>
+                <m>p</m> is prime (equivalently, <m>(p)</m> is a prime ideal).
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>p</m> is irreducible.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+
+
+</section>
