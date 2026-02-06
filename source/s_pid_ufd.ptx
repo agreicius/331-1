@@ -93,6 +93,47 @@
     </p>
     </statement>
     </definition>
+    <proposition xml:id="prop_ufd_prime_fact">
+        <title>Irreducible factorization and divisibility</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a UFD. 
+                <ol>
+                    <li>
+                        <p>
+                            Given a nonzero non-unit element <m>a\in R</m>, we can write 
+                            <md number="yes">
+                                <mrow>a \amp = \prod_{i=1}^rp_i^{n_i}</mrow>
+                            </md>
+                            where the <m>p_i</m> are pairwise non-associate irreducible elements, and the <m>n_i</m> are positive integers. Furthermore this factorization is unique up to a reordering, and choice of associate for each <m>p_i</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                           Assume nonzero elements <m>a,b\in R</m> can be written 
+                           as 
+                           <md>
+                            <mrow>a \amp =\prod_{i=1}^rp_i^{n_i} \amp b\amp=\prod_{i=1}^rp_i^{m_i}</mrow>
+                           </md>
+                           with <m>n_i</m> and <m>m_i</m> nonnegative integers. We have 
+                            <md number="yes">
+                             <mrow xml:id="eq_ufd_div">a\mid b \amp \iff n_i\leq m_i \text{ for all } 1\leq i\leq r</mrow>
+                            </md>.
+                            As a result, the element
+                            <md number="yes">
+                                <mrow xml:id="eq_ufd_gcd"> d\amp =\prod_{i=1}^rp_i^{\min\{n_i,m_i\}} </mrow>
+                            </md>
+                            is a GCD of <m>a</m> and <m>b</m>, and 
+                            <md number="yes">
+                                <mrow xml:id="eq_ufd_lcm"> m\amp =\prod_{i=1}^rp_i^{\max\{n_i,m_i\}} </mrow>
+                            </md>
+                            is an LCM of <m>a</m> and <m>b</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
     <theorem xml:id="th_ufds">
     <title>UFDs</title>
     <statement>
@@ -129,6 +170,19 @@
     </p>
     </proof>
     </theorem>
-
+    <theorem xml:id="th_pid_implies_ufd">
+    <title>PID implies UFD</title>
+    <statement>
+    <p>
+    If <m>R</m> is a principal ideal domain, then <m>R</m> is a unique factorization domain. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        The existence of irreducible factorizations is the trickier argument. Let's look at uniqueness, assuming existence. Let <m>a=\prod_{i\in I}p_i</m> be an irreducible factorization of the nonzero, non-unit element <m>a</m>. We prove the uniqueness property of this factorization by induction on <m>\abs{I}</m>. 
+    </p>
+    </proof>
+    </theorem>
+    
 
 </section>
