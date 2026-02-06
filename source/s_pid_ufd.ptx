@@ -41,6 +41,10 @@
     </statement>
     <proof>
     <p>
+        The proof of this result is identical to that of <xref ref="th_max_prime_poly"/>, which treats the special case of polynomial rings over a field. If you look there, you'll notice that the only thing used is the fact that <m>F[x]</m> is a PID when <m>F</m> is a field. 
+    </p>
+    <p>
+        For convenience, however, we reprise some of the proof here in cursory form. Implication (1)<m>\implies</m>(2) is true in any commutative ring, as is (3)<m>\implies</m>(1). For the last link, (2)<m>\implies</m>(3), to show that <m>(p)</m> is maximal if <m>p</m> is irreducible, we use the fact that <m>R</m> is a PID to assert that <m>(p)\subseteq I</m> implies <m>(p)\subseteq (a)</m> for some <m>a\in R</m>. But in that case <m>a\mid p</m>, in which case either <m>a</m> is a unit (and <m>(a)=R</m>), or <m>a</m> is an associate of <m>p</m>, in which case <m>(a)=(p)</m>. 
     </p>
     </proof>
     </theorem>
@@ -73,6 +77,9 @@
             </p>
         </li>
         <li>
+            <title>Uniqueness of factorization</title>
+            
+            
             <p>
                 The factorization <xref ref="eq_factor_irr"/> is unique in the following sense: if we have 
                 <md>
@@ -107,6 +114,18 @@
     </statement>
     <proof>
     <p>
+        Since (1)<m>\implies</m>(2)  is true in any commutative ring, it suffices to show  (2)<m>\implies</m>(1).
+    </p>
+    <p>
+        Assume <m>p</m> is irreducible, and that <m>p\mid ab</m> for some elements <m>a,b\in R</m>. This means we have 
+        <md>
+            <mrow>ab \amp =cp</mrow>
+        </md>
+        for some <m>c\in R</m>. Let <m>c=\prod_{i\in I}p_i</m> be an irreducible factorization of <m>c</m>, so that 
+        <md>
+            <mrow>ab \amp =p\prod_{i\in I}p_i</mrow>
+        </md>
+        is an irreducible factorization of <m>ab</m>. This shows that <m>p</m> is (up to multiplication by a unit) one of the irreducible elements appearing in the factorization of <m>ab</m>. Similarly, since we can 
     </p>
     </proof>
     </theorem>
