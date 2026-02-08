@@ -143,7 +143,7 @@
                 <ol>
                     <li>
                         <p>
-                            Given a nonzero element <m>a\in R</m> and an irreducible element <m>p\in R</m>, there is a unique nonnegative integer <m>v_p(a)=n</m> such that <m>a=p^n\, b</m>, where <m>b\in R</m> and <m>p\nmid b</m>. 
+                            Given a nonzero element <m>a\in R</m> and an irreducible element <m>p\in R</m>, there is a unique nonnegative integer <m>v_p(a)=n</m> such that <m>a=p^n\, b</m>, where <m>b\in R</m> and <m>p\nmid b</m>. Equivalently, <m>v_p(a)</m> is the largest nonnegative integer such that <m>p^{v_p(a)}\mid a</m>. 
                         </p>
                     </li>
                     <li>
@@ -175,6 +175,15 @@
             </p>
         </proof>
     </proposition>
+    <definition xml:id="d_valuation_at_irr">
+    <title>Valuation at irreducible</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a unique factorization domain, and let <m>p</m> be an irreducible element of <m>R</m>. Given a nonzero element <m>a\in R</m>, the <term>valuation of <m>a</m> at <m>p</m></term>, denoted <m>v_p(a)</m>, is the largest nonnegative integer <m>n</m> satisfying <m>p^n\mid a</m>. 
+    </p>
+    </statement>
+    </definition>
+    
     <proposition xml:id="prop_ufd_prime_fact">
         <title>Irreducible factorization and divisibility</title>
         <statement>
