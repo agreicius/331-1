@@ -93,47 +93,6 @@
     </p>
     </statement>
     </definition>
-    <proposition xml:id="prop_ufd_prime_fact">
-        <title>Irreducible factorization and divisibility</title>
-        <statement>
-            <p>
-                Let <m>R</m> be a UFD. 
-                <ol>
-                    <li>
-                        <p>
-                            Given a nonzero non-unit element <m>a\in R</m>, we can write 
-                            <md number="yes">
-                                <mrow>a \amp = \prod_{i=1}^rp_i^{n_i}</mrow>
-                            </md>
-                            where the <m>p_i</m> are pairwise non-associate irreducible elements, and the <m>n_i</m> are positive integers. Furthermore this factorization is unique up to a reordering, and choice of associate for each <m>p_i</m>. 
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                           Assume nonzero elements <m>a,b\in R</m> can be written 
-                           as 
-                           <md>
-                            <mrow>a \amp =\prod_{i=1}^rp_i^{n_i} \amp b\amp=\prod_{i=1}^rp_i^{m_i}</mrow>
-                           </md>
-                           with <m>n_i</m> and <m>m_i</m> nonnegative integers. We have 
-                            <md number="yes">
-                             <mrow xml:id="eq_ufd_div">a\mid b \amp \iff n_i\leq m_i \text{ for all } 1\leq i\leq r</mrow>
-                            </md>.
-                            As a result, the element
-                            <md number="yes">
-                                <mrow xml:id="eq_ufd_gcd"> d\amp =\prod_{i=1}^rp_i^{\min\{n_i,m_i\}} </mrow>
-                            </md>
-                            is a GCD of <m>a</m> and <m>b</m>, and 
-                            <md number="yes">
-                                <mrow xml:id="eq_ufd_lcm"> m\amp =\prod_{i=1}^rp_i^{\max\{n_i,m_i\}} </mrow>
-                            </md>
-                            is an LCM of <m>a</m> and <m>b</m>.
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </statement>
-    </proposition>
     <theorem xml:id="th_ufds">
     <title>UFDs</title>
     <statement>
@@ -166,10 +125,135 @@
         <md>
             <mrow>ab \amp =p\prod_{i\in I}p_i</mrow>
         </md>
-        is an irreducible factorization of <m>ab</m>. This shows that <m>p</m> is (up to multiplication by a unit) one of the irreducible elements appearing in the factorization of <m>ab</m>. Similarly, since we can 
+        is an irreducible factorization of <m>ab</m>. This shows that <m>p</m> is (up to multiplication by a unit) one of the irreducible elements appearing in the factorization of <m>ab</m>. Since we can also obtain an irreducible factorization of <m>ab</m> by taking the product of the two irreducible factorizations of <m>a</m> and <m>b</m>, it follows that <m>p</m> must be associate to one of the irreducible factors of <m>a</m> or of <m>b</m>, and thus that <m>p\mid a</m> or <m>p\mid b</m>. 
     </p>
     </proof>
     </theorem>
+    <remark>
+        <title>Irreducible is prime in UFD</title>
+        <p>
+            According to <xref ref="th_ufds"/>, in a UFD, the notions of irreducible and prime elements are equivalent. Accordingly, we are tempted to treat the two terms as synonymous when working in a UFD. Since however, the two properties are not generally equivalent for integral domains, we will do our best to resist this temptation.
+        </p>
+    </remark>
+    <proposition xml:id="prop_valutation_irr">
+        <title>Valuation at irreducible</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a unique factorization domain. 
+                <ol>
+                    <li>
+                        <p>
+                            Given a nonzero element <m>a\in R</m> and an irreducible element <m>p\in R</m>, there is a unique nonnegative integer <m>v_p(a)=n</m> such that <m>a=p^n\, b</m>, where <m>b\in R</m> and <m>p\nmid b</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>v_p(ab)=v_p(a)+v_p(b)</m> for all irreducible elements <m>p</m> and nonzero elements <m>a</m> and <m>b</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Given nonzero elements <m>a</m> and <m>b</m>, we have  <m>a\mid b</m> if and only if <m>v_p(a)\leq v_p(b)</m> for all irreducible elements <m>p\in R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A nonzero element <m>a\in R</m> is a unit if and only if <m>v_p(a)=0</m> for all irreducible elements <m>p\in R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>p</m> and <m>q</m> are associate irreducible elements, <m>v_p(a)=v_q(a)</m> for all nonzero elements <m>a\in R</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                The proof is left as an exercise. 
+            </p>
+        </proof>
+    </proposition>
+    <proposition xml:id="prop_ufd_prime_fact">
+        <title>Irreducible factorization and divisibility</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a unique factorization domain. 
+                <ol>
+                    <li>
+                        <p>
+                            Given a nonzero non-unit element <m>a\in R</m>, we can write 
+                            <md number="yes">
+                                <mrow xml:id="eq_ufd_irr_power_factor">a \amp = u\prod_{i=1}^rp_i^{n_i}</mrow>
+                            </md>
+                            where <m>u\in R^*</m>, the <m>p_i</m> are pairwise non-associate irreducible elements, and <m>n_i=v_{p_i}(a)=n_i</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                           Assume nonzero elements <m>a,b\in R</m> can be written 
+                           as 
+                           <md>
+                            <mrow>a \amp =u\prod_{i=1}^rp_i^{n_i} \amp b\amp=u'\prod_{i=1}^rp_i^{m_i}</mrow>
+                           </md>
+                           where <m>n_i</m> and <m>m_i</m> nonnegative integers, and the <m>p_i</m> are pairwise non-associate irreducible elements.
+                        </p>
+                        <p>The element
+                            <md number="yes">
+                                <mrow xml:id="eq_ufd_gcd"> d\amp =\prod_{i=1}^rp_i^{\min\{n_i,m_i\}} </mrow>
+                            </md>
+                            is a GCD of <m>a</m> and <m>b</m>, and the element
+                            <md number="yes">
+                                <mrow xml:id="eq_ufd_lcm"> m\amp =\prod_{i=1}^rp_i^{\max\{n_i,m_i\}} </mrow>
+                            </md>
+                            is an LCM of <m>a</m> and <m>b</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Write <m>r\sim s</m> to denote that <m>r</m> and <m>s</m> are associates in <m>R</m>. This relation is easily seen to be an equivalence relation. Given an irreducible factorization 
+                            <md>
+                                <mrow>a \amp =\prod_{j=1}^s q_i</mrow>
+                            </md>,
+                            let <m>p_1, p_2,\dots, p_r</m> be any representatives of the distinct associate classes of the <m>q_i</m>. Sorting the <m>q_i</m> by their associate classes, we have 
+                            <md number="yes">
+                                <mrow>a \amp =\prod_{j=1}^s q_i</mrow>
+                                <mrow> \amp = \prod_{i=1}^r \prod_{q_j\sim p_i} q_i
+                                </mrow>
+                                <mrow> \amp = \prod_{i=1}^r\prod_{q_j\sim p_i}u_{ij}p_i </mrow>
+                                <mrow> \amp =  u\prod_{i=1}^rp_i^{n_i}</mrow>
+                            </md>,
+                            where <m>u=\prod u_{ij}</m> and <m>n_i</m> is the number of factors <m>q_j</m> that are associates of <m>p_i</m>. 
+                        </p>
+                        <p>
+                            Fix <m>i\in \{1,2,\dots, r\}</m> and write 
+                            <md>
+                                <mrow>a \amp =p_i^{n_i}\cdot \prod_{j\ne i}p_j^{n_j}</mrow>
+                            </md>.
+                            Since <m>p_i</m> is not associate to <m>p_j</m> for <m>j\ne i</m>, it follows that <m>p_i\nmid \prod_{j\ne i}p_j^{n_j}</m>, and hence that <m>n_i=v_{p_i}(a)</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Given factorizations of <m>a</m> and <m>b</m> as specified, first observe that <m>v_p(a)=v_p(b)=0</m> for all <m>p</m> not associate to one of the <m>p_i</m>. It follows that <m>d'</m> is a common divisor of <m>a</m> and <m>b</m> if and only if <m>v_{p_i}(d')\leq \min\{n_i, m_i}</m> for all <m>1\leq i\leq r</m>, and <m>v_p(d)=0</m> for all <m>p</m> not associate to one of the <m>p_i</m>, if and only if <m>d'\mid d</m>, where 
+                            <md>
+                                <mrow>d \amp = \prod_{i=1}^rp_i^{n_i} </mrow>
+                            </md>.
+                            This shows <m>d</m> is a GCD of <m>a</m> and <m>b</m>. A similar argument shows that the given <m>m</m> is a LCM of <m>a</m> and <m>b</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </proposition>
+    
     <theorem xml:id="th_pid_implies_ufd">
     <title>PID implies UFD</title>
     <statement>
@@ -178,9 +262,43 @@
     </p>
     </statement>
     <proof>
-    <p>
-        The existence of irreducible factorizations is the trickier argument. Let's look at uniqueness, assuming existence. Let <m>a=\prod_{i\in I}p_i</m> be an irreducible factorization of the nonzero, non-unit element <m>a</m>. We prove the uniqueness property of this factorization by induction on <m>\abs{I}</m>. 
+    
+    <proof>
+        <title>Proof of uniqueness</title>
+        <p>
+        The existence of irreducible factorizations is the trickier argument. Let's look at uniqueness, assuming existence. Let <m>a=\prod_{i\in I}p_i</m> be an irreducible factorization of the nonzero, non-unit element <m>a</m>. We prove the uniqueness property of this factorization by induction on <m>\abs{I}</m>. If <m>\abs{I}=1</m>, then <m>a=p</m> is irreducible. Suppose we have another factorization 
+        <md>
+            <mrow>p \amp =p_1p_2\cdots p_n</mrow>
+        </md>.
+        First observe that we must have <m>n=1</m>. Otherwise, we would have <m>p=p_1c</m>, where <m>p_1</m> and <m>c=\prod_{i\ne 1}p_i</m> are both non-units, contradicting the fact that <m>p</m> is irreducible.
     </p>
+    <p>
+        Assume now that the uniqueness property holds for all irreducible factorizations into <m>n</m> irreducible factors, and assume <m>a=\prod_{i=1}^{n+1}p_i</m>, with <m>n\geq 1</m>. If we have another factorization 
+        <md>
+            <mrow>a= \amp \prod_{i=1}^m q_i</mrow>
+        </md>,
+        then by induction we must have <m>m\geq n+1</m>. Since <m>p_1</m> divides the product of the <m>q_i</m>, and since <m>p_1</m> is prime (irreducible implies prime in PIDs), <m>p_1</m> must divide one of the <m>q_i</m>. Without loss of generality, we may assume that <m>p_1\mid q_1</m>. Since <m>q_1</m> is irreducible and <m>p_1</m> is not a unit, we conclude that <m>q_1=up_1</m> for some unit. But then we can cancel <m>p_1</m> from both sides to obtain
+        <md>
+            <mrow>a' \amp = \prod_{i=2}^np_i=u\prod_{i=2}^{m+1}q_j</mrow>
+        <mrow> \amp =(uq_2)q_3\cdots q_m</mrow>
+        </md>.
+         Since <m>a'</m> is a product of <m>n</m> irreducible elements, we may apply induction to conclude that  <m>n=m-1</m>, and after a reordering, <m>p_i</m> is associate to <m>q_i</m> for all <m>2\leq i\leq n</m>. (Note that the presence of <m>uq_2</m> instead of <m>q_2</m> here is not an issue here, since being associates is an equivalence relation.) But then we have <m>n+1=m</m>, and <m>p_i</m> is associate to <m>q_i</m> for all <m>1\leq i\leq n</m>, as desired. 
+    </p>
+    </proof>
+    <proof>
+        <title>Proof of existence</title>   
+        <p>
+            Suppose, by contradiction that there is a nonzero, non-unit element <m>a</m> that does not admit an irreducible factorization. Since, in particular, <m>a</m> cannot be irreducible, we have <m>a=bc</m> for two non-unit elements <m>b,c\in R</m>, and at least one of <m>b</m> and <m>c</m> fails to admit an irreducible factorization (otherwise <m>a</m> would have an irreducible factorization). Call this element <m>a_1</m>, and proceed in the same way to produce a sequence <m>a=a_0, a_1, a_2,\dots</m> satisfying <m>a_n\mid a_{n-1}</m> and <m>a_{n-1}\nmid a_n</m> for all <m>n\geq 1</m>, and hence a chain of strictly proper inclusions 
+            <md>
+                <mrow>(a) \amp \subsetneq (a_1)\subsetneq (a_2)\subsetneq \dots</mrow>
+            </md>.
+            It is easy to see that <m>I=\bigcup_{i=1}^\infty (a_i)</m> is an ideal of <m>R</m>. Since <m>R</m> is a PID, we have <m>I=(b)</m> for some element <m>b\in R</m>. But then <m>b\in (a_i)</m> for some <m>i</m>, from whence it follows that <m>I=(b)=(a_i)</m>, and <m>(a_{i+1})=(a_i)</m>. A contradiction! We conclude that every nonzero, non-unit element of <m>R</m> does admit an irreducible factorization.  
+        </p>
+        <p>
+            Note: it is possible to give a proof of existence that uses Zorn's lemma. Can you produce it? The one we provide has the advantage of not using Zorn's lemma, which you will recall is equivalent to the axiom of choice. If you look closely, however, you will see that our proof does involve some fishy choices to construct the sequence <m>(a_n)</m>. Indeed, it is making use of what is called the <em>axiom of dependent choice</em> (DC), which is logically weaker than the full axiom of choice. 
+        </p>
+    </proof>
+    
     </proof>
     </theorem>
     
