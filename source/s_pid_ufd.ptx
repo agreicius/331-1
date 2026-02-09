@@ -363,8 +363,8 @@
                 </li>
                 <li>
                     <p>
-                        It is know that with the possible exception of two values of <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain: the two possible exceptions being <m>D=69</m> and <m>D=213</m>.
-                        The generalize Riemann hypothesis implies that for positive square-free <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain.  
+                        Continuing with positive case. It is known that with the possible exception of two values of positive, square-free integers <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain.
+                        Additionally, the generalized Riemann hypothesis implies that for positive square-free <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain.  
                     </p>
                 </li>
             </ul>
