@@ -310,6 +310,65 @@
     
     </proof>
     </theorem>
-    
-
+    <p>
+        In the past three sections we have established the chain of implications
+        <md number="yes">
+            <mrow xml:id="eq_integral_implications">\text{Euclidean domain} \amp \implies \text{PID} \implies \text{UFD}\implies \text{integral domain}</mrow>
+        </md>.
+        As always in mathematics, when confronted with a stated implication, we should ask whether the converse is also true. No implication in the chain above is an equivalence. Let's assemble some counterexamples:
+        <ul>
+            <li>
+                <p>
+                    We have seen that the ring <m>\Z[\sqrt{-5}]</m> is integral, but not a UFD, since not all irreducible elements are prime. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Soon we will see that the ring <m>\Z[x]</m> is a UFD, but it is not a PID: it is easy to see that <m>(2,x)</m> is not a principal ideal. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    As mentioned earlier, the ring <m>\Z[\omega]</m>, where <m>\omega=\tfrac{1}{2}+\tfrac{\sqrt{-19}}{2}</m> is a PID, but not a Euclidean domain (see the Dummit and Foote text). 
+                </p>
+            </li>
+        </ul>
+    </p>
+    <remark>
+        <title>Quadratic ring of integers</title>
+        <p>
+            Let <m>D</m> be a square-free integer. We have seen that <m>F=\Q[\sqrt{D}]</m> is a field. The <term>ring of integers</term> <m>\mathcal{O}_{\sqrt{D}}</m> of <m>F</m> is defined as <m>\Z[\omega]</m>, where 
+            <md>
+                <mrow>\omega \amp = \begin{cases}
+                \sqrt{D} \amp \text{if } D\not\equiv 1\pmod 4 \\
+                \tfrac{1}{2}+\tfrac{\sqrt{D}}{2} \amp \text{if } D\equiv 1\pmod 4
+                \end{cases}</mrow>
+            </md>.
+            This family of rings provides a nice testing ground for exploring Euclidean domains, PIDs, and UFDs, in that the rings are fairly well behaved, and yield examples that distinguish between these various types of integral domains. Below you find a summary of what is currently known about the rings <m>\mathcal{O}_{\sqrt{D}}</m>. 
+            <ul>
+                <li>
+                    <p>
+                        For all square-free integers <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a UFD. Thus we need not cast our net among this family of rings to find examples of UFDs that are not PIDs. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>D</m> is <em>negative</em>, then <m>\mathcal{O}_\sqrt{D}</m> is a PID if and only if <m>D\in \{-1,-2,-3,-7,-11,-19,-43,-67,-163\}</m>, an <m>\mathcal{O}_D</m> is a Euclidean domain if and only if <m>D\in \{-1,-2,-3,-7,-11\}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                     Turning to the positive case, it is conjectured, but not known, that there are infinitely many positive square-free integers <m>D</m> such that <m>\mathcal{O}_{\sqrt{D}}</m> is a PID. Sequence <url href="https://oeis.org/A003172">A003172</url> on the <url href="https://oeis.org">Online Encylopedia of Infinite Sequences (OEIS)</url> is an updated list of the known examples of positive <m>D</m> for which <m>\mathcal{O}_{\sqrt{D}}</m> is a PID.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        It is know that with the possible exception of two values of <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain: the two possible exceptions being <m>D=69</m> and <m>D=213</m>.
+                        The generalize Riemann hypothesis implies that for positive square-free <m>D</m>, <m>\mathcal{O}_{\sqrt{D}}</m> is a PID if and only if it is a Euclidean domain.  
+                    </p>
+                </li>
+            </ul>
+        </p>
+        
+    </remark>
 </section>
