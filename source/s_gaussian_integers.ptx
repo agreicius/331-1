@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_gaussian_integers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Gaussian integers</title>
+    <introduction><p>
+        This section will function basically as a long-format example of analyzing the ideal structure of <m>\Z[i]</m>, the so-called Gaussian integers. Many of the techniques we use can be applied more generally to the family of quadratic rings of integers <m>\mathcal{O}_{\sqrt{D}}</m>. Accordingly, we will begin on the this slightly higher level of generality and indicate some of these techniques. 
+    </p></introduction> 
+<subsection xml:id="ss_quadratic_ring_integers">
+<title>Quadratic ring of integers</title>
+<definition xml:id="d_quad_ring_integers">
+<title>Quadratic ring of integers</title>
+<statement>
+<p>
+Let <m>D</m> be a square-free integer, and let <m>\sqrt{D}</m> be a choice of square root of <m>D</m> lying in <m>\C</m>. The field <m>F=\Q[\sqrt{D}]</m> is called a <term>quadratic extension</term> of <m>\Q</m>, and we define the subring <m>\mathcal{O}_{\sqrt{D}}\subseteq F</m> as <m>\Z[\omega]=\{m+n\omega\mid m,n\in \Z\}</m>, where 
+<md>
+    <mrow>\omega \amp =\begin{cases}
+    \sqrt{D} \amp \text{if } D\not\equiv 1 \pmod 4\\
+    \frac{1}{2}+\frac{\sqrt{D}}{2} \amp \text{if } D\equiv 1\pmod 4
+    \end{cases}</mrow>
+</md>.
+Additionally, the map <m>\alpha=q_1+q_2\sqrt{D}\mapsto \overline{\alpha}=q_1-q_2\sqrt{D}</m> defines a ring automorphism both of <m>\Q[\sqrt{D}]</m> and <m>\mathcal{O}_{\sqrt{D}}=\Z[\omega]</m>, which in turn gives rise to a <term>norm functions</term> <m>N_{\sqrt{D}}\colon \Q[\sqrt{D}]\rightarrow \Q</m> defined as 
+<md>
+    <mrow>N(\alpha) \amp =\alpha\overline{\alpha}=q_1^2-q_2^2D</mrow>
+</md>,
+for <m>\alpha=q_1+q_2\sqrt{D}\in \Q[\sqrt{D}]</m>.
+</p>
+</statement>
+</definition>
+<remark>
+    <title>Quadratic ring of integers</title>
+    <p>
+        The definition of <m>\omega</m> in <xref ref="d_quad_ring_integers"/> is not as ad hoc as first appears. The ring <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> is better described as the set of all elements of <m>\Q[\sqrt{D}]</m> that satisfy a monic integer polynomial. This, in general, is what we call the <term>ring of integers</term> of a field <m>F</m> containing <m>\Q</m> as a subfield. This is a fairly abstract definition, and it is not obvious that such a set actually comprises a subring of the given field. In the simple case of a quadratic extension <m>\Q[\sqrt{D}]</m>, we can compute this set by hand to obtain the explicit description <m>\Z[\omega]</m> given in the definition. In particular, though not completely obvious, the set <m>\Z[\omega]</m> is indeed a subring in the case where <m>D\equiv 1\pmod 4</m> and <m>\omega=\tfrac{1}{2}+\tfrac{\sqrt{D}}{2}</m>.
+    </p>
+</remark>
+<proposition xml:id="prop_quad_ring_integers">
+    <title>Norm and quadratic rings of integers</title>
+    
+    
+    <statement>
+        <p>
+            Let <m>D</m> be a square-free integer, let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> be the corresponding quadratic ring of integers, and let <m>N=N_{\sqrt{D}}</m> be the corresponding norm function. 
+            <ol>
+                <li>
+                    <p>
+                        The norm function <m>N</m> is multiplicative: <ie/>, <m>N(\alpha\beta)=N(\alpha)N(\beta)</m> for all <m>\alpha,\beta \in \Q[\sqrt{D}]</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Assume <m>D\equiv 1\pmod 4</m>, so that <m>\omega=\tfrac{1}{2}+\tfrac{\sqrt{D}}{2}</m>. For all <m>\alpha=m+n\omega</m>, with <m>m,n\in \Z</m>, we have 
+                        <md>
+                            <mrow>N(\alpha) \amp = m^2+mn+\frac{1-D}{4}n^2\in \Z  </mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For all square-free integers <m>D</m>, the restriction of the norm function <m>N</m> to <m>\mathcal{O}</m> defines a multiplicative function <m>N\colon \mathcal{O}\rightarrow \Z</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\mathcal{O}^*=\{\alpha\in \mathcal{O}\mid N(\alpha)=\pm 1\}</m>. In other words, the units of <m>\mathcal{O}</m> are precisely those elements whose norm is a unit of <m>\Z</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>\pi\in \mathcal{O}</m> satisfies <m>\abs{N(\pi)}=p</m>, where <m>p</m> is a prime integer, then <m>\pi</m> is irreducible in <m>\mathcal{O}</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            We leave most of this proof to the reader, restricting ourselves to a few comments. Statement (1) follows immediately from the fact that <m>\alpha\mapsto \overline{\alpha}</m> is a ring homomorphism. 
+        </p>
+        <p>
+            Statement (2) follows from a computation. Note that since <m>D\equiv 1\pmod 4</m> here, the quotient <m>(1-D)/4</m> is in fact an integer! 
+        </p>
+        <p>
+            We give a full proof of (3). If <m>\alpha\in \mathcal{O}^*</m>, then we have <m>1=\alpha\beta</m> for some <m>\beta\in \mathcal{O}</m>, in which case <m>1=N(1)=N(\alpha)N(\beta)</m>. It follows that <m>N(\alpha)\in \Z^*=\{\pm 1\}</m>. Conversely if <m>N(\alpha)=\alpha\overline{\alpha}=\pm 1</m>, then <m>\alpha^{-1}=\pm \overline{\alpha}</m>, showing that <m>\alpha\in \mathcal{O}^*</m>. 
+        </p>
+        <p>
+            We give a full proof of (4). Assume <m>\abs{N(\pi)}=p</m>, a prime integer. Since <m>N(\pi)\ne 0</m>, <m>\pi \ne 0</m>; since <m>N(\pi)\notin \{\pm 1\}</m>, <m>\pi</m> is not a unit.  Given a factorization 
+            <m>\pi=\alpha\beta</m> in <m>\mathcal{O}</m>, we have <m>p=\abs{N(\pi)}=\abs{N(\alpha)}\abs{N(\beta)}</m>. Since <m>N(\alpha)</m> and <m>N(\beta)</m> are integers and <m>p</m> is prime, it follows that <m>\{\abs{N(\alpha)},\abs{N(\beta)}\}\subseteq \{1,p\}</m>. Since we cannot have <m>\{\abs{N(\alpha)},\abs{N(\beta)}\}\subseteq \{p\}</m>, one of <m>\alpha</m> and <m>\beta</m> must have a unit norm, making it itself a unit. We conclude that <m>\pi</m> has no nontrivial factorization, and thus that it is irreducible. 
+        </p>
+    </proof>
+</proposition>
+<p>
+    We have seen that not all quadratic rings of integers are UFDs. Indeed, <m>\Z[\sqrt{-5}]</m> is an example. (And see <xref ref="rem_quad_ring_integers"/> for a more complete picture of the state of affairs here.) However, as a nice illustration of the utility of the norm function, it is easy to see that irreducible factorizations do always exist in these rings, as the next result shows. The issue is that this irreducible factorization may not be unique: <eg/>, <m>6=2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m>.
+    </p>
+<corollary xml:id="cor_quad_ring_factorization">
+    <title>Existence of factorizations in quadratic rings of integers</title>
+    <statement>
+        <p>
+            Let <m>D</m> be a square-free integer, and let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m>. Any nonzero, non-unit element of <m>\mathcal{O}</m> can be factored as a product of irreducible elements of <m>\mathcal{O}</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            The proof is done by strong induction on <m>\abs{N(\alpha)}</m> for <m>\alpha\in \mathcal{O}</m>. First observe that if <m>\abs{N(\alpha)}=p</m>, then <m>\alpha</m> is irreducible by <xref ref="prop_quad_ring_integers"/>, and we are done. This gives us infinitely many bases cases as it were: <ie/>, we know the result for all <m>\alpha</m> satisfying <m>\abs{N(\alpha)}\in \{2,3,5,7,11,\dots\}</m>. 
+
+        </p>
+        <p>
+            Now assume that the result holds for all <m>\alpha\in \mathcal{O}</m> with <m>\abs{N(\alpha)}\&lt; n\geq 3</m>. Suppose <m>\alpha\in \mathcal{O}</m> satisfies <m>\abs{N(\alpha)}=n</m>. (This means, in particular, that <m>\alpha</m> is nonzero, and a non-unit.) If <m>\alpha</m> is irreducible, we are done. Otherwise, we have a nontrivial factorization <m>\alpha=\beta\gamma</m>. Since <m>n=\abs{N(\alpha)}=\abs{N(\beta})\abs{N(\gamma)}</m> and since <m>\beta</m> and <m>\gamma</m> are not units, it follows that <m>\abs{N(\beta)}&lt; n</m> and <m>\abs{N(\gamma)}&lt; n</m>. By the induction hypothesis, both <m>\beta</m> and <m>\gamma</m> can be factored as a product of irreducible elements, and thus so can <m>\alpha</m>.
+        </p>
+    </proof>
+</corollary>
+</subsection>
+<subsection xml:id="ss_gauss_integers">
+<title>Ideal structure of <m>\Z[i]</m></title>
+<p>
+    We now specialize to <m>\Z[i]</m>. Let's gather some facts we already know about this ring. 
+    <ul>
+        <li>
+            <p>
+                <m>\Z[i]</m> is a PID, and hence also a UFD. Thus all ideals in <m>\Z[i]</m> are of the form <m>I=(\alpha)</m>. Furthermore, since prime is equivalent to irreducible in UFDs, and since prime is equivalent to maximal in PIDs, the following statements are equivalent. 
+                <ul>
+                    <li>
+                        <p>
+                            <m>(\pi)</m> is prime.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(\pi)</m> is maximal.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\pi</m> is prime.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\pi</m> is irreducible. 
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </li>
+        <li>
+            <p>
+                An element <m>\alpha=m+ni\in \Z[i]</m> is a unit if and only if <m>N(\alpha)=m^2+n^2\in \{\pm 1\}</m>, if and only if <m>\alpha\in \{\pm 1, \pm i\}</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>\pi=m+ni</m>, so that <m>N(\pi)=m^2+n^2</m>.  We know that if <m>\abs{N(\pi)}=N(\pi)=p</m> is a prime integer, then <m>\pi</m> is irreducible. Thus for example, since <m>N(1\pm i)=1^2+1^2=2</m>, the elements <m>1+i</m> and <m>1-i</m> are irreducible, and the factorization <m>2=(1+i)(1-i)</m> is thus an irreducible factorization of <m>2</m> in <m>\Z[i]</m>. In particular, <m>2</m> is no longer prime in <m>\Z[i]</m>. 
+            </p>
+        </li>
+    </ul>
+These observations already cover some ground, but leave open some questions. 
+<ul>
+    <li>
+        <p>
+            We see that if <m>p=m^2+n^2</m>, then the elements <m>m+ni</m> and <m>m-ni</m> are irreducible, and the factorization <m>p=(m+ni)(m-ni)</m> is an irreducible factorization of <m>p</m> in <m>\Z[i]</m>. In particular, if <m>p=m^2+n^2</m>, then <m>p</m> is not prime in <m>\Z[i]</m>. Is this in fact an equivalence? If so, is there a better way of describing such primes <m>p</m>? 
+        </p>
+    </li>
+    <li>
+        <p>
+            Are there irreducible elements <m>\pi</m> of <m>\Z[i]</m> that do not satisfy <m>N(\pi)=p</m> for some prime integer <m>p</m>? If so, what is the complete description of the set of irreducible elements of <m>\Z[i]</m>? 
+        </p>
+    </li>
+</ul>
+The next result answers the first bullet point's questions. 
+</p>
+<theorem xml:id="th_prime_factorization">
+<title>Prime factorization in <m>\Z[i]</m></title>
+<statement>
+<p>
+Let <m>p</m> be a prime integer. The following statements are equivalent. 
+<ol>
+    <li>
+        <p>
+            <m>p</m> is not prime (equivalently, irreducible) in <m>\Z[i]</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>p=m^2+n^2</m> for integers <m>m,n\in \Z</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>p=N(\pi)</m> for some irreducible element <m>\pi\in \Z[i]</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>p=\pi \overline{\pi}</m> for some irreducible element <m>\pi \in \Z[i]</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>p=2</m> or <m>p\equiv 1\pmod 4</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+    Since <m>N(m+ni)=(m+ni)(m-ni)=m^2+n^2</m>, and since <m>N(\pi)=p</m> implies <m>\pi</m> is irreducible, (2), (3) and (4) are clearly equivalent. Furthermore, we know <m>(3)</m> implies (1) by <xref ref="prop_quad_ring_integers"/>. 
+</p>
+<p>
+    Let's prove that (1) implies (3). Assume <m>p</m> is not prime/irreducible in <m>\Z[i]</m>. It follows that we have <m>p=\alpha\beta</m> for some non-units <m>\alpha,\beta\in \Z[i]</m>. From <m>p^2=N(p)=N(\alpha)N(\beta)</m>, it follows that <m>N(\alpha)=N(\beta)=p</m>: otherwise, one of <m>\alpha</m> or <m>\beta</m> would have norm equal to 1, making it a unit. Thus <m>\alpha</m> and <m>\beta</m> are both irreducible (since their norm is prime), and we are done. 
+</p>
+</proof>
+</theorem>
+
+</subsection>
+</section>
