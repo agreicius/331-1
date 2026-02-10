@@ -14,4 +14,5 @@
 <xi:include href="s_localization.ptx" />
 <xi:include href="s_euc_domain.ptx" />
 <xi:include href="s_pid_ufd.ptx" />
+<xi:include href="s_gaussian_integers.ptx" />
 </chapter>

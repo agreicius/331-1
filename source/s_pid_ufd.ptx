@@ -334,7 +334,7 @@
             </li>
         </ul>
     </p>
-    <remark>
+    <remark xml:id="rem_quad_ring_integers">
         <title>Quadratic ring of integers</title>
         <p>
             Let <m>D</m> be a square-free integer. We have seen that <m>F=\Q[\sqrt{D}]</m> is a field. The <term>ring of integers</term> <m>\mathcal{O}_{\sqrt{D}}</m> of <m>F</m> is defined as <m>\Z[\omega]</m>, where 
