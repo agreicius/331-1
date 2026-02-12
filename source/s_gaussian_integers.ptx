@@ -167,7 +167,7 @@ These observations already cover some ground, but leave open some questions.
 The next result answers the first bullet point's questions. 
 </p>
 <theorem xml:id="th_prime_factorization">
-<title>Prime factorization in <m>\Z[i]</m></title>
+<title>Factorization of integer primes in <m>\Z[i]</m></title>
 <statement>
 <p>
 Let <m>p</m> be a prime integer. The following statements are equivalent. 
@@ -194,6 +194,16 @@ Let <m>p</m> be a prime integer. The following statements are equivalent.
     </li>
     <li>
         <p>
+            <m>f(x)=x^2+\overline{1}</m> is a reducible polynomial in <m>\F_p[x]</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>[-1]_p</m> is a square in <m>\F_p</m> (<ie/>, <m>-1</m> is a square modulo <m>p</m>). 
+        </p>
+    </li>
+    <li>
+        <p>
             <m>p=2</m> or <m>p\equiv 1\pmod 4</m>. 
         </p>
     </li>
@@ -209,6 +219,74 @@ Let <m>p</m> be a prime integer. The following statements are equivalent.
 </p>
 </proof>
 </theorem>
+<p>
+    It turns out that <xref ref="th_prime_factorization"/> is all that we need to give a complete description of the irreducible elements of <m>\Z[i]</m>. The key connection is that if <m>\pi</m> is irreducible, then the ideal <m>(\pi)</m> contains a unique prime integer <m>p</m>: or equivalently, there is a unique prime integer <m>p</m> such that <m>\pi\mid p</m>. To see why, consider the inclusion homomorphism <m>\phi\colon \Z\rightarrow \Z[i]</m>. Since <m>(\pi)</m> is prime ideal, its inverse image 
+    <md>
+        <mrow>\phi^{-1}(\pi)=(\pi)\cap \Z </mrow>
+    </md>
+    is a prime ideal of <m>\Z</m>. Since the integer <m>N(\pi)=\pi\overline{\pi}</m> is an element of <m>(\pi)</m>, <m>(\pi)\cap \Z</m> is a nonzero prime ideal, hence equal to <m>p\Z</m> for some prime integer <m>p\in \Z</m>. Furthermore, we have <m>\pi\mid p</m> if and only if <m>p\in (\pi)</m> if and only if <m>(\pi)\cap \Z=p\Z</m>, showing uniqueness.  It follows that <m>p\in (\pi)</m>. We say that <m>(\pi)</m> <term>lies over</term> the prime <m>p</m> in this case. The corollary below describes the distinct irreducible elements of <m>\Z[i]</m>, up to associates, in terms of the unique primes they lie over. 
+</p>
+<definition xml:id="d_lying_over">
+<title>Lying over</title>
+<statement>
+<p>
+Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> is a quadratic ring of integers. We say an irreducible element <m>\pi\in \mathcal{O}</m> <term>lies over</term> the prime integer <m>p</m> if <m>\pi\mid p</m>. 
+</p>
+</statement>
+</definition>
 
+<corollary xml:id="cor_gauss_int_irr">
+    <title>Irreducible elements of <m>\Z[i]</m></title>
+    <statement>
+        <p>
+            Every irreducible element of <m>\Z[i]</m> lies over a unique prime integer <m>p</m>. 
+            Up to associates, the distinct irreducible elements <m>\pi</m> of <m>\Z[i]</m> are described below based on the prime <m>p</m> they lie over. 
+            <ul>
+                <li>
+                    <title>Case: <m>p=2</m></title>
+                    <p>
+                        Up to associates, <m>\pi=(1+i)</m> is the unique irreducible element of <m>\Z[i]</m> lying over <m>2</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Case: <m>p\equiv 1\pmod 4</m></title>
+                    <p>
+                        If <m>p\equiv 1\pmod 4</m>, then there are exactly two irreducible elements lying over <m>p</m> up to associates: namely, <m>\pi=m+ni</m> and <m>\overline{\pi}=m-ni</m>, where <m>(m,n)</m> is any pair of integers satisfying <m>p=m^2+n^2</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Case: <m>p\equiv 3\pmod 4</m></title>
+                    <p>
+                        If <m>p\equiv 3\pmod 4</m>, then <m>p</m> is irreducible in <m>\Z[i]</m>, and <m>\pi=p</m> is the unique irreducible element of <m>\Z[i]</m> lying over <m>p</m>, up to associates.
+                    </p>
+                </li>
+                
+            </ul>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>\pi=1+i</m>.  We have <m>2=\pi\overline{\pi}</m>. Since <m>N(\overline{\pi})=N(\overline{\pi})=2</m>, which is prime, both <m>\pi</m> and <m>\overline{\pi}</m> are irreducible. Furthermore, since <m>1-i=-i(1+i)</m>, we see that <m>\pi</m> and <m>\overline{\pi}</m> are associates. If <m>\pi'</m> is an irreducible element lying over <m>2</m>, so that <m>\pi'\mid 2=\pi\overline{\pi}=(-i)\pi^2</m>, then we must have <m>\pi'\mid \pi</m>. Since <m>\pi</m> is irreducible, it follows that <m>\pi'</m> and <m>\pi</m> are associates. Thus <m>\pi</m> is, up to associates, the unique irreducible element lying over <m>2</m>.  
+        </p>
+        <p>
+            Let <m>p\equiv 1\pmod 4</m>. By <xref ref="th_prime_factorization"/>, there are integers <m>m</m> and <m>n</m> satisfying <m>m^2+n^2=p</m>.  The same argument as above shows that <m>\pi=m+ni</m> and <m>\overline{\pi}=m-ni</m> are the only irreducible elements lying over <m>p</m>, up to associates. Since <m>N(\pi)=m^2+n^2=p</m>, and <m>p\equiv 1\pmod 4</m>, it follows easily that we cannot have <m>m=\pm n</m>, and hence that <m>m-in\ne u(m+ni)</m> for any unit <m>u\in \{\pm 1, \pm i}</m>. In other words, <m>\pi</m> and <m>\overline{\pi}</m> are not associates. 
+        </p>
+        <p>
+            Let <m>p\equiv 3\pmod 4</m>. By <xref ref="th_prime_factorization"/>, <m>p</m> is itself irreducible in <m>\Z[i]</m>, and thus any irreducible element <m>\pi</m> lying over <m>p</m> must be an associate to <m>p</m>.  Thus <m>p\in (p)</m>, and so <m>(p)</m> lies over <m>p</m>. If <m>\pi</m> is an irreducible element lying over <m>p</m>, then we have <m>\pi\mid p</m>. Since <m>p</m> is irreducible, it follows that <m>\pi</m> and <m>p</m> are associates. Thus, up to associates, the unique irreducible element lying over <m>p</m> is <m>\pi=p</m>.
+        </p>
+    </proof>
+</corollary>
+<!-- <corollary xml:id="cor_integer_sum_squares">
+    <title>Sums of two squares</title>
+    <statement>
+        <p>
+            Let <m>n</m> be a positive integer with factorization 
+            <md>
+                <mrow>n \amp = 2^k\cdot \prod_{j=1}^{r}p_j^{n_j}\cdot \prod_{k=1}^s q_k^{m_k}</mrow>
+            </md>,
+            where the <m>p_j</m> and <m>q_k</m> are distinct primes, <m>p_j\equiv 1 \pmod 4</m> for all <m>j</m>, and <m>q_k\equiv 3\pmod 4</m> for all <m>k</m>. We have <m>n=a^2+b^2</m> for integers <m>a</m> and <m>b</m> if and only if <m>m_k</m> is even for all <m>k</m>. 
+        </p>
+    </statement>
+</corollary> -->
 </subsection>
 </section>
