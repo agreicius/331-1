@@ -4276,13 +4276,85 @@ var ptx_lunr_docs = [
   "body": " PID implies UFD   If is a principal ideal domain, then is a unique factorization domain.     Proof of uniqueness  The existence of irreducible factorizations is the trickier argument. Let's look at uniqueness, assuming existence. Let be an irreducible factorization of the nonzero, non-unit element . We prove the uniqueness property of this factorization by induction on . If , then is irreducible. Suppose we have another factorization . First observe that we must have . Otherwise, we would have , where and are both non-units, contradicting the fact that is irreducible.  Assume now that the uniqueness property holds for all irreducible factorizations into irreducible factors, and assume , with . If we have another factorization , then by induction we must have . Since divides the product of the , and since is prime (irreducible implies prime in PIDs), must divide one of the . Without loss of generality, we may assume that . Since is irreducible and is not a unit, we conclude that for some unit. But then we can cancel from both sides to obtain . Since is a product of irreducible elements, we may apply induction to conclude that , and after a reordering, is associate to for all . (Note that the presence of instead of here is not an issue here, since being associates is an equivalence relation.) But then we have , and is associate to for all , as desired.    Proof of existence  Suppose, by contradiction that there is a nonzero, non-unit element that does not admit an irreducible factorization. Since, in particular, cannot be irreducible, we have for two non-unit elements , and at least one of and fails to admit an irreducible factorization (otherwise would have an irreducible factorization). Call this element , and proceed in the same way to produce a sequence satisfying and for all , and hence a chain of strictly proper inclusions . It is easy to see that is an ideal of . Since is a PID, we have for some element . But then for some , from whence it follows that , and . A contradiction! We conclude that every nonzero, non-unit element of does admit an irreducible factorization.  Note: it is possible to give a proof of existence that uses Zorn's lemma. Can you produce it? The one we provide has the advantage of not using Zorn's lemma, which you will recall is equivalent to the axiom of choice. If you look closely, however, you will see that our proof does involve some fishy choices to construct the sequence . Indeed, it is making use of what is called the axiom of dependent choice (DC), which is logically weaker than the full axiom of choice.    "
 },
 {
-  "id": "pid_ufd-13",
+  "id": "rem_quad_ring_integers",
   "level": "2",
-  "url": "pid_ufd.html#pid_ufd-13",
+  "url": "pid_ufd.html#rem_quad_ring_integers",
   "type": "Remark",
   "number": "2.12.11",
   "title": "Quadratic ring of integers.",
   "body": " Quadratic ring of integers  Let be a square-free integer. We have seen that is a field. The ring of integers  of is defined as , where . This family of rings provides a nice testing ground for exploring Euclidean domains, PIDs, and UFDs, in that the rings are fairly well behaved, and yield examples that distinguish between these various types of integral domains. Below you find a summary of what is currently known about the rings .   For all square-free integers , is a PID if and only if it is a UFD. Thus we need not cast our net among this family of rings to find examples of UFDs that are not PIDs.    If is negative , then is a PID if and only if , an is a Euclidean domain if and only if .    Turning to the positive case, it is conjectured, but not known, that there are infinitely many positive square-free integers such that is a PID. Sequence A003172 on the Online Encylopedia of Infinite Sequences (OEIS) is an updated list of the known examples of positive for which is a PID.    Continuing with positive case. It is known that with the possible exception of two values of positive, square-free integers , is a PID if and only if it is a Euclidean domain. Additionally, the generalized Riemann hypothesis implies that for positive square-free , is a PID if and only if it is a Euclidean domain.     "
+},
+{
+  "id": "s_gaussian_integers",
+  "level": "1",
+  "url": "s_gaussian_integers.html",
+  "type": "Section",
+  "number": "2.13",
+  "title": "Gaussian integers",
+  "body": " Gaussian integers  This section will function basically as a long-format example of analyzing the ideal structure of , the so-called Gaussian integers. Many of the techniques we use can be applied more generally to the family of quadratic rings of integers . Accordingly, we will begin on the this slightly higher level of generality and indicate some of these techniques.   Quadratic ring of integers   Quadratic ring of integers   Let be a square-free integer, and let be a choice of square root of lying in . The field is called a quadratic extension of , and we define the subring as , where . Additionally, the map defines a ring automorphism both of and , which in turn gives rise to a norm functions  defined as , for .     Quadratic ring of integers  The definition of in is not as ad hoc as first appears. The ring is better described as the set of all elements of that satisfy a monic integer polynomial. This, in general, is what we call the ring of integers of a field containing as a subfield. This is a fairly abstract definition, and it is not obvious that such a set actually comprises a subring of the given field. In the simple case of a quadratic extension , we can compute this set by hand to obtain the explicit description given in the definition. In particular, though not completely obvious, the set is indeed a subring in the case where and .    Norm and quadratic rings of integers   Let be a square-free integer, let be the corresponding quadratic ring of integers, and let be the corresponding norm function.   The norm function is multiplicative: , for all .    Assume , so that . For all , with , we have .    For all square-free integers , the restriction of the norm function to defines a multiplicative function .     . In other words, the units of are precisely those elements whose norm is a unit of .    If satisfies , where is a prime integer, then is irreducible in .       We leave most of this proof to the reader, restricting ourselves to a few comments. Statement (1) follows immediately from the fact that is a ring homomorphism.  Statement (2) follows from a computation. Note that since here, the quotient is in fact an integer!  We give a full proof of (3). If , then we have for some , in which case . It follows that . Conversely if , then , showing that .  We give a full proof of (4). Assume , a prime integer. Since , ; since , is not a unit. Given a factorization in , we have . Since and are integers and is prime, it follows that . Since we cannot have , one of and must have a unit norm, making it itself a unit. We conclude that has no nontrivial factorization, and thus that it is irreducible.    We have seen that not all quadratic rings of integers are UFDs. Indeed, is an example. (And see for a more complete picture of the state of affairs here.) However, as a nice illustration of the utility of the norm function, it is easy to see that irreducible factorizations do always exist in these rings, as the next result shows. The issue is that this irreducible factorization may not be unique: , .   Existence of factorizations in quadratic rings of integers   Let be a square-free integer, and let . Any nonzero, non-unit element of can be factored as a product of irreducible elements of .    The proof is done by strong induction on for . First observe that if , then is irreducible by , and we are done. This gives us infinitely many bases cases as it were: , we know the result for all satisfying .  Now assume that the result holds for all with . Suppose satisfies . (This means, in particular, that is nonzero, and a non-unit.) If is irreducible, we are done. Otherwise, we have a nontrivial factorization . Since and since and are not units, it follows that and . By the induction hypothesis, both and can be factored as a product of irreducible elements, and thus so can .      Ideal structure of  We now specialize to . Let's gather some facts we already know about this ring.    is a PID, and hence also a UFD. Thus all ideals in are of the form . Furthermore, since prime is equivalent to irreducible in UFDs, and since prime is equivalent to maximal in PIDs, the following statements are equivalent.    is prime.     is maximal.     is prime.     is irreducible.       An element is a unit if and only if , if and only if .    Let , so that . We know that if is a prime integer, then is irreducible. Thus for example, since , the elements and are irreducible, and the factorization is thus an irreducible factorization of in . In particular, is no longer prime in .   These observations already cover some ground, but leave open some questions.   We see that if , then the elements and are irreducible, and the factorization is an irreducible factorization of in . In particular, if , then is not prime in . Is this in fact an equivalence? If so, is there a better way of describing such primes ?    Are there irreducible elements of that do not satisfy for some prime integer ? If so, what is the complete description of the set of irreducible elements of ?   The next result answers the first bullet point's questions.   Prime factorization in   Let be a prime integer. The following statements are equivalent.    is not prime (equivalently, irreducible) in .     for integers .     for some irreducible element .     for some irreducible element .     is a reducible polynomial in .     is a square in ( , is a square modulo ).     or .       Since , and since implies is irreducible, (2), (3) and (4) are clearly equivalent. Furthermore, we know implies (1) by .  Let's prove that (1) implies (3). Assume is not prime\/irreducible in . It follows that we have for some non-units . From , it follows that : otherwise, one of or would have norm equal to 1, making it a unit. Thus and are both irreducible (since their norm is prime), and we are done.    It turns out that is all that we need to give a complete description of the irreducible elements of . The key connection is that if is irreducible, then the ideal contains a unique prime integer : or equivalently, there is a unique prime integer such that . To see why, consider the inclusion homomorphism . Since is prime ideal, its inverse image is a prime ideal of . Since the integer is an element of , is a nonzero prime ideal, hence equal to for some prime integer . It follows that . We say that  lies over the prime in this case. The corollary below describes the distinct irreducible elements of , up to associates, in terms of the unique primes they lie over.   Primes of   Up to associates, the distinct irreducible elements of are described below based on the unique prime they lie over.   Case:  Up to associates, is the unique irreducible element of lying over .    Case:  If , then there are exactly two irreducible elements lying over up to associates: namely, and , where is any pair of integers satisfying .    Case:  If , then is irreducible in , and is the unique irreducible element of lying over , up to associates.         "
+},
+{
+  "id": "d_quad_ring_integers",
+  "level": "2",
+  "url": "s_gaussian_integers.html#d_quad_ring_integers",
+  "type": "Definition",
+  "number": "2.13.1",
+  "title": "Quadratic ring of integers.",
+  "body": " Quadratic ring of integers   Let be a square-free integer, and let be a choice of square root of lying in . The field is called a quadratic extension of , and we define the subring as , where . Additionally, the map defines a ring automorphism both of and , which in turn gives rise to a norm functions  defined as , for .   "
+},
+{
+  "id": "ss_quadratic_ring_integers-3",
+  "level": "2",
+  "url": "s_gaussian_integers.html#ss_quadratic_ring_integers-3",
+  "type": "Remark",
+  "number": "2.13.2",
+  "title": "Quadratic ring of integers.",
+  "body": " Quadratic ring of integers  The definition of in is not as ad hoc as first appears. The ring is better described as the set of all elements of that satisfy a monic integer polynomial. This, in general, is what we call the ring of integers of a field containing as a subfield. This is a fairly abstract definition, and it is not obvious that such a set actually comprises a subring of the given field. In the simple case of a quadratic extension , we can compute this set by hand to obtain the explicit description given in the definition. In particular, though not completely obvious, the set is indeed a subring in the case where and .  "
+},
+{
+  "id": "prop_quad_ring_integers",
+  "level": "2",
+  "url": "s_gaussian_integers.html#prop_quad_ring_integers",
+  "type": "Proposition",
+  "number": "2.13.3",
+  "title": "Norm and quadratic rings of integers.",
+  "body": " Norm and quadratic rings of integers   Let be a square-free integer, let be the corresponding quadratic ring of integers, and let be the corresponding norm function.   The norm function is multiplicative: , for all .    Assume , so that . For all , with , we have .    For all square-free integers , the restriction of the norm function to defines a multiplicative function .     . In other words, the units of are precisely those elements whose norm is a unit of .    If satisfies , where is a prime integer, then is irreducible in .       We leave most of this proof to the reader, restricting ourselves to a few comments. Statement (1) follows immediately from the fact that is a ring homomorphism.  Statement (2) follows from a computation. Note that since here, the quotient is in fact an integer!  We give a full proof of (3). If , then we have for some , in which case . It follows that . Conversely if , then , showing that .  We give a full proof of (4). Assume , a prime integer. Since , ; since , is not a unit. Given a factorization in , we have . Since and are integers and is prime, it follows that . Since we cannot have , one of and must have a unit norm, making it itself a unit. We conclude that has no nontrivial factorization, and thus that it is irreducible.   "
+},
+{
+  "id": "cor_quad_ring_factorization",
+  "level": "2",
+  "url": "s_gaussian_integers.html#cor_quad_ring_factorization",
+  "type": "Corollary",
+  "number": "2.13.4",
+  "title": "Existence of factorizations in quadratic rings of integers.",
+  "body": " Existence of factorizations in quadratic rings of integers   Let be a square-free integer, and let . Any nonzero, non-unit element of can be factored as a product of irreducible elements of .    The proof is done by strong induction on for . First observe that if , then is irreducible by , and we are done. This gives us infinitely many bases cases as it were: , we know the result for all satisfying .  Now assume that the result holds for all with . Suppose satisfies . (This means, in particular, that is nonzero, and a non-unit.) If is irreducible, we are done. Otherwise, we have a nontrivial factorization . Since and since and are not units, it follows that and . By the induction hypothesis, both and can be factored as a product of irreducible elements, and thus so can .   "
+},
+{
+  "id": "th_prime_factorization",
+  "level": "2",
+  "url": "s_gaussian_integers.html#th_prime_factorization",
+  "type": "Theorem",
+  "number": "2.13.5",
+  "title": "Prime factorization in <span class=\"process-math\">\\(\\Z[i]\\)<\/span>.",
+  "body": " Prime factorization in   Let be a prime integer. The following statements are equivalent.    is not prime (equivalently, irreducible) in .     for integers .     for some irreducible element .     for some irreducible element .     is a reducible polynomial in .     is a square in ( , is a square modulo ).     or .       Since , and since implies is irreducible, (2), (3) and (4) are clearly equivalent. Furthermore, we know implies (1) by .  Let's prove that (1) implies (3). Assume is not prime\/irreducible in . It follows that we have for some non-units . From , it follows that : otherwise, one of or would have norm equal to 1, making it a unit. Thus and are both irreducible (since their norm is prime), and we are done.   "
+},
+{
+  "id": "ss_gauss_integers-4",
+  "level": "2",
+  "url": "s_gaussian_integers.html#ss_gauss_integers-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "lies over "
+},
+{
+  "id": "cor_gauss_int_irr",
+  "level": "2",
+  "url": "s_gaussian_integers.html#cor_gauss_int_irr",
+  "type": "Corollary",
+  "number": "2.13.6",
+  "title": "Primes of <span class=\"process-math\">\\(\\Z[i]\\)<\/span>.",
+  "body": " Primes of   Up to associates, the distinct irreducible elements of are described below based on the unique prime they lie over.   Case:  Up to associates, is the unique irreducible element of lying over .    Case:  If , then there are exactly two irreducible elements lying over up to associates: namely, and , where is any pair of integers satisfying .    Case:  If , then is irreducible in , and is the unique irreducible element of lying over , up to associates.      "
 },
 {
   "id": "appendix-notation",

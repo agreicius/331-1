@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gaussian integers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Abstract algebra">
+<meta property="book:author" content="Aaron Greicius">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="NUgt" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Abstract algebra</span> <span class="subtitle">A Kursobjekt for Math 331</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="pid_ufd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_rings_mods.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\T}{{\mathbb T}}
+\newcommand{\F}{{\mathbb F}}
+\newcommand{\PP}{{\mathbb P}}
+\newcommand{\HH}{{\mathbb H}}
+\newcommand{\compose}{\circ}
+\newcommand{\bolda}{{\mathbf a}}
+\newcommand{\boldb}{{\mathbf b}}
+\newcommand{\boldc}{{\mathbf c}}
+\newcommand{\boldd}{{\mathbf d}}
+\newcommand{\bolde}{{\mathbf e}}
+\newcommand{\boldi}{{\mathbf i}}
+\newcommand{\boldj}{{\mathbf j}}
+\newcommand{\boldk}{{\mathbf k}}
+\newcommand{\boldn}{{\mathbf n}}
+\newcommand{\boldp}{{\mathbf p}}
+\newcommand{\boldq}{{\mathbf q}}
+\newcommand{\boldr}{{\mathbf r}}
+\newcommand{\bolds}{{\mathbf s}}
+\newcommand{\boldt}{{\mathbf t}}
+\newcommand{\boldu}{{\mathbf u}}
+\newcommand{\boldv}{{\mathbf v}}
+\newcommand{\boldw}{{\mathbf w}}
+\newcommand{\boldx}{{\mathbf x}}
+\newcommand{\boldy}{{\mathbf y}}
+\newcommand{\boldz}{{\mathbf z}}
+\newcommand{\boldzero}{{\mathbf 0}}
+\newcommand{\boldmod}{\boldsymbol{ \bmod }}
+\newcommand{\boldT}{{\mathbf T}}
+\newcommand{\boldN}{{\mathbf N}}
+\newcommand{\boldB}{{\mathbf B}}
+\newcommand{\boldF}{{\mathbf F}}
+\newcommand{\boldS}{{\mathbf S}}
+\newcommand{\boldE}{{\mathbf E}}
+\newcommand{\boldG}{{\mathbf G}}
+\newcommand{\boldK}{{\mathbf K}}
+\newcommand{\boldL}{{\mathbf L}}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\lns}{lns}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\NS}{null}
+\DeclareMathOperator{\RS}{row}
+\DeclareMathOperator{\CS}{col}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\Arccos}{Arccos}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mdeg}{mdeg}
+\DeclareMathOperator{\Lt}{Lt}
+\DeclareMathOperator{\Lc}{Lc}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\diver}{div}
+\DeclareMathOperator{\flux}{flux}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\ML}{M}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\ab}{ab}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\surjects}{\twoheadrightarrow}
+\newcommand{\injects}{\hookrightarrow}
+\newcommand{\bijects}{\leftrightarrow}
+\newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+\newcommand{\mclass}[2][m]{[#2]_{#1}}
+\newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\normalin}{\trianglelefteq}
+\newcommand{\angvec}[1]{\langle #1\rangle}
+\newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+\newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+\newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+\newcommand{\abcdmatrix}[4]{\begin{bmatrix}#1\amp #2\\ #3\amp #4 \end{bmatrix}
+}
+\newenvironment{amatrix}[1][ccc|c]{\left[\begin{array}{#1}}{\end{array}\right]}
+\newenvironment{linsys}[2][m]{
+\begin{array}[#1]{@{}*{#2}{rc}r@{}}
+}{
+\end{array}}
+\newcommand{\eqsys}{\begin{array}{rcrcrcr}
+a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+\end{array}
+}
+\newcommand{\numeqsys}{\begin{array}{rrcrcrcr}
+e_1:\amp  a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+e_2: \amp a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+e_m: \amp a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+\end{array}
+}
+\newcommand{\homsys}{\begin{array}{rcrcrcr}
+a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp 0\\
+a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp 0\\
+\amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp \\
+a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp 0
+\end{array}
+}
+\newcommand{\vareqsys}[4]{
+\begin{array}{ccccccc}
+#3_{11}x_{1}\amp +\amp #3_{12}x_{2}\amp +\cdots+\amp  #3_{1#2}x_{#2}\amp =\amp #4_1\\
+#3_{21}x_{1}\amp +\amp #3_{22}x_{2}\amp +\cdots+\amp #3_{2#2}x_{#2}\amp =\amp #4_2\\
+\vdots \amp \amp \vdots \amp  \amp \vdots \amp =\amp  \\
+#3_{#1 1}x_{1}\amp +\amp #3_{#1 2}x_{2}\amp +\cdots +\amp #3_{#1 #2}x_{#2}\amp =\amp #4_{#1}
+\end{array}
+}
+\newcommand{\genmatrix}[1][a]{
+\begin{bmatrix}
+#1_{11} \amp  #1_{12} \amp  \cdots \amp  #1_{1n} \\
+#1_{21} \amp  #1_{22} \amp  \cdots \amp  #1_{2n} \\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+#1_{m1} \amp  #1_{m2} \amp  \cdots \amp  #1_{mn}
+\end{bmatrix}
+}
+\newcommand{\varmatrix}[3]{
+\begin{bmatrix}
+#3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \\
+#3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+#3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}
+\end{bmatrix}
+}
+\newcommand{\augmatrix}{
+\begin{amatrix}[cccc|c]
+a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \amp b_{1}\\
+a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \amp b_{2}\\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
+\end{amatrix}
+}
+\newcommand{\varaugmatrix}[4]{
+\begin{amatrix}[cccc|c]
+#3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \amp #4_{1}\\
+#3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \amp #4_{2}\\
+\vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+#3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}\amp #4_{#1}
+\end{amatrix}
+}
+\newcommand{\spaceforemptycolumn}{\makebox[\wd\boxofmathplus]{\ }}
+
+\newcommand{\generalmatrix}[3]{
+\left(
+\begin{array}{cccc}
+#1_{1,1}  \amp #1_{1,2}  \amp \ldots  \amp #1_{1,#2}  \\
+#1_{2,1}  \amp #1_{2,2}  \amp \ldots  \amp #1_{2,#2}  \\
+\amp \vdots                         \\
+#1_{#3,1} \amp #1_{#3,2} \amp \ldots  \amp #1_{#3,#2}
+\end{array}
+\right)  }
+\newcommand{\colvec}[2][c]{\begin{amatrix}[#1] #2 \end{amatrix}}
+\newcommand{\rowvec}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_tuples_cart_prod" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Tuples and Cartesian product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_cardinality" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Cardinality and countability</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Propositional logic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Predicate logic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="codenumber">0.3.1</span> <span class="title">Logical structure</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="codenumber">0.3.2</span> <span class="title">Equalities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="codenumber">0.3.3</span> <span class="title">Basic set properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="codenumber">0.3.4</span> <span class="title">Basic function properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="codenumber">0.3.5</span> <span class="title">Mathematical induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Group Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_groups.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_def_group" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_product_groups" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Product groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_groups.html#ss_elem_group_proos" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Elementary properties</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_mod_rings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Modular arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Congruence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_mod_rings.html#ss_cong_ring_structure" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_matrix_grps.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Matrix groups</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_dihedral.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Dihedral groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_isometries" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Isometries of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_dihedral" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Dihedral groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_dihedral.html#ss_group_presentation" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Group presentations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_permutations.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_homomorph.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Homomorphisms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_action.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Group actions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgroups.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Subgroups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cyclic.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subgrp_lattice.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Subgroup lattice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_cosets_lagrange.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Cosets and Lagrange’s theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quotient_group.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Quotient groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_A.html" class="internal"><span class="codenumber">1.13</span> <span class="title">First isomorphism theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_B.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Isomorphism theorems: second and third</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_isom_thms_C.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Fourth isomorphism theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_alt_group.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Alternating subgroup</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_stabilizers.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Group actions: stabilizer</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_group_actions_orbits.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Group actions: orbits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_class_number.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Class equation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Sylow_A.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Sylow theorems: intro</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_A.html#ss_Sylow_statements" class="internal"><span class="codenumber">1.20.1</span> <span class="title">Stamement and illustration of Sylow theorems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_A.html#ss_Sylow_action_subsets" class="internal"><span class="codenumber">1.20.2</span> <span class="title">First action: <span class="process-math">\(G\)</span> on <span class="process-math">\(p^k\)</span>-subsets of <span class="process-math">\(G\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Sylow_B.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Sylow theorems: conclusion of proof</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_B.html#ss_second_action" class="internal"><span class="codenumber">1.21.1</span> <span class="title">Second action: <span class="process-math">\(H\)</span> on <span class="process-math">\(G/K\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Sylow_B.html#ss_third_action" class="internal"><span class="codenumber">1.21.2</span> <span class="title">Third action: <span class="process-math">\(G\)</span> on <span class="process-math">\(\Syl_p(G)\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Sylow_apps.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Sylow theorems: applications</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_products_direct_semi.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Direct products</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_semidirect_products.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Semidirect products</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_semidirect_products.html#ss_direct_products" class="internal"><span class="codenumber">1.24.1</span> <span class="title">Definitions and theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_semidirect_products.html#ss_semidirect_examples" class="internal"><span class="codenumber">1.24.2</span> <span class="title">Classifying groups of given cardinality</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="c_rings_mods.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and modules</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_rings.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subrings_units_divisors.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subrings, units, zero divisors</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_grouprings_polys.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Group rings, polynomials, power series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_grouprings_polys.html#ss_group_rings" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Group rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_grouprings_polys.html#ss_poly_powerseries" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Polynomials and power series</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quaternions.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Hamilton quaternion rings</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_ring_homo.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Ring homomorphisms and ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ring_homo.html#ss_rings" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Ring homomorphisms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ring_homo.html#ss_ideals" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Ideals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quot_ring.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Quotient rings and isomorphism theorems</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_prime_maximal.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Prime and maximal ideals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_maximal.html#ss_prime_max_ideals" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Prime and maximal ideals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_maximal.html#ss_zorn" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Zorn’s lemma</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_prime_max_poly.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Case study: polynomial rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_max_poly.html#ss_div_alg" class="internal"><span class="codenumber">2.8.1</span> <span class="title">Division algorithm for polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_prime_max_poly.html#ss_poly_ring_fields" class="internal"><span class="codenumber">2.8.2</span> <span class="title">Polynomial rings over fields</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_crt.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Chinese remainder theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_crt.html#ss_" class="internal"><span class="codenumber">2.9.1</span> <span class="title">Chinese remainder theorem: general form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_crt.html#ss_CRT_integers" class="internal"><span class="codenumber">2.9.2</span> <span class="title">CRT in PIDs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_localization.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Localizations and fraction fields</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_euc_domain.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Euclidean domains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pid_ufd.html" class="internal"><span class="codenumber">2.12</span> <span class="title">PIDs and UFDs</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="s_gaussian_integers.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Gaussian integers</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_gaussian_integers.html#ss_quadratic_ring_integers" class="internal"><span class="codenumber">2.13.1</span> <span class="title">Quadratic ring of integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_gaussian_integers.html#ss_gauss_integers" class="internal"><span class="codenumber">2.13.2</span> <span class="title">Ideal structure of <span class="process-math">\(\Z[i]\)</span></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-specs.html" class="internal"><span class="codenumber">E</span> <span class="title">Specimens</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-vids.html" class="internal"><span class="codenumber">F</span> <span class="title">Mantras and fiats</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_gaussian_integers"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gaussian integers</span>
+</h2>
+<section class="introduction" id="s_gaussian_integers-2"><div class="para" id="s_gaussian_integers-2-1">This section will function basically as a long-format example of analyzing the ideal structure of <span class="process-math">\(\Z[i]\text{,}\)</span> the so-called Gaussian integers. Many of the techniques we use can be applied more generally to the family of quadratic rings of integers <span class="process-math">\(\mathcal{O}_{\sqrt{D}}\text{.}\)</span> Accordingly, we will begin on the this slightly higher level of generality and indicate some of these techniques.<div class="autopermalink" data-description="Paragraph"><a href="#s_gaussian_integers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="ss_quadratic_ring_integers"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quadratic ring of integers</span>
+</h3>
+<article class="definition definition-like" id="d_quad_ring_integers"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quadratic ring of integers.</span>
+</h4>
+<div class="para logical" id="d_quad_ring_integers-2-1">
+<div class="para">Let <span class="process-math">\(D\)</span> be a square-free integer, and let <span class="process-math">\(\sqrt{D}\)</span> be a choice of square root of <span class="process-math">\(D\)</span> lying in <span class="process-math">\(\C\text{.}\)</span> The field <span class="process-math">\(F=\Q[\sqrt{D}]\)</span> is called a <dfn class="terminology">quadratic extension</dfn> of <span class="process-math">\(\Q\text{,}\)</span> and we define the subring <span class="process-math">\(\mathcal{O}_{\sqrt{D}}\subseteq F\)</span> as <span class="process-math">\(\Z[\omega]=\{m+n\omega\mid m,n\in \Z\}\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="d_quad_ring_integers-2-1-10">
+\begin{align*}
+\omega \amp =\begin{cases}
+\sqrt{D} \amp \text{if } D\not\equiv 1 \pmod 4\\
+\frac{1}{2}+\frac{\sqrt{D}}{2} \amp \text{if } D\equiv 1\pmod 4
+\text{.}\end{cases}
+\end{align*}
+</div>
+<div class="para">Additionally, the map <span class="process-math">\(\alpha=q_1+q_2\sqrt{D}\mapsto \overline{\alpha}=q_1-q_2\sqrt{D}\)</span> defines a ring automorphism both of <span class="process-math">\(\Q[\sqrt{D}]\)</span> and <span class="process-math">\(\mathcal{O}_{\sqrt{D}}=\Z[\omega]\text{,}\)</span> which in turn gives rise to a <dfn class="terminology">norm functions</dfn> <span class="process-math">\(N_{\sqrt{D}}\colon \Q[\sqrt{D}]\rightarrow \Q\)</span> defined as</div>
+<div class="displaymath process-math" id="d_quad_ring_integers-2-1-16">
+\begin{align*}
+N(\alpha) \amp =\alpha\overline{\alpha}=q_1^2-q_2^2D\text{,}
+\end{align*}
+</div>
+<div class="para">for <span class="process-math">\(\alpha=q_1+q_2\sqrt{D}\in \Q[\sqrt{D}]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_quad_ring_integers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.13.1: Quadratic ring of integers"><a href="#d_quad_ring_integers" title="Copy heading and permalink for Definition 2.13.1: Quadratic ring of integers" aria-label="Copy heading and permalink for Definition 2.13.1: Quadratic ring of integers">🔗</a></div></article><article class="remark remark-like" id="ss_quadratic_ring_integers-3"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quadratic ring of integers.</span>
+</h4>
+<div class="para" id="ss_quadratic_ring_integers-3-2">The definition of <span class="process-math">\(\omega\)</span> in <a href="s_gaussian_integers.html#d_quad_ring_integers" class="xref" data-knowl="./knowl/xref/d_quad_ring_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.13.1: Quadratic ring of integers">Definition 2.13.1</a> is not as ad hoc as first appears. The ring <span class="process-math">\(\mathcal{O}=\mathcal{O}_{\sqrt{D}}\)</span> is better described as the set of all elements of <span class="process-math">\(\Q[\sqrt{D}]\)</span> that satisfy a monic integer polynomial. This, in general, is what we call the <dfn class="terminology">ring of integers</dfn> of a field <span class="process-math">\(F\)</span> containing <span class="process-math">\(\Q\)</span> as a subfield. This is a fairly abstract definition, and it is not obvious that such a set actually comprises a subring of the given field. In the simple case of a quadratic extension <span class="process-math">\(\Q[\sqrt{D}]\text{,}\)</span> we can compute this set by hand to obtain the explicit description <span class="process-math">\(\Z[\omega]\)</span> given in the definition. In particular, though not completely obvious, the set <span class="process-math">\(\Z[\omega]\)</span> is indeed a subring in the case where <span class="process-math">\(D\equiv 1\pmod 4\)</span> and <span class="process-math">\(\omega=\tfrac{1}{2}+\tfrac{\sqrt{D}}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_quadratic_ring_integers-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.13.2: Quadratic ring of integers"><a href="#ss_quadratic_ring_integers-3" title="Copy heading and permalink for Remark 2.13.2: Quadratic ring of integers" aria-label="Copy heading and permalink for Remark 2.13.2: Quadratic ring of integers">🔗</a></div></article><article class="proposition theorem-like" id="prop_quad_ring_integers"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Norm and quadratic rings of integers.</span>
+</h4>
+<div class="para logical" id="prop_quad_ring_integers-2-1">
+<div class="para">Let <span class="process-math">\(D\)</span> be a square-free integer, let <span class="process-math">\(\mathcal{O}=\mathcal{O}_{\sqrt{D}}\)</span> be the corresponding quadratic ring of integers, and let <span class="process-math">\(N=N_{\sqrt{D}}\)</span> be the corresponding norm function.</div>
+<ol class="decimal" id="prop_quad_ring_integers-2-1-4">
+<li id="prop_quad_ring_integers-2-1-4-1">
+<div class="para" id="prop_quad_ring_integers-2-1-4-1-1">The norm function <span class="process-math">\(N\)</span> is multiplicative: i.e., <span class="process-math">\(N(\alpha\beta)=N(\alpha)N(\beta)\)</span> for all <span class="process-math">\(\alpha,\beta \in \Q[\sqrt{D}]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#prop_quad_ring_integers-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="prop_quad_ring_integers-2-1-4-2">
+<div class="para logical" id="prop_quad_ring_integers-2-1-4-2-1">
+<div class="para">Assume <span class="process-math">\(D\equiv 1\pmod 4\text{,}\)</span> so that <span class="process-math">\(\omega=\tfrac{1}{2}+\tfrac{\sqrt{D}}{2}\text{.}\)</span> For all <span class="process-math">\(\alpha=m+n\omega\text{,}\)</span> with <span class="process-math">\(m,n\in \Z\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="prop_quad_ring_integers-2-1-4-2-1-5">
+\begin{align*}
+N(\alpha) \amp = m^2+mn+\frac{1-D}{4}n^2\in \Z  \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#prop_quad_ring_integers-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="prop_quad_ring_integers-2-1-4-3">
+<div class="para" id="prop_quad_ring_integers-2-1-4-3-1">For all square-free integers <span class="process-math">\(D\text{,}\)</span> the restriction of the norm function <span class="process-math">\(N\)</span> to <span class="process-math">\(\mathcal{O}\)</span> defines a multiplicative function <span class="process-math">\(N\colon \mathcal{O}\rightarrow \Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#prop_quad_ring_integers-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="prop_quad_ring_integers-2-1-4-4">
+<div class="para" id="prop_quad_ring_integers-2-1-4-4-1">
+<span class="process-math">\(\mathcal{O}^*=\{\alpha\in \mathcal{O}\mid N(\alpha)=\pm 1\}\text{.}\)</span> In other words, the units of <span class="process-math">\(\mathcal{O}\)</span> are precisely those elements whose norm is a unit of <span class="process-math">\(\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#prop_quad_ring_integers-2-1-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="prop_quad_ring_integers-2-1-4-5">
+<div class="para" id="prop_quad_ring_integers-2-1-4-5-1">If <span class="process-math">\(\pi\in \mathcal{O}\)</span> satisfies <span class="process-math">\(\abs{N(\pi)}=p\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime integer, then <span class="process-math">\(\pi\)</span> is irreducible in <span class="process-math">\(\mathcal{O}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#prop_quad_ring_integers-2-1-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.13.3: Norm and quadratic rings of integers"><a href="#prop_quad_ring_integers" title="Copy heading and permalink for Proposition 2.13.3: Norm and quadratic rings of integers" aria-label="Copy heading and permalink for Proposition 2.13.3: Norm and quadratic rings of integers">🔗</a></div></article><details id="prop_quad_ring_integers-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="prop_quad_ring_integers-3-1">We leave most of this proof to the reader, restricting ourselves to a few comments. Statement (1) follows immediately from the fact that <span class="process-math">\(\alpha\mapsto \overline{\alpha}\)</span> is a ring homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="prop_quad_ring_integers-3-2">Statement (2) follows from a computation. Note that since <span class="process-math">\(D\equiv 1\pmod 4\)</span> here, the quotient <span class="process-math">\((1-D)/4\)</span> is in fact an integer!<div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="prop_quad_ring_integers-3-3">We give a full proof of (3). If <span class="process-math">\(\alpha\in \mathcal{O}^*\text{,}\)</span> then we have <span class="process-math">\(1=\alpha\beta\)</span> for some <span class="process-math">\(\beta\in \mathcal{O}\text{,}\)</span> in which case <span class="process-math">\(1=N(1)=N(\alpha)N(\beta)\text{.}\)</span> It follows that <span class="process-math">\(N(\alpha)\in \Z^*=\{\pm 1\}\text{.}\)</span> Conversely if <span class="process-math">\(N(\alpha)=\alpha\overline{\alpha}=\pm 1\text{,}\)</span> then <span class="process-math">\(\alpha^{-1}=\pm \overline{\alpha}\text{,}\)</span> showing that <span class="process-math">\(\alpha\in \mathcal{O}^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="prop_quad_ring_integers-3-4">We give a full proof of (4). Assume <span class="process-math">\(\abs{N(\pi)}=p\text{,}\)</span> a prime integer. Since <span class="process-math">\(N(\pi)\ne 0\text{,}\)</span> <span class="process-math">\(\pi \ne 0\text{;}\)</span> since <span class="process-math">\(N(\pi)\notin \{\pm 1\}\text{,}\)</span> <span class="process-math">\(\pi\)</span> is not a unit.  Given a factorization <span class="process-math">\(\pi=\alpha\beta\)</span> in <span class="process-math">\(\mathcal{O}\text{,}\)</span> we have <span class="process-math">\(p=\abs{N(\pi)}=\abs{N(\alpha)}\abs{N(\beta)}\text{.}\)</span> Since <span class="process-math">\(N(\alpha)\)</span> and <span class="process-math">\(N(\beta)\)</span> are integers and <span class="process-math">\(p\)</span> is prime, it follows that <span class="process-math">\(\{\abs{N(\alpha)},\abs{N(\beta)}\}\subseteq \{1,p\}\text{.}\)</span> Since we cannot have <span class="process-math">\(\{\abs{N(\alpha)},\abs{N(\beta)}\}\subseteq \{p\}\text{,}\)</span> one of <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> must have a unit norm, making it itself a unit. We conclude that <span class="process-math">\(\pi\)</span> has no nontrivial factorization, and thus that it is irreducible.<div class="autopermalink" data-description="Paragraph"><a href="#prop_quad_ring_integers-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.13.3.1"><a href="#prop_quad_ring_integers-3" title="Copy heading and permalink for Proof 2.13.3.1" aria-label="Copy heading and permalink for Proof 2.13.3.1">🔗</a></div></article></details><div class="para" id="ss_quadratic_ring_integers-5">We have seen that not all quadratic rings of integers are UFDs. Indeed, <span class="process-math">\(\Z[\sqrt{-5}]\)</span> is an example. (And see <a href="pid_ufd.html#rem_quad_ring_integers" class="xref" data-knowl="./knowl/xref/rem_quad_ring_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.12.11: Quadratic ring of integers">Remark 2.12.11</a> for a more complete picture of the state of affairs here.) However, as a nice illustration of the utility of the norm function, it is easy to see that irreducible factorizations do always exist in these rings, as the next result shows. The issue is that this irreducible factorization may not be unique: e.g., <span class="process-math">\(6=2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_quadratic_ring_integers-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor_quad_ring_factorization"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence of factorizations in quadratic rings of integers.</span>
+</h4>
+<div class="para" id="cor_quad_ring_factorization-2-1">Let <span class="process-math">\(D\)</span> be a square-free integer, and let <span class="process-math">\(\mathcal{O}=\mathcal{O}_{\sqrt{D}}\text{.}\)</span> Any nonzero, non-unit element of <span class="process-math">\(\mathcal{O}\)</span> can be factored as a product of irreducible elements of <span class="process-math">\(\mathcal{O}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_quad_ring_factorization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.13.4: Existence of factorizations in quadratic rings of integers"><a href="#cor_quad_ring_factorization" title="Copy heading and permalink for Corollary 2.13.4: Existence of factorizations in quadratic rings of integers" aria-label="Copy heading and permalink for Corollary 2.13.4: Existence of factorizations in quadratic rings of integers">🔗</a></div></article><details id="cor_quad_ring_factorization-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="cor_quad_ring_factorization-3-1">The proof is done by strong induction on <span class="process-math">\(\abs{N(\alpha)}\)</span> for <span class="process-math">\(\alpha\in \mathcal{O}\text{.}\)</span> First observe that if <span class="process-math">\(\abs{N(\alpha)}=p\text{,}\)</span> then <span class="process-math">\(\alpha\)</span> is irreducible by <a href="s_gaussian_integers.html#prop_quad_ring_integers" class="xref" data-knowl="./knowl/xref/prop_quad_ring_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.13.3: Norm and quadratic rings of integers">Proposition 2.13.3</a>, and we are done. This gives us infinitely many bases cases as it were: i.e., we know the result for all <span class="process-math">\(\alpha\)</span> satisfying <span class="process-math">\(\abs{N(\alpha)}\in \{2,3,5,7,11,\dots\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_quad_ring_factorization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cor_quad_ring_factorization-3-2">Now assume that the result holds for all <span class="process-math">\(\alpha\in \mathcal{O}\)</span> with <span class="process-math">\(\abs{N(\alpha)}\&lt; n\geq 3\text{.}\)</span> Suppose <span class="process-math">\(\alpha\in \mathcal{O}\)</span> satisfies <span class="process-math">\(\abs{N(\alpha)}=n\text{.}\)</span> (This means, in particular, that <span class="process-math">\(\alpha\)</span> is nonzero, and a non-unit.) If <span class="process-math">\(\alpha\)</span> is irreducible, we are done. Otherwise, we have a nontrivial factorization <span class="process-math">\(\alpha=\beta\gamma\text{.}\)</span> Since <span class="process-math">\(n=\abs{N(\alpha)}=\abs{N(\beta})\abs{N(\gamma)}\)</span> and since <span class="process-math">\(\beta\)</span> and <span class="process-math">\(\gamma\)</span> are not units, it follows that <span class="process-math">\(\abs{N(\beta)}&lt; n\)</span> and <span class="process-math">\(\abs{N(\gamma)}&lt; n\text{.}\)</span> By the induction hypothesis, both <span class="process-math">\(\beta\)</span> and <span class="process-math">\(\gamma\)</span> can be factored as a product of irreducible elements, and thus so can <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_quad_ring_factorization-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.13.4.1"><a href="#cor_quad_ring_factorization-3" title="Copy heading and permalink for Proof 2.13.4.1" aria-label="Copy heading and permalink for Proof 2.13.4.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.13.1: Quadratic ring of integers"><a href="#ss_quadratic_ring_integers" title="Copy heading and permalink for Subsection 2.13.1: Quadratic ring of integers" aria-label="Copy heading and permalink for Subsection 2.13.1: Quadratic ring of integers">🔗</a></div></section><section class="subsection" id="ss_gauss_integers"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ideal structure of <span class="process-math">\(\Z[i]\)</span></span>
+</h3>
+<div class="para logical" id="ss_gauss_integers-2">
+<div class="para">We now specialize to <span class="process-math">\(\Z[i]\text{.}\)</span> Let’s gather some facts we already know about this ring.</div>
+<ul class="disc" id="ss_gauss_integers-2-2">
+<li id="ss_gauss_integers-2-2-1">
+<div class="para logical" id="ss_gauss_integers-2-2-1-1">
+<div class="para">
+<span class="process-math">\(\Z[i]\)</span> is a PID, and hence also a UFD. Thus all ideals in <span class="process-math">\(\Z[i]\)</span> are of the form <span class="process-math">\(I=(\alpha)\text{.}\)</span> Furthermore, since prime is equivalent to irreducible in UFDs, and since prime is equivalent to maximal in PIDs, the following statements are equivalent.</div>
+<ul class="circle" id="ss_gauss_integers-2-2-1-1-4">
+<li id="ss_gauss_integers-2-2-1-1-4-1">
+<div class="para" id="ss_gauss_integers-2-2-1-1-4-1-1">
+<span class="process-math">\((\pi)\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-1-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-2-1-1-4-2">
+<div class="para" id="ss_gauss_integers-2-2-1-1-4-2-1">
+<span class="process-math">\((\pi)\)</span> is maximal.<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-1-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-2-1-1-4-3">
+<div class="para" id="ss_gauss_integers-2-2-1-1-4-3-1">
+<span class="process-math">\(\pi\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-1-1-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-2-1-1-4-4">
+<div class="para" id="ss_gauss_integers-2-2-1-1-4-4-1">
+<span class="process-math">\(\pi\)</span> is irreducible.<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-1-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-1-1-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-2-2">
+<div class="para" id="ss_gauss_integers-2-2-2-1">An element <span class="process-math">\(\alpha=m+ni\in \Z[i]\)</span> is a unit if and only if <span class="process-math">\(N(\alpha)=m^2+n^2\in \{\pm 1\}\text{,}\)</span> if and only if <span class="process-math">\(\alpha\in \{\pm 1, \pm i\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-2-3">
+<div class="para" id="ss_gauss_integers-2-2-3-1">Let <span class="process-math">\(\pi=m+ni\text{,}\)</span> so that <span class="process-math">\(N(\pi)=m^2+n^2\text{.}\)</span>  We know that if <span class="process-math">\(\abs{N(\pi)}=N(\pi)=p\)</span> is a prime integer, then <span class="process-math">\(\pi\)</span> is irreducible. Thus for example, since <span class="process-math">\(N(1\pm i)=1^2+1^2=2\text{,}\)</span> the elements <span class="process-math">\(1+i\)</span> and <span class="process-math">\(1-i\)</span> are irreducible, and the factorization <span class="process-math">\(2=(1+i)(1-i)\)</span> is thus an irreducible factorization of <span class="process-math">\(2\)</span> in <span class="process-math">\(\Z[i]\text{.}\)</span> In particular, <span class="process-math">\(2\)</span> is no longer prime in <span class="process-math">\(\Z[i]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">These observations already cover some ground, but leave open some questions.</div>
+<ul class="disc" id="ss_gauss_integers-2-3">
+<li id="ss_gauss_integers-2-3-1">
+<div class="para" id="ss_gauss_integers-2-3-1-1">We see that if <span class="process-math">\(p=m^2+n^2\text{,}\)</span> then the elements <span class="process-math">\(m+ni\)</span> and <span class="process-math">\(m-ni\)</span> are irreducible, and the factorization <span class="process-math">\(p=(m+ni)(m-ni)\)</span> is an irreducible factorization of <span class="process-math">\(p\)</span> in <span class="process-math">\(\Z[i]\text{.}\)</span> In particular, if <span class="process-math">\(p=m^2+n^2\text{,}\)</span> then <span class="process-math">\(p\)</span> is not prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Is this in fact an equivalence? If so, is there a better way of describing such primes <span class="process-math">\(p\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ss_gauss_integers-2-3-2">
+<div class="para" id="ss_gauss_integers-2-3-2-1">Are there irreducible elements <span class="process-math">\(\pi\)</span> of <span class="process-math">\(\Z[i]\)</span> that do not satisfy <span class="process-math">\(N(\pi)=p\)</span> for some prime integer <span class="process-math">\(p\text{?}\)</span> If so, what is the complete description of the set of irreducible elements of <span class="process-math">\(\Z[i]\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ss_gauss_integers-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The next result answers the first bullet point’s questions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="th_prime_factorization"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime factorization in <span class="process-math">\(\Z[i]\)</span>.</span>
+</h4>
+<div class="para logical" id="th_prime_factorization-2-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime integer. The following statements are equivalent.</div>
+<ol class="decimal" id="th_prime_factorization-2-1-2">
+<li id="th_prime_factorization-2-1-2-1">
+<div class="para" id="th_prime_factorization-2-1-2-1-1">
+<span class="process-math">\(p\)</span> is not prime (equivalently, irreducible) in <span class="process-math">\(\Z[i]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_prime_factorization-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-2">
+<div class="para" id="th_prime_factorization-2-1-2-2-1">
+<span class="process-math">\(p=m^2+n^2\)</span> for integers <span class="process-math">\(m,n\in \Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_prime_factorization-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-3">
+<div class="para" id="th_prime_factorization-2-1-2-3-1">
+<span class="process-math">\(p=N(\pi)\)</span> for some irreducible element <span class="process-math">\(\pi\in \Z[i]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_prime_factorization-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-4">
+<div class="para" id="th_prime_factorization-2-1-2-4-1">
+<span class="process-math">\(p=\pi \overline{\pi}\)</span> for some irreducible element <span class="process-math">\(\pi \in \Z[i]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#th_prime_factorization-2-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-5">
+<div class="para" id="th_prime_factorization-2-1-2-5-1">
+<span class="process-math">\(f(x)=x^2+\overline{1}\)</span> is a reducible polynomial in <span class="process-math">\(\F_p[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#th_prime_factorization-2-1-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-6">
+<div class="para" id="th_prime_factorization-2-1-2-6-1">
+<span class="process-math">\([-1]_p\)</span> is a square in <span class="process-math">\(\F_p\)</span> (i.e., <span class="process-math">\(-1\)</span> is a square modulo <span class="process-math">\(p\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#th_prime_factorization-2-1-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="th_prime_factorization-2-1-2-7">
+<div class="para" id="th_prime_factorization-2-1-2-7-1">
+<span class="process-math">\(p=2\)</span> or <span class="process-math">\(p\equiv 1\pmod 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#th_prime_factorization-2-1-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.13.5: Prime factorization in \Z[i]"><a href="#th_prime_factorization" title="Copy heading and permalink for Theorem 2.13.5: Prime factorization in \Z[i]" aria-label="Copy heading and permalink for Theorem 2.13.5: Prime factorization in \Z[i]">🔗</a></div></article><details id="th_prime_factorization-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_prime_factorization-3-1">Since <span class="process-math">\(N(m+ni)=(m+ni)(m-ni)=m^2+n^2\text{,}\)</span> and since <span class="process-math">\(N(\pi)=p\)</span> implies <span class="process-math">\(\pi\)</span> is irreducible, (2), (3) and (4) are clearly equivalent. Furthermore, we know <span class="process-math">\((3)\)</span> implies (1) by <a href="s_gaussian_integers.html#prop_quad_ring_integers" class="xref" data-knowl="./knowl/xref/prop_quad_ring_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.13.3: Norm and quadratic rings of integers">Proposition 2.13.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="th_prime_factorization-3-2">Let’s prove that (1) implies (3). Assume <span class="process-math">\(p\)</span> is not prime/irreducible in <span class="process-math">\(\Z[i]\text{.}\)</span> It follows that we have <span class="process-math">\(p=\alpha\beta\)</span> for some non-units <span class="process-math">\(\alpha,\beta\in \Z[i]\text{.}\)</span> From <span class="process-math">\(p^2=N(p)=N(\alpha)N(\beta)\text{,}\)</span> it follows that <span class="process-math">\(N(\alpha)=N(\beta)=p\text{:}\)</span> otherwise, one of <span class="process-math">\(\alpha\)</span> or <span class="process-math">\(\beta\)</span> would have norm equal to 1, making it a unit. Thus <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are both irreducible (since their norm is prime), and we are done.<div class="autopermalink" data-description="Paragraph"><a href="#th_prime_factorization-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.13.5.1"><a href="#th_prime_factorization-3" title="Copy heading and permalink for Proof 2.13.5.1" aria-label="Copy heading and permalink for Proof 2.13.5.1">🔗</a></div></article></details><div class="para logical" id="ss_gauss_integers-4">
+<div class="para">It turns out that <a href="s_gaussian_integers.html#th_prime_factorization" class="xref" data-knowl="./knowl/xref/th_prime_factorization.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13.5: Prime factorization in \Z[i]">Theorem 2.13.5</a> is all that we need to give a complete description of the irreducible elements of <span class="process-math">\(\Z[i]\text{.}\)</span> The key connection is that if <span class="process-math">\(\pi\)</span> is irreducible, then the ideal <span class="process-math">\((\pi)\)</span> contains a unique prime integer <span class="process-math">\(p\text{:}\)</span> or equivalently, there is a unique prime integer <span class="process-math">\(p\)</span> such that <span class="process-math">\(\pi\mid p\text{.}\)</span> To see why, consider the inclusion homomorphism <span class="process-math">\(\phi\colon \Z\rightarrow \Z[i]\text{.}\)</span> Since <span class="process-math">\((\pi)\)</span> is prime ideal, its inverse image</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_prime_factorization.html" id="ss_gauss_integers-4-10">
+\begin{gather*}
+\phi^{-1}(\pi)=(\pi)\cap \Z 
+\end{gather*}
+</div>
+<div class="para">is a prime ideal of <span class="process-math">\(\Z\text{.}\)</span> Since the integer <span class="process-math">\(N(\pi)=\pi\overline{\pi}\)</span> is an element of <span class="process-math">\((\pi)\text{,}\)</span> <span class="process-math">\((\pi)\cap \Z\)</span> is a nonzero prime ideal, hence equal to <span class="process-math">\(p\Z\)</span> for some prime integer <span class="process-math">\(p\in \Z\text{.}\)</span> It follows that <span class="process-math">\(p\in (\pi)\text{.}\)</span> We say that <span class="process-math">\((\pi)\)</span> <dfn class="terminology">lies over</dfn> the prime <span class="process-math">\(p\)</span> in this case. The corollary below describes the distinct irreducible elements of <span class="process-math">\(\Z[i]\text{,}\)</span> up to associates, in terms of the unique primes they lie over.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ss_gauss_integers-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor_gauss_int_irr"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.13.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Primes of <span class="process-math">\(\Z[i]\)</span>.</span>
+</h4>
+<div class="para logical" id="cor_gauss_int_irr-2-1">
+<div class="para">Up to associates, the distinct irreducible elements <span class="process-math">\(\pi\)</span> of <span class="process-math">\(\Z[i]\)</span> are described below based on the unique prime <span class="process-math">\(p\)</span> they lie over.</div>
+<ul class="disc" id="cor_gauss_int_irr-2-1-4">
+<li id="cor_gauss_int_irr-2-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(p=2\)</span>.</span></span><div class="para" id="cor_gauss_int_irr-2-1-4-1-2">Up to associates, <span class="process-math">\(\pi=(1+i)\)</span> is the unique irreducible element of <span class="process-math">\(\Z[i]\)</span> lying over <span class="process-math">\(2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_int_irr-2-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: p=2"><a href="#cor_gauss_int_irr-2-1-4-1" title="Copy heading and permalink for Item: Case: p=2" aria-label="Copy heading and permalink for Item: Case: p=2">🔗</a></div>
+</li>
+<li id="cor_gauss_int_irr-2-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(p\equiv 1\pmod 4\)</span>.</span></span><div class="para" id="cor_gauss_int_irr-2-1-4-2-2">If <span class="process-math">\(p\equiv 1\pmod 4\text{,}\)</span> then there are exactly two irreducible elements lying over <span class="process-math">\(p\)</span> up to associates: namely, <span class="process-math">\(\pi=m+ni\)</span> and <span class="process-math">\(\overline{\pi}=m-ni\text{,}\)</span> where <span class="process-math">\((m,n)\)</span> is any pair of integers satisfying <span class="process-math">\(p=m^2+n^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_int_irr-2-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: p\equiv 1\pmod 4"><a href="#cor_gauss_int_irr-2-1-4-2" title="Copy heading and permalink for Item: Case: p\equiv 1\pmod 4" aria-label="Copy heading and permalink for Item: Case: p\equiv 1\pmod 4">🔗</a></div>
+</li>
+<li id="cor_gauss_int_irr-2-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Case: <span class="process-math">\(p\equiv 3\pmod 4\)</span>.</span></span><div class="para" id="cor_gauss_int_irr-2-1-4-3-2">If <span class="process-math">\(p\equiv 3\pmod 4\text{,}\)</span> then <span class="process-math">\(p\)</span> is irreducible in <span class="process-math">\(\Z[i]\text{,}\)</span> and <span class="process-math">\(\pi=p\)</span> is the unique irreducible element of <span class="process-math">\(\Z[i]\)</span> lying over <span class="process-math">\(p\text{,}\)</span> up to associates.<div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_int_irr-2-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case: p\equiv 3\pmod 4"><a href="#cor_gauss_int_irr-2-1-4-3" title="Copy heading and permalink for Item: Case: p\equiv 3\pmod 4" aria-label="Copy heading and permalink for Item: Case: p\equiv 3\pmod 4">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_int_irr-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.13.6: Primes of \Z[i]"><a href="#cor_gauss_int_irr" title="Copy heading and permalink for Corollary 2.13.6: Primes of \Z[i]" aria-label="Copy heading and permalink for Corollary 2.13.6: Primes of \Z[i]">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.13.2: Ideal structure of \Z[i]"><a href="#ss_gauss_integers" title="Copy heading and permalink for Subsection 2.13.2: Ideal structure of \Z[i]" aria-label="Copy heading and permalink for Subsection 2.13.2: Ideal structure of \Z[i]">🔗</a></div></section><div class="autopermalink" data-description="Section 2.13: Gaussian integers"><a href="#s_gaussian_integers" title="Copy heading and permalink for Section 2.13: Gaussian integers" aria-label="Copy heading and permalink for Section 2.13: Gaussian integers">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="pid_ufd.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
