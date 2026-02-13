@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_gauss_lemma" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Gauss's lemma</title>
+
+    <p>
+        Having spent some significant time finding UFDs (and PIDs) within the family of quadratic rings of integers, we now explore how the property of being a UFD fares under the polynomial ring construction. The answer here is a simple and happy one: if <m>R</m> is a UFD, then so is <m>R[x]</m>! In particular, we see that our friend <m>\Z[x]</m> is a UFD, despite its not being a PID. 
+    </p>
+    <p>
+        As you will see below, not only is the answer a simple one, but the proof approach is essentially the first thing that might cross your mind. In more detail, let <m>F=\Frac R</m> be the field of fractions of <m>R</m>. Identifying <m>R</m> with its image under the localization map <m>\lambda\colon R\rightarrow F</m> (which is injective in this case), we think of <m>R[x]</m> as a subring of <m>F[x]</m>. The latter is a PID, and hence a UFD. As such, we might naively hope to proceed as follows: 
+        <ul>
+            <li>
+                <p>
+                    given a polynomial <m>f(x)\in R[x]</m>, consider it as an element of <m>F[x]</m>;
+                </p>
+            </li>
+            <li>
+                <p>
+                    since <m>F[x]</m> is a UFD, we can factor <m>f</m> into powers of irreducibles as <m>f=\prod_{i=1}^r f_i^{n_i}</m>, and this factorization is unique in some sense;
+                </p>
+            </li>
+            <li>
+                <p>
+                    so it stands to reason that <m>f</m> should factor into irreducibles in <m>R[x]</m>, right? 
+                </p>
+            </li>
+        </ul>
+        In fact yes, it does stand to reason that <m>f</m> factors similarly over <m>R[x]</m>, but the argument is more delicate than you might expect. There are two key issues that the sketch above willfully steamrolls over: (a) the irreducible elements <m>f_i</m> are elements of <m>F[x]</m>, but not necessarily <m>R[x]</m>; (b) even if we have <m>f_i\in R[x]</m> for all <m>i</m>, being irreducible in <m>F[x]</m> does not <foreign>a priori</foreign> imply irreducibility in <m>R[x]</m>. Indeed, that implication is patently false: <m>f(x)=2x</m> is irreducible in <m>\Q[x]</m>, but not irreducible in <m>\Z[x]</m>, since <m>f(x)=2\cdot x</m> is a factorization into two nonunits of <m>\Z[x]</m>.
+    </p>
+    <p>
+        Accordingly, we will need to proceed with some caution in our proof, keeping straight where polynomials live (in <m>R[x]</m> or <m>F[x]</m>), and for a polynomial <m>f\in R[x]</m> we need to distinguish between being reducible/irreducible in <m>R[x]</m> and being reducible/irreducible in <m>F[x]</m>. (As you will see from Gauss's lemma, the two notions are very close to being equivalent, but not quite.) 
+    </p>
+    <p>
+        The notions of a polynomial's <em>content</em> and <em>primitive polynomials</em> turn out to be just the thing we need for finessing these issues.  
+    </p>
+    <definition xml:id="d_prim_poly">
+    <title>Primitive polynomials</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a unique factorization domain. A nonconstant polynomial <m>f(x)=\sum_{i=0}^na_ix^i\in R[x]</m> is <term>primitive</term> if the the coefficients <m>a_i</m> are relatively prime (<ie/>, if <m>1</m> is the greatest common divisor of <m>a_0,a_1,\dots, a_n</m>). 
+    </p>
+    </statement>
+    </definition>
+    <proposition xml:id="th_gauss_lemma">
+    <title>Primitive decompositions</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a unique factorization domain, let <m>F=\Frac R</m> be its field of fractions, and identify <m>R</m> with its image in <m>F</m> under the localization map. 
+    <ol>
+        <li>
+            <p>
+                If <m>f</m> and <m>g</m> are primitive elements of <m>R[x]</m>, then <m>fg</m> is primitive. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Given a nonconstant polynomial <m>f\in F[x]</m>, there exists a primitive polynomial <m>f_0\in R[x]</m> and constant <m>c\in F</m> such that <m>f=c f_0</m>. Furthermore, this representation satisfies the following uniqueness property: if <m>f=cf_0=dg_0</m> for primitive polynomials <m>f_0,g_0\in R[x]</m> and constants <m>c,d\in F</m>, then <m>g_0=uf_0</m> for some unit <m>u\in R^*</m> and <m>c=du</m>. 
+            </p>
+            <p>
+                We will call a representation <m>f=cf_0</m> where <m>c\in F</m> and <m>f_0\in R[x]</m> is primitive a <term>primitive decomposition</term> of <m>f</m>. Additionally, we will say that <m>f</m> has <term>content</term> <m>c</m> in this case, and <term>associated primitive</term> <m>f_0</m>. Note that <m>c</m> and <m>f_0</m> are well-defined only up to multiplication by a unit in <m>R</m>. By abuse of notation, we call <m>c</m> the <term>content</term> of <m>f</m>, and we call <m>f_0</m> the primitive polynomial <term>associated</term> to <m>f</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>f</m> and <m>g</m> be nonconstant polynomials in <m>F[x]</m>. If <m>f</m> has content <m>c</m> and <m>g</m> has content <m>d</m>, then <m>fg</m> has content <m>cd</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </proposition>
+    <corollary xml:id="cor_gauss_lemma">
+        <title>Gauss's lemma</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a unique factorization domain, let <m>F=\Frac R</m> be its field of fractions, and identify <m>R</m> with its image in <m>F</m> under the localization map. 
+                <ol>
+                    <li>
+                        <p>
+                            Let <m>f</m> and <m>g</m> be nonconstant polynomials in <m>F[x]</m> with associated primitive polynomials <m>f_0,g_0\in R[x]</m>. We have <m>f\mid g</m> if and only if <m>f_0\mid g_0</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f</m> is a nonconstant polynomial in <m>F[x]</m> satisfying <m>f(x)=g(x)h(x)</m> for nonconstant polynomials <m>g,h\in F[x]</m>, then <m>f(x)=cg_0h_0</m>, where <m>g_0</m> and <m>h_0</m> are the associated primitive polynomials of <m>g</m> and <m>h</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </corollary>
+    
+
+</section>

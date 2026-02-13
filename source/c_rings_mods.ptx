@@ -15,4 +15,5 @@
 <xi:include href="s_euc_domain.ptx" />
 <xi:include href="s_pid_ufd.ptx" />
 <xi:include href="s_gaussian_integers.ptx" />
+<xi:include href="s_gauss_lemma.ptx" />
 </chapter>

@@ -408,7 +408,7 @@ Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> be a quadratic ring of integers. W
             </md>
             for all <m>1\leq i\leq r</m>, <m>1\leq j\leq s</m>. Equivalently, we must have <m>m_j</m> even for all <m>j</m>, and <m>m_j'/2</m>, and <m>(a_i,b_i)=(a_i, n_i-b_i)</m> for <m>a_i\in \{0,1,\dots, n_i\}</m>. We conclude that <m>n=a^2+b^2</m> if and only if <m>n=N(\alpha)</m> for an element <m>\alpha\in \Z[i]</m> that can we written uniquely as 
             <md>
-                <mrow>\alpha \amp = u (1+i)^k \cdot \prod_{i=1}^r \prod_i^{a_i}\overline{\pi}_i^{n_i-a_i}\cdot \prod_{j=1}^s q_j^{m_j/2}</mrow>
+                <mrow>\alpha \amp = u (1+i)^k \cdot \prod_{i=1}^r \pi_i^{a_i}\overline{\pi}_i^{n_i-a_i}\cdot \prod_{j=1}^s q_j^{m_j/2}</mrow>
             </md>,
             where <m>u\in \{1,-1,i,-i\}</m> is any unit, and <m>a_i\in \{0,1,\dots, n_i\}</m>. Since we have <m>4</m> choices for <m>u</m> and <m>n_i+1</m> choices for each <m>a_i</m>, the result follows. 
         </p>
