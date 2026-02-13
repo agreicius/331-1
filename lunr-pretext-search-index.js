@@ -4393,6 +4393,42 @@ var ptx_lunr_docs = [
   "body": " Sums of two squares   Let be a positive integer with factorization , where the and are distinct odd primes, for all , and for all . We have for integers and if and only if is even for all . Furthermore, when this is the case there are exactly pairs satisfying .    We have if and only if , where . Since, for an irreducible element we have , where is the unique prime lying below , it follows that any irreducible element appearing in the factorization of lies over , for some , or for some . With the help of , we can pick irreducible elements lying over for each , so that up to associates and are the distinct irreducible elements lying over . The corollary also tells us that up to associates and are the unique irreducible elements lying over and , respectively. It follows that if , then we can write  uniquely in the form , where is a unit. But then we have for all , . Equivalently, we must have even for all , and , and for . We conclude that if and only if for an element that can we written uniquely as , where is any unit, and . Since we have choices for and choices for each , the result follows.   "
 },
 {
+  "id": "s_gauss_lemma",
+  "level": "1",
+  "url": "s_gauss_lemma.html",
+  "type": "Section",
+  "number": "2.14",
+  "title": "Gauss’s lemma",
+  "body": " Gauss's lemma  Having spent some significant time finding UFDs (and PIDs) within the family of quadratic rings of integers, we now explore how the property of being a UFD fares under the polynomial ring construction. The answer here is a simple and happy one: if is a UFD, then so is ! In particular, we see that our friend is a UFD, despite its not being a PID.  As you will see below, not only is the answer a simple one, but the proof approach is essentially the first thing that might cross your mind. In more detail, let be the field of fractions of . Identifying with its image under the localization map (which is injective in this case), we think of as a subring of . The latter is a PID, and hence a UFD. As such, we might naively hope to proceed as follows:   given a polynomial , consider it as an element of ;    since is a UFD, we can factor into powers of irreducibles as , and this factorization is unique in some sense;    so it stands to reason that should factor into irreducibles in , right?   In fact yes, it does stand to reason that factors similarly over , but the argument is more delicate than you might expect. There are two key issues that the sketch above willfully steamrolls over: (a) the irreducible elements are elements of , but not necessarily ; (b) even if we have for all , being irreducible in does not a priori imply irreducibility in . Indeed, that implication is patently false: is irreducible in , but not irreducible in , since is a factorization into two nonunits of .  Accordingly, we will need to proceed with some caution in our proof, keeping straight where polynomials live (in or ), and for a polynomial we need to distinguish between being reducible\/irreducible in and being reducible\/irreducible in . (As you will see from Gauss's lemma, the two notions are very close to being equivalent, but not quite.)  The notions of a polynomial's content and primitive polynomials turn out to be just the thing we need for finessing these issues.   Primitive polynomials   Let be a unique factorization domain. A nonconstant polynomial is primitive if the the coefficients are relatively prime ( , if is the greatest common divisor of ).     Primitive decompositions   Let be a unique factorization domain, let be its field of fractions, and identify with its image in under the localization map.   If and are primitive elements of , then is primitive.    Given a nonconstant polynomial , there exists a primitive polynomial and constant such that . Furthermore, this representation satisfies the following uniqueness property: if for primitive polynomials and constants , then for some unit and .  We will call a representation where and is primitive a primitive decomposition of . Additionally, we will say that has content  in this case, and associated primitive  . Note that and are well-defined only up to multiplication by a unit in . By abuse of notation, we call the content of , and we call the primitive polynomial associated to .    Let and be nonconstant polynomials in . If has content and has content , then has content .            Gauss's lemma   Let be a unique factorization domain, let be its field of fractions, and identify with its image in under the localization map.   Let and be nonconstant polynomials in with associated primitive polynomials . We have if and only if .    If is a nonconstant polynomial in satisfying for nonconstant polynomials , then , where and are the associated primitive polynomials of and .       "
+},
+{
+  "id": "d_prim_poly",
+  "level": "2",
+  "url": "s_gauss_lemma.html#d_prim_poly",
+  "type": "Definition",
+  "number": "2.14.1",
+  "title": "Primitive polynomials.",
+  "body": " Primitive polynomials   Let be a unique factorization domain. A nonconstant polynomial is primitive if the the coefficients are relatively prime ( , if is the greatest common divisor of ).   "
+},
+{
+  "id": "th_gauss_lemma",
+  "level": "2",
+  "url": "s_gauss_lemma.html#th_gauss_lemma",
+  "type": "Proposition",
+  "number": "2.14.2",
+  "title": "Primitive decompositions.",
+  "body": " Primitive decompositions   Let be a unique factorization domain, let be its field of fractions, and identify with its image in under the localization map.   If and are primitive elements of , then is primitive.    Given a nonconstant polynomial , there exists a primitive polynomial and constant such that . Furthermore, this representation satisfies the following uniqueness property: if for primitive polynomials and constants , then for some unit and .  We will call a representation where and is primitive a primitive decomposition of . Additionally, we will say that has content  in this case, and associated primitive  . Note that and are well-defined only up to multiplication by a unit in . By abuse of notation, we call the content of , and we call the primitive polynomial associated to .    Let and be nonconstant polynomials in . If has content and has content , then has content .          "
+},
+{
+  "id": "cor_gauss_lemma",
+  "level": "2",
+  "url": "s_gauss_lemma.html#cor_gauss_lemma",
+  "type": "Corollary",
+  "number": "2.14.3",
+  "title": "Gauss’s lemma.",
+  "body": " Gauss's lemma   Let be a unique factorization domain, let be its field of fractions, and identify with its image in under the localization map.   Let and be nonconstant polynomials in with associated primitive polynomials . We have if and only if .    If is a nonconstant polynomial in satisfying for nonconstant polynomials , then , where and are the associated primitive polynomials of and .      "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

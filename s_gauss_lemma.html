@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Definitions</title>
+<title>Gauss’s lemma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="appendix-notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-thms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_gaussian_integers.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_rings_mods.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Z}{{\mathbb Z}}
@@ -462,9 +462,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="c_rings_mods.html" class="internal"><span class="codenumber">2</span> <span class="title">Rings and modules</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_rings.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Rings</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_subrings_units_divisors.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subrings, units, zero divisors</span></a></div></li>
 <li class="toc-item toc-section">
@@ -514,14 +514,14 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_gaussian_integers.html#ss_gauss_integers" class="internal"><span class="codenumber">2.13.2</span> <span class="title">Ideal structure of <span class="process-math">\(\Z[i]\)</span></span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_gauss_lemma.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Gauss’s lemma</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_gauss_lemma.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Gauss’s lemma</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter contains-active">
+<li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
-<li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-specs.html" class="internal"><span class="codenumber">E</span> <span class="title">Specimens</span></a></div></li>
@@ -529,325 +529,92 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="appendix" id="appendix-defs"><h2 class="heading">
-<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definitions</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_gauss_lemma"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gauss’s lemma</span>
 </h2>
-<h4 class="heading hide-type" title="Section 0.1: Sets and functions">
-<span class="codenumber">0.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sets and functions</span>
-</h4>
-<div>
-<a href="s_sets_functions.html#d_sets" class="xref" data-knowl="./knowl/list-of/d_sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.1: Sets">Definition 0.1.1</a> Sets</div>
-<div>
-<a href="s_sets_functions.html#d_set_equality" class="xref" data-knowl="./knowl/list-of/d_set_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.2: Set equality">Definition 0.1.2</a> Set equality</div>
-<div>
-<a href="s_sets_functions.html#d_set_inclusion" class="xref" data-knowl="./knowl/list-of/d_set_inclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.3: Set inclusion (subsets)">Definition 0.1.3</a> Set inclusion (subsets)</div>
-<div>
-<a href="s_sets_functions.html#d_set_builder_notation" class="xref" data-knowl="./knowl/list-of/d_set_builder_notation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.5: Set-builder notation">Definition 0.1.5</a> Set-builder notation</div>
-<div>
-<a href="s_sets_functions.html#d_set_operations" class="xref" data-knowl="./knowl/list-of/d_set_operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.8: Union, intersection, difference, and complement">Definition 0.1.8</a> Union, intersection, difference, and complement</div>
-<div>
-<a href="s_sets_functions.html#d_common_sets" class="xref" data-knowl="./knowl/list-of/d_common_sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.9: Common mathematical sets">Definition 0.1.9</a> Common mathematical sets</div>
-<div>
-<a href="s_sets_functions.html#d_power_set" class="xref" data-knowl="./knowl/list-of/d_power_set.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.10: Power set">Definition 0.1.10</a> Power set</div>
-<div>
-<a href="s_sets_functions.html#d_function" class="xref" data-knowl="./knowl/list-of/d_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.12: Functions">Definition 0.1.12</a> Functions</div>
-<div>
-<a href="s_sets_functions.html#d_function_equality" class="xref" data-knowl="./knowl/list-of/d_function_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.16: Function equality">Definition 0.1.16</a> Function equality</div>
-<div>
-<a href="s_sets_functions.html#d_image" class="xref" data-knowl="./knowl/list-of/d_image.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.17: Image of a set">Definition 0.1.17</a> Image of a set</div>
-<div>
-<a href="s_sets_functions.html#d_preimage_of_set" class="xref" data-knowl="./knowl/list-of/d_preimage_of_set.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.18: Preimage of set">Definition 0.1.18</a> Preimage of set</div>
-<div>
-<a href="s_sets_functions.html#d_injective_surjective_bijective" class="xref" data-knowl="./knowl/list-of/d_injective_surjective_bijective.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.19: Injective, surjective, bijective">Definition 0.1.19</a> Injective, surjective, bijective</div>
-<div>
-<a href="s_sets_functions.html#d_function_composition" class="xref" data-knowl="./knowl/list-of/d_function_composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.21: Function composition">Definition 0.1.21</a> Function composition</div>
-<div>
-<a href="s_sets_functions.html#d_invertible_function" class="xref" data-knowl="./knowl/list-of/d_invertible_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.22: Identity and inverse functions">Definition 0.1.22</a> Identity and inverse functions</div>
-<div>
-<a href="s_sets_functions.html#d_Ituple" class="xref" data-knowl="./knowl/list-of/d_Ituple.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.24: Tuple">Definition 0.1.24</a> Tuple</div>
-<div>
-<a href="s_sets_functions.html#d_ntuple" class="xref" data-knowl="./knowl/list-of/d_ntuple.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.28: n-tuples">Definition 0.1.28</a> <span class="process-math">\(n\)</span>-tuples</div>
-<div>
-<a href="s_sets_functions.html#d_infinite_sequence" class="xref" data-knowl="./knowl/list-of/d_infinite_sequence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.31: Infinite sequence">Definition 0.1.31</a> Infinite sequence</div>
-<div>
-<a href="s_sets_functions.html#d_cartesian_product_arbitrary" class="xref" data-knowl="./knowl/list-of/d_cartesian_product_arbitrary.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.33: Cartesian product">Definition 0.1.33</a> Cartesian product</div>
-<div>
-<a href="s_sets_functions.html#d_cardinality" class="xref" data-knowl="./knowl/list-of/d_cardinality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.34: Cardinality">Definition 0.1.34</a> Cardinality</div>
-<h4 class="heading hide-type" title="Section 0.2: Logic">
-<span class="codenumber">0.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logic</span>
-</h4>
-<div>
-<a href="s_logic.html#d_logical_ops" class="xref" data-knowl="./knowl/list-of/d_logical_ops.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.2.1: Logical operators">Definition 0.2.1</a> Logical operators</div>
-<div>
-<a href="s_logic.html#d_quantifiers" class="xref" data-knowl="./knowl/list-of/d_quantifiers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.2.5: Logical quantifiers">Definition 0.2.5</a> Logical quantifiers</div>
-<h4 class="heading hide-type" title="Section 1.1: Groups">
-<span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups</span>
-</h4>
-<div>
-<a href="s_groups.html#d_group" class="xref" data-knowl="./knowl/list-of/d_group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.1: Groups">Definition 1.1.1</a> Groups</div>
-<div>
-<a href="s_groups.html#d_abelian_group" class="xref" data-knowl="./knowl/list-of/d_abelian_group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.3: Abelian group">Definition 1.1.3</a> Abelian group</div>
-<div>
-<a href="s_groups.html#d_product_group" class="xref" data-knowl="./knowl/list-of/d_product_group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.5: Product group">Definition 1.1.5</a> Product group</div>
-<div>
-<a href="s_groups.html#d_group_exp" class="xref" data-knowl="./knowl/list-of/d_group_exp.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.9: Group exponentiation">Definition 1.1.9</a> Group exponentiation</div>
-<div>
-<a href="s_groups.html#d_order_group_element" class="xref" data-knowl="./knowl/list-of/d_order_group_element.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.10: Group element order">Definition 1.1.10</a> Group element order</div>
-<h4 class="heading hide-type" title="Section 1.2: Modular arithmetic">
-<span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular arithmetic</span>
-</h4>
-<div>
-<a href="s_mod_rings.html#d_divis" class="xref" data-knowl="./knowl/list-of/d_divis.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.1: Divisibilty">Definition 1.2.1</a> Divisibilty</div>
-<div>
-<a href="s_mod_rings.html#d_cong_mod_n" class="xref" data-knowl="./knowl/list-of/d_cong_mod_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.2: Congruence modulo n">Definition 1.2.2</a> Congruence modulo <span class="process-math">\(n\)</span>
+<div class="para" id="s_gauss_lemma-2">Having spent some significant time finding UFDs (and PIDs) within the family of quadratic rings of integers, we now explore how the property of being a UFD fares under the polynomial ring construction. The answer here is a simple and happy one: if <span class="process-math">\(R\)</span> is a UFD, then so is <span class="process-math">\(R[x]\text{!}\)</span> In particular, we see that our friend <span class="process-math">\(\Z[x]\)</span> is a UFD, despite its not being a PID.<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div>
-<a href="s_mod_rings.html#d_least_residue" class="xref" data-knowl="./knowl/list-of/d_least_residue.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.6: Least residue modulo n">Definition 1.2.6</a> Least residue modulo <span class="process-math">\(n\)</span>
+<div class="para logical" id="s_gauss_lemma-3">
+<div class="para">As you will see below, not only is the answer a simple one, but the proof approach is essentially the first thing that might cross your mind. In more detail, let <span class="process-math">\(F=\Frac R\)</span> be the field of fractions of <span class="process-math">\(R\text{.}\)</span> Identifying <span class="process-math">\(R\)</span> with its image under the localization map <span class="process-math">\(\lambda\colon R\rightarrow F\)</span> (which is injective in this case), we think of <span class="process-math">\(R[x]\)</span> as a subring of <span class="process-math">\(F[x]\text{.}\)</span> The latter is a PID, and hence a UFD. As such, we might naively hope to proceed as follows:</div>
+<ul class="disc" id="s_gauss_lemma-3-7">
+<li id="s_gauss_lemma-3-7-1">
+<div class="para" id="s_gauss_lemma-3-7-1-1">given a polynomial <span class="process-math">\(f(x)\in R[x]\text{,}\)</span> consider it as an element of <span class="process-math">\(F[x]\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div>
-<a href="s_mod_rings.html#d_mult_inv_elements" class="xref" data-knowl="./knowl/list-of/d_mult_inv_elements.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.14: Multiplicative units in \Z/n\Z">Definition 1.2.14</a> Multiplicative units in <span class="process-math">\(\Z/n\Z\)</span>
+<div class="autopermalink" data-description="Item"><a href="#s_gauss_lemma-3-7-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="s_gauss_lemma-3-7-2">
+<div class="para" id="s_gauss_lemma-3-7-2-1">since <span class="process-math">\(F[x]\)</span> is a UFD, we can factor <span class="process-math">\(f\)</span> into powers of irreducibles as <span class="process-math">\(f=\prod_{i=1}^r f_i^{n_i}\text{,}\)</span> and this factorization is unique in some sense;<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-3-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div>
-<a href="s_mod_rings.html#d_gcd" class="xref" data-knowl="./knowl/list-of/d_gcd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.17: Greatest common divisor">Definition 1.2.17</a> Greatest common divisor</div>
-<h4 class="heading hide-type" title="Section 1.3: Matrix groups">
-<span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix groups</span>
-</h4>
-<div>
-<a href="s_matrix_grps.html#d_invertible_matrix" class="xref" data-knowl="./knowl/list-of/d_invertible_matrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.1: Invertible matrix">Definition 1.3.1</a> Invertible matrix</div>
-<h4 class="heading hide-type" title="Section 1.4: Dihedral groups">
-<span class="codenumber">1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dihedral groups</span>
-</h4>
-<div>
-<a href="s_dihedral.html#d_isom" class="xref" data-knowl="./knowl/list-of/d_isom.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.1: Isometry">Definition 1.4.1</a> Isometry</div>
-<h4 class="heading hide-type" title="Section 1.5: Permutations">
-<span class="codenumber">1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutations</span>
-</h4>
-<div>
-<a href="s_permutations.html#d_permutation" class="xref" data-knowl="./knowl/list-of/d_permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5.1: Permutations">Definition 1.5.1</a> Permutations</div>
-<div>
-<a href="s_permutations.html#s_permutations-4" class="xref" data-knowl="./knowl/list-of/s_permutations-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 1.5.2: Table notation">Notation 1.5.2</a> Table notation</div>
-<div>
-<a href="s_permutations.html#d_cycle" class="xref" data-knowl="./knowl/list-of/d_cycle.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5.4: Cycles">Definition 1.5.4</a> Cycles</div>
-<h4 class="heading hide-type" title="Section 1.6: Homomorphisms">
-<span class="codenumber">1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms</span>
-</h4>
-<div>
-<a href="s_homomorph.html#d_homomorphism" class="xref" data-knowl="./knowl/list-of/d_homomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.6.1: Homomorphism">Definition 1.6.1</a> Homomorphism</div>
-<div>
-<a href="s_homomorph.html#d_isomorphism" class="xref" data-knowl="./knowl/list-of/d_isomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.6.6: Isomorphism">Definition 1.6.6</a> Isomorphism</div>
-<h4 class="heading hide-type" title="Section 1.7: Group actions">
-<span class="codenumber">1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions</span>
-</h4>
-<div>
-<a href="s_group_action.html#d_group_action" class="xref" data-knowl="./knowl/list-of/d_group_action.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.7.1: Group action">Definition 1.7.1</a> Group action</div>
-<div>
-<a href="s_group_action.html#d_permutation_rep" class="xref" data-knowl="./knowl/list-of/d_permutation_rep.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.7.4: Permutation representation">Definition 1.7.4</a> Permutation representation</div>
-<h4 class="heading hide-type" title="Section 1.8: Subgroups">
-<span class="codenumber">1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subgroups</span>
-</h4>
-<div>
-<a href="s_subgroups.html#d_subgroup" class="xref" data-knowl="./knowl/list-of/d_subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.8.1: Subgroup">Definition 1.8.1</a> Subgroup</div>
-<div>
-<a href="s_subgroups.html#d_cyclic_groups" class="xref" data-knowl="./knowl/list-of/d_cyclic_groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.8.5: Cyclic groups">Definition 1.8.5</a> Cyclic groups</div>
-<div>
-<a href="s_subgroups.html#d_kernel" class="xref" data-knowl="./knowl/list-of/d_kernel.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.8.9: Kernel of homomorphism">Definition 1.8.9</a> Kernel of homomorphism</div>
-<div>
-<a href="s_subgroups.html#d_centralizer" class="xref" data-knowl="./knowl/list-of/d_centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.8.12: Centralizer, normalizer, center">Definition 1.8.12</a> Centralizer, normalizer, center</div>
-<h4 class="heading hide-type" title="Section 1.10: Subgroup lattice">
-<span class="codenumber">1.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subgroup lattice</span>
-</h4>
-<div>
-<a href="s_subgrp_lattice.html#d_subgroup_generated" class="xref" data-knowl="./knowl/list-of/d_subgroup_generated.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.10.2: Subgroup generated by a set">Definition 1.10.2</a> Subgroup generated by a set</div>
-<h4 class="heading hide-type" title="Section 1.11: Cosets and Lagrange’s theorem">
-<span class="codenumber">1.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets and Lagrange’s theorem</span>
-</h4>
-<div>
-<a href="s_cosets_lagrange.html#d_set_actions" class="xref" data-knowl="./knowl/list-of/d_set_actions.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11.1: Group operations on subsets">Definition 1.11.1</a> Group operations on subsets</div>
-<div>
-<a href="s_cosets_lagrange.html#d_cosets" class="xref" data-knowl="./knowl/list-of/d_cosets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11.2: Coset and coset space">Definition 1.11.2</a> Coset and coset space</div>
-<div>
-<a href="s_cosets_lagrange.html#s_cosets_lagrange-4" class="xref" data-knowl="./knowl/list-of/s_cosets_lagrange-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 1.11.3: Cosets are left cosets by default">Notation 1.11.3</a> Cosets are left cosets by default</div>
-<div>
-<a href="s_cosets_lagrange.html#d_index" class="xref" data-knowl="./knowl/list-of/d_index.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11.9: Index of subgroup">Definition 1.11.9</a> Index of subgroup</div>
-<h4 class="heading hide-type" title="Section 1.12: Quotient groups">
-<span class="codenumber">1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotient groups</span>
-</h4>
-<div>
-<a href="s_quotient_group.html#d_normal_subgroup" class="xref" data-knowl="./knowl/list-of/d_normal_subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.12.1: Normal subgroup">Definition 1.12.1</a> Normal subgroup</div>
-<h4 class="heading hide-type" title="Section 1.14: Isomorphism theorems: second and third">
-<span class="codenumber">1.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isomorphism theorems: second and third</span>
-</h4>
-<div>
-<a href="s_isom_thms_B.html#s_isom_thms_B-6" class="xref" data-knowl="./knowl/list-of/s_isom_thms_B-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 1.14.6: Images under quotients">Notation 1.14.6</a> Images under quotients</div>
-<h4 class="heading hide-type" title="Section 1.16: Alternating subgroup">
-<span class="codenumber">1.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternating subgroup</span>
-</h4>
-<div>
-<a href="s_alt_group.html#d_transposition" class="xref" data-knowl="./knowl/list-of/d_transposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.16.1: Transposition">Definition 1.16.1</a> Transposition</div>
-<div>
-<a href="s_alt_group.html#d_even_odd" class="xref" data-knowl="./knowl/list-of/d_even_odd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.16.3: Even and odd permutations">Definition 1.16.3</a> Even and odd permutations</div>
-<h4 class="heading hide-type" title="Section 1.17: Group actions: stabilizer">
-<span class="codenumber">1.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions: stabilizer</span>
-</h4>
-<div>
-<a href="s_group_actions_stabilizers.html#d_Gsets" class="xref" data-knowl="./knowl/list-of/d_Gsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.17.1: G-sets">Definition 1.17.1</a> G-sets</div>
-<div>
-<a href="s_group_actions_stabilizers.html#d_" class="xref" data-knowl="./knowl/list-of/d_.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.17.2: Stabilizers and kernels of actions">Definition 1.17.2</a> Stabilizers and kernels of actions</div>
-<div>
-<a href="s_group_actions_stabilizers.html#d_faithful_transitive" class="xref" data-knowl="./knowl/list-of/d_faithful_transitive.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.17.4: Permutation representation and faithfulness">Definition 1.17.4</a> Permutation representation and faithfulness</div>
-<h4 class="heading hide-type" title="Section 1.18: Group actions: orbits">
-<span class="codenumber">1.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions: orbits</span>
-</h4>
-<div>
-<a href="s_group_actions_orbits.html#d_orbits" class="xref" data-knowl="./knowl/list-of/d_orbits.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.18.1: Orbits">Definition 1.18.1</a> Orbits</div>
-<div>
-<a href="s_group_actions_orbits.html#d_transitive" class="xref" data-knowl="./knowl/list-of/d_transitive.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.18.2: Transitive group action">Definition 1.18.2</a> Transitive group action</div>
-<div>
-<a href="s_group_actions_orbits.html#d_fix_sets" class="xref" data-knowl="./knowl/list-of/d_fix_sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.18.7: Fix sets">Definition 1.18.7</a> Fix sets</div>
-<h4 class="heading hide-type" title="Section 1.19: Class equation">
-<span class="codenumber">1.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Class equation</span>
-</h4>
-<div>
-<a href="s_class_number.html#d_conjugacy_class" class="xref" data-knowl="./knowl/list-of/d_conjugacy_class.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.19.1: Conjugacy class">Definition 1.19.1</a> Conjugacy class</div>
-<div>
-<a href="s_class_number.html#d_class_equation" class="xref" data-knowl="./knowl/list-of/d_class_equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.19.3: Class equation">Definition 1.19.3</a> Class equation</div>
-<div>
-<a href="s_class_number.html#d_partitions_of_n" class="xref" data-knowl="./knowl/list-of/d_partitions_of_n.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.19.8: Partition of n">Definition 1.19.8</a> Partition of <span class="process-math">\(n\)</span>
+<div class="autopermalink" data-description="Item"><a href="#s_gauss_lemma-3-7-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="s_gauss_lemma-3-7-3">
+<div class="para" id="s_gauss_lemma-3-7-3-1">so it stands to reason that <span class="process-math">\(f\)</span> should factor into irreducibles in <span class="process-math">\(R[x]\text{,}\)</span> right?<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-3-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<h4 class="heading hide-type" title="Section 1.20: Sylow theorems: intro">
-<span class="codenumber">1.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow theorems: intro</span>
-</h4>
-<div>
-<a href="s_Sylow_A.html#d_order_p" class="xref" data-knowl="./knowl/list-of/d_order_p.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.20.1: Order at p">Definition 1.20.1</a> Order at <span class="process-math">\(p\)</span>
+<div class="autopermalink" data-description="Item"><a href="#s_gauss_lemma-3-7-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">In fact yes, it does stand to reason that <span class="process-math">\(f\)</span> factors similarly over <span class="process-math">\(R[x]\text{,}\)</span> but the argument is more delicate than you might expect. There are two key issues that the sketch above willfully steamrolls over: (a) the irreducible elements <span class="process-math">\(f_i\)</span> are elements of <span class="process-math">\(F[x]\text{,}\)</span> but not necessarily <span class="process-math">\(R[x]\text{;}\)</span> (b) even if we have <span class="process-math">\(f_i\in R[x]\)</span> for all <span class="process-math">\(i\text{,}\)</span> being irreducible in <span class="process-math">\(F[x]\)</span> does not <i class="foreign">a priori</i> imply irreducibility in <span class="process-math">\(R[x]\text{.}\)</span> Indeed, that implication is patently false: <span class="process-math">\(f(x)=2x\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{,}\)</span> but not irreducible in <span class="process-math">\(\Z[x]\text{,}\)</span> since <span class="process-math">\(f(x)=2\cdot x\)</span> is a factorization into two nonunits of <span class="process-math">\(\Z[x]\text{.}\)</span>
 </div>
-<div>
-<a href="s_Sylow_A.html#d_Sylow_subgroups" class="xref" data-knowl="./knowl/list-of/d_Sylow_subgroups.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.20.3: Sylow subgroups">Definition 1.20.3</a> Sylow subgroups</div>
-<div>
-<a href="s_Sylow_A.html#d_pgroup" class="xref" data-knowl="./knowl/list-of/d_pgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.20.8: p-group">Definition 1.20.8</a> <span class="process-math">\(p\)</span>-group</div>
-<h4 class="heading hide-type" title="Section 1.23: Direct products">
-<span class="codenumber">1.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Direct products</span>
-</h4>
-<div>
-<a href="s_products_direct_semi.html#d_internal_direct_product" class="xref" data-knowl="./knowl/list-of/d_internal_direct_product.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.23.2: Interal direct product">Definition 1.23.2</a> Interal direct product</div>
-<div>
-<a href="s_products_direct_semi.html#d_torsion_subgroups" class="xref" data-knowl="./knowl/list-of/d_torsion_subgroups.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.23.5: Torsion subgroups">Definition 1.23.5</a> Torsion subgroups</div>
-<h4 class="heading hide-type" title="Section 1.24: Semidirect products">
-<span class="codenumber">1.24</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Semidirect products</span>
-</h4>
-<div>
-<a href="s_semidirect_products.html#d_hom_set" class="xref" data-knowl="./knowl/list-of/d_hom_set.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.24.2: Homomorphism set">Definition 1.24.2</a> Homomorphism set</div>
-<h4 class="heading hide-type" title="Section 2.1: Rings">
-<span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rings</span>
-</h4>
-<div>
-<a href="s_rings.html#d_ring" class="xref" data-knowl="./knowl/list-of/d_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.1: Ring">Definition 2.1.1</a> Ring</div>
-<div>
-<a href="s_rings.html#s_rings-5" class="xref" data-knowl="./knowl/list-of/s_rings-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 2.1.3">Notation 2.1.3</a> </div>
-<div>
-<a href="s_rings.html#d_subring" class="xref" data-knowl="./knowl/list-of/d_subring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.7: Subring">Definition 2.1.7</a> Subring</div>
-<div>
-<a href="s_rings.html#d_ring_center" class="xref" data-knowl="./knowl/list-of/d_ring_center.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.8: Center of ring">Definition 2.1.8</a> Center of ring</div>
-<h4 class="heading hide-type" title="Section 2.2: Subrings, units, zero divisors">
-<span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subrings, units, zero divisors</span>
-</h4>
-<div>
-<a href="s_subrings_units_divisors.html#d_units" class="xref" data-knowl="./knowl/list-of/d_units.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1: Units and multiplicative inverses">Definition 2.2.1</a> Units and multiplicative inverses</div>
-<div>
-<a href="s_subrings_units_divisors.html#d_division_rings_fields" class="xref" data-knowl="./knowl/list-of/d_division_rings_fields.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.4: Division rings and fields">Definition 2.2.4</a> Division rings and fields</div>
-<div>
-<a href="s_subrings_units_divisors.html#s_subrings_units_divisors-10" class="xref" data-knowl="./knowl/list-of/s_subrings_units_divisors-10.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 2.2.6">Notation 2.2.6</a> </div>
-<div>
-<a href="s_subrings_units_divisors.html#d_zero_divisors" class="xref" data-knowl="./knowl/list-of/d_zero_divisors.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.7: Zero divisors and integral domains">Definition 2.2.7</a> Zero divisors and integral domains</div>
-<div>
-<a href="s_subrings_units_divisors.html#d_nilpotents_idempotents" class="xref" data-knowl="./knowl/list-of/d_nilpotents_idempotents.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.11: Nilpotents and idempotents">Definition 2.2.11</a> Nilpotents and idempotents</div>
-<h4 class="heading hide-type" title="Section 2.4: Hamilton quaternion rings">
-<span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamilton quaternion rings</span>
-</h4>
-<div>
-<a href="s_quaternions.html#d_quat_norm" class="xref" data-knowl="./knowl/list-of/d_quat_norm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.4.1: Quaternion conjugation and norm">Definition 2.4.1</a> Quaternion conjugation and norm</div>
-<h4 class="heading hide-type" title="Section 2.5: Ring homomorphisms and ideals">
-<span class="codenumber">2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ring homomorphisms and ideals</span>
-</h4>
-<div>
-<a href="s_ring_homo.html#d_ring_homo" class="xref" data-knowl="./knowl/list-of/d_ring_homo.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.1: Ring homomorphism">Definition 2.5.1</a> Ring homomorphism</div>
-<div>
-<a href="s_ring_homo.html#d_ideal" class="xref" data-knowl="./knowl/list-of/d_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.8: Ideal">Definition 2.5.8</a> Ideal</div>
-<div>
-<a href="s_ring_homo.html#d_gen_ideal" class="xref" data-knowl="./knowl/list-of/d_gen_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.11: Generated ideals">Definition 2.5.11</a> Generated ideals</div>
-<div>
-<a href="s_ring_homo.html#d_characteristic_ring" class="xref" data-knowl="./knowl/list-of/d_characteristic_ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.15: Characteristic of a ring">Definition 2.5.15</a> Characteristic of a ring</div>
-<div>
-<a href="s_ring_homo.html#d_simple" class="xref" data-knowl="./knowl/list-of/d_simple.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.19: Simple ring">Definition 2.5.19</a> Simple ring</div>
-<div>
-<a href="s_ring_homo.html#d_algebra" class="xref" data-knowl="./knowl/list-of/d_algebra.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.5.21: R-algebra">Definition 2.5.21</a> <span class="process-math">\(R\)</span>-algebra</div>
-<h4 class="heading hide-type" title="Section 2.7: Prime and maximal ideals">
-<span class="codenumber">2.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime and maximal ideals</span>
-</h4>
-<div>
-<a href="s_prime_maximal.html#d_maximal_ideal" class="xref" data-knowl="./knowl/list-of/d_maximal_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.7.1: Maximal ideal">Definition 2.7.1</a> Maximal ideal</div>
-<div>
-<a href="s_prime_maximal.html#d_prime_ideal" class="xref" data-knowl="./knowl/list-of/d_prime_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.7.5: Prime ideal">Definition 2.7.5</a> Prime ideal</div>
-<div>
-<a href="s_prime_maximal.html#d_partial_order" class="xref" data-knowl="./knowl/list-of/d_partial_order.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.7.9: Partial order">Definition 2.7.9</a> Partial order</div>
-<h4 class="heading hide-type" title="Section 2.8: Case study: polynomial rings">
-<span class="codenumber">2.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Case study: polynomial rings</span>
-</h4>
-<div>
-<a href="s_prime_max_poly.html#d_poly_division" class="xref" data-knowl="./knowl/list-of/d_poly_division.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8.2: Polynomial division with remainder">Definition 2.8.2</a> Polynomial division with remainder</div>
-<div>
-<a href="s_prime_max_poly.html#d_pid" class="xref" data-knowl="./knowl/list-of/d_pid.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8.5: Principal ideal domain">Definition 2.8.5</a> Principal ideal domain</div>
-<div>
-<a href="s_prime_max_poly.html#d_divisibility" class="xref" data-knowl="./knowl/list-of/d_divisibility.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8.7: Divisibility">Definition 2.8.7</a> Divisibility</div>
-<div>
-<a href="s_prime_max_poly.html#d_prime_irreducible" class="xref" data-knowl="./knowl/list-of/d_prime_irreducible.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8.8: Prime and irreducible elements">Definition 2.8.8</a> Prime and irreducible elements</div>
-<h4 class="heading hide-type" title="Section 2.9: Chinese remainder theorem">
-<span class="codenumber">2.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chinese remainder theorem</span>
-</h4>
-<div>
-<a href="s_crt.html#d_coprime_ideals" class="xref" data-knowl="./knowl/list-of/d_coprime_ideals.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.9.1: Coprime ideals">Definition 2.9.1</a> Coprime ideals</div>
-<div>
-<a href="s_crt.html#d_euler_totient" class="xref" data-knowl="./knowl/list-of/d_euler_totient.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.9.8: Euler’s totient function">Definition 2.9.8</a> Euler’s totient function</div>
-<h4 class="heading hide-type" title="Section 2.10: Localizations and fraction fields">
-<span class="codenumber">2.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Localizations and fraction fields</span>
-</h4>
-<div>
-<a href="s_localization.html#d_localization" class="xref" data-knowl="./knowl/list-of/d_localization.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.10.1: Localization">Definition 2.10.1</a> Localization</div>
-<div>
-<a href="s_localization.html#d_frac_field" class="xref" data-knowl="./knowl/list-of/d_frac_field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.10.7: Fraction field">Definition 2.10.7</a> Fraction field</div>
-<div>
-<a href="s_localization.html#notation_locali_at_x" class="xref" data-knowl="./knowl/list-of/notation_locali_at_x.html" data-reveal-label="Reveal" data-close-label="Close" title="Notation 2.10.13: Special types of localizations">Notation 2.10.13</a> Special types of localizations</div>
-<h4 class="heading hide-type" title="Section 2.11: Euclidean domains">
-<span class="codenumber">2.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euclidean domains</span>
-</h4>
-<div>
-<a href="s_euc_domain.html#d_euc_domain" class="xref" data-knowl="./knowl/list-of/d_euc_domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.11.1: Euclidean domain">Definition 2.11.1</a> Euclidean domain</div>
-<div>
-<a href="s_euc_domain.html#d_norm_function" class="xref" data-knowl="./knowl/list-of/d_norm_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.11.2: Norm function on \C">Definition 2.11.2</a> Norm function on <span class="process-math">\(\C\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div>
-<a href="s_euc_domain.html#d_gcd_lcm" class="xref" data-knowl="./knowl/list-of/d_gcd_lcm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.11.5: Greatest common divisor and least common multiple">Definition 2.11.5</a> Greatest common divisor and least common multiple</div>
-<h4 class="heading hide-type" title="Section 2.12: PIDs and UFDs">
-<span class="codenumber">2.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PIDs and UFDs</span>
-</h4>
-<div>
-<a href="pid_ufd.html#d_ufd" class="xref" data-knowl="./knowl/list-of/d_ufd.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.12.4: Unique factorization domain">Definition 2.12.4</a> Unique factorization domain</div>
-<div>
-<a href="pid_ufd.html#d_valuation_at_irr" class="xref" data-knowl="./knowl/list-of/d_valuation_at_irr.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.12.8: Valuation at irreducible">Definition 2.12.8</a> Valuation at irreducible</div>
-<h4 class="heading hide-type" title="Section 2.13: Gaussian integers">
-<span class="codenumber">2.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gaussian integers</span>
-</h4>
-<div>
-<a href="s_gaussian_integers.html#d_quad_ring_integers" class="xref" data-knowl="./knowl/list-of/d_quad_ring_integers.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.13.1: Quadratic ring of integers">Definition 2.13.1</a> Quadratic ring of integers</div>
-<div>
-<a href="s_gaussian_integers.html#d_lying_over" class="xref" data-knowl="./knowl/list-of/d_lying_over.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.13.6: Lying over">Definition 2.13.6</a> Lying over</div>
-<h4 class="heading hide-type" title="Section 2.14: Gauss’s lemma">
-<span class="codenumber">2.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gauss’s lemma</span>
-</h4>
-<div>
-<a href="s_gauss_lemma.html#d_prim_poly" class="xref" data-knowl="./knowl/list-of/d_prim_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.14.1: Primitive polynomials">Definition 2.14.1</a> Primitive polynomials</div>
-<div class="autopermalink" data-description="Appendix B: Definitions"><a href="#appendix-defs" title="Copy heading and permalink for Appendix B: Definitions" aria-label="Copy heading and permalink for Appendix B: Definitions">🔗</a></div></section></div>
+<div class="para" id="s_gauss_lemma-4">Accordingly, we will need to proceed with some caution in our proof, keeping straight where polynomials live (in <span class="process-math">\(R[x]\)</span> or <span class="process-math">\(F[x]\)</span>), and for a polynomial <span class="process-math">\(f\in R[x]\)</span> we need to distinguish between being reducible/irreducible in <span class="process-math">\(R[x]\)</span> and being reducible/irreducible in <span class="process-math">\(F[x]\text{.}\)</span> (As you will see from Gauss’s lemma, the two notions are very close to being equivalent, but not quite.)<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_gauss_lemma-5">The notions of a polynomial’s <em class="emphasis">content</em> and <em class="emphasis">primitive polynomials</em> turn out to be just the thing we need for finessing these issues.<div class="autopermalink" data-description="Paragraph"><a href="#s_gauss_lemma-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="d_prim_poly"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Primitive polynomials.</span>
+</h3>
+<div class="para" id="d_prim_poly-2-1">Let <span class="process-math">\(R\)</span> be a unique factorization domain. A nonconstant polynomial <span class="process-math">\(f(x)=\sum_{i=0}^na_ix^i\in R[x]\)</span> is <dfn class="terminology">primitive</dfn> if the the coefficients <span class="process-math">\(a_i\)</span> are relatively prime (i.e., if <span class="process-math">\(1\)</span> is the greatest common divisor of <span class="process-math">\(a_0,a_1,\dots, a_n\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#d_prim_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.14.1: Primitive polynomials"><a href="#d_prim_poly" title="Copy heading and permalink for Definition 2.14.1: Primitive polynomials" aria-label="Copy heading and permalink for Definition 2.14.1: Primitive polynomials">🔗</a></div></article><article class="proposition theorem-like" id="th_gauss_lemma"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Primitive decompositions.</span>
+</h3>
+<div class="para logical" id="th_gauss_lemma-2-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a unique factorization domain, let <span class="process-math">\(F=\Frac R\)</span> be its field of fractions, and identify <span class="process-math">\(R\)</span> with its image in <span class="process-math">\(F\)</span> under the localization map.</div>
+<ol class="decimal" id="th_gauss_lemma-2-1-5">
+<li id="th_gauss_lemma-2-1-5-1">
+<div class="para" id="th_gauss_lemma-2-1-5-1-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are primitive elements of <span class="process-math">\(R[x]\text{,}\)</span> then <span class="process-math">\(fg\)</span> is primitive.<div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_gauss_lemma-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_gauss_lemma-2-1-5-2">
+<div class="para" id="th_gauss_lemma-2-1-5-2-1">Given a nonconstant polynomial <span class="process-math">\(f\in F[x]\text{,}\)</span> there exists a primitive polynomial <span class="process-math">\(f_0\in R[x]\)</span> and constant <span class="process-math">\(c\in F\)</span> such that <span class="process-math">\(f=c f_0\text{.}\)</span> Furthermore, this representation satisfies the following uniqueness property: if <span class="process-math">\(f=cf_0=dg_0\)</span> for primitive polynomials <span class="process-math">\(f_0,g_0\in R[x]\)</span> and constants <span class="process-math">\(c,d\in F\text{,}\)</span> then <span class="process-math">\(g_0=uf_0\)</span> for some unit <span class="process-math">\(u\in R^*\)</span> and <span class="process-math">\(c=du\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="th_gauss_lemma-2-1-5-2-2">We will call a representation <span class="process-math">\(f=cf_0\)</span> where <span class="process-math">\(c\in F\)</span> and <span class="process-math">\(f_0\in R[x]\)</span> is primitive a <dfn class="terminology">primitive decomposition</dfn> of <span class="process-math">\(f\text{.}\)</span> Additionally, we will say that <span class="process-math">\(f\)</span> has <dfn class="terminology">content</dfn> <span class="process-math">\(c\)</span> in this case, and <dfn class="terminology">associated primitive</dfn> <span class="process-math">\(f_0\text{.}\)</span> Note that <span class="process-math">\(c\)</span> and <span class="process-math">\(f_0\)</span> are well-defined only up to multiplication by a unit in <span class="process-math">\(R\text{.}\)</span> By abuse of notation, we call <span class="process-math">\(c\)</span> the <dfn class="terminology">content</dfn> of <span class="process-math">\(f\text{,}\)</span> and we call <span class="process-math">\(f_0\)</span> the primitive polynomial <dfn class="terminology">associated</dfn> to <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-2-1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_gauss_lemma-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_gauss_lemma-2-1-5-3">
+<div class="para" id="th_gauss_lemma-2-1-5-3-1">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be nonconstant polynomials in <span class="process-math">\(F[x]\text{.}\)</span> If <span class="process-math">\(f\)</span> has content <span class="process-math">\(c\)</span> and <span class="process-math">\(g\)</span> has content <span class="process-math">\(d\text{,}\)</span> then <span class="process-math">\(fg\)</span> has content <span class="process-math">\(cd\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_gauss_lemma-2-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.14.2: Primitive decompositions"><a href="#th_gauss_lemma" title="Copy heading and permalink for Proposition 2.14.2: Primitive decompositions" aria-label="Copy heading and permalink for Proposition 2.14.2: Primitive decompositions">🔗</a></div></article><details id="th_gauss_lemma-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_gauss_lemma-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_gauss_lemma-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.14.2.1"><a href="#th_gauss_lemma-3" title="Copy heading and permalink for Proof 2.14.2.1" aria-label="Copy heading and permalink for Proof 2.14.2.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_gauss_lemma"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gauss’s lemma.</span>
+</h3>
+<div class="para logical" id="cor_gauss_lemma-2-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a unique factorization domain, let <span class="process-math">\(F=\Frac R\)</span> be its field of fractions, and identify <span class="process-math">\(R\)</span> with its image in <span class="process-math">\(F\)</span> under the localization map.</div>
+<ol class="decimal" id="cor_gauss_lemma-2-1-5">
+<li id="cor_gauss_lemma-2-1-5-1">
+<div class="para" id="cor_gauss_lemma-2-1-5-1-1">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be nonconstant polynomials in <span class="process-math">\(F[x]\)</span> with associated primitive polynomials <span class="process-math">\(f_0,g_0\in R[x]\text{.}\)</span> We have <span class="process-math">\(f\mid g\)</span> if and only if <span class="process-math">\(f_0\mid g_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_lemma-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#cor_gauss_lemma-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="cor_gauss_lemma-2-1-5-2">
+<div class="para" id="cor_gauss_lemma-2-1-5-2-1">If <span class="process-math">\(f\)</span> is a nonconstant polynomial in <span class="process-math">\(F[x]\)</span> satisfying <span class="process-math">\(f(x)=g(x)h(x)\)</span> for nonconstant polynomials <span class="process-math">\(g,h\in F[x]\text{,}\)</span> then <span class="process-math">\(f(x)=cg_0h_0\text{,}\)</span> where <span class="process-math">\(g_0\)</span> and <span class="process-math">\(h_0\)</span> are the associated primitive polynomials of <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_lemma-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#cor_gauss_lemma-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_gauss_lemma-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.14.3: Gauss’s lemma"><a href="#cor_gauss_lemma" title="Copy heading and permalink for Corollary 2.14.3: Gauss’s lemma" aria-label="Copy heading and permalink for Corollary 2.14.3: Gauss’s lemma">🔗</a></div></article><div class="autopermalink" data-description="Section 2.14: Gauss’s lemma"><a href="#s_gauss_lemma" title="Copy heading and permalink for Section 2.14: Gauss’s lemma" aria-label="Copy heading and permalink for Section 2.14: Gauss’s lemma">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="appendix-notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-thms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_gaussian_integers.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
