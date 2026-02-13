@@ -230,7 +230,7 @@ Let <m>p</m> be a prime integer. The following statements are equivalent.
 <title>Lying over</title>
 <statement>
 <p>
-Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> is a quadratic ring of integers. We say an irreducible element <m>\pi\in \mathcal{O}</m> <term>lies over</term> the prime integer <m>p</m> if <m>\pi\mid p</m>. 
+Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> be a quadratic ring of integers. We say an irreducible element <m>\pi\in \mathcal{O}</m> <term>lies over</term> the prime integer <m>p</m> if <m>\pi\mid p</m>. More generally, we say that a prime ideal <m>P</m> of <m>\mathcal{O}</m> lies over the prime integer <m>p</m> if <m>P\cap \Z=p\Z</m>. 
 </p>
 </statement>
 </definition>
@@ -269,24 +269,151 @@ Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> is a quadratic ring of integers. W
             Let <m>\pi=1+i</m>.  We have <m>2=\pi\overline{\pi}</m>. Since <m>N(\overline{\pi})=N(\overline{\pi})=2</m>, which is prime, both <m>\pi</m> and <m>\overline{\pi}</m> are irreducible. Furthermore, since <m>1-i=-i(1+i)</m>, we see that <m>\pi</m> and <m>\overline{\pi}</m> are associates. If <m>\pi'</m> is an irreducible element lying over <m>2</m>, so that <m>\pi'\mid 2=\pi\overline{\pi}=(-i)\pi^2</m>, then we must have <m>\pi'\mid \pi</m>. Since <m>\pi</m> is irreducible, it follows that <m>\pi'</m> and <m>\pi</m> are associates. Thus <m>\pi</m> is, up to associates, the unique irreducible element lying over <m>2</m>.  
         </p>
         <p>
-            Let <m>p\equiv 1\pmod 4</m>. By <xref ref="th_prime_factorization"/>, there are integers <m>m</m> and <m>n</m> satisfying <m>m^2+n^2=p</m>.  The same argument as above shows that <m>\pi=m+ni</m> and <m>\overline{\pi}=m-ni</m> are the only irreducible elements lying over <m>p</m>, up to associates. Since <m>N(\pi)=m^2+n^2=p</m>, and <m>p\equiv 1\pmod 4</m>, it follows easily that we cannot have <m>m=\pm n</m>, and hence that <m>m-in\ne u(m+ni)</m> for any unit <m>u\in \{\pm 1, \pm i}</m>. In other words, <m>\pi</m> and <m>\overline{\pi}</m> are not associates. 
+            Let <m>p\equiv 1\pmod 4</m>. By <xref ref="th_prime_factorization"/>, there are integers <m>m</m> and <m>n</m> satisfying <m>m^2+n^2=p</m>.  The same argument as above shows that <m>\pi=m+ni</m> and <m>\overline{\pi}=m-ni</m> are the only irreducible elements lying over <m>p</m>, up to associates. Since <m>N(\pi)=m^2+n^2=p</m>, and <m>p\equiv 1\pmod 4</m>, it follows easily that we cannot have <m>m=\pm n</m>, and hence that <m>m-in\ne u(m+ni)</m> for any unit <m>u\in \{\pm 1, \pm i\}</m>. In other words, <m>\pi</m> and <m>\overline{\pi}</m> are not associates. 
         </p>
         <p>
             Let <m>p\equiv 3\pmod 4</m>. By <xref ref="th_prime_factorization"/>, <m>p</m> is itself irreducible in <m>\Z[i]</m>, and thus any irreducible element <m>\pi</m> lying over <m>p</m> must be an associate to <m>p</m>.  Thus <m>p\in (p)</m>, and so <m>(p)</m> lies over <m>p</m>. If <m>\pi</m> is an irreducible element lying over <m>p</m>, then we have <m>\pi\mid p</m>. Since <m>p</m> is irreducible, it follows that <m>\pi</m> and <m>p</m> are associates. Thus, up to associates, the unique irreducible element lying over <m>p</m> is <m>\pi=p</m>.
         </p>
     </proof>
 </corollary>
-<!-- <corollary xml:id="cor_integer_sum_squares">
+<p><xref ref="fig_specZ_specZi"/> visualizes the <q>lying over</q> relation between primes of <m>\Z[i]</m> and primes of <m>\Z</m>. Each prime ideal of <m>\Z</m> is represented by a point labeled with the ideal's nonnegative generator. The prime ideals <m>(0)</m> in both rings are distinguished in the diagram as they are the unique prime ideals that are not maximal in both rings. (Getting way ahead of ourselves, with respect to the <em>Zariski topology</em>, the set <m>\{(0\}</m> is dense in the space of all prime ideals of <m>Z</m> (or <m>\Z[i]</m>). This is why we've made the points fuzzy.) Observe how the prime ideal <m>(p)</m> for each prime integer in <m>\Z</m> has either one or two prime ideals of <m>\Z[i]</m> lying above it, depending on whether <m>p\equiv 3\pmod 4</m> or not. The prime <m>2</m> is somewhat special in that it does not remain prime in <m>\Z[i]</m>, but it only has one prime ideal lying above it: <m>(1+i)</m>. Since <m>2=(1+i)(1-i)</m>, and <m>(1+i)=(1-i)</m> as ideals, the ideal <m>(2)\subseteq \Z[i]</m> factors as <m>(2)=(1+i)^2</m>. This phenomenon is called <term>ramification</term> (more precisely, we say that <m>2</m> <term>ramifies</term> in <m>\Z[i]</m>) and is indicated in the diagram by the funny dot above <m>2</m>.
+</p>
+<figure xml:id="fig_specZ_specZi">
+    <caption>Primes of <m>\Z[i]</m> lying over primes of <m>\Z</m></caption>
+<image>
+    <shortdescription>Diagram of relationship between primes of integers and primes of Gaussian integers</shortdescription>
+    
+<latex-image>
+\begin{tikzpicture}[x=1cm,y=1cm]
+  %------------------------------------------------------------
+  % Parameters
+  %------------------------------------------------------------
+  \definecolor{NUblue}{RGB}{0,80,180} % pleasant blue
+  \def\yUpper{1.6}      % y of the upper line
+  \def\yLower{0}        % y of the lower line
+  \def\RLeft{-0.8}      % left end of the segments (x)
+  \def\RRight{10.4}     % right end of the segments (x) — extended for 13
+  \def\rDot{0.12}       % radius of filled dots (larger and blue)
+  \def\rRing{0.18}      % radius of ring for ramification at p=2
+  \def\vertSplit{0.18}  % vertical offset for split points (above/below)
+  % helper macro to draw a "fuzzy" dot at (X,Y) in color C
+  % draws a crisp core plus diffuse halos
+  \newcommand{\fuzzydot}[3]{%
+    \fill[#3, opacity=0.15] (#1,#2) circle (0.32);%
+    \fill[#3, opacity=0.25] (#1,#2) circle (0.24);%
+    \fill[#3]               (#1,#2) circle (\rDot);%
+  }
+
+  % x-positions (in cm) for 0, 2, 3, 5, 7, 11, 13
+  \def\xZero{0.0}
+  \def\xTwo{1.6}
+  \def\xThree{3.2}
+  \def\xFive{4.8}
+  \def\xSeven{6.4}
+  \def\xEleven{8.0}
+  \def\xThirteen{9.6}
+
+  %------------------------------------------------------------
+  % Lines
+  %------------------------------------------------------------
+  \draw[very thick] (\RLeft,\yLower) -- (\RRight,\yLower);
+  \draw[very thick] (\RLeft,\yUpper) -- (\RRight,\yUpper);
+
+  % Labels for lines
+  \node[anchor=east] at (\RLeft,\yLower) {$\mathbb{Z}$};
+  \node[anchor=east] at (\RLeft,\yUpper) {$\mathbb{Z}[i]$};
+
+  %------------------------------------------------------------
+  % Lower line: points and labels
+  %   • 0 is shown "fuzzy" (prime but not maximal)
+  %   • primes 2,3,5,7,11,13 are crisp blue points
+  %------------------------------------------------------------
+  % 0 (fuzzy)
+  \fuzzydot{\xZero}{\yLower}{NUblue}
+  \node[below=3pt] at (\xZero,\yLower) {$0$};
+
+  % primes on lower line
+  \foreach \x/\lab in {\xTwo/$2$, \xThree/$3$, \xFive/$5$, \xSeven/$7$, \xEleven/$11$, \xThirteen/$13$} {
+    \fill[NUblue] (\x,\yLower) circle (\rDot);
+    \node[below=3pt] at (\x,\yLower) {\(\lab\)};
+  }
+
+  %------------------------------------------------------------
+  % Upper line: fibers over each lower point
+  %   • 0 (fuzzy) to indicate (0) is prime but not maximal
+  %   • 2 is ramified (circled dot)
+  %   • 3,7,11 inert (single dot on the line)
+  %   • 5,13 split (two dots, one just above and one just below the line)
+  %------------------------------------------------------------
+
+  % 0 (fuzzy) on upper line
+  \fuzzydot{\xZero}{\yUpper}{NUblue}
+
+  % p = 2 (ramified): circled blue dot
+  \fill[NUblue] (\xTwo,\yUpper) circle (\rDot);
+  \draw[NUblue, line width=0.7pt] (\xTwo,\yUpper) circle (\rRing);
+
+  % inert primes (3,7,11): single blue dot exactly on the upper line
+  \foreach \x in {\xThree,\xSeven,\xEleven} {
+    \fill[NUblue] (\x,\yUpper) circle (\rDot);
+  }
+
+  % split primes (5 and 13): two blue dots, one slightly above, one slightly below
+  \foreach \x in {\xFive,\xThirteen} {
+    \fill[NUblue] (\x,\yUpper+\vertSplit) circle (\rDot);
+    \fill[NUblue] (\x,\yUpper-\vertSplit) circle (\rDot);
+  }
+
+  % (Optional annotations — leave commented for a clean figure)
+  % \node[above=2pt] at (\xTwo,\yUpper) {\scriptsize ramified};
+  % \node[above=2pt] at (\xFive,\yUpper+\vertSplit) {\scriptsize splits};
+  % \node[above=2pt] at (\xThirteen,\yUpper+\vertSplit) {\scriptsize splits};
+  % \node[above=2pt] at (\xThree,\yUpper) {\scriptsize inert};
+  % \node[above=2pt] at (\xSeven,\yUpper) {\scriptsize inert};
+  % \node[above=2pt] at (\xEleven,\yUpper) {\scriptsize inert};
+
+\end{tikzpicture}
+</latex-image>
+
+</image>
+</figure>    
+<corollary xml:id="cor_integer_sum_squares">
     <title>Sums of two squares</title>
     <statement>
         <p>
             Let <m>n</m> be a positive integer with factorization 
             <md>
-                <mrow>n \amp = 2^k\cdot \prod_{j=1}^{r}p_j^{n_j}\cdot \prod_{k=1}^s q_k^{m_k}</mrow>
+                <mrow>n \amp = 2^k\cdot \prod_{i=1}^{r}p_i^{n_i}\cdot \prod_{j=1}^s q_j^{m_j}</mrow>
             </md>,
-            where the <m>p_j</m> and <m>q_k</m> are distinct primes, <m>p_j\equiv 1 \pmod 4</m> for all <m>j</m>, and <m>q_k\equiv 3\pmod 4</m> for all <m>k</m>. We have <m>n=a^2+b^2</m> for integers <m>a</m> and <m>b</m> if and only if <m>m_k</m> is even for all <m>k</m>. 
+            where the <m>p_i</m> and <m>q_j</m> are distinct odd primes, <m>p_i\equiv 1 \pmod 4</m> for all <m>i</m>, and <m>q_j\equiv 3\pmod 4</m> for all <m>j</m>. We have <m>n=a^2+b^2</m> for integers <m>a</m> and <m>b</m> if and only if <m>m_j</m> is even for all <m>j</m>. Furthermore, when this is the case there are exactly 
+            <md>
+                <mrow>4(n_1+1)(n_2+1)\cdots (n_r+1) \amp </mrow>
+            </md>
+            pairs <m>(a,b)\in \Z^2</m> satisfying <m>n=a^2+b^2</m>. 
         </p>
     </statement>
-</corollary> -->
+    <proof>
+        <p>
+            We have <m>n=a^2+b^2</m> if and only if <m>n=N(\alpha)</m>, where <m>\alpha=a+bi</m>. Since, for an irreducible element <m>\pi\in \Z[i]</m> we have <m>N(\pi)\in \{p, p^2\}</m>, where <m>p</m> is the unique prime lying below <m>\pi</m>, it follows that any irreducible element <m>\pi</m> appearing in the factorization of <m>n</m> lies over <m>2</m>, <m>p_i</m> for some <m>1\leq i\leq r</m>, or <m>q_j</m> for some <m>1\leq j\leq s</m>. With the help of  <xref ref="cor_gauss_int_irr"/>, we can pick irreducible elements <m>\pi_i</m> lying over <m>p_i</m> for each <m>i</m>, so that up to associates <m>\pi_i</m> and <m>\overline{\pi_i}</m> are the distinct irreducible elements lying over <m>p_i</m>. The corollary also tells us that up to associates <m>1+i</m> and <m>q_j</m> are the unique irreducible elements lying over <m>2</m> and <m>q_j</m>, respectively. It follows that if <m>N(\alpha)=n</m>, then we can write <m>\alpha</m> <em>uniquely</em> in the form 
+            <md>
+                <mrow>\alpha \amp =u (1+i)^{k'}\prod_{i=1}^r \pi_i^{a_i}\overline{\pi}_i^{b_i} \prod_{j=1}^s q_j^{m_j'}</mrow>
+            </md>,
+            where <m>u\in \{1,-1,i,-i\}</m> is a unit. 
+            But then we have 
+            <md>
+                <mrow>N(\alpha)=n \amp \iff 
+                    N(u)N(1+i)^{k'}\prod_{i=1}^r N(\pi_i)^{a_i}N(\overline{\pi}_i)^{b_i} \prod_{j=1}^s N(q_j)^{m_j'} =2^{k}\prod_{i=1}^r p_i^{n_i} \prod_{j=1}^s q_j^{m_j}</mrow>
+                    <mrow>\amp\iff  2^{k'}\prod_{i=1}^rp_i^{a_i+b_i}\cdot \prod_{j=1}^s q^{2m_j'} = 2^{k}\prod_{i=1}^r p_i^{n_i} \prod_{j=1}^s q_j^{m_j} </mrow>
+                    <mrow> \amp \iff k'=k, a_i+b_i=n_i, 2m_j'=m_j</mrow>
+            </md>
+            for all <m>1\leq i\leq r</m>, <m>1\leq j\leq s</m>. Equivalently, we must have <m>m_j</m> even for all <m>j</m>, and <m>m_j'/2</m>, and <m>(a_i,b_i)=(a_i, n_i-b_i)</m> for <m>a_i\in \{0,1,\dots, n_i\}</m>. We conclude that <m>n=a^2+b^2</m> if and only if <m>n=N(\alpha)</m> for an element <m>\alpha\in \Z[i]</m> that can we written uniquely as 
+            <md>
+                <mrow>\alpha \amp = u (1+i)^k \cdot \prod_{i=1}^r \prod_i^{a_i}\overline{\pi}_i^{n_i-a_i}\cdot \prod_{j=1}^s q_j^{m_j/2}</mrow>
+            </md>,
+            where <m>u\in \{1,-1,i,-i\}</m> is any unit, and <m>a_i\in \{0,1,\dots, n_i\}</m>. Since we have <m>4</m> choices for <m>u</m> and <m>n_i+1</m> choices for each <m>a_i</m>, the result follows. 
+        </p>
+    </proof>
+</corollary>
+
 </subsection>
 </section>
