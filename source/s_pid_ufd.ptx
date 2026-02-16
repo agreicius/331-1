@@ -2,6 +2,8 @@
 
 <section xml:id="pid_ufd" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>PIDs and UFDs</title>
+<subsection xml:id="ss_pid_implies_ufd">
+<title>UFDs</title>
     <proposition xml:id="prop_prime_implies_irr">
         <title>Prime implies irreducible</title>
         <statement>
@@ -311,6 +313,22 @@
     </proof>
     </theorem>
     <p>
+        Looking at the proof of the uniqueness of irreducible factorizations in PIDs, we see that the only property we used, assuming that factorizations exist, is that irreducible elements are prime. This is a useful shortcut for proving that a given integral domain is a UFD, and so we extract it as its own result. 
+    </p>
+    <lemma xml:id="lem_unique_factorizations">
+        <title>Uniqueness of factorizations</title>
+        <statement>
+            <p>
+                Let <m>R</m> be an integral domain, and assume that irreducible factorizations exist in <m>R</m>. If every irreducible element of <m>R</m> is prime,  then <m>R</m> is a unique factorization domain. 
+            </p>
+        </statement>
+    </lemma>
+</subsection>
+    <subsection xml:id="ss_quad_ring_integers">
+    <title>PIDs and UFDs among quadratic rings of integers</title>
+    
+    
+    <p>
         In the past three sections we have established the chain of implications
         <md number="yes">
             <mrow xml:id="eq_integral_implications">\text{Euclidean domain} \amp \implies \text{PID} \implies \text{UFD}\implies \text{integral domain}</mrow>
@@ -371,4 +389,5 @@
         </p>
         
     </remark>
+    </subsection>
 </section>
