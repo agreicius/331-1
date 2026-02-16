@@ -37,7 +37,7 @@
     <title>Primitive polynomials</title>
     <statement>
     <p>
-    Let <m>R</m> be a unique factorization domain. A nonconstant polynomial <m>f(x)=\sum_{i=0}^na_ix^i\in R[x]</m> is <term>primitive</term> if the the coefficients <m>a_i</m> are relatively prime (<ie/>, if <m>1</m> is the greatest common divisor of <m>a_0,a_1,\dots, a_n</m>). 
+    Let <m>R</m> be a unique factorization domain. A nonconstant polynomial <m>f(x)=\sum_{i=0}^na_ix^i\in R[x]</m> is <term>primitive</term> if the the coefficients <m>a_i</m> are relatively prime (<ie/>, if <m>1</m> is a greatest common divisor of <m>a_0,a_1,\dots, a_n</m>). 
     </p>
     </statement>
     </definition>
@@ -86,13 +86,92 @@
                     </li>
                     <li>
                         <p>
-                            If <m>f</m> is a nonconstant polynomial in <m>F[x]</m> satisfying <m>f(x)=g(x)h(x)</m> for nonconstant polynomials <m>g,h\in F[x]</m>, then <m>f(x)=cg_0h_0</m>, where <m>g_0</m> and <m>h_0</m> are the associated primitive polynomials of <m>g</m> and <m>h</m>. 
+                            If <m>f</m> is a nonconstant polynomial in <m>R[x]</m> satisfying <m>f(x)=g(x)h(x)</m> for nonconstant polynomials <m>g,h\in F[x]</m>, then <m>f(x)=cg_0h_0</m>, where <m>g_0</m> and <m>h_0</m> are the associated primitive polynomials of <m>g</m> and <m>h</m> and <m>c\in R</m>. 
+                        </p>
+                        <p>
+                            In other words, if <m>f</m> admits a factorization in <m>F[x]</m> into nonconstant polynomials, then it admits a factorization in <m>R[x]</m> of the same form. 
                         </p>
                     </li>
                 </ol>
             </p>
         </statement>
     </corollary>
+    <corollary xml:id="cor_rational_roots">
+        <title>Rational roots theorem</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a unique factorization domain, let <m>F=\Frac R</m> be its field of fractions, and identify <m>R</m> with its image in <m>F</m> under the localization map. Let <m>f(x)=a_nx^n+\dots +a_0\in R[x]</m>, with <m>a_n\ne 0</m>. If <m>f</m> has a root <m>q</m> in <m>F</m> (<ie/>, <m>f(q)=0</m>), then writing <m>q=a/b</m> with <m>a</m> and <m>b</m> relatively prime, we have <m>a\mid a_0</m> in <m>R</m> and <m>b\mid a_n</m> in <m>R</m>. 
+            </p>
+            <p>
+                In particular, if <m>f</m> is monic, then <m>f</m> has a root in <m>F</m> if and only if it has a root in <m>R</m>. 
+            </p>
+        </statement>
+    </corollary>
+    <proof>
+        <p>
+            Suppose <m>q=a/b</m> is a root of <m>f</m> in <m>F[x]</m>, where <m>a</m> and <m>b</m> are relatively prime. It follows that <m>f(x)=(x-a/b)h(x)</m>, for some <m>h\in F[x]</m>, or equivalently, <m>f(x)=(bx-a)g(x)</m>, where <m>g(x)=(1/b)h(x)</m>. Note that <m>(bx-a)</m> is primitive, since <m>a</m> and <m>b</m> are relatively prime. By Gauss's lemma, we have 
+            <m>f(x)=c(bx-a)g_0(x)</m>, where <m>c\in R</m> and <m>g_0</m> is an associated primitive polynomial of <m>g</m>. Comparing leading terms and constant terms of the the left and right sides of this equation, we see that 
+            <md>
+                <mrow>a_n \amp =cbd_m</mrow>
+                <mrow>a_0 \amp =cad_0</mrow>
+            </md>,
+            where <m>d_m</m> and <m>d_0</m> are the leading and constant terms of <m>g_0</m>, respectively. Since <m>c\in R</m>, we conclude that <m>b\mid a_n</m> and <m>a\mid d_0</m>, as claimed. 
+        </p>
+    </proof>
+    <theorem xml:id="th_irr_UFD">
+    <title>Irreducible polynomials over UFDs</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a unique factorization domain, let <m>F=\Frac R</m> be its field of fractions, and identify <m>R</m> with its image in <m>F</m> under the localization map. 
+    <ol>
+        <li>
+            <p>
+                A constant polynomial <m>f\in R[x]</m> is irreducible if and only if <m>f(x)=p</m>, where <m>p</m> is irreducible in <m>R</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                A nonconstant polynomial <m>f\in R[x]</m> is irreducible if and only if it is primitive and irreducible in <m>F[x]</m>. 
+            </p>
+        </li>
+    </ol> 
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <theorem xml:id="th_UFD_preservation">
+        <title>UFD preservation in polynomial rings</title>
+        <statement>
+            <p>
+                If <m>R</m> is a unique factorization domain, then <m>R[x]</m> is a unique factorization domain. 
+            </p>
+        </statement>
+    </theorem>
+    <activity xml:id="spec_poly_ring_multiple">
+    <title>Polynomial rings in finitely many indeterminates</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. We define the <term>polynomial ring in the indeterminates <m>x_1,x_2,\dots, x_n</m></term> recursively as follows: 
+    <ul>
+        <li>
+            <p>
+                <m>R[x_1]</m> is the usual polynomial ring in the indeterminate <m>x_1</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>R[x_1,x_2,\dots, x_n]=R[x_1,x_2,\dots, x_{n-1}][x_n]</m> for all <m>n\geq 2</m>. 
+            </p>
+        </li>
+    </ul>
+    </p>
+    </statement>
+    </activity>
+    
+    
     
 
 </section>

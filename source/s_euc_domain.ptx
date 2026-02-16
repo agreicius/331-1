@@ -123,6 +123,8 @@
             </p>
         </li>
     </ol>
+    More generally, a greatest common divisor of elements <m>a_1,a_2,\dots, a_n</m> of <m>R</m> is an element <m>d\in R</m> such that <m>d\mid a_i</m> for all <m>i</m>, and if <m>d'\in R</m> satisfies <m>d'\mid a_i</m> for all <m>i</m>, then <m>d'\mid d</m>. Lastly, we say that elements <m>a_1,a_2,\dots, a_n</m> are <term>relatively prime</term> if they have <m>1</m> as a GCD. 
+    
     </p>
     </statement>
     </definition>
