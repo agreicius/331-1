@@ -150,26 +150,7 @@
             </p>
         </statement>
     </theorem>
-    <activity xml:id="spec_poly_ring_multiple">
-    <title>Polynomial rings in finitely many indeterminates</title>
-    <statement>
-    <p>
-    Let <m>R</m> be a nonzero commutative ring. We define the <term>polynomial ring in the indeterminates <m>x_1,x_2,\dots, x_n</m></term> recursively as follows: 
-    <ul>
-        <li>
-            <p>
-                <m>R[x_1]</m> is the usual polynomial ring in the indeterminate <m>x_1</m>.
-            </p>
-        </li>
-        <li>
-            <p>
-                <m>R[x_1,x_2,\dots, x_n]=R[x_1,x_2,\dots, x_{n-1}][x_n]</m> for all <m>n\geq 2</m>. 
-            </p>
-        </li>
-    </ul>
-    </p>
-    </statement>
-    </activity>
+    
     
     
     

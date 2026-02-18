@@ -22,6 +22,7 @@
   <macros> 
      \renewcommand{\Re}{\operatorname{Re}}
     \renewcommand{\Im}{\operatorname{Im}}
+    \newcommand{\N}{{\mathbb N}}
     \newcommand{\Z}{{\mathbb Z}}
     \newcommand{\Q}{{\mathbb Q}}
     \newcommand{\R}{{\mathbb R}}

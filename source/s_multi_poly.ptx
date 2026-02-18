@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_poly_general" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Multivariate polynomial rings and monoid algebras</title>
+    <subsection xml:id="ss_multi_poly">
+    <title>Multivariate polynomial rings</title>
+    
+    
+    <activity xml:id="spec_poly_ring_multiple">
+    <title>Multivariate polynomial rings</title>
+    <notation>
+        <usage><m>R[x_1,x_2,\dots, x_n]</m></usage>
+      <description>multivariate polynomial ring over <m>R</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. We define the <term>polynomial ring in the indeterminates <m>x_1,x_2,\dots, x_n</m></term> recursively as follows: 
+    <ul>
+        <li>
+            <p>
+                <m>R[x_1]</m> is the usual polynomial ring in the indeterminate <m>x_1</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>R[x_1,x_2,\dots, x_n]=R[x_1,x_2,\dots, x_{n-1}][x_n]</m> for all <m>n\geq 2</m>. 
+            </p>
+        </li>
+    </ul>
+    When wishing to make the indeterminates explicit, we will write <m>f(x_1,x_2,\dots, x_n)</m> for an element <m>f\in R[x_1,x_2,\dots, x_n]</m>
+    </p>
+    </statement>
+    </activity>
+    <p>
+        The recursive definition of multivariable polynomial rings allows us to use proof by induction in many situations, as the following results illustrate. 
+    </p>
+    <theorem xml:id="th_polynomial_UFDs">
+    <title>Polynomial UFDs</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. For all positive integers <m>n</m>, <m>R[x_1,x_2,\dots, x_n]</m> is a unique factorization domain if and only if <m>R</m> is a unique factorization domain. 
+    </p>
+    <p>
+        In particular, <m>\Z[x_1,x_2,\dots, x_n]</m> is a UFD for any positive integer <m>n</m>, as is <m>F[x_1,x_2,\dots, x_n]</m>, where <m>F</m> is any field. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        The proof is by induction on <m>n</m>. 
+    </p>
+    <p>
+        Base case: <m>n=1</m>. <xref ref="th_UFD_preservation"/> implies that if <m>R</m> is a UFD, then so is <m>R[x_1]</m>. Conversely, if <m>R[x_1]</m> is a UFD, it is easy to see that <m>R</m> is a UFD as well: using a degree argument, irreducible factorizations of an element <m>c\in R</m> corresponds bijectively to irreducible factorizations of the constant polynomial <m>f(x)=c</m> in <m>R[x]</m>. 
+    </p>
+    <p>
+        Induction step: let <m>n&gt; 1</m>, and assume the result is true for <m>n-1</m>. We have 
+        <md>
+            <mrow>R[x_1,x_2,\dots, x_n] \text{ a UFD} \amp \iff R[x_1,\dots, x_{n-1}][x_n] \text{ a UFD}\amp (\text{def.})</mrow>
+            <mrow> \amp \iff R[x_1,\dots, x_{n-1}] \text{ a UFD} \amp (\text{base case}) </mrow>
+            <mrow> \amp \iff R \text{ a UFD} \amp (\text{induction})</mrow>
+        </md>.
+    </p>
+    </proof>
+    </theorem>
+    <p>
+         By definition, an element <m>f</m> of <m>R[x,y]=R[x][y]</m> is a formal expression of the form 
+         <md>
+            <mrow>f(x,y) \amp =\sum_{k=0}^n f_k(x)y^k=f_n(x)y^n+f_{n-1}(x)y^{n-1}+\cdots +f_1(x)y+f_0(x)</mrow>
+         </md>.
+         Since each <m>f_k(x)</m> is an <m>R</m>-linear combination of powers of <m>x</m>, after distributing <m>y^k</m> through <m>f_k(x)</m> for each <m>k</m> and then collecting like terms, we can rewrite <m>f</m> as an <m>R</m>-linear combination of monomials 
+         <md>
+            <mrow>f(x,y) \amp =\sum_{\boldi=(i_1,i_2)\in \Z_{\geq 0}^2}a_\boldi x^{i_1}y^{i_2} </mrow>
+         </md>,
+         where <m>a_\boldi=0</m> for all but finitely many <m>\boldi\in \Z_{\geq 0}^2</m>. We make this observation more precise and more general in <xref ref="prop_monomial_expansion"/>. Since the notation gets rather unwieldy as the number of indeterminates increases, we are well served by introducing some notation and terminology. 
+    </p>
+    <definition xml:id="d_monomials">
+    <title>Monomials and multivariate indices</title>
+    <notation>
+        <usage><m>\boldx^{\boldi}</m></usage>
+      <description>multivariate monomial notation</description>
+    </notation>
+    <notation>
+        <usage><m>\N</m></usage>
+      <description>the natural numbers <m>\Z_{\geq 0}</m></description>
+    </notation>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring, and let <m>n</m> be a positive integer. A <term>monomial</term> of <m>S=R[x_1,x_2,\dots, x_n]</m> is an element of <m>S</m> of the form <m>x_1^{i_1}x_2^{i_2}\cdots x_{n}^{i_n}</m>, where <m>i_k\in \Z_{\geq 0}</m> for all <m>k</m>. The tuple <m>\boldi=(i_1,i_2,\dots, i_n)</m> is called the <term>multivariate index</term> of the monomial. 
+    </p>
+    <p>
+        To ease notation we adopt the following conventions. 
+        <ul>
+            <li>
+                <p>
+                    <m>\N=\Z_{\geq 0}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    We write <m>R[\boldx]</m> for <m>R[x_1,x_2,\dots, x_n]</m> and <m>f(\boldx)</m> for <m>f(x_1,x_2,\dots, x_n)</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Given any <m>\boldi=(i_1,i_2,\dots, i_n)\in \N^n</m>, we define <m>\boldx^\boldi</m> as  
+                    <md>
+                        <mrow> \boldx^{\boldi}\amp =x_1^{i_1}x_2^{i_2}\cdots x_{n}^{i_n}\in R[\boldx] </mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Similarly, if <m>T</m> is any ring, and <m>\boldt=(t_1,t_2,\dots, t_n)\in T^n</m> any tuple of elements of <m>T</m>, given any <m>\boldi=(i_1,i_2,\dots, i_n)\in \N^n</m>, we define <m>\boldt^\boldi</m> as 
+                    <md>
+                        <mrow>\boldt^\boldi\amp =t_1^{i_1}t_2^{i_2}\cdots t_{n}^{i_n} \in T</mrow>
+                    </md>.
+                </p>
+            </li>
+        </ul>
+    </p>
+    </statement>
+    </definition>
+    <p>
+        With this terminology and notation place, we can now give a precise description of monomial expansion in multivariate polynomial rings. 
+    </p>
+    <proposition xml:id="prop_monomial_expansion">
+        <title>Monomial expansion</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a nonzero commutative ring, and let <m>n</m> be a positive integer. Every polynomial <m>f\in R[x_1,x_2,\dots, x_n]</m> can be written in the form
+                <md number="yes">
+                    <mrow xml:id="eq_monomial_expansion"> f(\boldx) \amp = \sum_{\boldi\in \N^n} a_\boldi\, \boldx^\boldi </mrow>
+                </md>,
+                where <m>a_\boldi\in R</m> for all <m>\boldi\in \N^n</m>, and <m>a_\boldi=0</m> for all but finitely many indices <m>\boldi</m>.
+            </p>
+            <p>
+                Moreover, this representation is unique in the following sense: if 
+                <md>
+                    <mrow>f(\boldx) \amp =\sum_{\boldi\in \N^n}a_\boldi \boldx^\boldi \amp f(\boldx)\amp = \sum_{\boldi\in \N^n}b_\boldi \boldx^\boldi</mrow>
+                </md>,
+                are monomial expansions as in <xref ref="eq_monomial_expansion"/>, then <m>a_\boldi=b_\boldi</m> for all <m>\boldi\in \N^n</m>. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                The proof is by induction on <m>n</m>. 
+            </p>
+            <p>
+                Base step: <m>n=1</m>. The statement in this case is just a reformulation of the definition of <m>R[x_1]</m>. 
+            </p>
+            <p>
+                Induction step: assume <m>n&gt; 1</m> and that the statement holds for all polynomial rings in <m>n-1</m> variables. 
+                By definition, an element <m>f\in R[\boldx]=(R[x_1,\dots, x_{n-1}][x_n]</m> can be expressed in the form 
+                <md>
+                    <mrow>f \amp = \sum_{k=0}^{m}f_k(x_1,x_2,\dots, x_{n-1})x^k</mrow>
+                </md>, 
+                where <m>f_k\in R[x_1,\dots, x_{n-1}]</m>. By induction, for each <m>k</m> we have
+                <md number="no">
+                    <mrow>f_k \amp = \sum_{\boldi\in \N^{n-1}}a_{k,\boldi}\, x_1^{i_1}x_2^{i_2}\cdots x_{n-1}^{i_{n-1}} \amp (\boldi=(i_1,\dots, i_{n-1}))</mrow>
+                </md>, 
+                and thus 
+                <md number="no">
+                    <mrow>f_k(x_1,x_2,\dots, x_{n-1})x_n^n \amp = \sum_{\boldi\in \N^{n-1}}a_{k,\boldi}\, x_1^{i_1}x_2^{i_2}\cdots x_{n-1}^{i_{n-1}}x_n^k</mrow>
+                </md>.
+                Summing the terms <m>f_k x_n^k</m> yields a monomial expansion of <m>f</m> as described in the statement of the proposition. We now show that this expansion is unique. Suppose we have monomial expansions
+                <md>
+                    <mrow>f(\boldx) \amp =\sum_{\boldi\in \N^n}a_\boldi\, \boldx^\boldi = \sum_{\boldi\in \N^n}b_\boldi\, \boldx^\boldi </mrow>
+                </md>.
+                For each <m>\boldi=(i_1,i_2,\dots, i_n)\in \N^n</m>, let <m>\boldi(n-1)=(i_1,i_2,\dots, i_{m-1})</m>, let <m>\boldi(n)=i_n</m>, and let <m>\boldx^{\boldi(n-1)}=x_1^{i_1}\cdots x_{n-1}^{i_{n-1}}</m>. We have 
+                <md>
+                    <mrow> f=\sum_{\boldi\in \N^n}a_\boldi\, \boldx^\boldi \amp = \sum_{\boldi\in \N^n}a_\boldi\, \boldx^{\boldi(n-1)}x_n^{\boldi(n)} </mrow>
+                    <mrow> \amp = \sum_{k\in \N}\left(\sum_{\substack{\boldi\in \N^n\\ \boldi(n)=k}}a_\boldi\,\boldx^{\boldi(n-1)}\right)x_n^k</mrow>
+                </md>,
+                and similarly 
+                <md>
+                    <mrow> f=\sum_{\boldi\in \N^n}b_\boldi\, \boldx^\boldi \amp = \sum_{k\in \N}\left(\sum_{\substack{\boldi\in \N^n\\ \boldi(n)=k}}b_\boldi\,\boldx^{\boldi(n-1)}\right)x_n^k</mrow>
+                </md>.
+                By definition of <m>R[x_1,\dots, x_{n-1}][x_n]</m>, and in particular corresponding notion of equality in this ring, we conclude that 
+                <md>
+                    <mrow> \sum_{\substack{\boldi\in \N^n\\ \boldi(n)=k}}a_\boldi\,\boldx^{\boldi(n-1)}=\sum_{\substack{\boldi\in \N^n\\ \boldi(n)=k}}b_\boldi\,\boldx^{\boldi(n-1)} </mrow>
+                </md>.
+                Since the line above is an equality of monomial expansions in the ring <m>R[x_1,x_2,\dots, x_{n-1}]</m>, the induction hypothesis implies <m>a_\boldi=b\boldi</m> for all <m>k\in \N</m> and all  <m>\boldi\in \N^n</m> satisfying <m>\boldi(n)=k</m>. But for all <m>\boldi\in \N^n</m>, there is a <m>k\in \N</m> such that <m>\boldi(n)=k</m>. Thus <m>a_\boldi=b_\boldi</m> for all <m>\boldi\in \N</m>, as desired.
+            </p>
+        </proof>
+    </proposition>
+    <p>
+        The monomial expansion description of elements of a multivariate polynomial ring <m>R[\boldx]</m> allows us to give a complete and concrete description of all ring homomorphisms from <m>R[\boldx]</m>. The proof, on the other hand, will use induction once again. 
+    </p>
+    <theorem xml:id="th_map_prop_multi_poly">
+    <title>Homomorphisms from <m>R[\boldx]</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring, let <m>n</m> be a positive integer, and let <m>R[\boldx]=R[x_1,x_2,\dots, x_n]</m>. A ring homomorphism <m>\phi\colon R[\boldx]\rightarrow T</m> is uniquely determine by its restriction <m>\phi\vert_R</m> to <m>R</m> (considered as a subring of <m>R[\boldx]</m>) and the tuple of images <m>\boldt=(\phi(x_1),\phi(x_2), \dots, \phi(x_n))\in T^n</m>. Conversely, given a pair <m>(\psi, \boldt)</m>, where <m>\psi\colon R\rightarrow T</m> is a ring homomorphism and <m>\boldt=(t_1,t_2,\dots, t_n)\in T^n</m>, the map 
+    <md>
+        <mrow>\phi\colon R[\boldx] \amp \rightarrow T</mrow>
+        <mrow>f=\sum_{\boldi\in \N^n}a_\boldi\, \boldx^{\boldi} \amp \mapsto \sum_{\boldi\in \N^n}\psi(a_\boldi)\, \boldt^\boldi</mrow>
+    </md> 
+    is a ring homomorphism. As a result, we have a bijection between <m>\Hom(R[\boldx], T)</m> and <m>\Hom(R,T)\times T^n</m>, described as follows. 
+    </p>
+    <image xml:id="im_multi_poly_ring_homo" width="75%">
+                <shortdescription>Description of multivariate polynomial ring homomorphisms</shortdescription>
+                <latex-image>
+                \begin{tikzcd}
+                \Hom(R[\boldx],T) \arrow[r,leftrightarrow] \amp \Hom(R,T)\times T^n \\
+                \phi \arrow[r,mapsto] \amp (\phi\vert_R, (\phi(x_i))_{i=1}^n) \\
+                \phi(\sum_{\boldi\in \N^n}a_\boldi\boldx^\boldi)=\sum_{\boldi\in \N^n}\psi(a_\boldi)\boldt^\boldi \amp (\psi, \boldt) \arrow[l,mapsto]
+                \end{tikzcd}
+                </latex-image>
+    </image>
+    </statement>
+    <proof>
+    <p>
+        Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above. 
+    </p>
+    </proof>
+    </theorem>
+    </subsection>
+    <subsection xml:id="ss_degree_multivariate">
+    <title>Degree functions</title>
+    <p>
+        For general multivariate polynomial rings, there are a number of different ways to define a notion of degree. 
+    </p>
+    </subsection>
+    <subsection xml:id="ss_monoid_algebras">
+    <title>Monoid algebras</title>
+    
+    
+    
+    <definition xml:id="d_monoid">
+    <title>Monoid</title>
+    <statement>
+    <p>
+    A <term>monoid</term> is a pair <m>(M,\cdot)</m>, where <m>M</m> is a nonempty set, and <m>\cdot \colon M\times M\rightarrow M</m> is an associative operation for which a multiplicate identity element <m>e\in M</m> exists: <ie/>, there is an element <m>e\in M</m> satisfying <m>e\cdot m=m\cdot e=m</m> for all <m>m\in M</m>. 
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_monoids">
+    <title>Monoid examples</title>
+    <statement>
+    <p>
+    Here are some familiar monoids: 
+    <ol>
+        <li>
+            <p>
+                <m>(G,\cdot)</m>, where <m>G</m> is a group with respect to the operation <m>\cdot</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(R,\cdot)</m>, where <m>R</m> is any ring and <m>\cdot</m> is the ring multiplication. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(R-\{0\}, \cdot)</m>, where <m>R</m> is any integral domain and <m>\cdot</m> is the ring multiplication. 
+            </p>
+        </li>
+        <li>
+            <p>
+               <m>(\mathbb{N}, +)</m>, where  <m>\mathbb{N}=\Z_{\geq 0}</m> and <m>+</m> is the usual addition. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(\mathbb{N}^r, +)</m>, where addition is defined componentwise: <m>(a_i)_{i=1}^r+(b_i)_{i=1}^r=(a_i+b_i)_{i=1}^r</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(\mathbb{N}^I, +)</m>, where <m>I</m> is any nonempty index set, and addition is defined componentwise: <m>(a_i)_{i\in I}+(b_i)_{i\in I}=(a_i+b_i)_{i\in I}</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+
+    </example>
+   <activity xml:id="spec_polynomials_in_monoid">
+   <title>Monoid algebra</title>
+   <statement>
+   <p>
+   Let <m>R</m> be a nonzero commutative ring, and let <m>(M, \cdot)</m> be a monoid. Define <m>R[M]</m> to be the set of all formal expressions 
+   <md>
+    <mrow>r \amp =\sum_{m\in M}r_m\, m</mrow>
+   </md>
+   where <m>r_m=0</m> for all but finitely many <m>m\in M</m>. We define binary operations <m>+</m> and <m>\cdot</m> on <m>R[M]</m> as follows: 
+   <md number="yes">
+    <mrow xml:id="eq_monoid_alg_add"> \sum_{m\in M}r_m\, m+\ \sum_{m\in M}s_m\, m \amp =\sum_{m\in M}(r_m+s_m)\, m</mrow>
+    <mrow>\sum_{m\in M}r_m\, m \cdot \sum_{m\in M}s_m\, m \amp = \sum_{m\in M} t_m\, m \amp t_m=\sum_{\substack{m',m''\in M\\ m'\cdot m''=m}}r_{m'}s_{m''}</mrow>
+   </md>.
+   Note that the sum defining <m>t_m</m> is in fact finite, since only finitely many of the products <m>r_{m'}s_{m''}</m> are nonzero. The triple <m>(R[M], +, \cdot)</m> is a ring called the <term>monoid algebra</term> of <m>M</m> over <m>R</m>. 
+   </p>
+   </statement>
+   </activity>
+   </subsection>
+
+</section>

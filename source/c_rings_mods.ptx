@@ -16,4 +16,5 @@
 <xi:include href="s_pid_ufd.ptx" />
 <xi:include href="s_gaussian_integers.ptx" />
 <xi:include href="s_gauss_lemma.ptx" />
+<xi:include href="s_multi_poly.ptx" />
 </chapter>
