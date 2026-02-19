@@ -219,7 +219,7 @@
             <li>
                 <p>
                     If <m>a\mid b</m>, then <m>(a,b)=(a)</m>. Otherwise,  we can produce a sequence of division algorithm instances 
-                    <md number="yes">
+                    <md number="no">
                         <mrow>b\amp =q_1a+r_1 \amp r_1\amp \ne 0, N(r_1)&lt; N(a) </mrow>
                         <mrow>a\amp =q_2r_1+r_2 \amp r_2\amp \ne 0, N(r_2)&lt; N(r_1)</mrow>
                         <mrow> \amp \vdots</mrow>
