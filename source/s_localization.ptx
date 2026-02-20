@@ -205,9 +205,9 @@
     <title>Rational functions over field</title>
     <statement>
     <p>
-    Given a field <m>F</m>, the <term>field of rational functions</term> over <m>F</m> in the indeterminate <m>x</m>, denoted <m>F((x))</m> is defined as the fraction field of <m>F[x]</m>: <ie/>, 
+    Given a field <m>F</m>, the <term>field of rational functions</term> over <m>F</m> in the indeterminate <m>x</m>, denoted <m>F(x)</m> is defined as the fraction field of <m>F[x]</m>: <ie/>, 
     <md number="yes">
-        <mrow xml:id="eq_frac_field"> F((x))\amp = \Frac F[x] </mrow>
+        <mrow xml:id="eq_frac_field"> F(x)\amp = \Frac F[x] </mrow>
     </md>.
     </p>
     </statement>

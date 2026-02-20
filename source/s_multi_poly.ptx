@@ -84,7 +84,7 @@
     </notation>
     <statement>
     <p>
-    Let <m>R</m> be a nonzero commutative ring, and let <m>n</m> be a positive integer. A <term>monomial</term> of <m>S=R[x_1,x_2,\dots, x_n]</m> is an element of <m>S</m> of the form <m>x_1^{i_1}x_2^{i_2}\cdots x_{n}^{i_n}</m>, where <m>i_k\in \Z_{\geq 0}</m> for all <m>k</m>. The tuple <m>\boldi=(i_1,i_2,\dots, i_n)</m> is called the <term>multivariate index</term> of the monomial. 
+    Let <m>R</m> be a nonzero commutative ring, and let <m>n</m> be a positive integer. A <term>monomial</term> of <m>S=R[x_1,x_2,\dots, x_n]</m> is an element of <m>S</m> of the form <m>x_1^{i_1}x_2^{i_2}\cdots x_{n}^{i_n}</m>, where <m>i_k\in \Z_{\geq 0}</m> for all <m>k</m>. The tuple <m>\boldi=(i_1,i_2,\dots, i_n)</m> is called the <term>multidegree</term> of the monomial.
     </p>
     <p>
         To ease notation we adopt the following conventions. 
@@ -213,12 +213,141 @@
     </p>
     </proof>
     </theorem>
+
+    <definition xml:id="d_noetherian_ring">
+    <title>Noetherian ring</title>
+    <statement>
+    <p>
+    A commutative ring <m>R</m> is <term>Noetherian</term> if every ideal of <m>R</m> is finitely generated. 
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_hilbert_basis_theorem">
+    <title>Hilbert's basis theorem</title>
+    <statement>
+    <p>
+    If <m>R</m> is a Noetherian ring, then so is <m>R[x]</m>. 
+    </p>
+    </statement>
+    <proof>
+    <p>
+        It is clear that the zero ideal <m>I=(0)</m> is finitely generated. Let <m>I</m> be any nonzero ideal <m>I</m>. Define the following subsets of <m>R</m>: 
+        <md number="yes">
+            <mrow>L(I) \amp = \{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I\}</mrow>
+            <mrow>L_d(I) \amp =\{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I, \deg f=d\}</mrow>
+        </md>.
+        It is straightforward to show the sets <m>L</m> and <m>L_d</m> are in fact ideals of <m>R</m>. The general idea used for both cases is the following: if <m>a</m> is the leading coefficient of <m>f\in I</m> and <m>b</m> is the leading coefficient of <m>g\in I</m>, then <m>a+b</m> is either equal to zero, or is the leading coefficient of <m>f+g\in I</m>; and <m>ra</m> is either equal to zero, or is the leading coefficient of <m>rf\in I</m> for any <m>r\in R</m>. 
+    </p>
+    <p>
+        By assumption, <m>R</m> is Noetherian. Thus we have <m>I=(a_1,a_2,\dots, a_n)</m>, where <m>a_i</m> is the leading term of some polynomial <m>f_i\in I</m>.  for some polynomials <m>f_k\in R[x]</m>. Let <m>m=\max\{\deg f_1,\deg f_2,\dots, \deg f_n\}</m>, and let <m>J=\sum_{d=0}^m I_d</m>. Again, since <m>R</m> is Noetherian, <m>J=(</m>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_hilbert_basis_theorem">
+        <title>Noetherian polynomial rings</title>
+        <statement>
+            <p>
+                Let <m>n</m> be a positive integer. If <m>R</m> is a Noetherian ring, then so is <m>R[x_1,x_2,\dots, x_n]</m>.
+            </p>
+        </statement>
+    </corollary>
+
     </subsection>
     <subsection xml:id="ss_degree_multivariate">
     <title>Degree functions</title>
     <p>
-        For general multivariate polynomial rings, there are a number of different ways to define a notion of degree. 
+         For general multivariate polynomial rings, there are a number of different ways to define a notion of degree. One of these comes automatically from our recursive definition: since <m>R[\boldx]=R[x_1,x_2,\dots, x_{n-1}][x_n]</m>, given <m>f\in R[\boldx]</m>, we can define its degree with respect to <m>x_n</m> as its degree as a polynomial in <m>x_n</m> with coefficients in <m>R[x_1,x_2,\dots, x_{n-1}]</m>. More generally, given any one of the indeterminates <m>x_k</m>, we can define the <m>x_k</m>-degree of <m>f</m> to be its degree as a polynomial in the indeterminate <m>x_k</m> with coefficients in the ring <m>R[(x_i)_{i\ne j}]</m>. As is easily shown using the mapping property of multivariate polynomial rings, we have <m>R[\boldx]\cong R[(x_i)_{i\ne j}][x_j]</m>, where the isomorphism is given by the first natural map that comes to your mind. It follows that all the usual properties of degree functions of polynomial rings are ported over to the notion of <m>x_k</m>-degree. 
     </p>
+    <example xml:id="eg_multi_poly_prime">
+    <title>Prime ideal in <m>R[x,y]</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be an integral domain. Prove that the ideal <m>(x^2-y^3)</m> is prime in <m>R[x,y]</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+        This notion of degree is strong enough to prove the following fact: if <m>F</m> is a field, then every ideal <m>I</m> of  <m>F[x_1,x_2,\dots, x_n]</m> is principal. 
+    </p>
+    
+    
+    
+    <p>
+         Another notion of degree is given by the so-called total degree of a polynomial. 
+    </p>
+    <definition xml:id="d_total_degree">
+    <title>Total degree</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring, and let <m>n</m> be a positive integer. The <term>total degree</term> of a monomial <m>\boldx^{\boldi}=x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}</m>, denoted <m>\deg \boldx^{\boldi}</m>, is defined as 
+    <md number="yes">
+        <mrow xml:id="eq_tot_deg_monomial">\deg \boldx^{\boldi} \amp =\sum_{k=1}^ni_k</mrow>
+    </md>.
+    Given a nonzero polynomial , we define the <term>total degree</term> of <m>f</m> is maximum total degree of any monomial appearing in the monomial expansion of <m>f</m>: <ie/>, if <m>f=\sum_{\boldi\in \N^n}a_\boldi \boldx^{\boldi}</m>, then 
+    <md>
+        <mrow xml:id="eq_tot_deg">\deg f \amp = \max\{\deg \boldx^{\boldi}\mid a_\boldi\ne 0\} </mrow>
+    </md>.
+    Lastly, if <m>f=0</m>, we define <m>\deg f=-\infty</m>. 
+    </p>
+    </statement>
+    </definition>
+    <p>
+        The total degree function on <m>R[\boldx]</m> satisfies some of the same properties of the usual degree function on a polynomial ring in one variable. 
+    </p>
+    <proposition xml:id="prop_tot_deg">
+        <title>Total degree</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a nonzero commutative ring, let <m>n</m> be a positive integer, and let <m>f</m> and <m>g</m> be nonzero elements of <m>R[x_1,x_2,\dots, x_n]</m>.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\deg fg\leq \deg f+\deg g</m>, with equality if <m>R</m> is an integral domain. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\deg (f+g)\leq \max\{\deg f, \deg g\}</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </proposition>
+    <p>
+        Unfortunatley, one important difference between the total degree and the usual degree, is that when <m>n&gt; 1</m> the total degree function does not satisfy the division algorithm condition, as the next example illustrates. 
+    </p>
+    <example xml:id="eg_failure_div_alg">
+    <title>Failure of division algorithm</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. 
+    <ol>
+        <li>
+            <p>
+                Establish an isomorphisn between <m>R[x,y]/(x-y)</m> and a familiar ring. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Show that we cannot write <m>x</m> as <m>x=q(x,y)(x-y)+c</m> for any <m>c\in R</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
     </subsection>
     <subsection xml:id="ss_monoid_algebras">
     <title>Monoid algebras</title>
