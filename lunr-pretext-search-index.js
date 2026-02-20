@@ -4498,7 +4498,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.15",
   "title": "Multivariate polynomial rings and monoid algebras",
-  "body": " Multivariate polynomial rings and monoid algebras   Multivariate polynomial rings   Multivariate polynomial rings    multivariate polynomial ring over    Let be a nonzero commutative ring. We define the polynomial ring in the indeterminates recursively as follows:    is the usual polynomial ring in the indeterminate .     for all .   When wishing to make the indeterminates explicit, we will write for an element     The recursive definition of multivariable polynomial rings allows us to use proof by induction in many situations, as the following results illustrate.   Polynomial UFDs   Let be a nonzero commutative ring. For all positive integers , is a unique factorization domain if and only if is a unique factorization domain.  In particular, is a UFD for any positive integer , as is , where is any field.    The proof is by induction on .  Base case: . implies that if is a UFD, then so is . Conversely, if is a UFD, it is easy to see that is a UFD as well: using a degree argument, irreducible factorizations of an element corresponds bijectively to irreducible factorizations of the constant polynomial in .  Induction step: let , and assume the result is true for . We have .    By definition, an element of is a formal expression of the form . Since each is an -linear combination of powers of , after distributing through for each and then collecting like terms, we can rewrite as an -linear combination of monomials , where for all but finitely many . We make this observation more precise and more general in . Since the notation gets rather unwieldy as the number of indeterminates increases, we are well served by introducing some notation and terminology.   Monomials and multivariate indices    multivariate monomial notation     the natural numbers    Let be a nonzero commutative ring, and let be a positive integer. A monomial of is an element of of the form , where for all . The tuple is called the multivariate index of the monomial.  To ease notation we adopt the following conventions.    .    We write for and for .    Given any , we define as .    Similarly, if is any ring, and any tuple of elements of , given any , we define as .       With this terminology and notation place, we can now give a precise description of monomial expansion in multivariate polynomial rings.   Monomial expansion   Let be a nonzero commutative ring, and let be a positive integer. Every polynomial can be written in the form , where for all , and for all but finitely many indices .  Moreover, this representation is unique in the following sense: if , are monomial expansions as in , then for all .    The proof is by induction on .  Base step: . The statement in this case is just a reformulation of the definition of .  Induction step: assume and that the statement holds for all polynomial rings in variables. By definition, an element can be expressed in the form , where . By induction, for each we have , and thus . Summing the terms yields a monomial expansion of as described in the statement of the proposition. We now show that this expansion is unique. Suppose we have monomial expansions . For each , let , let , and let . We have , and similarly . By definition of , and in particular corresponding notion of equality in this ring, we conclude that . Since the line above is an equality of monomial expansions in the ring , the induction hypothesis implies for all and all satisfying . But for all , there is a such that . Thus for all , as desired.    The monomial expansion description of elements of a multivariate polynomial ring allows us to give a complete and concrete description of all ring homomorphisms from . The proof, on the other hand, will use induction once again.   Homomorphisms from   Let be a nonzero commutative ring, let be a positive integer, and let . A ring homomorphism is uniquely determine by its restriction to (considered as a subring of ) and the tuple of images . Conversely, given a pair , where is a ring homomorphism and , the map is a ring homomorphism. As a result, we have a bijection between and , described as follows.   Description of multivariate polynomial ring homomorphisms      Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above.      Degree functions  For general multivariate polynomial rings, there are a number of different ways to define a notion of degree.    Monoid algebras   Monoid   A monoid is a pair , where is a nonempty set, and is an associative operation for which a multiplicate identity element exists: , there is an element satisfying for all .     Monoid examples   Here are some familiar monoids:    , where is a group with respect to the operation .     , where is any ring and is the ring multiplication.     , where is any integral domain and is the ring multiplication.     , where and is the usual addition.     , where addition is defined componentwise: .     , where is any nonempty index set, and addition is defined componentwise: .        Monoid algebra   Let be a nonzero commutative ring, and let be a monoid. Define to be the set of all formal expressions where for all but finitely many . We define binary operations and on as follows: . Note that the sum defining is in fact finite, since only finitely many of the products are nonzero. The triple is a ring called the monoid algebra of over .     "
+  "body": " Multivariate polynomial rings and monoid algebras   Multivariate polynomial rings   Multivariate polynomial rings    multivariate polynomial ring over    Let be a nonzero commutative ring. We define the polynomial ring in the indeterminates recursively as follows:    is the usual polynomial ring in the indeterminate .     for all .   When wishing to make the indeterminates explicit, we will write for an element     The recursive definition of multivariable polynomial rings allows us to use proof by induction in many situations, as the following results illustrate.   Polynomial UFDs   Let be a nonzero commutative ring. For all positive integers , is a unique factorization domain if and only if is a unique factorization domain.  In particular, is a UFD for any positive integer , as is , where is any field.    The proof is by induction on .  Base case: . implies that if is a UFD, then so is . Conversely, if is a UFD, it is easy to see that is a UFD as well: using a degree argument, irreducible factorizations of an element corresponds bijectively to irreducible factorizations of the constant polynomial in .  Induction step: let , and assume the result is true for . We have .    By definition, an element of is a formal expression of the form . Since each is an -linear combination of powers of , after distributing through for each and then collecting like terms, we can rewrite as an -linear combination of monomials , where for all but finitely many . We make this observation more precise and more general in . Since the notation gets rather unwieldy as the number of indeterminates increases, we are well served by introducing some notation and terminology.   Monomials and multivariate indices    multivariate monomial notation     the natural numbers    Let be a nonzero commutative ring, and let be a positive integer. A monomial of is an element of of the form , where for all . The tuple is called the multidegree of the monomial.  To ease notation we adopt the following conventions.    .    We write for and for .    Given any , we define as .    Similarly, if is any ring, and any tuple of elements of , given any , we define as .       With this terminology and notation place, we can now give a precise description of monomial expansion in multivariate polynomial rings.   Monomial expansion   Let be a nonzero commutative ring, and let be a positive integer. Every polynomial can be written in the form , where for all , and for all but finitely many indices .  Moreover, this representation is unique in the following sense: if , are monomial expansions as in , then for all .    The proof is by induction on .  Base step: . The statement in this case is just a reformulation of the definition of .  Induction step: assume and that the statement holds for all polynomial rings in variables. By definition, an element can be expressed in the form , where . By induction, for each we have , and thus . Summing the terms yields a monomial expansion of as described in the statement of the proposition. We now show that this expansion is unique. Suppose we have monomial expansions . For each , let , let , and let . We have , and similarly . By definition of , and in particular corresponding notion of equality in this ring, we conclude that . Since the line above is an equality of monomial expansions in the ring , the induction hypothesis implies for all and all satisfying . But for all , there is a such that . Thus for all , as desired.    The monomial expansion description of elements of a multivariate polynomial ring allows us to give a complete and concrete description of all ring homomorphisms from . The proof, on the other hand, will use induction once again.   Homomorphisms from   Let be a nonzero commutative ring, let be a positive integer, and let . A ring homomorphism is uniquely determine by its restriction to (considered as a subring of ) and the tuple of images . Conversely, given a pair , where is a ring homomorphism and , the map is a ring homomorphism. As a result, we have a bijection between and , described as follows.   Description of multivariate polynomial ring homomorphisms      Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above.     Noetherian ring   A commutative ring is Noetherian if every ideal of is finitely generated.     Hilbert's basis theorem   If is a Noetherian ring, then so is .         Noetherian polynomial rings   Let be a positive integer. If is a Noetherian ring, then so is .      Degree functions  For general multivariate polynomial rings, there are a number of different ways to define a notion of degree. One of these comes automatically from our recursive definition: since , given , we can define its degree with respect to as its degree as a polynomial in with coefficients in . More generally, given any one of the indeterminates , we can define the -degree of to be its degree as a polynomial in the indeterminate with coefficients in the ring . As is easily shown using the mapping property of multivariate polynomial rings, we have , where the isomorphism is given by the first natural map that comes to your mind. It follows that all the usual properties of degree functions of polynomial rings are ported over to the notion of -degree.   Prime ideal in   Let be an integral domain. Prove that the ideal is prime in .        This notion of degree is strong enough to prove the following fact: if is a field, then every ideal of is principal.  Another notion of degree is given by the so-called total degree of a polynomial.   Total degree   Let be a nonzero commutative ring, and let be a positive integer. The total degree of a monomial , denoted , is defined as . Given a nonzero polynomial , we define the total degree of is maximum total degree of any monomial appearing in the monomial expansion of : , if , then . Lastly, if , we define .    The total degree function on satisfies some of the same properties of the usual degree function on a polynomial ring in one variable.   Total degree   Let be a nonzero commutative ring, let be a positive integer, and let and be nonzero elements of .    , with equality if is an integral domain.     .        Failure of division algorithm   Let be a nonzero commutative ring.   Establish an isomorphisn between and a familiar ring.    Show that we cannot write as for any .             Monoid algebras   Monoid   A monoid is a pair , where is a nonempty set, and is an associative operation for which a multiplicate identity element exists: , there is an element satisfying for all .     Monoid examples   Here are some familiar monoids:    , where is a group with respect to the operation .     , where is any ring and is the ring multiplication.     , where is any integral domain and is the ring multiplication.     , where and is the usual addition.     , where addition is defined componentwise: .     , where is any nonempty index set, and addition is defined componentwise: .        Monoid algebra   Let be a nonzero commutative ring, and let be a monoid. Define to be the set of all formal expressions where for all but finitely many . We define binary operations and on as follows: . Note that the sum defining is in fact finite, since only finitely many of the products are nonzero. The triple is a ring called the monoid algebra of over .     "
 },
 {
   "id": "spec_poly_ring_multiple",
@@ -4525,7 +4525,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.15.2",
   "title": "Monomials and multivariate indices.",
-  "body": " Monomials and multivariate indices    multivariate monomial notation     the natural numbers    Let be a nonzero commutative ring, and let be a positive integer. A monomial of is an element of of the form , where for all . The tuple is called the multivariate index of the monomial.  To ease notation we adopt the following conventions.    .    We write for and for .    Given any , we define as .    Similarly, if is any ring, and any tuple of elements of , given any , we define as .      "
+  "body": " Monomials and multivariate indices    multivariate monomial notation     the natural numbers    Let be a nonzero commutative ring, and let be a positive integer. A monomial of is an element of of the form , where for all . The tuple is called the multidegree of the monomial.  To ease notation we adopt the following conventions.    .    We write for and for .    Given any , we define as .    Similarly, if is any ring, and any tuple of elements of , given any , we define as .      "
 },
 {
   "id": "prop_monomial_expansion",
@@ -4546,11 +4546,74 @@ var ptx_lunr_docs = [
   "body": " Homomorphisms from   Let be a nonzero commutative ring, let be a positive integer, and let . A ring homomorphism is uniquely determine by its restriction to (considered as a subring of ) and the tuple of images . Conversely, given a pair , where is a ring homomorphism and , the map is a ring homomorphism. As a result, we have a bijection between and , described as follows.   Description of multivariate polynomial ring homomorphisms      Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above.   "
 },
 {
+  "id": "d_noetherian_ring",
+  "level": "2",
+  "url": "s_poly_general.html#d_noetherian_ring",
+  "type": "Definition",
+  "number": "2.15.5",
+  "title": "Noetherian ring.",
+  "body": " Noetherian ring   A commutative ring is Noetherian if every ideal of is finitely generated.   "
+},
+{
+  "id": "th_hilbert_basis_theorem",
+  "level": "2",
+  "url": "s_poly_general.html#th_hilbert_basis_theorem",
+  "type": "Theorem",
+  "number": "2.15.6",
+  "title": "Hilbert’s basis theorem.",
+  "body": " Hilbert's basis theorem   If is a Noetherian ring, then so is .       "
+},
+{
+  "id": "cor_hilbert_basis_theorem",
+  "level": "2",
+  "url": "s_poly_general.html#cor_hilbert_basis_theorem",
+  "type": "Corollary",
+  "number": "2.15.7",
+  "title": "Noetherian polynomial rings.",
+  "body": " Noetherian polynomial rings   Let be a positive integer. If is a Noetherian ring, then so is .   "
+},
+{
+  "id": "eg_multi_poly_prime",
+  "level": "2",
+  "url": "s_poly_general.html#eg_multi_poly_prime",
+  "type": "Example",
+  "number": "2.15.8",
+  "title": "Prime ideal in <span class=\"process-math\">\\(R[x,y]\\)<\/span>.",
+  "body": " Prime ideal in   Let be an integral domain. Prove that the ideal is prime in .       "
+},
+{
+  "id": "d_total_degree",
+  "level": "2",
+  "url": "s_poly_general.html#d_total_degree",
+  "type": "Definition",
+  "number": "2.15.9",
+  "title": "Total degree.",
+  "body": " Total degree   Let be a nonzero commutative ring, and let be a positive integer. The total degree of a monomial , denoted , is defined as . Given a nonzero polynomial , we define the total degree of is maximum total degree of any monomial appearing in the monomial expansion of : , if , then . Lastly, if , we define .   "
+},
+{
+  "id": "prop_tot_deg",
+  "level": "2",
+  "url": "s_poly_general.html#prop_tot_deg",
+  "type": "Proposition",
+  "number": "2.15.10",
+  "title": "Total degree.",
+  "body": " Total degree   Let be a nonzero commutative ring, let be a positive integer, and let and be nonzero elements of .    , with equality if is an integral domain.     .      "
+},
+{
+  "id": "eg_failure_div_alg",
+  "level": "2",
+  "url": "s_poly_general.html#eg_failure_div_alg",
+  "type": "Example",
+  "number": "2.15.11",
+  "title": "Failure of division algorithm.",
+  "body": " Failure of division algorithm   Let be a nonzero commutative ring.   Establish an isomorphisn between and a familiar ring.    Show that we cannot write as for any .          "
+},
+{
   "id": "d_monoid",
   "level": "2",
   "url": "s_poly_general.html#d_monoid",
   "type": "Definition",
-  "number": "2.15.5",
+  "number": "2.15.12",
   "title": "Monoid.",
   "body": " Monoid   A monoid is a pair , where is a nonempty set, and is an associative operation for which a multiplicate identity element exists: , there is an element satisfying for all .   "
 },
@@ -4559,7 +4622,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_poly_general.html#eg_monoids",
   "type": "Example",
-  "number": "2.15.6",
+  "number": "2.15.13",
   "title": "Monoid examples.",
   "body": " Monoid examples   Here are some familiar monoids:    , where is a group with respect to the operation .     , where is any ring and is the ring multiplication.     , where is any integral domain and is the ring multiplication.     , where and is the usual addition.     , where addition is defined componentwise: .     , where is any nonempty index set, and addition is defined componentwise: .      "
 },
