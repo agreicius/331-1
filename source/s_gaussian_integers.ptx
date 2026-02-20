@@ -448,10 +448,10 @@ Let <m>\mathcal{O}=\mathcal{O}_{\sqrt{D}}</m> be a quadratic ring of integers. W
             <md>
                 <mrow>N(\alpha)=n \amp \iff 
                     N(u)N(1+i)^{k'}\prod_{i=1}^r N(\pi_i)^{a_i}N(\overline{\pi}_i)^{b_i} \prod_{j=1}^s N(q_j)^{m_j'} =2^{k}\prod_{i=1}^r p_i^{n_i} \prod_{j=1}^s q_j^{m_j}</mrow>
-                    <mrow>\amp\iff  2^{k'}\prod_{i=1}^rp_i^{a_i+b_i}\cdot \prod_{j=1}^s q^{2m_j'} = 2^{k}\prod_{i=1}^r p_i^{n_i} \prod_{j=1}^s q_j^{m_j} </mrow>
+                    <mrow>\amp\iff  2^{k'}\prod_{i=1}^rp_i^{a_i+b_i}\cdot \prod_{j=1}^s q_j^{2m_j'} = 2^{k}\prod_{i=1}^r p_i^{n_i} \prod_{j=1}^s q_j^{m_j} </mrow>
                     <mrow> \amp \iff k'=k, a_i+b_i=n_i, 2m_j'=m_j</mrow>
             </md>
-            for all <m>1\leq i\leq r</m>, <m>1\leq j\leq s</m>. Equivalently, we must have <m>m_j</m> even for all <m>j</m>, and <m>m_j'/2</m>, and <m>(a_i,b_i)=(a_i, n_i-b_i)</m> for <m>a_i\in \{0,1,\dots, n_i\}</m>. We conclude that <m>n=a^2+b^2</m> if and only if <m>n=N(\alpha)</m> for an element <m>\alpha\in \Z[i]</m> that can we written uniquely as 
+            for all <m>1\leq i\leq r</m>, <m>1\leq j\leq s</m>. Equivalently, we must have <m>m_j</m> even for all <m>j</m>, and <m>(a_i,b_i)=(a_i, n_i-a_i)</m> for <m>a_i\in \{0,1,\dots, n_i\}</m>. We conclude that <m>n=a^2+b^2</m> if and only if <m>n=N(\alpha)</m> for an element <m>\alpha\in \Z[i]</m> that can we written uniquely as 
             <md>
                 <mrow>\alpha \amp = u (1+i)^k \cdot \prod_{i=1}^r \pi_i^{a_i}\overline{\pi}_i^{n_i-a_i}\cdot \prod_{j=1}^s q_j^{m_j/2}</mrow>
             </md>,
