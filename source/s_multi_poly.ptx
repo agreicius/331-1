@@ -232,14 +232,33 @@
     <proof>
     <p>
         It is clear that the zero ideal <m>I=(0)</m> is finitely generated. Let <m>I</m> be any nonzero ideal <m>I</m>. Define the following subsets of <m>R</m>: 
-        <md number="yes">
-            <mrow>L(I) \amp = \{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I\}</mrow>
-            <mrow>L_d(I) \amp =\{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I, \deg f=d\}</mrow>
+        <md number="no">
+            <mrow>L(I) \amp = \{0\}\cup\{a\in R\mid a \text{ is leading coeff. of some } f\in I\}</mrow>
+            <mrow>L_d(I) \amp =\{0\}\cup\{a\in R\mid a \text{ is leading coeff. of some } f\in I, \deg f=d\}</mrow>
         </md>.
         It is straightforward to show the sets <m>L</m> and <m>L_d</m> are in fact ideals of <m>R</m>. The general idea used for both cases is the following: if <m>a</m> is the leading coefficient of <m>f\in I</m> and <m>b</m> is the leading coefficient of <m>g\in I</m>, then <m>a+b</m> is either equal to zero, or is the leading coefficient of <m>f+g\in I</m>; and <m>ra</m> is either equal to zero, or is the leading coefficient of <m>rf\in I</m> for any <m>r\in R</m>. 
     </p>
     <p>
-        By assumption, <m>R</m> is Noetherian. Thus we have <m>I=(a_1,a_2,\dots, a_n)</m>, where <m>a_i</m> is the leading term of some polynomial <m>f_i\in I</m>.  for some polynomials <m>f_k\in R[x]</m>. Let <m>m=\max\{\deg f_1,\deg f_2,\dots, \deg f_n\}</m>, and let <m>J=\sum_{d=0}^m I_d</m>. Again, since <m>R</m> is Noetherian, <m>J=(</m>
+        By assumption, <m>R</m> is Noetherian. Thus we have
+        <md number="yes">
+            <mrow>I \amp =(a_1,a_2,\dots, a_n)</mrow>
+            <mrow>I_d \amp =(b_{1,d},b_{2,d},\dots, b_{n_d,d})</mrow>
+        </md>,
+        where <m>a_i</m> is the leading coefficient of some polynomial <m>f\in I</m> for all <m>1\leq i\leq n</m>, and similarly, <m>b_{j,d}</m> is the leading coefficient of some polynomial <m>g_{j,d}\in I</m> of degree <m>d</m>. Let <m>m=\max\{ \deg f_i\mid 1\leq i\leq n\}</m>, and define 
+        <md>
+            <mrow> A \amp =\{f_1,f_2,\dots, f_n\}\cup_{d=0}^m\{g_{j,d}\mid 1\leq j\leq n_d\}</mrow>
+        </md>.
+        We claim that <m>I=(A)</m>, and hence that <m>I</m> is finitely generated, since <m>A</m> is a finite set. It is clear that <m>(A)\subseteq I</m>, since <m>A\subseteq I</m>. Assume by contradiction that <m>I-(A)</m> is nonempty. It follows that there is an element (necessarily nonzero) <m>f\in I-(A)</m> of minimal degree.
+    </p>
+    <p>
+        Case 1: <m>\deg f\geq m</m>. Let <m>\deg f_i=n_i</m>. By assumption <m>n_i\leq m\leq \deg f</m> for all <m>1\leq i\leq n</m>. The leading coefficient <m>a</m> of <m>f</m> is an element of <m>L(I)</m>, and thus can be expressed as 
+        <md>
+            <mrow>a \amp =\sum_{i=1}^nc_ia_i</mrow>
+        </md>
+        for some <m>c_i\in R</m>. Let <m>g(x)=\sum_{i=1}^{n} c_i x^{\deg f-\deg f_i}f_i</m>. Note that <m>g\in (A)</m>, from whence it follows that <m>f-g\notin (A)</m> (since otherwise <m>f\in (A)</m>). But then <m>f-g</m> is an element of <m>I-(A)</m> of degree less than <m>\deg f</m>, contradicting the choice of <m>f</m>. 
+    </p>
+    <p>
+        Case 2: <m>\deg f^lt; m</m>. In this case the leading coefficient <m>a</m> of <m>f</m> is an element of <m>L_d(I)</m>, where <m>d=\deg f</m>, and similarly as above, the poly
     </p>
     </proof>
     </theorem>
@@ -335,7 +354,7 @@
         </li>
         <li>
             <p>
-                Show that we cannot write <m>x</m> as <m>x=q(x,y)(x-y)+c</m> for any <m>c\in R</m>. 
+                Show that we cannot write <m>x</m> as <m>x=q(x,y)(x-y)+r(x,y)</m> for any <m>r(x,y)\in R[x,y]</m> with <m>\deg r(x,y)&lt; \deg (x-y)</m>. 
             </p>
         </li>
     </ol>
