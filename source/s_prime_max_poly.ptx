@@ -352,7 +352,7 @@
     </p>
     </remark>
     <example xml:id="eg_poly_quot_linear">
-    <title>Quotients by linear polynials</title>
+    <title>Quotients by linear polynomials</title>
     <statement>
     <p>
     Let <m>F</m> be a field, and let <m>f(x)=ax+b</m> be a linear (<ie/>, degree-1) polynomial in <m>F[x]</m>. Prove: <m>F[x]/(f)\cong F</m>. 
@@ -423,6 +423,90 @@ Verify for yourself that <m>\omega</m> is one of the two complex roots of <m>x^2
     It turns out that there are exactly <m>\frac{5^2-5}{2}=10</m> irreducible polynomials of the form <m>f(x)=x^2+ax+b</m> in <m>\F_5[x]</m>. Each of the corresponding quotients <m>\F_5[x]/(f)</m> is thus a field of cardinality <m>25</m>. Miraculously, these fields are all isomorphic! In fact, as we will prove in the next quarter, given any prime power <m>p^n</m> there is exactly one field (up to isomorphism) of cardinality <m>p^n</m>. 
     </p>
     </remark>
+    <p>
+        We end this section with a fundamental result bounding the number of distinct <em>roots</em> of a polynomial over a field by its domain. This may look familiar to you from your mathematical youth. The corollary that follows, however, should come as more of a surprise. 
+    </p>
+    <definition xml:id="d_root">
+    <title>Root of a polynomial</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring, and let <m>f\in R[x]</m> be a polynomial. A <term>root</term> of <m>f</m> in <m>R</m> is an element <m>r\in R</m> satisfying <m>f(r)=0</m>. 
+    </p>
+    <p>
+        More generally, let <m>S</m> be a commutative <m>R</m>-algebra with defining homomorphism <m>\phi\colon R\rightarrow S</m>. Given <m>f(x)=\anpoly</m>, write <m>f^\phi(x)=\phi(a_n)x^n+\phi(a_{n-1})x^{n-1}+\cdots \phi(a_1)x+\phi(a_0)</m>: <ie/>, <m>f^\phi</m> is the result of applying <m>\phi</m> to the coefficients of <m>f</m>. A <term>root</term> of <m>f</m> in <m>S</m> is an element <m>s\in S</m> satisfying <m>f^\phi(s)=0</m>. 
+    </p>
+    </statement>
+    </definition>
+    
+    <theorem xml:id="th_roots_deg">
+    <title>Degree and distinct roots</title>
+    <statement>
+    <p>
+    Let <m>F</m> be a field, and let <m>f\in F[x]</m> be a nonzero polynomial of degree <m>n\geq 0</m>. 
+    <ol>
+        <li>
+            <p>
+                <m>f(a)=0</m> for some <m>a\in F</m> if and only if <m>f(x)=(x-a)g(x)</m> for some <m>g\in F[x]</m>. In other words, <m>a</m> is a root of <m>f</m> if and only if <m>(x-a)\mid f</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>f</m> has at most <m>n</m> distinct roots in <m>F</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    Fix any <m>a\in F</m>, and let <m>f(x)=q(x)(x-a)+r(x)</m> be an instance of the division algorithm applied to <m>f</m> and <m>(x-a)</m>, so that <m>r(x)=0</m> or <m>\deg r=0</m>. 
+                    We have 
+                    <md>
+                        <mrow>f(a)=0 \amp \iff q(a)(a-a)+r(a)=0 </mrow>
+                        <mrow> \amp \iff r(a)=0</mrow>
+                        <mrow> \amp \iff r=0 \amp (\deg r=0\implies r(x)=c)</mrow>
+                        <mrow> \amp \iff (x-a)\mid f(x)</mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    By induction on <m>n=\deg f</m>.
+                </p>
+                <p>
+                    Base case: <m>n=0</m>. In this case <m>f(x)=c</m> is a <em>nonzero</em> constant polynomial. Since <m>c\ne 0</m>, clearly <m>f(a)\ne 0</m> for all <m>a\in F</m>, and thus <m>f</m> has exactly <m>0</m> distinct roots. 
+                </p>
+                <p>
+                    Induction step: let <m>n\geq 1</m> and assume the claim holds for all nonzero polynomials of degree less than <m>n</m>. If <m>f</m> has no roots in <m>F</m>, then the condition is satisfied and we are done. Otherwise, let <m>a</m> be a root of <m>f</m>. By (1) we can write <m>f(x)=(x-a)g(x)</m> for some <m>g\in F[x]</m>. Since <m>n=\deg f=\deg(x-a)+\deg g</m>, we see that <m>\deg g=n-1</m>. Let <m>a_1,a_2,\dots, a_r</m> be the distinct roots of <m>g</m>. By induction, we have <m>r\leq n-1</m>. We claim that <m>X=\{a,a_1,\dots, a_r\}</m> are the distinct roots of <m>f</m>. It is clear that <m>f(b)=0</m> for all <m>b\in X</m>. Conversely, assume <m>f(b)=0</m> for some <m>b\in F</m>. By (1) we have <m>(x-b)\mid (x-a)g(x)</m>. Since <m>x-a</m> is irreducible, it is prime, and thus <m>(x-b)\mid (x-a)</m> or <m>(x-b)\mid g(x)</m>. In the first case, we have <m>b-a=0</m>, again by (1), in which case <m>b=a</m>. In the second case, <m>g(b)=0</m>, and <m>b\in \{a_1,a_2,\dots, a_r\}</m>. In both cases we have <m>b\in X</m>, as desired.  
+                </p>
+                <p>
+                    Thus <m>X</m> is the set of all roots of <m>f</m>. Since <m>\abs{X}\leq r+1\leq n-1+1=n</m>, we see that <m>f</m> has at most <m>n</m> distinct roots. 
+                </p>
+            </li>
+        </ol>
+    </p>
+    </proof>
+    </theorem>
+    <corollary xml:id="cor_subgrp_field_cyclic">
+    <title>Finite multiplicative subgroups of fields</title>
+    <statement>
+        <p>
+            Let <m>F</m> be a field. If <m>G</m> is a finite subgroup of <m>F^*</m>, then <m>G</m> is cyclic. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>G</m> be a subgroup of <m>F^*</m> of cardinality <m>n&lt; \infty</m>.  Since <m>G</m> is a finite abelian group, the <em>invariant factor</em> version of the structure theorem for finite abelian groups implies that 
+            <md>
+                <mrow>G \amp \cong C_{n_1}\times C_{n_2}\times \cdots \times C_{n_r}</mrow>
+            </md>
+            where the <m>n_k</m> are positive integers satisfying <m>n_k\mid n_{k+1}</m> for all <m>1\leq k\leq r-1</m>, and <m>C_{n_k}=\angvec{\alpha_k}</m> is a cyclic group of cardinality <m>n_k</m>. (We are using multiplicative notation, since <m>G</m> is a subgroup of the multiplicative group of units.) Since <m>n_k\mid n_r</m> for all <m>k</m>, it follows that all elements <m>\alpha\in G</m> satisfy <m>\alpha^{n_r}=1</m>. Put another way, the polynomial <m>f(x)=x^{n_r}-1</m> has at least <m>n=\abs{G}</m> distinct roots. But in general, a nonzero polynomial <m>g\in F[x]</m> has at most <m>\deg g</m> distinct roots in <m>F</m>. (Why? Using the division algorithm, we have <m>g(a)=0</m> for some <m>a\in F</m> if and only if <m>g(x)=(x-a)h(x)</m>, where <m>\deg h=\deg g -1</m>. The claim now follows easily by induction of <m>\deg g</m>. ) Thus on the one hand, <m>f(x)=x^{n_r}-1</m> has <em>at most</em> <m>n_r</m> distinct roots, and on the other hand, it has <em>at least</em> <m>n=\abs{G}</m> distinct roots. It follows that <m>n\leq n_r</m>. But since <m>n=\prod_{k=1}^r n_k</m>, we have <m>n_r\mid n</m>, and hence <m>n_r\leq n</m>. It follows that <m>n_r=n</m> and <m>G\cong C_{n_r}</m> is cyclic, as claimed. 
+        </p>
+    </proof>
+</corollary>
     
     
     

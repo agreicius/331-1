@@ -188,7 +188,7 @@
     </statement>
     <solution>
     <p>
-    We claim that <m>\R[x]/(x^2+1)\cong \C</m>. Define <m>\phi\colon \R[x]\rightarrow \C</m> as <m>\phi(f)=f(i)</m>: <ie/>, <m>\phi</m> is the evaluation at <m>i</m> map, thinking of <m>\R</m> as a subring of <m>\C</m>. This a ring homomorphism according to <xref ref="spec_poly_ring_homo"/>, and is easily seen to be surjective, since <m>a+bi=\phi(a+bx)</m> for any <m>a,b\in \R</m>. We claim that <m>\ker\phi=(x^2+1)</m>. Indeed, we see that 
+    We claim that <m>\R[x]/(x^2+1)\cong \C</m>. Define <m>\phi\colon \R[x]\rightarrow \C</m> as <m>\phi(f)=f(i)</m>: <ie/>, <m>\phi</m> is the evaluation at <m>i</m> map, thinking of <m>\R</m> as a subring of <m>\C</m>. This a ring homomorphism according to <xref ref="th_poly_ring_homo"/>, and is easily seen to be surjective, since <m>a+bi=\phi(a+bx)</m> for any <m>a,b\in \R</m>. We claim that <m>\ker\phi=(x^2+1)</m>. Indeed, we see that 
     <md number="yes">
         <mrow>\phi(x^2+1) \amp =i^2+1=-1+1=0</mrow>
     </md>.

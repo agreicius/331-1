@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_integral_domain_factorization" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Factorization over integral domains</title>
+    <p>
+        Gauss's lemma is one important tool for answering factorization questions about polynomials <m>f\in R[x]</m> where <m>R</m> is a UFD. Roughly speaking, the main result there is that we investigate factorization in this context by comparing factorization in <m>R[x]</m> with factorization in <m>F[x]</m>. 
+    </p>
+    <p>
+        In this section we add a couple of additional tools that can be used for arbitrary integral domains <m>R</m> (that need not be UFDs). First a simple lemma about factorization of monic polynomials in <m>R[x]</m> for an arbitrary nonzero commutative ring <m>R</m>. 
+    </p>
+    <lemma xml:id="lem_monic_factorization">
+        <statement>
+            <p>
+                Let <m>R</m> be a nonzero commutative ring. If <m>f\in R[x]</m> is a monic polynomial, then if <m>f</m> factors as a product of two polynomials in <m>R[x]</m>, then it factors as a product of two monic polynomials. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Proof be delegation.
+            </p>
+        </proof>
+    </lemma>
+    <theorem xml:id="th_reduction_mod_I">
+    <title>Reduction modulo <m>I</m></title>
+    <statement>
+    <p>
+    Let <m>R</m> be an integral domain, and let <m>f</m> be a nonconstant monic polynomial in <m>R[x]</m>. If there is a proper ideal <m>I</m> of <m>R</m> such that the reduction <m>f\boldmod I \in (R/I)[x]</m> cannot be factored as a product of two polynomials of smaller degree, then <m>f</m> is irreducible in <m>R[x]</m>. 
+    </p>
+    <p>
+        In the special case where <m>I=P</m> is a prime ideal of <m>R</m>, the condition that <m>\overline{f}=f\boldmod P\in (R/P)[x]</m> cannot be factored as a product of two polynomials of smaller degree is equivalent to <m>\overline{f}</m> being irreducible.  
+    </p>
+    </statement>
+    <proof>
+    <p>
+        Given <m>f</m> and <m>I</m> as in the statement, suppose by contradiction that <m>f</m> is reducible. In that case, since <m>f</m> is monic, we can write <m>f(x)=g(x)h(x)</m> for polynomials <m>g,h\in R[x]</m>. Since <m>f</m> is monic the products of the leading coefficients of <m>g</m> and <m>h</m> is <m>1</m>. It follows that these leading coefficients are units in <m>R</m>, and thus we factor them out of <m></m>
+    </p>
+    </proof>
+    </theorem>
+    <remark>
+        <title>Monic is important</title>
+        <p>
+            The condition that <m>f</m> be monic is important here. Note that <m>f(x)=2x</m> is irreducible modulo <m>3</m>, but is reducible in <m>\Z[x]</m>. 
+        </p>
+        <p>
+            As another illuminating example in this regard, consider <m>f(x)=3x^2+4x+1</m>. We have <m>f\boldmod 3=x+1\in \Z/3[x]</m>, which clearly cannot be factored as a product of two polynomials of smaller degree. However we have <m>f(x)=(3x+1)(x+1)</m> in <m>\Z[x]</m>. 
+        </p>
+    </remark>
+
+        <remark>
+            <title>Nondefinitive irreducibility test</title>
+        <p>
+            It is important to note that <xref ref="th_reduction_mod_I"/> only gives us a <em>partial</em> or <em>nondefinitive</em> test for irreducibility. That is, with the setup of the theorem, if <m>\overline{f}</m> does not factor as a product as a polynomial of smaller degree, then <m>f</m> is irreducible. However, there is no useful converse to this statement. For example, it is not true that if <m>\overline{f}</m> is reducible in <m>R/P[x]</m> for all prime ideals then <m>f</m> is reducible in <m>R[x]</m>; nor is this true if we look at <m>\overline{f}\in R/I[x]</m> for all nontrivial ideals (prime or otherwise). 
+        </p>
+        <p>
+            Indeed you will show in homework the the polynomial <m>f(x)=x^4+1\in \Z[x]</m> is irreducible, and yet <m>\overline{f}</m> is reducible in <m>\Z/p\Z[x]</m> for all prime integers <m>p</m>. By the way, in this case it is not true that <m>f</m> is reducible modulo all nonzero integers <m>n</m>: indeed, you can show that <m>x^4+1</m> is irreducible in <m>\Z/4\Z</m> in a straightforward manner.
+        </p>
+        <p>
+            Similarly, it is possible (but more difficult) to show that <m>f(x)=x^4-72x^2+4</m> is irreducible modulo <m>n</m> for <em>all</em> nonzero integers <m>n</m>, and yet <m>f</m> is irreducible in <m>\Z[x]</m>. 
+        </p>
+        </remark>
+        <example xml:id="eg_reduction_mod_I">
+        <title>Reduction mod <m>I</m>: cubic</title>
+        <statement>
+        <p>
+        Decide whether <m>f(x)=x^3+246x^2+608x+85\in \Q[x]</m> is irreducible. 
+        </p>
+        </statement>
+        <solution>
+        <p>
+          Since <m>f\in \Z[x]</m> and is primitive, irreducibility of <m>f</m> in <m>\Q[x]</m> is equivalent to irreducibility of <m>f</m> in <m>\Z[x]</m>. We investigate the latter by examining <m>f\boldmod p</m> for various prime integers <m>p</m>. 
+        </p>
+        <p>
+        We have <m>f\boldmod 2=x^3+1\in \F_2[x]</m>, which is reducible: $x^3+1=(x+1)(x^2+x+1)$ in <m>\F_2[x]</m>. 
+        </p>
+        <p>
+            We have <m>f\boldmod 3=x^3+2x+1\in \F_3[x]</m>, which is irreducible. Indeed, since the degree is 3, it suffices to check that this polynomial has no roots in <m>\F_3</m>, which is easy to verify. 
+        </p>
+        <p>
+            Since <m>f\boldmod 3</m> is irreducible, we conclude that <m>f</m> is irreducible in <m>\Z[x]</m>, and thus also in <m>\Q[x]</m>. 
+        </p>
+
+        </solution>
+        </example>
+        <example xml:id="eg_reduction_mod_I">
+        <title>Reduction mod <m>I</m>: quartic</title>
+        <statement>
+        <p>
+        Let <m>f(x)=x^4-6x^3+12x^2-3x+9</m>. Decide whether <m>f</m> is irreducible in <m>\Q[x]</m>.  
+        </p>
+        </statement>
+        <solution>
+        <p>
+        Again, by Gauss's lemma and its consequences, <m>f</m> is irreducible in <m>\Q[x]</m> if and only if <m>f</m> is irreducible in <m>\Z[x]</m>. 
+        </p>
+        <p>
+            We have <m>\overline{f}=f\boldmod 2=x^4+x+1\in \F_2[x]</m>. We claim <m>\overline{f}</m> in <m>\F_2[x]</m>. It is easily verified that it has no roots, so if it factored, we would have <m>x^4+x+1=(x^2+ax+b)(x^2+cx+d)</m> in <m>\F_2[x]</m>. Expanding the product out and comparing coefficients with <m>\overline{f}</m>, we would have 
+            <md>
+                <mrow>a+c \amp = 0</mrow>
+                <mrow>ac+b+d \amp =0</mrow>
+                <mrow>ad+bc \amp = 1 </mrow>
+                <mrow>bd \amp =1</mrow>
+            </md>.
+            Using the very simple arithmetic of <m>\F_2</m>, we see that the last equation implies <m>b=d=1</m>. But then the third equation becomes
+            <md>
+                <mrow>b(a+c) \amp =a+c=1</mrow>
+            </md>.
+            But this contradicts the first equation, which implies <m>a+c=0</m>. We conclude there is no such factorization, and that <m>\overline{f}</m> is irreducible over <m>\F_2</m>. It follows that <m>f</m> is irreducible in <m>\Z[x]</m>, and hence also in <m>\Q[x]</m>. 
+        </p>
+        </solution>
+        </example>
+        
+        
+        <p>
+            The following irreducibilty criterion is strictly speaking a corollary of <xref ref="th_reduction_mod_I"/>, but it is famous enough to warrant the theorem designation. 
+        </p>
+        <theorem xml:id="th_Eisenstein">
+        <title>Eisenstein's criterion</title>
+        <statement>
+        <p>
+        Let <m>R</m> be an integral domain, and let <m>f(x)=\sum_{i=0}^{n}a_ix^i</m> be a nonconstant monic polynomial of  <m>R[x]</m>. If <m>P</m> is a prime ideal of <m>R</m> satisfying
+        <ul>
+            <li>
+                <p>
+                    <m>a_i\in P</m> for all <m>0\leq i&lt; n</m>,
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>a_0\notin P^2=PP</m>,
+                </p>
+            </li>
+        </ul>
+        then <m>f</m> is irreducible in <m>R[x]</m>. 
+        </p>
+        </statement>
+        <proof>
+        <p>
+            Suppose by contradiction that <m>f</m> is reducible. Since <m>f</m> is monic, we may assume that <m>f(x)=g(x)h(x)</m>, where <m>g(x)=\sum_{k=0}^mb_kx^k</m>, <m>h(x)=\sum_{k=0}^{n-m}c_kx^k</m> are both monic and <m>m, n-m&lt; n</m>.
+            It follows that modulo <m>P</m> we have 
+            <md>
+                <mrow>\overline{f}(x) \amp =x^n=\overline{g}(x)\overline{h}(x)</mrow>
+            </md>,
+            where <m>\deg \overline{g}=m</m>, <m>\deg \overline{h}=n-m</m>. 
+            It is not difficult to see that since <m>R/P</m> is an integral domain, we must have <m>\overline{b_0}=\overline{c_0}=0</m>: indeed, if <m>\overline{b_0}\ne 0</m>, then <m>\overline{g}\overline{h}</m> has a nonzero term of degree <m>n-m&lt; n</m>; if <m>\overline{c_0}\ne 0</m>, then <m>\overline{f}\overline{g}</m> has a nonzero term of degree <m>m&lt; n</m>. It follows that <m>b_0\in P</m> and <m>c_0\in P</m>, and thus <m>a_0=b_0c_0\in P^2</m>, contradicting our assumption! Thus <m>f</m> is irreducible.    
+        </p>
+        </proof>
+        </theorem>
+        
+
+</section>

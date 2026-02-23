@@ -112,17 +112,17 @@
     </example>
     
     
-    <activity xml:id="spec_hom_Z">
+    <theorem xml:id="th_hom_Z">
     <title>Ring homomorphisms from <m>\Z</m></title>
     <statement>
     <p>
     Let <m>R</m> be a ring. There is a unique ring homomorphism <m>\phi\colon \Z\rightarrow R</m>, defined as <m>\phi(n)=n\cdot 1_R</m> for all <m>n\in \Z</m>. In particular, <m>\Hom(\Z,R)=\{\phi\}</m> is a singleton. 
     </p>
     </statement>
-    </activity>
+    </theorem>
     
     
-    <activity xml:id="spec_poly_ring_homo">
+    <theorem xml:id="th_poly_ring_homo">
     <title>Polynomial ring homomorphisms</title>
     <statement>
     <p>
@@ -145,7 +145,7 @@
         Similarly, if <m>R</m> and <m>S</m> are nontrivial commutative rings, and if <m>\psi\colon R\rightarrow S</m> is a ring homomorphism, identifying <m>\psi</m> with the map <m>R\rightarrow S[x]</m> obtained by composing with the subring inclusion <m>S\subseteq S[x]</m>, we will often use <m>\phi</m> (or its name) to refer to the corresponding ring homomorphism <m>\phi\colon R[x]\rightarrow S[x]</m>.
     </p>
     </statement>
-    </activity>
+    </theorem>
     <example xml:id="eg_poly_homo">
     <title><m>\Hom(\Z[x],R)</m></title>
     <statement>
@@ -155,8 +155,8 @@
     </statement>
     <solution>
     <p>
-    From <xref ref="spec_poly_ring_homo"/> we know there is a bijection between 
-    <m>\Hom(\Z[x], R)</m> and <m>\Hom(\Z, R)\times R</m>. From <xref ref="spec_hom_Z"/>, on the other hand, we know that <m>\Hom(\Z, R)=\{\phi}</m>, where <m>\phi(n)=n\cdot 1_R=n\in R</m> for all <m>n\in \Z</m>. The result follows since <m>\{\phi\}\times R</m> is in bijective correspondence with <m>R</m>. More explicitly, all homomorphisms <m>\phi\colon \Z[x]\rightarrow R</m> are of the form 
+    From <xref ref="th_poly_ring_homo"/> we know there is a bijection between 
+    <m>\Hom(\Z[x], R)</m> and <m>\Hom(\Z, R)\times R</m>. From <xref ref="th_hom_Z"/>, on the other hand, we know that <m>\Hom(\Z, R)=\{\phi}</m>, where <m>\phi(n)=n\cdot 1_R=n\in R</m> for all <m>n\in \Z</m>. The result follows since <m>\{\phi\}\times R</m> is in bijective correspondence with <m>R</m>. More explicitly, all homomorphisms <m>\phi\colon \Z[x]\rightarrow R</m> are of the form 
     <md number="yes">
         <mrow>\phi(\sum_{k=0}^na_kx^k) \amp = \sum_{k=0}^na_k r^k</mrow>
     </md>,
@@ -167,6 +167,72 @@
     </p>
     </solution>
     </example>
+    <p>
+        The next definition introduces some terminology and notation for some common types of homomorphisms out of polynomial rings. 
+    </p>
+    <definition xml:id="d_changecoefficient_evaluation_reduction">
+    <title>Change of coefficients, reduction, evaluation</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. 
+    <ul>
+        <li>
+            <title>Change of coefficient</title>
+            <p>
+                Let <m>\phi\colon R\rightarrow S</m> be a ring homomorphism. According to <xref ref="th_poly_ring_homo"/>, the map 
+                <md>
+                    <mrow>R[x] \amp \rightarrow S[x]</mrow>
+                    <mrow>f=\sum_{k=0}^na_kx^k \amp \mapsto \sum_{k=0}^n\phi(a_k)x^k</mrow>
+                </md>
+                is a ring homomorphism. We call this a <term>change of coefficient</term> homomorphism on <m>R[x]</m>, and denote <m>f^\phi(x)=\sum_{k=0}^n\phi(a_k)x^k</m>: <ie/>, <m>f^\phi</m> is the result of applying <m>\phi</m> to the coefficients of <m>f</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Reduction modulo <m>I</m></title>
+            <p>
+                As a special case of the change of coefficient homomorphism, given an ideal <m>I\subseteq R</m> and corresponding quotient map <m>\pi\colon R\rightarrow R/I</m>, writing <m>\overline{r}</m> for <m>\pi(r)</m>,  we call the change of coefficient homomorphism 
+                <md number="yes">
+                    <mrow>R[x] \amp \rightarrow R/I[x]</mrow>
+                    <mrow>f(x)=\sum_{k=0}^na_kx^k \amp \mapsto f^\pi(x)=\sum_{k=0}^n\overline{a_k}x^k</mrow>
+                </md>
+                the <term>reduction modulo <m>I</m></term> map, and will often write <m>\overline{f}</m> for <m>f^\pi</m>. 
+            </p>
+        </li>
+        <li>
+            <title>Evaluation</title>
+            <p>
+                Given <m>r\in R</m>, the ring homomorphism <m>R[x]\rightarrow R</m> defined as <m>f\mapsto f(r)</m> is called <term>evaluation at <m>r</m></term> map. 
+            </p>
+        </li>
+    </ul>
+    </p>
+    </statement>
+    </definition>
+    <remark>
+        <title>Change of coefficient and evaluation</title>
+        <p>
+            With our new terminology in hand, we can now reformulate <xref ref="th_poly_ring_homo"/> as follows: every ring homomorphism <m>\phi\colon R[x]\rightarrow S</m>, where <m>S</m> is commutative, can be written uniquely in the form 
+            <md number="yes">
+                <mrow>\phi(f) \amp = f^\psi(s)</mrow>
+            </md>,
+            where <m>\psi\colon R\rightarrow S</m> is a ring homomorphism and <m>s\in S</m>. In other words the homomorphism <m>\phi</m> decomposes uniquelyas follows:
+        </p>
+        <figure xml:id="fig_poly_ring_homo">
+            <caption>Decomposition of a polynomial ring homomorphism</caption>
+       
+        <image width="50%">
+            <shortdescription>Decomposition of polynomial ring homomorphism into a change of coefficients and evaluation map</shortdescription>       
+        <latex-image>
+            \begin{tikzcd}
+            R[x] \arrow[r,"\psi"] \arrow[rr, bend right=30, "\phi"'] \amp S[x] \arrow[r, "\epsilon_s"] \amp S
+            \end{tikzcd}
+        </latex-image>
+        </image>
+         </figure>
+        <p>
+            Here by abuse of notation <m>\psi</m> names the change of coefficient map <m>f\mapsto f^\psi</m>, and <m>\epsilon_s</m> is the evaluation at <m>s</m> map from <m>S[x]</m> to <m>S</m>. 
+        </p>
+    </remark>
     
     <activity xml:id="spec_augementation_map">
     <title>Augmentation map</title>

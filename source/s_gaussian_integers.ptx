@@ -164,25 +164,9 @@ These observations already cover some ground, but leave open some questions.
         </p>
     </li>
 </ul>
-The next result answers the first bullet point's questions. Weaving the last statement into this tapestry of equivalences will require the <xref ref="lem_subgrp_field_cyclic"/>. This result is important in its own right. For the sake of transparency, we note that our proof makes use of the structure theorem for abelian groups, a proof of which is till owed the reader, and will follow as a special case of the structure theorem for modules over PIDs. 
+The next result answers the first bullet point's questions. Weaving the last statement into this tapestry of equivalences will require <xref ref="cor_subgrp_field_cyclic"/>. For the sake of transparency, recall that our proof of that result makes use of the structure theorem for abelian groups, a proof of which is still owed the reader, and will follow as a special case of the structure theorem for modules over PIDs. 
 </p>
-<lemma xml:id="lem_subgrp_field_cyclic">
-    <title>Finite multiplicative subgroups of fields</title>
-    <statement>
-        <p>
-            Let <m>F</m> be a field. If <m>G</m> is a finite subgroup of <m>F^*</m>, then <m>G</m> is cyclic. 
-        </p>
-    </statement>
-    <proof>
-        <p>
-            Let <m>G</m> be a subgroup of <m>F^*</m> of cardinality <m>n&lt; \infty</m>.  Since <m>G</m> is a finite abelian group, the <em>invariant factor</em> version of the structure theorem for finite abelian groups implies that 
-            <md>
-                <mrow>G \amp \cong C_{n_1}\times C_{n_2}\times \cdots \times C_{n_r}</mrow>
-            </md>
-            where the <m>n_k</m> are positive integers satisfying <m>n_k\mid n_{k+1}</m> for all <m>1\leq k\leq r-1</m>, and <m>C_{n_k}=\angvec{\alpha_k}</m> is a cyclic group of cardinality <m>n_k</m>. (We are using multiplicative notation, since <m>G</m> is a subgroup of the multiplicative group of units.) Since <m>n_k\mid n_r</m> for all <m>k</m>, it follows that all elements <m>\alpha\in G</m> satisfy <m>\alpha^{n_r}=1</m>. Put another way, the polynomial <m>f(x)=x^{n_r}-1</m> has at least <m>n=\abs{G}</m> distinct roots. But in general, a nonzero polynomial <m>g\in F[x]</m> has at most <m>\deg g</m> distinct roots in <m>F</m>. (Why? Using the division algorithm, we have <m>g(a)=0</m> for some <m>a\in F</m> if and only if <m>g(x)=(x-a)h(x)</m>, where <m>\deg h=\deg g -1</m>. The claim now follows easily by induction of <m>\deg g</m>. ) Thus on the one hand, <m>f(x)=x^{n_r}-1</m> has <em>at most</em> <m>n_r</m> distinct roots, and on the other hand, it has <em>at least</em> <m>n=\abs{G}</m> distinct roots. It follows that <m>n\leq n_r</m>. But since <m>n=\prod_{k=1}^r n_k</m>, we have <m>n_r\mid n</m>, and hence <m>n_r\leq n</m>. It follows that <m>n_r=n</m> and <m>G\cong C_{n_r}</m> is cyclic, as claimed. 
-        </p>
-    </proof>
-</lemma>
+
 <theorem xml:id="th_prime_factorization">
 <title>Factorization of integer primes in <m>\Z[i]</m></title>
 <statement>
@@ -260,7 +244,7 @@ Let <m>p</m> be a prime integer. The following statements are equivalent.
     </md>.
 </p>
 <p>
-    Finally, we show that (5) and (6) are equivalent. This result falls into a category of similar results from number theory that relate the existence of certain square roots modulo <m>p</m> to congruence relations modulo <m>p</m>. The one under review, that <m>-1</m> is a square in <m>\F_p</m> if and only if <m>p=2</m> or <m>p\equiv 1\pmod 4</m>, can be easily proved with some group theory. First, we dispense with the case <m>p=2</m>: since <m>\F_2=\{0,1\}</m> it follows easily that <m>-1=1</m> is a square in <m>\F_2</m>. It remains to show that for odd prime <m>p</m>,<m>-1</m> is a square in <m>\F_p</m> if and only if <m>p\equiv 1\pmod 4</m>. First note that if <m>a\in \F_p</m> satisfies <m>a^2=-1</m>, then <m>a\in \F_p^*</m>, <m>a^4=1</m>, and <m>a^2=-1\ne 1</m>. It follows that <m>-1</m> is a square in <m>\F_p</m> if and only if <m>\F_p^*</m> has an element of order <m>4</m>. Finally by <xref ref="lem_subgrp_field_cyclic"/>, since <m>\F_p^*</m> is a <em>cyclic</em> group, it has an element of order <m>4</m> if and only if <m>4\mid p-1</m> if and only if <m>p\equiv 1\pmod 4</m>. 
+    Finally, we show that (5) and (6) are equivalent. This result falls into a category of similar results from number theory that relate the existence of certain square roots modulo <m>p</m> to congruence relations modulo <m>p</m>. The one under review, that <m>-1</m> is a square in <m>\F_p</m> if and only if <m>p=2</m> or <m>p\equiv 1\pmod 4</m>, can be easily proved with some group theory. First, we dispense with the case <m>p=2</m>: since <m>\F_2=\{0,1\}</m> it follows easily that <m>-1=1</m> is a square in <m>\F_2</m>. It remains to show that for odd prime <m>p</m>,<m>-1</m> is a square in <m>\F_p</m> if and only if <m>p\equiv 1\pmod 4</m>. First note that if <m>a\in \F_p</m> satisfies <m>a^2=-1</m>, then <m>a\in \F_p^*</m>, <m>a^4=1</m>, and <m>a^2=-1\ne 1</m>. It follows that <m>-1</m> is a square in <m>\F_p</m> if and only if <m>\F_p^*</m> has an element of order <m>4</m>. Finally by <xref ref="cor_subgrp_field_cyclic"/>, since <m>\F_p^*</m> is a <em>cyclic</em> group, it has an element of order <m>4</m> if and only if <m>4\mid p-1</m> if and only if <m>p\equiv 1\pmod 4</m>. 
 </p>
 </proof>
 </theorem>

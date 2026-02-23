@@ -189,7 +189,7 @@
     <title>Homomorphisms from <m>R[\boldx]</m></title>
     <statement>
     <p>
-    Let <m>R</m> be a nonzero commutative ring, let <m>n</m> be a positive integer, and let <m>R[\boldx]=R[x_1,x_2,\dots, x_n]</m>. A ring homomorphism <m>\phi\colon R[\boldx]\rightarrow T</m> is uniquely determine by its restriction <m>\phi\vert_R</m> to <m>R</m> (considered as a subring of <m>R[\boldx]</m>) and the tuple of images <m>\boldt=(\phi(x_1),\phi(x_2), \dots, \phi(x_n))\in T^n</m>. Conversely, given a pair <m>(\psi, \boldt)</m>, where <m>\psi\colon R\rightarrow T</m> is a ring homomorphism and <m>\boldt=(t_1,t_2,\dots, t_n)\in T^n</m>, the map 
+    Let <m>R</m> be a nonzero commutative ring, let <m>n</m> be a positive integer, let <m>R[\boldx]=R[x_1,x_2,\dots, x_n]</m>, and let <m>T</m> be a commutative ring. A ring homomorphism <m>\phi\colon R[\boldx]\rightarrow T</m> is uniquely determine by its restriction <m>\phi\vert_R</m> to <m>R</m> (considered as a subring of <m>R[\boldx]</m>) and the tuple of images <m>\boldt=(\phi(x_1),\phi(x_2), \dots, \phi(x_n))\in T^n</m>. Conversely, given a pair <m>(\psi, \boldt)</m>, where <m>\psi\colon R\rightarrow T</m> is a ring homomorphism and <m>\boldt=(t_1,t_2,\dots, t_n)\in T^n</m>, the map 
     <md>
         <mrow>\phi\colon R[\boldx] \amp \rightarrow T</mrow>
         <mrow>f=\sum_{\boldi\in \N^n}a_\boldi\, \boldx^{\boldi} \amp \mapsto \sum_{\boldi\in \N^n}\psi(a_\boldi)\, \boldt^\boldi</mrow>
