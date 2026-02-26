@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_modules" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title><m>R</m>-modules</title>
+
+    <definition xml:id="d_module">
+    <title><m>R</m>-module</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. A <term>(left) <m>R</m>-module</term> is a triple <m>(M,+,\cdot)</m>, where <m>(M,+)</m> is an abelian group and <m>\cdot</m> is a function 
+    <md>
+        <mrow>\cdot R\times  M \amp \rightarrow M </mrow>
+        <mrow>(r,m) \amp \mapsto rm</mrow>
+    </md>
+    satisfying the following axioms.
+    <ol>
+        <li>
+            <p>
+                <m>(r+s)m=rm+sm</m> for all <m>r,s\in R</m> and <m>m\in M</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>r(m+n)=rm+rn</m> for all <m>r\in R</m> and <m>m,n\in M</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(rs)m=r(sm)</m> for all <m>r,s\in R</m> and <m>m\in M</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>1m=m</m> for all <m>m\in M</m>. 
+            </p>
+        </li>
+    </ol>
+    We call the operations <m>M\times M\xrightarrow{+}M</m> and <m>R\times M\xrightarrow{\cdot} M</m> <term>module addition</term> and <term>scalar multiplication by <m>R</m></term>, respectively. 
+    </p>
+    </statement>
+    </definition>
+    <example xml:id="eg_modules_R">
+    <title>Ring objects as modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring.
+    <ol>
+        <li>
+            <p>
+                <m>R</m> is itself an <m>R</m>-module, where module addition is ring addition, and scalar multiplication is ring multiplication. 
+            </p>
+        </li>
+        <li>
+            <p>
+                If <m>I</m> is a left ideal of <m>R</m>, then <m>I</m> is a left <m>R</m>-module, where module addition is ring addition, and scalar multiplication is (left) multiplication by elements of <m>R</m>. Note that this scalar multiplication is well-defined precisely because <m>I</m> is closed under multiplication on the left by arbitrary elements of <m>R</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Let <m>I</m> be a left ideal of <m>R</m>. The quotient group <m>R/I</m> is an <m>R</m>-module, where module addition is the usual coset addition and scalar multiplication is defined as 
+                <md>
+                    <mrow>r\cdot (s+I) \amp =rs+I</mrow>
+                </md>
+                for all <m>r\in R</m> and <m>s+I\in R/I</m>. Once again, the fact that this operation is well-defined is a result of <m>I</m> being closed under multiplication on the left by elements of <m>R</m>. Indeed, assume <m>s+I=s'+I</m>, so that <m>s'=s+I</m>. We then have 
+                <md>
+                    <mrow>rs'\amp = r(s+i) </mrow>
+                    <mrow> \amp = rs+ri</mrow>
+                    <mrow> \amp = rs+i'</mrow>
+                </md>
+                for some <m>i'\in I</m>, showing that <m>rs+I=rs'+I</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                If <m>R</m> is commutative and <m>S</m> is any <m>R</m>-algebra with defining ring homomorphism <m>\phi\colon R\rightarrow S</m>, then <m>S</m> is an <m>R</m>-module, where module addition is addition in <m>S</m>, and scalar multiplication by <m>R</m> is defined as follows: given <m>r\in R</m> and <m>s\in S</m>, we define <m>r\cdot s=\phi(r)s</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </example>
+    <example xml:id="eg_module_field">
+    <title>Modules over fields</title>
+    <statement>
+    <p>
+    Let <m>F</m> be a field. An <m>F</m>-module <m>M</m> is the same thing as a vector space over <m>F</m>. Indeed, modules should be considered as a straightforward generalization of a vector space, where the base field of the vector space is replaced with an arbitrary ring.  
+    </p>
+    </statement>
+    
+    </example>
+    <example xml:id="eg_module_Z">
+    <title>Modules over <m>\Z</m></title>
+    <statement>
+    <p>
+    A <m>\Z</m>-module is the same thing as an abelian group. Indeed, if <m>M</m> is a <m>\Z</m>-module, then in particular <m>M</m> is a an abelian group with respect to its module addition. Conversely, given an abelian group <m>(G,+)</m>, it is easy to see (using an induction argument) that the operation
+    <md>
+        <mrow>\Z\times G\amp\rightarrow G </mrow>
+        <mrow>(n,g) \amp \mapsto ng </mrow>
+    </md>
+    is the unique scalar multiplication by <m>\Z</m> that can be defined on <m>G</m>. Recall that for an abelian group <m>(G,+)</m>, given <m>n\in \Z</m> and <m>g\in G</m>, we define <m>ng</m> is defined to be the <m>n</m>-fold addition of <m>g</m> with itself if <m>n</m> is positive, the <m>\abs{n}</m>-fold addition of <m>-g</m> with itself if <m>n</m> is negative, and <m>0_G</m> if <m>n=0</m>. 
+    </p>
+    </statement>
+   
+    </example>
+    
+    
+    
+
+</section>

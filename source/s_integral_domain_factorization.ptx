@@ -58,7 +58,7 @@
             Similarly, it is possible (but more difficult) to show that <m>f(x)=x^4-72x^2+4</m> is irreducible modulo <m>n</m> for <em>all</em> nonzero integers <m>n</m>, and yet <m>f</m> is irreducible in <m>\Z[x]</m>. 
         </p>
         </remark>
-        <example xml:id="eg_reduction_mod_I">
+        <example xml:id="eg_reduction_mod_I_cubic">
         <title>Reduction mod <m>I</m>: cubic</title>
         <statement>
         <p>
@@ -81,7 +81,7 @@
 
         </solution>
         </example>
-        <example xml:id="eg_reduction_mod_I">
+        <example xml:id="eg_reduction_mod_I_quartic">
         <title>Reduction mod <m>I</m>: quartic</title>
         <statement>
         <p>
@@ -145,6 +145,106 @@
         </p>
         </proof>
         </theorem>
-        
+        <p>
+            It's great when Eisenstein's criterion can be used, but its scope of application is unfortunately somewhat narrow, as the following somewhat artificial examples illustrate. 
+        </p>
+        <example xml:id="eg_eisenstein_z">
+        <title>Eisenstein</title>
+        <statement>
+        <p>
+        Show that the given <m>f\in R[x]</m> is irreducible. 
+        <ol>
+            <li>
+                <p>
+                    <m>f(x)=x^{17}-30x^2+600x-180\in \Z[x]</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>f(x)=x^4+26x^2+(6+4i)\in \Z[i][x]</m>
+                </p>
+            </li>
+        </ol> 
+        </p>
+        </statement>
+        <solution>
+        <p>
+        <ol>
+            <li>
+                <p>
+                    <m>f</m> is Eisenstein with respect to the prime ideal <m>(5)</m>, thus irreducible. Note that <m>f</m> is not Eisenstein with respect to <m>2</m> or <m>3</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>f</m> is Eisenstein with respect to the prime ideal <m>(3+2i)</m> in <m>\Z[i]</m>. Note that <m>(2)</m> is not prime in <m>\Z[i]</m>, and <m>f</m> is not Eisenstein with respect to the prime ideal <m>(1+i)</m> lying over <m>(2)</m>, since <m>6+4i=2(3+2i)\in (1+i)^2</m>.
 
+                </p>
+            </li>
+        </ol>
+        </p>
+        </solution>
+        </example>
+        
+       <example xml:id="eg_eisenstein_nth_root">
+       <title>Eisenstein: <m>n</m>-th roots in UFD</title>
+       <statement>
+       <p>
+       Let <m>R</m> be a UFD, and let <m>a\in R-R^*</m> satisfy <m>v_p(a)\leq 1</m> for all irreducible elements <m>p\in R</m>. Show that <m>f(x)=x^n-a</m> is irreducible in <m>R[x]</m> for any positive integer <m>n</m>. 
+       </p>
+       </statement>
+       <solution>
+       <p>
+       In general, for any element <m>b\in R</m> and irreducible element <m>p</m>, setting <m>P=(p)</m>, we have 
+       <md>
+        <mrow>a\in P^n \amp \iff p^n\mid a</mrow>
+        <mrow> \amp \iff v_p(a)\geq n</mrow>
+       </md>.
+        Since <m>a</m> is not a unit and <m>v_p(a)\leq 1</m> for all irreducible elements <m>p</m>, there is some irreducible element <m>p</m> such that <m>v_p(a)=1</m>. It follows that <m>a\in P-P^2</m>, and thus that <m>f(x)=x^n-a</m> is Eisenstein with respect to <m>(p)</m>, making it irreducible. 
+       </p>
+       </solution>
+       </example>
+       <p>
+        Occasionally we can make indirect use of Eisenstein's criterion, as the next result illustrates. 
+       </p>
+       <theorem xml:id="th_pth_cyclo">
+       <title>Cyclotomic polynomial: <m>p</m> prime</title>
+       <statement>
+       <p>
+       Let <m>p</m> be a prime integer and let <m>\Phi_p(x)=x^{p-1}+x^{p-2}+\cdots +x+1</m>.
+        <ol>
+            <li>
+                <p>
+                    <m>\Phi_p(x)</m> is irreducible in <m>\Q[x]</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>\zeta=e^{2\pi i/p}=\cos(2\pi/p)+\sin(2\pi/p)i</m>, and let <m>\Q[\zeta]=\{g(\zeta)\in \C\mid g\in \Q[x]\}</m>, the subring of <m>\C</m> generated over <m>\Q</m> by <m>\zeta</m>. We have 
+                    <md>
+                        <mrow>\Q[x]/(\Phi_p(x)) \amp \cong \Q[\zeta]</mrow>
+                    </md>.
+                    In particular, <m>\Q[\zeta]</m> is a subfield of <m>\C</m> of dimension <m>p-1</m> as a <m>\Q</m>-vector space. 
+                </p>
+            </li>
+        </ol>
+       </p>
+       </statement>
+       <proof>
+       <p>
+       </p>
+       </proof>
+       </theorem>
+       <remark>
+        <title>Primitive roots of unity</title>
+        <p>
+            In general, given positive integer <m>n</m>, the complex number <m>\zeta_n=e^{2\pi/n}=\cos(2\pi/n)+\sin(2\pi/n)i</m> is called a <term>primitive <m>n</m>-th root of unity</term>. This is because as an element of <m>\C^*</m>, we have <m>\ord \zeta_n=n</m>. As with prime integers the set
+            <md>
+                <mrow>\Q[\zeta_n] \amp = \{g(\zeta_n)\in \C\mid g\in \Q[x]\}</mrow>
+            </md>
+            is in fact a subfield of <m>\C</m> that we call the <m>n</m>-th cyclotomic extension of <m>\Q</m>. Since it is a <m>\Q</m>-algebra, it has a well-defined dimension as a <m>\Q</m>-vector space. For <m>n=p</m>, the result above tells us that the <m>p</m>-th cyclotomic extension has <m>\Q</m>-dimension <m>p-1</m>. What do you think the dimension is for general <m>n</m>? You guessed it: <m>\phi(n)</m>. This will be one of the big results of the field theory portion of this course. 
+        </p>
+        
+       </remark>
+       
 </section>

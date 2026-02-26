@@ -172,6 +172,14 @@
     </p>
     <definition xml:id="d_changecoefficient_evaluation_reduction">
     <title>Change of coefficients, reduction, evaluation</title>
+    <notation>
+        <usage><m>f^\phi</m></usage>
+      <description>change of coefficients of <m>f</m> under <m>\phi</m></description>
+    </notation>
+    <notation>
+        <usage><m>f\boldmod I</m></usage>
+      <description>reduction of <m>f</m> modulo <m>I</m></description>
+    </notation>
     <statement>
     <p>
     Let <m>R</m> be a nonzero commutative ring. 
@@ -195,7 +203,7 @@
                     <mrow>R[x] \amp \rightarrow R/I[x]</mrow>
                     <mrow>f(x)=\sum_{k=0}^na_kx^k \amp \mapsto f^\pi(x)=\sum_{k=0}^n\overline{a_k}x^k</mrow>
                 </md>
-                the <term>reduction modulo <m>I</m></term> map, and will often write <m>\overline{f}</m> for <m>f^\pi</m>. 
+                the <term>reduction modulo <m>I</m></term> map. In this setting will often write <m>\overline{f}</m> or <m>f\boldmod I</m> for <m>f^\pi</m>. Moreover, in the special case of a nonzero ideal <m>(n)\subseteq \Z</m>, we may also write <m>f\boldmod n</m> instead of <m>f\boldmod (n)</m>. 
             </p>
         </li>
         <li>
@@ -215,7 +223,7 @@
             <md number="yes">
                 <mrow>\phi(f) \amp = f^\psi(s)</mrow>
             </md>,
-            where <m>\psi\colon R\rightarrow S</m> is a ring homomorphism and <m>s\in S</m>. In other words the homomorphism <m>\phi</m> decomposes uniquelyas follows:
+            where <m>\psi\colon R\rightarrow S</m> is a ring homomorphism and <m>s\in S</m>. In other words the homomorphism <m>\phi</m> decomposes uniquely as follows:
         </p>
         <figure xml:id="fig_poly_ring_homo">
             <caption>Decomposition of a polynomial ring homomorphism</caption>
