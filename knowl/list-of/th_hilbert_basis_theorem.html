@@ -27,16 +27,44 @@
 <div class="para">It is clear that the zero ideal <span class="process-math">\(I=(0)\)</span> is finitely generated. Let <span class="process-math">\(I\)</span> be any nonzero ideal <span class="process-math">\(I\text{.}\)</span> Define the following subsets of <span class="process-math">\(R\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
-\begin{align}
-L(I) \amp = \{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I\}\tag{2.15.2}\\
-L_d(I) \amp =\{0\}\cup\{a\in R\mid a \text{ is leading term of some } f\in I, \deg f=d\}\text{.}\tag{2.15.3}
-\end{align}
+\begin{align*}
+L(I) \amp = \{0\}\cup\{a\in R\mid a \text{ is leading coeff. of some } f\in I\}\\
+L_d(I) \amp =\{0\}\cup\{a\in R\mid a \text{ is leading coeff. of some } f\in I, \deg f=d\}\text{.}
+\end{align*}
 </div>
 <div class="para">It is straightforward to show the sets <span class="process-math">\(L\)</span> and <span class="process-math">\(L_d\)</span> are in fact ideals of <span class="process-math">\(R\text{.}\)</span> The general idea used for both cases is the following: if <span class="process-math">\(a\)</span> is the leading coefficient of <span class="process-math">\(f\in I\)</span> and <span class="process-math">\(b\)</span> is the leading coefficient of <span class="process-math">\(g\in I\text{,}\)</span> then <span class="process-math">\(a+b\)</span> is either equal to zero, or is the leading coefficient of <span class="process-math">\(f+g\in I\text{;}\)</span> and <span class="process-math">\(ra\)</span> is either equal to zero, or is the leading coefficient of <span class="process-math">\(rf\in I\)</span> for any <span class="process-math">\(r\in R\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">By assumption, <span class="process-math">\(R\)</span> is Noetherian. Thus we have <span class="process-math">\(I=(a_1,a_2,\dots, a_n)\text{,}\)</span> where <span class="process-math">\(a_i\)</span> is the leading term of some polynomial <span class="process-math">\(f_i\in I\text{.}\)</span>  for some polynomials <span class="process-math">\(f_k\in R[x]\text{.}\)</span> Let <span class="process-math">\(m=\max\{\deg f_1,\deg f_2,\dots, \deg f_n\}\text{,}\)</span> and let <span class="process-math">\(J=\sum_{d=0}^m I_d\text{.}\)</span> Again, since <span class="process-math">\(R\)</span> is Noetherian, <span class="process-math">\(J=(\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical">
+<div class="para">By assumption, <span class="process-math">\(R\)</span> is Noetherian. Thus we have</div>
+<div class="displaymath process-math">
+\begin{align}
+I \amp =(a_1,a_2,\dots, a_n)\tag{2.15.2}\\
+I_d \amp =(b_{1,d},b_{2,d},\dots, b_{n_d,d})\text{,}\tag{2.15.3}
+\end{align}
+</div>
+<div class="para">where <span class="process-math">\(a_i\)</span> is the leading coefficient of some polynomial <span class="process-math">\(f\in I\)</span> for all <span class="process-math">\(1\leq i\leq n\text{,}\)</span> and similarly, <span class="process-math">\(b_{j,d}\)</span> is the leading coefficient of some polynomial <span class="process-math">\(g_{j,d}\in I\)</span> of degree <span class="process-math">\(d\text{.}\)</span> Let <span class="process-math">\(m=\max\{ \deg f_i\mid 1\leq i\leq n\}\text{,}\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{align*}
+A \amp =\{f_1,f_2,\dots, f_n\}\cup_{d=0}^m\{g_{j,d}\mid 1\leq j\leq n_d\}\text{.}
+\end{align*}
+</div>
+<div class="para">We claim that <span class="process-math">\(I=(A)\text{,}\)</span> and hence that <span class="process-math">\(I\)</span> is finitely generated, since <span class="process-math">\(A\)</span> is a finite set. It is clear that <span class="process-math">\((A)\subseteq I\text{,}\)</span> since <span class="process-math">\(A\subseteq I\text{.}\)</span> Assume by contradiction that <span class="process-math">\(I-(A)\)</span> is nonempty. It follows that there is an element (necessarily nonzero) <span class="process-math">\(f\in I-(A)\)</span> of minimal degree.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Case 1: <span class="process-math">\(\deg f\geq m\text{.}\)</span> Let <span class="process-math">\(\deg f_i=n_i\text{.}\)</span> By assumption <span class="process-math">\(n_i\leq m\leq \deg f\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> The leading coefficient <span class="process-math">\(a\)</span> of <span class="process-math">\(f\)</span> is an element of <span class="process-math">\(L(I)\text{,}\)</span> and thus can be expressed as</div>
+<div class="displaymath process-math">
+\begin{align*}
+a \amp =\sum_{i=1}^nc_ia_i
+\end{align*}
+</div>
+<div class="para">for some <span class="process-math">\(c_i\in R\text{.}\)</span> Let <span class="process-math">\(g(x)=\sum_{i=1}^{n} c_i x^{\deg f-\deg f_i}f_i\text{.}\)</span> Note that <span class="process-math">\(g\in (A)\text{,}\)</span> from whence it follows that <span class="process-math">\(f-g\notin (A)\)</span> (since otherwise <span class="process-math">\(f\in (A)\)</span>). But then <span class="process-math">\(f-g\)</span> is an element of <span class="process-math">\(I-(A)\)</span> of degree less than <span class="process-math">\(\deg f\text{,}\)</span> contradicting the choice of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Case 2: <span class="process-math">\(\deg f^lt; m\text{.}\)</span> In this case the leading coefficient <span class="process-math">\(a\)</span> of <span class="process-math">\(f\)</span> is an element of <span class="process-math">\(L_d(I)\text{,}\)</span> where <span class="process-math">\(d=\deg f\text{,}\)</span> and similarly as above, the poly<div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proof 2.15.6.1"><a href="#th_hilbert_basis_theorem-3" title="Copy heading and permalink for Proof 2.15.6.1" aria-label="Copy heading and permalink for Proof 2.15.6.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_poly_general.html#th_hilbert_basis_theorem">in-context</a></span>
 </body>
