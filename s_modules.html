@@ -215,6 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 \DeclareMathOperator{\diver}{div}
 \DeclareMathOperator{\flux}{flux}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Isom}{Isom}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\SL}{SL}
@@ -561,30 +562,30 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \end{align*}
 </div>
 <div class="para">satisfying the following axioms.</div>
-<ol class="decimal" id="d_module-2-1-7">
+<ol class="lower-roman ol-marker-2" id="d_module-2-1-7">
 <li id="d_module-2-1-7-1">
 <div class="para" id="d_module-2-1-7-1-1">
 <span class="process-math">\((r+s)m=rm+sm\)</span> for all <span class="process-math">\(r,s\in R\)</span> and <span class="process-math">\(m\in M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module-2-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#d_module-2-1-7-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item i"><a href="#d_module-2-1-7-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
 </li>
 <li id="d_module-2-1-7-2">
 <div class="para" id="d_module-2-1-7-2-1">
 <span class="process-math">\(r(m+n)=rm+rn\)</span> for all <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(m,n\in M\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module-2-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#d_module-2-1-7-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item ii"><a href="#d_module-2-1-7-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
 </li>
 <li id="d_module-2-1-7-3">
 <div class="para" id="d_module-2-1-7-3-1">
 <span class="process-math">\((rs)m=r(sm)\)</span> for all <span class="process-math">\(r,s\in R\)</span> and <span class="process-math">\(m\in M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module-2-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#d_module-2-1-7-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item iii"><a href="#d_module-2-1-7-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
 </li>
 <li id="d_module-2-1-7-4">
 <div class="para" id="d_module-2-1-7-4-1">
 <span class="process-math">\(1m=m\)</span> for all <span class="process-math">\(m\in M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module-2-1-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#d_module-2-1-7-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item iv"><a href="#d_module-2-1-7-4" title="Copy heading and permalink for Item iv" aria-label="Copy heading and permalink for Item iv">🔗</a></div>
 </li>
 </ol>
 <div class="para">We call the operations <span class="process-math">\(M\times M\xrightarrow{+}M\)</span> and <span class="process-math">\(R\times M\xrightarrow{\cdot} M\)</span> <dfn class="terminology">module addition</dfn> and <dfn class="terminology">scalar multiplication by <span class="process-math">\(R\)</span></dfn>, respectively.</div>
@@ -630,7 +631,16 @@ rs'\amp = r(s+i) \\
 <div class="autopermalink" data-description="Item 3"><a href="#eg_modules_R-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="eg_modules_R-2-1-2-4">
-<div class="para" id="eg_modules_R-2-1-2-4-1">If <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(S\)</span> is any <span class="process-math">\(R\)</span>-algebra with defining ring homomorphism <span class="process-math">\(\phi\colon R\rightarrow S\text{,}\)</span> then <span class="process-math">\(S\)</span> is an <span class="process-math">\(R\)</span>-module, where module addition is addition in <span class="process-math">\(S\text{,}\)</span> and scalar multiplication by <span class="process-math">\(R\)</span> is defined as follows: given <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(s\in S\text{,}\)</span> we define <span class="process-math">\(r\cdot s=\phi(r)s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_modules_R-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="eg_modules_R-2-1-2-4-1">
+<div class="para">If <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are rings and <span class="process-math">\(\phi\colon R\rightarrow S\text{,}\)</span> then <span class="process-math">\(S\)</span> has the structure of an <span class="process-math">\(R\)</span>-module. Module addition is just ring addition in <span class="process-math">\(S\text{,}\)</span> and scalar multiplication by elements of <span class="process-math">\(R\)</span> is defined as follows:</div>
+<div class="displaymath process-math" id="eg_modules_R-2-1-2-4-1-8">
+\begin{align*}
+R\times S \amp \rightarrow S\\
+(r,s) \amp \mapsto \phi(r)s\text{.}
+\end{align*}
+</div>
+<div class="para">That this satisfies the scalar multiplication axioms follows in a straightforward manner from (a) the fact that <span class="process-math">\(\phi\)</span> is a ring homomorphism, (b) the fact that <span class="process-math">\(R\)</span> is a ring, and (c) the fact that <span class="process-math">\(S\)</span> is a ring. You are invited to verify this yourself.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_modules_R-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 4"><a href="#eg_modules_R-2-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
@@ -657,7 +667,226 @@ rs'\amp = r(s+i) \\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_module_Z-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.17.4: Modules over \Z"><a href="#eg_module_Z" title="Copy heading and permalink for Example 2.17.4: Modules over \Z" aria-label="Copy heading and permalink for Example 2.17.4: Modules over \Z">🔗</a></div></article><div class="autopermalink" data-description="Section 2.17: R-modules"><a href="#s_modules" title="Copy heading and permalink for Section 2.17: R-modules" aria-label="Copy heading and permalink for Section 2.17: R-modules">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 2.17.4: Modules over \Z"><a href="#eg_module_Z" title="Copy heading and permalink for Example 2.17.4: Modules over \Z" aria-label="Copy heading and permalink for Example 2.17.4: Modules over \Z">🔗</a></div></article><article class="definition definition-like" id="d_submodule"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Submodule.</span>
+</h3>
+<div class="para logical" id="d_submodule-2-1">
+<div class="para">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. A <dfn class="terminology">submodule</dfn> of <span class="process-math">\(M\)</span> is a subset <span class="process-math">\(N\subseteq M\)</span> satisfying the following properties.</div>
+<ol class="lower-roman ol-marker-2" id="d_submodule-2-1-6">
+<li id="d_submodule-2-1-6-1">
+<div class="para" id="d_submodule-2-1-6-1-1">
+<span class="process-math">\(N\)</span> is a subgroup of <span class="process-math">\((M,+)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_submodule-2-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#d_submodule-2-1-6-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="d_submodule-2-1-6-2">
+<div class="para" id="d_submodule-2-1-6-2-1">
+<span class="process-math">\(N\)</span> is closed under scalar multiplication: i.e., if <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(m\in N\text{,}\)</span> then <span class="process-math">\(rm\in N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_submodule-2-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#d_submodule-2-1-6-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_submodule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.17.5: Submodule"><a href="#d_submodule" title="Copy heading and permalink for Definition 2.17.5: Submodule" aria-label="Copy heading and permalink for Definition 2.17.5: Submodule">🔗</a></div></article><article class="definition definition-like" id="d_module_homo"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module homomorphism.</span>
+</h3>
+<div class="para" id="d_module_homo-4-1">Let <span class="process-math">\(R\)</span> be a ring. An <dfn class="terminology"><span class="process-math">\(R\)</span>-module homormorphism</dfn> between two <span class="process-math">\(R\)</span>-modules <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is a group homomorphism <span class="process-math">\(\phi\colon M\rightarrow N
+\text{,}\)</span> satisfying <span class="process-math">\(\phi(rm)=r\phi(m)\)</span> for all <span class="process-math">\(r\in R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module_homo-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="d_module_homo-4-2">The set of all <span class="process-math">\(R\)</span>-module homomorphisms from <span class="process-math">\(M\)</span> to <span class="process-math">\(N\)</span> is denoted <span class="process-math">\(\Hom_R(M,N)\text{.}\)</span> An <span class="process-math">\(R\)</span>-module homomorphism from <span class="process-math">\(M\)</span> to itself is called an <dfn class="terminology"><span class="process-math">\(R\)</span>-module endomorphism</dfn>. We write <span class="process-math">\(\End_R(M)=\Hom_R(M,M)\text{:}\)</span> i.e., <span class="process-math">\(\End_R(M)\)</span> is the set of all endormorphisms of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_module_homo-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.17.6: Module homomorphism"><a href="#d_module_homo" title="Copy heading and permalink for Definition 2.17.6: Module homomorphism" aria-label="Copy heading and permalink for Definition 2.17.6: Module homomorphism">🔗</a></div></article><article class="activity project-like" id="spec_mod_homs"><h3 class="heading">
+<span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module structure of <span class="process-math">\(\Hom_R(M,N)\)</span>.</span>
+</h3>
+<div class="para logical" id="spec_mod_homs-2-1">
+<div class="para">Let <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> be <span class="process-math">\(R\)</span>-modules. Given <span class="process-math">\(\phi,\psi\in \Hom_R(M,N)\)</span> and <span class="process-math">\(r\in R\text{,}\)</span> we define <span class="process-math">\(R\)</span>-module homomorphisms <span class="process-math">\(\phi+\psi\)</span> and <span class="process-math">\(r\phi\)</span> as follows:</div>
+<div class="displaymath process-math" id="spec_mod_homs-2-1-9">
+\begin{align}
+(\phi+\psi)(m) \amp = \phi(m)+\psi(m)\tag{2.17.1}\\
+(r\phi)(m) \amp =r\phi(m)\text{.}\tag{2.17.2}
+\end{align}
+</div>
+<div class="para">The operations</div>
+<div class="displaymath process-math" id="spec_mod_homs-2-1-10">
+\begin{align*}
+\Hom_R(M,N)\times \Hom_R(M,N) \amp \rightarrow \Hom_R(M,N) \amp R\times \Hom_R(M,N)\amp \rightarrow \Hom_R(M,N)\\
+(\phi,\psi) \amp \mapsto \phi+\psi \amp (r,\phi)\amp \mapsto r\phi
+\end{align*}
+</div>
+<div class="para">give <span class="process-math">\(\Hom_R(M,N)\)</span> the structure of an <span class="process-math">\(R\)</span>-module.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#spec_mod_homs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="spec_mod_homs-2-2">Additionally, <span class="process-math">\(\End_R(M)\)</span> is a ring with respect to addition and composition, and the map <span class="process-math">\(\phi\colon R\rightarrow \End_R(M)\)</span> is a ring homomorphism. If <span class="process-math">\(R\)</span> is commutative, the homomorphism <span class="process-math">\(\phi\)</span> gives <span class="process-math">\(\End_R(M)\)</span> the structure of an <span class="process-math">\(R\)</span>-algebra.<div class="autopermalink" data-description="Paragraph"><a href="#spec_mod_homs-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Specimen 34: Module structure of \Hom_R(M,N)"><a href="#spec_mod_homs" title="Copy heading and permalink for Specimen 34: Module structure of \Hom_R(M,N)" aria-label="Copy heading and permalink for Specimen 34: Module structure of \Hom_R(M,N)">🔗</a></div></article><article class="proposition theorem-like" id="prop_mod_constructions"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Submodule constructions.</span>
+</h3>
+<div class="para logical" id="prop_mod_constructions-2-1">
+<div class="para">Let <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> be <span class="process-math">\(R\)</span>-modules.</div>
+<ol class="decimal" id="prop_mod_constructions-2-1-4">
+<li id="prop_mod_constructions-2-1-4-1">
+<div class="para" id="prop_mod_constructions-2-1-4-1-1">If <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are submodules of <span class="process-math">\(M\text{,}\)</span> then <span class="process-math">\(M_1+M_2\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#prop_mod_constructions-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-2">
+<div class="para" id="prop_mod_constructions-2-1-4-2-1">If <span class="process-math">\((M_i)_{i\in I}\)</span> is a family of submodules of <span class="process-math">\(M\)</span> indexed by the nonempty set <span class="process-math">\(I\text{,}\)</span> then <span class="process-math">\(\bigcap_{i\in I}M_i\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#prop_mod_constructions-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-3">
+<div class="para logical" id="prop_mod_constructions-2-1-4-3-1">
+<div class="para">Let <span class="process-math">\(\phi\in \Hom_R(M,N)\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="prop_mod_constructions-2-1-4-3-1-2">
+<li id="prop_mod_constructions-2-1-4-3-1-2-1">
+<div class="para" id="prop_mod_constructions-2-1-4-3-1-2-1-1">
+<span class="process-math">\(\ker\phi\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.a"><a href="#prop_mod_constructions-2-1-4-3-1-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-3-1-2-2">
+<div class="para" id="prop_mod_constructions-2-1-4-3-1-2-2-1">If <span class="process-math">\(N'\)</span> is a submodule of <span class="process-math">\(N\text{,}\)</span> then <span class="process-math">\(\phi^{-1}(N')\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.b"><a href="#prop_mod_constructions-2-1-4-3-1-2-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-3-1-2-3">
+<div class="para" id="prop_mod_constructions-2-1-4-3-1-2-3-1">If <span class="process-math">\(M'\)</span> is a submodule of <span class="process-math">\(M\text{,}\)</span> then <span class="process-math">\(\phi(M')\)</span> is submodule of <span class="process-math">\(N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.c"><a href="#prop_mod_constructions-2-1-4-3-1-2-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#prop_mod_constructions-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-4">
+<div class="para logical" id="prop_mod_constructions-2-1-4-4-1">
+<div class="para">Given a subset <span class="process-math">\(A\)</span> of <span class="process-math">\(M\text{,}\)</span> let <span class="process-math">\(\mathcal{M}=\{M'\subseteq M\mid M' \text{ a submodule containing} A\}\text{,}\)</span> and define <span class="process-math">\((A)=\bigcap_{M'\in \mathcal{M}}M'\text{,}\)</span> the intersection of all submodules of <span class="process-math">\(M\)</span> containing <span class="process-math">\(A\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="prop_mod_constructions-2-1-4-4-1-7">
+<li id="prop_mod_constructions-2-1-4-4-1-7-1">
+<div class="para" id="prop_mod_constructions-2-1-4-4-1-7-1-1">
+<span class="process-math">\((A)\)</span> is the smallest submodule of <span class="process-math">\(M\)</span> (with respect to inclusion) containing <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-4-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.a"><a href="#prop_mod_constructions-2-1-4-4-1-7-1" title="Copy heading and permalink for Item 4.a" aria-label="Copy heading and permalink for Item 4.a">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-4-1-7-2">
+<div class="para logical" id="prop_mod_constructions-2-1-4-4-1-7-2-1">
+<div class="para">If <span class="process-math">\(A=\emptyset\text{,}\)</span> then <span class="process-math">\((A)=\{0\}\text{.}\)</span> Otherwise,</div>
+<div class="displaymath process-math" id="prop_mod_constructions-2-1-4-4-1-7-2-1-3">
+\begin{align*}
+(A) \amp =\left\{\sum_{i=1}^{n}r_im_i\mid n\in \Z_{&gt; 0}, r_i\in R, m_i\in A\right\} \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-4-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.b"><a href="#prop_mod_constructions-2-1-4-4-1-7-2" title="Copy heading and permalink for Item 4.b" aria-label="Copy heading and permalink for Item 4.b">🔗</a></div>
+</li>
+<li id="prop_mod_constructions-2-1-4-4-1-7-3">
+<div class="para logical" id="prop_mod_constructions-2-1-4-4-1-7-3-1">
+<div class="para">Given <span class="process-math">\(\phi\in \Hom_R(M,N)\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="prop_mod_constructions-2-1-4-4-1-7-3-1-2">
+\begin{align*}
+\phi((A)) \amp = (\phi(A))\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-4-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.c"><a href="#prop_mod_constructions-2-1-4-4-1-7-3" title="Copy heading and permalink for Item 4.c" aria-label="Copy heading and permalink for Item 4.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#prop_mod_constructions-2-1-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.17.7: Submodule constructions"><a href="#prop_mod_constructions" title="Copy heading and permalink for Proposition 2.17.7: Submodule constructions" aria-label="Copy heading and permalink for Proposition 2.17.7: Submodule constructions">🔗</a></div></article><details id="prop_mod_constructions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop_mod_constructions-3-1">Proof by delegation.<div class="autopermalink" data-description="Paragraph"><a href="#prop_mod_constructions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.17.7.1"><a href="#prop_mod_constructions-3" title="Copy heading and permalink for Proof 2.17.7.1" aria-label="Copy heading and permalink for Proof 2.17.7.1">🔗</a></div></article></details><article class="definition definition-like" id="d_Rlinear_combo"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(R\)</span>-linear combination.</span>
+</h3>
+<div class="para" id="d_Rlinear_combo-2-1">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span> module, and let <span class="process-math">\(A\)</span> a subset of <span class="process-math">\(M\text{.}\)</span> An <dfn class="terminology"><span class="process-math">\(R\)</span>-linear combination</dfn> of the elements of <span class="process-math">\(A\)</span> is an element of <span class="process-math">\(M\)</span> of the form <span class="process-math">\(\sum_{i=1}^{n}r_im_i\text{,}\)</span> where <span class="process-math">\(n\)</span> is a positive integer, <span class="process-math">\(m_1,m_2,\dots, m_n\in A\text{,}\)</span> and <span class="process-math">\(r_1,r_2,\dots, r_n\in R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_Rlinear_combo-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.17.8: R-linear combination"><a href="#d_Rlinear_combo" title="Copy heading and permalink for Definition 2.17.8: R-linear combination" aria-label="Copy heading and permalink for Definition 2.17.8: R-linear combination">🔗</a></div></article><article class="definition definition-like" id="d_submodule_generated"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generated submodule.</span>
+</h3>
+<div class="para" id="d_submodule_generated-2-1">Given an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> and a subset <span class="process-math">\(A\subseteq M\text{,}\)</span> the set <span class="process-math">\((A)\)</span> defined as the intersection of all submodules of <span class="process-math">\(M\)</span> containing <span class="process-math">\(A\)</span> is called the <dfn class="terminology">submodule of <span class="process-math">\(M\)</span> generated by <span class="process-math">\(A\)</span></dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#d_submodule_generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.17.9: Generated submodule"><a href="#d_submodule_generated" title="Copy heading and permalink for Definition 2.17.9: Generated submodule" aria-label="Copy heading and permalink for Definition 2.17.9: Generated submodule">🔗</a></div></article><article class="remark remark-like" id="s_modules-12"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generated submodules and span.</span>
+</h3>
+<div class="para" id="s_modules-12-2">The concrete description of <span class="process-math">\((A)\)</span> as the set of <span class="process-math">\(R\)</span>-linear combinations of elements of <span class="process-math">\(A\)</span> is the <span class="process-math">\(R\)</span>-module analogue of the <em class="emphasis">span</em> of a collection of vectors. Later we will see an analogue of the the notion of linear independence.<div class="autopermalink" data-description="Paragraph"><a href="#s_modules-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.17.10: Generated submodules and span"><a href="#s_modules-12" title="Copy heading and permalink for Remark 2.17.10: Generated submodules and span" aria-label="Copy heading and permalink for Remark 2.17.10: Generated submodules and span">🔗</a></div></article><article class="activity project-like" id="spec_module_quotient"><h3 class="heading">
+<span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Module quotients.</span>
+</h3>
+<div class="para" id="spec_module_quotient-2-1">Let <span class="process-math">\(N\)</span> be a submodule of the <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{.}\)</span> We define a scalar multiplication on the quotient group <span class="process-math">\(M/N\)</span> as follows: given <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(m+I\in M/N\text{,}\)</span> <span class="process-math">\(r(M+N)=rm+N\text{.}\)</span> This is a well-defined operation, and <span class="process-math">\(M/N\text{,}\)</span> together with coset addition and this scalar multiplication, is an <span class="process-math">\(R\)</span>-module called the <dfn class="terminology">quotient module</dfn> of <span class="process-math">\(M\)</span> by <span class="process-math">\(N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_module_quotient-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Specimen 35: Module quotients"><a href="#spec_module_quotient" title="Copy heading and permalink for Specimen 35: Module quotients" aria-label="Copy heading and permalink for Specimen 35: Module quotients">🔗</a></div></article><article class="theorem theorem-like" id="th_module_isom_ths"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The isomorphism theorems for modules.</span>
+</h3>
+<div class="para logical" id="th_module_isom_ths-2-1">
+<div class="para">Let <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> be <span class="process-math">\(R\)</span>-modules.</div>
+<ol class="decimal ol-marker-3" id="th_module_isom_ths-2-1-4" start="0">
+<li id="th_module_isom_ths-2-1-4-1">
+<div class="para" id="th_module_isom_ths-2-1-4-1-1">Let <span class="process-math">\(M'\)</span> be a submodule of the <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> and let <span class="process-math">\(\pi\colon M\rightarrow M/M'\)</span> be the quotient map. Given any <span class="process-math">\(\phi\in \Hom_R(M,N)\)</span> satisfying <span class="process-math">\(M'\subseteq \ker \phi\text{,}\)</span> there is a unique <span class="process-math">\(\overline{\phi}\in \Hom_R(M/M', N)\)</span> satisfying <span class="process-math">\(\overline{\phi}=\overline{\phi}\circ \pi\text{:}\)</span> namely, the map <span class="process-math">\(\overline{\phi}\colon M/M'\rightarrow N\)</span> defined as <span class="process-math">\(\overline{\phi}(m+M')=\phi(m)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#th_module_isom_ths-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_module_isom_ths-2-1-4-2">
+<div class="para" id="th_module_isom_ths-2-1-4-2-1">If <span class="process-math">\(\phi\colon M\rightarrow N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism, then <span class="process-math">\(M/\ker\phi\cong \im \phi\)</span> as <span class="process-math">\(R\)</span>-modules, and the map <span class="process-math">\(\overline{\phi}\colon M/\ker\phi\rightarrow \im N\)</span> defined as <span class="process-math">\(\overline{\phi}(m+\ker\phi)=\phi(m)\)</span> is an isomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#th_module_isom_ths-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_module_isom_ths-2-1-4-3">
+<div class="para" id="th_module_isom_ths-2-1-4-3-1">If <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are submodules of <span class="process-math">\(M\text{,}\)</span> then <span class="process-math">\((M_1+M_2)/M_2\cong M_1/M_1\cap M_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#th_module_isom_ths-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="th_module_isom_ths-2-1-4-4">
+<div class="para logical" id="th_module_isom_ths-2-1-4-4-1">
+<div class="para">Let <span class="process-math">\(\phi\colon M\rightarrow N\)</span> be a surjective <span class="process-math">\(R\)</span>-module homomorphism. If <span class="process-math">\(M'\)</span> is a submodule of <span class="process-math">\(M\)</span> containing <span class="process-math">\(\ker\phi\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="th_module_isom_ths-2-1-4-4-1-6">
+\begin{align*}
+\amp N/\phi(M')\cong M/M'\text{.}
+\end{align*}
+</div>
+<div class="para">In the special case where <span class="process-math">\(M'\)</span> is a submodule of <span class="process-math">\(M\)</span> and <span class="process-math">\(\pi\colon M\rightarrow M/M'\)</span> is a quotient map, we write <span class="process-math">\(\pi(M'')=M''/M'\)</span> for any submodule <span class="process-math">\(M''\)</span> of <span class="process-math">\(M\text{.}\)</span> Thus, in this case, if <span class="process-math">\(M''\)</span> is a submodule of <span class="process-math">\(M\)</span> containing <span class="process-math">\(M'\text{,}\)</span> the isomorphism above is written</div>
+<div class="displaymath process-math" id="th_module_isom_ths-2-1-4-4-1-16">
+\begin{align*}
+(M/M')/(M''/M') \amp \cong M/M'' \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#th_module_isom_ths-2-1-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="th_module_isom_ths-2-1-4-5">
+<div class="para logical" id="th_module_isom_ths-2-1-4-5-1">
+<div class="para">Let <span class="process-math">\(\phi\colon M\rightarrow N\)</span> be a surjective <span class="process-math">\(R\)</span>-module homomorphism. The map</div>
+<div class="displaymath process-math" id="th_module_isom_ths-2-1-4-5-1-3">
+\begin{align*}
+M' \amp \mapsto \phi(M')
+\end{align*}
+</div>
+<div class="para">defines a bijection between set of submodules of <span class="process-math">\(M\)</span> containing <span class="process-math">\(\ker\phi\)</span> and the set of a submodules of <span class="process-math">\(N\text{,}\)</span> with inverse given by the map</div>
+<div class="displaymath process-math" id="th_module_isom_ths-2-1-4-5-1-7">
+\begin{align*}
+N' \amp \mapsto \phi^{-1}(N')\text{.}
+\end{align*}
+</div>
+<div class="para">Moreover this bijection preserves inclusions, intersections, sums, and quotients of submodules.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#th_module_isom_ths-2-1-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.17.11: The isomorphism theorems for modules"><a href="#th_module_isom_ths" title="Copy heading and permalink for Theorem 2.17.11: The isomorphism theorems for modules" aria-label="Copy heading and permalink for Theorem 2.17.11: The isomorphism theorems for modules">🔗</a></div></article><details id="th_module_isom_ths-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_module_isom_ths-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_module_isom_ths-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.17.11.1"><a href="#th_module_isom_ths-3" title="Copy heading and permalink for Proof 2.17.11.1" aria-label="Copy heading and permalink for Proof 2.17.11.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 2.17: R-modules"><a href="#s_modules" title="Copy heading and permalink for Section 2.17: R-modules" aria-label="Copy heading and permalink for Section 2.17: R-modules">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_integral_domain_factorization.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

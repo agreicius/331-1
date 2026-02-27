@@ -4786,7 +4786,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.17",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-modules",
-  "body": " -modules   -module   Let be a ring. A (left) -module is a triple , where is an abelian group and is a function satisfying the following axioms.    for all and .     for all and      for all and .     for all .   We call the operations and  module addition and scalar multiplication by , respectively.     Ring objects as modules   Let be a ring.    is itself an -module, where module addition is ring addition, and scalar multiplication is ring multiplication.    If is a left ideal of , then is a left -module, where module addition is ring addition, and scalar multiplication is (left) multiplication by elements of . Note that this scalar multiplication is well-defined precisely because is closed under multiplication on the left by arbitrary elements of .    Let be a left ideal of . The quotient group is an -module, where module addition is the usual coset addition and scalar multiplication is defined as for all and . Once again, the fact that this operation is well-defined is a result of being closed under multiplication on the left by elements of . Indeed, assume , so that . We then have for some , showing that .    If is commutative and is any -algebra with defining ring homomorphism , then is an -module, where module addition is addition in , and scalar multiplication by is defined as follows: given and , we define .        Modules over fields   Let be a field. An -module is the same thing as a vector space over . Indeed, modules should be considered as a straightforward generalization of a vector space, where the base field of the vector space is replaced with an arbitrary ring.     Modules over   A -module is the same thing as an abelian group. Indeed, if is a -module, then in particular is a an abelian group with respect to its module addition. Conversely, given an abelian group , it is easy to see (using an induction argument) that the operation is the unique scalar multiplication by that can be defined on . Recall that for an abelian group , given and , we define is defined to be the -fold addition of with itself if is positive, the -fold addition of with itself if is negative, and if .    "
+  "body": " -modules   -module   Let be a ring. A (left) -module is a triple , where is an abelian group and is a function satisfying the following axioms.    for all and .     for all and      for all and .     for all .   We call the operations and  module addition and scalar multiplication by , respectively.     Ring objects as modules   Let be a ring.    is itself an -module, where module addition is ring addition, and scalar multiplication is ring multiplication.    If is a left ideal of , then is a left -module, where module addition is ring addition, and scalar multiplication is (left) multiplication by elements of . Note that this scalar multiplication is well-defined precisely because is closed under multiplication on the left by arbitrary elements of .    Let be a left ideal of . The quotient group is an -module, where module addition is the usual coset addition and scalar multiplication is defined as for all and . Once again, the fact that this operation is well-defined is a result of being closed under multiplication on the left by elements of . Indeed, assume , so that . We then have for some , showing that .    If and are rings and , then has the structure of an -module. Module addition is just ring addition in , and scalar multiplication by elements of is defined as follows: . That this satisfies the scalar multiplication axioms follows in a straightforward manner from (a) the fact that is a ring homomorphism, (b) the fact that is a ring, and (c) the fact that is a ring. You are invited to verify this yourself.        Modules over fields   Let be a field. An -module is the same thing as a vector space over . Indeed, modules should be considered as a straightforward generalization of a vector space, where the base field of the vector space is replaced with an arbitrary ring.     Modules over   A -module is the same thing as an abelian group. Indeed, if is a -module, then in particular is a an abelian group with respect to its module addition. Conversely, given an abelian group , it is easy to see (using an induction argument) that the operation is the unique scalar multiplication by that can be defined on . Recall that for an abelian group , given and , we define is defined to be the -fold addition of with itself if is positive, the -fold addition of with itself if is negative, and if .     Submodule   Let be an -module. A submodule of is a subset satisfying the following properties.    is a subgroup of .     is closed under scalar multiplication: , if and , then .        Module homomorphism    set of -module homomorphisms from to     set of -module endomorphisms of    Let be a ring. An -module homormorphism between two -modules and is a group homomorphism , satisfying for all .  The set of all -module homomorphisms from to is denoted . An -module homomorphism from to itself is called an -module endomorphism . We write : , is the set of all endormorphisms of .     Module structure of   Let and be -modules. Given and , we define -module homomorphisms and as follows: . The operations give the structure of an -module.  Additionally, is a ring with respect to addition and composition, and the map is a ring homomorphism. If is commutative, the homomorphism gives the structure of an -algebra.     Submodule constructions   Let and be -modules.   If and are submodules of , then is a submodule of .    If is a family of submodules of indexed by the nonempty set , then is a submodule of .    Let .    is a submodule of .    If is a submodule of , then is a submodule of .    If is a submodule of , then is submodule of .       Given a subset of , let , and define , the intersection of all submodules of containing .    is the smallest submodule of (with respect to inclusion) containing .    If , then . Otherwise, .    Given , we have .          Proof by delegation.     -linear combination   Let be an module, and let a subset of . An -linear combination of the elements of is an element of of the form , where is a positive integer, , and .     Generated submodule   Given an -module and a subset , the set defined as the intersection of all submodules of containing is called the submodule of generated by .     Generated submodules and span  The concrete description of as the set of -linear combinations of elements of is the -module analogue of the span of a collection of vectors. Later we will see an analogue of the the notion of linear independence.    Module quotients   Let be a submodule of the -module . We define a scalar multiplication on the quotient group as follows: given , , . This is a well-defined operation, and , together with coset addition and this scalar multiplication, is an -module called the quotient module of by .     The isomorphism theorems for modules   Let and be -modules.   Let be a submodule of the -module , and let be the quotient map. Given any satisfying , there is a unique satisfying : namely, the map defined as .    If is an -module homomorphism, then as -modules, and the map defined as is an isomorphism.    If and are submodules of , then .    Let be a surjective -module homomorphism. If is a submodule of containing , then . In the special case where is a submodule of and is a quotient map, we write for any submodule of . Thus, in this case, if is a submodule of containing , the isomorphism above is written .    Let be a surjective -module homomorphism. The map defines a bijection between set of submodules of containing and the set of a submodules of , with inverse given by the map . Moreover this bijection preserves inclusions, intersections, sums, and quotients of submodules.           "
 },
 {
   "id": "d_module",
@@ -4804,7 +4804,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.17.2",
   "title": "Ring objects as modules.",
-  "body": " Ring objects as modules   Let be a ring.    is itself an -module, where module addition is ring addition, and scalar multiplication is ring multiplication.    If is a left ideal of , then is a left -module, where module addition is ring addition, and scalar multiplication is (left) multiplication by elements of . Note that this scalar multiplication is well-defined precisely because is closed under multiplication on the left by arbitrary elements of .    Let be a left ideal of . The quotient group is an -module, where module addition is the usual coset addition and scalar multiplication is defined as for all and . Once again, the fact that this operation is well-defined is a result of being closed under multiplication on the left by elements of . Indeed, assume , so that . We then have for some , showing that .    If is commutative and is any -algebra with defining ring homomorphism , then is an -module, where module addition is addition in , and scalar multiplication by is defined as follows: given and , we define .      "
+  "body": " Ring objects as modules   Let be a ring.    is itself an -module, where module addition is ring addition, and scalar multiplication is ring multiplication.    If is a left ideal of , then is a left -module, where module addition is ring addition, and scalar multiplication is (left) multiplication by elements of . Note that this scalar multiplication is well-defined precisely because is closed under multiplication on the left by arbitrary elements of .    Let be a left ideal of . The quotient group is an -module, where module addition is the usual coset addition and scalar multiplication is defined as for all and . Once again, the fact that this operation is well-defined is a result of being closed under multiplication on the left by elements of . Indeed, assume , so that . We then have for some , showing that .    If and are rings and , then has the structure of an -module. Module addition is just ring addition in , and scalar multiplication by elements of is defined as follows: . That this satisfies the scalar multiplication axioms follows in a straightforward manner from (a) the fact that is a ring homomorphism, (b) the fact that is a ring, and (c) the fact that is a ring. You are invited to verify this yourself.      "
 },
 {
   "id": "eg_module_field",
@@ -4823,6 +4823,87 @@ var ptx_lunr_docs = [
   "number": "2.17.4",
   "title": "Modules over <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": " Modules over   A -module is the same thing as an abelian group. Indeed, if is a -module, then in particular is a an abelian group with respect to its module addition. Conversely, given an abelian group , it is easy to see (using an induction argument) that the operation is the unique scalar multiplication by that can be defined on . Recall that for an abelian group , given and , we define is defined to be the -fold addition of with itself if is positive, the -fold addition of with itself if is negative, and if .   "
+},
+{
+  "id": "d_submodule",
+  "level": "2",
+  "url": "s_modules.html#d_submodule",
+  "type": "Definition",
+  "number": "2.17.5",
+  "title": "Submodule.",
+  "body": " Submodule   Let be an -module. A submodule of is a subset satisfying the following properties.    is a subgroup of .     is closed under scalar multiplication: , if and , then .      "
+},
+{
+  "id": "d_module_homo",
+  "level": "2",
+  "url": "s_modules.html#d_module_homo",
+  "type": "Definition",
+  "number": "2.17.6",
+  "title": "Module homomorphism.",
+  "body": " Module homomorphism    set of -module homomorphisms from to     set of -module endomorphisms of    Let be a ring. An -module homormorphism between two -modules and is a group homomorphism , satisfying for all .  The set of all -module homomorphisms from to is denoted . An -module homomorphism from to itself is called an -module endomorphism . We write : , is the set of all endormorphisms of .   "
+},
+{
+  "id": "spec_mod_homs",
+  "level": "2",
+  "url": "s_modules.html#spec_mod_homs",
+  "type": "Specimen",
+  "number": "34",
+  "title": "Module structure of <span class=\"process-math\">\\(\\Hom_R(M,N)\\)<\/span>.",
+  "body": " Module structure of   Let and be -modules. Given and , we define -module homomorphisms and as follows: . The operations give the structure of an -module.  Additionally, is a ring with respect to addition and composition, and the map is a ring homomorphism. If is commutative, the homomorphism gives the structure of an -algebra.   "
+},
+{
+  "id": "prop_mod_constructions",
+  "level": "2",
+  "url": "s_modules.html#prop_mod_constructions",
+  "type": "Proposition",
+  "number": "2.17.7",
+  "title": "Submodule constructions.",
+  "body": " Submodule constructions   Let and be -modules.   If and are submodules of , then is a submodule of .    If is a family of submodules of indexed by the nonempty set , then is a submodule of .    Let .    is a submodule of .    If is a submodule of , then is a submodule of .    If is a submodule of , then is submodule of .       Given a subset of , let , and define , the intersection of all submodules of containing .    is the smallest submodule of (with respect to inclusion) containing .    If , then . Otherwise, .    Given , we have .          Proof by delegation.   "
+},
+{
+  "id": "d_Rlinear_combo",
+  "level": "2",
+  "url": "s_modules.html#d_Rlinear_combo",
+  "type": "Definition",
+  "number": "2.17.8",
+  "title": "<span class=\"process-math\">\\(R\\)<\/span>-linear combination.",
+  "body": " -linear combination   Let be an module, and let a subset of . An -linear combination of the elements of is an element of of the form , where is a positive integer, , and .   "
+},
+{
+  "id": "d_submodule_generated",
+  "level": "2",
+  "url": "s_modules.html#d_submodule_generated",
+  "type": "Definition",
+  "number": "2.17.9",
+  "title": "Generated submodule.",
+  "body": " Generated submodule   Given an -module and a subset , the set defined as the intersection of all submodules of containing is called the submodule of generated by .   "
+},
+{
+  "id": "s_modules-12",
+  "level": "2",
+  "url": "s_modules.html#s_modules-12",
+  "type": "Remark",
+  "number": "2.17.10",
+  "title": "Generated submodules and span.",
+  "body": " Generated submodules and span  The concrete description of as the set of -linear combinations of elements of is the -module analogue of the span of a collection of vectors. Later we will see an analogue of the the notion of linear independence.  "
+},
+{
+  "id": "spec_module_quotient",
+  "level": "2",
+  "url": "s_modules.html#spec_module_quotient",
+  "type": "Specimen",
+  "number": "35",
+  "title": "Module quotients.",
+  "body": " Module quotients   Let be a submodule of the -module . We define a scalar multiplication on the quotient group as follows: given , , . This is a well-defined operation, and , together with coset addition and this scalar multiplication, is an -module called the quotient module of by .   "
+},
+{
+  "id": "th_module_isom_ths",
+  "level": "2",
+  "url": "s_modules.html#th_module_isom_ths",
+  "type": "Theorem",
+  "number": "2.17.11",
+  "title": "The isomorphism theorems for modules.",
+  "body": " The isomorphism theorems for modules   Let and be -modules.   Let be a submodule of the -module , and let be the quotient map. Given any satisfying , there is a unique satisfying : namely, the map defined as .    If is an -module homomorphism, then as -modules, and the map defined as is an isomorphism.    If and are submodules of , then .    Let be a surjective -module homomorphism. If is a submodule of containing , then . In the special case where is a submodule of and is a quotient map, we write for any submodule of . Thus, in this case, if is a submodule of containing , the isomorphism above is written .    Let be a surjective -module homomorphism. The map defines a bijection between set of submodules of containing and the set of a submodules of , with inverse given by the map . Moreover this bijection preserves inclusions, intersections, sums, and quotients of submodules.          "
 },
 {
   "id": "appendix-notation",
