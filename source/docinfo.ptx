@@ -104,6 +104,7 @@
     \DeclareMathOperator{\diver}{div}
     \DeclareMathOperator{\flux}{flux}
     \DeclareMathOperator{\Hom}{Hom}
+    \DeclareMathOperator{\End}{End}
     \DeclareMathOperator{\Isom}{Isom}
     \DeclareMathOperator{\GL}{GL}
     \DeclareMathOperator{\SL}{SL}

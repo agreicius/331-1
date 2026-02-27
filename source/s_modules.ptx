@@ -13,7 +13,7 @@
         <mrow>(r,m) \amp \mapsto rm</mrow>
     </md>
     satisfying the following axioms.
-    <ol>
+    <ol marker="(i)">
         <li>
             <p>
                 <m>(r+s)m=rm+sm</m> for all <m>r,s\in R</m> and <m>m\in M</m>. 
@@ -72,7 +72,12 @@
         </li>
         <li>
             <p>
-                If <m>R</m> is commutative and <m>S</m> is any <m>R</m>-algebra with defining ring homomorphism <m>\phi\colon R\rightarrow S</m>, then <m>S</m> is an <m>R</m>-module, where module addition is addition in <m>S</m>, and scalar multiplication by <m>R</m> is defined as follows: given <m>r\in R</m> and <m>s\in S</m>, we define <m>r\cdot s=\phi(r)s</m>. 
+                If <m>R</m> and <m>S</m> are rings and <m>\phi\colon R\rightarrow S</m>, then <m>S</m> has the structure of an <m>R</m>-module. Module addition is just ring addition in <m>S</m>, and scalar multiplication by elements of <m>R</m> is defined as follows: 
+                <md>
+                    <mrow>R\times S \amp \rightarrow S</mrow>
+                    <mrow>(r,s) \amp \mapsto \phi(r)s</mrow>
+                </md>.
+                That this satisfies the scalar multiplication axioms follows in a straightforward manner from (a) the fact that <m>\phi</m> is a ring homomorphism, (b) the fact that <m>R</m> is a ring, and (c) the fact that <m>S</m> is a ring. You are invited to verify this yourself. 
             </p>
         </li>
     </ol>
@@ -100,8 +105,231 @@
     is the unique scalar multiplication by <m>\Z</m> that can be defined on <m>G</m>. Recall that for an abelian group <m>(G,+)</m>, given <m>n\in \Z</m> and <m>g\in G</m>, we define <m>ng</m> is defined to be the <m>n</m>-fold addition of <m>g</m> with itself if <m>n</m> is positive, the <m>\abs{n}</m>-fold addition of <m>-g</m> with itself if <m>n</m> is negative, and <m>0_G</m> if <m>n=0</m>. 
     </p>
     </statement>
-   
     </example>
+    <definition xml:id="d_submodule">
+   <title>Submodule</title>
+   <statement>
+   <p>
+   Let <m>M</m> be an <m>R</m>-module. A <term>submodule</term> of <m>M</m> is a subset <m>N\subseteq M</m> satisfying the following properties. 
+   <ol marker="(i)">
+    <li>
+        <p>
+            <m>N</m> is a subgroup of <m>(M,+)</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>N</m> is closed under scalar multiplication: <ie/>, if <m>r\in R</m> and <m>m\in N</m>, then <m>rm\in N</m>. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   </definition>
+   <definition xml:id="d_module_homo">
+   <title>Module homomorphism</title>
+   <notation>
+    <usage><m>\Hom_R(M,N)</m></usage>
+     <description>set of <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m></description>
+   </notation>
+   <notation>
+    <usage><m>\End_R(M)</m></usage>
+     <description>set of <m>R</m>-module endomorphisms of <m>M</m></description>
+   </notation>
+   <statement>
+   <p>
+Let <m>R</m> be a ring. An <term><m>R</m>-module homormorphism</term> between two <m>R</m>-modules <m>M</m> and <m>N</m> is a group homomorphism <m>\phi\colon M\rightarrow N
+   </m>, satisfying <m>\phi(rm)=r\phi(m)</m> for all <m>r\in R</m>. 
+</p>
+<p>
+    The set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m> is denoted <m>\Hom_R(M,N)</m>. An <m>R</m>-module homomorphism from <m>M</m> to itself is called an <term><m>R</m>-module endomorphism</term>. We write <m>\End_R(M)=\Hom_R(M,M)</m>: <ie/>, <m>\End_R(M)</m> is the set of all endormorphisms of <m>M</m>.
+</p>
+   </statement>
+   </definition>
+   <activity xml:id="spec_mod_homs">
+   <title>Module structure of <m>\Hom_R(M,N)</m></title>
+   <statement>
+   <p>
+   Let <m>M</m> and <m>N</m> be <m>R</m>-modules. Given <m>\phi,\psi\in \Hom_R(M,N)</m> and <m>r\in R</m>, we define <m>R</m>-module homomorphisms <m>\phi+\psi</m> and <m>r\phi</m> as follows:
+   <md number="yes">
+    <mrow>(\phi+\psi)(m) \amp = \phi(m)+\psi(m)</mrow>
+    <mrow>(r\phi)(m) \amp =r\phi(m)</mrow>
+   </md>.
+   The operations 
+   <md>
+    <mrow>\Hom_R(M,N)\times \Hom_R(M,N) \amp \rightarrow \Hom_R(M,N) \amp R\times \Hom_R(M,N)\amp \rightarrow \Hom_R(M,N)</mrow>
+    <mrow>(\phi,\psi) \amp \mapsto \phi+\psi \amp (r,\phi)\amp \mapsto r\phi</mrow>
+   </md>
+   give <m>\Hom_R(M,N)</m> the structure of an <m>R</m>-module. 
+   </p>
+   <p>
+    Additionally, <m>\End_R(M)</m> is a ring with respect to addition and composition, and the map <m>\phi\colon R\rightarrow \End_R(M)</m> is a ring homomorphism. If <m>R</m> is commutative, the homomorphism <m>\phi</m> gives <m>\End_R(M)</m> the structure of an <m>R</m>-algebra. 
+   </p>
+   </statement>
+   </activity>
+   <proposition xml:id="prop_mod_constructions">
+    <title>Submodule constructions</title>
+    <statement>
+        <p>
+            Let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
+            <ol>
+                <li>
+                    <p>
+                        If <m>M_1</m> and <m>M_2</m> are submodules of <m>M</m>, then <m>M_1+M_2</m> is a submodule of <m>M</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>(M_i)_{i\in I}</m> is a family of submodules of <m>M</m> indexed by the nonempty set <m>I</m>, then <m>\bigcap_{i\in I}M_i</m> is a submodule of <m>M</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let <m>\phi\in \Hom_R(M,N)</m>.
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>\ker\phi</m> is a submodule of <m>M</m>. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If <m>N'</m> is a submodule of <m>N</m>, then <m>\phi^{-1}(N')</m> is a submodule of <m>M</m>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If <m>M'</m> is a submodule of <m>M</m>, then <m>\phi(M')</m> is submodule of <m>N</m>. 
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Given a subset <m>A</m> of <m>M</m>, let <m>\mathcal{M}=\{M'\subseteq M\mid M' \text{ a submodule containing} A\}</m>, and define <m>(A)=\bigcap_{M'\in \mathcal{M}}M'</m>, the intersection of all submodules of <m>M</m> containing <m>A</m>.
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>(A)</m> is the smallest submodule of <m>M</m> (with respect to inclusion) containing <m>A</m>. 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If <m>A=\emptyset</m>, then <m>(A)=\{0\}</m>. Otherwise,
+                                    <md>
+                                        <mrow>(A) \amp =\left\{\sum_{i=1}^{n}r_im_i\mid n\in \Z_{&gt; 0}, r_i\in R, m_i\in A\right\} </mrow>
+                                    </md>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Given <m>\phi\in \Hom_R(M,N)</m>, we have 
+                                    <md>
+                                        <mrow>\phi((A)) \amp = (\phi(A))</mrow>
+                                    </md>.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Proof by delegation.
+        </p>
+    </proof>
+   </proposition>
+   <definition xml:id="d_Rlinear_combo">
+   <title><m>R</m>-linear combination</title>
+   <statement>
+   <p>
+   Let <m>M</m> be an <m>R</m> module, and let <m>A</m> a subset of <m>M</m>. An <term><m>R</m>-linear combination</term> of the elements of <m>A</m> is an element of <m>M</m> of the form <m>\sum_{i=1}^{n}r_im_i</m>, where <m>n</m> is a positive integer, <m>m_1,m_2,\dots, m_n\in A</m>, and <m>r_1,r_2,\dots, r_n\in R</m>.
+   </p>
+   </statement>
+   </definition>
+   
+   <definition xml:id="d_submodule_generated">
+   <title>Generated submodule</title>
+   <statement>
+   <p>
+   Given an <m>R</m>-module <m>M</m> and a subset <m>A\subseteq M</m>, the set <m>(A)</m> defined as the intersection of all submodules of <m>M</m> containing <m>A</m> is called the <term>submodule of <m>M</m> generated by <m>A</m></term>.
+   </p>
+   </statement>
+   </definition>
+   <remark>
+    <title>Generated submodules and span</title>
+    <p>
+        The concrete description of <m>(A)</m> as the set of <m>R</m>-linear combinations of elements of <m>A</m> is the <m>R</m>-module analogue of the <em>span</em> of a collection of vectors. Later we will see an analogue of the the notion of linear independence. 
+    </p>
+   </remark>
+   
+   <activity xml:id="spec_module_quotient">
+   <title>Module quotients</title>
+   <statement>
+   <p>
+   Let <m>N</m> be a submodule of the <m>R</m>-module <m>M</m>. We define a scalar multiplication on the quotient group <m>M/N</m> as follows: given <m>r\in R</m>, <m>m+I\in M/N</m>, <m>r(M+N)=rm+N</m>. This is a well-defined operation, and <m>M/N</m>, together with coset addition and this scalar multiplication, is an <m>R</m>-module called the <term>quotient module</term> of <m>M</m> by <m>N</m>.  
+   </p>
+   </statement>
+   </activity>
+   <theorem xml:id="th_module_isom_ths">
+   <title>The isomorphism theorems for modules</title>
+   <statement>
+   <p>
+   Let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
+   <ol marker="(0)">
+    <li>
+        <p>
+            Let <m>M'</m> be a submodule of the <m>R</m>-module <m>M</m>, and let <m>\pi\colon M\rightarrow M/M'</m> be the quotient map. Given any <m>\phi\in \Hom_R(M,N)</m> satisfying <m>M'\subseteq \ker \phi</m>, there is a unique <m>\overline{\phi}\in \Hom_R(M/M', N)</m> satisfying <m>\overline{\phi}=\overline{\phi}\circ \pi</m>: namely, the map <m>\overline{\phi}\colon M/M'\rightarrow N</m> defined as <m>\overline{\phi}(m+M')=\phi(m)</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            If <m>\phi\colon M\rightarrow N</m> is an <m>R</m>-module homomorphism, then <m>M/\ker\phi\cong \im \phi</m> as <m>R</m>-modules, and the map <m>\overline{\phi}\colon M/\ker\phi\rightarrow \im N</m> defined as <m>\overline{\phi}(m+\ker\phi)=\phi(m)</m> is an isomorphism. 
+        </p>
+    </li>
+    <li>
+        <p>
+           If <m>M_1</m> and <m>M_2</m> are submodules of <m>M</m>, then <m>(M_1+M_2)/M_2\cong M_1/M_1\cap M_2</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>\phi\colon M\rightarrow N</m> be a surjective <m>R</m>-module homomorphism. If <m>M'</m> is a submodule of <m>M</m> containing <m>\ker\phi</m>, then 
+            <md>
+                <mrow> \amp N/\phi(M')\cong M/M'</mrow>
+            </md>.
+            In the special case where <m>M'</m> is a submodule of <m>M</m> and <m>\pi\colon M\rightarrow M/M'</m> is a quotient map, we write <m>\pi(M'')=M''/M'</m> for any submodule <m>M''</m> of <m>M</m>. Thus, in this case, if <m>M''</m> is a submodule of <m>M</m> containing <m>M'</m>, the isomorphism above is written
+            <md>
+                <mrow>(M/M')/(M''/M') \amp \cong M/M'' </mrow>
+            </md>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>\phi\colon M\rightarrow N</m> be a surjective <m>R</m>-module homomorphism. The map 
+            <md>
+                <mrow> M' \amp \mapsto \phi(M')</mrow>
+            </md>
+            defines a bijection between set of submodules of <m>M</m> containing <m>\ker\phi</m> and the set of a submodules of <m>N</m>, with inverse given by the map
+            <md>
+                <mrow>N' \amp \mapsto \phi^{-1}(N')</mrow>
+            </md>.
+            Moreover this bijection preserves inclusions, intersections, sums, and quotients of submodules. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   <proof>
+   <p>
+   </p>
+   </proof>
+   </theorem>
+   
+   
     
     
     
