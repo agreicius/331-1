@@ -4906,6 +4906,123 @@ var ptx_lunr_docs = [
   "body": " The isomorphism theorems for modules   Let and be -modules.   Let be a submodule of the -module , and let be the quotient map. Given any satisfying , there is a unique satisfying : namely, the map defined as .    If is an -module homomorphism, then as -modules, and the map defined as is an isomorphism.    If and are submodules of , then .    Let be a surjective -module homomorphism. If is a submodule of containing , then . In the special case where is a submodule of and is a quotient map, we write for any submodule of . Thus, in this case, if is a submodule of containing , the isomorphism above is written .    Let be a surjective -module homomorphism. The map defines a bijection between set of submodules of containing and the set of a submodules of , with inverse given by the map . Moreover this bijection preserves inclusions, intersections, sums, and quotients of submodules.          "
 },
 {
+  "id": "s_mods_direct_sum",
+  "level": "1",
+  "url": "s_mods_direct_sum.html",
+  "type": "Section",
+  "number": "2.18",
+  "title": "Modules: direct sums and products",
+  "body": " Modules: direct sums and products   Direct sums and products of modules   Let be a ring, and let be an indexed family of -modules for some nonempty index set .  The direct product of is the -module whose underlying set is , the set of all tuples , where for all , and whose module addition and scalar multiplication are defined component-wise as follows: for all and .  The direct sum of , denoted is the -submodule of consisting of all tuples for which for all but finitely many : , .  For all we define the -th projection map  by , and the -th inclusion map  by , where for all and . The maps and are -module homomorphisms for all .     Proof that direct products and sums are modules  From the component-wise definitions of addition and scalar multiplication on , it follows in a straightforward manner that satisfies the axioms of an -module, and that is indeed a submodule of . Indeed, we know already that component-wise addition satisfies the group axioms, making an abelian group. Below we provide highly condensed one-line proofs remaining four axioms: . We delegate the proofs of the remaining claims, including the fact that and are -module homomorphisms, to the reader.    Mapping properties of direct sums and products   Let be a ring, and let be an indexed family of -modules for some nonempty index set .   Mapping property of direct products  Let be the -th projection map from . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .    Mapping property of direct sums  Let be the -th inclusion map from to . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .            and as -modules   Let be a nonzero commutative ring. Prove that as -modules, we have and .         Free module   Let be a ring, and let be a nonempty set. The module is called the free -module module on the set . An -module is free if for some nonempty set .  In analogy to the case of vector spaces, we will denote by the element of whose -th component is and whose other components are , and call the -th standard basis element of .     Mapping property of free modules   Let be a ring, let be a nonempty set, and let be the -th standard basis element of . For any -module and any tuple , the -module homomorphism defined as is the unique homomorphism satisfying for all .  As a result, the map is an isomorphism of -modules.    The result follows from the mapping property of direct sums applied to the case where for all and the fact that via the isomorphism .     Finitely generated modules   Let be a ring. Prove that a nonzero -module is finitely generated if and only if we have for some positive integer and submodule .    Assume . By , there is an -module homomorphism defined as . By definition of , it is clear that is surjective. The first isomorphism theorem for modules now implies that , where .     Linear independence and span   Let be an -module, and let be a tuple of elements of indexed by a nonempty set .    is linearly independent if for all , if , then for all .      spans  (or is a spanning set for ) if .     is a basis of if is both linearly independent and spans .        Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.        Isomorphic free modules   Let be a ring, and let and be nonempty sets.   If , then .    If is commutative, then if and only if .          Let and . Assume . By definition, there is a bijection of sets . Let be the -th standard basis element of for all , and let be the -th standard basis of for all . The mapping property of free modules implies there are unique -module homomorphisms and satisfying for all and for all . It follows that the homomorphisms and satisfy for all and . Since for all and for all , the uniqueness claim of the mapping property of free modules implies that . Thus , and we conclude that is a module isomorphism.    This is left as a homework exercise. There we assume the result is true when is a field. This is a standard result in linear algebra when is finite; when is infinite, we must use Zorn's lemma (and the result is not so standard).        Finitely generated module   An -module is finitely generated if there are elements satisfying .     Homomorphisms between free modules   Let be a ring, and let and be positive integers.  Prove that .    From , we have . We claim that . For each , let be the projection map from onto the -th copy of . For each , let be the -th projection map from onto the -th copy of . Let . From the mapping property of , the tuple , where , give rise to a ring homomorphism , defined as . The map is clearly surjective. To see that , observe that we have . Lastly, since , we conclude that by .    "
+},
+{
+  "id": "spec_direct_",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#spec_direct_",
+  "type": "Specimen",
+  "number": "36",
+  "title": "Direct sums and products of modules.",
+  "body": " Direct sums and products of modules   Let be a ring, and let be an indexed family of -modules for some nonempty index set .  The direct product of is the -module whose underlying set is , the set of all tuples , where for all , and whose module addition and scalar multiplication are defined component-wise as follows: for all and .  The direct sum of , denoted is the -submodule of consisting of all tuples for which for all but finitely many : , .  For all we define the -th projection map  by , and the -th inclusion map  by , where for all and . The maps and are -module homomorphisms for all .   "
+},
+{
+  "id": "s_mods_direct_sum-3",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#s_mods_direct_sum-3",
+  "type": "Proof",
+  "number": "2.18.1",
+  "title": "Proof that direct products and sums are modules.",
+  "body": " Proof that direct products and sums are modules  From the component-wise definitions of addition and scalar multiplication on , it follows in a straightforward manner that satisfies the axioms of an -module, and that is indeed a submodule of . Indeed, we know already that component-wise addition satisfies the group axioms, making an abelian group. Below we provide highly condensed one-line proofs remaining four axioms: . We delegate the proofs of the remaining claims, including the fact that and are -module homomorphisms, to the reader.  "
+},
+{
+  "id": "th_mods_sum_prod_maps",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#th_mods_sum_prod_maps",
+  "type": "Theorem",
+  "number": "2.18.1",
+  "title": "Mapping properties of direct sums and products.",
+  "body": " Mapping properties of direct sums and products   Let be a ring, and let be an indexed family of -modules for some nonempty index set .   Mapping property of direct products  Let be the -th projection map from . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .    Mapping property of direct sums  Let be the -th inclusion map from to . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .          "
+},
+{
+  "id": "eg_poly_power_rings_mods",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#eg_poly_power_rings_mods",
+  "type": "Example",
+  "number": "2.18.2",
+  "title": "<span class=\"process-math\">\\(R[x]\\)<\/span> and <span class=\"process-math\">\\(R[[x]]\\)<\/span> as <span class=\"process-math\">\\(R\\)<\/span>-modules.",
+  "body": " and as -modules   Let be a nonzero commutative ring. Prove that as -modules, we have and .       "
+},
+{
+  "id": "spec_free_module",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#spec_free_module",
+  "type": "Specimen",
+  "number": "37",
+  "title": "Free module.",
+  "body": " Free module   Let be a ring, and let be a nonempty set. The module is called the free -module module on the set . An -module is free if for some nonempty set .  In analogy to the case of vector spaces, we will denote by the element of whose -th component is and whose other components are , and call the -th standard basis element of .   "
+},
+{
+  "id": "th_free_modules_map",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#th_free_modules_map",
+  "type": "Theorem",
+  "number": "2.18.3",
+  "title": "Mapping property of free modules.",
+  "body": " Mapping property of free modules   Let be a ring, let be a nonempty set, and let be the -th standard basis element of . For any -module and any tuple , the -module homomorphism defined as is the unique homomorphism satisfying for all .  As a result, the map is an isomorphism of -modules.    The result follows from the mapping property of direct sums applied to the case where for all and the fact that via the isomorphism .   "
+},
+{
+  "id": "eg_finitely_generated_mods",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#eg_finitely_generated_mods",
+  "type": "Example",
+  "number": "2.18.4",
+  "title": "Finitely generated modules.",
+  "body": " Finitely generated modules   Let be a ring. Prove that a nonzero -module is finitely generated if and only if we have for some positive integer and submodule .    Assume . By , there is an -module homomorphism defined as . By definition of , it is clear that is surjective. The first isomorphism theorem for modules now implies that , where .   "
+},
+{
+  "id": "d_ind_span",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#d_ind_span",
+  "type": "Definition",
+  "number": "2.18.5",
+  "title": "Linear independence and span.",
+  "body": " Linear independence and span   Let be an -module, and let be a tuple of elements of indexed by a nonempty set .    is linearly independent if for all , if , then for all .      spans  (or is a spanning set for ) if .     is a basis of if is both linearly independent and spans .      "
+},
+{
+  "id": "cor_free_mods_basis",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#cor_free_mods_basis",
+  "type": "Corollary",
+  "number": "2.18.6",
+  "title": "Free modules and bases.",
+  "body": " Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.      "
+},
+{
+  "id": "cor_card_basis",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#cor_card_basis",
+  "type": "Corollary",
+  "number": "2.18.7",
+  "title": "Isomorphic free modules.",
+  "body": " Isomorphic free modules   Let be a ring, and let and be nonempty sets.   If , then .    If is commutative, then if and only if .          Let and . Assume . By definition, there is a bijection of sets . Let be the -th standard basis element of for all , and let be the -th standard basis of for all . The mapping property of free modules implies there are unique -module homomorphisms and satisfying for all and for all . It follows that the homomorphisms and satisfy for all and . Since for all and for all , the uniqueness claim of the mapping property of free modules implies that . Thus , and we conclude that is a module isomorphism.    This is left as a homework exercise. There we assume the result is true when is a field. This is a standard result in linear algebra when is finite; when is infinite, we must use Zorn's lemma (and the result is not so standard).      "
+},
+{
+  "id": "d_finitely_generated",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#d_finitely_generated",
+  "type": "Definition",
+  "number": "2.18.8",
+  "title": "Finitely generated module.",
+  "body": " Finitely generated module   An -module is finitely generated if there are elements satisfying .   "
+},
+{
+  "id": "eg_hom_btwn_free_mods",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#eg_hom_btwn_free_mods",
+  "type": "Example",
+  "number": "2.18.9",
+  "title": "Homomorphisms between free modules.",
+  "body": " Homomorphisms between free modules   Let be a ring, and let and be positive integers.  Prove that .    From , we have . We claim that . For each , let be the projection map from onto the -th copy of . For each , let be the -th projection map from onto the -th copy of . Let . From the mapping property of , the tuple , where , give rise to a ring homomorphism , defined as . The map is clearly surjective. To see that , observe that we have . Lastly, since , we conclude that by .   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

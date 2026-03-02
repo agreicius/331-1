@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms between free modules.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be positive integers.<div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">Prove that <span class="process-math">\(\Hom_R(R^m,R^n)\cong_R R^{mn}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">From <a href="s_mods_direct_sum.html#th_free_modules_map" class="xref" data-knowl="./knowl/xref/th_free_modules_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.18.3: Mapping property of free modules">Theorem 2.18.3</a>, we have <span class="process-math">\(\Hom_R(R^m, R^n)\cong \prod_{i=1}^m R^n\text{.}\)</span> We claim that <span class="process-math">\(\prod_{i=1}^m R^n\cong R^{mn}\text{.}\)</span> For each <span class="process-math">\(1\leq i\leq m\text{,}\)</span> let <span class="process-math">\(\pi_i\)</span> be the projection map from <span class="process-math">\(\prod_{i=1}^m R^n\)</span> onto the <span class="process-math">\(i\)</span>-th copy of <span class="process-math">\(\R^n\text{.}\)</span> For each <span class="process-math">\(1\leq j\leq n\text{,}\)</span> let <span class="process-math">\(p_j\colon R^n\rightarrow R\)</span> be the <span class="process-math">\(j\)</span>-th projection map from <span class="process-math">\(R^n\)</span> onto the <span class="process-math">\(j\)</span>-th copy of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(I=\{1,2,\dots, m\}\times \{1,2,\dots, n\}\text{.}\)</span>  From the mapping property of <span class="process-math">\(R^{I}\text{,}\)</span> the tuple <span class="process-math">\((\phi_{i,j})_{(i,j)\in I}\text{,}\)</span> where <span class="process-math">\(\phi_{i,j}=p_j\circ \pi_i\text{,}\)</span> give rise to a ring homomorphism  <span class="process-math">\(\phi\colon \prod_{i=1}^m R^n\rightarrow R^I\text{,}\)</span> defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_modules_map.html ./knowl/xref/th_free_modules_map.html">
+\begin{align*}
+\phi(((r_{i,j})_{j=1}^n)_{i=1}^m) \amp= (\phi_{i,j}(((r_{i,j})_{j=1}^n)_{i=1}^m))_{(i,j)\in I} \\
+\amp = (p_j(\pi_i(((r_{i,j})_{j=1}^n)_{i=1}^m)))_{(i,j)\in I}\\
+\amp = (r_{i,j})_{(i,j)\in I}\text{.}
+\end{align*}
+</div>
+<div class="para">The map <span class="process-math">\(\phi\)</span> is clearly surjective. To see that <span class="process-math">\(\ker\phi=\{0\}\text{,}\)</span> observe that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_modules_map.html ./knowl/xref/th_free_modules_map.html">
+\begin{align*}
+\phi((((r_{i,j})_{j=1}^n)_{i=1}^m))=\{0\} \amp \iff (r_{i,j})_{(i,j)\in I}=\{0\} \\
+\amp \iff r_{i,j}=0 \text{ for all } i\in \{1,2,\dots, m\}, j\in \{1,2,\dots, n\}\\
+\amp \iff (r_{i,j})_{j=1}^{n}=0 \text{ for all } i\in \{1,2,\dots, m\}\\
+\amp \iff (((r_{i,j})_{j=1}^n)_{i=1}^m)=0 \text{.}
+\end{align*}
+</div>
+<div class="para">Lastly, since <span class="process-math">\(\abs{I}=mn\text{,}\)</span> we conclude that <span class="process-math">\(R^I\cong R^{mn}\)</span> by <a href="s_mods_direct_sum.html#th_free_modules_map" class="xref" data-knowl="./knowl/xref/th_free_modules_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.18.3: Mapping property of free modules">Theorem 2.18.3</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.18.9.1"><a href="#eg_hom_btwn_free_mods-3" title="Copy heading and permalink for Solution 2.18.9.1" aria-label="Copy heading and permalink for Solution 2.18.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.18.9: Homomorphisms between free modules"><a href="#eg_hom_btwn_free_mods" title="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules" aria-label="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules">🔗</a></div></article><span class="incontext"><a class="internal" href="s_mods_direct_sum.html#eg_hom_btwn_free_mods">in-context</a></span>
+</body>
+</html>
