@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_mods_direct_sum" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Modules: direct sums and products</title>
+
+    <activity xml:id="spec_direct_">
+    <title>Direct sums and products of modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, and let <m>(M_i)_{i\in I}</m> be an indexed family of <m>R</m>-modules for some nonempty index set <m>I</m>. 
+    </p>
+    <p>
+        The <term>direct product</term> of <m>(M_i)_{i\in }</m> is the <m>R</m>-module whose underlying set is <m>\prod_{i\in I}M_i</m>, the set of all tuples <m>(m_i)_{i\in I}</m>, where <m>m_i\in M_i</m> for all <m>i\in I</m>, and whose module addition and scalar multiplication are defined component-wise as follows: 
+        <md>
+            <mrow>(m_i)_{i\in I}+ (n_i)_{i\in I} \amp = (m_i+n_i)_{i\in I}</mrow>
+            <mrow>r\cdot (m_i)_{i\in I} \amp = (rm_i)_{i\in I} </mrow>
+        </md>
+        for all <m>m=(m_i), n=(n_i)\in \prod_{i\in I}M_i</m> and <m>r\in R</m>. 
+    </p>
+    <p>
+        The <term>direct sum</term> of <m>(M_i)_{i\in I}</m>, denoted <m>\bigoplus_{i\in I}M_i</m> is the <m>R</m>-submodule of <m>\prod_{i\in I}M_i</m> consisting of all tuples <m>(m_i)_{i\in I}</m> for which <m>m_i=0</m> for all but finitely many <m>i\in I</m>: <ie/>, 
+        <md number="yes">
+            <mrow xml:id="eq_mods_direct_sum">\bigoplus_{i\in I} M_i \amp =\{(m_i)_{i\in I}\in \prod_{i\in I}M_i\mid m_i=0 \text{ for all but finitely many } i\in I\}</mrow>
+        </md>.
+    </p>
+    <p>
+        For all <m>j\in I</m> we define the <term><m>j</m>-th projection map</term> <m>\pi_j\colon \prod_{i\in I}M_i\to M_j</m> by <m>\pi_j((m_i)_{i\in I})=m_j</m>, and the <term><m>j</m>-th inclusion map</term> <m>\iota_j\colon M_j\to \bigoplus_{i\in I}M_i</m> by <m>\iota_j(m)=(m_i)_{i\in I}</m>, where <m>m_i=0</m> for all <m>i\neq j</m> and <m>m_j=m</m>. The maps <m>\pi_j</m> and <m>\iota_j</m> are <m>R</m>-module homomorphisms for all <m>j\in I</m>. 
+    </p>
+    </statement>
+    </activity>
+    <proof>
+        <title>Proof that direct products and sums are modules</title>
+        <p>
+            From the component-wise definitions of addition and scalar multiplication on <m>\prod_{i\in I}M_i</m>, it follows in a straightforward manner that <m>\prod_{i\in I}M_i</m> satisfies the axioms of an <m>R</m>-module, and that <m>\bigoplus_{i\in I}M_i</m> is indeed a submodule of <m>\prod_{i\in I}M_i</m>. Indeed, we know already that component-wise addition satisfies the group axioms, making <m>\prod_{i\in I}M_i</m> an abelian group. Below we provide highly condensed one-line proofs remaining four axioms:
+            <md>
+                <mrow>(r+s)\cdot (m_i) \amp = ((r+s)m_i)=(rm_i+sm_i)=r\cdot (m_i)+s\cdot (m_i)</mrow>
+                <mrow>r\cdot ((m_i)+(n_i)) \amp = r\cdot (m_i+n_i)=(r(m_i+n_i))=(rm_i+rn_i)=r\cdot (m_i)+r\cdot (n_i) </mrow>
+                <mrow>r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)</mrow>
+                <mrow>1\cdot (m_i) \amp =(1m_i)_{i\in I}=(m_i)</mrow>
+            </md>.
+            We delegate the proofs of the remaining claims, including the fact that <m>\pi_j</m> and <m>\iota_j</m> are <m>R</m>-module homomorphisms, to the reader. 
+        </p>
+    </proof>
+    <theorem xml:id="th_mods_sum_prod_maps">
+    <title>Mapping properties of direct sums and products</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, and let <m>(M_i)_{i\in I}</m> be an indexed family of <m>R</m>-modules for some nonempty index set <m>I</m>. 
+    <ol>
+        <li>
+            <title>Mapping property of direct products</title>
+            <p>
+                Let <m>\pi_i</m> be the <m>i</m>-th projection map from <m>\prod_{i\in I}M_i</m>. For any <m>R</m>-module <m>N</m> and tuple of <m>R</m>-module homomorphisms <m>(\phi_i)_{i\in I}</m>, where <m>\phi_i\colon N\rightarrow M_i</m>, the map <m>\phi=\prod_{i\in I}\phi_i</m> defined as 
+                <md number="yes">
+                    <mrow>\phi (n) \amp =(\phi_i(n))_{i\in I}</mrow>
+                </md>
+                is the unique <m>R</m>-module homomorphism <m>\phi\colon N\rightarrow \prod_{i\in I}M_i</m> satisfying <m>\phi\circ \pi_i=\phi_i</m> for all <m>i\in I</m>.
+            </p>
+            <p>
+                It follows that the map 
+                <md>
+                    <mrow>\Phi\colon \Hom_R(N, \prod_{i\in I}M_i) \amp\rightarrow \prod_{i\in I}\Hom(N, M_i) </mrow>
+                    <mrow>\phi \amp \longmapsto (\pi_i\circ\phi)_{i\in I}</mrow>
+                </md>
+                is an isomorphism of <m>R</m>-modules with inverse 
+                <md>
+                    <mrow>(\phi_i)_{i\in I} \amp \longmapsto \prod_{i\in I}\phi_i</mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <title>Mapping property of direct sums</title>
+            <p>
+                Let <m>\iota_i</m> be the <m>i</m>-th inclusion map from <m>M_i</m> to <m>\bigoplus_{i\in I}M_i</m>. For any <m>R</m>-module <m>N</m> and tuple of <m>R</m>-module homomorphisms <m>(\phi_i)_{i\in I}</m>, where <m>\phi_i\colon M_i\rightarrow N</m>, the map <m>\phi=\bigoplus_{i\in I}\phi_i</m> defined as 
+                <md number="yes">
+                    <mrow>\phi ((m_i)_{i\in I}) \amp = \sum_{i\in I}\phi_i(m_i)</mrow>
+                </md>
+                is the unique <m>R</m>-module homomorphism <m>\phi\colon \bigoplus_{i\in I}M_i\rightarrow N</m> satisfying <m>\phi\circ \iota_i=\phi_i</m> for all <m>i\in I</m>.
+            </p>
+            <p>
+                It follows that the map 
+                <md>
+                    <mrow>\Phi'\colon \Hom_R(\bigoplus_{i\in I}M_i, N) \amp\rightarrow \prod_{i\in I}\Hom(M_i, N) </mrow>
+                    <mrow>\phi \amp \longmapsto (\phi\circ \iota_i)_{i\in I}</mrow>
+                </md>
+                is an isomorphism of <m>R</m>-modules with inverse 
+                <md>
+                    <mrow>(\phi_i)_{i\in I} \amp \longmapsto \sum_{i\in I}\phi_i</mrow>
+                </md>.
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <proof>
+    <p>
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_poly_power_rings_mods">
+    <title><m>R[x]</m> and <m>R[[x]]</m> as <m>R</m>-modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a nonzero commutative ring. Prove that as <m>R</m>-modules, we have <m>R[x]\cong\bigoplus_{i=1}^\infty R</m> and <m>R[[x]]\cong \prod_{i=1}^\infty R</m>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <activity xml:id="spec_free_module">
+    <title>Free module</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, and let <m>I</m> be a nonempty set. The module <m>\bigoplus_{i\in I} R</m> is called the <term>free <m>R</m>-module module</term> on the set <m>I</m>. An <m>R</m>-module <m>M</m> is <term>free</term> if <m>M\cong_R \bigoplus_{i\in I} R</m> for some nonempty set <m>I</m>.  
+    </p>
+    <p>
+        In analogy to the case of vector spaces, we will denote by <m>e_i</m> the element of <m>\bigoplus_{i\in I}R</m> whose <m>i</m>-th component is <m>1\in R</m> and whose other components are <m>0\in R</m>, and call <m>e_i</m> the <term><m>i</m>-th standard basis element</term> of <m>\bigoplus_{i\in I}R</m>.
+    </p>
+    </statement>
+    </activity>
+    
+    
+    <theorem xml:id="th_free_modules_map">
+    <title>Mapping property of free modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, let <m>I</m> be a nonempty set, and let <m>e_i</m> be the <m>i</m>-th standard basis element of <m>\bigoplus_{i\in I}R</m>. For any <m>R</m>-module <m>N</m> and any tuple <m>(n_i)_{i\in I}\in \bigoplus_{i\in I}N </m>, the <m>R</m>-module homomorphism <m>\phi\colon \bigoplus_{i\in I}R\rightarrow N</m> defined as <m>\phi((r_i)_{i\in I})=\sum_{i\in I}r_in_i</m> is the unique homomorphism satisfying <m>\phi(e_i)=n_i</m> for all <m>i\in I</m>. 
+    </p>
+    <p>
+        As a result, the map 
+        <md>
+            <mrow>\Phi\colon \Hom_R(\bigoplus_{i\in I}R, N) \amp\rightarrow \prod_{i\in I}N </mrow>
+            <mrow>\phi \amp \longmapsto (\phi(e_i))_{i\in I}</mrow>
+        </md>
+        is an isomorphism of <m>R</m>-modules.
+    </p>
+    </statement>
+    <proof>
+    <p>
+        The result follows from the mapping property of direct sums applied to the case where  <m>M_i=R</m> for all <m>i\in I</m> and the fact that <m>\Hom_R(R,N)\cong N</m> via the isomorphism <m>\psi\mapsto \psi(1)</m>. 
+    </p>
+    </proof>
+    </theorem>
+    <example xml:id="eg_finitely_generated_mods">
+    <title>Finitely generated modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring. Prove that a nonzero <m>R</m>-module <m>M</m> is finitely generated if and only if we have <m>M\cong_R R^n/M'</m> for some positive integer <m>n</m> and submodule <m>M'\subseteq R^n</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    Assume <m>M=(m_1,m_2,\dots, m_n)</m>. By <xref ref="th_free_modules_map"/>, there is an <m>R</m>-module homomorphism <m>\phi\colon R^n\rightarrow M</m> defined as <m>\phi((r_1,r_2,\dots, r_n))=\sum_{i=1}^n r_im_i</m>. By definition of <m>(m_1,m_2,\dots, m_n)</m>, it is clear that <m>\phi</m> is surjective. The first isomorphism theorem for modules now implies that <m>M\cong R^n/M'</m>, where <m>M'=\ker\phi</m>. 
+    </p>
+    </solution>
+    </example>
+
+    <definition xml:id="d_ind_span">
+    <title>Linear independence and span</title>
+    <statement>
+    <p>
+    Let <m>M</m> be an <m>R</m>-module, and let <m>(m_i)_{i\in I}</m> be a tuple of elements of <m>M</m> indexed by a nonempty set <m>I</m>. 
+    <ol>
+        <li>
+            <p>
+                <m>(m_i)_{i\in I}</m> is <term>linearly independent</term> if for all <m>(r_i)_{i\in I}\in \bigoplus_{i\in I}R</m>, if <m>\sum_{i\in I}r_im_i=0</m>, then <m>r_i=0</m> for all <m>i\in I</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(m_i)_{i\in I}</m> <term>spans</term> <m>M</m> (or is a <term>spanning set</term> for <m>M</m>) if <m>M=(\{m_i\mid i\in I\})</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>(m_i)_{i\in I}</m> is a <term>basis</term> of <m>M</m> if <m>(m_i)_{i\in I}</m> is both linearly independent and spans <m>M</m>. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    </definition>
+    <corollary xml:id="cor_free_mods_basis">
+        <title>Free modules and bases</title>
+        <statement>
+            <p>
+                Let <m>R</m> be a nonzero ring. 
+                <ol>
+                    <li>
+                        <p>
+                            Let <m>I</m> be a nonempty set. The tuple <m>(e_i)_{i\in I}</m> is a basis of <m>\bigoplus_{i\in I}R</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            An <m>R</m>-module <m>M</m> is free if and only if it has a basis. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Given <m>(r_i)_{i\in I}\in \bigoplus_{i\in I}R</m>, we have <m>(r_i)=\sum_{i\in I}r_ie_i</m>. It follows immediately that <m>(e_i)_{i\in I}</m> spans <m>\bigoplus_{i\in I}R</m>. Furthermore, for all <m>(r_i)\in \bigoplus_{i\in I}R</m>, we have 
+                            <md>
+                                <mrow>\sum_{i\in I}r_ie_i=0 \amp \iff (r_i)_{i\in I}=0 </mrow>
+                                <mrow> \amp \iff r_i=0 \text{ for all } i\in I</mrow>
+                            </md>.
+                            Thus <m>(e_i)_{i\in I}</m> is linearly independent, and we conclude that <m>(e_i)_{i\in I}</m> is a basis of <m>\bigoplus_{i\in I}R</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>M</m> is free, then there is an isomorphism <m>\phi\colon \bigoplus_{i\in I}R\rightarrow M</m>, from whence it follows easily that <m>(\phi(e_i))_{i\in I}</m> is a basis for <m>M</m>. 
+                        </p>
+                        <p>
+                            Conversely, assume that <m>(m_i)_{i\in I}</m> is a basis for <m>M</m>. From the mapping property of free modules, the map 
+                            <md>
+                                <mrow>\phi\colon \bigoplus_{i\in I}R \amp \rightarrow  M</mrow>
+                                <mrow>(r_i)_{i\in I} \amp \longmapsto \sum_{i\in I}r_im_i</mrow>
+                            </md>
+                            is an <m>R</m>-module homomorphism. Since <m>(m_i)</m> spans <m>M</m>, this map is surjective. Since <m>(m_i)</m> is linearly independent, the kernel of this map is <m>\{0\}</m>. Thus <m>\phi</m> is an isomorphism, and we conclude that <m>M</m> is free. 
+                        </p>
+                    </li>
+
+                </ol>
+            </p>
+        </proof>
+    </corollary>
+    <corollary xml:id="cor_card_basis">
+        <title>Isomorphic free modules</title>
+        
+        <statement>
+            <p>
+                Let <m>R</m> be a ring, and let <m>I</m> and <m>J</m> be nonempty sets.
+                <ol>
+                    <li>
+                        <p>
+                            If <m>\abs{I}=\abs{J}</m>, then <m>\bigoplus_{i\in I} R\cong_R\bigoplus_{j\in J}R</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>R</m> is commutative, then <m>\bigoplus_{i\in I}R\cong_R \bigoplus_{j\in J}R</m> if and only if <m>\abs{I}=\abs{J}</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Let <m>M=\bigoplus_{i\in I}R</m> and <m>M'=\bigoplus_{j\in J}R</m>.  Assume <m>\abs{I}=\abs{J}</m>. By definition, there is a bijection of sets <m>f\colon I\rightarrow J</m>. Let <m>e_i</m> be the <m>i</m>-th standard basis element of <m>M=\bigoplus_{i\in I} R</m> for all <m>i\in I</m>, and let <m>f_j</m> be the <m>j</m>-th standard basis of <m>M'=\bigoplus_{j\in J}R</m> for all <m>j\in J</m>. The mapping property of free modules implies there are unique <m>R</m>-module homomorphisms <m>\phi\colon M\rightarrow M' </m> and <m>\psi\colon M'\rightarrow M</m> satisfying <m>\phi(e_i)=f_{\alpha(i)}</m> for all <m>i\in I</m> and <m>\psi(f_j)=e_{\alpha^{-1}(j)}</m> for all <m>j\in J</m>. It follows that the homomorphisms <m>\psi\circ\phi\in \End_R(\bigoplus_{i\in I}R)</m> and <m>\phi\circ\psi\in \End_R(\bigoplus_{j\in J}R)</m> satisfy 
+                            <md number="no">
+                                <mrow>\psi\circ\phi(e_i) \amp = \psi(f_{\alpha(i)}) = e_{\alpha^{-1}(\alpha(i))}=e_i</mrow>
+                                <mrow>\phi\circ\psi(f_j) \amp = \phi(e_{\alpha^{-1}(j)})=f_{\alpha(\alpha^{-1}(j))}=f_j</mrow>
+                            </md>
+                            for all <m>i\in I</m> and <m>j\in J</m>. Since <m>\id_{M}(e_i)=e_i</m> for all <m>i</m> and <m>\id_{M'}(f_j)=f_j</m> for all <m>j\in J</m>, the uniqueness claim of the mapping property of free modules implies that 
+                            <md>
+                                <mrow>\psi\circ\phi \amp = \id_M</mrow>
+                                <mrow>\phi\circ\psi \amp = \id_{M'}</mrow>
+                            </md>.
+                            Thus <m>\psi=\phi^{-1}</m>, and we conclude that <m>\phi</m> is a module isomorphism. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            This is left as a homework exercise. There we assume the result is true when <m>R=F</m> is a field. This is a standard result in linear algebra when <m>\abs{I}</m> is finite; when <m>\abs{I}</m> is infinite, we must use Zorn's lemma (and the result is not so standard). 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </proof>
+    </corollary>
+    
+    <definition xml:id="d_finitely_generated">
+    <title>Finitely generated module</title>
+    <statement>
+    <p>
+    An <m>R</m>-module <m>M</m> is <term>finitely generated</term> if there are elements <m>m_1,m_2,\dots, m_n\in M</m> satisfying <m>M=(m_1,m_2,\dots, m_n)</m>. 
+    </p>
+    </statement>
+    </definition>
+    
+    <example xml:id="eg_hom_btwn_free_mods">
+    <title>Homomorphisms between free modules</title>
+    <statement>
+    <p>
+    Let <m>R</m> be a ring, and let <m>m</m> and <m>n</m> be positive integers.
+    </p>
+    <p>
+        Prove that <m>\Hom_R(R^m,R^n)\cong_R R^{mn}</m>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    From <xref ref="th_free_modules_map"/>, we have <m>\Hom_R(R^m, R^n)\cong \prod_{i=1}^m R^n</m>. We claim that <m>\prod_{i=1}^m R^n\cong R^{mn}</m>. For each <m>1\leq i\leq m</m>, let <m>\pi_i</m> be the projection map from <m>\prod_{i=1}^m R^n</m> onto the <m>i</m>-th copy of <m>\R^n</m>. For each <m>1\leq j\leq n</m>, let <m>p_j\colon R^n\rightarrow R</m> be the <m>j</m>-th projection map from <m>R^n</m> onto the <m>j</m>-th copy of <m>R</m>. Let <m>I=\{1,2,\dots, m\}\times \{1,2,\dots, n\}</m>.  From the mapping property of <m>R^{I}</m>, the tuple <m>(\phi_{i,j})_{(i,j)\in I}</m>, where <m>\phi_{i,j}=p_j\circ \pi_i</m>, give rise to a ring homomorphism  <m>\phi\colon \prod_{i=1}^m R^n\rightarrow R^I</m>, defined as 
+    <md>
+        <mrow>\phi(((r_{i,j})_{j=1}^n)_{i=1}^m) \amp= (\phi_{i,j}(((r_{i,j})_{j=1}^n)_{i=1}^m))_{(i,j)\in I} </mrow>
+        <mrow> \amp = (p_j(\pi_i(((r_{i,j})_{j=1}^n)_{i=1}^m)))_{(i,j)\in I}</mrow>
+        <mrow> \amp = (r_{i,j})_{(i,j)\in I}</mrow>
+    </md>. 
+    The map <m>\phi</m> is clearly surjective. To see that <m>\ker\phi=\{0\}</m>, observe that we have 
+    <md number="no">
+        <mrow>\phi((((r_{i,j})_{j=1}^n)_{i=1}^m))=\{0\} \amp \iff (r_{i,j})_{(i,j)\in I}=\{0\} </mrow>
+        <mrow> \amp \iff r_{i,j}=0 \text{ for all } i\in \{1,2,\dots, m\}, j\in \{1,2,\dots, n\}</mrow>
+        <mrow> \amp \iff (r_{i,j})_{j=1}^{n}=0 \text{ for all } i\in \{1,2,\dots, m\}</mrow>
+        <mrow> \amp \iff (((r_{i,j})_{j=1}^n)_{i=1}^m)=0 </mrow>
+    </md>.
+    Lastly, since <m>\abs{I}=mn</m>, we conclude that <m>R^I\cong R^{mn}</m> by <xref ref="th_free_modules_map"/>. 
+    </p>
+    </solution>
+    </example>
+    
+        
+    
+
+</section>
