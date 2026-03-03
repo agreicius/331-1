@@ -20,4 +20,5 @@
 <xi:include href="s_integral_domain_factorization.ptx" />
 <xi:include href="s_modules.ptx" />
 <xi:include href="s_mods_direct_sum.ptx" />
+<xi:include href="s_PID_mod_statements.ptx" />
 </chapter>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_PID_modules_statement" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>PID-module structure theorems: statements</title>
+
+   <introduction>
+    <p>
+        In this section we will give careful statements of various theorems related to the structure of finitely generated modules over a PID. We will then illustrate these statements in two specific settings: the case when <m>R=\Z</m>, where we obtain a classification of finitely generated abelian groups; and the case when <m>R=F</m> is a field, in which case we obtain a classification of linear transformations of finite-dimensional vector spaces in terms of their rational canonical form. 
+    </p>
+   </introduction>
+   <subsection xml:id="ss_PID_modules_statements">
+   <title>PID-module structure theorems</title>
+   <theorem xml:id="th_aligned_basis">
+   <title>PID-module theorem: aligned bases</title>
+   <statement>
+   <p>
+   Let <m>R</m> be a PID. Let <m>M</m> be free <m>R</m>-module of finite rank <m>m</m>, and let <m>N</m> be a nonzero submodule of <m>M</m>. 
+   <ol>
+    <li>
+        <p>
+            <m>N</m> is a free <m>R</m>-module and <m>\rank N\leq m</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            There is a basis <m>B=(m_i)_{i=1}^m</m> of <m>M</m> and nonzero elements <m>a_1,a_2,\dots, a_n\in R</m>, <m>n\leq m</m>, such that
+            <md number="yes">
+                <mrow>a_i \amp \mid a_{i+1}</mrow>
+            </md>
+            for all <m>1\leq i\leq n-1</m>, and 
+            <md number="yes">
+                <mrow>B' \amp =(a_im_i)_{i=1}^{n}</mrow>
+            </md>           
+            is a basis of <m>N</m>. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   <proof>
+   <p>
+   </p>
+   </proof>
+   </theorem>
+   <definition xml:id="d_aligned_basis">
+   <title>Aligned basis</title>
+   <statement>
+   <p>
+   Let <m>R</m> be a commutative ring, let <m>M</m> be a free <m>R</m>-module, and let <m>N</m> be a free submodule of <m>M</m>. An <term>aligned basis</term> for <m>M</m> and <m>N</m> is a basis <m>B=(m_i)_{i\in I}</m> of <m>M</m> such that there is a subset <m>J\subseteq I</m> and tuple <m>(a_j)_{j\in J}</m> of elements in <m>R</m> such that <m>B'=(a_jm_j)_{j\in J}</m> is a basis of <m>N</m>.
+   </p>
+   </statement>
+   </definition>
+   <theorem xml:id="th_elem_divisors">
+   <title>PID-module theorem: invariant factors</title>
+   <statement>
+   <p>
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. 
+   <ol>
+    <li>
+        <title>Direct sum decomposition</title>
+        <p>
+            There is a nonnegative integer <m>n</m>, a nonnegative integer <m>m</m>, and, if <m>m&gt; 0</m>, nonzero non-units <m>a_1,a_2,\dots, a_m\in R</m> satisfying 
+            <md number="yes">
+                <mrow>a_i \amp \mid a_{i+1}</mrow>
+            </md> 
+            for all <m>1\leq i\leq m-1</m>, such that 
+            <md number="yes">
+                 <mrow xml:id="eq_PID_invar"> M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)</mrow>
+            </md>.
+            In the case where <m>m=0</m>, the decomposition <xref ref="eq_PID_invar"/> is interpreted as <m>M\cong R^n</m>. 
+        </p>
+    </li>
+    <li>
+        <title>Uniqueness</title>
+        <p>
+            The decomposition in <xref ref="eq_PID_invar"/> is unique in the following sense. Given any other decomposition <m>M\cong R^{n'}\oplus\bigoplus_{i=1}^{m'}R/(b_i)</m>, where <m>b_i\notin R^*</m> for all <m>i</m> and <m>b_i\mid b_{i+1}</m> for all <m>1\leq i\leq m'-1</m>, we have <m>n=n'</m>, <m>m=m'</m>, and <m>a_i</m> and <m>b_i</m> are associates for all <m>1\leq i\leq m</m>. 
+        </p>
+        <p>
+            In particular, the nonnegative integer <m>n</m> and ideals <m>(a_i)</m> are uniquely determined by the module <m>M</m>. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   
+   </theorem>
+   <definition xml:id="d_betti_inv">
+   <title>Betti number and invariant factors</title>
+   <statement>
+   <p>
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. A decomposition of <m>M</m> as in <xref ref="eq_PID_invar"/> is called an <term>invariant decomposition</term>. The integer <m>n</m> appearing in this decomposition is called the <term>betti number</term> of <m>M</m>, and the ideals <m>(a_i)</m> are called the <term>invariant factors</term> of <m>M</m>. Similarly, the elements <m>a_i</m> themselves are called invariant factors of <m>M</m>. 
+   </p>
+   </statement>
+   </definition>
+   <definition xml:id="d_tor_M">
+   <title>Annihilators and torsion elements</title>
+   <notation>
+    <usage><m>\Ann M</m></usage>
+     <description>annihilator of module <m>M</m></description>
+   </notation>
+   <notation>
+    <usage><m>\Tor M</m></usage>
+     <description>torsion elements of module <m>M</m></description>
+   </notation>
+   <statement>
+   <p>
+   Let <m>R</m> be a ring, and let <m>M</m> be a left <m>R</m>-module. 
+    <ul>
+        <li>
+        <p>
+           The <term>annihilator</term> of <m>M</m>, denoted <m>\Ann M</m> is defined as
+            <md>
+                <mrow>\Ann M \amp =\{r\in R\mid rm=0 \text{ for all } m\in M\}</mrow>
+            </md>.
+        </p>
+    </li>
+    <li>
+        <p>
+            A <term>torsion element</term> of <m>M</m> is an element <m>m\in M</m> such that <m>rm=0</m> for some nonzero <m>r\in R</m>. The set of all torsion elements of <m>M</m> is denoted <m>\Tor M</m>. The module <m>M</m> is called <term>torsion</term> if <m>\Tor M=M</m>, and <term>torsion free</term> if <m>\Tor M=\{0\}</m>. 
+        </p>
+    </li>
+   </ul>
+   </p>
+   </statement>
+   </definition>
+   <example xml:id="eg_gauss_ints_aligned_basis">
+   <title>Aligned basis for <m>\Z[i]</m> as <m>\Z</m>-module</title>
+   <statement>
+   <p>
+   Let <m>R=\Z[i]</m>, the ring of Gaussian integers, and let <m>\alpha=1+2i</m>. 
+   <ol>
+    <li>
+        <p>
+            Show that <m>M=\Z[i]</m>, considered as a <m>\Z</m>-module, is free of rank 2. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>N</m> be the ideal of <m>\Z[i]</m> generated by <m>\alpha</m>: <ie/>, <m>N=\alpha\Z[i]</m>. Show that <m>N</m> is a free <m>\Z</m>-module of rank 2, and that <m>(1+2i, -2+i)</m> is a <m>\Z</m>-basis of <m>N</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Note that the standard <m>\Z</m>-basis <m>(1,i)</m> of <m>\Z[i]</m> is not an aligned basis of <m>M</m> and <m>N</m>. Show that <m>(1+2i,i)</m> is an aligned basis for <m>M</m> and <m>N</m>. 
+        </p>
+    </li>
+
+   </ol>
+   </p>
+   </statement>
+   <solution>
+   <p>
+   
+   </p>
+   </solution>
+   </example>
+   
+   <remark>
+   <title>Annihilator and torsion elements</title>
+   <p>
+    Let <m>M</m> be an <m>R</m>-module. 
+   <ol>
+    <li>
+        <p>
+            <m>\Ann M</m> is a left ideal of <m>R</m>, and thus a two-sided ideal if <m>R</m> is commutative. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\Tor M</m> is a submodule of <m>M</m> if <m>R</m> is an integral domain. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Given a family of <m>R</m>-modules <m>(M_i)_{i\in I}</m>, we have <m>\Tor\left(\bigoplus_{i\in I} M_i\right)=\bigoplus_{i\in I} \Tor M_i</m>.
+        </p>
+    </li>
+   </ol>
+   </p>
+   </remark>
+   <corollary xml:id="cor_PID_tor_free">
+    <title>PID-modules theorem: free means torsion free</title>
+    <statement>
+        <p>
+            Suppose <m>M</m> is a finitely generated module over a PID <m>R</m> with betti number <m>r</m> and invariant factors <m>(a_i)</m>, <m>1\leq i\leq m</m>. 
+            <ol>
+                <li>
+                    <p>
+                        <m>\Tor M\cong \bigoplus_{i=1}^m R/(a_i)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>M</m> is free if and only if <m>M</m> is torsion free. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+   </corollary>
+   <proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    It is not difficult to see that <m>\Tor(M_1\oplus M_2)=\Tor(M_1)\oplus \Tor(M_2)</m>. As a result, given a decomposition of <m>M</m> as in <xref ref="eq_PID_invar"/>, we have 
+                    <md number="yes">
+                        <mrow>\Tor(M) \amp \cong \Tor(R^n)\oplus \Tor\left(\bigoplus_{i=1}^m R/(a_i)\right)</mrow>
+                        <mrow> \amp = 0\oplus \Tor\left(\bigoplus_{i=1}^m R/(a_i)\right) \amp (\Tor(R^n)=\Tor(R)^n=0)</mrow>
+                        <mrow> \amp = \bigoplus_{i=1}^m \Tor(R/(a_i)) </mrow>
+                        <mrow> \amp = \bigoplus_{i=1}^m R/(a_i) </mrow>
+                    </md>,
+                    where the last equality follows since everyting in <m>R/(a_i)</m> is annihilated by <m>a_i</m>, which by definition is nonzero. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>M</m> is free, then <m>\Tor M=\{0\}</m> by similar reasoning as above. Conversely, if <m>\Tor M=\{0\}</m>, then by (1) we must have <m>\bigoplus_{i=1}^m R/(a_i)=\{0\}</m>, which can only happen if <m>m=0</m> since the <m>a_i</m> are nonzero non-units by definition. But then <m>M\cong R^n</m>, and is thus free. 
+                </p>
+            </li>
+        </ol>
+    </p>
+   </proof>
+   </subsection>
+
+</section>
