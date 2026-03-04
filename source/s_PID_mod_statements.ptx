@@ -10,89 +10,8 @@
    </introduction>
    <subsection xml:id="ss_PID_modules_statements">
    <title>PID-module structure theorems</title>
-   <theorem xml:id="th_aligned_basis">
-   <title>PID-module theorem: aligned bases</title>
-   <statement>
-   <p>
-   Let <m>R</m> be a PID. Let <m>M</m> be free <m>R</m>-module of finite rank <m>m</m>, and let <m>N</m> be a nonzero submodule of <m>M</m>. 
-   <ol>
-    <li>
-        <p>
-            <m>N</m> is a free <m>R</m>-module and <m>\rank N\leq m</m>.
-        </p>
-    </li>
-    <li>
-        <p>
-            There is a basis <m>B=(m_i)_{i=1}^m</m> of <m>M</m> and nonzero elements <m>a_1,a_2,\dots, a_n\in R</m>, <m>n\leq m</m>, such that
-            <md number="yes">
-                <mrow>a_i \amp \mid a_{i+1}</mrow>
-            </md>
-            for all <m>1\leq i\leq n-1</m>, and 
-            <md number="yes">
-                <mrow>B' \amp =(a_im_i)_{i=1}^{n}</mrow>
-            </md>           
-            is a basis of <m>N</m>. 
-        </p>
-    </li>
-   </ol>
-   </p>
-   </statement>
-   <proof>
-   <p>
-   </p>
-   </proof>
-   </theorem>
-   <definition xml:id="d_aligned_basis">
-   <title>Aligned basis</title>
-   <statement>
-   <p>
-   Let <m>R</m> be a commutative ring, let <m>M</m> be a free <m>R</m>-module, and let <m>N</m> be a free submodule of <m>M</m>. An <term>aligned basis</term> for <m>M</m> and <m>N</m> is a basis <m>B=(m_i)_{i\in I}</m> of <m>M</m> such that there is a subset <m>J\subseteq I</m> and tuple <m>(a_j)_{j\in J}</m> of elements in <m>R</m> such that <m>B'=(a_jm_j)_{j\in J}</m> is a basis of <m>N</m>.
-   </p>
-   </statement>
-   </definition>
-   <theorem xml:id="th_elem_divisors">
-   <title>PID-module theorem: invariant factors</title>
-   <statement>
-   <p>
-   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. 
-   <ol>
-    <li>
-        <title>Direct sum decomposition</title>
-        <p>
-            There is a nonnegative integer <m>n</m>, a nonnegative integer <m>m</m>, and, if <m>m&gt; 0</m>, nonzero non-units <m>a_1,a_2,\dots, a_m\in R</m> satisfying 
-            <md number="yes">
-                <mrow>a_i \amp \mid a_{i+1}</mrow>
-            </md> 
-            for all <m>1\leq i\leq m-1</m>, such that 
-            <md number="yes">
-                 <mrow xml:id="eq_PID_invar"> M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)</mrow>
-            </md>.
-            In the case where <m>m=0</m>, the decomposition <xref ref="eq_PID_invar"/> is interpreted as <m>M\cong R^n</m>. 
-        </p>
-    </li>
-    <li>
-        <title>Uniqueness</title>
-        <p>
-            The decomposition in <xref ref="eq_PID_invar"/> is unique in the following sense. Given any other decomposition <m>M\cong R^{n'}\oplus\bigoplus_{i=1}^{m'}R/(b_i)</m>, where <m>b_i\notin R^*</m> for all <m>i</m> and <m>b_i\mid b_{i+1}</m> for all <m>1\leq i\leq m'-1</m>, we have <m>n=n'</m>, <m>m=m'</m>, and <m>a_i</m> and <m>b_i</m> are associates for all <m>1\leq i\leq m</m>. 
-        </p>
-        <p>
-            In particular, the nonnegative integer <m>n</m> and ideals <m>(a_i)</m> are uniquely determined by the module <m>M</m>. 
-        </p>
-    </li>
-   </ol>
-   </p>
-   </statement>
    
-   </theorem>
-   <definition xml:id="d_betti_inv">
-   <title>Betti number and invariant factors</title>
-   <statement>
-   <p>
-   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. A decomposition of <m>M</m> as in <xref ref="eq_PID_invar"/> is called an <term>invariant decomposition</term>. The integer <m>n</m> appearing in this decomposition is called the <term>betti number</term> of <m>M</m>, and the ideals <m>(a_i)</m> are called the <term>invariant factors</term> of <m>M</m>. Similarly, the elements <m>a_i</m> themselves are called invariant factors of <m>M</m>. 
-   </p>
-   </statement>
-   </definition>
-   <definition xml:id="d_tor_M">
+    <definition xml:id="d_tor_M">
    <title>Annihilators and torsion elements</title>
    <notation>
     <usage><m>\Ann M</m></usage>
@@ -123,37 +42,62 @@
    </p>
    </statement>
    </definition>
-   <example xml:id="eg_gauss_ints_aligned_basis">
-   <title>Aligned basis for <m>\Z[i]</m> as <m>\Z</m>-module</title>
+   <theorem xml:id="th_PID_mod_invar">
+   <title>PID-module theorem: invariant factors</title>
    <statement>
    <p>
-   Let <m>R=\Z[i]</m>, the ring of Gaussian integers, and let <m>\alpha=1+2i</m>. 
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. 
    <ol>
     <li>
+        <title>Free and torsion decomposition</title>
         <p>
-            Show that <m>M=\Z[i]</m>, considered as a <m>\Z</m>-module, is free of rank 2. 
+            There is a nonnegative integer <m>n</m> such that 
+            <md number="yes">
+                <mrow xml:id="eq_PID_free_torsion"> M\amp \cong R^n \oplus \Tor M </mrow>
+            </md>.
         </p>
     </li>
     <li>
+        <title>Invariant factor decomposition</title>
         <p>
-            Let <m>N</m> be the ideal of <m>\Z[i]</m> generated by <m>\alpha</m>: <ie/>, <m>N=\alpha\Z[i]</m>. Show that <m>N</m> is a free <m>\Z</m>-module of rank 2, and that <m>(1+2i, -2+i)</m> is a <m>\Z</m>-basis of <m>N</m>. 
+            If <m>\Tor M\ne 0</m>, there exist nonzero non-units <m>a_1,a_2,\dots, a_m\in R</m> satisfying 
+            <md number="yes">
+                <mrow>a_i \amp \mid a_{i+1}</mrow>
+            </md> 
+            for all <m>1\leq i\leq m-1</m>, such that 
+            <md number="yes">
+                <mrow xml:id="eq_PID_tor_inv_decomp">\Tor M \amp \cong \bigoplus_{i=1}^m R/(a_i)</mrow>
+            </md>.
+            Thus, taken all together, we have 
+            <md number="yes">
+                 <mrow xml:id="eq_PID_invar_decomp"> M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)</mrow>
+            </md>.
         </p>
     </li>
     <li>
+        <title>Uniqueness</title>
         <p>
-            Note that the standard <m>\Z</m>-basis <m>(1,i)</m> of <m>\Z[i]</m> is not an aligned basis of <m>M</m> and <m>N</m>. Show that <m>(1+2i,i)</m> is an aligned basis for <m>M</m> and <m>N</m>. 
+            The decomposition in <xref ref="eq_PID_invar_decomp"/> is unique in the following sense. Given any other decomposition <m>M\cong R^{n'}\oplus\bigoplus_{i=1}^{m'}R/(b_i)</m>, where <m>b_i\notin R^*</m> for all <m>i</m> and <m>b_i\mid b_{i+1}</m> for all <m>1\leq i\leq m'-1</m>, we have <m>n=n'</m>, <m>m=m'</m>, and <m>a_i</m> and <m>b_i</m> are associates for all <m>1\leq i\leq m</m>. 
+        </p>
+        <p>
+            In particular, the nonnegative integer <m>n</m> and ideals <m>(a_i)</m> are uniquely determined by the module <m>M</m>. 
         </p>
     </li>
-
    </ol>
    </p>
    </statement>
-   <solution>
-   <p>
    
+   </theorem>
+   <definition xml:id="d_betti_inv">
+   <title>Betti number and invariant factors</title>
+   <statement>
+   <p>
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. A decomposition of <m>M</m> as in <xref ref="eq_PID_invar_decomp"/> is called an <term>invariant decomposition</term>. The integer <m>n</m> appearing in this decomposition is called the <term>betti number</term> of <m>M</m>, and the ideals <m>(a_i)</m> are called the <term>invariant factors</term> of <m>M</m>. Similarly, the elements <m>a_i</m> themselves are called invariant factors of <m>M</m>. 
    </p>
-   </solution>
-   </example>
+   </statement>
+   </definition>
+  
+   
    
    <remark>
    <title>Annihilator and torsion elements</title>
@@ -179,48 +123,212 @@
    </p>
    </remark>
    <corollary xml:id="cor_PID_tor_free">
-    <title>PID-modules theorem: free means torsion free</title>
+    <title>PID-modules theorem: free if and only if torsion free</title>
     <statement>
         <p>
-            Suppose <m>M</m> is a finitely generated module over a PID <m>R</m> with betti number <m>r</m> and invariant factors <m>(a_i)</m>, <m>1\leq i\leq m</m>. 
-            <ol>
-                <li>
-                    <p>
-                        <m>\Tor M\cong \bigoplus_{i=1}^m R/(a_i)</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>M</m> is free if and only if <m>M</m> is torsion free. 
-                    </p>
-                </li>
-            </ol>
+           A finitely generated module <m>M</m> over a PID <m>R</m> is free if and only if it is torsion free. Using logical short hand: 
+           <md number="yes">
+            <mrow>M \text{ free} \amp \iff M \text{ torsion free} </mrow>
+           </md>
+           for all finitely generated modules <m>M</m> over a PID. 
         </p>
     </statement>
    </corollary>
    <proof>
     <p>
-        <ol>
-            <li>
-                <p>
-                    It is not difficult to see that <m>\Tor(M_1\oplus M_2)=\Tor(M_1)\oplus \Tor(M_2)</m>. As a result, given a decomposition of <m>M</m> as in <xref ref="eq_PID_invar"/>, we have 
-                    <md number="yes">
-                        <mrow>\Tor(M) \amp \cong \Tor(R^n)\oplus \Tor\left(\bigoplus_{i=1}^m R/(a_i)\right)</mrow>
-                        <mrow> \amp = 0\oplus \Tor\left(\bigoplus_{i=1}^m R/(a_i)\right) \amp (\Tor(R^n)=\Tor(R)^n=0)</mrow>
-                        <mrow> \amp = \bigoplus_{i=1}^m \Tor(R/(a_i)) </mrow>
-                        <mrow> \amp = \bigoplus_{i=1}^m R/(a_i) </mrow>
-                    </md>,
-                    where the last equality follows since everyting in <m>R/(a_i)</m> is annihilated by <m>a_i</m>, which by definition is nonzero. 
+                    If <m>M\cong R^n</m> is free, then <m>\Tor M\cong \Tor(R)^n=\{0\}</m>. Conversely, if <m>\Tor M=\{0\}</m>, then by <xref ref="eq_PID_tor_inv_decomp"/> we must have <m>\bigoplus_{i=1}^m R/(a_i)=\{0\}</m>, which can only happen if <m>m=0</m> since the <m>a_i</m> are nonzero non-units by definition. But then <m>M\cong R^n</m>, and is thus free. 
                 </p>
-            </li>
-            <li>
-                <p>
-                    If <m>M</m> is free, then <m>\Tor M=\{0\}</m> by similar reasoning as above. Conversely, if <m>\Tor M=\{0\}</m>, then by (1) we must have <m>\bigoplus_{i=1}^m R/(a_i)=\{0\}</m>, which can only happen if <m>m=0</m> since the <m>a_i</m> are nonzero non-units by definition. But then <m>M\cong R^n</m>, and is thus free. 
-                </p>
-            </li>
-        </ol>
-    </p>
+          
    </proof>
+   <definition xml:id="d_pi-primary">
+   <title><m>\alpha</m>-torsion and <m>\pi</m>-primary submodules</title>
+   <notation>
+    <usage><m>M(\alpha)</m></usage>
+     <description>the <m>\alpha</m>-torsion of a module <m>M</m>.</description>
+   </notation>
+    <notation>
+    <usage><m>M(\pi^\infty)</m></usage>
+     <description>the <m>\pi</m>-primary component of a module <m>M</m>.</description>
+   </notation>
+   <statement>
+   <p>
+   Let <m>R</m> be an integral domain, and let <m>M</m> be an <m>R</m>-module. Given an element <m>\alpha\in R</m>, the <term><m>\alpha</m>-torsion submodule</term> of  <m>M(\alpha)</m> of <m>M</m> is defined as 
+   <md number="yes">
+    <mrow xml:id="eq_alpha_torsion"> M(\alpha)\amp = \{m\in M\mid \alpha m=0\} </mrow>
+   </md>.
+   Given an an irreducible element <m>\pi\in R</m>, the <term><m>\pi</m>-primary submodule</term> of <m>M</m>, denoted <m>M(\pi^\infty)</m>, is defined as
+   <md number="yes">
+    <mrow xml:id="eq_pi_primary"> M(\pi^\infty)\amp = \bigcup_{k=1}^\infty M(\pi^k) </mrow>
+   </md>.
+   In other words, <m>M(\pi^\infty)</m> is the set of elements of <m>M</m> that are annihilated by some power of <m>\pi</m>.
+   </p>
+   </statement>
+   </definition>
+   
+   <theorem xml:id="th_PID_mod_elem_div">
+   <title>PID-module theorem: elementary divisors</title>
+   <statement>
+   <p>
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. 
+   <ol>
+    
+    <li>
+        <title>Free and torsion decomposition</title>
+        <p>
+           There is a nonnegative integer <m>n</m> such that 
+           <md number="yes">
+            <mrow>M \amp \cong R^n\oplus \Tor(M)</mrow>
+           </md>.
+        </p>
+    </li>
+    <li>
+        <title>Elementary divisor decomposition</title>
+        
+        
+        <p>
+            If <m>\Tor(M)\ne \{0\}</m>, there exist pairwise nonassociate irreducible elements <m>\pi_1,\pi_2,\dots, \pi_r</m>, and for each <m>1\leq i\leq r</m> positive integers <m>n_{i,1}\leq n_{i,2}\leq \dots \leq n_{i,m_i}</m> such that 
+            <md number="yes">
+                <mrow>\Tor M \amp \cong \bigoplus_{i=1}^r M(\pi_i^\infty)</mrow>
+            </md>
+            and 
+            <md number="yes">
+                <mrow>M(\pi_i^\infty) \amp \cong \bigoplus_{j=1}^{m_i} R/(\pi_i^{n_{i,j}})</mrow>
+            </md>
+            for all <m>1\leq i\leq r</m>. Thus, taken all together, we have 
+            <md number="yes">
+                <mrow xml:id="eq_pid_elem_factors_decomp">M \amp \cong R^n\oplus \bigoplus_{\substack{1\leq i\leq r\\ 1\leq j\leq m_i}} R/(\pi_i^{n_{i,j}})</mrow>
+            </md>
+        </p>
+    </li>
+    <li>
+        <title>Uniqueness</title>
+        <p>
+            Given any other decomposition of <m>M</m> of the form 
+            <md>
+                <mrow>M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'}} R/((\pi')_i^{n_{i,j}'}) \amp </mrow>
+            </md>
+            where the <m>\pi_i'</m> are pairwise nonassociate irreducible elements and <m>n_{i,j}\leq n_{i,j+1}</m> for all relevant <m>i</m> and <m>j</m>, we have <m>n'=n</m>, <m>r'=r</m>, <m>m_i'=m_i</m> for all <m>i</m>, <m>n_{i,j}'=n_{i,j}</m> for all <m>i,j</m>, and <m>\pi_i'</m> is associate to <m>\pi_i</m> for all <m>i</m>. 
+        </p> 
+        <p>
+            In particular, the integers <m>n</m>, <m>r</m>, and <m>n_{i,j}</m> are uniquely determined <m>M</m>, as are the maximal ideals <m>(\pi_i)</m>. 
+        </p>
+    </li>
+   </ol>
+   </p>
+   </statement>
+   </theorem>
+   <definition xml:id="d_pid_elem_divisors">
+   <title>Elementary divisors</title>
+   <statement>
+   <p>
+   Let <m>M</m> be a finitely generated module over the PID <m>R</m>. Given a decomposition of <m>M</m> as in <xref ref="eq_pid_elem_factors_decomp"/>, the ideals <m>(\pi_i^{n_{i,j}})</m> are called the <term>elementary divisors</term> of <m>M</m>. Similarly, the irreducible powers <m>\pi_i^{n_{i,j}}</m> themselves are called elementary divisors of <m>M</m>. 
+    </p>
+   </statement>
+   </definition>
+   
+   </subsection>
+   <subsection xml:id="ss_PID_mods_case_Z">
+   <title>Case study: <m>R=\Z</m></title>
+   <p>
+    Recall that a <m>\Z</m>-module is the same thing as an abelian group. Thus, the PID-module structure theorems above give us a classification of finitely generated abelian groups. In a word, it says that any finitely generated abelian group <m>A</m> can be written as 
+    <md>
+        <mrow>A \amp \cong \Z^n \oplus_{i=1}^r \Z/a_i\Z</mrow>
+    </md>,
+    where the integer <m>n</m> is uniqueley determined by <m>A</m>. Furthermore, since in this case the torsion component of <m>A</m> is a finite direct sum of groups of the form <m>\Z/a\Z</m> for some positive integer <m>a</m>, <m>\Tor A</m> is finite! This is worth making official.   
+   </p>
+   <corollary xml:id="cor_fg_torsion_groups">
+    <title>Finitely generated abelian groups</title>
+    <statement>
+        <p>
+            If <m>A</m> is a finitely generated abelian group, then <m>\Tor(A)=\{a\in A\mid \ord a&lt; \infty\}</m> is a finite abelian group. 
+        </p>
+        <p>
+            As a consequence the torsion group <m>\Q/\Z</m> is not finitely generated. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            We need only concern ourselves with the second statement. First note that all elements of <m>\Q\Z</m> are torsion since <m>n(m/n+\Z)=m+\Z=0\in \Q/\Z</m>. It follows that 
+            <md>
+                <mrow>\Tor\Q/\Z \amp =\Q/\Z</mrow>
+            </md>.
+            Note further that <m>\Q/\Z</m> is infinite: it is easy to see that <m>\ord(1/n+\Z)=n</m>, and hence that <m>1/n+\Z\ne 1/m+\Z</m> for all distinct positive integers <m>m</m> and <m>n</m>. Since <m>\Tor(\Q.\Z)=\Q/\Z</m> is an infinite group, it follows from the first statement that <m>\Q/\Z</m> cannot be finitely generated as an abelian group. 
+        </p>
+    </proof>
+   </corollary>
+   <remark>
+    <title>Finite abelian groups</title>
+    <p>
+       Let's revisit briefly how we used the theory above to classify finite abelian groups. Given such a group <m>A</m>, since it is finite, it is finitely generated and <m>A=\Tor(A)</m>. It follows that <m>A</m> can be written as a direct sum of groups of the form <m>\Z/a\Z</m>. 
+    </p>
+    <p>
+        When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality <m>n</m>, the question naturally arises as to which of the two theorems above we should make use of: <xref ref="th_PID_mod_invar"/> or <xref ref="th_PID_mod_elem_div"/>? If we have a irreducible factorization <m>n=\prod_{i=1}^r p_i^{n_i}</m>, then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that <m>\abs{A(p_i^|infty)}=p_i^{n_i}</m>, in which case the possible decompositions of <m>A(p_i^{\infty})</m> as in <xref ref="th_PID_mod_elem_div"/> correspond to partitions of the integer <m>n_i</m>: that is, to sequences 
+        <md>
+            <mrow>n_{i1} \amp \leq n_{i2}\leq \dots \leq n_{ik}</mrow>
+        </md>
+        satisfying <m>n_{i1}+n_{i2}+\cdots +n_{ik}=n_i</m>. 
+    </p>
+    <p>
+        Assume <m>A</m> is an abelian group of cardinality <m>72</m>. Since <m>72=2^3\cdot 3^2</m>, the possible options for <m>A_2=A(2^\infty)</m> are 
+        <md>
+            <mrow> A_2 \amp \cong \Z/2^3\Z \amp (3) </mrow>
+            <mrow>A_2\amp \cong \Z/2\Z\oplus \Z/4\Z \amp  (1,2)</mrow>
+            <mrow>A_2\amp \cong \Z/2\Z\oplus \Z/2\Z\oplus \Z/2\Z \amp  (1,1,1)</mrow>
+        </md>,
+        and the possible options for <m>A_3=A(3^\infty)</m> are 
+        <md number="no">
+            <mrow> A_3 \amp \cong \Z/3^2\Z \amp (2) </mrow>
+            <mrow>A_3\amp \cong \Z/3\Z\oplus \Z/3\Z \amp  (1,1)</mrow>
+        </md>.
+        Since <m>A=A_2\oplus A_3</m>, and there are 3 possibilities for <m>A_2</m> and <m>2</m> possibilities for <m>A_3</m>, then there are <m>3\cdot 2=6</m> possibilities for <m>A</m>. Thus, up to isomorphism, there are <m>6</m> distinct abelian groups of cardinality <m>72</m>. 
+    </p>
+   </remark>
+   </subsection>
+   <subsection xml:id="ss_case_poly_ring_field">
+   <title>Case study:<m>R=F[x]</m></title>
+   <p>
+    Amazingly, by treating the case <m>R=F[x]</m>, where <m>F</m> is a field, the PID-module structure theorems gives us some advanced theory about linear transformations for finite-dimensional <m>F</m>-vector spaces essentially for free! Before getting into details, we first make an observation about modules over a general polynomial ring. 
+   </p>
+   <proposition xml:id="prop_mods_poly_ring">
+    <title>Modules over a polynomial ring</title>
+    <statement>
+        <p>
+            Let <m>R</m> be a commutative ring. 
+        </p>
+                    <p>
+                        If <m>M</m> is an <m>R[x]</m>-module, then in particular <m>M</m> is an <m>R</m>-module, and the map <m>\phi_x\colon M\rightarrow M</m> defined as <m>\phi_x(m)=x\cdot m</m> is an <m>R</m>-module endomorphism of <m>M</m>. 
+                    </p>
+                    <p>
+                        Conversely, if <m>M</m> is an <m>R</m>-module and <m>\phi\colon M\rightarrow M</m> is an <m>R</m>-module endomorphism of <m>M</m>, then <m>M</m> can be a given an <m>R[x]</m>-module structure by defining 
+                        <md>
+                            <mrow>(\sum_{k=0}^na_kx^k) \cdot m \amp = \sum_{k=0}^na_k\phi^k(m) </mrow>
+                        </md>.
+                    </p>
+            <p>
+                In other words, an <m>R[x]</m>-module consists of an <m>R</m>-module <m>M</m>, together with a choice of <m>\phi\in \End_R(M)</m> that determines how elements of <m>M</m> are multiplied by <m>x</m>. 
+            </p>
+    </statement>
+    <proof>
+        <p>
+            Proof by delegation.
+        </p>
+    </proof>
+   </proposition>
+   <p>
+    The proposition is the key that will allow us to connect linear transformations of vector spaces to the PID-module structure theory. Firstly, if <m>F</m> is a field, then we know that <m>F[x]</m> is a PID. Now, let <m>V</m> be a finite-dimensional <m>F</m>-vector space, and let <m>T\colon V\rightarrow V</m> be a linear transformation of <m>V</m>. Using the language of module theorem, <m>V</m> is a finite free <m>F</m>-module, and <m>T\in \End_F(V)</m> is an <m>F</m>-endomorphism of <m>V</m>.  
+   </p>
+   <p>
+    According to our proposition, <m>V</m> inherits an <m>F[x]</m>-module structure from <m>T</m> by defining <m>x^n\cdot v=T^n(v)</m>, and more generally, <m>g(x)\cdot v=g(T)(v)</m>. Since <m>V</m> is finitely generated over <m>F</m>, it is certainly finitely generated over <m>F[x]</m>. We conclude that as an <m>F[x]</m>-module, 
+    we have 
+    <md>
+        <mrow>V \amp \cong F[x]^n\oplus\bigoplus_{i=1}^m F[x]/(g_i(x))</mrow>
+    </md>
+    for some polynomials <m>g_i(x)\in F[x]</m>. Next, since <m>V</m> is a finite-dimensional <m>F</m>-vector space and <m>F[x]</m> is an infinite-dimensional <m>F</m>-vector space, we must have <m>n=0</m> and  
+    <md>
+        <mrow> V \amp \cong \bigoplus_{i=1}^m F[x]/(g_i(x)) </mrow>
+    </md>.
+    Great, but what does this tell us about the linear transformation <m>T</m>? 
+   </p>
    </subsection>
 
 </section>
