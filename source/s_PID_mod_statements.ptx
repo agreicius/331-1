@@ -321,7 +321,7 @@
     According to our proposition, <m>V</m> inherits an <m>F[x]</m>-module structure from <m>T</m> by defining <m>x^n\cdot v=T^n(v)</m>, and more generally, <m>g(x)\cdot v=g(T)(v)</m>. Since <m>V</m> is finitely generated over <m>F</m>, it is certainly finitely generated over <m>F[x]</m>. We conclude that as an <m>F[x]</m>-module, 
     we have 
     <md>
-        <mrow>V \amp \cong F[x]^n\oplus\bigoplus_{i=1}^m F[x]/(g_i(x))</mrow>
+        <mrow>V \amp \cong (F[x])^n\oplus\bigoplus_{i=1}^m F[x]/(g_i(x))</mrow>
     </md>
     for some polynomials <m>g_i(x)\in F[x]</m>. Next, since <m>V</m> is a finite-dimensional <m>F</m>-vector space and <m>F[x]</m> is an infinite-dimensional <m>F</m>-vector space, we must have <m>n=0</m> and  
     <md>
