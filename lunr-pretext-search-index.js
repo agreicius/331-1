@@ -4911,8 +4911,8 @@ var ptx_lunr_docs = [
   "url": "s_mods_direct_sum.html",
   "type": "Section",
   "number": "2.18",
-  "title": "Modules: direct sums and products",
-  "body": " Modules: direct sums and products   Direct sums and products of modules   Let be a ring, and let be an indexed family of -modules for some nonempty index set .  The direct product of is the -module whose underlying set is , the set of all tuples , where for all , and whose module addition and scalar multiplication are defined component-wise as follows: for all and .  The direct sum of , denoted is the -submodule of consisting of all tuples for which for all but finitely many : , .  For all we define the -th projection map  by , and the -th inclusion map  by , where for all and . The maps and are -module homomorphisms for all .     Proof that direct products and sums are modules  From the component-wise definitions of addition and scalar multiplication on , it follows in a straightforward manner that satisfies the axioms of an -module, and that is indeed a submodule of . Indeed, we know already that component-wise addition satisfies the group axioms, making an abelian group. Below we provide highly condensed one-line proofs remaining four axioms: . We delegate the proofs of the remaining claims, including the fact that and are -module homomorphisms, to the reader.    Mapping properties of direct sums and products   Let be a ring, and let be an indexed family of -modules for some nonempty index set .   Mapping property of direct products  Let be the -th projection map from . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .    Mapping property of direct sums  Let be the -th inclusion map from to . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .            and as -modules   Let be a nonzero commutative ring. Prove that as -modules, we have and .         Free module   Let be a ring, and let be a nonempty set. The module is called the free -module module on the set . An -module is free if for some nonempty set .  In analogy to the case of vector spaces, we will denote by the element of whose -th component is and whose other components are , and call the -th standard basis element of .     Mapping property of free modules   Let be a ring, let be a nonempty set, and let be the -th standard basis element of . For any -module and any tuple , the -module homomorphism defined as is the unique homomorphism satisfying for all .  As a result, the map is an isomorphism of -modules.    The result follows from the mapping property of direct sums applied to the case where for all and the fact that via the isomorphism .     Finitely generated modules   Let be a ring. Prove that a nonzero -module is finitely generated if and only if we have for some positive integer and submodule .    Assume . By , there is an -module homomorphism defined as . By definition of , it is clear that is surjective. The first isomorphism theorem for modules now implies that , where .     Linear independence and span   Let be an -module, and let be a tuple of elements of indexed by a nonempty set .    is linearly independent if for all , if , then for all .      spans  (or is a spanning set for ) if .     is a basis of if is both linearly independent and spans .        Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.        Isomorphic free modules   Let be a ring, and let and be nonempty sets.   If , then .    If is commutative, then if and only if .          Let and . Assume . By definition, there is a bijection of sets . Let be the -th standard basis element of for all , and let be the -th standard basis of for all . The mapping property of free modules implies there are unique -module homomorphisms and satisfying for all and for all . It follows that the homomorphisms and satisfy for all and . Since for all and for all , the uniqueness claim of the mapping property of free modules implies that . Thus , and we conclude that is a module isomorphism.    This is left as a homework exercise. There we assume the result is true when is a field. This is a standard result in linear algebra when is finite; when is infinite, we must use Zorn's lemma (and the result is not so standard).        Finitely generated module   An -module is finitely generated if there are elements satisfying .     Homomorphisms between free modules   Let be a ring, and let and be positive integers.  Prove that .    From , we have . We claim that . For each , let be the projection map from onto the -th copy of . For each , let be the -th projection map from onto the -th copy of . Let . From the mapping property of , the tuple , where , give rise to a ring homomorphism , defined as . The map is clearly surjective. To see that , observe that we have . Lastly, since , we conclude that by .    "
+  "title": "Direct sums and free modules",
+  "body": " Direct sums and free modules   Direct sums and products of modules   Let be a ring, and let be an indexed family of -modules for some nonempty index set .  The direct product of is the -module whose underlying set is , the set of all tuples , where for all , and whose module addition and scalar multiplication are defined component-wise as follows: for all and .  The direct sum of , denoted is the -submodule of consisting of all tuples for which for all but finitely many : , .  For all we define the -th projection map  by , and the -th inclusion map  by , where for all and . The maps and are -module homomorphisms for all .     Proof that direct products and sums are modules  From the component-wise definitions of addition and scalar multiplication on , it follows in a straightforward manner that satisfies the axioms of an -module, and that is indeed a submodule of . Indeed, we know already that component-wise addition satisfies the group axioms, making an abelian group. Below we provide highly condensed one-line proofs remaining four axioms: . We delegate the proofs of the remaining claims, including the fact that and are -module homomorphisms, to the reader.    Mapping properties of direct sums and products   Let be a ring, and let be an indexed family of -modules for some nonempty index set .   Mapping property of direct products  Let be the -th projection map from . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .    Mapping property of direct sums  Let be the -th inclusion map from to . For any -module and tuple of -module homomorphisms , where , the map defined as is the unique -module homomorphism satisfying for all .  It follows that the map is an isomorphism of -modules with inverse .            and as -modules   Let be a nonzero commutative ring. Prove that as -modules, we have and .         Free module   Let be a ring, and let be a nonempty set. The module is called the free -module module on the set . An -module is free if for some nonempty set .  In analogy to the case of vector spaces, we will denote by the element of whose -th component is and whose other components are , and call the -th standard basis element of .     Mapping property of free modules   Let be a ring, let be a nonempty set, and let be the -th standard basis element of . For any -module and any tuple , the -module homomorphism defined as is the unique homomorphism satisfying for all .  As a result, the map is an isomorphism of -modules.    The result follows from the mapping property of direct sums applied to the case where for all and the fact that via the isomorphism .     Finitely generated module   An -module is finitely generated if there are elements satisfying .     Finitely generated modules   Let be a ring. Prove that a nonzero -module is finitely generated if and only if we have for some positive integer and submodule .    Assume . By , there is an -module homomorphism defined as . By definition of , it is clear that is surjective. The first isomorphism theorem for modules now implies that , where .     Linear independence and span   Let be an -module, and let be a tuple of elements of indexed by a nonempty set .    is linearly independent if for all , if , then for all .      spans  (or is a spanning set for ) if .     is a basis of if is both linearly independent and spans .        Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.    Let be a free -module with basis . Given any -module , the map is an isomorphism of -modules.  In plain English, given any tuple of elements of , there is a unique -module homomorphism satisfying ; and in particular, an -module homomorphism is uniquely determined by its values at the basis elements .          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.    It is easy to see that the map is an -module homomorphism from to . To show that it is an isomorphism, we construct an inverse map. Given any tuple , we define , as follows: given any we can write for some , and we define . As usual, once we know that is well defined, it follows very easily that and that the two maps are inverses of one another.  What exactly are the obstacles to being well defined? Firstly, it is important to note that the sum is in fact a finite sum, since . Secondly, there is the question of whether the definition of depends on how we choose the coefficients . The issue here is easily resolved: since is a basis, for any , there is a unique  satisfying . This is a consequence of the linear independence property of : .        Isomorphic free modules   Let be a ring, and let and be nonempty sets.   If , then .    If is commutative, then if and only if .          Let and . Assume . By definition, there is a bijection of sets . Let be the -th standard basis element of for all , and let be the -th standard basis of for all . The mapping property of free modules implies there are unique -module homomorphisms and satisfying for all and for all . It follows that the homomorphisms and satisfy for all and . Since for all and for all , the uniqueness claim of the mapping property of free modules implies that . Thus , and we conclude that is a module isomorphism.    This is left as a homework exercise. There we assume the result is true when is a field. This is a standard result in linear algebra when is finite; when is infinite, we must use Zorn's lemma (and the result is not so standard).        Homomorphisms between free modules   Let be a ring, and let and be positive integers.  Prove that .    From , we have . We claim that . For each , let be the projection map from onto the -th copy of . For each , let be the -th projection map from onto the -th copy of . Let . From the mapping property of , the tuple , where , give rise to a ring homomorphism , defined as . The map is clearly surjective. To see that , observe that we have . Lastly, since , we conclude that by .    "
 },
 {
   "id": "spec_direct_",
@@ -4969,11 +4969,20 @@ var ptx_lunr_docs = [
   "body": " Mapping property of free modules   Let be a ring, let be a nonempty set, and let be the -th standard basis element of . For any -module and any tuple , the -module homomorphism defined as is the unique homomorphism satisfying for all .  As a result, the map is an isomorphism of -modules.    The result follows from the mapping property of direct sums applied to the case where for all and the fact that via the isomorphism .   "
 },
 {
+  "id": "d_finitely_generated",
+  "level": "2",
+  "url": "s_mods_direct_sum.html#d_finitely_generated",
+  "type": "Definition",
+  "number": "2.18.4",
+  "title": "Finitely generated module.",
+  "body": " Finitely generated module   An -module is finitely generated if there are elements satisfying .   "
+},
+{
   "id": "eg_finitely_generated_mods",
   "level": "2",
   "url": "s_mods_direct_sum.html#eg_finitely_generated_mods",
   "type": "Example",
-  "number": "2.18.4",
+  "number": "2.18.5",
   "title": "Finitely generated modules.",
   "body": " Finitely generated modules   Let be a ring. Prove that a nonzero -module is finitely generated if and only if we have for some positive integer and submodule .    Assume . By , there is an -module homomorphism defined as . By definition of , it is clear that is surjective. The first isomorphism theorem for modules now implies that , where .   "
 },
@@ -4982,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mods_direct_sum.html#d_ind_span",
   "type": "Definition",
-  "number": "2.18.5",
+  "number": "2.18.6",
   "title": "Linear independence and span.",
   "body": " Linear independence and span   Let be an -module, and let be a tuple of elements of indexed by a nonempty set .    is linearly independent if for all , if , then for all .      spans  (or is a spanning set for ) if .     is a basis of if is both linearly independent and spans .      "
 },
@@ -4991,27 +5000,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_mods_direct_sum.html#cor_free_mods_basis",
   "type": "Corollary",
-  "number": "2.18.6",
+  "number": "2.18.7",
   "title": "Free modules and bases.",
-  "body": " Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.      "
+  "body": " Free modules and bases   Let be a nonzero ring.   Let be a nonempty set. The tuple is a basis of .    An -module is free if and only if it has a basis.    Let be a free -module with basis . Given any -module , the map is an isomorphism of -modules.  In plain English, given any tuple of elements of , there is a unique -module homomorphism satisfying ; and in particular, an -module homomorphism is uniquely determined by its values at the basis elements .          Given , we have . It follows immediately that spans . Furthermore, for all , we have . Thus is linearly independent, and we conclude that is a basis of .    If is free, then there is an isomorphism , from whence it follows easily that is a basis for .  Conversely, assume that is a basis for . From the mapping property of free modules, the map is an -module homomorphism. Since spans , this map is surjective. Since is linearly independent, the kernel of this map is . Thus is an isomorphism, and we conclude that is free.    It is easy to see that the map is an -module homomorphism from to . To show that it is an isomorphism, we construct an inverse map. Given any tuple , we define , as follows: given any we can write for some , and we define . As usual, once we know that is well defined, it follows very easily that and that the two maps are inverses of one another.  What exactly are the obstacles to being well defined? Firstly, it is important to note that the sum is in fact a finite sum, since . Secondly, there is the question of whether the definition of depends on how we choose the coefficients . The issue here is easily resolved: since is a basis, for any , there is a unique  satisfying . This is a consequence of the linear independence property of : .      "
 },
 {
   "id": "cor_card_basis",
   "level": "2",
   "url": "s_mods_direct_sum.html#cor_card_basis",
   "type": "Corollary",
-  "number": "2.18.7",
+  "number": "2.18.8",
   "title": "Isomorphic free modules.",
   "body": " Isomorphic free modules   Let be a ring, and let and be nonempty sets.   If , then .    If is commutative, then if and only if .          Let and . Assume . By definition, there is a bijection of sets . Let be the -th standard basis element of for all , and let be the -th standard basis of for all . The mapping property of free modules implies there are unique -module homomorphisms and satisfying for all and for all . It follows that the homomorphisms and satisfy for all and . Since for all and for all , the uniqueness claim of the mapping property of free modules implies that . Thus , and we conclude that is a module isomorphism.    This is left as a homework exercise. There we assume the result is true when is a field. This is a standard result in linear algebra when is finite; when is infinite, we must use Zorn's lemma (and the result is not so standard).      "
-},
-{
-  "id": "d_finitely_generated",
-  "level": "2",
-  "url": "s_mods_direct_sum.html#d_finitely_generated",
-  "type": "Definition",
-  "number": "2.18.8",
-  "title": "Finitely generated module.",
-  "body": " Finitely generated module   An -module is finitely generated if there are elements satisfying .   "
 },
 {
   "id": "eg_hom_btwn_free_mods",
@@ -5021,6 +5021,123 @@ var ptx_lunr_docs = [
   "number": "2.18.9",
   "title": "Homomorphisms between free modules.",
   "body": " Homomorphisms between free modules   Let be a ring, and let and be positive integers.  Prove that .    From , we have . We claim that . For each , let be the projection map from onto the -th copy of . For each , let be the -th projection map from onto the -th copy of . Let . From the mapping property of , the tuple , where , give rise to a ring homomorphism , defined as . The map is clearly surjective. To see that , observe that we have . Lastly, since , we conclude that by .   "
+},
+{
+  "id": "s_PID_modules_statement",
+  "level": "1",
+  "url": "s_PID_modules_statement.html",
+  "type": "Section",
+  "number": "2.19",
+  "title": "PID-module structure theorems: statements",
+  "body": " PID-module structure theorems: statements   In this section we will give careful statements of various theorems related to the structure of finitely generated modules over a PID. We will then illustrate these statements in two specific settings: the case when , where we obtain a classification of finitely generated abelian groups; and the case when is a field, in which case we obtain a classification of linear transformations of finite-dimensional vector spaces in terms of their rational canonical form.    PID-module structure theorems   Annihilators and torsion elements    annihilator of module     torsion elements of module    Let be a ring, and let be a left -module.   The annihilator of , denoted is defined as .    A torsion element of is an element such that for some nonzero . The set of all torsion elements of is denoted . The module is called torsion if , and torsion free if .        PID-module theorem: invariant factors   Let be a finitely generated module over the PID .   Free and torsion decomposition  There is a nonnegative integer such that .    Invariant factor decomposition  If , there exist nonzero non-units satisfying for all , such that . Thus, taken all together, we have .    Uniqueness  The decomposition in is unique in the following sense. Given any other decomposition , where for all and for all , we have , , and and are associates for all .  In particular, the nonnegative integer and ideals are uniquely determined by the module .        Betti number and invariant factors   Let be a finitely generated module over the PID . A decomposition of as in is called an invariant decomposition . The integer appearing in this decomposition is called the betti number of , and the ideals are called the invariant factors of . Similarly, the elements themselves are called invariant factors of .     Annihilator and torsion elements  Let be an -module.    is a left ideal of , and thus a two-sided ideal if is commutative.     is a submodule of if is an integral domain.    Given a family of -modules , we have .       PID-modules theorem: free if and only if torsion free   A finitely generated module over a PID is free if and only if it is torsion free. Using logical short hand: for all finitely generated modules over a PID.     If is free, then . Conversely, if , then by we must have , which can only happen if since the are nonzero non-units by definition. But then , and is thus free.    -torsion and -primary submodules    the -torsion of a module .     the -primary component of a module .    Let be an integral domain, and let be an -module. Given an element , the -torsion submodule of of is defined as . Given an an irreducible element , the -primary submodule of , denoted , is defined as . In other words, is the set of elements of that are annihilated by some power of .     PID-module theorem: elementary divisors   Let be a finitely generated module over the PID .   Free and torsion decomposition  There is a nonnegative integer such that .    Elementary divisor decomposition  If , there exist pairwise nonassociate irreducible elements , and for each positive integers such that and for all . Thus, taken all together, we have     Uniqueness  Given any other decomposition of of the form where the are pairwise nonassociate irreducible elements and for all relevant and , we have , , for all , for all , and is associate to for all .  In particular, the integers , , and are uniquely determined , as are the maximal ideals .        Elementary divisors   Let be a finitely generated module over the PID . Given a decomposition of as in , the ideals are called the elementary divisors of . Similarly, the irreducible powers themselves are called elementary divisors of .      Case study:  Recall that a -module is the same thing as an abelian group. Thus, the PID-module structure theorems above give us a classification of finitely generated abelian groups. In a word, it says that any finitely generated abelian group can be written as , where the integer is uniqueley determined by . Furthermore, since in this case the torsion component of is a finite direct sum of groups of the form for some positive integer , is finite! This is worth making official.   Finitely generated abelian groups   If is a finitely generated abelian group, then is a finite abelian group.  As a consequence the torsion group is not finitely generated.    We need only concern ourselves with the second statement. First note that all elements of are torsion since . It follows that . Note further that is infinite: it is easy to see that , and hence that for all distinct positive integers and . Since is an infinite group, it follows from the first statement that cannot be finitely generated as an abelian group.     Finite abelian groups  Let's revisit briefly how we used the theory above to classify finite abelian groups. Given such a group , since it is finite, it is finitely generated and . It follows that can be written as a direct sum of groups of the form .  When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality , the question naturally arises as to which of the two theorems above we should make use of: or ? If we have a irreducible factorization , then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that , in which case the possible decompositions of as in correspond to partitions of the integer : that is, to sequences satisfying .  Assume is an abelian group of cardinality . Since , the possible options for are , and the possible options for are . Since , and there are 3 possibilities for and possibilities for , then there are possibilities for . Thus, up to isomorphism, there are distinct abelian groups of cardinality .     Case study:  Amazingly, by treating the case , where is a field, the PID-module structure theorems gives us some advanced theory about linear transformations for finite-dimensional -vector spaces essentially for free! Before getting into details, we first make an observation about modules over a general polynomial ring.   Modules over a polynomial ring   Let be a commutative ring.  If is an -module, then in particular is an -module, and the map defined as is an -module endomorphism of .  Conversely, if is an -module and is an -module endomorphism of , then can be a given an -module structure by defining .  In other words, an -module consists of an -module , together with a choice of that determines how elements of are multiplied by .    Proof by delegation.    The proposition is the key that will allow us to connect linear transformations of vector spaces to the PID-module structure theory. Firstly, if is a field, then we know that is a PID. Now, let be a finite-dimensional -vector space, and let be a linear transformation of . Using the language of module theorem, is a finite free -module, and is an -endomorphism of .  According to our proposition, inherits an -module structure from by defining , and more generally, . Since is finitely generated over , it is certainly finitely generated over . We conclude that as an -module, we have for some polynomials . Next, since is a finite-dimensional -vector space and is an infinite-dimensional -vector space, we must have and . Great, but what does this tell us about the linear transformation ?   "
+},
+{
+  "id": "d_tor_M",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#d_tor_M",
+  "type": "Definition",
+  "number": "2.19.1",
+  "title": "Annihilators and torsion elements.",
+  "body": " Annihilators and torsion elements    annihilator of module     torsion elements of module    Let be a ring, and let be a left -module.   The annihilator of , denoted is defined as .    A torsion element of is an element such that for some nonzero . The set of all torsion elements of is denoted . The module is called torsion if , and torsion free if .      "
+},
+{
+  "id": "th_PID_mod_invar",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#th_PID_mod_invar",
+  "type": "Theorem",
+  "number": "2.19.2",
+  "title": "PID-module theorem: invariant factors.",
+  "body": " PID-module theorem: invariant factors   Let be a finitely generated module over the PID .   Free and torsion decomposition  There is a nonnegative integer such that .    Invariant factor decomposition  If , there exist nonzero non-units satisfying for all , such that . Thus, taken all together, we have .    Uniqueness  The decomposition in is unique in the following sense. Given any other decomposition , where for all and for all , we have , , and and are associates for all .  In particular, the nonnegative integer and ideals are uniquely determined by the module .      "
+},
+{
+  "id": "d_betti_inv",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#d_betti_inv",
+  "type": "Definition",
+  "number": "2.19.3",
+  "title": "Betti number and invariant factors.",
+  "body": " Betti number and invariant factors   Let be a finitely generated module over the PID . A decomposition of as in is called an invariant decomposition . The integer appearing in this decomposition is called the betti number of , and the ideals are called the invariant factors of . Similarly, the elements themselves are called invariant factors of .   "
+},
+{
+  "id": "ss_PID_modules_statements-5",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#ss_PID_modules_statements-5",
+  "type": "Remark",
+  "number": "2.19.4",
+  "title": "Annihilator and torsion elements.",
+  "body": " Annihilator and torsion elements  Let be an -module.    is a left ideal of , and thus a two-sided ideal if is commutative.     is a submodule of if is an integral domain.    Given a family of -modules , we have .     "
+},
+{
+  "id": "cor_PID_tor_free",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#cor_PID_tor_free",
+  "type": "Corollary",
+  "number": "2.19.5",
+  "title": "PID-modules theorem: free if and only if torsion free.",
+  "body": " PID-modules theorem: free if and only if torsion free   A finitely generated module over a PID is free if and only if it is torsion free. Using logical short hand: for all finitely generated modules over a PID.   "
+},
+{
+  "id": "ss_PID_modules_statements-7",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#ss_PID_modules_statements-7",
+  "type": "Proof",
+  "number": "2.19.1.1",
+  "title": "",
+  "body": " If is free, then . Conversely, if , then by we must have , which can only happen if since the are nonzero non-units by definition. But then , and is thus free.  "
+},
+{
+  "id": "d_pi-primary",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#d_pi-primary",
+  "type": "Definition",
+  "number": "2.19.6",
+  "title": "<span class=\"process-math\">\\(\\alpha\\)<\/span>-torsion and <span class=\"process-math\">\\(\\pi\\)<\/span>-primary submodules.",
+  "body": " -torsion and -primary submodules    the -torsion of a module .     the -primary component of a module .    Let be an integral domain, and let be an -module. Given an element , the -torsion submodule of of is defined as . Given an an irreducible element , the -primary submodule of , denoted , is defined as . In other words, is the set of elements of that are annihilated by some power of .   "
+},
+{
+  "id": "th_PID_mod_elem_div",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#th_PID_mod_elem_div",
+  "type": "Theorem",
+  "number": "2.19.7",
+  "title": "PID-module theorem: elementary divisors.",
+  "body": " PID-module theorem: elementary divisors   Let be a finitely generated module over the PID .   Free and torsion decomposition  There is a nonnegative integer such that .    Elementary divisor decomposition  If , there exist pairwise nonassociate irreducible elements , and for each positive integers such that and for all . Thus, taken all together, we have     Uniqueness  Given any other decomposition of of the form where the are pairwise nonassociate irreducible elements and for all relevant and , we have , , for all , for all , and is associate to for all .  In particular, the integers , , and are uniquely determined , as are the maximal ideals .      "
+},
+{
+  "id": "d_pid_elem_divisors",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#d_pid_elem_divisors",
+  "type": "Definition",
+  "number": "2.19.8",
+  "title": "Elementary divisors.",
+  "body": " Elementary divisors   Let be a finitely generated module over the PID . Given a decomposition of as in , the ideals are called the elementary divisors of . Similarly, the irreducible powers themselves are called elementary divisors of .   "
+},
+{
+  "id": "cor_fg_torsion_groups",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#cor_fg_torsion_groups",
+  "type": "Corollary",
+  "number": "2.19.9",
+  "title": "Finitely generated abelian groups.",
+  "body": " Finitely generated abelian groups   If is a finitely generated abelian group, then is a finite abelian group.  As a consequence the torsion group is not finitely generated.    We need only concern ourselves with the second statement. First note that all elements of are torsion since . It follows that . Note further that is infinite: it is easy to see that , and hence that for all distinct positive integers and . Since is an infinite group, it follows from the first statement that cannot be finitely generated as an abelian group.   "
+},
+{
+  "id": "ss_PID_mods_case_Z-4",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#ss_PID_mods_case_Z-4",
+  "type": "Remark",
+  "number": "2.19.10",
+  "title": "Finite abelian groups.",
+  "body": " Finite abelian groups  Let's revisit briefly how we used the theory above to classify finite abelian groups. Given such a group , since it is finite, it is finitely generated and . It follows that can be written as a direct sum of groups of the form .  When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality , the question naturally arises as to which of the two theorems above we should make use of: or ? If we have a irreducible factorization , then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that , in which case the possible decompositions of as in correspond to partitions of the integer : that is, to sequences satisfying .  Assume is an abelian group of cardinality . Since , the possible options for are , and the possible options for are . Since , and there are 3 possibilities for and possibilities for , then there are possibilities for . Thus, up to isomorphism, there are distinct abelian groups of cardinality .  "
+},
+{
+  "id": "prop_mods_poly_ring",
+  "level": "2",
+  "url": "s_PID_modules_statement.html#prop_mods_poly_ring",
+  "type": "Proposition",
+  "number": "2.19.11",
+  "title": "Modules over a polynomial ring.",
+  "body": " Modules over a polynomial ring   Let be a commutative ring.  If is an -module, then in particular is an -module, and the map defined as is an -module endomorphism of .  Conversely, if is an -module and is an -module endomorphism of , then can be a given an -module structure by defining .  In other words, an -module consists of an -module , together with a choice of that determines how elements of are multiplied by .    Proof by delegation.   "
 },
 {
   "id": "appendix-notation",
