@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_mods_direct_sum" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Modules: direct sums and products</title>
+    <title>Direct sums and free modules</title>
 
     <activity xml:id="spec_direct_">
     <title>Direct sums and products of modules</title>
@@ -144,6 +144,15 @@
     </p>
     </proof>
     </theorem>
+    <definition xml:id="d_finitely_generated">
+    <title>Finitely generated module</title>
+    <statement>
+    <p>
+    An <m>R</m>-module <m>M</m> is <term>finitely generated</term> if there are elements <m>m_1,m_2,\dots, m_n\in M</m> satisfying <m>M=(m_1,m_2,\dots, m_n)</m>. 
+    </p>
+    </statement>
+    </definition>
+
     <example xml:id="eg_finitely_generated_mods">
     <title>Finitely generated modules</title>
     <statement>
@@ -199,6 +208,19 @@
                             An <m>R</m>-module <m>M</m> is free if and only if it has a basis. 
                         </p>
                     </li>
+                    <li>
+                        <p>
+                            Let <m>M</m> be a free <m>R</m>-module with basis <m>(m_i)_{i\in I}</m>. Given any <m>R</m>-module <m>N</m>, the map
+                            <md>
+                                <mrow>\Hom_R(M,N) \amp \rightarrow N^I</mrow>
+                                <mrow>\phi \amp \mapsto (\phi(m_i))_{i\in I}</mrow>
+                            </md>
+                            is an isomorphism of <m>R</m>-modules. 
+                        </p>
+                        <p>
+                            In plain English, given any tuple <m>(n_i)_{i\in I}</m> of elements of <m>N</m>, there is a unique <m>R</m>-module homomorphism <m>\phi\in \Hom_R(M,N)</m> satisfying <m>\phi(m_i)=n_i</m>; and in particular, an <m>R</m>-module homomorphism <m>\phi\in \Hom_R(M,N)</m> is uniquely determined by its values <m>\phi(m_i)</m> at the basis elements <m>m_i</m>. 
+                        </p>
+                    </li>
                 </ol>
             </p>
         </statement>
@@ -226,6 +248,34 @@
                                 <mrow>(r_i)_{i\in I} \amp \longmapsto \sum_{i\in I}r_im_i</mrow>
                             </md>
                             is an <m>R</m>-module homomorphism. Since <m>(m_i)</m> spans <m>M</m>, this map is surjective. Since <m>(m_i)</m> is linearly independent, the kernel of this map is <m>\{0\}</m>. Thus <m>\phi</m> is an isomorphism, and we conclude that <m>M</m> is free. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            It is easy to see that the map <m>\phi\mapsto (\phi(m_i))_{i\in I}</m> is an <m>R</m>-module homomorphism from <m>\Hom_R(M,N)</m> to <m>N^I</m>. To show that it is an isomorphism, we construct an inverse map. Given any tuple <m>n=(n_i)_{i\in I}\in N^I</m>, we define <m>\phi_n\colon M\rightarrow N</m>, as follows: given any <m>m\in M</m> we can write 
+                            <md number="yes">
+                                <mrow>m \amp =\sum_{i\in I} a_i m_i</mrow>
+                            </md>
+                            for some <m>(a_i)_{i\in I}\in \bigoplus_{i\in I}R</m>, and we define 
+                            <md>
+                                <mrow>\phi_n(m) \amp =\sum_{i\in I}a_i n_i</mrow>
+                            </md>.
+                            As usual, once we know that <m>\phi_n</m> is well defined, it follows very easily  that <m>\phi_n\in \Hom_R(M,N)</m> and that the two maps 
+                            <md>
+                                <mrow>\Hom_R(M,N)\amp \rightarrow N^I  \amp N^I\amp\rightarrow \Hom_R(M,N) </mrow>
+                                <mrow>\phi \amp \mapsto (\phi(m_i))_{i\in I} \amp n=(n_i)_{i\in I}\amp \mapsto \phi_n
+                                </mrow>
+                            </md>
+                            are inverses of one another. 
+                        </p>
+                        <p>
+                            What exactly are the obstacles to <m>\phi_n</m> being well defined? Firstly, it is important to note that the sum <m>\sum_{i\in I}a_in_i</m> is in fact a finite sum, since <m>(a_i)_{i\in I}\in \bigoplus_{i\in I}R</m>. Secondly, there is the question of whether the definition of <m>\phi_n</m> depends on how we choose the coefficients <m>(a_i)_{i\in I}</m>. The issue here is easily resolved: since <m>(m_i)_{i\in I}</m> is a basis, for any <m>m\in M</m>, there is a <em>unique</em> <m>(a_i)_{i\in I}\in \bigoplus_{i\in I}R</m> satisfying  <m>m=\sum_{i\in I}a_im_i</m>. This is a consequence of the linear independence property of <m>(m_i)_{i\in I}</m>: 
+                            <md>
+                                <mrow>\sum_{i\in I}a_im_i=\sum_{i\in I}b_im_i\amp \implies \sum_{i\in I}a_im_i-\sum_{i\in I}b_im_i=0</mrow>
+                                <mrow>\amp \implies \sum_{i\in I}(a_i-b_i)m_i=0</mrow>
+                                <mrow>\amp \implies a_i-b_i=0 \text{ for all } i\in I\amp ((m_i)_{i\in I} \text{ lin. ind.})</mrow>
+                                <mrow> \amp \implies a_i=b_i \text{ for all } i\in I</mrow>
+                            </md>.
                         </p>
                     </li>
 
@@ -281,14 +331,7 @@
         </proof>
     </corollary>
     
-    <definition xml:id="d_finitely_generated">
-    <title>Finitely generated module</title>
-    <statement>
-    <p>
-    An <m>R</m>-module <m>M</m> is <term>finitely generated</term> if there are elements <m>m_1,m_2,\dots, m_n\in M</m> satisfying <m>M=(m_1,m_2,\dots, m_n)</m>. 
-    </p>
-    </statement>
-    </definition>
+    
     
     <example xml:id="eg_hom_btwn_free_mods">
     <title>Homomorphisms between free modules</title>
