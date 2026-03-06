@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.16';
+eBookConfig.runestone_version = '7.11.17';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.0f480e95eedd3cd4.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.75d8d8257df1449f.css">
+<script src="_static/prefix-runtime.86a1bdf80f338ffc.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_mods_direct_sum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_rings_mods.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_mods_direct_sum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_rings_mods.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_PID_mod_proofs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\( \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\N}{{\mathbb N}}
@@ -542,6 +542,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_PID_modules_statement.html#ss_case_poly_ring_field" class="internal"><span class="codenumber">2.19.3</span> <span class="title">Case study:<span class="process-math">\(R=F[x]\)</span></span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_PID_mod_proofs.html" class="internal"><span class="codenumber">2.20</span> <span class="title">PID-module structure theorems: proofs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_PID_mod_proofs.html#ss_uniqueness" class="internal"><span class="codenumber">2.20.1</span> <span class="title">Proof of uniqueness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_PID_mod_proofs.html#ss_existence" class="internal"><span class="codenumber">2.20.2</span> <span class="title">Existence of decompositions: aligned bases</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -756,7 +763,7 @@ M \amp \cong R^n\oplus \bigoplus_{\substack{1\leq i\leq r\\ 1\leq j\leq m_i}} R/
 <div class="para">Given any other decomposition of <span class="process-math">\(M\)</span> of the form</div>
 <div class="displaymath process-math" id="th_PID_mod_elem_div-2-1-3-3-2-2">
 \begin{align*}
-M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'}} R/((\pi')_i^{n_{i,j}'}) \amp 
+M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'}} R/((\pi_i')^{n_{i,j}'}) \amp 
 \end{align*}
 </div>
 <div class="para">where the <span class="process-math">\(\pi_i'\)</span> are pairwise nonassociate irreducible elements and <span class="process-math">\(n_{i,j}\leq n_{i,j+1}\)</span> for all relevant <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{,}\)</span> we have <span class="process-math">\(n'=n\text{,}\)</span> <span class="process-math">\(r'=r\text{,}\)</span> <span class="process-math">\(m_i'=m_i\)</span> for all <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(n_{i,j}'=n_{i,j}\)</span> for all <span class="process-math">\(i,j\text{,}\)</span> and <span class="process-math">\(\pi_i'\)</span> is associate to <span class="process-math">\(\pi_i\)</span> for all <span class="process-math">\(i\text{.}\)</span>
@@ -782,10 +789,10 @@ M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'
 <div class="para">Recall that a <span class="process-math">\(\Z\)</span>-module is the same thing as an abelian group. Thus, the PID-module structure theorems above give us a classification of finitely generated abelian groups. In a word, it says that any finitely generated abelian group <span class="process-math">\(A\)</span> can be written as</div>
 <div class="displaymath process-math" id="ss_PID_mods_case_Z-2-3">
 \begin{align*}
-A \amp \cong \Z^n \oplus_{i=1}^r \Z/a_i\Z\text{,}
+A \amp \cong \Z^n \bigoplus_{i=1}^m \Z/a_i\Z\text{,}
 \end{align*}
 </div>
-<div class="para">where the integer <span class="process-math">\(n\)</span> is uniqueley determined by <span class="process-math">\(A\text{.}\)</span> Furthermore, since in this case the torsion component of <span class="process-math">\(A\)</span> is a finite direct sum of groups of the form <span class="process-math">\(\Z/a\Z\)</span> for some positive integer <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\Tor A\)</span> is finite! This is worth making official.</div>
+<div class="para">where the integer <span class="process-math">\(n\)</span> is uniquely determined by <span class="process-math">\(A\text{.}\)</span> Furthermore, since in this case the torsion component of <span class="process-math">\(A\)</span> is a finite direct sum of groups of the form <span class="process-math">\(\Z/a\Z\)</span> for some positive integer <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\Tor A\)</span> is finite! This is worth making official.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_mods_case_Z-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_fg_torsion_groups"><h4 class="heading">
@@ -810,7 +817,7 @@ A \amp \cong \Z^n \oplus_{i=1}^r \Z/a_i\Z\text{,}
 <div class="para" id="ss_PID_mods_case_Z-4-2">Let’s revisit briefly how we used the theory above to classify finite abelian groups. Given such a group <span class="process-math">\(A\text{,}\)</span> since it is finite, it is finitely generated and <span class="process-math">\(A=\Tor(A)\text{.}\)</span> It follows that <span class="process-math">\(A\)</span> can be written as a direct sum of groups of the form <span class="process-math">\(\Z/a\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_mods_case_Z-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ss_PID_mods_case_Z-4-3">
-<div class="para">When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality <span class="process-math">\(n\text{,}\)</span> the question naturally arises as to which of the two theorems above we should make use of: <a href="s_PID_modules_statement.html#th_PID_mod_invar" class="xref" data-knowl="./knowl/xref/th_PID_mod_invar.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.2: PID-module theorem: invariant factors">Theorem 2.19.2</a> or <a href="s_PID_modules_statement.html#th_PID_mod_elem_div" class="xref" data-knowl="./knowl/xref/th_PID_mod_elem_div.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.7: PID-module theorem: elementary divisors">Theorem 2.19.7</a>? If we have a irreducible factorization <span class="process-math">\(n=\prod_{i=1}^r p_i^{n_i}\text{,}\)</span> then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that <span class="process-math">\(\abs{A(p_i^|infty)}=p_i^{n_i}\text{,}\)</span> in which case the possible decompositions of <span class="process-math">\(A(p_i^{\infty})\)</span> as in <a href="s_PID_modules_statement.html#th_PID_mod_elem_div" class="xref" data-knowl="./knowl/xref/th_PID_mod_elem_div.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.7: PID-module theorem: elementary divisors">Theorem 2.19.7</a> correspond to partitions of the integer <span class="process-math">\(n_i\text{:}\)</span> that is, to sequences</div>
+<div class="para">When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality <span class="process-math">\(n\text{,}\)</span> the question naturally arises as to which of the two theorems above we should make use of: <a href="s_PID_modules_statement.html#th_PID_mod_invar" class="xref" data-knowl="./knowl/xref/th_PID_mod_invar.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.2: PID-module theorem: invariant factors">Theorem 2.19.2</a> or <a href="s_PID_modules_statement.html#th_PID_mod_elem_div" class="xref" data-knowl="./knowl/xref/th_PID_mod_elem_div.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.7: PID-module theorem: elementary divisors">Theorem 2.19.7</a>? If we have a irreducible factorization <span class="process-math">\(n=\prod_{i=1}^r p_i^{n_i}\text{,}\)</span> then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that <span class="process-math">\(\abs{A(p_i^\infty)}=p_i^{n_i}\text{,}\)</span> in which case the possible decompositions of <span class="process-math">\(A(p_i^{\infty})\)</span> as in <a href="s_PID_modules_statement.html#th_PID_mod_elem_div" class="xref" data-knowl="./knowl/xref/th_PID_mod_elem_div.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.19.7: PID-module theorem: elementary divisors">Theorem 2.19.7</a> correspond to partitions of the integer <span class="process-math">\(n_i\text{:}\)</span> that is, to sequences</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_PID_mod_invar.html ./knowl/xref/th_PID_mod_elem_div.html ./knowl/xref/th_PID_mod_elem_div.html" id="ss_PID_mods_case_Z-4-3-9">
 \begin{align*}
 n_{i1} \amp \leq n_{i2}\leq \dots \leq n_{ik}
@@ -883,7 +890,7 @@ V \amp \cong \bigoplus_{i=1}^m F[x]/(g_i(x)) \text{.}
 </div>
 <div class="autopermalink" data-description="Subsection 2.19.3: Case study:R=F[x]"><a href="#ss_case_poly_ring_field" title="Copy heading and permalink for Subsection 2.19.3: Case study:R=F[x]" aria-label="Copy heading and permalink for Subsection 2.19.3: Case study:R=F[x]">🔗</a></div></section><div class="autopermalink" data-description="Section 2.19: PID-module structure theorems: statements"><a href="#s_PID_modules_statement" title="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements" aria-label="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_mods_direct_sum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_mods_direct_sum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_PID_mod_proofs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
