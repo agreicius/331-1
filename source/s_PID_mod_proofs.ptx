@@ -2,6 +2,111 @@
 
 <section xml:id="s_PID_mod_proofs" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>PID-module structure theorems: proofs</title>
+    <subsection xml:id="ss_uniqueness">
+    <title>Proof of uniqueness</title>
+    <p>
+        We first examine the uniqueness claims in <xref ref="th_PID_mod_invar"/> and <xref ref="th_PID_mod_elem_div"/>. In proving this we will assume existence of decompositions of the given form.  
+    </p>
+    <p>
+        Let's first see why the Betti number <m>n</m> is uniquely determined. If we have 
+        <md>
+            <mrow>M \amp \cong R^n \oplus \Tor M</mrow>
+        </md>,
+        then 
+        <md>
+            <mrow>\Tor M \amp \cong \Tor(R^n)\oplus \Tor (\Tor M)\cong \{0\}\oplus \Tor M</mrow>
+        </md> 
+        and thus
+        <md>
+            <mrow>M/\Tor(M) \amp \cong (R^n\oplus \Tor(M))/(\{0\}\oplus \Tor M)\cong R^n</mrow>
+        </md>.
+        Thus <m>n</m> is the rank of the free module <m>M/\Tor M</m>. Since the rank of a free module is well defined, we see that <m>n</m> is uniquely determined by the module <m>M</m>. More explicitly, we have 
+        <md>
+            <mrow>M \cong R^m\oplus \Tor M\amp \iff m=\rank M/\Tor M</mrow> 
+        </md>.
+    </p>
+    <p>
+        It remains to show that each of the two distinct decompositions of <m>\Tor M</m> described in <xref ref="th_PID_mod_invar"/> and <xref ref="th_PID_mod_elem_div"/> satisfy the specified uniqueness claims. First observe that the we can obtain the elementary divisor form from the invariant factor form using the Chinese remainder theorem: given <m>a=\prod_{i=1}^rp_i^{n_i}</m>, with <m>p_i</m> pairwise nonassociate irreducibles, the ideals <m>(p_i^{n_i})</m> are pairwise coprime, and thus 
+    <md number="yes">
+        <mrow>R/(a) \amp \cong \bigoplus_{i=1}^rR/(p_i^{n_i})</mrow>
+    </md>.
+Expanding out all the invariant factor quotients <m>R/(a_i)</m> in this way and then grouping all associate irreducible factors together, we obtain the elementary divisor form from the invariant factor form. Conversely, with a little bit of care you can group the elementary factor quotients together in such a way to get the invariant factor form. It is worth at least looking at one example of this reverse direction to see what the subtleties are. Consider the case <m>R=\Z</m> and the group 
+<md>
+    <mrow>A \amp \cong \Z/2\Z\oplus \Z/2^2\Z\oplus \Z/2^2\Z \oplus \Z/3\Z\oplus \Z/3\Z</mrow>
+</md>.
+We have 
+<md>
+    <mrow>A \amp \cong \Z/2\Z\oplus (\Z/2^2\Z\oplus \Z/3\Z)\oplus (\Z/2^2\Z\oplus \Z/3\Z) </mrow>
+    <mrow> \amp \cong \Z/2\Z \oplus \Z/12\Z \oplus \Z/12\Z</mrow>
+</md>.
+It thus suffices to show that the uniqueness claim for the elementary divisor form holds. Since this decomposition is a decomposition of <m>\Tor M</m>, we will assume <m>M=\Tor M</m> is torsion. Suppose we have a decomposition
+<md>
+    <mrow>M \amp \cong \bigoplus_{i=1}^r \bigoplus_{j=1}^{m_j}R/(p_i^{n_{ij}}) </mrow>
+</md>
+where the <m>p_i</m> are pairwise nonassociate irreducible elements. In general, if <m>p</m> and <m>q</m> are nonassociate irreducible elements, then <m>p</m> and <m>q^n</m> are coprime for any positive integer <m>n</m>, from which it follows that multiplication by <m>p</m> is an automorphism of <m>R/(q^n)</m>. It follows that the <m>p</m>-primary component of <m>R/(q^n)</m> is <m>\{0\}</m> for any irreducible <m>q</m> not associate to <m>p</m> and positive integer <m>n</m>. Since <m>p</m>-primary components behave well with direct sums, we conclude that given the composition of <m>M</m> above, we have 
+<md>
+    <mrow>M(p_i^\infty) \amp \cong \bigoplus_{i=1}^{m_i}R/(p_i^{n_{ij}})</mrow>
+</md>
+for all <m>i</m>. In other words, not surprisingly, we extract <m>M(p_i^\infty)</m> from the decomposition above by taking just the direct summands that involve <m>p_i</m>.  Since <m>M(p_i^\infty)</m> is (up to isomorphism) uniquely determined by <m>M</m>, we have thus reduced the uniqueness problem to showing that each of these <m>p_i</m>-primary component decompositions is unique in the stipulated sense. From now on, we assume that <m>p</m> is an irreducible element, and that we have a module <m>M</m> with decomposition 
+<md>
+    <mrow>M \amp \cong \bigoplus_{i=1}^m R/(p^{n_i})</mrow>
+</md>.
+The uniqueness of the <m>n_i</m> appearing in such a decomposition is now given by the following result, which actually tells us how to compute the sequence <m>n_1\leq n_2\leq\dots \leq n_m</m>. 
+</p>
+<theorem xml:id="th_PID_mod_pprimary">
+<title>PID-module <m>p</m>-primary components</title>
+<statement>
+<p>
+Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and let <m>F_p=R/(p)</m>. Note that since <m>(p)</m> is a maximal ideal in <m>R</m>, <m>F_p</m> is a field. 
+<ol>
+    <li>
+        <p>
+            If <m>M</m> is a finitely generated <m>R</m>-module, then for all <m>k\geq 0</m>, <m>p^kM/p^{k+1}M</m> is a finite-dimensional <m>F_p</m>-vector space. In particular, <m>M/pM</m> is a <m>F_p</m>-vector space of finite dimension. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>M=R/(p^n)</m> for some positive integer <m>n</m>. We have 
+            <md>
+        <mrow>p^kM/p^{k+1}M \amp \cong \begin{cases}
+        F_p \amp \text{if } k&lt; n \\
+        \{0\} \amp \text{if } k\geq n
+        \end{cases}
+    </mrow>
+</md>
+        </p>
+    </li>
+    <li>
+        <p>
+            Suppose <m>M</m> is a finitely generated <m>R</m>-module satisfying 
+            <md>
+                <mrow>M \amp\cong  \oplus_{i=1}^m R/(p^{n_i})</mrow>
+            </md>
+    with <m>n_1\leq n_2\leq \dots\leq  n_m</m>. For each <m>k\geq 1</m>, define 
+            <md>
+                <mrow>m_k  \amp = \abs{\{j\in \{1,2,\dots, m\}\mid n_j=k\}}</mrow>
+            </md>.
+            We have 
+            <md>
+                <mrow>m_k \amp =\dim_{F_p}p^{k-1}M/p^{k}M-\dim_{F_p}p^{k}M/p^{k+1}M</mrow>
+            </md>.
+            It follows that the sequence <m>n_1\leq n_2\cdots \leq n_m</m> is uniquely determined by <m>M</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+</p>
+</proof>
+</theorem>
+
+</subsection>
+<subsection xml:id="ss_existence">
+<title>Existence of decompositions: aligned bases</title>
+
+
 <theorem xml:id="th_pid_aligned_basis">
    <title>PID-module theorem: aligned bases</title>
    <statement>
@@ -73,6 +178,6 @@
    </p>
    </solution>
    </example>
-    
+    </subsection>
 
 </section>

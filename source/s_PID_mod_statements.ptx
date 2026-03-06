@@ -205,7 +205,7 @@
         <p>
             Given any other decomposition of <m>M</m> of the form 
             <md>
-                <mrow>M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'}} R/((\pi')_i^{n_{i,j}'}) \amp </mrow>
+                <mrow>M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'}} R/((\pi_i')^{n_{i,j}'}) \amp </mrow>
             </md>
             where the <m>\pi_i'</m> are pairwise nonassociate irreducible elements and <m>n_{i,j}\leq n_{i,j+1}</m> for all relevant <m>i</m> and <m>j</m>, we have <m>n'=n</m>, <m>r'=r</m>, <m>m_i'=m_i</m> for all <m>i</m>, <m>n_{i,j}'=n_{i,j}</m> for all <m>i,j</m>, and <m>\pi_i'</m> is associate to <m>\pi_i</m> for all <m>i</m>. 
         </p> 
@@ -232,9 +232,9 @@
    <p>
     Recall that a <m>\Z</m>-module is the same thing as an abelian group. Thus, the PID-module structure theorems above give us a classification of finitely generated abelian groups. In a word, it says that any finitely generated abelian group <m>A</m> can be written as 
     <md>
-        <mrow>A \amp \cong \Z^n \oplus_{i=1}^r \Z/a_i\Z</mrow>
+        <mrow>A \amp \cong \Z^n \bigoplus_{i=1}^m \Z/a_i\Z</mrow>
     </md>,
-    where the integer <m>n</m> is uniqueley determined by <m>A</m>. Furthermore, since in this case the torsion component of <m>A</m> is a finite direct sum of groups of the form <m>\Z/a\Z</m> for some positive integer <m>a</m>, <m>\Tor A</m> is finite! This is worth making official.   
+    where the integer <m>n</m> is uniquely determined by <m>A</m>. Furthermore, since in this case the torsion component of <m>A</m> is a finite direct sum of groups of the form <m>\Z/a\Z</m> for some positive integer <m>a</m>, <m>\Tor A</m> is finite! This is worth making official.   
    </p>
    <corollary xml:id="cor_fg_torsion_groups">
     <title>Finitely generated abelian groups</title>
@@ -262,7 +262,7 @@
        Let's revisit briefly how we used the theory above to classify finite abelian groups. Given such a group <m>A</m>, since it is finite, it is finitely generated and <m>A=\Tor(A)</m>. It follows that <m>A</m> can be written as a direct sum of groups of the form <m>\Z/a\Z</m>. 
     </p>
     <p>
-        When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality <m>n</m>, the question naturally arises as to which of the two theorems above we should make use of: <xref ref="th_PID_mod_invar"/> or <xref ref="th_PID_mod_elem_div"/>? If we have a irreducible factorization <m>n=\prod_{i=1}^r p_i^{n_i}</m>, then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that <m>\abs{A(p_i^|infty)}=p_i^{n_i}</m>, in which case the possible decompositions of <m>A(p_i^{\infty})</m> as in <xref ref="th_PID_mod_elem_div"/> correspond to partitions of the integer <m>n_i</m>: that is, to sequences 
+        When asked to count (or enumerate) the number of distinct abelian groups up to isomorphism of a fixed cardinality <m>n</m>, the question naturally arises as to which of the two theorems above we should make use of: <xref ref="th_PID_mod_invar"/> or <xref ref="th_PID_mod_elem_div"/>? If we have a irreducible factorization <m>n=\prod_{i=1}^r p_i^{n_i}</m>, then the elementary divisor decomposition is a particularly convenient one. Why? A simple counting argument, together with this theorem, tells us that <m>\abs{A(p_i^\infty)}=p_i^{n_i}</m>, in which case the possible decompositions of <m>A(p_i^{\infty})</m> as in <xref ref="th_PID_mod_elem_div"/> correspond to partitions of the integer <m>n_i</m>: that is, to sequences 
         <md>
             <mrow>n_{i1} \amp \leq n_{i2}\leq \dots \leq n_{ik}</mrow>
         </md>
