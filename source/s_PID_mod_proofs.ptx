@@ -61,7 +61,7 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
 <ol>
     <li>
         <p>
-            If <m>M</m> is a finitely generated <m>R</m>-module, then for all <m>k\geq 0</m>, <m>p^kM/p^{k+1}M</m> is a finite-dimensional <m>F_p</m>-vector space. In particular, <m>M/pM</m> is a <m>F_p</m>-vector space of finite dimension. 
+            If <m>M</m> is a finitely generated <m>R</m>-module, then for all <m>k\geq 0</m>, <m>p^kM/p^{k+1}M</m> is a finite-dimensional <m>F_p</m>-vector space. In particular, <m>M/pM</m> is a <m>F_p</m>-vector space of finite dimension <m>\dim_{F_p}M/pM</m>.
         </p>
     </li>
     <li>
@@ -80,7 +80,7 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
         <p>
             Suppose <m>M</m> is a finitely generated <m>R</m>-module satisfying 
             <md>
-                <mrow>M \amp\cong  \oplus_{i=1}^m R/(p^{n_i})</mrow>
+                <mrow>M \amp\cong  \bigoplus_{i=1}^m R/(p^{n_i})</mrow>
             </md>
     with <m>n_1\leq n_2\leq \dots\leq  n_m</m>. For each <m>k\geq 1</m>, define 
             <md>
@@ -105,6 +105,31 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
 </subsection>
 <subsection xml:id="ss_existence">
 <title>Existence of decompositions: aligned bases</title>
+<theorem xml:id="th_noetherian_fg">
+<title>Finitely generated modules over Noetherian ring</title>
+<statement>
+<p>
+Let <m>R</m> be a commutative Noetherian ring, and let <m>M</m> be a finitely generated <m>R</m>-module. Every submodule of <m>M</m> is finitely generated. 
+</p>
+</statement>
+<proof>
+<p>
+    See text. 
+</p>
+</proof>
+</theorem>
+<proposition xml:id="prop_finite_presentation">
+    <title>Finite presentations over PID</title>
+    <statement>
+        <p>
+            Let <m>M</m> be a finitely generated module over the PID <m>R</m>. There is a sequence of <m>R</m>-module homomorphisms 
+            <md>
+                <mrow>R^n \amp\xrightarrow{\phi} \rightarrow R^m\xrightarrow{\psi} M</mrow>
+            </md>
+            such that <m>M\cong R^m/\im \phi</m>. 
+        </p>
+    </statement>
+</proposition>
 
 
 <theorem xml:id="th_pid_aligned_basis">
@@ -135,10 +160,16 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
    </p>
    </statement>
    <proof>
-   <p>
-   </p>
+    <p>
+        
+    </p>
    </proof>
    </theorem>
+   <proof>
+    <p>
+        
+    </p>
+   </proof>
    <definition xml:id="d_aligned_basis">
    <title>Aligned basis</title>
    <statement>
@@ -178,6 +209,71 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
    </p>
    </solution>
    </example>
+   <definition xml:id="d_standard_matrix">
+<title>Standard matrix representation</title>
+<statement>
+<p>
+Let <m>R</m> be a commutative ring, let <m>\phi\in \Hom_R(R^n, R^m)</m>, and let <m>B=(e_j)_{j=1}^n</m>, <m>B'=(f_i)_{i=1}^m</m> be the standard bases of <m>R^n</m> and <m>R^m</m>, respectively. The <term>standard matrix</term> of <m>\phi</m> is the matrix <m>A=[a_{ij}]\in M_{m\times n}(R)</m>, where the coefficients <m>a_{ij}\in R</m> are the unique scalars satisfying 
+<md>
+    <mrow>\phi(e_j) \amp =\sum_{i=1}^m a_{ij}f_i</mrow>
+</md>
+for all <m>1\leq j\leq n</m> and <m>1\leq i\leq m</m>. 
+</p>
+</statement>
+</definition>
+<theorem xml:id="th_smith_normal_form">
+<title>Smith normal form</title>
+<statement>
+<p>
+Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and <m>A\in M_{m\times n}(R)</m> be the standard matrix of <m>A</m>. 
+<ol>
+    <li>
+        <p>
+            There are invertible matrices <m>Q\in \GL_m(R)</m> and <m>P\in \GL_n(R)</m> such that <m>D=QAP</m> is a diagonal matrix with diagonal entries <m>d_1,d_2,\dots, d_k</m>, <m>k=\min\{m,n\}</m>, satisfying <m>d_1\mid d_2\dots\mid d_k</m>. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Let <m>v_i</m> be the <m>i</m>-th column of <m>Q^{-1}</m> for all <m>1\leq i\leq m</m>. The tuple <m>B=(v_i)_{i=1}^m</m> is a basis of <m>R^m</m>, and <m>B'=(d_1v_1,d_2v_2,\dots, d_kv_k)</m> is a spanning set of <m>\im \phi</m>. In particular, <m>B</m> is an aligned basis for <m>\im \phi</m>. 
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+<proof>
+<p>
+    We describe an algorithm for reducing <m>A</m> to the diagonal matrix <m>D</m> of the desired form using a series of elementary row and column operations. This is done only for Euclidean domains <m>R</m>, but the procedure can be generalized for general PIDs. (Search up <term>Smith normal form</term> for PIDs.) The row operations are packaged together to make up the matrix <m>Q</m> and the column operations go into the matrix <m>P</m>. 
+</p>
+</proof>
+</theorem>
+<algorithm xml:id="proc_smith_normal">
+    <title>Smith normal form: Euclidean domains</title>
+    <statement>
+        <p>
+            Let <m>R</m> be a Euclidean domain with Euclidean size function <m>s\colon R-\{0\}\rightarrow \N</m>, and let <m>A\in M_{m\times n}(R)</m>. To reduce <m>A</m> to the diagonal matrix <m>D</m> described in <xref ref="th_smith_normal_form"/>, proceed as follows. 
+            <ul>
+                <li>
+                    <title>Step 1</title>
+                    <p>
+                        If <m>A=0</m>, stop. Otherwise use row and/or column operations to replace the first entry of <m>A</m> with <m>a_{11}</m>, any entry of minimal size with respect to the size function  <m>s\colon R-\{0\}\rightarrow \N</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Step 2</title>
+                    <p>
+                        Use row and column operations together with the division algorithm to replace all other entries besides <m>a_{11}</m> in the first row and first column with zeros. If at some point the division algorithm produces a nonzero element of size less than <m>a</m>, then return to Step 1.   
+                    </p>
+                </li>
+                <li>
+                    <title>Step 3</title>
+                    <p>
+                        Let <m>B=[b_{ij}]</m> be the submatrix of <m>A</m> consisting of all rows besides the first, and all columns besides the first. If <m>a_{11}\nmid b_{ij}</m> for some <m>(i,j)</m>, bring <m>b_{ij}</m> into the first column using a column swap and return to Step 1 applied to <m>A</m>. Otherwise, we have <m>a_{11}\mid b_{ij}</m> for all <m>(i,j)</m> and return to Step 1 applied to <m>B</m>. 
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </statement>
+</algorithm>
     </subsection>
 
 </section>

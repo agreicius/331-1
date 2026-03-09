@@ -201,7 +201,7 @@
         <md>
             <mrow>g \amp =qf+r</mrow>
         </md>,
-        where <m>\deg r\leq \deg f</m>. Since <m>r=g-qf\in I</m>, and since <m>f</m> has minimal degree among elements of <m>I-\{0\}</m>, we see that <m>r=0</m>, and <m>g=qf\in (f)</m>. This proves that <m>I\subseteq (f)</m> and hence that <m>I=(f)</m>. 
+        where <m>\deg r&lt; \deg f</m>. Since <m>r=g-qf\in I</m>, and since <m>f</m> has minimal degree among elements of <m>I-\{0\}</m>, we see that <m>r=0</m>, and <m>g=qf\in (f)</m>. This proves that <m>I\subseteq (f)</m> and hence that <m>I=(f)</m>. 
     </p>
     <p>
         We now show that the monic polynomial <m>f</m> with <m>I=(f)</m> is unique. Suppose we have <m>(f)=(g)</m> where <m>f</m> and <m>g</m> are monic. It follows that <m>f\mid g</m> and <m>g\mid f</m>, or equivalently <m>g=pf</m> and <m>f=qg</m> for polynomials <m>p,q\in F[x]</m>. From <xref ref="prop_deg_poly"/>, we conclude that 

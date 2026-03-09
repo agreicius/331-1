@@ -4,7 +4,7 @@
     <title><m>R</m>-modules</title>
 
     <definition xml:id="d_module">
-    <title><m>R</m>-module</title>
+    <title>Modules</title>
     <statement>
     <p>
     Let <m>R</m> be a ring. A <term>(left) <m>R</m>-module</term> is a triple <m>(M,+,\cdot)</m>, where <m>(M,+)</m> is an abelian group and <m>\cdot</m> is a function 
@@ -270,7 +270,7 @@ Let <m>R</m> be a ring. An <term><m>R</m>-module homormorphism</term> between tw
    <title>Module quotients</title>
    <statement>
    <p>
-   Let <m>N</m> be a submodule of the <m>R</m>-module <m>M</m>. We define a scalar multiplication on the quotient group <m>M/N</m> as follows: given <m>r\in R</m>, <m>m+I\in M/N</m>, <m>r(M+N)=rm+N</m>. This is a well-defined operation, and <m>M/N</m>, together with coset addition and this scalar multiplication, is an <m>R</m>-module called the <term>quotient module</term> of <m>M</m> by <m>N</m>.  
+   Let <m>N</m> be a submodule of the <m>R</m>-module <m>M</m>. We define a scalar multiplication on the quotient group <m>M/N</m> as follows: given <m>r\in R</m>, <m>m+N\in M/N</m>, <m>r(m+N)=rm+N</m>. This is a well-defined operation, and <m>M/N</m>, together with coset addition and this scalar multiplication, is an <m>R</m>-module called the <term>quotient module</term> of <m>M</m> by <m>N</m>.  
    </p>
    </statement>
    </activity>
