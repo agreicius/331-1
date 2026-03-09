@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_modules" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title><m>R</m>-modules</title>
+    <title>Modules</title>
 
     <definition xml:id="d_module">
     <title>Modules</title>
