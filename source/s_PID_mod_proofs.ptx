@@ -224,6 +224,17 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
    </p>
    </solution>
    </example>
+   <remark xml:id="rm_aligned_bases">
+    <title>Aligned bases</title>
+    <p>
+       <xref ref="fig_lattice_bases_pics"/> allows us to visualize what is special about an aligned basis. In <xref ref="fig_lattice_basis_2"/> we see how the shaded parallelogram formed by the nonstandard basis <m>(\alpha_1, \alpha_2)=(1+2i, i)</m> of <m>\Z[i]</m> fits nicely into one of the fundamental parallelograms of the aligned basis <m>(\beta_1,\beta_2)=(1+2i, 5i)</m> of <m>N</m>. Indeed, we see that exactly 5 of the smaller parallelograms combine to form the larger one. This is a reflection of the algebraic relation between the two bases: 
+       <md>
+        <mrow>\beta_1  \amp = 1\cdot \alpha_1</mrow>
+        <mrow>\beta_2 \amp = 5\cdot \alpha_2</mrow>
+       </md>.
+    </p>
+    
+   </remark>
    <figure xml:id="fig_lattice_bases_pics">
     <caption>Lattice picture of bases of <m>\Z[i]</m> and <m>N</m></caption>
    <sidebyside widths="45% 45%">
@@ -307,8 +318,8 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
 
 % Shaded 1x1 square at the origin, behind the grid
   \begin{scope}[on background layer]
-    \fill[blue!20] (0,0) -- (0,1) -- (1,3) -- (1,2) -- cycle;
-%     \fill[magenta!20] (0,0) -- (0,5) -- (1,7) -- (1,2) -- cycle;
+     \fill[magenta!15] (0,0) -- (0,5) -- (1,7) -- (1,2) -- cycle;
+      \fill[blue!20] (0,0) -- (0,1) -- (1,3) -- (1,2) -- cycle;
   \end{scope}
 
 
@@ -353,10 +364,32 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
    <p>
     We postpone a proof of the existence of aligned bases to the next subsection. We will end the current section with a proof of the existence of the decompositions described in <xref ref="th_PID_mod_invar"/> assuming the existence of aligned bases.
    </p>
+   <proof>
+    <title>Proof of invariant factor decomposition, assuming existence of aligned bases</title>
+    <p>
+        Let <m>M</m> be a finitely generated module over the PID <m>R</m>. Given spanning tuple <m>(m_1,m_2,\dots, m_n)</m> for <m>M</m>, the <m>R</m>-module homomorphism <m>\phi\colon R^n\rightarrow M</m> defined as <m>\phi((a_1,a_2,\dots, a_n))=\sum_{i=1}^na_im_i</m> is surjective, and thus we have <m>M\cong_R R^n/\ker\phi</m>. From <xref ref="th_pid_aligned_basis"/>, there is a basis <m>B=(f_1,f_2,\dots, f_n)</m> of <m>R^n</m> and nonzero elements <m>a_1,a_2,\dots, a_r\in R</m>, such that <m>a_i\mid a_{i+1}</m> for all <m>1\leq i\leq r-1</m>, and <m>B'=(a_1f_1,a_2f_2,\dots, a_rf_r)</m> is a basis of <m>N</m>. (In particular, <m>N</m> is itself free of rank <m>r</m>.) We claim <m>R^n/N\cong R^{n-r}\oplus \bigoplus_{i=1}^r R/(a_i)</m>. Indeed, let <m>\psi\colon R^n\rightarrow  R^{n-r}\oplus \bigoplus_{i=1}^r R/(a_i)</m> be the <m>R</m>-module homomorphism defined as 
+        <md number="yes">
+            <mrow>\psi(\sum_{i=1}^r c_i f_i+\sum_{i=1}^{n-r}b_if_{r+i}) \amp = (b_1,b_2,\dots, b_{n-r},\overline{c_1},\overline{c_2},\dots, \overline{c_r}) </mrow>
+        </md>,
+        where <m>\overline{c_i}=c_i+(a_i)\in R/(a_i)</m> for all <m>1\leq i\leq r</m>. The usual mapping properties of <m>R^n</m> guarantee that <m>\psi</m> is an <m>R</m>-module homomorphism, and clearly <m>\psi</m> is surjective. Lastly, given <m>m=\sum_{i=1}^r c_i f_i+\sum_{i=1}^{n-r}b_if_{r+i}\in R^n</m>, we have 
+        <md>
+            <mrow>\psi(m)=0 \amp \iff b_i=0, c_j\in (a_i) \text{ for all } 1\leq i\leq n-r, 1\leq j\leq r</mrow>
+            <mrow> \amp \iff m=\sum_{j=1}^r d_ja_j f_j </mrow>
+            <mrow> \amp \iff m\in N</mrow>
+        </md>.
+        This shows that <m>\ker\psi=N</m> and thus that 
+        <md>
+            <mrow>M \amp \cong R^n/N\cong R^{n-r}\oplus \bigoplus_{i=1}^r R/(a_i)</mrow>
+        </md>,
+        as desired. 
+    </p>
+   </proof>
+</subsection>
 <subsection xml:id="ss_aligned_basis">
 <title>Proof of existence of aligned bases</title>
-
-
+<p>
+   According to to the aligned basis theorem, every submodule <m>N</m> of a finite free module <m>M</m> over a PID <m>R</m> is itself finite free. In particular, it follows that <m>N</m> should be finitely generated as an <m>R</m>-module. This weaker condition is in fact true in much greater generality, as the following result indicates. We omit the proof here for now, despite it being not too difficult. You can check the text. 
+</p>
 
 <theorem xml:id="th_noetherian_fg">
 <title>Finitely generated modules over Noetherian ring</title>
@@ -371,6 +404,9 @@ Let <m>R</m> be a commutative Noetherian ring, and let <m>M</m> be a finitely ge
 </p>
 </proof>
 </theorem>
+<p>
+    The next result allows us to identify a submodule <m>N</m> of <m>R^m</m> as the image <m>\im \phi</m> for some <m>R</m>-module homomorphism <m>\phi\colon R^n\rightarrow R^m</m>, and thus any finitely generated module <m>M</m> as <m>R^m/\im \phi</m>. This will be useful to us, as we can compute <m>\im \phi</m> essentially as the column space of a matrix <m>A\in M_{m\times n}(R)</m> using a method much like Gaussian elimination. 
+</p>
 <proposition xml:id="prop_finite_presentation">
     <title>Finite presentations over PID</title>
     <statement>
@@ -382,9 +418,25 @@ Let <m>R</m> be a commutative Noetherian ring, and let <m>M</m> be a finitely ge
             such that <m>M\cong R^m/\im \phi</m>. 
         </p>
     </statement>
+    <proof>
+        <p>
+            Writing <m>M=(v_1,v_2,\dots, v_m)</m>, the map <m>\psi\colon R^m\rightarrow M</m> defined as 
+            <md>
+                <mrow>\psi(a_1,a_2,\dots, a_m) \amp =\sum_{i=1}^ma_iv_i</mrow>
+            </md>
+            is a surjective <m>R</m>-module homomorphism. Since <m>N=\ker\psi</m> is a submodule of <m>R^m</m>, it is finitely generated by <xref ref="th_noetherian_fg"/>. Thus we have <m>N=(w_1,w_2,\dots, w_n)</m> for some <m>w_i\in N</m>. Define the homomorphism <m>\phi\colon R^n\rightarrow R^m</m> as 
+            <md>
+                <mrow>\phi(a_1,a_2,\dots, a_n) \amp =\sum_{i=1}^na_iw_i</mrow>
+            </md>.
+            It is clear that <m>\im\phi=(w_1,w_2,\dots, w_n)=N</m>. Since <m>N=\ker\phi</m>, we conclude that 
+            <md>
+                <mrow>M \amp \cong R^m/\ker\psi=R^m/\im\phi</mrow>
+            </md>.
+        </p>
+    </proof>
 </proposition>
 
-   <definition xml:id="d_standard_matrix">
+<definition xml:id="d_standard_matrix">
 <title>Standard matrix representation</title>
 <statement>
 <p>
@@ -396,11 +448,109 @@ for all <m>1\leq j\leq n</m> and <m>1\leq i\leq m</m>.
 </p>
 </statement>
 </definition>
+<p>
+    The next result can be summarized as saying that the standard matrix of a homomorphism <m>\phi\in \Hom_R(R^n, R^m)</m> tells us everything we want to know about <m>\phi</m>. This is a straightforward generalization of results about matrix representations of linear transformations you probably have seen in a linear algebra course. 
+</p>
+<proposition xml:id="prop_std_matrix">
+    <title>Standard matrices</title>
+    
+    
+    <statement>
+        <p>
+            Let <m>R</m> be a commutative ring, and let <m>m</m>, <m>n</m>, <m>p</m> be positive integers.
+            <ol>
+                <li>
+                    <p>
+                        For each <m>\phi\in \Hom_R(R^n, R^m)</m>, let <m>A_\phi\in M_{m\times n}(R)</m> be its standard matrix. The map 
+                        <md>
+                            <mrow>\Hom_R(R^n, R^m) \amp \rightarrow M_{m\times n}(R)</mrow>
+                            <mrow>\phi \amp \mapsto A_\phi</mrow>
+                        </md>
+                        is an isomorphism of <m>R</m>-modules. 
+                    </p>
+                    <p>
+                        Furthermore, identifying tuples as column vectors, we have 
+                        <md number="yes">
+                            <mrow>\phi(v) \amp = A_\phi\, v </mrow>
+                        </md>
+                        for all <m>v=(a_1,a_2,\dots, a_n)\in R^n</m>.
+                    </p>
+                    <p>
+                        Lastly, letting <m>c_j</m> be the <m>j</m>-th column of <m>A_\phi</m> for all <m>1\leq j\leq n</m>, we have 
+                        <md>
+                            <mrow>\im \phi \amp =(c_1,c_2,\dots, c_n)</mrow>
+                        </md>.
+                        In other words, <m>\im\phi</m> is the span of the columns of <m>A_\phi</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Given <m>\phi\in \Hom_R(R^n, R^m)</m> and <m>\psi\in \Hom_R(R^m, R^p)</m>, we write <m>\psi\phi</m> for the composition <m>\psi\circ\phi\in \Hom_R(R^n, R^p)</m> and 
+                        <md number="yes">
+                            <mrow>A_\psi\, A_\phi \amp = A_{\psi\phi}</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The map 
+                        <md>
+                            <mrow>\End_R(R^n) \amp \rightarrow M_n(R)</mrow>
+                            <mrow>\phi \amp \mapsto A_\phi</mrow>
+                        </md>
+                        is an isomorphism of rings (and <m>R</m>-modules). 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       Let <m>\phi\in \End_R(R^n)</m>. The following statements are equivalent. 
+                       <ol>
+                        <li>
+                            <p>
+                                <m>\phi</m> is an isomorphism.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>A_\phi</m> is invertible.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The columns of <m>A_\phi</m> form a basis of <m>R^n</m>. 
+                            </p>
+                        </li>
+                       </ol>
+                       As a result the map 
+                       <md>
+                        <mrow>\Aut_R(R^n) \amp \rightarrow \GL_n(R)</mrow>
+                        <mrow>\phi \amp \mapsto A_\phi </mrow>
+                       </md>
+                       is an isomorphism. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            We prove (1) and (2) exactly as we do for the corresponding results for matrix representations of linear transformations of vectors spaces. (In other words, we leave the proof to you.) Statement (3) then follows from fact that <m>A_\psiA_\phi=A_{\psi\phi}</m>. 
+        </p>
+    </proof>
+</proposition>
+<assumption xml:id="fiat_matrix_morphism">
+    <title>Tuples shall be column vectors; morphisms shall be matrices</title>
+    <statement>
+        <p>
+            In line with <xref ref="prop_std_matrix"/>, we will conflate a tuple <m>(a_1,a_2,\dots, a_m)\in R^m</m> with the corresponding column vector <m>v=[a_{i1}]\in M_{m\times 1}(R)</m>, <m>a_{i1}=a_i</m>. Similarly we will conflate a matrix <m>A\in M_{m\times n}(R)</m> with its corresponding homomorphism <m>\phi_A\in \Hom_R(R^n, R^m)</m> defined as <m>\phi_A(v)=Av</m> for all <m>v\in R^n</m>. 
+        </p>
+    </statement>
+</assumption>
 <theorem xml:id="th_smith_normal_form">
 <title>Smith normal form</title>
 <statement>
 <p>
-Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and <m>A\in M_{m\times n}(R)</m> be the standard matrix of <m>A</m>. 
+Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and let <m>A\in M_{m\times n}(R)</m> be the standard matrix of <m>\phi</m>. 
 <ol>
     <li>
         <p>
@@ -417,10 +567,69 @@ Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and <m>A\in M_{m\tim
 </statement>
 <proof>
 <p>
-    We describe an algorithm for reducing <m>A</m> to the diagonal matrix <m>D</m> of the desired form using a series of elementary row and column operations. This is done only for Euclidean domains <m>R</m>, but the procedure can be generalized for general PIDs. (Search up <term>Smith normal form</term> for PIDs.) The row operations are packaged together to make up the matrix <m>Q</m> and the column operations go into the matrix <m>P</m>. 
+    <ol>
+        <li>
+            <p>
+                In <xref ref="proc_smith_normal"/> we describe an algorithm for reducing <m>A</m> to the diagonal matrix <m>D</m> of the desired form using a series of elementary row and column operations. This is done only for Euclidean domains <m>R</m>, but the procedure can be generalized for general PIDs. (Search up <term>Smith normal form</term> for PIDs.) Just as in linear algebra, a row operation can be represented as multiplication on the left by a certain invertible matrix; similarly, a column operation can be represented as multiplication on the right by a certain invertible matrix. As a result the sequence of row operations can be represented by multiplication on the left by an invertible matrix <m>Q</m>, and the sequence of column operations can be represented as multiplication on the right by an invertible matrix <m>P</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+               In what follows, we conflate tuples with column vectors and homomorphisms with matrices, as in <xref ref="fiat_matrix_morphism"/>. In particular, we make the identification <m>\phi=A</m>. 
+            </p>
+            <p>
+                First observe that we have 
+                <md>
+                    <mrow>w\in \im A \amp  \iff w=Av \text{ for some } v\in R^n</mrow>
+                    <mrow> \amp \iff w=APv' \text{ for some } v'\in R^n</mrow>
+                </md>,
+                since <m>P</m> is invertible. This shows that <m>\im A=\im AP</m>. 
+            </p>
+            <p>
+                In a similar vein, we have 
+                <md>
+                    <mrow>w\in Q(\im A) \amp  \iff w=Q(\im AD)</mrow>
+                    <mrow> \amp \iff w=QAPv \text{ for some } v\in R^n</mrow>
+                    <mrow> \amp \iff w\in Dv \text{ for some } v\in R^n </mrow>
+                    <mrow> \amp \iff w\in \im D</mrow>
+                </md>.
+                We conclude that <m>Q(\im A)=\im D</m>. Since <m>Q</m> is invertible, it thus defines an isomorphism 
+                <md>
+                    <mrow>Q\colon \im A \amp \rightarrow \im D</mrow>
+                </md>
+                with inverse 
+                <md>
+                    <mrow>Q^{-1}\colon \im D \amp \rightarrow \im A</mrow>
+                </md>.
+                Since <m>Q^{-1}</m> is invertible, its columns <m>(v_1,v_2,\dots, v_m)</m> form a basis of <m>R^m</m>. Since <m>D</m> is diagonal, it is easy to see that <m>\im D</m> has spanning set <m>(d_1e_1, d_2e_2,\dots, d_ke_k)</m>, where as usual <m>e_i</m> is the <m>i</m>-th standard basis element of <m>R^m</m>. Since <m>Q^{-1}\colon \im D\rightarrow \im A</m> is an isomorphism, applying <m>Q^{-1}</m> to the spanning set <m>(d_ie_i)_{i=1}^k</m> yields the spanning set 
+                <md>
+                    <mrow>(Q^{-1}(d_iei))\amp =(d_iQ^{-1}(e_i))=(d_iv_i) </mrow>
+                </md>
+                of <m>\im A</m>. It follows that <m>(v_i)_{i=1}^m</m> is an aligned basis of <m>R^m</m> with respect to <m>\im A</m>, as claimed. 
+            </p>
+            <p>
+                The commutative diagram in <xref ref="fig_imA_imD"/> summarizes the relationship between <m>\im A</m> and <m>\im D</m>, as goverened by the invertible matrices <m>Q</m> and <m>P</m>. 
+            </p>
+
+
+        </li>
+    </ol>
+    
 </p>
 </proof>
 </theorem>
+<figure xml:id="fig_imA_imD">
+    <caption><m>\im A</m> versus <m>\im D</m>, <m>D=QAP</m></caption>
+    <image width="50%">
+        <shortdescription>Commutative diagram relating image of A and image of D=QAP</shortdescription>
+        <latex-image>
+        \begin{tikzcd}
+R^n \arrow[r,"A"]  \arrow[d,leftrightarrow,"P"',"P^{-1}"] \amp R^m \arrow[r,hookleftarrow]  \arrow[d,leftrightarrow,"Q"',"Q^{-1}"]\amp  \im A \arrow[d,leftrightarrow,"Q"',"Q^{-1}"] \\
+R^n \arrow[r,"D"]  \amp R^m \arrow[r,hookleftarrow] \amp  \im D 
+\end{tikzcd}
+        </latex-image>
+    </image>
+</figure>
 <algorithm xml:id="proc_smith_normal">
     <title>Smith normal form: Euclidean domains</title>
     <statement>
@@ -445,10 +654,16 @@ Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and <m>A\in M_{m\tim
                         Let <m>B=[b_{ij}]</m> be the submatrix of <m>A</m> consisting of all rows besides the first, and all columns besides the first. If <m>a_{11}\nmid b_{ij}</m> for some <m>(i,j)</m>, bring <m>b_{ij}</m> into the first column using a column swap and return to Step 1 applied to <m>A</m>. Otherwise, we have <m>a_{11}\mid b_{ij}</m> for all <m>(i,j)</m> and return to Step 1 applied to <m>B</m>. 
                     </p>
                 </li>
+                <li>
+                    <p>
+                        Using <xref ref="prop_std_matrix"/>, let <m>A=A_\phi</m> for <m>\phi\in \Hom_R(R^n, R^m)</m>, and let <m>Q=Q_\psi</m> for an isomorphism <m>\psi\in \Aut_R(R^n)</m>. We have 
+                        
+                    </p>
+                </li>
             </ul>
         </p>
     </statement>
 </algorithm>
-    </subsection>
+   
 </subsection>
 </section>
