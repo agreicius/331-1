@@ -624,8 +624,8 @@ Let <m>R</m> be a PID, let <m>\phi\in \Hom_R(F^n, F^m)</m>, and let <m>A\in M_{m
         <shortdescription>Commutative diagram relating image of A and image of D=QAP</shortdescription>
         <latex-image>
         \begin{tikzcd}
-R^n \arrow[r,"A"]  \arrow[d,leftrightarrow,"P"',"P^{-1}"] \amp R^m \arrow[r,hookleftarrow]  \arrow[d,leftrightarrow,"Q"',"Q^{-1}"]\amp  \im A \arrow[d,leftrightarrow,"Q"',"Q^{-1}"] \\
-R^n \arrow[r,"D"]  \amp R^m \arrow[r,hookleftarrow] \amp  \im D 
+R^n \arrow[r,"A"] \amp R^m \arrow[r,hookleftarrow]  \arrow[d,"Q"',"\sim" {rotate=90, anchor=north, inner sep=.3mm }]\amp  \im A \\
+R^n \arrow[r,"D"]  \arrow[u,"\sim" {rotate=90, anchor=south, inner sep=.3mm },"P"']   \amp R^m \arrow[r,hookleftarrow] \amp  \im D \arrow[u,"Q^{-1}"',"\sim" {rotate=90, anchor=south, inner sep=.3mm }]
 \end{tikzcd}
         </latex-image>
     </image>
@@ -652,12 +652,6 @@ R^n \arrow[r,"D"]  \amp R^m \arrow[r,hookleftarrow] \amp  \im D
                     <title>Step 3</title>
                     <p>
                         Let <m>B=[b_{ij}]</m> be the submatrix of <m>A</m> consisting of all rows besides the first, and all columns besides the first. If <m>a_{11}\nmid b_{ij}</m> for some <m>(i,j)</m>, bring <m>b_{ij}</m> into the first column using a column swap and return to Step 1 applied to <m>A</m>. Otherwise, we have <m>a_{11}\mid b_{ij}</m> for all <m>(i,j)</m> and return to Step 1 applied to <m>B</m>. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Using <xref ref="prop_std_matrix"/>, let <m>A=A_\phi</m> for <m>\phi\in \Hom_R(R^n, R^m)</m>, and let <m>Q=Q_\psi</m> for an isomorphism <m>\psi\in \Aut_R(R^n)</m>. We have 
-                        
                     </p>
                 </li>
             </ul>
