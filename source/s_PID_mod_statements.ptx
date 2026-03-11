@@ -284,51 +284,6 @@
     </p>
    </remark>
    </subsection>
-   <subsection xml:id="ss_case_poly_ring_field">
-   <title>Case study:<m>R=F[x]</m></title>
-   <p>
-    Amazingly, by treating the case <m>R=F[x]</m>, where <m>F</m> is a field, the PID-module structure theorems gives us some advanced theory about linear transformations for finite-dimensional <m>F</m>-vector spaces essentially for free! Before getting into details, we first make an observation about modules over a general polynomial ring. 
-   </p>
-   <proposition xml:id="prop_mods_poly_ring">
-    <title>Modules over a polynomial ring</title>
-    <statement>
-        <p>
-            Let <m>R</m> be a commutative ring. 
-        </p>
-                    <p>
-                        If <m>M</m> is an <m>R[x]</m>-module, then in particular <m>M</m> is an <m>R</m>-module, and the map <m>\phi_x\colon M\rightarrow M</m> defined as <m>\phi_x(m)=x\cdot m</m> is an <m>R</m>-module endomorphism of <m>M</m>. 
-                    </p>
-                    <p>
-                        Conversely, if <m>M</m> is an <m>R</m>-module and <m>\phi\colon M\rightarrow M</m> is an <m>R</m>-module endomorphism of <m>M</m>, then <m>M</m> can be a given an <m>R[x]</m>-module structure by defining 
-                        <md>
-                            <mrow>(\sum_{k=0}^na_kx^k) \cdot m \amp = \sum_{k=0}^na_k\phi^k(m) </mrow>
-                        </md>.
-                    </p>
-            <p>
-                In other words, an <m>R[x]</m>-module consists of an <m>R</m>-module <m>M</m>, together with a choice of <m>\phi\in \End_R(M)</m> that determines how elements of <m>M</m> are multiplied by <m>x</m>. 
-            </p>
-    </statement>
-    <proof>
-        <p>
-            Proof by delegation.
-        </p>
-    </proof>
-   </proposition>
-   <p>
-    The proposition is the key that will allow us to connect linear transformations of vector spaces to the PID-module structure theory. Firstly, if <m>F</m> is a field, then we know that <m>F[x]</m> is a PID. Now, let <m>V</m> be a finite-dimensional <m>F</m>-vector space, and let <m>T\colon V\rightarrow V</m> be a linear transformation of <m>V</m>. Using the language of module theorem, <m>V</m> is a finite free <m>F</m>-module, and <m>T\in \End_F(V)</m> is an <m>F</m>-endomorphism of <m>V</m>.  
-   </p>
-   <p>
-    According to our proposition, <m>V</m> inherits an <m>F[x]</m>-module structure from <m>T</m> by defining <m>x^n\cdot v=T^n(v)</m>, and more generally, <m>g(x)\cdot v=g(T)(v)</m>. Since <m>V</m> is finitely generated over <m>F</m>, it is certainly finitely generated over <m>F[x]</m>. We conclude that as an <m>F[x]</m>-module, 
-    we have 
-    <md>
-        <mrow>V \amp \cong (F[x])^n\oplus\bigoplus_{i=1}^m F[x]/(g_i(x))</mrow>
-    </md>
-    for some polynomials <m>g_i(x)\in F[x]</m>. Next, since <m>V</m> is a finite-dimensional <m>F</m>-vector space and <m>F[x]</m> is an infinite-dimensional <m>F</m>-vector space, we must have <m>n=0</m> and  
-    <md>
-        <mrow> V \amp \cong \bigoplus_{i=1}^m F[x]/(g_i(x)) </mrow>
-    </md>.
-    Great, but what does this tell us about the linear transformation <m>T</m>? 
-   </p>
-   </subsection>
+   
 
 </section>

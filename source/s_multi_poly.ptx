@@ -290,9 +290,6 @@
     </p>
     </solution>
     </example>
-    <p>
-        This notion of degree is strong enough to prove the following fact: if <m>F</m> is a field, then every ideal <m>I</m> of  <m>F[x_1,x_2,\dots, x_n]</m> is principal. 
-    </p>
     
     
     
