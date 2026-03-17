@@ -87,8 +87,8 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
                 <mrow>m_k  \amp = \abs{\{j\in \{1,2,\dots, m\}\mid n_j=k\}}</mrow>
             </md>.
             We have 
-            <md>
-                <mrow>m_k \amp =\dim_{F_p}p^{k-1}M/p^{k}M-\dim_{F_p}p^{k}M/p^{k+1}M</mrow>
+            <md number="yes">
+                <mrow xml:id="eq_PID_primary_comp">m_k \amp =\dim_{F_p}p^{k-1}M/p^{k}M-\dim_{F_p}p^{k}M/p^{k+1}M</mrow>
             </md>.
             It follows that the sequence <m>n_1\leq n_2\cdots \leq n_m</m> is uniquely determined by <m>M</m>. 
         </p>
@@ -98,9 +98,122 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
 </statement>
 <proof>
 <p>
+    <ol>
+        <li>
+            <p>
+                First observe that for any <m>R</m>-module <m>N</m> and element <m>a\in R</m> (irreducible or not), we have 
+                <md>
+                    <mrow>(a)M \amp = (\{ram\mid r\in R, m\in M\})=aM=\{am\mid m\in M\} </mrow>
+                </md>.
+                Now take <m>p</m> irreducible in <m>P</m>. For each <m>k\geq 0</m>, the set <m>p^kM</m> is an <m>R</m>-submodule of <m>M</m>, and we have <m>p(p^kM)\subseteq p^{k+1}M</m>. As always, the quotient module <m>p^kM/p^{k+1}M</m> is a group with respect to coset addition. To show it is an <m>R/(p)</m>-module we must define a scalar multiplication by elements <m>r+(p)</m> of <m>R/(p)</m>. We do so as follows: given <m>r+(p)\in R/(p)</m> and <m>m+p^{k+1}M\in p^kM/p^{k+1}M</m>, we define 
+                <md>
+                    <mrow>(r+(p))\cdot (m+p^{k+1}M) \amp = rm+p^{k+1}M</mrow>
+                </md>.
+                As always, once we show that this operation is well defined, that it satisfies the four scalar multiplication axioms then follows from the fact that <m>M</m> is an <m>R</m>-module. If we have <m>r+(p)=r'+(p)</m> and <m>m+p^{k+1}M=m'+p^{k+1}M</m>, then <m>r'=r+sp</m> for some <m>s\in R</m> and <m>m'=m+p^{k+1}m''</m> for some <m>m''\in M</m>. But then we have  
+                <md>
+                    <mrow> r'm'\amp = (r+sp)(m+p^{k+1}m'') </mrow>
+                    <mrow> \amp = rm+spm+p^{k+2}(sm'')</mrow>
+                </md>.
+                Since <m>m\in p^kM</m>, <m>pm\in p^{k+1}M</m>, and thus <m>spm+p^{k+2}sm''\in p^{k+1}M</m>. We conclude that <m>r'm'+p^{k+1}M=rm+p^{k+1}M</m>, as desired. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Note that <m>M=R/(p^n)=R/p^nR</m>. If <m>k\geq n</m>, then since <m>p^ka\in (p^k)\subseteq (p^n)</m> for all <m>a\in R</m>, we have <m>p^k(a+p^nR)=0\in R/(p^n)</m>, and thus <m>p^kM=\{0\}</m>. It follows that <m>p^kM/p^{k+1}M=\{0\}</m>. 
+            </p>
+            <p>
+                Now assume that <m>k&lt; n</m>, in which case <m>(p^n)\subseteq (p^{k+1})\subseteq (p^k)</m>. Using coset notation, we have 
+                <md>
+                    <mrow>p^j M \amp = \{ rp^j+(p^n)\mid r\in R\} </mrow>
+                    <mrow> \amp = (p^j)/(p^n)</mrow>
+                </md>
+                for all <m>j</m>. Since <m>(p^n)\subseteq (p^{k+1})\subseteq (p^k)</m>, the third isomorphism theorem implies 
+                <md>
+                    <mrow>p^kM/p^{k+1}M \amp \cong (p^k)/(p^n)\, / (p^{k+1})/(p^n)</mrow>
+                    <mrow> \amp \cong (p^{k})/(p^{k+1})</mrow>
+                </md>.
+                Lastly, the homomorphism <m>\phi\colon R\rightarrow (p^k)/(p^{k+1})</m> defined as <m>\phi(r)=rp^k+(p^{k+1})</m> is clearly surjective with kernel <m>(p)</m>. Thus 
+                <md>
+                    <mrow>R/(p) \amp \cong (p^k)/(p^{k+1})\cong p^kM/p^{k+1}M</mrow>
+                </md>,
+                as desired. 
+            </p>
+        </li>
+        <li>
+            <p>
+                First note that given any direct sum <m>\bigoplus_{i\in I} M_i</m>, we have 
+                <md>
+                    <mrow>p^k\left( \bigoplus_{i\in I}M_i\right) \amp =\bigoplus_{i\in I} p^kM_i </mrow>
+                </md>.
+                Thus given <m>M=\bigoplus_{i=1}^m R/(p^{n_i})</m>, we have 
+                <md>
+                    <mrow>p^kM \amp = \bigoplus_{i=1}^m (p^k)/(p^{n_i}) \amp p^{k+1}M\amp =\bigoplus_{i=1}^m (p^{k+1})/(p^{n_i}) </mrow> 
+                </md>,
+                and thus 
+                <md>
+                    <mrow>p^kM/p^{k+1}M \amp \cong \bigoplus_{i=1}^m (p^k)/(p^{n_i}) / \bigoplus_{i=1}^m (p^{k+1})/(p^{n_i}) </mrow>
+                    <mrow> \amp \cong \bigoplus_{i=1}^m(p^k)/(p^{n_i})/(p^{k+1})/(p^{n_i})</mrow>
+                    <mrow> \amp \cong \bigoplus_{j\in \{j\mid k&lt; n_j\}}(p^k)/(p^{k+1}) </mrow>
+                    <mrow> \amp \cong \bigoplus_{j\in \{j\mid k&lt; n_j\}}F_p</mrow>
+                    <mrow> \amp \cong F_p^{r_k}</mrow>
+                </md>,
+                where <m>r_k=\abs{\{j\mid k&lt; n_j\}}</m>, the number of exponents <m>n_j</m> that are (strictly) greater than <m>k</m>. It follows that <m>\dim_{F_p}p^kM/p^{k+1}M=r_k</m>, and thus that 
+                <md>
+                    <mrow>\dim_{F_p}p^{k-1}M/p^{k}M-\dim_{F_p}p^{k}M/p^{k+1}M \amp= r_{k-1}-r_k </mrow>
+                </md>,
+                where <m>r_{k-1}-r_k</m> is the number of exponents <m>n_j</m> that are greater than <m>k-1</m>, but not greater than <m>k</m>. This is precisely the number of exponents <m>n_j</m> equal to <m>k</m>. 
+
+            </p>
+        </li>
+
+    </ol>
 </p>
 </proof>
 </theorem>
+<p>
+    Let's see the dimension formula <xref ref="eq_PID_primary_comp"/> at work in the setting <m>R=\Z</m>, where an <m>R</m>-module is nothing more than an abelian group. 
+</p>
+<example xml:id="eg_primary_comp">
+<title><m>p</m>-primary components</title>
+<statement>
+<p>
+Verify formula <xref ref="eq_PID_primary_comp"/> for the <m>\Z</m>-module <m>M=\Z/3\Z\oplus \Z/3\Z\oplus \Z/3^3\Z</m>. 
+</p>
+</statement>
+<solution>
+<p>
+We compute 
+<md>
+    <mrow>3M \amp = 3(\Z/3\Z)\oplus 3(\Z/3\Z)\oplus \oplus 3\Z/3^3\Z\cong \{0\}\oplus \{0\}\oplus (3)/(3^3) </mrow>
+    <mrow>3^2 M \amp =\{0\}\oplus \{0\} \oplus (3^2)/(3^3)</mrow>
+    <mrow>3^3 M \amp = \{0\}</mrow>
+</md> 
+and thus 
+<md>
+    <mrow>M/3M \amp \cong \Z/3\Z\oplus \Z/3\Z \oplus \Z/(3^3)/(3)/(3^3)</mrow>
+    <mrow> \amp \cong \Z/3\Z\oplus \Z/3\Z\oplus \Z/3\Z</mrow>
+    <mrow>3M/3^2M \amp \cong (3)/(3^3)\, /\, (3^2)/(3^3)\cong \Z/3\Z</mrow>
+    <mrow>3^2M/3^3M \amp \cong (3^2)/(3^3)\cong \Z/3\Z</mrow>
+    <mrow>3^kM/3^{k+1}M \amp =\{0\} \text{ for all } k\geq 3</mrow>
+</md>.
+We conclude that 
+<md>
+    <mrow>\dim_{\F_3} M/3M \amp =3</mrow>
+    <mrow>\dim_{\F_3}3M/3^2M \amp =1</mrow>
+    <mrow>\dim_{\F_3}3^2M/3^3M \amp = 1</mrow>
+    <mrow>\dim_{\F_3}3^kM/3^{k+1}M \amp =0 \text{ for all } k\geq 3</mrow>
+</md>.
+Following the argument in the proof of <xref ref="th_PID_mod_pprimary"/>, these dimensions tells us that the decomposition of <m>M</m> has 3 summands of the form <m>\Z/3^j\Z</m> with <m>j\geq 1</m>, 1 summand of the form <m>\Z/3^j\Z</m> with <m>j\geq 2</m>, and 1 summand of the form <m>\Z/3^j\Z</m> with <m>j\geq 3</m>. Lastly, we have 
+<md>
+    <mrow>\dim_{\F_3}M/3M-\dim_{\F_3}3M/3^2M \amp =2</mrow>
+    <mrow>\dim_{\F_3}3M/3^2M-\dim_{\F_3}3^2M/3^3M \amp =0</mrow>
+    <mrow>\dim_{\F_3}3^2M/3^3M-\dim_{\F_3}3^3M/3^4M \amp =1</mrow>
+    <mrow>\dim_{\F_3}3^{k-1}M/3^kM-\dim_{\F_3}3^{k}M/3^{k+1}M \amp = 0 \text{ for all } k\geq 4</mrow>
+</md>.
+As per <xref ref="th_PID_mod_pprimary"/>, this means <m>M</m> has exactly 2 summands of the form <m>\Z/3\Z</m>, no summands of the form <m>\Z/3^2\Z</m>, and exactly 1 summand of the form <m>\Z/3^3\Z</m>. This is precisely the decomposition we started with.
+</p>
+</solution>
+</example>
 
 </subsection>
 <subsection xml:id="ss_existence">
@@ -145,7 +258,7 @@ Let <m>R</m> be a PID, let <m>p</m> be an irreducible element of <m>R</m>, and l
    </statement>
    <proof>
     <p>
-        
+       This is a consequence of <xref ref="th_noetherian_fg"/> and <xref ref="th_smith_normal_form"/>, which are discussed in the next subsection. In more detail, since <m>M</m> is free, and since our statements are invariant under isomorphism, we may assume <m>M=R^m</m> for some positive integer <m>m</m>, and that <m>N\subseteq R^m</m> is a submodule. By <xref ref="th_noetherian_fg"/>, <m>N</m> is finitely generated. Thus we have  <m>N=(m_1,m_2, \dots, m_n)</m> for some elements <m>m_j\in R^m</m>. Letting <m>A</m> be the matrix whose <m>j</m>-th column is <m>m_j</m> (considered as a column vector), and letting <m>\phi=\phi_A</m> be the corresponding homomorphism from <m>R^n</m> to <m>R^m</m>, we have <m>N=\im \phi</m>. <xref ref="th_smith_normal_form"/> then tells us that there is an aligned basis of <m>R^m</m> with respect to <m>N</m>. 
     </p>
    </proof>
    </theorem>
@@ -534,7 +647,7 @@ for all <m>1\leq j\leq n</m> and <m>1\leq i\leq m</m>.
     </statement>
     <proof>
         <p>
-            We prove (1) and (2) exactly as we do for the corresponding results for matrix representations of linear transformations of vectors spaces. (In other words, we leave the proof to you.) Statement (3) then follows from fact that <m>A_\psiA_\phi=A_{\psi\phi}</m>. 
+            Statements (1) and (2) are proven exactly as with the corresponding results for matrix representations of linear transformations of vectors spaces. Statement (3) is equivalent to (1)+(2); and statement (4) is a consequence of (3), and the fact that the tuple <m>(c_j)_{j=1}^{n}</m> of columns of a matrix <m>A\in M_n(R)</m> is equal to the tuple <m>(Ae_j)_{j=1}^n</m> obtained by applying <m>A</m> to the standard basis <m>B=(e_j)_{j=1}^n</m> of <m>R^n</m>. 
         </p>
     </proof>
 </proposition>
