@@ -126,6 +126,56 @@
    </p>
    </statement>
    </definition>
+   <p>
+    In practice, to verify a subset of a module <m>M</m> is a submodule, instead of using the definition above directly, we use a procedure that is pretty much an analogue of the procedure for showing something is a subspace in the context of vector spaces. 
+   </p>
+   <algorithm xml:id="proc_submodule">
+    <title>Submodule verification</title>
+    <statement>
+        <p>
+            Let <m>M</m> be an <m>R</m>-module. To prove that a subset <m>N</m> of <m>M</m> is a submodule, proceed as follows. 
+            <ol>
+                <li>
+                    <p>
+                        Show that <m>0\in N</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Show that for all <m>m_1,m_2\in M</m> and <m>r,s\in R</m>, if <m>m_1,m_2\in N</m>, then 
+                    <m>rm_1+sm_2\in N</m>. Using logical shorthand, prove the following implication: 
+                    <md>
+                        <mrow>m_1,m_2\in N \amp \implies rm_1+sm_2\in N</mrow>
+                    </md>.
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+   </algorithm>
+   <proof>
+    <title>Proof of <xref ref="proc_submodule"/> </title>
+    <p>
+        The fact that our two-step procedure is equivalent to verifying the conditions of the definition follows from the following observations: 
+        <ul>
+            <li>
+                <p>
+                    Taking <m>r=s=1</m> in the second step shows that <m>N</m> is closed under addition. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Taking <m>r=0</m> and <m>s=-1</m> and using the fact that <m>(-1)m=-m</m> in any <m>R</m>-module (prove this yourself!), we see that <m>N</m> is closed under additive inverses. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Taking <m>s=0</m> and <m>r</m> arbitrary shows that <m>N</m> is closed under scalar multiplication. 
+                </p>
+            </li>
+        </ul>
+    </p>
+   </proof>
    <definition xml:id="d_module_homo">
    <title>Module homomorphism</title>
    <notation>
