@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.20.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p\)</span>-primary components.</span>
+</h4>
+<div class="para">Verify formula <a href="s_PID_mod_proofs.html#th_PID_mod_pprimary-2-1-8-3-1-7" class="xref" data-knowl="./knowl/xref/eq_PID_primary_comp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.20.2">(2.20.2)</a> for the <span class="process-math">\(\Z\)</span>-module <span class="process-math">\(M=\Z/3\Z\oplus \Z/3\Z\oplus \Z/3^3\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_primary_comp-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_PID_mod_pprimary.html ./knowl/xref/th_PID_mod_pprimary.html">
+\begin{align*}
+3M \amp = 3(\Z/3\Z)\oplus 3(\Z/3\Z)\oplus \oplus 3\Z/3^3\Z\cong \{0\}\oplus \{0\}\oplus (3)/(3^3) \\
+3^2 M \amp =\{0\}\oplus \{0\} \oplus (3^2)/(3^3)\\
+3^3 M \amp = \{0\}
+\end{align*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_PID_mod_pprimary.html ./knowl/xref/th_PID_mod_pprimary.html">
+\begin{align*}
+M/3M \amp \cong \Z/3\Z\oplus \Z/3\Z \oplus \Z/(3^3)/(3)/(3^3)\\
+\amp \cong \Z/3\Z\oplus \Z/3\Z\oplus \Z/3\Z\\
+3M/3^2M \amp \cong (3)/(3^3)\, /\, (3^2)/(3^3)\cong \Z/3\Z\\
+3^2M/3^3M \amp \cong (3^2)/(3^3)\cong \Z/3\Z\\
+3^kM/3^{k+1}M \amp =\{0\} \text{ for all } k\geq 3\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_PID_mod_pprimary.html ./knowl/xref/th_PID_mod_pprimary.html">
+\begin{align*}
+\dim_{\F_3} M/3M \amp =3\\
+\dim_{\F_3}3M/3^2M \amp =1\\
+\dim_{\F_3}3^2M/3^3M \amp = 1\\
+\dim_{\F_3}3^kM/3^{k+1}M \amp =0 \text{ for all } k\geq 3\text{.}
+\end{align*}
+</div>
+<div class="para">Following the argument in the proof of <a href="s_PID_mod_proofs.html#th_PID_mod_pprimary" class="xref" data-knowl="./knowl/xref/th_PID_mod_pprimary.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.20.1: PID-module p-primary components">Theorem 2.20.1</a>, these dimensions tells us that the decomposition of <span class="process-math">\(M\)</span> has 3 summands of the form <span class="process-math">\(\Z/3^j\Z\)</span> with <span class="process-math">\(j\geq 1\text{,}\)</span> 1 summand of the form <span class="process-math">\(\Z/3^j\Z\)</span> with <span class="process-math">\(j\geq 2\text{,}\)</span> and 1 summand of the form <span class="process-math">\(\Z/3^j\Z\)</span> with <span class="process-math">\(j\geq 3\text{.}\)</span> Lastly, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_PID_mod_pprimary.html ./knowl/xref/th_PID_mod_pprimary.html">
+\begin{align*}
+\dim_{\F_3}M/3M-\dim_{\F_3}3M/3^2M \amp =2\\
+\dim_{\F_3}3M/3^2M-\dim_{\F_3}3^2M/3^3M \amp =0\\
+\dim_{\F_3}3^2M/3^3M-\dim_{\F_3}3^3M/3^4M \amp =1\\
+\dim_{\F_3}3^{k-1}M/3^kM-\dim_{\F_3}3^{k}M/3^{k+1}M \amp = 0 \text{ for all } k\geq 4\text{.}
+\end{align*}
+</div>
+<div class="para">As per <a href="s_PID_mod_proofs.html#th_PID_mod_pprimary" class="xref" data-knowl="./knowl/xref/th_PID_mod_pprimary.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.20.1: PID-module p-primary components">Theorem 2.20.1</a>, this means <span class="process-math">\(M\)</span> has exactly 2 summands of the form <span class="process-math">\(\Z/3\Z\text{,}\)</span> no summands of the form <span class="process-math">\(\Z/3^2\Z\text{,}\)</span> and exactly 1 summand of the form <span class="process-math">\(\Z/3^3\Z\text{.}\)</span> This is precisely the decomposition we started with.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_primary_comp-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.20.2.1"><a href="#eg_primary_comp-3" title="Copy heading and permalink for Solution 2.20.2.1" aria-label="Copy heading and permalink for Solution 2.20.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.20.2: p-primary components"><a href="#eg_primary_comp" title="Copy heading and permalink for Example 2.20.2: p-primary components" aria-label="Copy heading and permalink for Example 2.20.2: p-primary components">🔗</a></div></article><span class="incontext"><a class="internal" href="s_PID_mod_proofs.html#eg_primary_comp">in-context</a></span>
+</body>
+</html>
