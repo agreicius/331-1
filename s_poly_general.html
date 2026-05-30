@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,10 +516,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_poly_general"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_poly_general">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multivariate polynomial rings and monoid algebras</span>
 </h2>
-<section class="subsection" id="ss_multi_poly"><h3 class="heading hide-type">
+<section class="subsection" id="ss_multi_poly">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multivariate polynomial rings</span>
 </h3>
 <article class="activity project-like" id="spec_poly_ring_multiple"><h4 class="heading">
@@ -593,15 +548,22 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#spec_poly_ring_multiple-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 32: Multivariate polynomial rings"><a href="#spec_poly_ring_multiple" title="Copy heading and permalink for Specimen 32: Multivariate polynomial rings" aria-label="Copy heading and permalink for Specimen 32: Multivariate polynomial rings">🔗</a></div></article><div class="para" id="ss_multi_poly-3">The recursive definition of multivariable polynomial rings allows us to use proof by induction in many situations, as the following results illustrate.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Specimen 32: Multivariate polynomial rings"><a href="#spec_poly_ring_multiple" title="Copy heading and permalink for Specimen 32: Multivariate polynomial rings" aria-label="Copy heading and permalink for Specimen 32: Multivariate polynomial rings">🔗</a></div>
+</article>
+<div class="para" id="ss_multi_poly-3">The recursive definition of multivariable polynomial rings allows us to use proof by induction in many situations, as the following results illustrate.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="th_polynomial_UFDs"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomial UFDs.</span>
 </h4>
 <div class="para" id="th_polynomial_UFDs-2-1">Let <span class="process-math">\(R\)</span> be a nonzero commutative ring. For all positive integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(R[x_1,x_2,\dots, x_n]\)</span> is a unique factorization domain if and only if <span class="process-math">\(R\)</span> is a unique factorization domain.<div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="th_polynomial_UFDs-2-2">In particular, <span class="process-math">\(\Z[x_1,x_2,\dots, x_n]\)</span> is a UFD for any positive integer <span class="process-math">\(n\text{,}\)</span> as is <span class="process-math">\(F[x_1,x_2,\dots, x_n]\text{,}\)</span> where <span class="process-math">\(F\)</span> is any field.<div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="th_polynomial_UFDs-2-2">In particular, <span class="process-math">\(\Z[x_1,x_2,\dots, x_n]\)</span> is a UFD for any positive integer <span class="process-math">\(n\text{,}\)</span> as is <span class="process-math">\(F[x_1,x_2,\dots, x_n]\text{,}\)</span> where <span class="process-math">\(F\)</span> is any field.<div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.15.1: Polynomial UFDs"><a href="#th_polynomial_UFDs" title="Copy heading and permalink for Theorem 2.15.1: Polynomial UFDs" aria-label="Copy heading and permalink for Theorem 2.15.1: Polynomial UFDs">🔗</a></div></article><details id="th_polynomial_UFDs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_polynomial_UFDs-3-1">The proof is by induction on <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.15.1: Polynomial UFDs"><a href="#th_polynomial_UFDs" title="Copy heading and permalink for Theorem 2.15.1: Polynomial UFDs" aria-label="Copy heading and permalink for Theorem 2.15.1: Polynomial UFDs">🔗</a></div>
+</article>
+<details id="th_polynomial_UFDs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_polynomial_UFDs-3-1">The proof is by induction on <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="th_polynomial_UFDs-3-2">Base case: <span class="process-math">\(n=1\text{.}\)</span> <a href="s_gauss_lemma.html#th_UFD_preservation" class="xref" data-knowl="./knowl/xref/th_UFD_preservation.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.14.6: UFD preservation in polynomial rings">Theorem 2.14.6</a> implies that if <span class="process-math">\(R\)</span> is a UFD, then so is <span class="process-math">\(R[x_1]\text{.}\)</span> Conversely, if <span class="process-math">\(R[x_1]\)</span> is a UFD, it is easy to see that <span class="process-math">\(R\)</span> is a UFD as well: using a degree argument, irreducible factorizations of an element <span class="process-math">\(c\in R\)</span> corresponds bijectively to irreducible factorizations of the constant polynomial <span class="process-math">\(f(x)=c\)</span> in <span class="process-math">\(R[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -616,7 +578,9 @@ R[x_1,x_2,\dots, x_n] \text{ a UFD} \amp \iff R[x_1,\dots, x_{n-1}][x_n] \text{ 
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_polynomial_UFDs-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.15.1.1"><a href="#th_polynomial_UFDs-3" title="Copy heading and permalink for Proof 2.15.1.1" aria-label="Copy heading and permalink for Proof 2.15.1.1">🔗</a></div></article></details><div class="para logical" id="ss_multi_poly-5">
+<div class="autopermalink" data-description="Proof 2.15.1.1"><a href="#th_polynomial_UFDs-3" title="Copy heading and permalink for Proof 2.15.1.1" aria-label="Copy heading and permalink for Proof 2.15.1.1">🔗</a></div>
+</article></details>
+<div class="para logical" id="ss_multi_poly-5">
 <div class="para">By definition, an element <span class="process-math">\(f\)</span> of <span class="process-math">\(R[x,y]=R[x][y]\)</span> is a formal expression of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_monomial_expansion.html" id="ss_multi_poly-5-3">
 \begin{align*}
@@ -636,7 +600,8 @@ f(x,y) \amp =\sum_{\boldi=(i_1,i_2)\in \Z_{\geq 0}^2}a_\boldi x^{i_1}y^{i_2} \te
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monomials and multivariate indices.</span>
 </h4>
 <div class="para" id="d_monomials-4-1">Let <span class="process-math">\(R\)</span> be a nonzero commutative ring, and let <span class="process-math">\(n\)</span> be a positive integer. A <dfn class="terminology">monomial</dfn> of <span class="process-math">\(S=R[x_1,x_2,\dots, x_n]\)</span> is an element of <span class="process-math">\(S\)</span> of the form <span class="process-math">\(x_1^{i_1}x_2^{i_2}\cdots x_{n}^{i_n}\text{,}\)</span> where <span class="process-math">\(i_k\in \Z_{\geq 0}\)</span> for all <span class="process-math">\(k\text{.}\)</span> The tuple <span class="process-math">\(\boldi=(i_1,i_2,\dots, i_n)\)</span> is called the <dfn class="terminology">multidegree</dfn> of the monomial.<div class="autopermalink" data-description="Paragraph"><a href="#d_monomials-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="d_monomials-4-2">
+</div> 
+<div class="para logical" id="d_monomials-4-2">
 <div class="para">To ease notation we adopt the following conventions.</div>
 <ul class="disc" id="d_monomials-4-2-1">
 <li id="d_monomials-4-2-1-1">
@@ -677,7 +642,9 @@ f(x,y) \amp =\sum_{\boldi=(i_1,i_2)\in \Z_{\geq 0}^2}a_\boldi x^{i_1}y^{i_2} \te
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_monomials-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.15.2: Monomials and multivariate indices"><a href="#d_monomials" title="Copy heading and permalink for Definition 2.15.2: Monomials and multivariate indices" aria-label="Copy heading and permalink for Definition 2.15.2: Monomials and multivariate indices">🔗</a></div></article><div class="para" id="ss_multi_poly-7">With this terminology and notation place, we can now give a precise description of monomial expansion in multivariate polynomial rings.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.15.2: Monomials and multivariate indices"><a href="#d_monomials" title="Copy heading and permalink for Definition 2.15.2: Monomials and multivariate indices" aria-label="Copy heading and permalink for Definition 2.15.2: Monomials and multivariate indices">🔗</a></div>
+</article>
+<div class="para" id="ss_multi_poly-7">With this terminology and notation place, we can now give a precise description of monomial expansion in multivariate polynomial rings.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop_monomial_expansion"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monomial expansion.</span>
@@ -692,7 +659,8 @@ f(\boldx) \amp = \sum_{\boldi\in \N^n} a_\boldi\, \boldx^\boldi \text{,}\tag{2.1
 <div class="para">where <span class="process-math">\(a_\boldi\in R\)</span> for all <span class="process-math">\(\boldi\in \N^n\text{,}\)</span> and <span class="process-math">\(a_\boldi=0\)</span> for all but finitely many indices <span class="process-math">\(\boldi\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="prop_monomial_expansion-2-2">
+</div> 
+<div class="para logical" id="prop_monomial_expansion-2-2">
 <div class="para">Moreover, this representation is unique in the following sense: if</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_monomial_expansion.html" id="prop_monomial_expansion-2-2-1">
 \begin{align*}
@@ -703,7 +671,11 @@ f(\boldx) \amp =\sum_{\boldi\in \N^n}a_\boldi \boldx^\boldi \amp f(\boldx)\amp =
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 2.15.3: Monomial expansion"><a href="#prop_monomial_expansion" title="Copy heading and permalink for Proposition 2.15.3: Monomial expansion" aria-label="Copy heading and permalink for Proposition 2.15.3: Monomial expansion">🔗</a></div></article><details id="prop_monomial_expansion-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="prop_monomial_expansion-3-1">The proof is by induction on <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition 2.15.3: Monomial expansion"><a href="#prop_monomial_expansion" title="Copy heading and permalink for Proposition 2.15.3: Monomial expansion" aria-label="Copy heading and permalink for Proposition 2.15.3: Monomial expansion">🔗</a></div>
+</article>
+<details id="prop_monomial_expansion-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop_monomial_expansion-3-1">The proof is by induction on <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="prop_monomial_expansion-3-2">Base step: <span class="process-math">\(n=1\text{.}\)</span> The statement in this case is just a reformulation of the definition of <span class="process-math">\(R[x_1]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -754,7 +726,9 @@ f=\sum_{\boldi\in \N^n}b_\boldi\, \boldx^\boldi \amp = \sum_{k\in \N}\left(\sum_
 <div class="para">Since the line above is an equality of monomial expansions in the ring <span class="process-math">\(R[x_1,x_2,\dots, x_{n-1}]\text{,}\)</span> the induction hypothesis implies <span class="process-math">\(a_\boldi=b\boldi\)</span> for all <span class="process-math">\(k\in \N\)</span> and all  <span class="process-math">\(\boldi\in \N^n\)</span> satisfying <span class="process-math">\(\boldi(n)=k\text{.}\)</span> But for all <span class="process-math">\(\boldi\in \N^n\text{,}\)</span> there is a <span class="process-math">\(k\in \N\)</span> such that <span class="process-math">\(\boldi(n)=k\text{.}\)</span> Thus <span class="process-math">\(a_\boldi=b_\boldi\)</span> for all <span class="process-math">\(\boldi\in \N\text{,}\)</span> as desired.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_monomial_expansion-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.15.3.1"><a href="#prop_monomial_expansion-3" title="Copy heading and permalink for Proof 2.15.3.1" aria-label="Copy heading and permalink for Proof 2.15.3.1">🔗</a></div></article></details><div class="para" id="ss_multi_poly-9">The monomial expansion description of elements of a multivariate polynomial ring <span class="process-math">\(R[\boldx]\)</span> allows us to give a complete and concrete description of all ring homomorphisms from <span class="process-math">\(R[\boldx]\text{.}\)</span> The proof, on the other hand, will use induction once again.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 2.15.3.1"><a href="#prop_monomial_expansion-3" title="Copy heading and permalink for Proof 2.15.3.1" aria-label="Copy heading and permalink for Proof 2.15.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="ss_multi_poly-9">The monomial expansion description of elements of a multivariate polynomial ring <span class="process-math">\(R[\boldx]\)</span> allows us to give a complete and concrete description of all ring homomorphisms from <span class="process-math">\(R[\boldx]\text{.}\)</span> The proof, on the other hand, will use induction once again.<div class="autopermalink" data-description="Paragraph"><a href="#ss_multi_poly-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="th_map_prop_multi_poly"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms from <span class="process-math">\(R[\boldx]\)</span>.</span>
@@ -770,19 +744,31 @@ f=\sum_{\boldi\in \N^n}a_\boldi\, \boldx^{\boldi} \amp \mapsto \sum_{\boldi\in \
 <div class="para">is a ring homomorphism. As a result, we have a bijection between <span class="process-math">\(\Hom(R[\boldx], T)\)</span> and <span class="process-math">\(\Hom(R,T)\times T^n\text{,}\)</span> described as follows.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_map_prop_multi_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/im_multi_poly_ring_homo.svg" role="img" class="contained" alt="Description of multivariate polynomial ring homomorphisms"></div>
-<div class="autopermalink" data-description="Theorem 2.15.4: Homomorphisms from R[\boldx]"><a href="#th_map_prop_multi_poly" title="Copy heading and permalink for Theorem 2.15.4: Homomorphisms from R[\boldx]" aria-label="Copy heading and permalink for Theorem 2.15.4: Homomorphisms from R[\boldx]">🔗</a></div></article><details id="th_map_prop_multi_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_map_prop_multi_poly-3-1">Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above.<div class="autopermalink" data-description="Paragraph"><a href="#th_map_prop_multi_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.15.4: Homomorphisms from R[\boldx]"><a href="#th_map_prop_multi_poly" title="Copy heading and permalink for Theorem 2.15.4: Homomorphisms from R[\boldx]" aria-label="Copy heading and permalink for Theorem 2.15.4: Homomorphisms from R[\boldx]">🔗</a></div>
+</article>
+<details id="th_map_prop_multi_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_map_prop_multi_poly-3-1">Left as an exercise. Use a proof by induction along the lines used in the proofs for the two results above.<div class="autopermalink" data-description="Paragraph"><a href="#th_map_prop_multi_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.15.4.1"><a href="#th_map_prop_multi_poly-3" title="Copy heading and permalink for Proof 2.15.4.1" aria-label="Copy heading and permalink for Proof 2.15.4.1">🔗</a></div></article></details><article class="definition definition-like" id="d_noetherian_ring"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.15.4.1"><a href="#th_map_prop_multi_poly-3" title="Copy heading and permalink for Proof 2.15.4.1" aria-label="Copy heading and permalink for Proof 2.15.4.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_noetherian_ring"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Noetherian ring.</span>
 </h4>
 <div class="para" id="d_noetherian_ring-2-1">A commutative ring <span class="process-math">\(R\)</span> is <dfn class="terminology">Noetherian</dfn> if every ideal of <span class="process-math">\(R\)</span> is finitely generated.<div class="autopermalink" data-description="Paragraph"><a href="#d_noetherian_ring-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.15.5: Noetherian ring"><a href="#d_noetherian_ring" title="Copy heading and permalink for Definition 2.15.5: Noetherian ring" aria-label="Copy heading and permalink for Definition 2.15.5: Noetherian ring">🔗</a></div></article><article class="theorem theorem-like" id="th_hilbert_basis_theorem"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.15.5: Noetherian ring"><a href="#d_noetherian_ring" title="Copy heading and permalink for Definition 2.15.5: Noetherian ring" aria-label="Copy heading and permalink for Definition 2.15.5: Noetherian ring">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_hilbert_basis_theorem"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hilbert’s basis theorem.</span>
 </h4>
 <div class="para" id="th_hilbert_basis_theorem-2-1">If <span class="process-math">\(R\)</span> is a Noetherian ring, then so is <span class="process-math">\(R[x]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.15.6: Hilbert’s basis theorem"><a href="#th_hilbert_basis_theorem" title="Copy heading and permalink for Theorem 2.15.6: Hilbert’s basis theorem" aria-label="Copy heading and permalink for Theorem 2.15.6: Hilbert’s basis theorem">🔗</a></div></article><details id="th_hilbert_basis_theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_hilbert_basis_theorem-3-1">
+<div class="autopermalink" data-description="Theorem 2.15.6: Hilbert’s basis theorem"><a href="#th_hilbert_basis_theorem" title="Copy heading and permalink for Theorem 2.15.6: Hilbert’s basis theorem" aria-label="Copy heading and permalink for Theorem 2.15.6: Hilbert’s basis theorem">🔗</a></div>
+</article>
+<details id="th_hilbert_basis_theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_hilbert_basis_theorem-3-1">
 <div class="para">It is clear that the zero ideal <span class="process-math">\(I=(0)\)</span> is finitely generated. Let <span class="process-math">\(I\)</span> be any nonzero ideal <span class="process-math">\(I\text{.}\)</span> Define the following subsets of <span class="process-math">\(R\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="th_hilbert_basis_theorem-3-1-5">
@@ -825,12 +811,18 @@ a \amp =\sum_{i=1}^nc_ia_i
 </div>
 <div class="para" id="th_hilbert_basis_theorem-3-4">Case 2: <span class="process-math">\(\deg f^lt; m\text{.}\)</span> In this case the leading coefficient <span class="process-math">\(a\)</span> of <span class="process-math">\(f\)</span> is an element of <span class="process-math">\(L_d(I)\text{,}\)</span> where <span class="process-math">\(d=\deg f\text{,}\)</span> and similarly as above, the poly<div class="autopermalink" data-description="Paragraph"><a href="#th_hilbert_basis_theorem-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.15.6.1"><a href="#th_hilbert_basis_theorem-3" title="Copy heading and permalink for Proof 2.15.6.1" aria-label="Copy heading and permalink for Proof 2.15.6.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_hilbert_basis_theorem"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.15.6.1"><a href="#th_hilbert_basis_theorem-3" title="Copy heading and permalink for Proof 2.15.6.1" aria-label="Copy heading and permalink for Proof 2.15.6.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="cor_hilbert_basis_theorem"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Noetherian polynomial rings.</span>
 </h4>
 <div class="para" id="cor_hilbert_basis_theorem-2-1">Let <span class="process-math">\(n\)</span> be a positive integer. If <span class="process-math">\(R\)</span> is a Noetherian ring, then so is <span class="process-math">\(R[x_1,x_2,\dots, x_n]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_hilbert_basis_theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.15.7: Noetherian polynomial rings"><a href="#cor_hilbert_basis_theorem" title="Copy heading and permalink for Corollary 2.15.7: Noetherian polynomial rings" aria-label="Copy heading and permalink for Corollary 2.15.7: Noetherian polynomial rings">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.15.1: Multivariate polynomial rings"><a href="#ss_multi_poly" title="Copy heading and permalink for Subsection 2.15.1: Multivariate polynomial rings" aria-label="Copy heading and permalink for Subsection 2.15.1: Multivariate polynomial rings">🔗</a></div></section><section class="subsection" id="ss_degree_multivariate"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Corollary 2.15.7: Noetherian polynomial rings"><a href="#cor_hilbert_basis_theorem" title="Copy heading and permalink for Corollary 2.15.7: Noetherian polynomial rings" aria-label="Copy heading and permalink for Corollary 2.15.7: Noetherian polynomial rings">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.15.1: Multivariate polynomial rings"><a href="#ss_multi_poly" title="Copy heading and permalink for Subsection 2.15.1: Multivariate polynomial rings" aria-label="Copy heading and permalink for Subsection 2.15.1: Multivariate polynomial rings">🔗</a></div>
+</section>
+<section class="subsection" id="ss_degree_multivariate">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Degree functions</span>
 </h3>
 <div class="para" id="ss_degree_multivariate-2">For general multivariate polynomial rings, there are a number of different ways to define a notion of degree. One of these comes automatically from our recursive definition: since <span class="process-math">\(R[\boldx]=R[x_1,x_2,\dots, x_{n-1}][x_n]\text{,}\)</span> given <span class="process-math">\(f\in R[\boldx]\text{,}\)</span> we can define its degree with respect to <span class="process-math">\(x_n\)</span> as its degree as a polynomial in <span class="process-math">\(x_n\)</span> with coefficients in <span class="process-math">\(R[x_1,x_2,\dots, x_{n-1}]\text{.}\)</span> More generally, given any one of the indeterminates <span class="process-math">\(x_k\text{,}\)</span> we can define the <span class="process-math">\(x_k\)</span>-degree of <span class="process-math">\(f\)</span> to be its degree as a polynomial in the indeterminate <span class="process-math">\(x_k\)</span> with coefficients in the ring <span class="process-math">\(R[(x_i)_{i\ne j}]\text{.}\)</span> As is easily shown using the mapping property of multivariate polynomial rings, we have <span class="process-math">\(R[\boldx]\cong R[(x_i)_{i\ne j}][x_j]\text{,}\)</span> where the isomorphism is given by the first natural map that comes to your mind. It follows that all the usual properties of degree functions of polynomial rings are ported over to the notion of <span class="process-math">\(x_k\)</span>-degree.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -840,11 +832,16 @@ a \amp =\sum_{i=1}^nc_ia_i
 </h4>
 <div class="para" id="eg_multi_poly_prime-2-1">Let <span class="process-math">\(R\)</span> be an integral domain. Prove that the ideal <span class="process-math">\((x^2-y^3)\)</span> is prime in <span class="process-math">\(R[x,y]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_multi_poly_prime-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_multi_poly_prime-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_multi_poly_prime-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_multi_poly_prime-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_multi_poly_prime-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 2.15.8.1"><a href="#eg_multi_poly_prime-3" title="Copy heading and permalink for Solution 2.15.8.1" aria-label="Copy heading and permalink for Solution 2.15.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.15.8: Prime ideal in R[x,y]"><a href="#eg_multi_poly_prime" title="Copy heading and permalink for Example 2.15.8: Prime ideal in R[x,y]" aria-label="Copy heading and permalink for Example 2.15.8: Prime ideal in R[x,y]">🔗</a></div></article><div class="para" id="ss_degree_multivariate-4">Another notion of degree is given by the so-called total degree of a polynomial.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.15.8: Prime ideal in R[x,y]"><a href="#eg_multi_poly_prime" title="Copy heading and permalink for Example 2.15.8: Prime ideal in R[x,y]" aria-label="Copy heading and permalink for Example 2.15.8: Prime ideal in R[x,y]">🔗</a></div>
+</article>
+<div class="para" id="ss_degree_multivariate-4">Another notion of degree is given by the so-called total degree of a polynomial.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="d_total_degree"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Total degree.</span>
@@ -866,7 +863,9 @@ a \amp =\sum_{i=1}^nc_ia_i
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_total_degree-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.15.9: Total degree"><a href="#d_total_degree" title="Copy heading and permalink for Definition 2.15.9: Total degree" aria-label="Copy heading and permalink for Definition 2.15.9: Total degree">🔗</a></div></article><div class="para" id="ss_degree_multivariate-6">The total degree function on <span class="process-math">\(R[\boldx]\)</span> satisfies some of the same properties of the usual degree function on a polynomial ring in one variable.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.15.9: Total degree"><a href="#d_total_degree" title="Copy heading and permalink for Definition 2.15.9: Total degree" aria-label="Copy heading and permalink for Definition 2.15.9: Total degree">🔗</a></div>
+</article>
+<div class="para" id="ss_degree_multivariate-6">The total degree function on <span class="process-math">\(R[\boldx]\)</span> satisfies some of the same properties of the usual degree function on a polynomial ring in one variable.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop_tot_deg"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Total degree.</span>
@@ -890,7 +889,9 @@ a \amp =\sum_{i=1}^nc_ia_i
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_tot_deg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 2.15.10: Total degree"><a href="#prop_tot_deg" title="Copy heading and permalink for Proposition 2.15.10: Total degree" aria-label="Copy heading and permalink for Proposition 2.15.10: Total degree">🔗</a></div></article><div class="para" id="ss_degree_multivariate-8">Unfortunatley, one important difference between the total degree and the usual degree, is that when <span class="process-math">\(n&gt; 1\)</span> the total degree function does not satisfy the division algorithm condition, as the next example illustrates.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition 2.15.10: Total degree"><a href="#prop_tot_deg" title="Copy heading and permalink for Proposition 2.15.10: Total degree" aria-label="Copy heading and permalink for Proposition 2.15.10: Total degree">🔗</a></div>
+</article>
+<div class="para" id="ss_degree_multivariate-8">Unfortunatley, one important difference between the total degree and the usual degree, is that when <span class="process-math">\(n&gt; 1\)</span> the total degree function does not satisfy the division algorithm condition, as the next example illustrates.<div class="autopermalink" data-description="Paragraph"><a href="#ss_degree_multivariate-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="eg_failure_div_alg"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Failure of division algorithm.</span>
@@ -911,11 +912,18 @@ a \amp =\sum_{i=1}^nc_ia_i
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_failure_div_alg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_failure_div_alg-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_failure_div_alg-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_failure_div_alg-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_failure_div_alg-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 2.15.11.1"><a href="#eg_failure_div_alg-3" title="Copy heading and permalink for Solution 2.15.11.1" aria-label="Copy heading and permalink for Solution 2.15.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.15.11: Failure of division algorithm"><a href="#eg_failure_div_alg" title="Copy heading and permalink for Example 2.15.11: Failure of division algorithm" aria-label="Copy heading and permalink for Example 2.15.11: Failure of division algorithm">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.15.2: Degree functions"><a href="#ss_degree_multivariate" title="Copy heading and permalink for Subsection 2.15.2: Degree functions" aria-label="Copy heading and permalink for Subsection 2.15.2: Degree functions">🔗</a></div></section><section class="subsection" id="ss_monoid_algebras"><h3 class="heading hide-type">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.15.11: Failure of division algorithm"><a href="#eg_failure_div_alg" title="Copy heading and permalink for Example 2.15.11: Failure of division algorithm" aria-label="Copy heading and permalink for Example 2.15.11: Failure of division algorithm">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.15.2: Degree functions"><a href="#ss_degree_multivariate" title="Copy heading and permalink for Subsection 2.15.2: Degree functions" aria-label="Copy heading and permalink for Subsection 2.15.2: Degree functions">🔗</a></div>
+</section>
+<section class="subsection" id="ss_monoid_algebras">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monoid algebras</span>
 </h3>
 <article class="definition definition-like" id="d_monoid"><h4 class="heading">
@@ -923,7 +931,9 @@ a \amp =\sum_{i=1}^nc_ia_i
 </h4>
 <div class="para" id="d_monoid-2-1">A <dfn class="terminology">monoid</dfn> is a pair <span class="process-math">\((M,\cdot)\text{,}\)</span> where <span class="process-math">\(M\)</span> is a nonempty set, and <span class="process-math">\(\cdot \colon M\times M\rightarrow M\)</span> is an associative operation for which a multiplicate identity element <span class="process-math">\(e\in M\)</span> exists: i.e., there is an element <span class="process-math">\(e\in M\)</span> satisfying <span class="process-math">\(e\cdot m=m\cdot e=m\)</span> for all <span class="process-math">\(m\in M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_monoid-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.15.12: Monoid"><a href="#d_monoid" title="Copy heading and permalink for Definition 2.15.12: Monoid" aria-label="Copy heading and permalink for Definition 2.15.12: Monoid">🔗</a></div></article><article class="example example-like" id="eg_monoids"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.15.12: Monoid"><a href="#d_monoid" title="Copy heading and permalink for Definition 2.15.12: Monoid" aria-label="Copy heading and permalink for Definition 2.15.12: Monoid">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_monoids"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monoid examples.</span>
 </h4>
 <div class="para logical" id="eg_monoids-2-1">
@@ -968,7 +978,9 @@ a \amp =\sum_{i=1}^nc_ia_i
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_monoids-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.15.13: Monoid examples"><a href="#eg_monoids" title="Copy heading and permalink for Example 2.15.13: Monoid examples" aria-label="Copy heading and permalink for Example 2.15.13: Monoid examples">🔗</a></div></article><article class="activity project-like" id="spec_polynomials_in_monoid"><h4 class="heading">
+<div class="autopermalink" data-description="Example 2.15.13: Monoid examples"><a href="#eg_monoids" title="Copy heading and permalink for Example 2.15.13: Monoid examples" aria-label="Copy heading and permalink for Example 2.15.13: Monoid examples">🔗</a></div>
+</article>
+<article class="activity project-like" id="spec_polynomials_in_monoid"><h4 class="heading">
 <span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monoid algebra.</span>
 </h4>
 <div class="para logical" id="spec_polynomials_in_monoid-2-1">
@@ -989,7 +1001,11 @@ r \amp =\sum_{m\in M}r_m\, m
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#spec_polynomials_in_monoid-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 33: Monoid algebra"><a href="#spec_polynomials_in_monoid" title="Copy heading and permalink for Specimen 33: Monoid algebra" aria-label="Copy heading and permalink for Specimen 33: Monoid algebra">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.15.3: Monoid algebras"><a href="#ss_monoid_algebras" title="Copy heading and permalink for Subsection 2.15.3: Monoid algebras" aria-label="Copy heading and permalink for Subsection 2.15.3: Monoid algebras">🔗</a></div></section><div class="autopermalink" data-description="Section 2.15: Multivariate polynomial rings and monoid algebras"><a href="#s_poly_general" title="Copy heading and permalink for Section 2.15: Multivariate polynomial rings and monoid algebras" aria-label="Copy heading and permalink for Section 2.15: Multivariate polynomial rings and monoid algebras">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Specimen 33: Monoid algebra"><a href="#spec_polynomials_in_monoid" title="Copy heading and permalink for Specimen 33: Monoid algebra" aria-label="Copy heading and permalink for Specimen 33: Monoid algebra">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.15.3: Monoid algebras"><a href="#ss_monoid_algebras" title="Copy heading and permalink for Subsection 2.15.3: Monoid algebras" aria-label="Copy heading and permalink for Subsection 2.15.3: Monoid algebras">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 2.15: Multivariate polynomial rings and monoid algebras"><a href="#s_poly_general" title="Copy heading and permalink for Section 2.15: Multivariate polynomial rings and monoid algebras" aria-label="Copy heading and permalink for Section 2.15: Multivariate polynomial rings and monoid algebras">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_gauss_lemma.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_integral_domain_factorization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

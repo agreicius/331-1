@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,10 +516,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_Sylow_A"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_Sylow_A">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow theorems: intro</span>
 </h2>
-<section class="subsection" id="ss_Sylow_statements"><h3 class="heading hide-type">
+<section class="subsection" id="ss_Sylow_statements">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stamement and illustration of Sylow theorems</span>
 </h3>
 <article class="definition definition-like" id="d_order_p"><h4 class="heading">
@@ -575,7 +530,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </h4>
 <div class="para" id="d_order_p-3-1">Let <span class="process-math">\(n\)</span> be nonzero integer, and let <span class="process-math">\(p\)</span> be a prime integer. The <dfn class="terminology"><span class="process-math">\(p\)</span>-adic valuation</dfn> of <span class="process-math">\(n\text{,}\)</span> denoted <span class="process-math">\(v_p(n)\text{,}\)</span> is the largest integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(p^k\mid n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_order_p-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.20.1: Order at p"><a href="#d_order_p" title="Copy heading and permalink for Definition 1.20.1: Order at p" aria-label="Copy heading and permalink for Definition 1.20.1: Order at p">🔗</a></div></article><article class="remark remark-like" id="ss_Sylow_statements-3"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.20.1: Order at p"><a href="#d_order_p" title="Copy heading and permalink for Definition 1.20.1: Order at p" aria-label="Copy heading and permalink for Definition 1.20.1: Order at p">🔗</a></div>
+</article>
+<article class="remark remark-like" id="ss_Sylow_statements-3"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p\)</span>-adic valuation.</span>
 </h4>
 <div class="para logical" id="ss_Sylow_statements-3-2">
@@ -589,7 +546,9 @@ v_p(12) \amp =0 \text{ for all primes } p\geq 5\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 1.20.2: p-adic valuation"><a href="#ss_Sylow_statements-3" title="Copy heading and permalink for Remark 1.20.2: p-adic valuation" aria-label="Copy heading and permalink for Remark 1.20.2: p-adic valuation">🔗</a></div></article><article class="definition definition-like" id="d_Sylow_subgroups"><h4 class="heading">
+<div class="autopermalink" data-description="Remark 1.20.2: p-adic valuation"><a href="#ss_Sylow_statements-3" title="Copy heading and permalink for Remark 1.20.2: p-adic valuation" aria-label="Copy heading and permalink for Remark 1.20.2: p-adic valuation">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_Sylow_subgroups"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups.</span>
 </h4>
 <div class="para logical" id="d_Sylow_subgroups-2-1">
@@ -608,7 +567,9 @@ n_p(G)=\abs{\Syl_p(G)}\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_Sylow_subgroups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.20.3: Sylow subgroups"><a href="#d_Sylow_subgroups" title="Copy heading and permalink for Definition 1.20.3: Sylow subgroups" aria-label="Copy heading and permalink for Definition 1.20.3: Sylow subgroups">🔗</a></div></article><div class="para" id="ss_Sylow_statements-5">Let’s illustrate the definitions above with some groups whose lattices of subgroups we know a great deal about already.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 1.20.3: Sylow subgroups"><a href="#d_Sylow_subgroups" title="Copy heading and permalink for Definition 1.20.3: Sylow subgroups" aria-label="Copy heading and permalink for Definition 1.20.3: Sylow subgroups">🔗</a></div>
+</article>
+<div class="para" id="ss_Sylow_statements-5">Let’s illustrate the definitions above with some groups whose lattices of subgroups we know a great deal about already.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="eg_Sylow_S3"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups of <span class="process-math">\(S_3\)</span>.</span>
@@ -629,7 +590,9 @@ n_2(S_3) \amp = 3 \amp n_3(S_3)\amp =1
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_S3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.20.4: Sylow subgroups of S_3"><a href="#eg_Sylow_S3" title="Copy heading and permalink for Example 1.20.4: Sylow subgroups of S_3" aria-label="Copy heading and permalink for Example 1.20.4: Sylow subgroups of S_3">🔗</a></div></article><article class="example example-like" id="eg_Sylow_cyclic"><h4 class="heading">
+<div class="autopermalink" data-description="Example 1.20.4: Sylow subgroups of S_3"><a href="#eg_Sylow_S3" title="Copy heading and permalink for Example 1.20.4: Sylow subgroups of S_3" aria-label="Copy heading and permalink for Example 1.20.4: Sylow subgroups of S_3">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_Sylow_cyclic"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups of cyclic groups.</span>
 </h4>
 <div class="para logical" id="eg_Sylow_cyclic-2-1">
@@ -643,7 +606,9 @@ n_2(S_3) \amp = 3 \amp n_3(S_3)\amp =1
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_cyclic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.20.5: Sylow subgroups of cyclic groups"><a href="#eg_Sylow_cyclic" title="Copy heading and permalink for Example 1.20.5: Sylow subgroups of cyclic groups" aria-label="Copy heading and permalink for Example 1.20.5: Sylow subgroups of cyclic groups">🔗</a></div></article><article class="example example-like" id="eg_Sylow_A4"><h4 class="heading">
+<div class="autopermalink" data-description="Example 1.20.5: Sylow subgroups of cyclic groups"><a href="#eg_Sylow_cyclic" title="Copy heading and permalink for Example 1.20.5: Sylow subgroups of cyclic groups" aria-label="Copy heading and permalink for Example 1.20.5: Sylow subgroups of cyclic groups">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_Sylow_A4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups of <span class="process-math">\(A_4\)</span>.</span>
 </h4>
 <div class="para logical" id="eg_Sylow_A4-2-1">
@@ -662,11 +627,14 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_A4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.20.6: Sylow subgroups of A_4"><a href="#eg_Sylow_A4" title="Copy heading and permalink for Example 1.20.6: Sylow subgroups of A_4" aria-label="Copy heading and permalink for Example 1.20.6: Sylow subgroups of A_4">🔗</a></div></article><article class="example example-like" id="eg_Sylow_S4"><h4 class="heading">
+<div class="autopermalink" data-description="Example 1.20.6: Sylow subgroups of A_4"><a href="#eg_Sylow_A4" title="Copy heading and permalink for Example 1.20.6: Sylow subgroups of A_4" aria-label="Copy heading and permalink for Example 1.20.6: Sylow subgroups of A_4">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_Sylow_S4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups of <span class="process-math">\(S_4\)</span>.</span>
 </h4>
 <div class="para" id="eg_Sylow_S4-2-1">We have <span class="process-math">\(\abs{S_4}=24=2^3\cdot 3\text{.}\)</span> We have not computed the full lattice of subgroups of <span class="process-math">\(S_4\)</span> yet, so we are not quite in a position to say immediately what the various Sylow subgroups of <span class="process-math">\(S_4\)</span> are.<div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_S4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="eg_Sylow_S4-2-2">
+</div> 
+<div class="para logical" id="eg_Sylow_S4-2-2">
 <div class="para">However, since a 3-Sylow subgroup is just a group of cardinality 3 in this case, it must be a cyclic subgroup generated by a 3-cycle. Thus, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_Sylow_A4.html" id="eg_Sylow_S4-2-2-1">
 \begin{align*}
@@ -675,7 +643,8 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 </div>
 <div class="para">just as in <a href="s_Sylow_A.html#eg_Sylow_A4" class="xref" data-knowl="./knowl/xref/eg_Sylow_A4.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.20.6: Sylow subgroups of A_4">Example 1.20.6</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_S4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="eg_Sylow_S4-2-3">
+</div> 
+<div class="para logical" id="eg_Sylow_S4-2-3">
 <div class="para">What about the <span class="process-math">\(2\)</span>-Sylow subgroups?  Recall that you showed in a homework exercise that there are exactly three subgroups of <span class="process-math">\(S_4\)</span> that are isomorphic to <span class="process-math">\(D_4\text{:}\)</span> call them <span class="process-math">\(K_1, K_2, K_3\text{.}\)</span> (In fact, each <span class="process-math">\(K_i\)</span> can be described as <span class="process-math">\(\angvec{(abcd),(ac)}\text{.}\)</span>) Thus we have</div>
 <div class="displaymath process-math" id="eg_Sylow_S4-2-3-7">
 \begin{equation*}
@@ -685,14 +654,18 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 <div class="para">It turns out that this inclusion is in fact an equality, as we will be able to show using Sylow 2.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_Sylow_S4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.20.7: Sylow subgroups of S_4"><a href="#eg_Sylow_S4" title="Copy heading and permalink for Example 1.20.7: Sylow subgroups of S_4" aria-label="Copy heading and permalink for Example 1.20.7: Sylow subgroups of S_4">🔗</a></div></article><div class="para" id="ss_Sylow_statements-10">Before stating the three Sylow subgroups, we make official the notion of a <span class="process-math">\(p\)</span>-group.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 1.20.7: Sylow subgroups of S_4"><a href="#eg_Sylow_S4" title="Copy heading and permalink for Example 1.20.7: Sylow subgroups of S_4" aria-label="Copy heading and permalink for Example 1.20.7: Sylow subgroups of S_4">🔗</a></div>
+</article>
+<div class="para" id="ss_Sylow_statements-10">Before stating the three Sylow subgroups, we make official the notion of a <span class="process-math">\(p\)</span>-group.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="d_pgroup"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p\)</span>-group.</span>
 </h4>
 <div class="para" id="d_pgroup-2-1">Let <span class="process-math">\(p\)</span> be a prime integer. A <dfn class="terminology"><span class="process-math">\(p\)</span>-group</dfn> is a group of cardinality <span class="process-math">\(p^k\)</span> for some positive integer <span class="process-math">\(k\text{.}\)</span> Given a group <span class="process-math">\(G\text{,}\)</span> a <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> is a subgroup <span class="process-math">\(H\leq G\)</span> that is a <span class="process-math">\(p\)</span>-group.<div class="autopermalink" data-description="Paragraph"><a href="#d_pgroup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.20.8: p-group"><a href="#d_pgroup" title="Copy heading and permalink for Definition 1.20.8: p-group" aria-label="Copy heading and permalink for Definition 1.20.8: p-group">🔗</a></div></article><article class="theorem theorem-like" id="th_Sylow_1"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.20.8: p-group"><a href="#d_pgroup" title="Copy heading and permalink for Definition 1.20.8: p-group" aria-label="Copy heading and permalink for Definition 1.20.8: p-group">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_Sylow_1"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow 1.</span>
 </h4>
 <div class="para logical" id="th_Sylow_1-2-1">
@@ -705,7 +678,9 @@ n_2(A_4) \amp = 1 \amp n_3(A_4)\amp = 4\text{.}
 <div class="para">In other words, <span class="process-math">\(G\)</span> has a <span class="process-math">\(p\)</span>-Sylow subgroup.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_Sylow_1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.20.9: Sylow 1"><a href="#th_Sylow_1" title="Copy heading and permalink for Theorem 1.20.9: Sylow 1" aria-label="Copy heading and permalink for Theorem 1.20.9: Sylow 1">🔗</a></div></article><article class="theorem theorem-like" id="th_Sylow_2"><h4 class="heading">
+<div class="autopermalink" data-description="Theorem 1.20.9: Sylow 1"><a href="#th_Sylow_1" title="Copy heading and permalink for Theorem 1.20.9: Sylow 1" aria-label="Copy heading and permalink for Theorem 1.20.9: Sylow 1">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_Sylow_2"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow 2.</span>
 </h4>
 <div class="para logical" id="th_Sylow_2-2-1">
@@ -718,7 +693,9 @@ H\leq gKg^{-1}
 <div class="para">for some <span class="process-math">\(g\in G\text{.}\)</span> As a result, any two <span class="process-math">\(p\)</span>-Sylow subgroups of <span class="process-math">\(G\)</span> are conjugate.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_Sylow_2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.20.10: Sylow 2"><a href="#th_Sylow_2" title="Copy heading and permalink for Theorem 1.20.10: Sylow 2" aria-label="Copy heading and permalink for Theorem 1.20.10: Sylow 2">🔗</a></div></article><div class="para" id="ss_Sylow_statements-14">The corollary below follows almost immediately from <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Theorem 1.20.10</a> by taking <span class="process-math">\(H\)</span> to be a <span class="process-math">\(p\)</span>-Sylow subgroup.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 1.20.10: Sylow 2"><a href="#th_Sylow_2" title="Copy heading and permalink for Theorem 1.20.10: Sylow 2" aria-label="Copy heading and permalink for Theorem 1.20.10: Sylow 2">🔗</a></div>
+</article>
+<div class="para" id="ss_Sylow_statements-14">The corollary below follows almost immediately from <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Theorem 1.20.10</a> by taking <span class="process-math">\(H\)</span> to be a <span class="process-math">\(p\)</span>-Sylow subgroup.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_pSylow_subgroups"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(p\)</span>-Sylow subgroups.</span>
@@ -746,7 +723,9 @@ H\leq gKg^{-1}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_pSylow_subgroups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.20.11: p-Sylow subgroups"><a href="#cor_pSylow_subgroups" title="Copy heading and permalink for Corollary 1.20.11: p-Sylow subgroups" aria-label="Copy heading and permalink for Corollary 1.20.11: p-Sylow subgroups">🔗</a></div></article><article class="theorem theorem-like" id="th_Sylow_3"><h4 class="heading">
+<div class="autopermalink" data-description="Corollary 1.20.11: p-Sylow subgroups"><a href="#cor_pSylow_subgroups" title="Copy heading and permalink for Corollary 1.20.11: p-Sylow subgroups" aria-label="Copy heading and permalink for Corollary 1.20.11: p-Sylow subgroups">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_Sylow_3"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow 3.</span>
 </h4>
 <div class="para logical" id="th_Sylow_3-2-1">
@@ -759,7 +738,9 @@ n_p(G) \amp \mid m\text{.}\tag{1.20.3}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_Sylow_3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.20.12: Sylow 3"><a href="#th_Sylow_3" title="Copy heading and permalink for Theorem 1.20.12: Sylow 3" aria-label="Copy heading and permalink for Theorem 1.20.12: Sylow 3">🔗</a></div></article><div class="para" id="ss_Sylow_statements-17">The statements of <a href="s_Sylow_A.html#th_Sylow_1" class="xref" data-knowl="./knowl/xref/th_Sylow_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.9: Sylow 1">Sylow 1</a> and <a href="s_Sylow_A.html#th_Sylow_3" class="xref" data-knowl="./knowl/xref/th_Sylow_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.12: Sylow 3">Sylow 3</a> are easily verified in examples <a href="s_Sylow_A.html#eg_Sylow_S3" class="xref" data-knowl="./knowl/xref/eg_Sylow_S3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.20.4: Sylow subgroups of S_3">1.20.4–1.20.6</a>. Using <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Sylow 2</a>, we can now verify that our description of the <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> in <a href="s_Sylow_A.html#eg_Sylow_S4" class="xref" data-knowl="./knowl/xref/eg_Sylow_S4.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.20.7: Sylow subgroups of S_4">Example 1.20.7</a> is complete. Why? We know that <span class="process-math">\(S_4\)</span> has exactly three subgroups isomorphic to <span class="process-math">\(D_4\text{.}\)</span> Since their cardinality is <span class="process-math">\(8\text{,}\)</span> these are <span class="process-math">\(2\)</span>-Sylow subgroups. Are there any others? No! By <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Sylow 2</a> all <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> are conjugate. Since conjugation defines an isomorphism, it follows that all <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> are isomorphic to <span class="process-math">\(D_4\text{.}\)</span> Thus the three we provided are the only ones.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 1.20.12: Sylow 3"><a href="#th_Sylow_3" title="Copy heading and permalink for Theorem 1.20.12: Sylow 3" aria-label="Copy heading and permalink for Theorem 1.20.12: Sylow 3">🔗</a></div>
+</article>
+<div class="para" id="ss_Sylow_statements-17">The statements of <a href="s_Sylow_A.html#th_Sylow_1" class="xref" data-knowl="./knowl/xref/th_Sylow_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.9: Sylow 1">Sylow 1</a> and <a href="s_Sylow_A.html#th_Sylow_3" class="xref" data-knowl="./knowl/xref/th_Sylow_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.12: Sylow 3">Sylow 3</a> are easily verified in examples <a href="s_Sylow_A.html#eg_Sylow_S3" class="xref" data-knowl="./knowl/xref/eg_Sylow_S3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.20.4: Sylow subgroups of S_3">1.20.4–1.20.6</a>. Using <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Sylow 2</a>, we can now verify that our description of the <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> in <a href="s_Sylow_A.html#eg_Sylow_S4" class="xref" data-knowl="./knowl/xref/eg_Sylow_S4.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.20.7: Sylow subgroups of S_4">Example 1.20.7</a> is complete. Why? We know that <span class="process-math">\(S_4\)</span> has exactly three subgroups isomorphic to <span class="process-math">\(D_4\text{.}\)</span> Since their cardinality is <span class="process-math">\(8\text{,}\)</span> these are <span class="process-math">\(2\)</span>-Sylow subgroups. Are there any others? No! By <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Sylow 2</a> all <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> are conjugate. Since conjugation defines an isomorphism, it follows that all <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(S_4\)</span> are isomorphic to <span class="process-math">\(D_4\text{.}\)</span> Thus the three we provided are the only ones.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ss_Sylow_statements-18">
 <div class="para">In a similar vein, <a href="s_Sylow_A.html#th_Sylow_2" class="xref" data-knowl="./knowl/xref/th_Sylow_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.10: Sylow 2">Sylow 2</a> tells us that all of the <span class="process-math">\(3\)</span>-Sylow subgroups of <span class="process-math">\(A_4\)</span> are conjugate. This is not immediately obvious, especially since the 3-cycles of <span class="process-math">\(A_4\)</span> break up into two distinct conjugacy classes:</div>
@@ -771,7 +752,10 @@ C_{(132)} \amp =\{(132),(143),(234), (124)\}\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_statements-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 1.20.1: Stamement and illustration of Sylow theorems"><a href="#ss_Sylow_statements" title="Copy heading and permalink for Subsection 1.20.1: Stamement and illustration of Sylow theorems" aria-label="Copy heading and permalink for Subsection 1.20.1: Stamement and illustration of Sylow theorems">🔗</a></div></section><section class="subsection" id="ss_Sylow_action_subsets"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 1.20.1: Stamement and illustration of Sylow theorems"><a href="#ss_Sylow_statements" title="Copy heading and permalink for Subsection 1.20.1: Stamement and illustration of Sylow theorems" aria-label="Copy heading and permalink for Subsection 1.20.1: Stamement and illustration of Sylow theorems">🔗</a></div>
+</section>
+<section class="subsection" id="ss_Sylow_action_subsets">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">First action: <span class="process-math">\(G\)</span> on <span class="process-math">\(p^k\)</span>-subsets of <span class="process-math">\(G\)</span></span>
 </h3>
 <div class="para logical" id="ss_Sylow_action_subsets-2">
@@ -806,7 +790,9 @@ O_4 \amp = \{\{e,r\},\{r,r^2\},\{e, r^2\}, \{s,r^2s\}, \{s,rs\}, \{r^2s, rs\}\}\
 <div class="para">Note that the three <span class="process-math">\(2\)</span>-Sylow subgroups of <span class="process-math">\(D_3\)</span> are contained in the three distinct orbits of size <span class="process-math">\(6/2=3\text{,}\)</span> and that the one orbit whose cardinality is greater than <span class="process-math">\(2\)</span> includes no <span class="process-math">\(2\)</span>-Sylow subgroups.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_pk-set_action-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.20.13: Action of D_3 on 2-subsets"><a href="#eg_pk-set_action" title="Copy heading and permalink for Example 1.20.13: Action of D_3 on 2-subsets" aria-label="Copy heading and permalink for Example 1.20.13: Action of D_3 on 2-subsets">🔗</a></div></article><article class="proposition theorem-like" id="prop_G_acts_psets"><h4 class="heading">
+<div class="autopermalink" data-description="Example 1.20.13: Action of D_3 on 2-subsets"><a href="#eg_pk-set_action" title="Copy heading and permalink for Example 1.20.13: Action of D_3 on 2-subsets" aria-label="Copy heading and permalink for Example 1.20.13: Action of D_3 on 2-subsets">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop_G_acts_psets"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Action of <span class="process-math">\(G\)</span> on <span class="process-math">\(p^k\)</span>-subsets.</span>
 </h4>
 <div class="para logical" id="prop_G_acts_psets-2-1">
@@ -845,7 +831,11 @@ A=\{X\subseteq G\mid \abs{X}=p^k\}\text{,}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_G_acts_psets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 1.20.14: Action of G on p^k-subsets"><a href="#prop_G_acts_psets" title="Copy heading and permalink for Proposition 1.20.14: Action of G on p^k-subsets" aria-label="Copy heading and permalink for Proposition 1.20.14: Action of G on p^k-subsets">🔗</a></div></article><details id="prop_G_acts_psets-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_G_acts_psets-3-1">
+<div class="autopermalink" data-description="Proposition 1.20.14: Action of G on p^k-subsets"><a href="#prop_G_acts_psets" title="Copy heading and permalink for Proposition 1.20.14: Action of G on p^k-subsets" aria-label="Copy heading and permalink for Proposition 1.20.14: Action of G on p^k-subsets">🔗</a></div>
+</article>
+<details id="prop_G_acts_psets-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop_G_acts_psets-3-1">
 <ol class="decimal" id="prop_G_acts_psets-3-1-1">
 <li id="prop_G_acts_psets-3-1-1-1">
 <div class="para logical" id="prop_G_acts_psets-3-1-1-1-1">
@@ -922,7 +912,9 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_G_acts_psets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.20.14.1"><a href="#prop_G_acts_psets-3" title="Copy heading and permalink for Proof 1.20.14.1" aria-label="Copy heading and permalink for Proof 1.20.14.1">🔗</a></div></article></details><div class="para" id="ss_Sylow_action_subsets-5">Note that <a href="s_Sylow_A.html#prop_G_acts_psets" class="xref" data-knowl="./knowl/xref/prop_G_acts_psets.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.20.14: Action of G on p^k-subsets">Proposition 1.20.14</a> includes the formula <a href="s_Sylow_A.html#th_Sylow_3-2-1-8" class="xref" data-knowl="./knowl/xref/eq_Sylow_3_modp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.20.2">(1.20.2)</a> among its results, giving us a partial proof of <a href="s_Sylow_A.html#th_Sylow_3" class="xref" data-knowl="./knowl/xref/th_Sylow_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.12: Sylow 3">Sylow 3</a>. Additionally, formula <a href="s_Sylow_A.html#th_Sylow_3-2-1-8" class="xref" data-knowl="./knowl/xref/eq_Sylow_3_modp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.20.2">(1.20.2)</a> implies <a href="s_Sylow_A.html#th_Sylow_1" class="xref" data-knowl="./knowl/xref/th_Sylow_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.9: Sylow 1">Sylow 1</a>, as we me now make official.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_action_subsets-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 1.20.14.1"><a href="#prop_G_acts_psets-3" title="Copy heading and permalink for Proof 1.20.14.1" aria-label="Copy heading and permalink for Proof 1.20.14.1">🔗</a></div>
+</article></details>
+<div class="para" id="ss_Sylow_action_subsets-5">Note that <a href="s_Sylow_A.html#prop_G_acts_psets" class="xref" data-knowl="./knowl/xref/prop_G_acts_psets.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.20.14: Action of G on p^k-subsets">Proposition 1.20.14</a> includes the formula <a href="s_Sylow_A.html#th_Sylow_3-2-1-8" class="xref" data-knowl="./knowl/xref/eq_Sylow_3_modp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.20.2">(1.20.2)</a> among its results, giving us a partial proof of <a href="s_Sylow_A.html#th_Sylow_3" class="xref" data-knowl="./knowl/xref/th_Sylow_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.12: Sylow 3">Sylow 3</a>. Additionally, formula <a href="s_Sylow_A.html#th_Sylow_3-2-1-8" class="xref" data-knowl="./knowl/xref/eq_Sylow_3_modp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.20.2">(1.20.2)</a> implies <a href="s_Sylow_A.html#th_Sylow_1" class="xref" data-knowl="./knowl/xref/th_Sylow_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.20.9: Sylow 1">Sylow 1</a>, as we me now make official.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_action_subsets-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_Sylow_subgroup_exists"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow subgroups exist.</span>
@@ -936,9 +928,15 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_Sylow_subgroup_exists-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.20.15: Sylow subgroups exist"><a href="#cor_Sylow_subgroup_exists" title="Copy heading and permalink for Corollary 1.20.15: Sylow subgroups exist" aria-label="Copy heading and permalink for Corollary 1.20.15: Sylow subgroups exist">🔗</a></div></article><details id="cor_Sylow_subgroup_exists-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="cor_Sylow_subgroup_exists-3-1">Since <span class="process-math">\(n_p(G)\equiv 1\pmod p\)</span> and <span class="process-math">\(0\not\equiv 1\pmod p\text{,}\)</span> it follows that <span class="process-math">\(n_p(G)\ne 0\text{.}\)</span> Equivalently, <span class="process-math">\(\Syl_p(G)\ne \emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_Sylow_subgroup_exists-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Corollary 1.20.15: Sylow subgroups exist"><a href="#cor_Sylow_subgroup_exists" title="Copy heading and permalink for Corollary 1.20.15: Sylow subgroups exist" aria-label="Copy heading and permalink for Corollary 1.20.15: Sylow subgroups exist">🔗</a></div>
+</article>
+<details id="cor_Sylow_subgroup_exists-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="cor_Sylow_subgroup_exists-3-1">Since <span class="process-math">\(n_p(G)\equiv 1\pmod p\)</span> and <span class="process-math">\(0\not\equiv 1\pmod p\text{,}\)</span> it follows that <span class="process-math">\(n_p(G)\ne 0\text{.}\)</span> Equivalently, <span class="process-math">\(\Syl_p(G)\ne \emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_Sylow_subgroup_exists-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.20.15.1"><a href="#cor_Sylow_subgroup_exists-3" title="Copy heading and permalink for Proof 1.20.15.1" aria-label="Copy heading and permalink for Proof 1.20.15.1">🔗</a></div></article></details><div class="para" id="ss_Sylow_action_subsets-7">Before leaving this first group action in our suite of group actions, we extract from the proof of <a href="s_Sylow_A.html#prop_G_acts_psets" class="xref" data-knowl="./knowl/xref/prop_G_acts_psets.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.20.14: Action of G on p^k-subsets">Proposition 1.20.14</a> a wonderful gem of a combinatorial fact.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_action_subsets-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 1.20.15.1"><a href="#cor_Sylow_subgroup_exists-3" title="Copy heading and permalink for Proof 1.20.15.1" aria-label="Copy heading and permalink for Proof 1.20.15.1">🔗</a></div>
+</article></details>
+<div class="para" id="ss_Sylow_action_subsets-7">Before leaving this first group action in our suite of group actions, we extract from the proof of <a href="s_Sylow_A.html#prop_G_acts_psets" class="xref" data-knowl="./knowl/xref/prop_G_acts_psets.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.20.14: Action of G on p^k-subsets">Proposition 1.20.14</a> a wonderful gem of a combinatorial fact.<div class="autopermalink" data-description="Paragraph"><a href="#ss_Sylow_action_subsets-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_n_choose_pk"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.20.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -952,7 +950,11 @@ g_1^{-1}\cdot X=\{1, g_1^{-1}g_2,\dots, g_1^{-1}g_{p^k}\}\in O_X\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_n_choose_pk-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.20.16"><a href="#cor_n_choose_pk" title="Copy heading and permalink for Corollary 1.20.16" aria-label="Copy heading and permalink for Corollary 1.20.16">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.20.2: First action: G on p^k-subsets of G"><a href="#ss_Sylow_action_subsets" title="Copy heading and permalink for Subsection 1.20.2: First action: G on p^k-subsets of G" aria-label="Copy heading and permalink for Subsection 1.20.2: First action: G on p^k-subsets of G">🔗</a></div></section><div class="autopermalink" data-description="Section 1.20: Sylow theorems: intro"><a href="#s_Sylow_A" title="Copy heading and permalink for Section 1.20: Sylow theorems: intro" aria-label="Copy heading and permalink for Section 1.20: Sylow theorems: intro">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 1.20.16"><a href="#cor_n_choose_pk" title="Copy heading and permalink for Corollary 1.20.16" aria-label="Copy heading and permalink for Corollary 1.20.16">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 1.20.2: First action: G on p^k-subsets of G"><a href="#ss_Sylow_action_subsets" title="Copy heading and permalink for Subsection 1.20.2: First action: G on p^k-subsets of G" aria-label="Copy heading and permalink for Subsection 1.20.2: First action: G on p^k-subsets of G">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 1.20: Sylow theorems: intro"><a href="#s_Sylow_A" title="Copy heading and permalink for Section 1.20: Sylow theorems: intro" aria-label="Copy heading and permalink for Section 1.20: Sylow theorems: intro">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_class_number.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_Sylow_B.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

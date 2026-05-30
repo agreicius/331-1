@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,10 +516,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_mod_rings"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_mod_rings">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular arithmetic</span>
 </h2>
-<section class="subsection" id="ss_cong"><h3 class="heading hide-type">
+<section class="subsection" id="ss_cong">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence</span>
 </h3>
 <article class="definition definition-like" id="d_divis"><h4 class="heading">
@@ -575,7 +530,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </h4>
 <div class="para" id="d_divis-3-1">Given integers <span class="process-math">\(a,b\in \Z\)</span> we say that <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\)</span> (or that <span class="process-math">\(b\)</span> is a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(a\)</span>) if there is an integer <span class="process-math">\(q\in \Z\)</span> satisfying <span class="process-math">\(b=qa\text{.}\)</span> In this case, <span class="process-math">\(q\)</span> is called the <dfn class="terminology">quotient</dfn> of <span class="process-math">\(b\)</span> by <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_divis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.2.1: Divisibilty"><a href="#d_divis" title="Copy heading and permalink for Definition 1.2.1: Divisibilty" aria-label="Copy heading and permalink for Definition 1.2.1: Divisibilty">🔗</a></div></article><article class="definition definition-like" id="d_cong_mod_n"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.2.1: Divisibilty"><a href="#d_divis" title="Copy heading and permalink for Definition 1.2.1: Divisibilty" aria-label="Copy heading and permalink for Definition 1.2.1: Divisibilty">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_cong_mod_n"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence modulo <span class="process-math">\(n\)</span>.</span>
 </h4>
 <div class="para logical" id="d_cong_mod_n-4-1">
@@ -595,7 +552,8 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 </div>
 <div class="para">Elements of a congruence class <span class="process-math">\([a]_n\)</span> are called <dfn class="terminology">representatives</dfn> (or <dfn class="terminology">residues</dfn>) of that class.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_cong_mod_n-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="d_cong_mod_n-4-2">
+</div> 
+<div class="para logical" id="d_cong_mod_n-4-2">
 <div class="para">The set of all congruence classes modulo <span class="process-math">\(n\)</span> is denoted <span class="process-math">\(\Z/n\Z\text{:}\)</span> i.e.,</div>
 <div class="displaymath process-math" id="d_cong_mod_n-4-2-4">
 \begin{equation*}
@@ -605,7 +563,9 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 <div class="para">The integer <span class="process-math">\(n\)</span> in all the settings above is called a <dfn class="terminology">modulus</dfn>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_cong_mod_n-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.2.2: Congruence modulo n"><a href="#d_cong_mod_n" title="Copy heading and permalink for Definition 1.2.2: Congruence modulo n" aria-label="Copy heading and permalink for Definition 1.2.2: Congruence modulo n">🔗</a></div></article><article class="example example-like" id="eg_cong_mod_3"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.2.2: Congruence modulo n"><a href="#d_cong_mod_n" title="Copy heading and permalink for Definition 1.2.2: Congruence modulo n" aria-label="Copy heading and permalink for Definition 1.2.2: Congruence modulo n">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_cong_mod_3"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence modulo <span class="process-math">\(3\)</span>.</span>
 </h4>
 <div class="para logical" id="eg_cong_mod_3-2-1">
@@ -634,7 +594,9 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_cong_mod_3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_cong_mod_3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_cong_mod_3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_cong_mod_3-3-1">
 <ol class="decimal" id="eg_cong_mod_3-3-1-1">
 <li id="eg_cong_mod_3-3-1-1-1">
@@ -681,15 +643,20 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_cong_mod_3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#eg_cong_mod_3-3" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.2.3: Congruence modulo 3"><a href="#eg_cong_mod_3" title="Copy heading and permalink for Example 1.2.3: Congruence modulo 3" aria-label="Copy heading and permalink for Example 1.2.3: Congruence modulo 3">🔗</a></div></article><article class="remark remark-like" id="ss_cong-5"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.2.3: Congruence modulo 3"><a href="#eg_cong_mod_3" title="Copy heading and permalink for Example 1.2.3: Congruence modulo 3" aria-label="Copy heading and permalink for Example 1.2.3: Congruence modulo 3">🔗</a></div>
+</article>
+<article class="remark remark-like" id="ss_cong-5"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence classes.</span>
 </h4>
 <div class="para" id="ss_cong-5-2">Fix an integer <span class="process-math">\(n\text{.}\)</span> The notation <span class="process-math">\(\overline{a}\)</span> is ambiguous since it does not indicate the modulus <span class="process-math">\(n\)</span> in question. This is one reason for the alternative notation <span class="process-math">\([a]_n\text{.}\)</span> Furthermore, the <span class="process-math">\([a]_n\)</span> notation somehow does a better job of reminding us that a congruence class is not itself an integer, but rather a <em class="emphasis">set of integers</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_cong-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ss_cong-5-3">We will use both notations interchangeably. Typically, we will favor <span class="process-math">\(\overline{a}\)</span> when performing modular arithmetic (see below), and <span class="process-math">\([a]_n\)</span> when asserting something about sets.<div class="autopermalink" data-description="Paragraph"><a href="#ss_cong-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 1.2.4: Congruence classes"><a href="#ss_cong-5" title="Copy heading and permalink for Remark 1.2.4: Congruence classes" aria-label="Copy heading and permalink for Remark 1.2.4: Congruence classes">🔗</a></div></article><article class="theorem theorem-like" id="th_cong_class"><h4 class="heading">
+<div class="autopermalink" data-description="Remark 1.2.4: Congruence classes"><a href="#ss_cong-5" title="Copy heading and permalink for Remark 1.2.4: Congruence classes" aria-label="Copy heading and permalink for Remark 1.2.4: Congruence classes">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_cong_class"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence.</span>
 </h4>
 <div class="para logical" id="th_cong_class-2-1">
@@ -701,18 +668,21 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 <div class="para">The congruence modulo <span class="process-math">\(n\)</span> relation is an equivalence relation: i.e.,</div>
 <ol class="lower-roman ol-marker-2" id="th_cong_class-2-1-2-1-1-3">
 <li id="th_cong_class-2-1-2-1-1-3-1">
-<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span>
+<div class="para" id="th_cong_class-2-1-2-1-1-3-1-2">
 <span class="process-math">\(a\equiv a\pmod n\)</span> for all <span class="process-math">\(a\in \Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.i: Reflexivity"><a href="#th_cong_class-2-1-2-1-1-3-1" title="Copy heading and permalink for Item 1.i: Reflexivity" aria-label="Copy heading and permalink for Item 1.i: Reflexivity">🔗</a></div>
 </li>
 <li id="th_cong_class-2-1-2-1-1-3-2">
-<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-2-2">If <span class="process-math">\(a\equiv b\pmod n\text{,}\)</span> then <span class="process-math">\(b\equiv a\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span>
+<div class="para" id="th_cong_class-2-1-2-1-1-3-2-2">If <span class="process-math">\(a\equiv b\pmod n\text{,}\)</span> then <span class="process-math">\(b\equiv a\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.ii: Reflexivity"><a href="#th_cong_class-2-1-2-1-1-3-2" title="Copy heading and permalink for Item 1.ii: Reflexivity" aria-label="Copy heading and permalink for Item 1.ii: Reflexivity">🔗</a></div>
 </li>
 <li id="th_cong_class-2-1-2-1-1-3-3">
-<span class="heading li--heading"><span class="title li--heading-title">Transitivity.</span></span><div class="para" id="th_cong_class-2-1-2-1-1-3-3-2">If <span class="process-math">\(a\equiv b\pmod n\)</span> and <span class="process-math">\(b\equiv c\pmod n\text{,}\)</span> then <span class="process-math">\(a\equiv c\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Transitivity.</span></span>
+<div class="para" id="th_cong_class-2-1-2-1-1-3-3-2">If <span class="process-math">\(a\equiv b\pmod n\)</span> and <span class="process-math">\(b\equiv c\pmod n\text{,}\)</span> then <span class="process-math">\(a\equiv c\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1-2-1-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 1.iii: Transitivity"><a href="#th_cong_class-2-1-2-1-1-3-3" title="Copy heading and permalink for Item 1.iii: Transitivity" aria-label="Copy heading and permalink for Item 1.iii: Transitivity">🔗</a></div>
 </li>
@@ -799,7 +769,11 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.2.5: Congruence"><a href="#th_cong_class" title="Copy heading and permalink for Theorem 1.2.5: Congruence" aria-label="Copy heading and permalink for Theorem 1.2.5: Congruence">🔗</a></div></article><details id="th_cong_class-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_cong_class-3-1">
+<div class="autopermalink" data-description="Theorem 1.2.5: Congruence"><a href="#th_cong_class" title="Copy heading and permalink for Theorem 1.2.5: Congruence" aria-label="Copy heading and permalink for Theorem 1.2.5: Congruence">🔗</a></div>
+</article>
+<details id="th_cong_class-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_cong_class-3-1">
 <div class="para">See text for (1). Statements (2)-(3) then follow from general properties about equivalence relations and their corresponding equivalence classes. Statement (4) follows from (2) and the following observation:</div>
 <div class="displaymath process-math" id="th_cong_class-3-1-1">
 \begin{equation*}
@@ -808,12 +782,16 @@ b \amp =a+qn \text{ for some } q\in \Z\text{.}\tag{1.2.2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_cong_class-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.2.5.1"><a href="#th_cong_class-3" title="Copy heading and permalink for Proof 1.2.5.1" aria-label="Copy heading and permalink for Proof 1.2.5.1">🔗</a></div></article></details><article class="definition definition-like" id="d_least_residue"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 1.2.5.1"><a href="#th_cong_class-3" title="Copy heading and permalink for Proof 1.2.5.1" aria-label="Copy heading and permalink for Proof 1.2.5.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_least_residue"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Least residue modulo <span class="process-math">\(n\)</span>.</span>
 </h4>
 <div class="para" id="d_least_residue-2-1">Fix a positive modulus <span class="process-math">\(n\text{.}\)</span> Given an integer <span class="process-math">\(a\)</span> the <dfn class="terminology">least residue</dfn> of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\text{,}\)</span> denoted <span class="process-math">\(a\bmod n\)</span> is the unique <span class="process-math">\(r\in \{0,1,2,\dots, n-1\}\)</span> satisfying <span class="process-math">\(a\equiv r\pmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_least_residue-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.2.6: Least residue modulo n"><a href="#d_least_residue" title="Copy heading and permalink for Definition 1.2.6: Least residue modulo n" aria-label="Copy heading and permalink for Definition 1.2.6: Least residue modulo n">🔗</a></div></article><article class="warning remark-like" id="ss_cong-8"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.2.6: Least residue modulo n"><a href="#d_least_residue" title="Copy heading and permalink for Definition 1.2.6: Least residue modulo n" aria-label="Copy heading and permalink for Definition 1.2.6: Least residue modulo n">🔗</a></div>
+</article>
+<article class="warning remark-like" id="ss_cong-8"><h4 class="heading">
 <span class="type">Warning</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruence relation and least residues.</span>
 </h4>
 <div class="para" id="ss_cong-8-2">Do not confuse the two quite similar looking notations <span class="process-math">\(a\equiv b\pmod n\)</span> and <span class="process-math">\(a\bmod n\text{.}\)</span> The first asserts that a certain relation holds, namely that <span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(n\text{.}\)</span> The second denotes the unique integer in <span class="process-math">\(\{0,1,\dots, n-1\}\)</span> that is congruent to <span class="process-math">\(a\)</span> modulo <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_cong-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -828,7 +806,9 @@ a \amp \longmapsto a\bmod n\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_cong-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Warning 1.2.7: Congruence relation and least residues"><a href="#ss_cong-8" title="Copy heading and permalink for Warning 1.2.7: Congruence relation and least residues" aria-label="Copy heading and permalink for Warning 1.2.7: Congruence relation and least residues">🔗</a></div></article><article class="theorem theorem-like" id="th_div_alg"><h4 class="heading">
+<div class="autopermalink" data-description="Warning 1.2.7: Congruence relation and least residues"><a href="#ss_cong-8" title="Copy heading and permalink for Warning 1.2.7: Congruence relation and least residues" aria-label="Copy heading and permalink for Warning 1.2.7: Congruence relation and least residues">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_div_alg"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Division algorithm.</span>
 </h4>
 <div class="para logical" id="th_div_alg-2-1">
@@ -851,7 +831,9 @@ a \amp \longmapsto a\bmod n\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_div_alg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.2.8: Division algorithm"><a href="#th_div_alg" title="Copy heading and permalink for Theorem 1.2.8: Division algorithm" aria-label="Copy heading and permalink for Theorem 1.2.8: Division algorithm">🔗</a></div></article><article class="proposition theorem-like" id="prop_least_residue"><h4 class="heading">
+<div class="autopermalink" data-description="Theorem 1.2.8: Division algorithm"><a href="#th_div_alg" title="Copy heading and permalink for Theorem 1.2.8: Division algorithm" aria-label="Copy heading and permalink for Theorem 1.2.8: Division algorithm">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop_least_residue"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Least residue.</span>
 </h4>
 <div class="para logical" id="prop_least_residue-2-1">
@@ -878,7 +860,11 @@ a \amp \longmapsto a\bmod n\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_least_residue-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 1.2.9: Least residue"><a href="#prop_least_residue" title="Copy heading and permalink for Proposition 1.2.9: Least residue" aria-label="Copy heading and permalink for Proposition 1.2.9: Least residue">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.2.1: Congruence"><a href="#ss_cong" title="Copy heading and permalink for Subsection 1.2.1: Congruence" aria-label="Copy heading and permalink for Subsection 1.2.1: Congruence">🔗</a></div></section><section class="subsection" id="ss_cong_ring_structure"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proposition 1.2.9: Least residue"><a href="#prop_least_residue" title="Copy heading and permalink for Proposition 1.2.9: Least residue" aria-label="Copy heading and permalink for Proposition 1.2.9: Least residue">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 1.2.1: Congruence"><a href="#ss_cong" title="Copy heading and permalink for Subsection 1.2.1: Congruence" aria-label="Copy heading and permalink for Subsection 1.2.1: Congruence">🔗</a></div>
+</section>
+<section class="subsection" id="ss_cong_ring_structure">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span></span>
 </h3>
 <article class="proposition theorem-like" id="prop_cong_arith"><h4 class="heading">
@@ -907,7 +893,9 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_cong_arith-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 1.2.10: Modular arithmetic"><a href="#prop_cong_arith" title="Copy heading and permalink for Proposition 1.2.10: Modular arithmetic" aria-label="Copy heading and permalink for Proposition 1.2.10: Modular arithmetic">🔗</a></div></article><article class="corollary theorem-like" id="cor_mod_ring_ops"><h4 class="heading">
+<div class="autopermalink" data-description="Proposition 1.2.10: Modular arithmetic"><a href="#prop_cong_arith" title="Copy heading and permalink for Proposition 1.2.10: Modular arithmetic" aria-label="Copy heading and permalink for Proposition 1.2.10: Modular arithmetic">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_mod_ring_ops"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ring structure of <span class="process-math">\(\Z/n\Z\)</span>.</span>
 </h4>
 <div class="para logical" id="cor_mod_ring_ops-2-1">
@@ -923,7 +911,9 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_mod_ring_ops-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.2.11: Ring structure of \Z/n\Z"><a href="#cor_mod_ring_ops" title="Copy heading and permalink for Corollary 1.2.11: Ring structure of \Z/n\Z" aria-label="Copy heading and permalink for Corollary 1.2.11: Ring structure of \Z/n\Z">🔗</a></div></article><article class="example example-like" id="eg_mod_arith"><h4 class="heading">
+<div class="autopermalink" data-description="Corollary 1.2.11: Ring structure of \Z/n\Z"><a href="#cor_mod_ring_ops" title="Copy heading and permalink for Corollary 1.2.11: Ring structure of \Z/n\Z" aria-label="Copy heading and permalink for Corollary 1.2.11: Ring structure of \Z/n\Z">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_mod_arith"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular arithmetic.</span>
 </h4>
 <div class="para logical" id="eg_mod_arith-2-1">
@@ -935,27 +925,41 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_arith-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_mod_arith-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_mod_arith-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_mod_arith-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_arith-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.2.12.1"><a href="#eg_mod_arith-3" title="Copy heading and permalink for Solution 1.2.12.1" aria-label="Copy heading and permalink for Solution 1.2.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.2.12: Modular arithmetic"><a href="#eg_mod_arith" title="Copy heading and permalink for Example 1.2.12: Modular arithmetic" aria-label="Copy heading and permalink for Example 1.2.12: Modular arithmetic">🔗</a></div></article><article class="example example-like" id="eg_least_residue"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.2.12: Modular arithmetic"><a href="#eg_mod_arith" title="Copy heading and permalink for Example 1.2.12: Modular arithmetic" aria-label="Copy heading and permalink for Example 1.2.12: Modular arithmetic">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_least_residue"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Least residue.</span>
 </h4>
 <div class="para" id="eg_least_residue-2-1">Let <span class="process-math">\(n=50\)</span> and let <span class="process-math">\(a=99^{1233}(7^8+ 1)\text{.}\)</span> Compute <span class="process-math">\(a\bmod n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_least_residue-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_least_residue-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_least_residue-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_least_residue-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_least_residue-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.2.13.1"><a href="#eg_least_residue-3" title="Copy heading and permalink for Solution 1.2.13.1" aria-label="Copy heading and permalink for Solution 1.2.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.2.13: Least residue"><a href="#eg_least_residue" title="Copy heading and permalink for Example 1.2.13: Least residue" aria-label="Copy heading and permalink for Example 1.2.13: Least residue">🔗</a></div></article><article class="activity project-like" id="spec_Z_mod_n"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.2.13: Least residue"><a href="#eg_least_residue" title="Copy heading and permalink for Example 1.2.13: Least residue" aria-label="Copy heading and permalink for Example 1.2.13: Least residue">🔗</a></div>
+</article>
+<article class="activity project-like" id="spec_Z_mod_n"><h4 class="heading">
 <span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additive group <span class="process-math">\(\Z/n\Z\)</span>.</span>
 </h4>
 <div class="para" id="spec_Z_mod_n-2-1">Fix a positive integer <span class="process-math">\(n\text{.}\)</span> The pair <span class="process-math">\((\Z/n\Z, +)\)</span> is a group, where <span class="process-math">\(+\)</span> is the addition operation defined in <a href="s_mod_rings.html#cor_mod_ring_ops" class="xref" data-knowl="./knowl/xref/cor_mod_ring_ops.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 1.2.11: Ring structure of \Z/n\Z">Corollary 1.2.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#spec_Z_mod_n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_Z_mod_n-2-2">The group identity of <span class="process-math">\(\Z/n\Z\)</span> is the congruence class <span class="process-math">\(\overline{0}=[0]_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_Z_mod_n-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_Z_mod_n-2-3">Given <span class="process-math">\(\overline{a}\in \Z/n\Z\text{,}\)</span> its group inverse is <span class="process-math">\(\overline{-a}\text{,}\)</span> denoted <span class="process-math">\(-\overline{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_Z_mod_n-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_Z_mod_n-2-2">The group identity of <span class="process-math">\(\Z/n\Z\)</span> is the congruence class <span class="process-math">\(\overline{0}=[0]_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_Z_mod_n-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_Z_mod_n-2-3">Given <span class="process-math">\(\overline{a}\in \Z/n\Z\text{,}\)</span> its group inverse is <span class="process-math">\(\overline{-a}\text{,}\)</span> denoted <span class="process-math">\(-\overline{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_Z_mod_n-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 4: Additive group \Z/n\Z"><a href="#spec_Z_mod_n" title="Copy heading and permalink for Specimen 4: Additive group \Z/n\Z" aria-label="Copy heading and permalink for Specimen 4: Additive group \Z/n\Z">🔗</a></div></article><article class="definition definition-like" id="d_mult_inv_elements"><h4 class="heading">
+<div class="autopermalink" data-description="Specimen 4: Additive group \Z/n\Z"><a href="#spec_Z_mod_n" title="Copy heading and permalink for Specimen 4: Additive group \Z/n\Z" aria-label="Copy heading and permalink for Specimen 4: Additive group \Z/n\Z">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_mult_inv_elements"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplicative units in <span class="process-math">\(\Z/n\Z\)</span>.</span>
 </h4>
 <div class="para logical" id="d_mult_inv_elements-2-1">
@@ -973,32 +977,48 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_mult_inv_elements-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.2.14: Multiplicative units in \Z/n\Z"><a href="#d_mult_inv_elements" title="Copy heading and permalink for Definition 1.2.14: Multiplicative units in \Z/n\Z" aria-label="Copy heading and permalink for Definition 1.2.14: Multiplicative units in \Z/n\Z">🔗</a></div></article><article class="activity project-like" id="spec_units_mod_n"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.2.14: Multiplicative units in \Z/n\Z"><a href="#d_mult_inv_elements" title="Copy heading and permalink for Definition 1.2.14: Multiplicative units in \Z/n\Z" aria-label="Copy heading and permalink for Definition 1.2.14: Multiplicative units in \Z/n\Z">🔗</a></div>
+</article>
+<article class="activity project-like" id="spec_units_mod_n"><h4 class="heading">
 <span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Units modulo <span class="process-math">\(n\)</span>.</span>
 </h4>
 <div class="para" id="spec_units_mod_n-2-1">Fix a modulus <span class="process-math">\(n\text{.}\)</span> The pair <span class="process-math">\(((\Z/n\Z)^*, \cdot)\)</span> is a group, where <span class="process-math">\(\cdot\)</span> is the operation defined in <a href="s_mod_rings.html#cor_mod_ring_ops" class="xref" data-knowl="./knowl/xref/cor_mod_ring_ops.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 1.2.11: Ring structure of \Z/n\Z">Corollary 1.2.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#spec_units_mod_n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_units_mod_n-2-2">The group identity of <span class="process-math">\((\Z/n\Z)^*\)</span> is <span class="process-math">\(\overline{1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_units_mod_n-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_units_mod_n-2-3">Given <span class="process-math">\(\overline{a}\in (\Z/n\Z)^* \text{,}\)</span> its group inverse is its multiplicative inverse <span class="process-math">\(\overline{a}^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_units_mod_n-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_units_mod_n-2-2">The group identity of <span class="process-math">\((\Z/n\Z)^*\)</span> is <span class="process-math">\(\overline{1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_units_mod_n-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_units_mod_n-2-3">Given <span class="process-math">\(\overline{a}\in (\Z/n\Z)^* \text{,}\)</span> its group inverse is its multiplicative inverse <span class="process-math">\(\overline{a}^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_units_mod_n-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 5: Units modulo n"><a href="#spec_units_mod_n" title="Copy heading and permalink for Specimen 5: Units modulo n" aria-label="Copy heading and permalink for Specimen 5: Units modulo n">🔗</a></div></article><article class="example example-like" id="eg_mod_groups"><h4 class="heading">
+<div class="autopermalink" data-description="Specimen 5: Units modulo n"><a href="#spec_units_mod_n" title="Copy heading and permalink for Specimen 5: Units modulo n" aria-label="Copy heading and permalink for Specimen 5: Units modulo n">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_mod_groups"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modulus <span class="process-math">\(n=5\)</span>.</span>
 </h4>
 <div class="para" id="eg_mod_groups-2-1">Compute group tables for both <span class="process-math">\(\Z/5\Z\)</span> and <span class="process-math">\((\Z/5\Z)^*\text{.}\)</span> Naturally, for the latter you should first determine the units of <span class="process-math">\(\Z/5\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_groups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_mod_groups-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_mod_groups-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_mod_groups-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_groups-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.2.15.1"><a href="#eg_mod_groups-3" title="Copy heading and permalink for Solution 1.2.15.1" aria-label="Copy heading and permalink for Solution 1.2.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.2.15: Modulus n=5"><a href="#eg_mod_groups" title="Copy heading and permalink for Example 1.2.15: Modulus n=5" aria-label="Copy heading and permalink for Example 1.2.15: Modulus n=5">🔗</a></div></article><article class="example example-like" id="eg_mod_units"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.2.15: Modulus n=5"><a href="#eg_mod_groups" title="Copy heading and permalink for Example 1.2.15: Modulus n=5" aria-label="Copy heading and permalink for Example 1.2.15: Modulus n=5">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_mod_units"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Units modulo <span class="process-math">\(9\)</span>.</span>
 </h4>
 <div class="para" id="eg_mod_units-2-1">Compute a group table for <span class="process-math">\((\Z/9\Z)^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_units-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_mod_units-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_mod_units-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_mod_units-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_mod_units-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.2.16.1"><a href="#eg_mod_units-3" title="Copy heading and permalink for Solution 1.2.16.1" aria-label="Copy heading and permalink for Solution 1.2.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.2.16: Units modulo 9"><a href="#eg_mod_units" title="Copy heading and permalink for Example 1.2.16: Units modulo 9" aria-label="Copy heading and permalink for Example 1.2.16: Units modulo 9">🔗</a></div></article><article class="definition definition-like" id="d_gcd"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.2.16: Units modulo 9"><a href="#eg_mod_units" title="Copy heading and permalink for Example 1.2.16: Units modulo 9" aria-label="Copy heading and permalink for Example 1.2.16: Units modulo 9">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_gcd"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Greatest common divisor.</span>
 </h4>
 <div class="para logical" id="d_gcd-2-1">
@@ -1010,7 +1030,9 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_gcd-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.2.17: Greatest common divisor"><a href="#d_gcd" title="Copy heading and permalink for Definition 1.2.17: Greatest common divisor" aria-label="Copy heading and permalink for Definition 1.2.17: Greatest common divisor">🔗</a></div></article><article class="remark remark-like" id="ss_cong_ring_structure-12"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 1.2.17: Greatest common divisor"><a href="#d_gcd" title="Copy heading and permalink for Definition 1.2.17: Greatest common divisor" aria-label="Copy heading and permalink for Definition 1.2.17: Greatest common divisor">🔗</a></div>
+</article>
+<article class="remark remark-like" id="ss_cong_ring_structure-12"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Units mod <span class="process-math">\(n\)</span>.</span>
 </h4>
 <div class="para logical" id="ss_cong_ring_structure-12-2">
@@ -1022,7 +1044,11 @@ a b\amp \equiv a' b' \pmod n \amp \text{.}\tag{1.2.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_cong_ring_structure-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 1.2.18: Units mod n"><a href="#ss_cong_ring_structure-12" title="Copy heading and permalink for Remark 1.2.18: Units mod n" aria-label="Copy heading and permalink for Remark 1.2.18: Units mod n">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.2.2: Ring structure of \Z/n\Z"><a href="#ss_cong_ring_structure" title="Copy heading and permalink for Subsection 1.2.2: Ring structure of \Z/n\Z" aria-label="Copy heading and permalink for Subsection 1.2.2: Ring structure of \Z/n\Z">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Modular arithmetic"><a href="#s_mod_rings" title="Copy heading and permalink for Section 1.2: Modular arithmetic" aria-label="Copy heading and permalink for Section 1.2: Modular arithmetic">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Remark 1.2.18: Units mod n"><a href="#ss_cong_ring_structure-12" title="Copy heading and permalink for Remark 1.2.18: Units mod n" aria-label="Copy heading and permalink for Remark 1.2.18: Units mod n">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 1.2.2: Ring structure of \Z/n\Z"><a href="#ss_cong_ring_structure" title="Copy heading and permalink for Subsection 1.2.2: Ring structure of \Z/n\Z" aria-label="Copy heading and permalink for Subsection 1.2.2: Ring structure of \Z/n\Z">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 1.2: Modular arithmetic"><a href="#s_mod_rings" title="Copy heading and permalink for Section 1.2: Modular arithmetic" aria-label="Copy heading and permalink for Section 1.2: Modular arithmetic">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_matrix_grps.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

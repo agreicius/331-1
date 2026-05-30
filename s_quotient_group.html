@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,7 +516,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_quotient_group"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_quotient_group">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotient groups</span>
 </h2>
 <div class="para logical" id="s_quotient_group-2">
@@ -610,7 +564,9 @@ gNg^{-1} \amp = N
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_normal_subgroup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.12.1: Normal subgroup"><a href="#d_normal_subgroup" title="Copy heading and permalink for Definition 1.12.1: Normal subgroup" aria-label="Copy heading and permalink for Definition 1.12.1: Normal subgroup">🔗</a></div></article><article class="theorem theorem-like" id="th_normal"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.12.1: Normal subgroup"><a href="#d_normal_subgroup" title="Copy heading and permalink for Definition 1.12.1: Normal subgroup" aria-label="Copy heading and permalink for Definition 1.12.1: Normal subgroup">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_normal"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normal subgroups.</span>
 </h3>
 <div class="para logical" id="th_normal-2-1">
@@ -651,7 +607,11 @@ G/N \times G/N\amp \rightarrow G/N\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_normal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.12.2: Normal subgroups"><a href="#th_normal" title="Copy heading and permalink for Theorem 1.12.2: Normal subgroups" aria-label="Copy heading and permalink for Theorem 1.12.2: Normal subgroups">🔗</a></div></article><details id="th_normal-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_normal-3-1">The equivalence <span class="process-math">\((1)\iff (2)\)</span> follows directly from the definition of normality and <span class="process-math">\(N_G(N)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 1.12.2: Normal subgroups"><a href="#th_normal" title="Copy heading and permalink for Theorem 1.12.2: Normal subgroups" aria-label="Copy heading and permalink for Theorem 1.12.2: Normal subgroups">🔗</a></div>
+</article>
+<details id="th_normal-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_normal-3-1">The equivalence <span class="process-math">\((1)\iff (2)\)</span> follows directly from the definition of normality and <span class="process-math">\(N_G(N)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="th_normal-3-2">The equivalence <span class="process-math">\((1)\iff (3)\)</span> is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -679,7 +639,9 @@ gh=g'h'n'' n'\in (g'h')N\text{.}
 </div>
 <div class="para" id="th_normal-3-4">The implication <span class="process-math">\((4)\implies (3)\)</span> is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#th_normal-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.12.2.1"><a href="#th_normal-3" title="Copy heading and permalink for Proof 1.12.2.1" aria-label="Copy heading and permalink for Proof 1.12.2.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_quot_group"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.12.2.1"><a href="#th_normal-3" title="Copy heading and permalink for Proof 1.12.2.1" aria-label="Copy heading and permalink for Proof 1.12.2.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="th_quot_group"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotient groups.</span>
 </h3>
 <div class="para logical" id="th_quot_group-2-1">
@@ -710,8 +672,14 @@ G/N\times G/N \amp \rightarrow G/N\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.12.3: Quotient groups"><a href="#th_quot_group" title="Copy heading and permalink for Theorem 1.12.3: Quotient groups" aria-label="Copy heading and permalink for Theorem 1.12.3: Quotient groups">🔗</a></div></article><details id="th_quot_group-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_quot_group-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.12.3.1"><a href="#th_quot_group-3" title="Copy heading and permalink for Proof 1.12.3.1" aria-label="Copy heading and permalink for Proof 1.12.3.1">🔗</a></div></article></details><article class="example example-like" id="eg_normality_D4"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 1.12.3: Quotient groups"><a href="#th_quot_group" title="Copy heading and permalink for Theorem 1.12.3: Quotient groups" aria-label="Copy heading and permalink for Theorem 1.12.3: Quotient groups">🔗</a></div>
+</article>
+<details id="th_quot_group-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_quot_group-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_group-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.12.3.1"><a href="#th_quot_group-3" title="Copy heading and permalink for Proof 1.12.3.1" aria-label="Copy heading and permalink for Proof 1.12.3.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="eg_normality_D4"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality in <span class="process-math">\(D_4\)</span>.</span>
 </h3>
 <div class="para logical" id="eg_normality_D4-2-1">
@@ -738,16 +706,23 @@ G/N\times G/N \amp \rightarrow G/N\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_normality_D4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_normality_D4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_normality_D4-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_D4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.12.4.1"><a href="#eg_normality_D4-3" title="Copy heading and permalink for Solution 1.12.4.1" aria-label="Copy heading and permalink for Solution 1.12.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.12.4: Normality in D_4"><a href="#eg_normality_D4" title="Copy heading and permalink for Example 1.12.4: Normality in D_4" aria-label="Copy heading and permalink for Example 1.12.4: Normality in D_4">🔗</a></div></article><article class="example example-like" id="eg_normal_abelian"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.12.4: Normality in D_4"><a href="#eg_normality_D4" title="Copy heading and permalink for Example 1.12.4: Normality in D_4" aria-label="Copy heading and permalink for Example 1.12.4: Normality in D_4">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_normal_abelian"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Abelian groups.</span>
 </h3>
 <div class="para" id="eg_normal_abelian-2-1">Show that an abelian group <span class="process-math">\(G\)</span> every subgroup is normal.<div class="autopermalink" data-description="Paragraph"><a href="#eg_normal_abelian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_normal_abelian-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_normal_abelian-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_normal_abelian-3-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be abelian. Given a subgroup <span class="process-math">\(H\leq G\text{,}\)</span> for any <span class="process-math">\(h\in H\)</span> and <span class="process-math">\(g\in G\)</span> we have</div>
 <div class="displaymath process-math" id="eg_normal_abelian-3-1-5">
@@ -760,8 +735,11 @@ ghg^{-1} \amp =gg^{-1}h \amp (G \text{ abelian})\\
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_normal_abelian-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.12.5.1"><a href="#eg_normal_abelian-3" title="Copy heading and permalink for Solution 1.12.5.1" aria-label="Copy heading and permalink for Solution 1.12.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.12.5: Abelian groups"><a href="#eg_normal_abelian" title="Copy heading and permalink for Example 1.12.5: Abelian groups" aria-label="Copy heading and permalink for Example 1.12.5: Abelian groups">🔗</a></div></article><div class="para" id="s_quotient_group-9">Kernels of group homomorphisms are normal subgroups. In fact, as we show below, a subgroup is normal if and <em class="emphasis">only if</em> it is the kernel of a group homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#s_quotient_group-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.12.5: Abelian groups"><a href="#eg_normal_abelian" title="Copy heading and permalink for Example 1.12.5: Abelian groups" aria-label="Copy heading and permalink for Example 1.12.5: Abelian groups">🔗</a></div>
+</article>
+<div class="para" id="s_quotient_group-9">Kernels of group homomorphisms are normal subgroups. In fact, as we show below, a subgroup is normal if and <em class="emphasis">only if</em> it is the kernel of a group homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#s_quotient_group-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_normal_ker"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality and kernels.</span>
@@ -784,7 +762,9 @@ ghg^{-1} \amp =gg^{-1}h \amp (G \text{ abelian})\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_normal_ker-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.12.6: Normality and kernels"><a href="#cor_normal_ker" title="Copy heading and permalink for Corollary 1.12.6: Normality and kernels" aria-label="Copy heading and permalink for Corollary 1.12.6: Normality and kernels">🔗</a></div></article><article class="example example-like" id="eg_normality_S4"><h3 class="heading">
+<div class="autopermalink" data-description="Corollary 1.12.6: Normality and kernels"><a href="#cor_normal_ker" title="Copy heading and permalink for Corollary 1.12.6: Normality and kernels" aria-label="Copy heading and permalink for Corollary 1.12.6: Normality and kernels">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_normality_S4"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.12.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normality in <span class="process-math">\(S_4\)</span>.</span>
 </h3>
 <div class="para logical" id="eg_normality_S4-2-1">
@@ -805,11 +785,17 @@ ghg^{-1} \amp =gg^{-1}h \amp (G \text{ abelian})\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_normality_S4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_normality_S4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_normality_S4-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_normality_S4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 1.12.7.1"><a href="#eg_normality_S4-3" title="Copy heading and permalink for Solution 1.12.7.1" aria-label="Copy heading and permalink for Solution 1.12.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.12.7: Normality in S_4"><a href="#eg_normality_S4" title="Copy heading and permalink for Example 1.12.7: Normality in S_4" aria-label="Copy heading and permalink for Example 1.12.7: Normality in S_4">🔗</a></div></article><div class="autopermalink" data-description="Section 1.12: Quotient groups"><a href="#s_quotient_group" title="Copy heading and permalink for Section 1.12: Quotient groups" aria-label="Copy heading and permalink for Section 1.12: Quotient groups">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.12.7: Normality in S_4"><a href="#eg_normality_S4" title="Copy heading and permalink for Example 1.12.7: Normality in S_4" aria-label="Copy heading and permalink for Example 1.12.7: Normality in S_4">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 1.12: Quotient groups"><a href="#s_quotient_group" title="Copy heading and permalink for Section 1.12: Quotient groups" aria-label="Copy heading and permalink for Section 1.12: Quotient groups">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_cosets_lagrange.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_isom_thms_A.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

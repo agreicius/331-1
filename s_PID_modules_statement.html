@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,11 +516,16 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_PID_modules_statement"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_PID_modules_statement">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PID-module structure theorems: statements</span>
 </h2>
-<section class="introduction" id="s_PID_modules_statement-2"><div class="para" id="s_PID_modules_statement-2-1">In this section we will give careful statements of various theorems related to the structure of finitely generated modules over a PID. We will then illustrate these statements in two specific settings: the case when <span class="process-math">\(R=\Z\text{,}\)</span> where we obtain a classification of finitely generated abelian groups; and the case when <span class="process-math">\(R=F\)</span> is a field, in which case we obtain a classification of linear transformations of finite-dimensional vector spaces in terms of their rational canonical form.<div class="autopermalink" data-description="Paragraph"><a href="#s_PID_modules_statement-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="ss_PID_modules_statements"><h3 class="heading hide-type">
+<section class="introduction" id="s_PID_modules_statement-2">
+<div class="para" id="s_PID_modules_statement-2-1">In this section we will give careful statements of various theorems related to the structure of finitely generated modules over a PID. We will then illustrate these statements in two specific settings: the case when <span class="process-math">\(R=\Z\text{,}\)</span> where we obtain a classification of finitely generated abelian groups; and the case when <span class="process-math">\(R=F\)</span> is a field, in which case we obtain a classification of linear transformations of finite-dimensional vector spaces in terms of their rational canonical form.<div class="autopermalink" data-description="Paragraph"><a href="#s_PID_modules_statement-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="ss_PID_modules_statements">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PID-module structure theorems</span>
 </h3>
 <article class="definition definition-like" id="d_tor_M"><h4 class="heading">
@@ -597,7 +554,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_tor_M-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.19.1: Annihilators and torsion elements"><a href="#d_tor_M" title="Copy heading and permalink for Definition 2.19.1: Annihilators and torsion elements" aria-label="Copy heading and permalink for Definition 2.19.1: Annihilators and torsion elements">🔗</a></div></article><article class="theorem theorem-like" id="th_PID_mod_invar"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.19.1: Annihilators and torsion elements"><a href="#d_tor_M" title="Copy heading and permalink for Definition 2.19.1: Annihilators and torsion elements" aria-label="Copy heading and permalink for Definition 2.19.1: Annihilators and torsion elements">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_PID_mod_invar"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PID-module theorem: invariant factors.</span>
 </h4>
 <div class="para logical" id="th_PID_mod_invar-2-1">
@@ -605,7 +564,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div>
 <ol class="decimal" id="th_PID_mod_invar-2-1-3">
 <li id="th_PID_mod_invar-2-1-3-1">
-<span class="heading li--heading"><span class="title li--heading-title">Free and torsion decomposition.</span></span><div class="para logical" id="th_PID_mod_invar-2-1-3-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Free and torsion decomposition.</span></span>
+<div class="para logical" id="th_PID_mod_invar-2-1-3-1-2">
 <div class="para">There is a nonnegative integer <span class="process-math">\(n\)</span> such that</div>
 <div class="displaymath process-math" id="th_PID_mod_invar-2-1-3-1-2-2">
 \begin{align}
@@ -617,7 +577,8 @@ M\amp \cong R^n \oplus \Tor M \text{.}\tag{2.19.1}
 <div class="autopermalink" data-description="Item 1: Free and torsion decomposition"><a href="#th_PID_mod_invar-2-1-3-1" title="Copy heading and permalink for Item 1: Free and torsion decomposition" aria-label="Copy heading and permalink for Item 1: Free and torsion decomposition">🔗</a></div>
 </li>
 <li id="th_PID_mod_invar-2-1-3-2">
-<span class="heading li--heading"><span class="title li--heading-title">Invariant factor decomposition.</span></span><div class="para logical" id="th_PID_mod_invar-2-1-3-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Invariant factor decomposition.</span></span>
+<div class="para logical" id="th_PID_mod_invar-2-1-3-2-2">
 <div class="para">If <span class="process-math">\(\Tor M\ne 0\text{,}\)</span> there exist nonzero non-units <span class="process-math">\(a_1,a_2,\dots, a_m\in R\)</span> satisfying</div>
 <div class="displaymath process-math" id="th_PID_mod_invar-2-1-3-2-2-3">
 \begin{align}
@@ -641,7 +602,8 @@ M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)\text{.}\tag{2.19.4}
 <div class="autopermalink" data-description="Item 2: Invariant factor decomposition"><a href="#th_PID_mod_invar-2-1-3-2" title="Copy heading and permalink for Item 2: Invariant factor decomposition" aria-label="Copy heading and permalink for Item 2: Invariant factor decomposition">🔗</a></div>
 </li>
 <li id="th_PID_mod_invar-2-1-3-3">
-<span class="heading li--heading"><span class="title li--heading-title">Uniqueness.</span></span><div class="para" id="th_PID_mod_invar-2-1-3-3-2">The decomposition in <a href="s_PID_modules_statement.html#th_PID_mod_invar-2-1-3-2-2-6" class="xref" data-knowl="./knowl/xref/eq_PID_invar_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.4">(2.19.4)</a> is unique in the following sense. Given any other decomposition <span class="process-math">\(M\cong R^{n'}\oplus\bigoplus_{i=1}^{m'}R/(b_i)\text{,}\)</span> where <span class="process-math">\(b_i\notin R^*\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(b_i\mid b_{i+1}\)</span> for all <span class="process-math">\(1\leq i\leq m'-1\text{,}\)</span> we have <span class="process-math">\(n=n'\text{,}\)</span> <span class="process-math">\(m=m'\text{,}\)</span> and <span class="process-math">\(a_i\)</span> and <span class="process-math">\(b_i\)</span> are associates for all <span class="process-math">\(1\leq i\leq m\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_PID_mod_invar-2-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Uniqueness.</span></span>
+<div class="para" id="th_PID_mod_invar-2-1-3-3-2">The decomposition in <a href="s_PID_modules_statement.html#th_PID_mod_invar-2-1-3-2-2-6" class="xref" data-knowl="./knowl/xref/eq_PID_invar_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.4">(2.19.4)</a> is unique in the following sense. Given any other decomposition <span class="process-math">\(M\cong R^{n'}\oplus\bigoplus_{i=1}^{m'}R/(b_i)\text{,}\)</span> where <span class="process-math">\(b_i\notin R^*\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(b_i\mid b_{i+1}\)</span> for all <span class="process-math">\(1\leq i\leq m'-1\text{,}\)</span> we have <span class="process-math">\(n=n'\text{,}\)</span> <span class="process-math">\(m=m'\text{,}\)</span> and <span class="process-math">\(a_i\)</span> and <span class="process-math">\(b_i\)</span> are associates for all <span class="process-math">\(1\leq i\leq m\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_PID_mod_invar-2-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="th_PID_mod_invar-2-1-3-3-3">In particular, the nonnegative integer <span class="process-math">\(n\)</span> and ideals <span class="process-math">\((a_i)\)</span> are uniquely determined by the module <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_PID_mod_invar-2-1-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -650,12 +612,16 @@ M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)\text{.}\tag{2.19.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_PID_mod_invar-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.19.2: PID-module theorem: invariant factors"><a href="#th_PID_mod_invar" title="Copy heading and permalink for Theorem 2.19.2: PID-module theorem: invariant factors" aria-label="Copy heading and permalink for Theorem 2.19.2: PID-module theorem: invariant factors">🔗</a></div></article><article class="definition definition-like" id="d_betti_inv"><h4 class="heading">
+<div class="autopermalink" data-description="Theorem 2.19.2: PID-module theorem: invariant factors"><a href="#th_PID_mod_invar" title="Copy heading and permalink for Theorem 2.19.2: PID-module theorem: invariant factors" aria-label="Copy heading and permalink for Theorem 2.19.2: PID-module theorem: invariant factors">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_betti_inv"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Betti number and invariant factors.</span>
 </h4>
 <div class="para" id="d_betti_inv-2-1">Let <span class="process-math">\(M\)</span> be a finitely generated module over the PID <span class="process-math">\(R\text{.}\)</span> A decomposition of <span class="process-math">\(M\)</span> as in <a href="s_PID_modules_statement.html#th_PID_mod_invar-2-1-3-2-2-6" class="xref" data-knowl="./knowl/xref/eq_PID_invar_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.4">(2.19.4)</a> is called an <dfn class="terminology">invariant decomposition</dfn>. The integer <span class="process-math">\(n\)</span> appearing in this decomposition is called the <dfn class="terminology">betti number</dfn> of <span class="process-math">\(M\text{,}\)</span> and the ideals <span class="process-math">\((a_i)\)</span> are called the <dfn class="terminology">invariant factors</dfn> of <span class="process-math">\(M\text{.}\)</span> Similarly, the elements <span class="process-math">\(a_i\)</span> themselves are called invariant factors of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_betti_inv-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.19.3: Betti number and invariant factors"><a href="#d_betti_inv" title="Copy heading and permalink for Definition 2.19.3: Betti number and invariant factors" aria-label="Copy heading and permalink for Definition 2.19.3: Betti number and invariant factors">🔗</a></div></article><article class="remark remark-like" id="ss_PID_modules_statements-5"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.19.3: Betti number and invariant factors"><a href="#d_betti_inv" title="Copy heading and permalink for Definition 2.19.3: Betti number and invariant factors" aria-label="Copy heading and permalink for Definition 2.19.3: Betti number and invariant factors">🔗</a></div>
+</article>
+<article class="remark remark-like" id="ss_PID_modules_statements-5"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Annihilator and torsion elements.</span>
 </h4>
 <div class="para logical" id="ss_PID_modules_statements-5-2">
@@ -681,7 +647,9 @@ M \amp \cong R^n\oplus \bigoplus_{i=1}^m R/(a_i)\text{.}\tag{2.19.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_modules_statements-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.19.4: Annihilator and torsion elements"><a href="#ss_PID_modules_statements-5" title="Copy heading and permalink for Remark 2.19.4: Annihilator and torsion elements" aria-label="Copy heading and permalink for Remark 2.19.4: Annihilator and torsion elements">🔗</a></div></article><article class="corollary theorem-like" id="cor_PID_tor_free"><h4 class="heading">
+<div class="autopermalink" data-description="Remark 2.19.4: Annihilator and torsion elements"><a href="#ss_PID_modules_statements-5" title="Copy heading and permalink for Remark 2.19.4: Annihilator and torsion elements" aria-label="Copy heading and permalink for Remark 2.19.4: Annihilator and torsion elements">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_PID_tor_free"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PID-modules theorem: free if and only if torsion free.</span>
 </h4>
 <div class="para logical" id="cor_PID_tor_free-2-1">
@@ -694,9 +662,15 @@ M \text{ free} \amp \iff M \text{ torsion free} \tag{2.19.5}
 <div class="para">for all finitely generated modules <span class="process-math">\(M\)</span> over a PID.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_PID_tor_free-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.19.5: PID-modules theorem: free if and only if torsion free"><a href="#cor_PID_tor_free" title="Copy heading and permalink for Corollary 2.19.5: PID-modules theorem: free if and only if torsion free" aria-label="Copy heading and permalink for Corollary 2.19.5: PID-modules theorem: free if and only if torsion free">🔗</a></div></article><details id="ss_PID_modules_statements-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="ss_PID_modules_statements-7-1">If <span class="process-math">\(M\cong R^n\)</span> is free, then <span class="process-math">\(\Tor M\cong \Tor(R)^n=\{0\}\text{.}\)</span> Conversely, if <span class="process-math">\(\Tor M=\{0\}\text{,}\)</span> then by <a href="s_PID_modules_statement.html#th_PID_mod_invar-2-1-3-2-2-5" class="xref" data-knowl="./knowl/xref/eq_PID_tor_inv_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.3">(2.19.3)</a> we must have <span class="process-math">\(\bigoplus_{i=1}^m R/(a_i)=\{0\}\text{,}\)</span> which can only happen if <span class="process-math">\(m=0\)</span> since the <span class="process-math">\(a_i\)</span> are nonzero non-units by definition. But then <span class="process-math">\(M\cong R^n\text{,}\)</span> and is thus free.<div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_modules_statements-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Corollary 2.19.5: PID-modules theorem: free if and only if torsion free"><a href="#cor_PID_tor_free" title="Copy heading and permalink for Corollary 2.19.5: PID-modules theorem: free if and only if torsion free" aria-label="Copy heading and permalink for Corollary 2.19.5: PID-modules theorem: free if and only if torsion free">🔗</a></div>
+</article>
+<details id="ss_PID_modules_statements-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="ss_PID_modules_statements-7-1">If <span class="process-math">\(M\cong R^n\)</span> is free, then <span class="process-math">\(\Tor M\cong \Tor(R)^n=\{0\}\text{.}\)</span> Conversely, if <span class="process-math">\(\Tor M=\{0\}\text{,}\)</span> then by <a href="s_PID_modules_statement.html#th_PID_mod_invar-2-1-3-2-2-5" class="xref" data-knowl="./knowl/xref/eq_PID_tor_inv_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.3">(2.19.3)</a> we must have <span class="process-math">\(\bigoplus_{i=1}^m R/(a_i)=\{0\}\text{,}\)</span> which can only happen if <span class="process-math">\(m=0\)</span> since the <span class="process-math">\(a_i\)</span> are nonzero non-units by definition. But then <span class="process-math">\(M\cong R^n\text{,}\)</span> and is thus free.<div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_modules_statements-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.19.1.1"><a href="#ss_PID_modules_statements-7" title="Copy heading and permalink for Proof 2.19.1.1" aria-label="Copy heading and permalink for Proof 2.19.1.1">🔗</a></div></article></details><article class="definition definition-like" id="d_pi-primary"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.19.1.1"><a href="#ss_PID_modules_statements-7" title="Copy heading and permalink for Proof 2.19.1.1" aria-label="Copy heading and permalink for Proof 2.19.1.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_pi-primary"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\alpha\)</span>-torsion and <span class="process-math">\(\pi\)</span>-primary submodules.</span>
 </h4>
 <div class="para logical" id="d_pi-primary-4-1">
@@ -716,7 +690,9 @@ M(\pi^\infty)\amp = \bigcup_{k=1}^\infty M(\pi^k) \text{.}\tag{2.19.7}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_pi-primary-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.19.6: \alpha-torsion and \pi-primary submodules"><a href="#d_pi-primary" title="Copy heading and permalink for Definition 2.19.6: \alpha-torsion and \pi-primary submodules" aria-label="Copy heading and permalink for Definition 2.19.6: \alpha-torsion and \pi-primary submodules">🔗</a></div></article><article class="theorem theorem-like" id="th_PID_mod_elem_div"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.19.6: \alpha-torsion and \pi-primary submodules"><a href="#d_pi-primary" title="Copy heading and permalink for Definition 2.19.6: \alpha-torsion and \pi-primary submodules" aria-label="Copy heading and permalink for Definition 2.19.6: \alpha-torsion and \pi-primary submodules">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_PID_mod_elem_div"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PID-module theorem: elementary divisors.</span>
 </h4>
 <div class="para logical" id="th_PID_mod_elem_div-2-1">
@@ -724,7 +700,8 @@ M(\pi^\infty)\amp = \bigcup_{k=1}^\infty M(\pi^k) \text{.}\tag{2.19.7}
 </div>
 <ol class="decimal" id="th_PID_mod_elem_div-2-1-3">
 <li id="th_PID_mod_elem_div-2-1-3-1">
-<span class="heading li--heading"><span class="title li--heading-title">Free and torsion decomposition.</span></span><div class="para logical" id="th_PID_mod_elem_div-2-1-3-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Free and torsion decomposition.</span></span>
+<div class="para logical" id="th_PID_mod_elem_div-2-1-3-1-2">
 <div class="para">There is a nonnegative integer <span class="process-math">\(n\)</span> such that</div>
 <div class="displaymath process-math" id="th_PID_mod_elem_div-2-1-3-1-2-2">
 \begin{align}
@@ -736,7 +713,8 @@ M \amp \cong R^n\oplus \Tor(M)\text{.}\tag{2.19.8}
 <div class="autopermalink" data-description="Item 1: Free and torsion decomposition"><a href="#th_PID_mod_elem_div-2-1-3-1" title="Copy heading and permalink for Item 1: Free and torsion decomposition" aria-label="Copy heading and permalink for Item 1: Free and torsion decomposition">🔗</a></div>
 </li>
 <li id="th_PID_mod_elem_div-2-1-3-2">
-<span class="heading li--heading"><span class="title li--heading-title">Elementary divisor decomposition.</span></span><div class="para logical" id="th_PID_mod_elem_div-2-1-3-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Elementary divisor decomposition.</span></span>
+<div class="para logical" id="th_PID_mod_elem_div-2-1-3-2-2">
 <div class="para">If <span class="process-math">\(\Tor(M)\ne \{0\}\text{,}\)</span> there exist pairwise nonassociate irreducible elements <span class="process-math">\(\pi_1,\pi_2,\dots, \pi_r\text{,}\)</span> and for each <span class="process-math">\(1\leq i\leq r\)</span> positive integers <span class="process-math">\(n_{i,1}\leq n_{i,2}\leq \dots \leq n_{i,m_i}\)</span> such that</div>
 <div class="displaymath process-math" id="th_PID_mod_elem_div-2-1-3-2-2-5">
 \begin{align}
@@ -760,7 +738,8 @@ M \amp \cong R^n\oplus \bigoplus_{\substack{1\leq i\leq r\\ 1\leq j\leq m_i}} R/
 <div class="autopermalink" data-description="Item 2: Elementary divisor decomposition"><a href="#th_PID_mod_elem_div-2-1-3-2" title="Copy heading and permalink for Item 2: Elementary divisor decomposition" aria-label="Copy heading and permalink for Item 2: Elementary divisor decomposition">🔗</a></div>
 </li>
 <li id="th_PID_mod_elem_div-2-1-3-3">
-<span class="heading li--heading"><span class="title li--heading-title">Uniqueness.</span></span><div class="para logical" id="th_PID_mod_elem_div-2-1-3-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Uniqueness.</span></span>
+<div class="para logical" id="th_PID_mod_elem_div-2-1-3-3-2">
 <div class="para">Given any other decomposition of <span class="process-math">\(M\)</span> of the form</div>
 <div class="displaymath process-math" id="th_PID_mod_elem_div-2-1-3-3-2-2">
 \begin{align*}
@@ -778,12 +757,18 @@ M \amp \cong R^{n'}\oplus \bigoplus_{\substack{1\leq i\leq r'\\ 1\leq j\leq m_i'
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_PID_mod_elem_div-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.19.7: PID-module theorem: elementary divisors"><a href="#th_PID_mod_elem_div" title="Copy heading and permalink for Theorem 2.19.7: PID-module theorem: elementary divisors" aria-label="Copy heading and permalink for Theorem 2.19.7: PID-module theorem: elementary divisors">🔗</a></div></article><article class="definition definition-like" id="d_pid_elem_divisors"><h4 class="heading">
+<div class="autopermalink" data-description="Theorem 2.19.7: PID-module theorem: elementary divisors"><a href="#th_PID_mod_elem_div" title="Copy heading and permalink for Theorem 2.19.7: PID-module theorem: elementary divisors" aria-label="Copy heading and permalink for Theorem 2.19.7: PID-module theorem: elementary divisors">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_pid_elem_divisors"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elementary divisors.</span>
 </h4>
 <div class="para" id="d_pid_elem_divisors-2-1">Let <span class="process-math">\(M\)</span> be a finitely generated module over the PID <span class="process-math">\(R\text{.}\)</span> Given a decomposition of <span class="process-math">\(M\)</span> as in <a href="s_PID_modules_statement.html#th_PID_mod_elem_div-2-1-3-2-2-8" class="xref" data-knowl="./knowl/xref/eq_pid_elem_factors_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.19.11">(2.19.11)</a>, the ideals <span class="process-math">\((\pi_i^{n_{i,j}})\)</span> are called the <dfn class="terminology">elementary divisors</dfn> of <span class="process-math">\(M\text{.}\)</span> Similarly, the irreducible powers <span class="process-math">\(\pi_i^{n_{i,j}}\)</span> themselves are called elementary divisors of <span class="process-math">\(M\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_pid_elem_divisors-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.19.8: Elementary divisors"><a href="#d_pid_elem_divisors" title="Copy heading and permalink for Definition 2.19.8: Elementary divisors" aria-label="Copy heading and permalink for Definition 2.19.8: Elementary divisors">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.19.1: PID-module structure theorems"><a href="#ss_PID_modules_statements" title="Copy heading and permalink for Subsection 2.19.1: PID-module structure theorems" aria-label="Copy heading and permalink for Subsection 2.19.1: PID-module structure theorems">🔗</a></div></section><section class="subsection" id="ss_PID_mods_case_Z"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Definition 2.19.8: Elementary divisors"><a href="#d_pid_elem_divisors" title="Copy heading and permalink for Definition 2.19.8: Elementary divisors" aria-label="Copy heading and permalink for Definition 2.19.8: Elementary divisors">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.19.1: PID-module structure theorems"><a href="#ss_PID_modules_statements" title="Copy heading and permalink for Subsection 2.19.1: PID-module structure theorems" aria-label="Copy heading and permalink for Subsection 2.19.1: PID-module structure theorems">🔗</a></div>
+</section>
+<section class="subsection" id="ss_PID_mods_case_Z">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Case study: <span class="process-math">\(R=\Z\)</span></span>
 </h3>
 <div class="para logical" id="ss_PID_mods_case_Z-2">
@@ -800,9 +785,14 @@ A \amp \cong \Z^n \bigoplus_{i=1}^m \Z/a_i\Z\text{,}
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitely generated abelian groups.</span>
 </h4>
 <div class="para" id="cor_fg_torsion_groups-2-1">If <span class="process-math">\(A\)</span> is a finitely generated abelian group, then <span class="process-math">\(\Tor(A)=\{a\in A\mid \ord a&lt; \infty\}\)</span> is a finite abelian group.<div class="autopermalink" data-description="Paragraph"><a href="#cor_fg_torsion_groups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="cor_fg_torsion_groups-2-2">As a consequence the torsion group <span class="process-math">\(\Q/\Z\)</span> is not finitely generated.<div class="autopermalink" data-description="Paragraph"><a href="#cor_fg_torsion_groups-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="cor_fg_torsion_groups-2-2">As a consequence the torsion group <span class="process-math">\(\Q/\Z\)</span> is not finitely generated.<div class="autopermalink" data-description="Paragraph"><a href="#cor_fg_torsion_groups-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.19.9: Finitely generated abelian groups"><a href="#cor_fg_torsion_groups" title="Copy heading and permalink for Corollary 2.19.9: Finitely generated abelian groups" aria-label="Copy heading and permalink for Corollary 2.19.9: Finitely generated abelian groups">🔗</a></div></article><details id="cor_fg_torsion_groups-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_fg_torsion_groups-3-1">
+<div class="autopermalink" data-description="Corollary 2.19.9: Finitely generated abelian groups"><a href="#cor_fg_torsion_groups" title="Copy heading and permalink for Corollary 2.19.9: Finitely generated abelian groups" aria-label="Copy heading and permalink for Corollary 2.19.9: Finitely generated abelian groups">🔗</a></div>
+</article>
+<details id="cor_fg_torsion_groups-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor_fg_torsion_groups-3-1">
 <div class="para">We need only concern ourselves with the second statement. First note that all elements of <span class="process-math">\(\Q\Z\)</span> are torsion since <span class="process-math">\(n(m/n+\Z)=m+\Z=0\in \Q/\Z\text{.}\)</span> It follows that</div>
 <div class="displaymath process-math" id="cor_fg_torsion_groups-3-1-3">
 \begin{align*}
@@ -812,7 +802,9 @@ A \amp \cong \Z^n \bigoplus_{i=1}^m \Z/a_i\Z\text{,}
 <div class="para">Note further that <span class="process-math">\(\Q/\Z\)</span> is infinite: it is easy to see that <span class="process-math">\(\ord(1/n+\Z)=n\text{,}\)</span> and hence that <span class="process-math">\(1/n+\Z\ne 1/m+\Z\)</span> for all distinct positive integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{.}\)</span> Since <span class="process-math">\(\Tor(\Q.\Z)=\Q/\Z\)</span> is an infinite group, it follows from the first statement that <span class="process-math">\(\Q/\Z\)</span> cannot be finitely generated as an abelian group.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_fg_torsion_groups-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.19.9.1"><a href="#cor_fg_torsion_groups-3" title="Copy heading and permalink for Proof 2.19.9.1" aria-label="Copy heading and permalink for Proof 2.19.9.1">🔗</a></div></article></details><article class="remark remark-like" id="ss_PID_mods_case_Z-4"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.19.9.1"><a href="#cor_fg_torsion_groups-3" title="Copy heading and permalink for Proof 2.19.9.1" aria-label="Copy heading and permalink for Proof 2.19.9.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="ss_PID_mods_case_Z-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite abelian groups.</span>
 </h4>
 <div class="para" id="ss_PID_mods_case_Z-4-2">Let’s revisit briefly how we used the theory above to classify finite abelian groups. Given such a group <span class="process-math">\(A\text{,}\)</span> since it is finite, it is finitely generated and <span class="process-math">\(A=\Tor(A)\text{.}\)</span> It follows that <span class="process-math">\(A\)</span> can be written as a direct sum of groups of the form <span class="process-math">\(\Z/a\Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_mods_case_Z-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -848,7 +840,11 @@ A_3\amp \cong \Z/3\Z\oplus \Z/3\Z \amp  (1,1)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_PID_mods_case_Z-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.19.10: Finite abelian groups"><a href="#ss_PID_mods_case_Z-4" title="Copy heading and permalink for Remark 2.19.10: Finite abelian groups" aria-label="Copy heading and permalink for Remark 2.19.10: Finite abelian groups">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.19.2: Case study: R=\Z"><a href="#ss_PID_mods_case_Z" title="Copy heading and permalink for Subsection 2.19.2: Case study: R=\Z" aria-label="Copy heading and permalink for Subsection 2.19.2: Case study: R=\Z">🔗</a></div></section><div class="autopermalink" data-description="Section 2.19: PID-module structure theorems: statements"><a href="#s_PID_modules_statement" title="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements" aria-label="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Remark 2.19.10: Finite abelian groups"><a href="#ss_PID_mods_case_Z-4" title="Copy heading and permalink for Remark 2.19.10: Finite abelian groups" aria-label="Copy heading and permalink for Remark 2.19.10: Finite abelian groups">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.19.2: Case study: R=\Z"><a href="#ss_PID_mods_case_Z" title="Copy heading and permalink for Subsection 2.19.2: Case study: R=\Z" aria-label="Copy heading and permalink for Subsection 2.19.2: Case study: R=\Z">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 2.19: PID-module structure theorems: statements"><a href="#s_PID_modules_statement" title="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements" aria-label="Copy heading and permalink for Section 2.19: PID-module structure theorems: statements">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_mods_direct_sum.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_PID_mod_proofs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

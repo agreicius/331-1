@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,11 +516,16 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_prime_max_poly"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_prime_max_poly">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Case study: polynomial rings</span>
 </h2>
-<section class="introduction" id="s_prime_max_poly-2"><div class="para" id="s_prime_max_poly-2-1">The integers furnish us with a nice example where we can completely analyze a rings ideal structure, including its prime and maximal ideals, as well as its quotients. In this section we will look at another case study: polynomial rings <span class="process-math">\(F[x]\text{,}\)</span> where <span class="process-math">\(F\)</span> is a field. As you will see, the ideal structure of <span class="process-math">\(F[x]\)</span> has many similarities with that of the integers. We will see later that these similarities are the result of a deeper similarity between the two rings: namely, that both are examples of <em class="emphasis">Euclidean domains</em>. Our discussion will also include concrete descriptions of the quotients of polynomial rings <span class="process-math">\(F[x]\text{,}\)</span> which in turn provide us with many new examples of rings to work. In particular, the construction of fields as quotients <span class="process-math">\(F[x]/M\)</span> where <span class="process-math">\(M\)</span> is a maximal ideal will play an important role in our development of field theory in Math 331-3.<div class="autopermalink" data-description="Paragraph"><a href="#s_prime_max_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="ss_div_alg"><h3 class="heading hide-type">
+<section class="introduction" id="s_prime_max_poly-2">
+<div class="para" id="s_prime_max_poly-2-1">The integers furnish us with a nice example where we can completely analyze a rings ideal structure, including its prime and maximal ideals, as well as its quotients. In this section we will look at another case study: polynomial rings <span class="process-math">\(F[x]\text{,}\)</span> where <span class="process-math">\(F\)</span> is a field. As you will see, the ideal structure of <span class="process-math">\(F[x]\)</span> has many similarities with that of the integers. We will see later that these similarities are the result of a deeper similarity between the two rings: namely, that both are examples of <em class="emphasis">Euclidean domains</em>. Our discussion will also include concrete descriptions of the quotients of polynomial rings <span class="process-math">\(F[x]\text{,}\)</span> which in turn provide us with many new examples of rings to work. In particular, the construction of fields as quotients <span class="process-math">\(F[x]/M\)</span> where <span class="process-math">\(M\)</span> is a maximal ideal will play an important role in our development of field theory in Math 331-3.<div class="autopermalink" data-description="Paragraph"><a href="#s_prime_max_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="ss_div_alg">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Division algorithm for polynomials</span>
 </h3>
 <div class="para" id="ss_div_alg-2">Although we will mainly be interested in polynomial rings over fields, we begin with a useful result that applies to general polynomial rings.<div class="autopermalink" data-description="Paragraph"><a href="#ss_div_alg-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -594,7 +551,11 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_div_alg_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.8.1: Division algorithm for polynomials"><a href="#th_div_alg_poly" title="Copy heading and permalink for Theorem 2.8.1: Division algorithm for polynomials" aria-label="Copy heading and permalink for Theorem 2.8.1: Division algorithm for polynomials">🔗</a></div></article><details id="th_div_alg_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_div_alg_poly-3-1">We need to prove two things: that given any <span class="process-math">\(g\)</span> there are polynomials <span class="process-math">\(q,r\)</span> satisfying properties (i) and (ii), and furthermore that the pair <span class="process-math">\((q,r)\)</span> is unique.<div class="autopermalink" data-description="Paragraph"><a href="#th_div_alg_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.8.1: Division algorithm for polynomials"><a href="#th_div_alg_poly" title="Copy heading and permalink for Theorem 2.8.1: Division algorithm for polynomials" aria-label="Copy heading and permalink for Theorem 2.8.1: Division algorithm for polynomials">🔗</a></div>
+</article>
+<details id="th_div_alg_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_div_alg_poly-3-1">We need to prove two things: that given any <span class="process-math">\(g\)</span> there are polynomials <span class="process-math">\(q,r\)</span> satisfying properties (i) and (ii), and furthermore that the pair <span class="process-math">\((q,r)\)</span> is unique.<div class="autopermalink" data-description="Paragraph"><a href="#th_div_alg_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="th_div_alg_poly-3-2">
 <div class="para">We begin with existence. Let <span class="process-math">\(X\)</span> be the set of all pairs of polynomials <span class="process-math">\((q',r')\)</span> satisfying condition (i) (but not necessarily (ii)). We will show that there is a pair <span class="process-math">\((q,r)\in X\)</span> that also satisfies (ii).  Observe that <span class="process-math">\(X\)</span> is nonempty, since in particular it contains the pair <span class="process-math">\((0,g)\text{.}\)</span> If <span class="process-math">\((q,0)\in X\text{,}\)</span> then this pair satisfies (ii) since <span class="process-math">\(\deg 0=-\infty&lt; \deg f\)</span> (<span class="process-math">\(f\)</span> being a nonzero polynomial). Otherwise, let <span class="process-math">\((q,r)\)</span> be an element of <span class="process-math">\(X\)</span> for which <span class="process-math">\(r\)</span> has minimal finite degree. (Such a pair exists since the set <span class="process-math">\(\{\deg r'\mid (q',r')\in X\}\)</span> is a nonempty subset of <span class="process-math">\(\Z_{\geq 0}\text{,}\)</span> and hence has a minimal element.) We claim that <span class="process-math">\(\deg r&lt; \deg f\text{,}\)</span> and hence that <span class="process-math">\((q,r)\)</span> satisfies (ii). Suppose, by contradiction, that <span class="process-math">\(r(x)=\bmpoly\)</span> with <span class="process-math">\(\deg r=m\geq \deg f=n\text{.}\)</span> Since the leading term <span class="process-math">\(a_n\)</span> of <span class="process-math">\(f\)</span> is a unit, we can write</div>
@@ -640,12 +601,16 @@ g\amp =qf+r \\
 <div class="para">a contradiction since <span class="process-math">\(\deg (r-r')\leq \max\{\deg r,\deg r'\}&lt; \deg f\text{.}\)</span> Thus <span class="process-math">\(q-q'=0\text{,}\)</span> from which it follows that <span class="process-math">\(r'-r=0\text{.}\)</span> We conclude that <span class="process-math">\(q=q'\)</span> and <span class="process-math">\(r=r'\text{,}\)</span> and thus that <span class="process-math">\((q,r)=(q',r')\text{,}\)</span> as desired.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_div_alg_poly-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.1.1"><a href="#th_div_alg_poly-3" title="Copy heading and permalink for Proof 2.8.1.1" aria-label="Copy heading and permalink for Proof 2.8.1.1">🔗</a></div></article></details><article class="definition definition-like" id="d_poly_division"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.8.1.1"><a href="#th_div_alg_poly-3" title="Copy heading and permalink for Proof 2.8.1.1" aria-label="Copy heading and permalink for Proof 2.8.1.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_poly_division"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomial division with remainder.</span>
 </h4>
 <div class="para" id="d_poly_division-2-1">Let <span class="process-math">\(R\)</span> be a nontrivial commutative ring, and let <span class="process-math">\(f\in R[x]\)</span> be a nonzero polynomial whose leading coefficient is a unit. Given a polynomial <span class="process-math">\(g\in R[x]\)</span> we call the unique polynomials <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> satisfying the two conditions of <a href="s_prime_max_poly.html#th_div_alg_poly" class="xref" data-knowl="./knowl/xref/th_div_alg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.1: Division algorithm for polynomials">Theorem 2.8.1</a> the <dfn class="terminology">quotient</dfn> and <dfn class="terminology">remainder</dfn> upon division of <span class="process-math">\(g\)</span> by <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_poly_division-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.8.2: Polynomial division with remainder"><a href="#d_poly_division" title="Copy heading and permalink for Definition 2.8.2: Polynomial division with remainder" aria-label="Copy heading and permalink for Definition 2.8.2: Polynomial division with remainder">🔗</a></div></article><div class="para" id="ss_div_alg-5">The following result is a corollary of the division algorithm theorem, but is important enough to be deemed a theorem.<div class="autopermalink" data-description="Paragraph"><a href="#ss_div_alg-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.8.2: Polynomial division with remainder"><a href="#d_poly_division" title="Copy heading and permalink for Definition 2.8.2: Polynomial division with remainder" aria-label="Copy heading and permalink for Definition 2.8.2: Polynomial division with remainder">🔗</a></div>
+</article>
+<div class="para" id="ss_div_alg-5">The following result is a corollary of the division algorithm theorem, but is important enough to be deemed a theorem.<div class="autopermalink" data-description="Paragraph"><a href="#ss_div_alg-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="th_quot_poly"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients of polynomial rings.</span>
@@ -685,7 +650,11 @@ g\amp =qf+r \\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.8.3: Quotients of polynomial rings"><a href="#th_quot_poly" title="Copy heading and permalink for Theorem 2.8.3: Quotients of polynomial rings" aria-label="Copy heading and permalink for Theorem 2.8.3: Quotients of polynomial rings">🔗</a></div></article><details id="th_quot_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_quot_poly-3-1">For (1) it suffices to show that <span class="process-math">\(\ker\pi \cap R=\{0\}\text{.}\)</span> Since <span class="process-math">\(\ker \pi=(f)\text{,}\)</span> and since <span class="process-math">\(\deg gf=\deg g+\deg f\)</span> for any <span class="process-math">\(g\in R[x]\)</span> (<a href="s_grouprings_polys.html#prop_deg_poly" class="xref" data-knowl="./knowl/xref/prop_deg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.3.8: Polynomial degree properties">Proposition 2.3.8</a>), it is easy to see that <span class="process-math">\(gf\in R\)</span> if and only if if <span class="process-math">\(g=0\)</span> and thus <span class="process-math">\(gf=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.8.3: Quotients of polynomial rings"><a href="#th_quot_poly" title="Copy heading and permalink for Theorem 2.8.3: Quotients of polynomial rings" aria-label="Copy heading and permalink for Theorem 2.8.3: Quotients of polynomial rings">🔗</a></div>
+</article>
+<details id="th_quot_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_quot_poly-3-1">For (1) it suffices to show that <span class="process-math">\(\ker\pi \cap R=\{0\}\text{.}\)</span> Since <span class="process-math">\(\ker \pi=(f)\text{,}\)</span> and since <span class="process-math">\(\deg gf=\deg g+\deg f\)</span> for any <span class="process-math">\(g\in R[x]\)</span> (<a href="s_grouprings_polys.html#prop_deg_poly" class="xref" data-knowl="./knowl/xref/prop_deg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.3.8: Polynomial degree properties">Proposition 2.3.8</a>), it is easy to see that <span class="process-math">\(gf\in R\)</span> if and only if if <span class="process-math">\(g=0\)</span> and thus <span class="process-math">\(gf=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="th_quot_poly-3-2">
 <div class="para">Next, given <span class="process-math">\(g\in R[x]\)</span> and writing <span class="process-math">\(g=qf+r\)</span> as in the division algorithm, we see that</div>
@@ -730,7 +699,9 @@ s(x) \amp =\sum_{k=0}^nb_kx^k
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_quot_poly-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.3.1"><a href="#th_quot_poly-3" title="Copy heading and permalink for Proof 2.8.3.1" aria-label="Copy heading and permalink for Proof 2.8.3.1">🔗</a></div></article></details><article class="remark remark-like" id="ss_div_alg-7"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.8.3.1"><a href="#th_quot_poly-3" title="Copy heading and permalink for Proof 2.8.3.1" aria-label="Copy heading and permalink for Proof 2.8.3.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="ss_div_alg-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients of polynomial rings.</span>
 </h4>
 <div class="para logical" id="ss_div_alg-7-2">
@@ -753,7 +724,11 @@ B \amp =(1, \overline{x}, \overline{x}^2, \ldots, \overline{x}^{n-1})
 <div class="para">is a basis of <span class="process-math">\(F[x]/(f)\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence that <span class="process-math">\(\dim F[x]/(f)=n\)</span> as an <span class="process-math">\(F\)</span>-vector space.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_div_alg-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.8.4: Quotients of polynomial rings"><a href="#ss_div_alg-7" title="Copy heading and permalink for Remark 2.8.4: Quotients of polynomial rings" aria-label="Copy heading and permalink for Remark 2.8.4: Quotients of polynomial rings">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.8.1: Division algorithm for polynomials"><a href="#ss_div_alg" title="Copy heading and permalink for Subsection 2.8.1: Division algorithm for polynomials" aria-label="Copy heading and permalink for Subsection 2.8.1: Division algorithm for polynomials">🔗</a></div></section><section class="subsection" id="ss_poly_ring_fields"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Remark 2.8.4: Quotients of polynomial rings"><a href="#ss_div_alg-7" title="Copy heading and permalink for Remark 2.8.4: Quotients of polynomial rings" aria-label="Copy heading and permalink for Remark 2.8.4: Quotients of polynomial rings">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.8.1: Division algorithm for polynomials"><a href="#ss_div_alg" title="Copy heading and permalink for Subsection 2.8.1: Division algorithm for polynomials" aria-label="Copy heading and permalink for Subsection 2.8.1: Division algorithm for polynomials">🔗</a></div>
+</section>
+<section class="subsection" id="ss_poly_ring_fields">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomial rings over fields</span>
 </h3>
 <article class="definition definition-like" id="d_pid"><h4 class="heading">
@@ -761,14 +736,20 @@ B \amp =(1, \overline{x}, \overline{x}^2, \ldots, \overline{x}^{n-1})
 </h4>
 <div class="para" id="d_pid-2-1">A <dfn class="terminology">principal ideal domain (PID)</dfn> is an integral domain <span class="process-math">\(R\)</span> in which every ideal is principal.<div class="autopermalink" data-description="Paragraph"><a href="#d_pid-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.8.5: Principal ideal domain"><a href="#d_pid" title="Copy heading and permalink for Definition 2.8.5: Principal ideal domain" aria-label="Copy heading and permalink for Definition 2.8.5: Principal ideal domain">🔗</a></div></article><div class="para" id="ss_poly_ring_fields-3">The integers <span class="process-math">\(\Z\)</span> are the quintessential example of a PID that is not a field. As we now show with the help of the <a href="s_prime_max_poly.html#th_div_alg_poly" class="xref" data-knowl="./knowl/xref/th_div_alg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.1: Division algorithm for polynomials">Theorem 2.8.1</a>, polynomial rings over fields furnish us with another interesting example. The proof is very similar to the one we gave for <a href="s_cyclic.html#th_cyclic_subgroup_inf" class="xref" data-knowl="./knowl/xref/th_cyclic_subgroup_inf.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.9.6: Subgroups of infinite cyclic group">Theorem 1.9.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.8.5: Principal ideal domain"><a href="#d_pid" title="Copy heading and permalink for Definition 2.8.5: Principal ideal domain" aria-label="Copy heading and permalink for Definition 2.8.5: Principal ideal domain">🔗</a></div>
+</article>
+<div class="para" id="ss_poly_ring_fields-3">The integers <span class="process-math">\(\Z\)</span> are the quintessential example of a PID that is not a field. As we now show with the help of the <a href="s_prime_max_poly.html#th_div_alg_poly" class="xref" data-knowl="./knowl/xref/th_div_alg_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.1: Division algorithm for polynomials">Theorem 2.8.1</a>, polynomial rings over fields furnish us with another interesting example. The proof is very similar to the one we gave for <a href="s_cyclic.html#th_cyclic_subgroup_inf" class="xref" data-knowl="./knowl/xref/th_cyclic_subgroup_inf.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.9.6: Subgroups of infinite cyclic group">Theorem 1.9.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="th_poly_ring_field"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomial ring over a field.</span>
 </h4>
 <div class="para" id="th_poly_ring_field-2-1">If <span class="process-math">\(F\)</span> is a field, then <span class="process-math">\(F[x]\)</span> is a principal ideal domain. In more detail, for every nonzero proper ideal <span class="process-math">\(I\text{,}\)</span> there is a unique monic polynomial <span class="process-math">\(f\in F[x]\)</span> such that <span class="process-math">\(I=(f)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_poly_ring_field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.8.6: Polynomial ring over a field"><a href="#th_poly_ring_field" title="Copy heading and permalink for Theorem 2.8.6: Polynomial ring over a field" aria-label="Copy heading and permalink for Theorem 2.8.6: Polynomial ring over a field">🔗</a></div></article><details id="th_poly_ring_field-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_poly_ring_field-3-1">First note that <span class="process-math">\(F[x]\)</span> is an integral domain since <span class="process-math">\(F\)</span> is an integral domain, as we have seen previously.<div class="autopermalink" data-description="Paragraph"><a href="#th_poly_ring_field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.8.6: Polynomial ring over a field"><a href="#th_poly_ring_field" title="Copy heading and permalink for Theorem 2.8.6: Polynomial ring over a field" aria-label="Copy heading and permalink for Theorem 2.8.6: Polynomial ring over a field">🔗</a></div>
+</article>
+<details id="th_poly_ring_field-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_poly_ring_field-3-1">First note that <span class="process-math">\(F[x]\)</span> is an integral domain since <span class="process-math">\(F\)</span> is an integral domain, as we have seen previously.<div class="autopermalink" data-description="Paragraph"><a href="#th_poly_ring_field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="th_poly_ring_field-3-2">
 <div class="para">As always we have <span class="process-math">\(\{0\}=(0)\)</span> and <span class="process-math">\(F[x]=(1)\text{.}\)</span> Let <span class="process-math">\(I\)</span> be a proper nonzero ideal.  Since <span class="process-math">\(I\ne F[x]\text{,}\)</span> it contains no elements of <span class="process-math">\((F[x])^*=F^*\text{.}\)</span> It follows that the set</div>
@@ -799,25 +780,36 @@ g \amp =qf+r\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_poly_ring_field-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.6.1"><a href="#th_poly_ring_field-3" title="Copy heading and permalink for Proof 2.8.6.1" aria-label="Copy heading and permalink for Proof 2.8.6.1">🔗</a></div></article></details><article class="definition definition-like" id="d_divisibility"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.8.6.1"><a href="#th_poly_ring_field-3" title="Copy heading and permalink for Proof 2.8.6.1" aria-label="Copy heading and permalink for Proof 2.8.6.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_divisibility"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divisibility.</span>
 </h4>
 <div class="para" id="d_divisibility-2-1">Let <span class="process-math">\(R\)</span> be a ring. Given elements <span class="process-math">\(a,b\in R\text{,}\)</span> we say that <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\)</span> in <span class="process-math">\(R\)</span> (or <span class="process-math">\(b\)</span> is a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(a\)</span> in <span class="process-math">\(R\)</span>), written <span class="process-math">\(a\mid b\text{,}\)</span> if there is an element <span class="process-math">\(r\in R\)</span> satisfying <span class="process-math">\(b=ra\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_divisibility-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.8.7: Divisibility"><a href="#d_divisibility" title="Copy heading and permalink for Definition 2.8.7: Divisibility" aria-label="Copy heading and permalink for Definition 2.8.7: Divisibility">🔗</a></div></article><article class="definition definition-like" id="d_prime_irreducible"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.8.7: Divisibility"><a href="#d_divisibility" title="Copy heading and permalink for Definition 2.8.7: Divisibility" aria-label="Copy heading and permalink for Definition 2.8.7: Divisibility">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_prime_irreducible"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime and irreducible elements.</span>
 </h4>
 <div class="para" id="d_prime_irreducible-2-1">Let <span class="process-math">\(R\)</span> be an integral domain.<div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="d_prime_irreducible-2-2">A nonzero element <span class="process-math">\(p\in R-\{0\}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(p\mid ab\)</span> implies <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b\)</span> for all <span class="process-math">\(a,b\in R\text{.}\)</span> Equivalently, <span class="process-math">\(p\)</span> is prime if the ideal <span class="process-math">\((p)\)</span> is a nonzero prime ideal.<div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="d_prime_irreducible-2-3">A nonzero, non-unit element <span class="process-math">\(r\in R-R^*-\{0\}\)</span> is <dfn class="terminology">irreducible</dfn> if <span class="process-math">\(r=ab\)</span> implies <span class="process-math">\(a\in R^*\)</span> or <span class="process-math">\(b\in R^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="d_prime_irreducible-2-4">Elements <span class="process-math">\(a,b\in R\)</span> are <dfn class="terminology">associates</dfn> if <span class="process-math">\(a=ub\)</span> for some unit <span class="process-math">\(u\in R^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_prime_irreducible-2-2">A nonzero element <span class="process-math">\(p\in R-\{0\}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(p\mid ab\)</span> implies <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b\)</span> for all <span class="process-math">\(a,b\in R\text{.}\)</span> Equivalently, <span class="process-math">\(p\)</span> is prime if the ideal <span class="process-math">\((p)\)</span> is a nonzero prime ideal.<div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_prime_irreducible-2-3">A nonzero, non-unit element <span class="process-math">\(r\in R-R^*-\{0\}\)</span> is <dfn class="terminology">irreducible</dfn> if <span class="process-math">\(r=ab\)</span> implies <span class="process-math">\(a\in R^*\)</span> or <span class="process-math">\(b\in R^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_prime_irreducible-2-4">Elements <span class="process-math">\(a,b\in R\)</span> are <dfn class="terminology">associates</dfn> if <span class="process-math">\(a=ub\)</span> for some unit <span class="process-math">\(u\in R^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_prime_irreducible-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.8.8: Prime and irreducible elements"><a href="#d_prime_irreducible" title="Copy heading and permalink for Definition 2.8.8: Prime and irreducible elements" aria-label="Copy heading and permalink for Definition 2.8.8: Prime and irreducible elements">🔗</a></div></article><article class="remark remark-like" id="rem_prime_element_ideal"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.8.8: Prime and irreducible elements"><a href="#d_prime_irreducible" title="Copy heading and permalink for Definition 2.8.8: Prime and irreducible elements" aria-label="Copy heading and permalink for Definition 2.8.8: Prime and irreducible elements">🔗</a></div>
+</article>
+<article class="remark remark-like" id="rem_prime_element_ideal"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime elements and prime ideals.</span>
 </h4>
 <div class="para" id="rem_prime_element_ideal-2">Let <span class="process-math">\(R\)</span> be a commutative ring. It is easy to see that an element <span class="process-math">\(r\in R\)</span> is prime (as in <a href="s_prime_max_poly.html#d_prime_irreducible" class="xref" data-knowl="./knowl/xref/d_prime_irreducible.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8.8: Prime and irreducible elements">Definition 2.8.8</a>) if and only if its principal ideal <span class="process-math">\((r)\)</span> is prime (as in <a href="s_prime_maximal.html#d_prime_ideal" class="xref" data-knowl="./knowl/xref/d_prime_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.7.5: Prime ideal">Definition 2.7.5</a>).<div class="autopermalink" data-description="Paragraph"><a href="#rem_prime_element_ideal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.8.9: Prime elements and prime ideals"><a href="#rem_prime_element_ideal" title="Copy heading and permalink for Remark 2.8.9: Prime elements and prime ideals" aria-label="Copy heading and permalink for Remark 2.8.9: Prime elements and prime ideals">🔗</a></div></article><article class="theorem theorem-like" id="th_max_prime_poly"><h4 class="heading">
+<div class="autopermalink" data-description="Remark 2.8.9: Prime elements and prime ideals"><a href="#rem_prime_element_ideal" title="Copy heading and permalink for Remark 2.8.9: Prime elements and prime ideals" aria-label="Copy heading and permalink for Remark 2.8.9: Prime elements and prime ideals">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_max_prime_poly"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime and maximal ideals of <span class="process-math">\(F[x]\)</span>.</span>
 </h4>
 <div class="para logical" id="th_max_prime_poly-2-1">
@@ -844,13 +836,19 @@ g \amp =qf+r\text{,}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_max_prime_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.8.10: Prime and maximal ideals of F[x]"><a href="#th_max_prime_poly" title="Copy heading and permalink for Theorem 2.8.10: Prime and maximal ideals of F[x]" aria-label="Copy heading and permalink for Theorem 2.8.10: Prime and maximal ideals of F[x]">🔗</a></div></article><details id="th_max_prime_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_max_prime_poly-3-1">Implication: (1)<span class="process-math">\(\implies\)</span>(2). Assume <span class="process-math">\(f\)</span> is irreducible and let <span class="process-math">\(I\)</span> be an ideal of <span class="process-math">\(F[x]\)</span> satisfying <span class="process-math">\((f)\subseteq I\text{.}\)</span> Since <span class="process-math">\(F[x]\)</span> is a PID, we have <span class="process-math">\(I=(g)\text{,}\)</span> in which case <span class="process-math">\((f)\subseteq (g)\)</span> is equivalent to <span class="process-math">\(g\mid f\text{.}\)</span> Since <span class="process-math">\(f\)</span> is irreducible, this implies <span class="process-math">\(g\)</span> is a unit, or <span class="process-math">\(g=cf\text{,}\)</span> where <span class="process-math">\(c\)</span> is a unit. But then, either <span class="process-math">\((g)=F[x]\text{,}\)</span> or <span class="process-math">\((g)=(f)\text{.}\)</span> This proves <span class="process-math">\((f)\)</span> is maximal.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_prime_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.8.10: Prime and maximal ideals of F[x]"><a href="#th_max_prime_poly" title="Copy heading and permalink for Theorem 2.8.10: Prime and maximal ideals of F[x]" aria-label="Copy heading and permalink for Theorem 2.8.10: Prime and maximal ideals of F[x]">🔗</a></div>
+</article>
+<details id="th_max_prime_poly-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_max_prime_poly-3-1">Implication: (1)<span class="process-math">\(\implies\)</span>(2). Assume <span class="process-math">\(f\)</span> is irreducible and let <span class="process-math">\(I\)</span> be an ideal of <span class="process-math">\(F[x]\)</span> satisfying <span class="process-math">\((f)\subseteq I\text{.}\)</span> Since <span class="process-math">\(F[x]\)</span> is a PID, we have <span class="process-math">\(I=(g)\text{,}\)</span> in which case <span class="process-math">\((f)\subseteq (g)\)</span> is equivalent to <span class="process-math">\(g\mid f\text{.}\)</span> Since <span class="process-math">\(f\)</span> is irreducible, this implies <span class="process-math">\(g\)</span> is a unit, or <span class="process-math">\(g=cf\text{,}\)</span> where <span class="process-math">\(c\)</span> is a unit. But then, either <span class="process-math">\((g)=F[x]\text{,}\)</span> or <span class="process-math">\((g)=(f)\text{.}\)</span> This proves <span class="process-math">\((f)\)</span> is maximal.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_prime_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="th_max_prime_poly-3-2">Implication: (2)<span class="process-math">\(\implies\)</span>(3). This implication is just a special instance of the more general fact that in a commutative ring all maximal ideals are prime ideals.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_prime_poly-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="th_max_prime_poly-3-3">Implication: (3)<span class="process-math">\(\implies\)</span>(1). Assume <span class="process-math">\((f)\)</span> is prime. As observed in <a href="s_prime_max_poly.html#rem_prime_element_ideal" class="xref" data-knowl="./knowl/xref/rem_prime_element_ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.8.9: Prime elements and prime ideals">Remark 2.8.9</a>, it follows that <span class="process-math">\(f\)</span> is a prime element of <span class="process-math">\(F[x]\text{.}\)</span> Assume <span class="process-math">\(f=gh\)</span> for some polynomials <span class="process-math">\(g,h\in F[x]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is prime, we have <span class="process-math">\(f\mid g\)</span> or <span class="process-math">\(f\mid h\text{.}\)</span> In the first case, we have <span class="process-math">\(g=qf\)</span> and hence <span class="process-math">\(f=fqh\text{.}\)</span> Since <span class="process-math">\(F[x]\)</span> is integral and <span class="process-math">\(f\ne 0\text{,}\)</span> it follows that <span class="process-math">\(qh=1\)</span> and thus <span class="process-math">\(h\)</span> is a unit. Similarly, if <span class="process-math">\(f\mid h\text{,}\)</span> then <span class="process-math">\(g\)</span> is a unit. Thus <span class="process-math">\(f=gh\)</span> implies <span class="process-math">\(g\)</span> is a unit or <span class="process-math">\(h\)</span> is a unit, and we conclude that <span class="process-math">\(f\)</span> is irreducible.<div class="autopermalink" data-description="Paragraph"><a href="#th_max_prime_poly-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.10.1"><a href="#th_max_prime_poly-3" title="Copy heading and permalink for Proof 2.8.10.1" aria-label="Copy heading and permalink for Proof 2.8.10.1">🔗</a></div></article></details><article class="remark remark-like" id="ss_poly_ring_fields-9"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.8.10.1"><a href="#th_max_prime_poly-3" title="Copy heading and permalink for Proof 2.8.10.1" aria-label="Copy heading and permalink for Proof 2.8.10.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="ss_poly_ring_fields-9"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing <span class="process-math">\(\Z\)</span> and <span class="process-math">\(F[x]\)</span>.</span>
 </h4>
 <div class="para logical" id="ss_poly_ring_fields-9-2">
@@ -880,7 +878,9 @@ g \amp =qf+r\text{,}
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.8.11: Comparing \Z and F[x]"><a href="#ss_poly_ring_fields-9" title="Copy heading and permalink for Remark 2.8.11: Comparing \Z and F[x]" aria-label="Copy heading and permalink for Remark 2.8.11: Comparing \Z and F[x]">🔗</a></div></article><div class="para" id="ss_poly_ring_fields-10">
+<div class="autopermalink" data-description="Remark 2.8.11: Comparing \Z and F[x]"><a href="#ss_poly_ring_fields-9" title="Copy heading and permalink for Remark 2.8.11: Comparing \Z and F[x]" aria-label="Copy heading and permalink for Remark 2.8.11: Comparing \Z and F[x]">🔗</a></div>
+</article>
+<div class="para" id="ss_poly_ring_fields-10">
 <a href="s_prime_max_poly.html#th_max_prime_poly" class="xref" data-knowl="./knowl/xref/th_max_prime_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.10: Prime and maximal ideals of F[x]">Theorem 2.8.10</a> allows us to easily produce maximal ideals of a polynomial ring <span class="process-math">\(F[x]\)</span> (<span class="process-math">\(F\)</span> a field). This in turn allows us to easily construct new fields as quotients of <span class="process-math">\(F[x]\)</span> by these maximal ideals. Furthermore, <a href="s_prime_max_poly.html#th_quot_poly" class="xref" data-knowl="./knowl/xref/th_quot_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.3: Quotients of polynomial rings">Theorem 2.8.3</a> gives us a concrete  description of these quotients, allowing us to explore the arithmetic of these fields in a hands-on manner.<div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor_quotient_fields"><h4 class="heading">
@@ -888,14 +888,17 @@ g \amp =qf+r\text{,}
 </h4>
 <div class="para" id="cor_quotient_fields-2-1">Let <span class="process-math">\(F\)</span> be a field, and let <span class="process-math">\(f\in F[x]\)</span> be irreducible of degree <span class="process-math">\(n\geq 1\text{.}\)</span> The quotient ring <span class="process-math">\(F[x]/(f)\)</span> is a field, as well as an <span class="process-math">\(F\)</span>-algebra of dimension <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor_quotient_fields-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.8.12: Quotient fields of F[x]"><a href="#cor_quotient_fields" title="Copy heading and permalink for Corollary 2.8.12: Quotient fields of F[x]" aria-label="Copy heading and permalink for Corollary 2.8.12: Quotient fields of F[x]">🔗</a></div></article><article class="remark remark-like" id="rem_irr_poly"><h4 class="heading">
+<div class="autopermalink" data-description="Corollary 2.8.12: Quotient fields of F[x]"><a href="#cor_quotient_fields" title="Copy heading and permalink for Corollary 2.8.12: Quotient fields of F[x]" aria-label="Copy heading and permalink for Corollary 2.8.12: Quotient fields of F[x]">🔗</a></div>
+</article>
+<article class="remark remark-like" id="rem_irr_poly"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irreducible polynomials.</span>
 </h4>
 <div class="para logical" id="rem_irr_poly-2">
 <div class="para">Let <span class="process-math">\(F\)</span> be a field. It is easy to see that a polynomial <span class="process-math">\(f\in F[x]\)</span> is irreducible if and only if it has no factor <span class="process-math">\(g\)</span> of positive degree. Although in general it can be quite tricky to determine whether a polynomial is irreducible, for polynomials of degree at most 3, the situation is simpler, as we now summarize.</div>
 <ul class="disc" id="rem_irr_poly-2-4">
 <li id="rem_irr_poly-2-4-1">
-<span class="heading li--heading"><span class="title li--heading-title">Degree 1.</span></span><div class="para logical" id="rem_irr_poly-2-4-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Degree 1.</span></span>
+<div class="para logical" id="rem_irr_poly-2-4-1-2">
 <div class="para">Every degree-1 polynomial <span class="process-math">\(f=ax+b\)</span> is irreducible. Indeed, if <span class="process-math">\(f=gh\text{,}\)</span> then since</div>
 <div class="displaymath process-math" id="rem_irr_poly-2-4-1-2-3">
 \begin{align*}
@@ -908,12 +911,14 @@ g \amp =qf+r\text{,}
 <div class="autopermalink" data-description="Item: Degree 1"><a href="#rem_irr_poly-2-4-1" title="Copy heading and permalink for Item: Degree 1" aria-label="Copy heading and permalink for Item: Degree 1">🔗</a></div>
 </li>
 <li id="rem_irr_poly-2-4-2">
-<span class="heading li--heading"><span class="title li--heading-title">Degree 2.</span></span><div class="para" id="rem_irr_poly-2-4-2-2">Let <span class="process-math">\(f\in F[x]\)</span> be a polynomial of degree 2. To have a nontrivial factorization <span class="process-math">\(f=gh\text{,}\)</span> the same degree argument above implies that both <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> must be linear. Note that any linear polynomial <span class="process-math">\(g(x)=ax+b\)</span> has a root in <span class="process-math">\(F\)</span> (namely <span class="process-math">\(-b/a\)</span>). As a result, it follows that a polynomial <span class="process-math">\(f\)</span> has a linear factor if and only if we have <span class="process-math">\(f(c)=0\)</span> for some <span class="process-math">\(c\in F\text{:}\)</span> i.e., if and only if <span class="process-math">\(f\)</span> has a root in <span class="process-math">\(F\text{.}\)</span> We conclude that a degree-2 polynomial is irreducible if and only if it has no roots in <span class="process-math">\(F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem_irr_poly-2-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Degree 2.</span></span>
+<div class="para" id="rem_irr_poly-2-4-2-2">Let <span class="process-math">\(f\in F[x]\)</span> be a polynomial of degree 2. To have a nontrivial factorization <span class="process-math">\(f=gh\text{,}\)</span> the same degree argument above implies that both <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> must be linear. Note that any linear polynomial <span class="process-math">\(g(x)=ax+b\)</span> has a root in <span class="process-math">\(F\)</span> (namely <span class="process-math">\(-b/a\)</span>). As a result, it follows that a polynomial <span class="process-math">\(f\)</span> has a linear factor if and only if we have <span class="process-math">\(f(c)=0\)</span> for some <span class="process-math">\(c\in F\text{:}\)</span> i.e., if and only if <span class="process-math">\(f\)</span> has a root in <span class="process-math">\(F\text{.}\)</span> We conclude that a degree-2 polynomial is irreducible if and only if it has no roots in <span class="process-math">\(F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem_irr_poly-2-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item: Degree 2"><a href="#rem_irr_poly-2-4-2" title="Copy heading and permalink for Item: Degree 2" aria-label="Copy heading and permalink for Item: Degree 2">🔗</a></div>
 </li>
 <li id="rem_irr_poly-2-4-3">
-<span class="heading li--heading"><span class="title li--heading-title">Degree 3.</span></span><div class="para" id="rem_irr_poly-2-4-3-2">Again, looking at degrees, we see that if <span class="process-math">\(f\in F[x]\)</span> is a degree-3 polynomial, then <span class="process-math">\(f\)</span> has a nontrivial factorization <span class="process-math">\(f=gh\)</span> if and only if one of the factors is linear. Thus, just as in the degree-2 case, we conclude that a degree-3 polynomial <span class="process-math">\(f\)</span> is irreducible if and only if it has no roots in <span class="process-math">\(F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem_irr_poly-2-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Degree 3.</span></span>
+<div class="para" id="rem_irr_poly-2-4-3-2">Again, looking at degrees, we see that if <span class="process-math">\(f\in F[x]\)</span> is a degree-3 polynomial, then <span class="process-math">\(f\)</span> has a nontrivial factorization <span class="process-math">\(f=gh\)</span> if and only if one of the factors is linear. Thus, just as in the degree-2 case, we conclude that a degree-3 polynomial <span class="process-math">\(f\)</span> is irreducible if and only if it has no roots in <span class="process-math">\(F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem_irr_poly-2-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item: Degree 3"><a href="#rem_irr_poly-2-4-3" title="Copy heading and permalink for Item: Degree 3" aria-label="Copy heading and permalink for Item: Degree 3">🔗</a></div>
 </li>
@@ -921,22 +926,31 @@ g \amp =qf+r\text{,}
 <div class="para">Things become more complicated once our polynomials have degree 4 or higher: in particular, being irreducible is no longer equivalent to having no roots. For example, the polynomial <span class="process-math">\(f(x)=(x^2+1)(x^2+2)\in \R[x]\)</span> is easily seen to have no roots in <span class="process-math">\(\R\text{,}\)</span> and yet is manifestly reducible.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#rem_irr_poly-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.8.13: Irreducible polynomials"><a href="#rem_irr_poly" title="Copy heading and permalink for Remark 2.8.13: Irreducible polynomials" aria-label="Copy heading and permalink for Remark 2.8.13: Irreducible polynomials">🔗</a></div></article><article class="example example-like" id="eg_poly_quot_linear"><h4 class="heading">
+<div class="autopermalink" data-description="Remark 2.8.13: Irreducible polynomials"><a href="#rem_irr_poly" title="Copy heading and permalink for Remark 2.8.13: Irreducible polynomials" aria-label="Copy heading and permalink for Remark 2.8.13: Irreducible polynomials">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_poly_quot_linear"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients by linear polynomials.</span>
 </h4>
 <div class="para" id="eg_poly_quot_linear-2-1">Let <span class="process-math">\(F\)</span> be a field, and let <span class="process-math">\(f(x)=ax+b\)</span> be a linear (i.e., degree-1) polynomial in <span class="process-math">\(F[x]\text{.}\)</span> Prove: <span class="process-math">\(F[x]/(f)\cong F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_quot_linear-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_poly_quot_linear-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_poly_quot_linear-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_poly_quot_linear-3-1">Let <span class="process-math">\(\phi\colon F[x]\rightarrow F\)</span> be the surjective ring homomorphism defined as <span class="process-math">\(\phi(g)=g(-b/a)\text{.}\)</span> Clearly, <span class="process-math">\(\phi(f)=0\text{,}\)</span> and thus <span class="process-math">\((f)\subseteq \ker\phi\text{.}\)</span> Since <span class="process-math">\((f)\)</span> is maximal (<span class="process-math">\(f\)</span> is irreducible), and <span class="process-math">\(\ker\phi\ne F[x]\text{,}\)</span> we have <span class="process-math">\((f)=\ker\phi\text{.}\)</span> By the first isomorphism theorem, we conclude that <span class="process-math">\(F[x]/(f)\cong F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_quot_linear-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.8.14.1"><a href="#eg_poly_quot_linear-3" title="Copy heading and permalink for Solution 2.8.14.1" aria-label="Copy heading and permalink for Solution 2.8.14.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.8.14: Quotients by linear polynomials"><a href="#eg_poly_quot_linear" title="Copy heading and permalink for Example 2.8.14: Quotients by linear polynomials" aria-label="Copy heading and permalink for Example 2.8.14: Quotients by linear polynomials">🔗</a></div></article><article class="example example-like" id="eg_quot_real_poly"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.8.14: Quotients by linear polynomials"><a href="#eg_poly_quot_linear" title="Copy heading and permalink for Example 2.8.14: Quotients by linear polynomials" aria-label="Copy heading and permalink for Example 2.8.14: Quotients by linear polynomials">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_quot_real_poly"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients of <span class="process-math">\(\R[x]\)</span>.</span>
 </h4>
 <div class="para" id="eg_quot_real_poly-2-1">Show that <span class="process-math">\(\R[x]/(x^2+1)\)</span> and <span class="process-math">\(\R[x]/(x^2+x+1)\)</span> are both fields, and are isomorphic to one another.<div class="autopermalink" data-description="Paragraph"><a href="#eg_quot_real_poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_quot_real_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_quot_real_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_quot_real_poly-3-1">From the quadratic formula theorem, we see easily that the polynomials <span class="process-math">\(x^2+1\)</span> and <span class="process-math">\(x^2+x+1\)</span> have no roots in <span class="process-math">\(\R\text{.}\)</span> It follows from <a href="s_prime_max_poly.html#rem_irr_poly" class="xref" data-knowl="./knowl/xref/rem_irr_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.8.13: Irreducible polynomials">Remark 2.8.13</a> that both polynomials are irreducible in <span class="process-math">\(\R[x]\text{,}\)</span> and hence that the corresponding quotients are fields. We prove that both are isomorphic to <span class="process-math">\(\C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_quot_real_poly-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="eg_quot_real_poly-3-2">For <span class="process-math">\(\R[x]/(x^2+1)\text{,}\)</span> consider the ring homomorphism <span class="process-math">\(\phi\colon \R[x]\rightarrow \C\)</span> defined as <span class="process-math">\(\phi(g)=g(i)\text{.}\)</span> The map is clearly surjective, since <span class="process-math">\(\phi(a+bx)=a+bi\)</span> for all <span class="process-math">\(a,b\in \R\text{.}\)</span> Furthermore, clearly, <span class="process-math">\((x^2+1)\subseteq \ker \phi\text{,}\)</span> since <span class="process-math">\((i)^2+1=-1+1=0\text{;}\)</span> and since <span class="process-math">\((x^2+1)\)</span> is maximal (<span class="process-math">\(x^2+1\)</span> is irreducible), it follows that <span class="process-math">\((x^2+1)=\ker\phi\text{.}\)</span> The claim follows from the first isomorphism theorem.<div class="autopermalink" data-description="Paragraph"><a href="#eg_quot_real_poly-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -955,13 +969,18 @@ g \amp =qf+r\text{,}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_quot_real_poly-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.8.15.1"><a href="#eg_quot_real_poly-3" title="Copy heading and permalink for Solution 2.8.15.1" aria-label="Copy heading and permalink for Solution 2.8.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.8.15: Quotients of \R[x]"><a href="#eg_quot_real_poly" title="Copy heading and permalink for Example 2.8.15: Quotients of \R[x]" aria-label="Copy heading and permalink for Example 2.8.15: Quotients of \R[x]">🔗</a></div></article><article class="example example-like" id="eg_field_25"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.8.15: Quotients of \R[x]"><a href="#eg_quot_real_poly" title="Copy heading and permalink for Example 2.8.15: Quotients of \R[x]" aria-label="Copy heading and permalink for Example 2.8.15: Quotients of \R[x]">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_field_25"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Field of cardinality 25.</span>
 </h4>
 <div class="para" id="eg_field_25-2-1">Construct an explicit field of cardinality <span class="process-math">\(25\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_field_25-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_field_25-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_field_25-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_field_25-3-1">
 <div class="para">Consider the polynomial ring <span class="process-math">\(\F_5[x]\text{.}\)</span> Any quotient of the form <span class="process-math">\(R=\F_5[x]/(x^2+ax+b)\)</span> is an <span class="process-math">\(\F_5\)</span>-algebra that is of dimension 2 as an <span class="process-math">\(\F_5\)</span>-vector space. As a result, any such ring <span class="process-math">\(R\)</span> satisfies <span class="process-math">\(\abs{R}=5^2=25\text{.}\)</span> To produce a field, we simply must pick an irreducible quadratic polynomial <span class="process-math">\(f(x)=x^2+ax+b\text{;}\)</span> and according to <a href="s_prime_max_poly.html#rem_irr_poly" class="xref" data-knowl="./knowl/xref/rem_irr_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.8.13: Irreducible polynomials">Remark 2.8.13</a>, this is equivalent to picking <span class="process-math">\(f\)</span> so that it has no roots in <span class="process-math">\(\F_5\text{.}\)</span> Since <span class="process-math">\(\F_5\)</span> only has 5 elements, it is easy to verify whether a given polynomial has a root in <span class="process-math">\(\F_5\)</span> or not. Consider <span class="process-math">\(f(x)=x^2+1\text{,}\)</span> for example. We simply need to compute a table of values</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem_irr_poly.html" id="eg_field_25-3-1-14">
@@ -989,21 +1008,29 @@ f(3) \amp = 0 \amp f(4)\amp =2\tag{2.8.4}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_field_25-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.8.16.1"><a href="#eg_field_25-3" title="Copy heading and permalink for Solution 2.8.16.1" aria-label="Copy heading and permalink for Solution 2.8.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.8.16: Field of cardinality 25"><a href="#eg_field_25" title="Copy heading and permalink for Example 2.8.16: Field of cardinality 25" aria-label="Copy heading and permalink for Example 2.8.16: Field of cardinality 25">🔗</a></div></article><article class="remark remark-like" id="ss_poly_ring_fields-16"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.8.16: Field of cardinality 25"><a href="#eg_field_25" title="Copy heading and permalink for Example 2.8.16: Field of cardinality 25" aria-label="Copy heading and permalink for Example 2.8.16: Field of cardinality 25">🔗</a></div>
+</article>
+<article class="remark remark-like" id="ss_poly_ring_fields-16"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite fields.</span>
 </h4>
 <div class="para" id="ss_poly_ring_fields-16-2">It turns out that there are exactly <span class="process-math">\(\frac{5^2-5}{2}=10\)</span> irreducible polynomials of the form <span class="process-math">\(f(x)=x^2+ax+b\)</span> in <span class="process-math">\(\F_5[x]\text{.}\)</span> Each of the corresponding quotients <span class="process-math">\(\F_5[x]/(f)\)</span> is thus a field of cardinality <span class="process-math">\(25\text{.}\)</span> Miraculously, these fields are all isomorphic! In fact, as we will prove in the next quarter, given any prime power <span class="process-math">\(p^n\)</span> there is exactly one field (up to isomorphism) of cardinality <span class="process-math">\(p^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.8.17: Finite fields"><a href="#ss_poly_ring_fields-16" title="Copy heading and permalink for Remark 2.8.17: Finite fields" aria-label="Copy heading and permalink for Remark 2.8.17: Finite fields">🔗</a></div></article><div class="para" id="ss_poly_ring_fields-17">We end this section with a fundamental result bounding the number of distinct <em class="emphasis">roots</em> of a polynomial over a field by its domain. This may look familiar to you from your mathematical youth. The corollary that follows, however, should come as more of a surprise.<div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 2.8.17: Finite fields"><a href="#ss_poly_ring_fields-16" title="Copy heading and permalink for Remark 2.8.17: Finite fields" aria-label="Copy heading and permalink for Remark 2.8.17: Finite fields">🔗</a></div>
+</article>
+<div class="para" id="ss_poly_ring_fields-17">We end this section with a fundamental result bounding the number of distinct <em class="emphasis">roots</em> of a polynomial over a field by its domain. This may look familiar to you from your mathematical youth. The corollary that follows, however, should come as more of a surprise.<div class="autopermalink" data-description="Paragraph"><a href="#ss_poly_ring_fields-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="d_root"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Root of a polynomial.</span>
 </h4>
 <div class="para" id="d_root-2-1">Let <span class="process-math">\(R\)</span> be a nonzero commutative ring, and let <span class="process-math">\(f\in R[x]\)</span> be a polynomial. A <dfn class="terminology">root</dfn> of <span class="process-math">\(f\)</span> in <span class="process-math">\(R\)</span> is an element <span class="process-math">\(r\in R\)</span> satisfying <span class="process-math">\(f(r)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_root-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="d_root-2-2">More generally, let <span class="process-math">\(S\)</span> be a commutative <span class="process-math">\(R\)</span>-algebra with defining homomorphism <span class="process-math">\(\phi\colon R\rightarrow S\text{.}\)</span> Given <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> write <span class="process-math">\(f^\phi(x)=\phi(a_n)x^n+\phi(a_{n-1})x^{n-1}+\cdots \phi(a_1)x+\phi(a_0)\text{:}\)</span> i.e., <span class="process-math">\(f^\phi\)</span> is the result of applying <span class="process-math">\(\phi\)</span> to the coefficients of <span class="process-math">\(f\text{.}\)</span> A <dfn class="terminology">root</dfn> of <span class="process-math">\(f\)</span> in <span class="process-math">\(S\)</span> is an element <span class="process-math">\(s\in S\)</span> satisfying <span class="process-math">\(f^\phi(s)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_root-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_root-2-2">More generally, let <span class="process-math">\(S\)</span> be a commutative <span class="process-math">\(R\)</span>-algebra with defining homomorphism <span class="process-math">\(\phi\colon R\rightarrow S\text{.}\)</span> Given <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> write <span class="process-math">\(f^\phi(x)=\phi(a_n)x^n+\phi(a_{n-1})x^{n-1}+\cdots \phi(a_1)x+\phi(a_0)\text{:}\)</span> i.e., <span class="process-math">\(f^\phi\)</span> is the result of applying <span class="process-math">\(\phi\)</span> to the coefficients of <span class="process-math">\(f\text{.}\)</span> A <dfn class="terminology">root</dfn> of <span class="process-math">\(f\)</span> in <span class="process-math">\(S\)</span> is an element <span class="process-math">\(s\in S\)</span> satisfying <span class="process-math">\(f^\phi(s)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_root-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.8.18: Root of a polynomial"><a href="#d_root" title="Copy heading and permalink for Definition 2.8.18: Root of a polynomial" aria-label="Copy heading and permalink for Definition 2.8.18: Root of a polynomial">🔗</a></div></article><article class="theorem theorem-like" id="th_roots_deg"><h4 class="heading">
+<div class="autopermalink" data-description="Definition 2.8.18: Root of a polynomial"><a href="#d_root" title="Copy heading and permalink for Definition 2.8.18: Root of a polynomial" aria-label="Copy heading and permalink for Definition 2.8.18: Root of a polynomial">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_roots_deg"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Degree and distinct roots.</span>
 </h4>
 <div class="para logical" id="th_roots_deg-2-1">
@@ -1025,7 +1052,11 @@ f(3) \amp = 0 \amp f(4)\amp =2\tag{2.8.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_roots_deg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.8.19: Degree and distinct roots"><a href="#th_roots_deg" title="Copy heading and permalink for Theorem 2.8.19: Degree and distinct roots" aria-label="Copy heading and permalink for Theorem 2.8.19: Degree and distinct roots">🔗</a></div></article><details id="th_roots_deg-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_roots_deg-3-1">
+<div class="autopermalink" data-description="Theorem 2.8.19: Degree and distinct roots"><a href="#th_roots_deg" title="Copy heading and permalink for Theorem 2.8.19: Degree and distinct roots" aria-label="Copy heading and permalink for Theorem 2.8.19: Degree and distinct roots">🔗</a></div>
+</article>
+<details id="th_roots_deg-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_roots_deg-3-1">
 <ol class="decimal" id="th_roots_deg-3-1-1">
 <li id="th_roots_deg-3-1-1-1">
 <div class="para logical" id="th_roots_deg-3-1-1-1-1">
@@ -1056,12 +1087,18 @@ f(a)=0 \amp \iff q(a)(a-a)+r(a)=0 \\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_roots_deg-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.19.1"><a href="#th_roots_deg-3" title="Copy heading and permalink for Proof 2.8.19.1" aria-label="Copy heading and permalink for Proof 2.8.19.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_subgrp_field_cyclic"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 2.8.19.1"><a href="#th_roots_deg-3" title="Copy heading and permalink for Proof 2.8.19.1" aria-label="Copy heading and permalink for Proof 2.8.19.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="cor_subgrp_field_cyclic"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite multiplicative subgroups of fields.</span>
 </h4>
 <div class="para" id="cor_subgrp_field_cyclic-2-1">Let <span class="process-math">\(F\)</span> be a field. If <span class="process-math">\(G\)</span> is a finite subgroup of <span class="process-math">\(F^*\text{,}\)</span> then <span class="process-math">\(G\)</span> is cyclic.<div class="autopermalink" data-description="Paragraph"><a href="#cor_subgrp_field_cyclic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.8.20: Finite multiplicative subgroups of fields"><a href="#cor_subgrp_field_cyclic" title="Copy heading and permalink for Corollary 2.8.20: Finite multiplicative subgroups of fields" aria-label="Copy heading and permalink for Corollary 2.8.20: Finite multiplicative subgroups of fields">🔗</a></div></article><details id="cor_subgrp_field_cyclic-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_subgrp_field_cyclic-3-1">
+<div class="autopermalink" data-description="Corollary 2.8.20: Finite multiplicative subgroups of fields"><a href="#cor_subgrp_field_cyclic" title="Copy heading and permalink for Corollary 2.8.20: Finite multiplicative subgroups of fields" aria-label="Copy heading and permalink for Corollary 2.8.20: Finite multiplicative subgroups of fields">🔗</a></div>
+</article>
+<details id="cor_subgrp_field_cyclic-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor_subgrp_field_cyclic-3-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a subgroup of <span class="process-math">\(F^*\)</span> of cardinality <span class="process-math">\(n&lt; \infty\text{.}\)</span>  Since <span class="process-math">\(G\)</span> is a finite abelian group, the <em class="emphasis">invariant factor</em> version of the structure theorem for finite abelian groups implies that</div>
 <div class="displaymath process-math" id="cor_subgrp_field_cyclic-3-1-6">
 \begin{align*}
@@ -1071,7 +1108,11 @@ G \amp \cong C_{n_1}\times C_{n_2}\times \cdots \times C_{n_r}
 <div class="para">where the <span class="process-math">\(n_k\)</span> are positive integers satisfying <span class="process-math">\(n_k\mid n_{k+1}\)</span> for all <span class="process-math">\(1\leq k\leq r-1\text{,}\)</span> and <span class="process-math">\(C_{n_k}=\angvec{\alpha_k}\)</span> is a cyclic group of cardinality <span class="process-math">\(n_k\text{.}\)</span> (We are using multiplicative notation, since <span class="process-math">\(G\)</span> is a subgroup of the multiplicative group of units.) Since <span class="process-math">\(n_k\mid n_r\)</span> for all <span class="process-math">\(k\text{,}\)</span> it follows that all elements <span class="process-math">\(\alpha\in G\)</span> satisfy <span class="process-math">\(\alpha^{n_r}=1\text{.}\)</span> Put another way, the polynomial <span class="process-math">\(f(x)=x^{n_r}-1\)</span> has at least <span class="process-math">\(n=\abs{G}\)</span> distinct roots. But in general, a nonzero polynomial <span class="process-math">\(g\in F[x]\)</span> has at most <span class="process-math">\(\deg g\)</span> distinct roots in <span class="process-math">\(F\text{.}\)</span> (Why? Using the division algorithm, we have <span class="process-math">\(g(a)=0\)</span> for some <span class="process-math">\(a\in F\)</span> if and only if <span class="process-math">\(g(x)=(x-a)h(x)\text{,}\)</span> where <span class="process-math">\(\deg h=\deg g -1\text{.}\)</span> The claim now follows easily by induction of <span class="process-math">\(\deg g\text{.}\)</span> ) Thus on the one hand, <span class="process-math">\(f(x)=x^{n_r}-1\)</span> has <em class="emphasis">at most</em> <span class="process-math">\(n_r\)</span> distinct roots, and on the other hand, it has <em class="emphasis">at least</em> <span class="process-math">\(n=\abs{G}\)</span> distinct roots. It follows that <span class="process-math">\(n\leq n_r\text{.}\)</span> But since <span class="process-math">\(n=\prod_{k=1}^r n_k\text{,}\)</span> we have <span class="process-math">\(n_r\mid n\text{,}\)</span> and hence <span class="process-math">\(n_r\leq n\text{.}\)</span> It follows that <span class="process-math">\(n_r=n\)</span> and <span class="process-math">\(G\cong C_{n_r}\)</span> is cyclic, as claimed.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_subgrp_field_cyclic-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.8.20.1"><a href="#cor_subgrp_field_cyclic-3" title="Copy heading and permalink for Proof 2.8.20.1" aria-label="Copy heading and permalink for Proof 2.8.20.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.8.2: Polynomial rings over fields"><a href="#ss_poly_ring_fields" title="Copy heading and permalink for Subsection 2.8.2: Polynomial rings over fields" aria-label="Copy heading and permalink for Subsection 2.8.2: Polynomial rings over fields">🔗</a></div></section><div class="autopermalink" data-description="Section 2.8: Case study: polynomial rings"><a href="#s_prime_max_poly" title="Copy heading and permalink for Section 2.8: Case study: polynomial rings" aria-label="Copy heading and permalink for Section 2.8: Case study: polynomial rings">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof 2.8.20.1"><a href="#cor_subgrp_field_cyclic-3" title="Copy heading and permalink for Proof 2.8.20.1" aria-label="Copy heading and permalink for Proof 2.8.20.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 2.8.2: Polynomial rings over fields"><a href="#ss_poly_ring_fields" title="Copy heading and permalink for Subsection 2.8.2: Polynomial rings over fields" aria-label="Copy heading and permalink for Subsection 2.8.2: Polynomial rings over fields">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 2.8: Case study: polynomial rings"><a href="#s_prime_max_poly" title="Copy heading and permalink for Section 2.8: Case study: polynomial rings" aria-label="Copy heading and permalink for Section 2.8: Case study: polynomial rings">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_prime_maximal.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_crt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

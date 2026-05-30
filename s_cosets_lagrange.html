@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,7 +516,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_cosets_lagrange"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_cosets_lagrange">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets and Lagrange’s theorem</span>
 </h2>
 <article class="definition definition-like" id="d_set_actions"><h3 class="heading">
@@ -582,7 +536,9 @@ gAg^{-1} \amp =\{gag^{-1}\mid a\in A \}\text{.}\tag{1.11.4}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_set_actions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.11.1: Group operations on subsets"><a href="#d_set_actions" title="Copy heading and permalink for Definition 1.11.1: Group operations on subsets" aria-label="Copy heading and permalink for Definition 1.11.1: Group operations on subsets">🔗</a></div></article><article class="definition definition-like" id="d_cosets"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.11.1: Group operations on subsets"><a href="#d_set_actions" title="Copy heading and permalink for Definition 1.11.1: Group operations on subsets" aria-label="Copy heading and permalink for Definition 1.11.1: Group operations on subsets">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_cosets"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Coset and coset space.</span>
 </h3>
 <div class="para logical" id="d_cosets-2-1">
@@ -600,19 +556,26 @@ Hg=\{hg\mid h\in H\}\tag{1.11.6}
 </div>
 <div class="para">is called the <dfn class="terminology">right <span class="process-math">\(H\)</span>-coset</dfn> in <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(g\text{.}\)</span> Elements of a coset are called <dfn class="terminology">representatives</dfn> of that coset.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_cosets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="d_cosets-2-2">The set of all left (resp. right) <span class="process-math">\(H\)</span>-cosets is called the <dfn class="terminology">left (resp. right) coset space</dfn> of <span class="process-math">\(H\text{,}\)</span> and is denoted <span class="process-math">\(G/H\)</span> (resp. <span class="process-math">\(H\backslash G\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#d_cosets-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_cosets-2-2">The set of all left (resp. right) <span class="process-math">\(H\)</span>-cosets is called the <dfn class="terminology">left (resp. right) coset space</dfn> of <span class="process-math">\(H\text{,}\)</span> and is denoted <span class="process-math">\(G/H\)</span> (resp. <span class="process-math">\(H\backslash G\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#d_cosets-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.11.2: Coset and coset space"><a href="#d_cosets" title="Copy heading and permalink for Definition 1.11.2: Coset and coset space" aria-label="Copy heading and permalink for Definition 1.11.2: Coset and coset space">🔗</a></div></article><article class="convention remark-like" id="s_cosets_lagrange-4"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.11.2: Coset and coset space"><a href="#d_cosets" title="Copy heading and permalink for Definition 1.11.2: Coset and coset space" aria-label="Copy heading and permalink for Definition 1.11.2: Coset and coset space">🔗</a></div>
+</article>
+<article class="convention remark-like" id="s_cosets_lagrange-4"><h3 class="heading">
 <span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets are left cosets by default.</span>
 </h3>
 <div class="para" id="s_cosets_lagrange-4-2">Unless stated otherwise, a coset in this course will be assumed to be a left coset.<div class="autopermalink" data-description="Paragraph"><a href="#s_cosets_lagrange-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Notation 1.11.3: Cosets are left cosets by default"><a href="#s_cosets_lagrange-4" title="Copy heading and permalink for Notation 1.11.3: Cosets are left cosets by default" aria-label="Copy heading and permalink for Notation 1.11.3: Cosets are left cosets by default">🔗</a></div></article><article class="example example-like" id="eg_cosets_Z"><h3 class="heading">
+<div class="autopermalink" data-description="Notation 1.11.3: Cosets are left cosets by default"><a href="#s_cosets_lagrange-4" title="Copy heading and permalink for Notation 1.11.3: Cosets are left cosets by default" aria-label="Copy heading and permalink for Notation 1.11.3: Cosets are left cosets by default">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_cosets_Z"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets in <span class="process-math">\(\Z\)</span>.</span>
 </h3>
 <div class="para" id="eg_cosets_Z-2-1">Recall that any subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(\Z\)</span> can be described as <span class="process-math">\(H=(n)\)</span> for a unique <span class="process-math">\(n\in \Z_{\geq 0}\text{.}\)</span> Show that the cosets of <span class="process-math">\(H=(n)\)</span> are precisely the congruence classes modulo <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Z-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_cosets_Z-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_cosets_Z-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_cosets_Z-3-1">
 <div class="para">Fix <span class="process-math">\(H=(n)\text{.}\)</span>  Given <span class="process-math">\(a\in \Z\)</span> the coset <span class="process-math">\(a+H\)</span> is by definition</div>
 <div class="displaymath process-math" id="eg_cosets_Z-3-1-4">
@@ -625,13 +588,18 @@ a+(n) \amp =\{a+qn\mid q\in \Z\}\\
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Z-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.11.4.1"><a href="#eg_cosets_Z-3" title="Copy heading and permalink for Solution 1.11.4.1" aria-label="Copy heading and permalink for Solution 1.11.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.11.4: Cosets in \Z"><a href="#eg_cosets_Z" title="Copy heading and permalink for Example 1.11.4: Cosets in \Z" aria-label="Copy heading and permalink for Example 1.11.4: Cosets in \Z">🔗</a></div></article><article class="example example-like" id="eg_cosets_Zn"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.11.4: Cosets in \Z"><a href="#eg_cosets_Z" title="Copy heading and permalink for Example 1.11.4: Cosets in \Z" aria-label="Copy heading and permalink for Example 1.11.4: Cosets in \Z">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_cosets_Zn"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets in <span class="process-math">\(\Z/12\Z\)</span>.</span>
 </h3>
 <div class="para" id="eg_cosets_Zn-2-1">Let <span class="process-math">\(G=\Z/12\Z\)</span> and let <span class="process-math">\(H=\angvec{\overline{4}}\leq G\text{.}\)</span> Compute <span class="process-math">\(G/H\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Zn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_cosets_Zn-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_cosets_Zn-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_cosets_Zn-3-1">
 <div class="para">We have <span class="process-math">\(H=\angvec{\overline{4}}=\{0,4,8\}\text{.}\)</span> A simple computation shows</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cosets.html" id="eg_cosets_Zn-3-1-2">
@@ -647,13 +615,18 @@ a+(n) \amp =\{a+qn\mid q\in \Z\}\\
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Zn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.11.5.1"><a href="#eg_cosets_Zn-3" title="Copy heading and permalink for Solution 1.11.5.1" aria-label="Copy heading and permalink for Solution 1.11.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.11.5: Cosets in \Z/12\Z"><a href="#eg_cosets_Zn" title="Copy heading and permalink for Example 1.11.5: Cosets in \Z/12\Z" aria-label="Copy heading and permalink for Example 1.11.5: Cosets in \Z/12\Z">🔗</a></div></article><article class="example example-like" id="eg_cosets_Dn"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.11.5: Cosets in \Z/12\Z"><a href="#eg_cosets_Zn" title="Copy heading and permalink for Example 1.11.5: Cosets in \Z/12\Z" aria-label="Copy heading and permalink for Example 1.11.5: Cosets in \Z/12\Z">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_cosets_Dn"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets in <span class="process-math">\(D_4\)</span>.</span>
 </h3>
 <div class="para" id="eg_cosets_Dn-2-1">Let <span class="process-math">\(G=D_4\)</span> and let <span class="process-math">\(H=\angvec{rs}\text{.}\)</span> Compute <span class="process-math">\(G/H\)</span> and <span class="process-math">\(H\backslash G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Dn-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_cosets_Dn-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_cosets_Dn-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_cosets_Dn-3-1">
 <div class="para">We have <span class="process-math">\(H=\angvec{rs}=\{1, rs\}\text{.}\)</span> We compute</div>
 <div class="displaymath process-math" id="eg_cosets_Dn-3-1-2">
@@ -686,8 +659,11 @@ H(r^3s) \amp =\{r^3s, r^2\}=r^2H\text{.}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_cosets_Dn-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.11.6.1"><a href="#eg_cosets_Dn-3" title="Copy heading and permalink for Solution 1.11.6.1" aria-label="Copy heading and permalink for Solution 1.11.6.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.11.6: Cosets in D_4"><a href="#eg_cosets_Dn" title="Copy heading and permalink for Example 1.11.6: Cosets in D_4" aria-label="Copy heading and permalink for Example 1.11.6: Cosets in D_4">🔗</a></div></article><article class="theorem theorem-like" id="th_cosets"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.11.6: Cosets in D_4"><a href="#eg_cosets_Dn" title="Copy heading and permalink for Example 1.11.6: Cosets in D_4" aria-label="Copy heading and permalink for Example 1.11.6: Cosets in D_4">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_cosets"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cosets and coset space.</span>
 </h3>
 <div class="para logical" id="th_cosets-2-1">
@@ -753,7 +729,11 @@ gH\ne g'H\iff gH\cap g'H=\emptyset\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_cosets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.11.7: Cosets and coset space"><a href="#th_cosets" title="Copy heading and permalink for Theorem 1.11.7: Cosets and coset space" aria-label="Copy heading and permalink for Theorem 1.11.7: Cosets and coset space">🔗</a></div></article><details id="th_cosets-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_cosets-3-1">
+<div class="autopermalink" data-description="Theorem 1.11.7: Cosets and coset space"><a href="#th_cosets" title="Copy heading and permalink for Theorem 1.11.7: Cosets and coset space" aria-label="Copy heading and permalink for Theorem 1.11.7: Cosets and coset space">🔗</a></div>
+</article>
+<details id="th_cosets-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_cosets-3-1">
 <div class="para">This is another example of a theorem where we get a lot of mileage out of defining an equivalence relation. The relation <span class="process-math">\(g\sim g'\)</span> if and only if <span class="process-math">\(g'\in gH\)</span> is easily seen to be an equivalence relation:</div>
 <div class="displaymath process-math" id="th_cosets-3-1-3">
 \begin{align*}
@@ -779,7 +759,9 @@ gH=gH' \amp \iff g'\in gH\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_cosets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.11.7.1"><a href="#th_cosets-3" title="Copy heading and permalink for Proof 1.11.7.1" aria-label="Copy heading and permalink for Proof 1.11.7.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_lagrange"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.11.7.1"><a href="#th_cosets-3" title="Copy heading and permalink for Proof 1.11.7.1" aria-label="Copy heading and permalink for Proof 1.11.7.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="th_lagrange"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lagrange’s theorem.</span>
 </h3>
 <div class="para logical" id="th_lagrange-2-1">
@@ -814,7 +796,11 @@ gH=gH' \amp \iff g'\in gH\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_lagrange-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.11.8: Lagrange’s theorem"><a href="#th_lagrange" title="Copy heading and permalink for Theorem 1.11.8: Lagrange’s theorem" aria-label="Copy heading and permalink for Theorem 1.11.8: Lagrange’s theorem">🔗</a></div></article><details id="th_lagrange-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_lagrange-3-1">
+<div class="autopermalink" data-description="Theorem 1.11.8: Lagrange’s theorem"><a href="#th_lagrange" title="Copy heading and permalink for Theorem 1.11.8: Lagrange’s theorem" aria-label="Copy heading and permalink for Theorem 1.11.8: Lagrange’s theorem">🔗</a></div>
+</article>
+<details id="th_lagrange-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_lagrange-3-1">
 <div class="para">Statement (2) follows directly from (1). Statement (1) follows from <a href="s_cosets_lagrange.html#th_cosets" class="xref" data-knowl="./knowl/xref/th_cosets.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.11.7: Cosets and coset space">Theorem 1.11.7</a> and a counting argument. First observe that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(\abs{H}=\abs{gH}\)</span> as witnessed by the map</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_cosets.html" id="th_lagrange-3-1-4">
 \begin{align*}
@@ -847,7 +833,9 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 <div class="para">This both proves the result in the case where <span class="process-math">\(G\)</span> is finite, and shows that if <span class="process-math">\(G\)</span> is infinite, than either <span class="process-math">\(H\)</span> or <span class="process-math">\(G/H\)</span> is infinite.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_lagrange-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.11.8.1"><a href="#th_lagrange-3" title="Copy heading and permalink for Proof 1.11.8.1" aria-label="Copy heading and permalink for Proof 1.11.8.1">🔗</a></div></article></details><article class="definition definition-like" id="d_index"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.11.8.1"><a href="#th_lagrange-3" title="Copy heading and permalink for Proof 1.11.8.1" aria-label="Copy heading and permalink for Proof 1.11.8.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_index"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Index of subgroup.</span>
 </h3>
 <div class="para logical" id="d_index-3-1">
@@ -861,7 +849,9 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_index-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.11.9: Index of subgroup"><a href="#d_index" title="Copy heading and permalink for Definition 1.11.9: Index of subgroup" aria-label="Copy heading and permalink for Definition 1.11.9: Index of subgroup">🔗</a></div></article><article class="remark remark-like" id="s_cosets_lagrange-11"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.11.9: Index of subgroup"><a href="#d_index" title="Copy heading and permalink for Definition 1.11.9: Index of subgroup" aria-label="Copy heading and permalink for Definition 1.11.9: Index of subgroup">🔗</a></div>
+</article>
+<article class="remark remark-like" id="s_cosets_lagrange-11"><h3 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lagrange’s theorem.</span>
 </h3>
 <div class="para logical" id="s_cosets_lagrange-11-2">
@@ -873,7 +863,9 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_cosets_lagrange-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 1.11.10: Lagrange’s theorem"><a href="#s_cosets_lagrange-11" title="Copy heading and permalink for Remark 1.11.10: Lagrange’s theorem" aria-label="Copy heading and permalink for Remark 1.11.10: Lagrange’s theorem">🔗</a></div></article><article class="corollary theorem-like" id="cor_subgroup_card"><h3 class="heading">
+<div class="autopermalink" data-description="Remark 1.11.10: Lagrange’s theorem"><a href="#s_cosets_lagrange-11" title="Copy heading and permalink for Remark 1.11.10: Lagrange’s theorem" aria-label="Copy heading and permalink for Remark 1.11.10: Lagrange’s theorem">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_subgroup_card"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cardinality of subgroups.</span>
 </h3>
 <div class="para logical" id="cor_subgroup_card-2-1">
@@ -906,7 +898,9 @@ G\amp=\bigcup_{\alpha\in I} g_{\alpha}H
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_subgroup_card-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.11.11: Cardinality of subgroups"><a href="#cor_subgroup_card" title="Copy heading and permalink for Corollary 1.11.11: Cardinality of subgroups" aria-label="Copy heading and permalink for Corollary 1.11.11: Cardinality of subgroups">🔗</a></div></article><article class="corollary theorem-like" id="cor_groups_prime_card"><h3 class="heading">
+<div class="autopermalink" data-description="Corollary 1.11.11: Cardinality of subgroups"><a href="#cor_subgroup_card" title="Copy heading and permalink for Corollary 1.11.11: Cardinality of subgroups" aria-label="Copy heading and permalink for Corollary 1.11.11: Cardinality of subgroups">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_groups_prime_card"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.11.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups of prime cardinality.</span>
 </h3>
 <div class="para logical" id="cor_groups_prime_card-2-1">
@@ -918,7 +912,10 @@ G\cong \Z/p\Z\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_groups_prime_card-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.11.12: Groups of prime cardinality"><a href="#cor_groups_prime_card" title="Copy heading and permalink for Corollary 1.11.12: Groups of prime cardinality" aria-label="Copy heading and permalink for Corollary 1.11.12: Groups of prime cardinality">🔗</a></div></article><div class="autopermalink" data-description="Section 1.11: Cosets and Lagrange’s theorem"><a href="#s_cosets_lagrange" title="Copy heading and permalink for Section 1.11: Cosets and Lagrange’s theorem" aria-label="Copy heading and permalink for Section 1.11: Cosets and Lagrange’s theorem">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 1.11.12: Groups of prime cardinality"><a href="#cor_groups_prime_card" title="Copy heading and permalink for Corollary 1.11.12: Groups of prime cardinality" aria-label="Copy heading and permalink for Corollary 1.11.12: Groups of prime cardinality">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 1.11: Cosets and Lagrange’s theorem"><a href="#s_cosets_lagrange" title="Copy heading and permalink for Section 1.11: Cosets and Lagrange’s theorem" aria-label="Copy heading and permalink for Section 1.11: Cosets and Lagrange’s theorem">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_subgrp_lattice.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_quotient_group.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

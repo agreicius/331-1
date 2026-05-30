@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,7 +516,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_group_action"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_group_action">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions</span>
 </h2>
 <article class="definition definition-like" id="d_group_action"><h3 class="heading">
@@ -581,13 +535,15 @@ G\times A \amp \rightarrow A\\
 <div class="para">satisfying the following axioms.</div>
 <ol class="lower-roman ol-marker-2" id="d_group_action-2-1-7">
 <li id="d_group_action-2-1-7-1">
-<span class="heading li--heading"><span class="title li--heading-title">Associativity.</span></span><div class="para" id="d_group_action-2-1-7-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity.</span></span>
+<div class="para" id="d_group_action-2-1-7-1-2">
 <span class="process-math">\(g\cdot(h\cdot a)=(gh)\cdot a\)</span> for <span class="process-math">\(g,h\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_group_action-2-1-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item i: Associativity"><a href="#d_group_action-2-1-7-1" title="Copy heading and permalink for Item i: Associativity" aria-label="Copy heading and permalink for Item i: Associativity">🔗</a></div>
 </li>
 <li id="d_group_action-2-1-7-2">
-<span class="heading li--heading"><span class="title li--heading-title">Identity action.</span></span><div class="para" id="d_group_action-2-1-7-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Identity action.</span></span>
+<div class="para" id="d_group_action-2-1-7-2-2">
 <span class="process-math">\(e\cdot a=a\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_group_action-2-1-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item ii: Identity action"><a href="#d_group_action-2-1-7-2" title="Copy heading and permalink for Item ii: Identity action" aria-label="Copy heading and permalink for Item ii: Identity action">🔗</a></div>
@@ -595,7 +551,9 @@ G\times A \amp \rightarrow A\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_group_action-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.7.1: Group action"><a href="#d_group_action" title="Copy heading and permalink for Definition 1.7.1: Group action" aria-label="Copy heading and permalink for Definition 1.7.1: Group action">🔗</a></div></article><article class="example example-like" id="eg_group_actions"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.7.1: Group action"><a href="#d_group_action" title="Copy heading and permalink for Definition 1.7.1: Group action" aria-label="Copy heading and permalink for Definition 1.7.1: Group action">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_group_actions"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions.</span>
 </h3>
 <div class="para logical" id="eg_group_actions-2-1">
@@ -678,7 +636,9 @@ G\times G \amp \rightarrow G\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_group_actions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.7.2: Group actions"><a href="#eg_group_actions" title="Copy heading and permalink for Example 1.7.2: Group actions" aria-label="Copy heading and permalink for Example 1.7.2: Group actions">🔗</a></div></article><article class="theorem theorem-like" id="th_group_actions"><h3 class="heading">
+<div class="autopermalink" data-description="Example 1.7.2: Group actions"><a href="#eg_group_actions" title="Copy heading and permalink for Example 1.7.2: Group actions" aria-label="Copy heading and permalink for Example 1.7.2: Group actions">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_group_actions"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Group actions and homomorphisms.</span>
 </h3>
 <div class="para logical" id="th_group_actions-2-1">
@@ -750,7 +710,11 @@ G\times A\xrightarrow{\star} A
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_group_actions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.7.3: Group actions and homomorphisms"><a href="#th_group_actions" title="Copy heading and permalink for Theorem 1.7.3: Group actions and homomorphisms" aria-label="Copy heading and permalink for Theorem 1.7.3: Group actions and homomorphisms">🔗</a></div></article><details id="th_group_actions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_group_actions-3-1">
+<div class="autopermalink" data-description="Theorem 1.7.3: Group actions and homomorphisms"><a href="#th_group_actions" title="Copy heading and permalink for Theorem 1.7.3: Group actions and homomorphisms" aria-label="Copy heading and permalink for Theorem 1.7.3: Group actions and homomorphisms">🔗</a></div>
+</article>
+<details id="th_group_actions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_group_actions-3-1">
 <ol class="decimal" id="th_group_actions-3-1-1">
 <li id="th_group_actions-3-1-1-1">
 <div class="para logical" id="th_group_actions-3-1-1-1-1">
@@ -778,17 +742,23 @@ G\times A\xrightarrow{\star} A
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_group_actions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.7.3.1"><a href="#th_group_actions-3" title="Copy heading and permalink for Proof 1.7.3.1" aria-label="Copy heading and permalink for Proof 1.7.3.1">🔗</a></div></article></details><article class="definition definition-like" id="d_permutation_rep"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.7.3.1"><a href="#th_group_actions-3" title="Copy heading and permalink for Proof 1.7.3.1" aria-label="Copy heading and permalink for Proof 1.7.3.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_permutation_rep"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Permutation representation.</span>
 </h3>
 <div class="para" id="d_permutation_rep-2-1">Given a group <span class="process-math">\(G\text{,}\)</span> a homomorphism <span class="process-math">\(\phi\colon G\rightarrow S_A\)</span> for some nonempty set <span class="process-math">\(A\)</span> is called a <dfn class="terminology">permutation representation</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#d_permutation_rep-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.7.4: Permutation representation"><a href="#d_permutation_rep" title="Copy heading and permalink for Definition 1.7.4: Permutation representation" aria-label="Copy heading and permalink for Definition 1.7.4: Permutation representation">🔗</a></div></article><article class="example example-like" id="eg_isom"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.7.4: Permutation representation"><a href="#d_permutation_rep" title="Copy heading and permalink for Definition 1.7.4: Permutation representation" aria-label="Copy heading and permalink for Definition 1.7.4: Permutation representation">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_isom"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isomorphisms.</span>
 </h3>
 <div class="para" id="eg_isom-2-1">Prove: <span class="process-math">\(D_3\)</span> is isomorphic to <span class="process-math">\(S_3\text{.}\)</span> Use a group action to produce your homomorphism.<div class="autopermalink" data-description="Paragraph"><a href="#eg_isom-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_isom-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_isom-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_isom-3-1">
 <div class="para">Recall the definition of <span class="process-math">\(D_3\)</span> as the set of rigid motions of <span class="process-math">\(\R^2\)</span> fixing the equilateral triangle <span class="process-math">\(T\)</span> centered at the origin with one vertex at <span class="process-math">\((1,0)\text{.}\)</span> Let <span class="process-math">\(V=\{Q_1,Q_2,Q_3\}\)</span> be the set of vertices of <span class="process-math">\(T\text{.}\)</span> Since <span class="process-math">\(D_3\)</span> acts on <span class="process-math">\(V\)</span> (as described in <a href="s_group_action.html#eg_group_actions" class="xref" data-knowl="./knowl/xref/eg_group_actions.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.7.2: Group actions">Example 1.7.2</a>), by <a href="s_group_action.html#th_group_actions" class="xref" data-knowl="./knowl/xref/th_group_actions.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.7.3: Group actions and homomorphisms">Theorem 1.7.3</a> we get a group homomorphism <span class="process-math">\(\phi \colon D_3\rightarrow S_V\)</span> that maps a function <span class="process-math">\(f\in D_3\)</span> to the permutation it defines on <span class="process-math">\(V\)</span> via evaluation. This means that <span class="process-math">\(\phi(f)=f\vert_V\text{,}\)</span> the function restriction of <span class="process-math">\(f\)</span> to the set <span class="process-math">\(V\)</span> of vertices of <span class="process-math">\(T\text{.}\)</span> We claim <span class="process-math">\(\phi\)</span> is in fact an isomorphism. Since <span class="process-math">\(\abs{D_3}=\abs{S_V}=6\text{,}\)</span> it suffices to show that <span class="process-math">\(\phi\)</span> is injective. To this end, we note that given <span class="process-math">\(f,g\in D_3\text{,}\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_group_actions.html ./knowl/xref/th_group_actions.html" id="eg_isom-3-1-22">
@@ -804,8 +774,12 @@ G\times A\xrightarrow{\star} A
 <div class="para" id="eg_isom-3-2">We have shown that <span class="process-math">\(\phi\)</span> is an isomorphism and thus that <span class="process-math">\(D_3\cong S_V\text{.}\)</span> Lastly, by <a href="s_homomorph.html#eg_Sn" class="xref" data-knowl="./knowl/xref/eg_Sn.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.6.7: Permutation groups">Example 1.6.7</a>, we have that <span class="process-math">\(S_V\cong S_3\)</span> and thus that <span class="process-math">\(D_3\cong S_3\text{.}\)</span> (The isomorphism relation between groups is easily seen to be an equivalence relation since compositions of isomorphisms are isomorphisms.)<div class="autopermalink" data-description="Paragraph"><a href="#eg_isom-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.7.5.1"><a href="#eg_isom-3" title="Copy heading and permalink for Solution 1.7.5.1" aria-label="Copy heading and permalink for Solution 1.7.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.7.5: Isomorphisms"><a href="#eg_isom" title="Copy heading and permalink for Example 1.7.5: Isomorphisms" aria-label="Copy heading and permalink for Example 1.7.5: Isomorphisms">🔗</a></div></article><div class="autopermalink" data-description="Section 1.7: Group actions"><a href="#s_group_action" title="Copy heading and permalink for Section 1.7: Group actions" aria-label="Copy heading and permalink for Section 1.7: Group actions">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.7.5: Isomorphisms"><a href="#eg_isom" title="Copy heading and permalink for Example 1.7.5: Isomorphisms" aria-label="Copy heading and permalink for Example 1.7.5: Isomorphisms">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 1.7: Group actions"><a href="#s_group_action" title="Copy heading and permalink for Section 1.7: Group actions" aria-label="Copy heading and permalink for Section 1.7: Group actions">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_homomorph.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_subgroups.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

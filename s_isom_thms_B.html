@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,7 +516,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_isom_thms_B"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_isom_thms_B">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isomorphism theorems: second and third</span>
 </h2>
 <article class="proposition theorem-like" id="prop_subgroup_prod"><h3 class="heading">
@@ -610,7 +564,11 @@ HK=\{hk\mid h\in H, k\in K\}\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 1.14.1: Product of subgroups"><a href="#prop_subgroup_prod" title="Copy heading and permalink for Proposition 1.14.1: Product of subgroups" aria-label="Copy heading and permalink for Proposition 1.14.1: Product of subgroups">🔗</a></div></article><details id="prop_subgroup_prod-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_subgroup_prod-3-1">
+<div class="autopermalink" data-description="Proposition 1.14.1: Product of subgroups"><a href="#prop_subgroup_prod" title="Copy heading and permalink for Proposition 1.14.1: Product of subgroups" aria-label="Copy heading and permalink for Proposition 1.14.1: Product of subgroups">🔗</a></div>
+</article>
+<details id="prop_subgroup_prod-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop_subgroup_prod-3-1">
 <ol class="decimal" id="prop_subgroup_prod-3-1-1">
 <li id="prop_subgroup_prod-3-1-1-1">
 <div class="para logical" id="prop_subgroup_prod-3-1-1-1-1">
@@ -674,7 +632,9 @@ t \amp\longmapsto (ht,t^{-1}k)
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_subgroup_prod-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.14.1.1"><a href="#prop_subgroup_prod-3" title="Copy heading and permalink for Proof 1.14.1.1" aria-label="Copy heading and permalink for Proof 1.14.1.1">🔗</a></div></article></details><article class="theorem theorem-like" id="th_isom_thm_2"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.14.1.1"><a href="#prop_subgroup_prod-3" title="Copy heading and permalink for Proof 1.14.1.1" aria-label="Copy heading and permalink for Proof 1.14.1.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="th_isom_thm_2"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second isomorphism theorem.</span>
 </h3>
 <div class="para logical" id="th_isom_thm_2-2-1">
@@ -696,7 +656,11 @@ t \amp\longmapsto (ht,t^{-1}k)
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.14.2: Second isomorphism theorem"><a href="#th_isom_thm_2" title="Copy heading and permalink for Theorem 1.14.2: Second isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.14.2: Second isomorphism theorem">🔗</a></div></article><details id="th_isom_thm_2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_isom_thm_2-3-1">
+<div class="autopermalink" data-description="Theorem 1.14.2: Second isomorphism theorem"><a href="#th_isom_thm_2" title="Copy heading and permalink for Theorem 1.14.2: Second isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.14.2: Second isomorphism theorem">🔗</a></div>
+</article>
+<details id="th_isom_thm_2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_isom_thm_2-3-1">
 <div class="para">First we prove <span class="process-math">\(K\normalin HK\text{.}\)</span> Given <span class="process-math">\(k\in K\)</span> and <span class="process-math">\(g=hk'\in HK\text{,}\)</span> we have</div>
 <div class="displaymath process-math" id="th_isom_thm_2-3-1-4">
 \begin{align*}
@@ -737,16 +701,22 @@ gK=\pi(h)=\psi(h)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_isom_thm_2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.14.2.1"><a href="#th_isom_thm_2-3" title="Copy heading and permalink for Proof 1.14.2.1" aria-label="Copy heading and permalink for Proof 1.14.2.1">🔗</a></div></article></details><article class="remark remark-like" id="s_isom_thms_B-4"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.14.2.1"><a href="#th_isom_thm_2-3" title="Copy heading and permalink for Proof 1.14.2.1" aria-label="Copy heading and permalink for Proof 1.14.2.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="s_isom_thms_B-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second isomorphism theorem.</span>
 </h3>
 <div class="para" id="s_isom_thms_B-4-2">The lattice diagram below nicely summarizes the second isomorphism theorem. For this reason, this isomorphism theorem is sometimes called the <em class="emphasis">diamond isomorphism theorem</em>.<div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_2nd_isom_thm"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig_2nd_isom_thm-2.svg" role="img" class="contained" alt="Lattice diagram of second isomorhphism theorem"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Lattice diagram of second isomorhphism theorem<div class="autopermalink" data-description="Figure 1.14.4"><a href="#fig_2nd_isom_thm" title="Copy heading and permalink for Figure 1.14.4" aria-label="Copy heading and permalink for Figure 1.14.4">🔗</a></div></figcaption></figure><div class="para" id="s_isom_thms_B-4-4">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Lattice diagram of second isomorhphism theorem<div class="autopermalink" data-description="Figure 1.14.4"><a href="#fig_2nd_isom_thm" title="Copy heading and permalink for Figure 1.14.4" aria-label="Copy heading and permalink for Figure 1.14.4">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="s_isom_thms_B-4-4">
 <a href="s_isom_thms_B.html#th_isom_thm_2" class="xref" data-knowl="./knowl/xref/th_isom_thm_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.14.2: Second isomorphism theorem">Theorem 1.14.2</a> further tells us that <span class="process-math">\(H/H\cap K\cong HK/K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 1.14.3: Second isomorphism theorem"><a href="#s_isom_thms_B-4" title="Copy heading and permalink for Remark 1.14.3: Second isomorphism theorem" aria-label="Copy heading and permalink for Remark 1.14.3: Second isomorphism theorem">🔗</a></div></article><article class="theorem theorem-like" id="th_third_isom"><h3 class="heading">
+<div class="autopermalink" data-description="Remark 1.14.3: Second isomorphism theorem"><a href="#s_isom_thms_B-4" title="Copy heading and permalink for Remark 1.14.3: Second isomorphism theorem" aria-label="Copy heading and permalink for Remark 1.14.3: Second isomorphism theorem">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_third_isom"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Third isomorphism theorem.</span>
 </h3>
 <div class="para logical" id="th_third_isom-2-1">
@@ -768,13 +738,21 @@ gK=\pi(h)=\psi(h)\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.14.5: Third isomorphism theorem"><a href="#th_third_isom" title="Copy heading and permalink for Theorem 1.14.5: Third isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.14.5: Third isomorphism theorem">🔗</a></div></article><details id="th_third_isom-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_third_isom-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 1.14.5.1"><a href="#th_third_isom-3" title="Copy heading and permalink for Proof 1.14.5.1" aria-label="Copy heading and permalink for Proof 1.14.5.1">🔗</a></div></article></details><article class="convention remark-like" id="s_isom_thms_B-6"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 1.14.5: Third isomorphism theorem"><a href="#th_third_isom" title="Copy heading and permalink for Theorem 1.14.5: Third isomorphism theorem" aria-label="Copy heading and permalink for Theorem 1.14.5: Third isomorphism theorem">🔗</a></div>
+</article>
+<details id="th_third_isom-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_third_isom-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_third_isom-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 1.14.5.1"><a href="#th_third_isom-3" title="Copy heading and permalink for Proof 1.14.5.1" aria-label="Copy heading and permalink for Proof 1.14.5.1">🔗</a></div>
+</article></details>
+<article class="convention remark-like" id="s_isom_thms_B-6"><h3 class="heading">
 <span class="type">Notation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Images under quotients.</span>
 </h3>
 <div class="para" id="s_isom_thms_B-6-2">Let <span class="process-math">\(N\)</span> be a normal subgroup of <span class="process-math">\(G\text{.}\)</span> Given any subset <span class="process-math">\(A\subseteq G\text{,}\)</span> we denote by <span class="process-math">\(A/N\)</span> its image under the quotient map <span class="process-math">\(\pi\colon G\rightarrow G/N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_isom_thms_B-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Notation 1.14.6: Images under quotients"><a href="#s_isom_thms_B-6" title="Copy heading and permalink for Notation 1.14.6: Images under quotients" aria-label="Copy heading and permalink for Notation 1.14.6: Images under quotients">🔗</a></div></article><article class="corollary theorem-like" id="cor_second_isom_theorem"><h3 class="heading">
+<div class="autopermalink" data-description="Notation 1.14.6: Images under quotients"><a href="#s_isom_thms_B-6" title="Copy heading and permalink for Notation 1.14.6: Images under quotients" aria-label="Copy heading and permalink for Notation 1.14.6: Images under quotients">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_second_isom_theorem"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.14.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quotients of quotients.</span>
 </h3>
 <div class="para logical" id="cor_second_isom_theorem-2-1">
@@ -786,7 +764,10 @@ gK=\pi(h)=\psi(h)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_second_isom_theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.14.7: Quotients of quotients"><a href="#cor_second_isom_theorem" title="Copy heading and permalink for Corollary 1.14.7: Quotients of quotients" aria-label="Copy heading and permalink for Corollary 1.14.7: Quotients of quotients">🔗</a></div></article><div class="autopermalink" data-description="Section 1.14: Isomorphism theorems: second and third"><a href="#s_isom_thms_B" title="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third" aria-label="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 1.14.7: Quotients of quotients"><a href="#cor_second_isom_theorem" title="Copy heading and permalink for Corollary 1.14.7: Quotients of quotients" aria-label="Copy heading and permalink for Corollary 1.14.7: Quotients of quotients">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 1.14: Isomorphism theorems: second and third"><a href="#s_isom_thms_B" title="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third" aria-label="Copy heading and permalink for Section 1.14: Isomorphism theorems: second and third">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_isom_thms_A.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_isom_thms_C.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

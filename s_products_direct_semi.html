@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,7 +516,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_products_direct_semi"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_products_direct_semi">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Direct products</span>
 </h2>
 <div class="para" id="s_products_direct_semi-2">We begin with a characterization of groups that are isomorphic to a direct product.<div class="autopermalink" data-description="Paragraph"><a href="#s_products_direct_semi-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -596,7 +550,11 @@ N_i\cap \prod_{j\ne i}N_j\amp =\{e\}, \text{ for all } 1\leq i\leq r \amp \text{
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_direct_prod-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.23.1: Characterization of direct products"><a href="#th_direct_prod" title="Copy heading and permalink for Theorem 1.23.1: Characterization of direct products" aria-label="Copy heading and permalink for Theorem 1.23.1: Characterization of direct products">🔗</a></div></article><details id="th_direct_prod-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_direct_prod-3-1">
+<div class="autopermalink" data-description="Theorem 1.23.1: Characterization of direct products"><a href="#th_direct_prod" title="Copy heading and permalink for Theorem 1.23.1: Characterization of direct products" aria-label="Copy heading and permalink for Theorem 1.23.1: Characterization of direct products">🔗</a></div>
+</article>
+<details id="th_direct_prod-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="th_direct_prod-3-1">
 <div class="para">The forward implication is relatively straightforward. Given <span class="process-math">\(G=\prod_{i\in I}G_i\text{,}\)</span> where <span class="process-math">\(I=\{1,2,\dots, r\}\text{,}\)</span> define</div>
 <div class="displaymath process-math" id="th_direct_prod-3-1-3">
 \begin{equation*}
@@ -617,12 +575,16 @@ N_i=\{(g_j)_{j\in I}\mid g_j=e_{G_j} \text{ for all } j\ne i\}\text{.}
 <div class="para">We claim <span class="process-math">\(\phi\)</span> is an isomorphism. Once we know <span class="process-math">\(\phi\)</span> is a homomorphism, it is not dificult to show that it is an isomorphism. Indeed, surjectivity follows from <a href="s_products_direct_semi.html#th_direct_prod-2-1-3-2-1-2" class="xref" data-knowl="./knowl/xref/eq_direct_prod_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.23.1">(1.23.1)</a>; and injectivity follows from <a href="s_products_direct_semi.html#th_direct_prod-2-1-3-2-1-2" class="xref" data-knowl="./knowl/xref/eq_direct_prod_intersection.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.23.2">(1.23.2)</a>, which implies <span class="process-math">\(\ker\phi=\{e\}\text{.}\)</span> That <span class="process-math">\(\phi\)</span> is a homomorphism follow from the fact that if elements from different subgroups <span class="process-math">\(N_i\)</span> commute with one another. We leave the details to the reader.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_direct_prod-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.23.1.1"><a href="#th_direct_prod-3" title="Copy heading and permalink for Proof 1.23.1.1" aria-label="Copy heading and permalink for Proof 1.23.1.1">🔗</a></div></article></details><article class="definition definition-like" id="d_internal_direct_product"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 1.23.1.1"><a href="#th_direct_prod-3" title="Copy heading and permalink for Proof 1.23.1.1" aria-label="Copy heading and permalink for Proof 1.23.1.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_internal_direct_product"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interal direct product.</span>
 </h3>
 <div class="para" id="d_internal_direct_product-2-1">Given a group <span class="process-math">\(G\)</span> and normal subgroups <span class="process-math">\(N_1, N_2, \dots, N_r\)</span> satisfying (i) and (ii) of <a href="s_products_direct_semi.html#th_direct_prod" class="xref" data-knowl="./knowl/xref/th_direct_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.23.1: Characterization of direct products">Theorem 1.23.1</a>, we say that <span class="process-math">\(G\)</span> is the <dfn class="terminology">internal direct product</dfn> of the subgroups <span class="process-math">\(N_1, N_2, \dots, N_r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_internal_direct_product-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.23.2: Interal direct product"><a href="#d_internal_direct_product" title="Copy heading and permalink for Definition 1.23.2: Interal direct product" aria-label="Copy heading and permalink for Definition 1.23.2: Interal direct product">🔗</a></div></article><article class="corollary theorem-like" id="cor_prod_Sylow"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.23.2: Interal direct product"><a href="#d_internal_direct_product" title="Copy heading and permalink for Definition 1.23.2: Interal direct product" aria-label="Copy heading and permalink for Definition 1.23.2: Interal direct product">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_prod_Sylow"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Internal direct products of Sylow subgroups.</span>
 </h3>
 <div class="para logical" id="cor_prod_Sylow-2-1">
@@ -643,7 +605,9 @@ N_i=\{(g_j)_{j\in I}\mid g_j=e_{G_j} \text{ for all } j\ne i\}\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_prod_Sylow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.23.3: Internal direct products of Sylow subgroups"><a href="#cor_prod_Sylow" title="Copy heading and permalink for Corollary 1.23.3: Internal direct products of Sylow subgroups" aria-label="Copy heading and permalink for Corollary 1.23.3: Internal direct products of Sylow subgroups">🔗</a></div></article><article class="corollary theorem-like" id="cor_sylow_abelian"><h3 class="heading">
+<div class="autopermalink" data-description="Corollary 1.23.3: Internal direct products of Sylow subgroups"><a href="#cor_prod_Sylow" title="Copy heading and permalink for Corollary 1.23.3: Internal direct products of Sylow subgroups" aria-label="Copy heading and permalink for Corollary 1.23.3: Internal direct products of Sylow subgroups">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_sylow_abelian"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sylow theorems for abelian groups.</span>
 </h3>
 <div class="para logical" id="cor_sylow_abelian-2-1">
@@ -678,7 +642,9 @@ G\cong N_1\times N_2\times \cdots \times N_r\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_sylow_abelian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 1.23.4: Sylow theorems for abelian groups"><a href="#cor_sylow_abelian" title="Copy heading and permalink for Corollary 1.23.4: Sylow theorems for abelian groups" aria-label="Copy heading and permalink for Corollary 1.23.4: Sylow theorems for abelian groups">🔗</a></div></article><article class="definition definition-like" id="d_torsion_subgroups"><h3 class="heading">
+<div class="autopermalink" data-description="Corollary 1.23.4: Sylow theorems for abelian groups"><a href="#cor_sylow_abelian" title="Copy heading and permalink for Corollary 1.23.4: Sylow theorems for abelian groups" aria-label="Copy heading and permalink for Corollary 1.23.4: Sylow theorems for abelian groups">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_torsion_subgroups"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Torsion subgroups.</span>
 </h3>
 <div class="para logical" id="d_torsion_subgroups-2-1">
@@ -691,7 +657,9 @@ G(p)=\{g\in G\mid \ord g=p^n \text{ for some } n\in \Z\}\text{.}
 <div class="para">The <dfn class="terminology">torsion subgroup</dfn> of <span class="process-math">\(G\)</span> is the set of all elements of <span class="process-math">\(G\)</span> of finite order.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_torsion_subgroups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.23.5: Torsion subgroups"><a href="#d_torsion_subgroups" title="Copy heading and permalink for Definition 1.23.5: Torsion subgroups" aria-label="Copy heading and permalink for Definition 1.23.5: Torsion subgroups">🔗</a></div></article><article class="theorem theorem-like" id="th_structure_finite_abelian"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 1.23.5: Torsion subgroups"><a href="#d_torsion_subgroups" title="Copy heading and permalink for Definition 1.23.5: Torsion subgroups" aria-label="Copy heading and permalink for Definition 1.23.5: Torsion subgroups">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_structure_finite_abelian"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.23.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Structure of finite abelian groups: elementary divisors.</span>
 </h3>
 <div class="para logical" id="th_structure_finite_abelian-2-1">
@@ -725,9 +693,16 @@ P_i\amp\cong \prod_{j=1}^{r_i}\Z/p_i^{m_{i,j}}\Z \amp \text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_structure_finite_abelian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 1.23.6: Structure of finite abelian groups: elementary divisors"><a href="#th_structure_finite_abelian" title="Copy heading and permalink for Theorem 1.23.6: Structure of finite abelian groups: elementary divisors" aria-label="Copy heading and permalink for Theorem 1.23.6: Structure of finite abelian groups: elementary divisors">🔗</a></div></article><details id="th_structure_finite_abelian-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_structure_finite_abelian-3-1">In Math 331-2 we will prove a more general result, called the <em class="emphasis">structure theorem for finitely generated modules over PIDs</em> that implies this theorem.<div class="autopermalink" data-description="Paragraph"><a href="#th_structure_finite_abelian-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 1.23.6: Structure of finite abelian groups: elementary divisors"><a href="#th_structure_finite_abelian" title="Copy heading and permalink for Theorem 1.23.6: Structure of finite abelian groups: elementary divisors" aria-label="Copy heading and permalink for Theorem 1.23.6: Structure of finite abelian groups: elementary divisors">🔗</a></div>
+</article>
+<details id="th_structure_finite_abelian-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_structure_finite_abelian-3-1">In Math 331-2 we will prove a more general result, called the <em class="emphasis">structure theorem for finitely generated modules over PIDs</em> that implies this theorem.<div class="autopermalink" data-description="Paragraph"><a href="#th_structure_finite_abelian-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1.23.6.1"><a href="#th_structure_finite_abelian-3" title="Copy heading and permalink for Proof 1.23.6.1" aria-label="Copy heading and permalink for Proof 1.23.6.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.23: Direct products"><a href="#s_products_direct_semi" title="Copy heading and permalink for Section 1.23: Direct products" aria-label="Copy heading and permalink for Section 1.23: Direct products">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof 1.23.6.1"><a href="#th_structure_finite_abelian-3" title="Copy heading and permalink for Proof 1.23.6.1" aria-label="Copy heading and permalink for Proof 1.23.6.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section 1.23: Direct products"><a href="#s_products_direct_semi" title="Copy heading and permalink for Section 1.23: Direct products" aria-label="Copy heading and permalink for Section 1.23: Direct products">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_Sylow_apps.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_semidirect_products.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

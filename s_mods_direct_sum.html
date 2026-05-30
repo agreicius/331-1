@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Abstract algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -564,14 +516,17 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_mods_direct_sum"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_mods_direct_sum">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Direct sums and free modules</span>
 </h2>
 <article class="activity project-like" id="spec_direct_"><h3 class="heading">
 <span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Direct sums and products of modules.</span>
 </h3>
 <div class="para" id="spec_direct_-2-1">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\((M_i)_{i\in I}\)</span> be an indexed family of <span class="process-math">\(R\)</span>-modules for some nonempty index set <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_direct_-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="spec_direct_-2-2">
+</div> 
+<div class="para logical" id="spec_direct_-2-2">
 <div class="para">The <dfn class="terminology">direct product</dfn> of <span class="process-math">\((M_i)_{i\in }\)</span> is the <span class="process-math">\(R\)</span>-module whose underlying set is <span class="process-math">\(\prod_{i\in I}M_i\text{,}\)</span> the set of all tuples <span class="process-math">\((m_i)_{i\in I}\text{,}\)</span> where <span class="process-math">\(m_i\in M_i\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> and whose module addition and scalar multiplication are defined component-wise as follows:</div>
 <div class="displaymath process-math" id="spec_direct_-2-2-8">
 \begin{align*}
@@ -582,7 +537,8 @@ r\cdot (m_i)_{i\in I} \amp = (rm_i)_{i\in I}
 <div class="para">for all <span class="process-math">\(m=(m_i), n=(n_i)\in \prod_{i\in I}M_i\)</span> and <span class="process-math">\(r\in R\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#spec_direct_-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="spec_direct_-2-3">
+</div> 
+<div class="para logical" id="spec_direct_-2-3">
 <div class="para">The <dfn class="terminology">direct sum</dfn> of <span class="process-math">\((M_i)_{i\in I}\text{,}\)</span> denoted <span class="process-math">\(\bigoplus_{i\in I}M_i\)</span> is the <span class="process-math">\(R\)</span>-submodule of <span class="process-math">\(\prod_{i\in I}M_i\)</span> consisting of all tuples <span class="process-math">\((m_i)_{i\in I}\)</span> for which <span class="process-math">\(m_i=0\)</span> for all but finitely many <span class="process-math">\(i\in I\text{:}\)</span> i.e.,</div>
 <div class="displaymath process-math" id="spec_direct_-2-3-10">
 \begin{align}
@@ -590,9 +546,14 @@ r\cdot (m_i)_{i\in I} \amp = (rm_i)_{i\in I}
 \end{align}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#spec_direct_-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_direct_-2-4">For all <span class="process-math">\(j\in I\)</span> we define the <dfn class="terminology"><span class="process-math">\(j\)</span>-th projection map</dfn> <span class="process-math">\(\pi_j\colon \prod_{i\in I}M_i\to M_j\)</span> by <span class="process-math">\(\pi_j((m_i)_{i\in I})=m_j\text{,}\)</span> and the <dfn class="terminology"><span class="process-math">\(j\)</span>-th inclusion map</dfn> <span class="process-math">\(\iota_j\colon M_j\to \bigoplus_{i\in I}M_i\)</span> by <span class="process-math">\(\iota_j(m)=(m_i)_{i\in I}\text{,}\)</span> where <span class="process-math">\(m_i=0\)</span> for all <span class="process-math">\(i\neq j\)</span> and <span class="process-math">\(m_j=m\text{.}\)</span> The maps <span class="process-math">\(\pi_j\)</span> and <span class="process-math">\(\iota_j\)</span> are <span class="process-math">\(R\)</span>-module homomorphisms for all <span class="process-math">\(j\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_direct_-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_direct_-2-4">For all <span class="process-math">\(j\in I\)</span> we define the <dfn class="terminology"><span class="process-math">\(j\)</span>-th projection map</dfn> <span class="process-math">\(\pi_j\colon \prod_{i\in I}M_i\to M_j\)</span> by <span class="process-math">\(\pi_j((m_i)_{i\in I})=m_j\text{,}\)</span> and the <dfn class="terminology"><span class="process-math">\(j\)</span>-th inclusion map</dfn> <span class="process-math">\(\iota_j\colon M_j\to \bigoplus_{i\in I}M_i\)</span> by <span class="process-math">\(\iota_j(m)=(m_i)_{i\in I}\text{,}\)</span> where <span class="process-math">\(m_i=0\)</span> for all <span class="process-math">\(i\neq j\)</span> and <span class="process-math">\(m_j=m\text{.}\)</span> The maps <span class="process-math">\(\pi_j\)</span> and <span class="process-math">\(\iota_j\)</span> are <span class="process-math">\(R\)</span>-module homomorphisms for all <span class="process-math">\(j\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_direct_-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 36: Direct sums and products of modules"><a href="#spec_direct_" title="Copy heading and permalink for Specimen 36: Direct sums and products of modules" aria-label="Copy heading and permalink for Specimen 36: Direct sums and products of modules">🔗</a></div></article><details id="s_mods_direct_sum-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof that direct products and sums are modules.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_mods_direct_sum-3-2">
+<div class="autopermalink" data-description="Specimen 36: Direct sums and products of modules"><a href="#spec_direct_" title="Copy heading and permalink for Specimen 36: Direct sums and products of modules" aria-label="Copy heading and permalink for Specimen 36: Direct sums and products of modules">🔗</a></div>
+</article>
+<details id="s_mods_direct_sum-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof that direct products and sums are modules.</span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_mods_direct_sum-3-2">
 <div class="para">From the component-wise definitions of addition and scalar multiplication on <span class="process-math">\(\prod_{i\in I}M_i\text{,}\)</span> it follows in a straightforward manner that <span class="process-math">\(\prod_{i\in I}M_i\)</span> satisfies the axioms of an <span class="process-math">\(R\)</span>-module, and that <span class="process-math">\(\bigoplus_{i\in I}M_i\)</span> is indeed a submodule of <span class="process-math">\(\prod_{i\in I}M_i\text{.}\)</span> Indeed, we know already that component-wise addition satisfies the group axioms, making <span class="process-math">\(\prod_{i\in I}M_i\)</span> an abelian group. Below we provide highly condensed one-line proofs remaining four axioms:</div>
 <div class="displaymath process-math" id="s_mods_direct_sum-3-2-7">
 \begin{align*}
@@ -605,7 +566,9 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 <div class="para">We delegate the proofs of the remaining claims, including the fact that <span class="process-math">\(\pi_j\)</span> and <span class="process-math">\(\iota_j\)</span> are <span class="process-math">\(R\)</span>-module homomorphisms, to the reader.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_mods_direct_sum-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.18.1: Proof that direct products and sums are modules"><a href="#s_mods_direct_sum-3" title="Copy heading and permalink for Proof 2.18.1: Proof that direct products and sums are modules" aria-label="Copy heading and permalink for Proof 2.18.1: Proof that direct products and sums are modules">🔗</a></div></article></details><article class="theorem theorem-like" id="th_mods_sum_prod_maps"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 2.18.1: Proof that direct products and sums are modules"><a href="#s_mods_direct_sum-3" title="Copy heading and permalink for Proof 2.18.1: Proof that direct products and sums are modules" aria-label="Copy heading and permalink for Proof 2.18.1: Proof that direct products and sums are modules">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="th_mods_sum_prod_maps"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping properties of direct sums and products.</span>
 </h3>
 <div class="para logical" id="th_mods_sum_prod_maps-2-1">
@@ -613,7 +576,8 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 </div>
 <ol class="decimal" id="th_mods_sum_prod_maps-2-1-5">
 <li id="th_mods_sum_prod_maps-2-1-5-1">
-<span class="heading li--heading"><span class="title li--heading-title">Mapping property of direct products.</span></span><div class="para logical" id="th_mods_sum_prod_maps-2-1-5-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Mapping property of direct products.</span></span>
+<div class="para logical" id="th_mods_sum_prod_maps-2-1-5-1-2">
 <div class="para">Let <span class="process-math">\(\pi_i\)</span> be the <span class="process-math">\(i\)</span>-th projection map from <span class="process-math">\(\prod_{i\in I}M_i\text{.}\)</span> For any <span class="process-math">\(R\)</span>-module <span class="process-math">\(N\)</span> and tuple of <span class="process-math">\(R\)</span>-module homomorphisms <span class="process-math">\((\phi_i)_{i\in I}\text{,}\)</span> where <span class="process-math">\(\phi_i\colon N\rightarrow M_i\text{,}\)</span> the map <span class="process-math">\(\phi=\prod_{i\in I}\phi_i\)</span> defined as</div>
 <div class="displaymath process-math" id="th_mods_sum_prod_maps-2-1-5-1-2-10">
 \begin{align}
@@ -643,7 +607,8 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 <div class="autopermalink" data-description="Item 1: Mapping property of direct products"><a href="#th_mods_sum_prod_maps-2-1-5-1" title="Copy heading and permalink for Item 1: Mapping property of direct products" aria-label="Copy heading and permalink for Item 1: Mapping property of direct products">🔗</a></div>
 </li>
 <li id="th_mods_sum_prod_maps-2-1-5-2">
-<span class="heading li--heading"><span class="title li--heading-title">Mapping property of direct sums.</span></span><div class="para logical" id="th_mods_sum_prod_maps-2-1-5-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Mapping property of direct sums.</span></span>
+<div class="para logical" id="th_mods_sum_prod_maps-2-1-5-2-2">
 <div class="para">Let <span class="process-math">\(\iota_i\)</span> be the <span class="process-math">\(i\)</span>-th inclusion map from <span class="process-math">\(M_i\)</span> to <span class="process-math">\(\bigoplus_{i\in I}M_i\text{.}\)</span> For any <span class="process-math">\(R\)</span>-module <span class="process-math">\(N\)</span> and tuple of <span class="process-math">\(R\)</span>-module homomorphisms <span class="process-math">\((\phi_i)_{i\in I}\text{,}\)</span> where <span class="process-math">\(\phi_i\colon M_i\rightarrow N\text{,}\)</span> the map <span class="process-math">\(\phi=\bigoplus_{i\in I}\phi_i\)</span> defined as</div>
 <div class="displaymath process-math" id="th_mods_sum_prod_maps-2-1-5-2-2-11">
 \begin{align}
@@ -675,27 +640,42 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_mods_sum_prod_maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.18.1: Mapping properties of direct sums and products"><a href="#th_mods_sum_prod_maps" title="Copy heading and permalink for Theorem 2.18.1: Mapping properties of direct sums and products" aria-label="Copy heading and permalink for Theorem 2.18.1: Mapping properties of direct sums and products">🔗</a></div></article><details id="th_mods_sum_prod_maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_mods_sum_prod_maps-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_mods_sum_prod_maps-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Proof 2.18.1.1"><a href="#th_mods_sum_prod_maps-3" title="Copy heading and permalink for Proof 2.18.1.1" aria-label="Copy heading and permalink for Proof 2.18.1.1">🔗</a></div></article></details><article class="example example-like" id="eg_poly_power_rings_mods"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 2.18.1: Mapping properties of direct sums and products"><a href="#th_mods_sum_prod_maps" title="Copy heading and permalink for Theorem 2.18.1: Mapping properties of direct sums and products" aria-label="Copy heading and permalink for Theorem 2.18.1: Mapping properties of direct sums and products">🔗</a></div>
+</article>
+<details id="th_mods_sum_prod_maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_mods_sum_prod_maps-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#th_mods_sum_prod_maps-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 2.18.1.1"><a href="#th_mods_sum_prod_maps-3" title="Copy heading and permalink for Proof 2.18.1.1" aria-label="Copy heading and permalink for Proof 2.18.1.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="eg_poly_power_rings_mods"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(R[x]\)</span> and <span class="process-math">\(R[[x]]\)</span> as <span class="process-math">\(R\)</span>-modules.</span>
 </h3>
 <div class="para" id="eg_poly_power_rings_mods-2-1">Let <span class="process-math">\(R\)</span> be a nonzero commutative ring. Prove that as <span class="process-math">\(R\)</span>-modules, we have <span class="process-math">\(R[x]\cong\bigoplus_{i=1}^\infty R\)</span> and <span class="process-math">\(R[[x]]\cong \prod_{i=1}^\infty R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_power_rings_mods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_poly_power_rings_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_poly_power_rings_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_poly_power_rings_mods-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_power_rings_mods-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="autopermalink" data-description="Solution 2.18.2.1"><a href="#eg_poly_power_rings_mods-3" title="Copy heading and permalink for Solution 2.18.2.1" aria-label="Copy heading and permalink for Solution 2.18.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.18.2: R[x] and R[[x]] as R-modules"><a href="#eg_poly_power_rings_mods" title="Copy heading and permalink for Example 2.18.2: R[x] and R[[x]] as R-modules" aria-label="Copy heading and permalink for Example 2.18.2: R[x] and R[[x]] as R-modules">🔗</a></div></article><article class="activity project-like" id="spec_free_module"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.18.2: R[x] and R[[x]] as R-modules"><a href="#eg_poly_power_rings_mods" title="Copy heading and permalink for Example 2.18.2: R[x] and R[[x]] as R-modules" aria-label="Copy heading and permalink for Example 2.18.2: R[x] and R[[x]] as R-modules">🔗</a></div>
+</article>
+<article class="activity project-like" id="spec_free_module"><h3 class="heading">
 <span class="type">Specimen</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Free module.</span>
 </h3>
 <div class="para" id="spec_free_module-2-1">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(I\)</span> be a nonempty set. The module <span class="process-math">\(\bigoplus_{i\in I} R\)</span> is called the <dfn class="terminology">free <span class="process-math">\(R\)</span>-module module</dfn> on the set <span class="process-math">\(I\text{.}\)</span> An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <dfn class="terminology">free</dfn> if <span class="process-math">\(M\cong_R \bigoplus_{i\in I} R\)</span> for some nonempty set <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_free_module-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="spec_free_module-2-2">In analogy to the case of vector spaces, we will denote by <span class="process-math">\(e_i\)</span> the element of <span class="process-math">\(\bigoplus_{i\in I}R\)</span> whose <span class="process-math">\(i\)</span>-th component is <span class="process-math">\(1\in R\)</span> and whose other components are <span class="process-math">\(0\in R\text{,}\)</span> and call <span class="process-math">\(e_i\)</span> the <dfn class="terminology"><span class="process-math">\(i\)</span>-th standard basis element</dfn> of <span class="process-math">\(\bigoplus_{i\in I}R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_free_module-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="spec_free_module-2-2">In analogy to the case of vector spaces, we will denote by <span class="process-math">\(e_i\)</span> the element of <span class="process-math">\(\bigoplus_{i\in I}R\)</span> whose <span class="process-math">\(i\)</span>-th component is <span class="process-math">\(1\in R\)</span> and whose other components are <span class="process-math">\(0\in R\text{,}\)</span> and call <span class="process-math">\(e_i\)</span> the <dfn class="terminology"><span class="process-math">\(i\)</span>-th standard basis element</dfn> of <span class="process-math">\(\bigoplus_{i\in I}R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spec_free_module-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Specimen 37: Free module"><a href="#spec_free_module" title="Copy heading and permalink for Specimen 37: Free module" aria-label="Copy heading and permalink for Specimen 37: Free module">🔗</a></div></article><article class="theorem theorem-like" id="th_free_modules_map"><h3 class="heading">
+<div class="autopermalink" data-description="Specimen 37: Free module"><a href="#spec_free_module" title="Copy heading and permalink for Specimen 37: Free module" aria-label="Copy heading and permalink for Specimen 37: Free module">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="th_free_modules_map"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping property of free modules.</span>
 </h3>
 <div class="para" id="th_free_modules_map-2-1">Let <span class="process-math">\(R\)</span> be a ring, let <span class="process-math">\(I\)</span> be a nonempty set, and let <span class="process-math">\(e_i\)</span> be the <span class="process-math">\(i\)</span>-th standard basis element of <span class="process-math">\(\bigoplus_{i\in I}R\text{.}\)</span> For any <span class="process-math">\(R\)</span>-module <span class="process-math">\(N\)</span> and any tuple <span class="process-math">\((n_i)_{i\in I}\in \bigoplus_{i\in I}N \text{,}\)</span> the <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(\phi\colon \bigoplus_{i\in I}R\rightarrow N\)</span> defined as <span class="process-math">\(\phi((r_i)_{i\in I})=\sum_{i\in I}r_in_i\)</span> is the unique homomorphism satisfying <span class="process-math">\(\phi(e_i)=n_i\)</span> for all <span class="process-math">\(i\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_free_modules_map-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="th_free_modules_map-2-2">
+</div> 
+<div class="para logical" id="th_free_modules_map-2-2">
 <div class="para">As a result, the map</div>
 <div class="displaymath process-math" id="th_free_modules_map-2-2-1">
 \begin{align*}
@@ -706,24 +686,37 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 <div class="para">is an isomorphism of <span class="process-math">\(R\)</span>-modules.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#th_free_modules_map-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.18.3: Mapping property of free modules"><a href="#th_free_modules_map" title="Copy heading and permalink for Theorem 2.18.3: Mapping property of free modules" aria-label="Copy heading and permalink for Theorem 2.18.3: Mapping property of free modules">🔗</a></div></article><details id="th_free_modules_map-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_free_modules_map-3-1">The result follows from the mapping property of direct sums applied to the case where  <span class="process-math">\(M_i=R\)</span> for all <span class="process-math">\(i\in I\)</span> and the fact that <span class="process-math">\(\Hom_R(R,N)\cong N\)</span> via the isomorphism <span class="process-math">\(\psi\mapsto \psi(1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_free_modules_map-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 2.18.3: Mapping property of free modules"><a href="#th_free_modules_map" title="Copy heading and permalink for Theorem 2.18.3: Mapping property of free modules" aria-label="Copy heading and permalink for Theorem 2.18.3: Mapping property of free modules">🔗</a></div>
+</article>
+<details id="th_free_modules_map-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="th_free_modules_map-3-1">The result follows from the mapping property of direct sums applied to the case where  <span class="process-math">\(M_i=R\)</span> for all <span class="process-math">\(i\in I\)</span> and the fact that <span class="process-math">\(\Hom_R(R,N)\cong N\)</span> via the isomorphism <span class="process-math">\(\psi\mapsto \psi(1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_free_modules_map-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.18.3.1"><a href="#th_free_modules_map-3" title="Copy heading and permalink for Proof 2.18.3.1" aria-label="Copy heading and permalink for Proof 2.18.3.1">🔗</a></div></article></details><article class="definition definition-like" id="d_finitely_generated"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 2.18.3.1"><a href="#th_free_modules_map-3" title="Copy heading and permalink for Proof 2.18.3.1" aria-label="Copy heading and permalink for Proof 2.18.3.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="d_finitely_generated"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitely generated module.</span>
 </h3>
 <div class="para" id="d_finitely_generated-2-1">An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <dfn class="terminology">finitely generated</dfn> if there are elements <span class="process-math">\(m_1,m_2,\dots, m_n\in M\)</span> satisfying <span class="process-math">\(M=(m_1,m_2,\dots, m_n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_finitely_generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.18.4: Finitely generated module"><a href="#d_finitely_generated" title="Copy heading and permalink for Definition 2.18.4: Finitely generated module" aria-label="Copy heading and permalink for Definition 2.18.4: Finitely generated module">🔗</a></div></article><article class="example example-like" id="eg_finitely_generated_mods"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 2.18.4: Finitely generated module"><a href="#d_finitely_generated" title="Copy heading and permalink for Definition 2.18.4: Finitely generated module" aria-label="Copy heading and permalink for Definition 2.18.4: Finitely generated module">🔗</a></div>
+</article>
+<article class="example example-like" id="eg_finitely_generated_mods"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitely generated modules.</span>
 </h3>
 <div class="para" id="eg_finitely_generated_mods-2-1">Let <span class="process-math">\(R\)</span> be a ring. Prove that a nonzero <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is finitely generated if and only if we have <span class="process-math">\(M\cong_R R^n/M'\)</span> for some positive integer <span class="process-math">\(n\)</span> and submodule <span class="process-math">\(M'\subseteq R^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_finitely_generated_mods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_finitely_generated_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_finitely_generated_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="eg_finitely_generated_mods-3-1">Assume <span class="process-math">\(M=(m_1,m_2,\dots, m_n)\text{.}\)</span> By <a href="s_mods_direct_sum.html#th_free_modules_map" class="xref" data-knowl="./knowl/xref/th_free_modules_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.18.3: Mapping property of free modules">Theorem 2.18.3</a>, there is an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(\phi\colon R^n\rightarrow M\)</span> defined as <span class="process-math">\(\phi((r_1,r_2,\dots, r_n))=\sum_{i=1}^n r_im_i\text{.}\)</span> By definition of <span class="process-math">\((m_1,m_2,\dots, m_n)\text{,}\)</span> it is clear that <span class="process-math">\(\phi\)</span> is surjective. The first isomorphism theorem for modules now implies that <span class="process-math">\(M\cong R^n/M'\text{,}\)</span> where <span class="process-math">\(M'=\ker\phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_finitely_generated_mods-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.18.5.1"><a href="#eg_finitely_generated_mods-3" title="Copy heading and permalink for Solution 2.18.5.1" aria-label="Copy heading and permalink for Solution 2.18.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.18.5: Finitely generated modules"><a href="#eg_finitely_generated_mods" title="Copy heading and permalink for Example 2.18.5: Finitely generated modules" aria-label="Copy heading and permalink for Example 2.18.5: Finitely generated modules">🔗</a></div></article><article class="definition definition-like" id="d_ind_span"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.18.5: Finitely generated modules"><a href="#eg_finitely_generated_mods" title="Copy heading and permalink for Example 2.18.5: Finitely generated modules" aria-label="Copy heading and permalink for Example 2.18.5: Finitely generated modules">🔗</a></div>
+</article>
+<article class="definition definition-like" id="d_ind_span"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear independence and span.</span>
 </h3>
 <div class="para logical" id="d_ind_span-2-1">
@@ -751,7 +744,9 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#d_ind_span-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.18.6: Linear independence and span"><a href="#d_ind_span" title="Copy heading and permalink for Definition 2.18.6: Linear independence and span" aria-label="Copy heading and permalink for Definition 2.18.6: Linear independence and span">🔗</a></div></article><article class="corollary theorem-like" id="cor_free_mods_basis"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 2.18.6: Linear independence and span"><a href="#d_ind_span" title="Copy heading and permalink for Definition 2.18.6: Linear independence and span" aria-label="Copy heading and permalink for Definition 2.18.6: Linear independence and span">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor_free_mods_basis"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Free modules and bases.</span>
 </h3>
 <div class="para logical" id="cor_free_mods_basis-2-1">
@@ -786,7 +781,11 @@ r\cdot (s\cdot (m_i)) \amp =r\cdot (sm_i)_{i\in I}=(rs m_i)=(rs)\cdot (m_i)\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_free_mods_basis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.18.7: Free modules and bases"><a href="#cor_free_mods_basis" title="Copy heading and permalink for Corollary 2.18.7: Free modules and bases" aria-label="Copy heading and permalink for Corollary 2.18.7: Free modules and bases">🔗</a></div></article><details id="cor_free_mods_basis-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_free_mods_basis-3-1">
+<div class="autopermalink" data-description="Corollary 2.18.7: Free modules and bases"><a href="#cor_free_mods_basis" title="Copy heading and permalink for Corollary 2.18.7: Free modules and bases" aria-label="Copy heading and permalink for Corollary 2.18.7: Free modules and bases">🔗</a></div>
+</article>
+<details id="cor_free_mods_basis-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor_free_mods_basis-3-1">
 <ol class="decimal" id="cor_free_mods_basis-3-1-1">
 <li id="cor_free_mods_basis-3-1-1-1">
 <div class="para logical" id="cor_free_mods_basis-3-1-1-1-1">
@@ -861,7 +860,9 @@ m \amp =\sum_{i\in I} a_i m_i\tag{2.18.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_free_mods_basis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.18.7.1"><a href="#cor_free_mods_basis-3" title="Copy heading and permalink for Proof 2.18.7.1" aria-label="Copy heading and permalink for Proof 2.18.7.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor_card_basis"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 2.18.7.1"><a href="#cor_free_mods_basis-3" title="Copy heading and permalink for Proof 2.18.7.1" aria-label="Copy heading and permalink for Proof 2.18.7.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="cor_card_basis"><h3 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isomorphic free modules.</span>
 </h3>
 <div class="para logical" id="cor_card_basis-2-1">
@@ -880,7 +881,11 @@ m \amp =\sum_{i\in I} a_i m_i\tag{2.18.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_card_basis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 2.18.8: Isomorphic free modules"><a href="#cor_card_basis" title="Copy heading and permalink for Corollary 2.18.8: Isomorphic free modules" aria-label="Copy heading and permalink for Corollary 2.18.8: Isomorphic free modules">🔗</a></div></article><details id="cor_card_basis-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_card_basis-3-1">
+<div class="autopermalink" data-description="Corollary 2.18.8: Isomorphic free modules"><a href="#cor_card_basis" title="Copy heading and permalink for Corollary 2.18.8: Isomorphic free modules" aria-label="Copy heading and permalink for Corollary 2.18.8: Isomorphic free modules">🔗</a></div>
+</article>
+<details id="cor_card_basis-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor_card_basis-3-1">
 <ol class="decimal" id="cor_card_basis-3-1-1">
 <li id="cor_card_basis-3-1-1-1">
 <div class="para logical" id="cor_card_basis-3-1-1-1-1">
@@ -911,13 +916,18 @@ m \amp =\sum_{i\in I} a_i m_i\tag{2.18.4}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor_card_basis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.18.8.1"><a href="#cor_card_basis-3" title="Copy heading and permalink for Proof 2.18.8.1" aria-label="Copy heading and permalink for Proof 2.18.8.1">🔗</a></div></article></details><article class="example example-like" id="eg_hom_btwn_free_mods"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 2.18.8.1"><a href="#cor_card_basis-3" title="Copy heading and permalink for Proof 2.18.8.1" aria-label="Copy heading and permalink for Proof 2.18.8.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="eg_hom_btwn_free_mods"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homomorphisms between free modules.</span>
 </h3>
 <div class="para" id="eg_hom_btwn_free_mods-2-1">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be positive integers.<div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="eg_hom_btwn_free_mods-2-2">Prove that <span class="process-math">\(\Hom_R(R^m,R^n)\cong_R R^{mn}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="eg_hom_btwn_free_mods-2-2">Prove that <span class="process-math">\(\Hom_R(R^m,R^n)\cong_R R^{mn}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_hom_btwn_free_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="eg_hom_btwn_free_mods-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="eg_hom_btwn_free_mods-3-1">
 <div class="para">From <a href="s_mods_direct_sum.html#th_free_modules_map" class="xref" data-knowl="./knowl/xref/th_free_modules_map.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.18.3: Mapping property of free modules">Theorem 2.18.3</a>, we have <span class="process-math">\(\Hom_R(R^m, R^n)\cong \prod_{i=1}^m R^n\text{.}\)</span> We claim that <span class="process-math">\(\prod_{i=1}^m R^n\cong R^{mn}\text{.}\)</span> For each <span class="process-math">\(1\leq i\leq m\text{,}\)</span> let <span class="process-math">\(\pi_i\)</span> be the projection map from <span class="process-math">\(\prod_{i=1}^m R^n\)</span> onto the <span class="process-math">\(i\)</span>-th copy of <span class="process-math">\(\R^n\text{.}\)</span> For each <span class="process-math">\(1\leq j\leq n\text{,}\)</span> let <span class="process-math">\(p_j\colon R^n\rightarrow R\)</span> be the <span class="process-math">\(j\)</span>-th projection map from <span class="process-math">\(R^n\)</span> onto the <span class="process-math">\(j\)</span>-th copy of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(I=\{1,2,\dots, m\}\times \{1,2,\dots, n\}\text{.}\)</span>  From the mapping property of <span class="process-math">\(R^{I}\text{,}\)</span> the tuple <span class="process-math">\((\phi_{i,j})_{(i,j)\in I}\text{,}\)</span> where <span class="process-math">\(\phi_{i,j}=p_j\circ \pi_i\text{,}\)</span> give rise to a ring homomorphism  <span class="process-math">\(\phi\colon \prod_{i=1}^m R^n\rightarrow R^I\text{,}\)</span> defined as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_modules_map.html ./knowl/xref/th_free_modules_map.html" id="eg_hom_btwn_free_mods-3-1-20">
@@ -940,8 +950,12 @@ m \amp =\sum_{i\in I} a_i m_i\tag{2.18.4}
 <div class="autopermalink" data-description="Paragraph"><a href="#eg_hom_btwn_free_mods-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.18.9.1"><a href="#eg_hom_btwn_free_mods-3" title="Copy heading and permalink for Solution 2.18.9.1" aria-label="Copy heading and permalink for Solution 2.18.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.18.9: Homomorphisms between free modules"><a href="#eg_hom_btwn_free_mods" title="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules" aria-label="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules">🔗</a></div></article><div class="autopermalink" data-description="Section 2.18: Direct sums and free modules"><a href="#s_mods_direct_sum" title="Copy heading and permalink for Section 2.18: Direct sums and free modules" aria-label="Copy heading and permalink for Section 2.18: Direct sums and free modules">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.18.9: Homomorphisms between free modules"><a href="#eg_hom_btwn_free_mods" title="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules" aria-label="Copy heading and permalink for Example 2.18.9: Homomorphisms between free modules">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 2.18: Direct sums and free modules"><a href="#s_mods_direct_sum" title="Copy heading and permalink for Section 2.18: Direct sums and free modules" aria-label="Copy heading and permalink for Section 2.18: Direct sums and free modules">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_modules.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_PID_modules_statement.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
